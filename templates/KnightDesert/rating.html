@@ -1,0 +1,178 @@
+<div class="sidebar__st st">
+    {% set race_icon_size = 24 %}
+    <div class="heading">
+        <h3 class="title mt mb">
+            {{phrase("rating_title")|raw}}
+        </h3>
+    </div>
+    <select autocomplete="off" class="st__select" data-tab-select data-tab-select-server>
+        {% for server in getServerAll() %}
+        <option data-open-tab-select="server-{{server.id}}" data-open-tab-group-select="rating">
+            {{server.getName()}} x{{server.getRateExp()}}
+        </option>
+        {% endfor %}
+    </select>
+    <div class="st__content">
+        {% for server in getServerAll() %}
+        <div class="rating-container" style="display: none" data-tab="server-{{server.getId()}}" data-tab-group="rating">
+            <div class="rating">
+                <div class="rating__box">
+                    <div class="rating__type" style="display: none" data-tab="server-{{server.getId()}}-clan" data-tab-group="server-{{server.getId()}}-type">
+                        <div class="rating__item">
+                            <div class="rating__col">
+                                <div class="top">
+                                    <div class="top__rw top__header">
+                                        <div class="top__num">
+                                            <div class="top__content">№</div>
+                                        </div>
+                                        <div class="top__name">
+                                            <div class="top__content">
+                                                {{phrase("rating_clan")}}
+                                            </div>
+                                        </div>
+                                        <div class="top__total">
+                                            <div class="top__content">
+                                                {{phrase('rating_points')}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top__body" data-top-scroll>
+                                        {% for i, clan in statistic_get_clans(server.id, 10) %}
+                                        <div class="top__rw">
+                                            <div class="top__num">
+                                                <div class="top__content">{{i+1}}</div>
+                                            </div>
+                                            <div class="top__name">
+                                                <div class="top__content">
+                                                    {{clan.clan_name|raw}}
+                                                </div>
+                                            </div>
+                                            <div class="top__total">
+                                                <div class="top__content">
+                                                    {{clan.reputation_score}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rating__type" style="display: none" data-tab="server-{{server.getId()}}-pvp" data-tab-group="server-{{server.getId()}}-type">
+                        <div class="rating__item">
+                            <div class="rating__col">
+                                <div class="top">
+                                    <div class="top__rw top__header">
+                                        <div class="top__num">
+                                            <div class="top__content">№</div>
+                                        </div>
+                                        <div class="top__name">
+                                            <div class="top__content">
+                                                {{phrase("rating_name")}}
+                                            </div>
+                                        </div>
+                                        <div class="top__total">
+                                            <div class="top__content">{{phrase("rating_pvp")}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="top__body" data-top-scroll>
+                                        {% for i, player in statistic_get_pvp(server.getId(), 10) %}
+                                        <div class="top__rw">
+                                            <div class="top__num">
+                                                <div class="top__content">{{i+1}}</div>
+                                            </div>
+                                            <div class="top__name">
+                                                <div class="top__content">
+                                                    <span style="display:inline-flex;align-items:center;justify-content:center;gap:8px;">
+                                                        <span style="display:inline-block;line-height:1;vertical-align:middle;">
+                                                            {{player.player_name|raw}}
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="top__total">
+                                                <div class="top__content">
+                                                    {{player.pvp}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <!-- END  top  -->
+                            </div>
+                            <!-- END  rating__col  -->
+                        </div>
+                        <!-- END  rating__item  -->
+                    </div>
+
+                    <div class="rating__type" style="display: none" data-tab="server-{{server.getId()}}-pk" data-tab-group="server-{{server.getId()}}-type">
+                        <div class="rating__item">
+                            <div class="rating__col">
+                                <div class="top">
+                                    <div class="top__rw top__header">
+                                        <div class="top__num">
+                                            <div class="top__content">№</div>
+                                        </div>
+                                        <div class="top__name">
+                                            <div class="top__content">
+                                                {{phrase("rating_name")}}
+                                            </div>
+                                        </div>
+                                        <div class="top__total">
+                                            <div class="top__content">{{phrase("rating_pk")}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="top__body" data-top-scroll>
+                                        {% for i, player in statistic_get_pk(server.getId(), 10) %}
+                                        <div class="top__rw">
+                                            <div class="top__num">
+                                                <div class="top__content">{{i+1}}</div>
+                                            </div>
+                                            <div class="top__name">
+                                                <div class="top__content">
+                                                    <span style="display:inline-flex;align-items:center;justify-content:center;gap:8px;">
+                                                        <span style="display:inline-block;line-height:1;vertical-align:middle;">
+                                                            {{player.player_name|raw}}
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="top__total">
+                                                <div class="top__content">
+                                                    {{player.pk}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <!-- END  top  -->
+                            </div>
+                            <!-- END  rating__col  -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rating__btns">
+                    <div class="rating__btn" data-rating-select data-open-tab="server-{{server.getId()}}-clan" data-open-tab-group="server-{{server.getId()}}-type">
+                        {{phrase("rating_clan")}}
+                    </div>
+                    <div class="rating__btn" data-rating-select data-open-tab="server-{{server.getId()}}-pvp" data-open-tab-group="server-{{server.getId()}}-type">
+                        {{phrase("rating_pvp")}}
+                    </div>
+                    <div class="rating__btn" data-rating-select data-open-tab="server-{{server.getId()}}-pk" data-open-tab-group="server-{{server.getId()}}-type">
+                        {{phrase("rating_pk")}}
+                    </div>
+                </div>
+                <!-- END  rating__btns  -->
+            </div>
+            <!-- END  rating  -->
+        </div>
+        {% endfor %}
+    </div>
+    <!-- END tab__content -->
+</div>
+<!-- END tab__box -->

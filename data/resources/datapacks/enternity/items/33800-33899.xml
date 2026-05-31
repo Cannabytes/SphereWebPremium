@@ -1,0 +1,1868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="33800" type="EtcItem" nameRu="Сертификат Подопечного" nameEn="Mentee Certificate">
+		<!-- Персонажи 85-го уровня и выше могут получить Сертификат Окончания у Помощника Наставника. Данный Сертификат можно обменять на разнообразные предметы. Или на необходимое после перерождения снаряжение. -->
+		<!-- Mentee Diploma. At level 85 or above, you can go find the Mentor Guide and exchange it for Diplomas. Diplomas can be exchanged for R-grade equipment after Awakening. -->
+		<set name="icon" val="icon.mentee_certificate" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33801" type="EtcItem" nameRu="Пособие Наставника" nameEn="Mentoring Guidebook">
+		<!-- Пособие, описывающее систему Наставничества. -->
+		<!-- Guidebook containing details about mentoring. -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="show_html" />
+		<set name="handler" val="Book" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="33802" type="EtcItem" nameRu="Упаковка: Сертификат Подопечного" nameEn="Mentee Certificate Pack">
+		<!-- 1 сертификат для одного аккаунта. Внутри Сертификат Подопечного и Пособие Наставника. После вскрытия упаковки предметы нельзя будет передать другому персонажу аккаунта. -->
+		<!-- Dimensional Item Pack. Contains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="fish" />
+		<!-- Mentee Certificate -->
+		<!-- Mentoring Guidebook -->
+		<set name="capsuled_items" val="33800,1,1,100;33801,1,1,100" />
+	</item>
+	<item id="33803" type="EtcItem" nameRu="Купон Подопечного" nameEn="Mentee Coupon">
+		<!-- Внутри находится Упаковка: Сертификат Подопечного. -->
+		<!-- Contains a Mentee Certificate Pack. -->
+		<set name="icon" val="icon.mentee_coupon" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33804" type="EtcItem" nameRu="Знак Ученика" nameEn="Mentee's Mark">
+		<!-- Предмет, который выдается Наставнику, когда Ученик достигает определенного уровня. Можно обменять у Помощника Наставника на какой-нибудь полезный предмет. -->
+		<!-- Item given to a Mentor when one of your Mentees levels up. You can exchange Mentee's Marks for items at a Mentor Guide. -->
+		<set name="icon" val="icon.mentee_mark" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33805" type="EtcItem" nameRu="Сертификат Окончания" nameEn="Diploma">
+		<!-- Предмет, который выдается персонажу, закончившему курс Наставничества. Можно обменять у Помощника Наставника на разнообразные предметы. -->
+		<!-- Acquired after graduating from being a Mentee. You can go find the Mentor Guide to exchange it for various items. -->
+		<set name="icon" val="icon.mentee_graduate_proof" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33806" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (D)" nameEn="Giant's Scroll: Enchant Weapon (D-grade)">
+		<!-- Физ. Атк. Одноручного меча, Одноручной дубины, Кинжала, Копья, Двуручного меча, Двуручной дубины, Парных мечей, Кастетов и другого двуручного оружия ранга D +2. Физ. Атк. лука +4. Маг. Атк. всего оружия +2. После +4 Физ./ Маг. Атк. увеличиваются в два раза. Случайно модифицирует от +1 до +3. -->
+		<!-- When enchanted, P. Atk. +2 for all D-grade weapons with the exception of bows. P. Atk. +4 for bow weapons. M. Atk. +2 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_d" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9244-1" />
+		<!-- Giant's Scroll: Enchant Weapon (D-grade) -->
+	</item>
+	<item id="33807" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (C)" nameEn="Giant's Scroll: Enchant Weapon (C-grade)">
+		<!-- Физ. Атк. Одноручных мечей, Одноручной дубины, кинжала, копья и другого одноручного оружия ранга C +3. Физ. Атк. Двуручных мечей/ дубин/ Парных мечей/ Кастетов и другого двуручного оружия +4. Физ. Атк. лука +6. Маг. Атк. всего оружия +3. После +4 Физ./ Маг. Атк. увеличивается в два раза. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Atk. +3 for C-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +4 for two-handed sword, two-handed blunt, dual sword, and two-handed fist weapon. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_c" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9246-1" />
+		<!-- Giant's Scroll: Enchant Weapon (C-grade) -->
+	</item>
+	<item id="33808" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (B)" nameEn="Giant's Scroll: Enchant Weapon (B-grade)">
+		<!-- Физ. Атк. Одноручных мечей, Одноручной дубины, кинжала, копья и другого одноручного оружия ранга B +3. Физ. Атк. Двуручных мечей/ дубин/ Парных мечей/ Кастетов и другого двуручного оружия +4. Физ. Атк. лука +6. Маг. Атк. всего оружия +3. После +4 Физ./ Маг. Атк. увеличивается в два раза. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Atk. +3 for B-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +4 for two-handed sword, two-handed blunt, dual sword, and two-handed fist weapon. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_b" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9248-1" />
+		<!-- Giant's Scroll: Enchant Weapon (B-grade) -->
+	</item>
+	<item id="33809" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (A)" nameEn="Giant's Scroll: Enchant Weapon (A-grade)">
+		<!-- Физ. Атк. Одноручных мечей, Одноручной дубины, кинжала, копья и другого одноручного оружия ранга A +4. Физ. Атк. Двуручных мечей/ дубин/ Парных мечей/ Кастетов и другого двуручного оружия +5. Физ. Атк. лука +8. Увеличивает Маг. Атк. всего оружия +3. После +4 Физ./ Маг. Атк. увеличивается в два раза. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Atk. +4 for A-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +5 for two-handed sword, two-handed blunt, dual sword, and two-handed fist weapon. P. Atk. +8 for bow weapons. M. Atk. +3 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9250-1" />
+		<!-- Giant's Scroll: Enchant Weapon (A-grade) -->
+	</item>
+	<item id="33810" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (S)" nameEn="Giant's Scroll: Enchant Weapon (S-grade)">
+		<!-- Физ. Атк. Одноручных мечей, Одноручной дубины, кинжала, копья и другого одноручного оружия ранга S +5. Физ. Атк. Двуручных мечей/ дубин/ Парных мечей/ Кастетов и другого двуручного оружия +6. Физ. Атк. лука +10. Маг. Атк. всего оружия +4. После +4 Физ./ Маг. Атк. увеличивается в два раза. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Atk. +5 for S-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +6 for two-handed sword, two-handed blunt, dual sword, and two-handed fist weapon. P. Atk. +10 for bow weapons. M. Atk. +4 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9252-1" />
+		<!-- Giant's Scroll: Enchant Weapon (S-grade) -->
+	</item>
+	<item id="33811" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Оружие (R)" nameEn="Giant's Scroll: Enchant Weapon (R-grade)">
+		<!-- Для модификации оружия Ранга R. Одноручный меч, одноручное дробящее, кинжал, копье: Физ. Атк. +6. Двуручный меч, двуручное дробящее, парные клинки, кастеты, арбалет: Физ. Атк. +7. Луки: Физ. Атк +12. Все оружие: Маг. Атк. +5. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. сильно увеличивается. В случае с благословенным оружием, эффект усиления увеличен по сравнению с обычным оружием. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Atk. +6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +7 for two-handed sword, two-handed blunt, dual sword, two-handed fist weapon and crossbow. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. Doubles P. Atk./ M. Atk. starting at +4. Every enchant attempt has a chance of increasing the enchant value between +1 and +3 chosen randomly. For blessed weapons, all stats increases more than normal weapons. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9254-1" />
+		<!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+	</item>
+	<item id="33812" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (D)" nameEn="Giant's Scroll: Enchant Armor (D-grade)">
+		<!-- Модифицирует доспехи ранга D. Физ. Защ. доспехов и аксессуаров +1, после +4 увеличивает Физ. Защ. Безопасное улучшение: Обычный доспех +3, Полный доспех +4. При улучшении выше +4 увеличивает уровень HP. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_d" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9245-1" />
+		<!-- Giant's Scroll: Enchant Armor (D-grade) -->
+	</item>
+	<item id="33813" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (C)" nameEn="Giant's Scroll: Enchant Armor (C-grade)">
+		<!-- Модифицирует доспехи ранга C. Физ. Защ. доспехов и аксессуаров +1, после +4 увеличивает Физ. Защ. Безопасное улучшение: Обычный доспех +3, Полный доспех +4. При улучшении выше +4 увеличивает уровень HP. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_c" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9247-1" />
+		<!-- Giant's Scroll: Enchant Armor (C-grade) -->
+	</item>
+	<item id="33814" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (B)" nameEn="Giant's Scroll: Enchant Armor (B-grade)">
+		<!-- Модифицирует доспехи ранга B. Физ. Защ. доспехов и аксессуаров +1, после +4 увеличивает Физ. Защ. Безопасное улучшение: Обычный доспех +3, Полный доспех +4. При улучшении выше +4 увеличивает уровень HP. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_b" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9249-1" />
+		<!-- Giant's Scroll: Enchant Armor (B-grade) -->
+	</item>
+	<item id="33815" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (A)" nameEn="Giant's Scroll: Enchant Armor (A-grade)">
+		<!-- Модифицирует доспехи ранга A. Физ. Защ. доспехов и аксессуаров +1, после +4 увеличивает Физ. Защ. Безопасное улучшение: Обычный доспех +3, Полный доспех +4. При улучшении выше +4 увеличивает уровень HP. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9251-1" />
+		<!-- Giant's Scroll: Enchant Armor (A-grade) -->
+	</item>
+	<item id="33816" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (S)" nameEn="Giant's Scroll: Enchant Armor (S-grade)">
+		<!-- Модифицирует доспехи ранга S. Физ. Защ. доспехов и аксессуаров +1, после +4 увеличивает Физ. Защ. Безопасное улучшение: Обычный доспех +3, Полный доспех +4. При улучшении выше +4 увеличивает уровень HP. Случайно модифицирует от +1 до +3. -->
+		<!-- P. Def. +1 for S-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. Between +1 and +3, enchanting occurs at random. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9253-1" />
+		<!-- Giant's Scroll: Enchant Armor (S-grade) -->
+	</item>
+	<item id="33817" type="EtcItem" nameRu="Свиток Гигантов: Модифицировать Доспех (R)" nameEn="Giant's Scroll: Enchant Armor (R-grade)">
+		<!-- Для модификации доспехов и аксессуаров Ранга R. Дает Физ. Защ. +2. При модификации на +4 и выше эффект сильно увеличивается. Безопасная модификация до +3. При модификации на +4 и выше добавляется эффект увеличения HP в зависимости от значения модификации. Случайно модифицирует от +1 до +3. -->
+		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. Every enchant attempt has a chance of increasing the enchant value between +1 and +3 chosen randomly. -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="giant_encht_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9255-1" />
+		<!-- Giant's Scroll: Enchant Armor (R-grade) -->
+	</item>
+	<item id="33818" type="EtcItem" nameRu="Свиток: Модифицировать Головной Убор" nameEn="Scroll: Enchant Hair Accessory">
+		<!-- Маг. Защ. головного убора +2, а начиная с +4 Маг. Защ. значительно увеличивается. Безопасная модификация до +3. -->
+		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9234-1" />
+		<!-- Scroll: Enchant Hair Accessory -->
+	</item>
+	<item id="33819" type="EtcItem" nameRu="Камень Жизни для Головных Уборов" nameEn="Life Stone: Hair Accessory">
+		<!-- Камень Жизни для Головных Уборов. -->
+		<!-- Life Stone for Hair Accessories. -->
+		<set name="icon" val="icon.life_dust_hairacc_general" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33820" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - D" nameEn="Decayed Unbind Scroll (D-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33821" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - C" nameEn="Decayed Unbind Scroll (C-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33822" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - B" nameEn="Decayed Unbind Scroll (B-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33823" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - A" nameEn="Decayed Unbind Scroll (A-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33824" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - S" nameEn="Decayed Unbind Scroll (S-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33825" type="EtcItem" nameRu="Испорченный Свиток Снятия Оков - S80" nameEn="Decayed Unbind Scroll (S80-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Unbind Scroll that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33826" type="EtcItem" nameRu="Свиток Снятия Оков - R" nameEn="Unbind Scroll (R-grade)">
+		<!-- Снимает оковы с предмета Ранга R с помощью Кузнеца Маммона. Можно получить Благословенный предмет, но вероятность этого очень мала. -->
+		<!-- Converts a Bound item (R-grade) to Standard state through the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33827" type="EtcItem" nameRu="Свиток Снятия Оков - R95" nameEn="Unbind Scroll (R95-grade)">
+		<!-- Снимает оковы с предмета Ранга R95 с помощью Кузнеца Маммона. Можно получить Благословенный предмет, но вероятность этого очень мала. -->
+		<!-- Converts a Bound item (R95-grade) to Standard state through the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.cursed_free_r95" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33828" type="EtcItem" nameRu="Испорченный Камень Смены Особого Свойства - A" nameEn="Decayed Soul Crystal Change Stone (A-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.etc_bead_red_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33829" type="EtcItem" nameRu="Испорченный Камень Смены Особого Свойства - S" nameEn="Decayed Soul Crystal Change Stone (S-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33830" type="EtcItem" nameRu="Испорченный Камень Смены Особого Свойства - S80" nameEn="Decayed Soul Crystal Change Stone (S80-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33831" type="EtcItem" nameRu="Испорченный Камень Смены Особого Свойства - R" nameEn="Decayed Soul Crystal Change Stone (R-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33832" type="EtcItem" nameRu="Испорченный Камень Смены Особого Свойства - R95" nameEn="Decayed Soul Crystal Change Stone (R95-grade)">
+		<!-- Использовать нельзя. Можно продать торговцу. -->
+		<!-- Soul Crystal Change Stone that has decayed over time. You might be able to sell it to a merchant. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="33833" type="EtcItem" nameRu="Кристалл Смены Стихии - S" nameEn="Attribute Change Crystal (S-grade)">
+		<!-- Позволяет сменить стихию оружия ранга S. -->
+		<!-- Can change an S-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="change_attr" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="12881-1" />
+		<!-- Change Attribute -->
+	</item>
+	<item id="33834" type="EtcItem" nameRu="Кристалл Смены Стихии - S80" nameEn="Attribute Change Crystal (S80-grade)">
+		<!-- Позволяет сменить стихию оружия ранга S80. -->
+		<!-- Can change an S80 -grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="change_attr" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="12881-1" />
+		<!-- Change Attribute -->
+	</item>
+	<item id="33835" type="EtcItem" nameRu="Кристалл Смены Стихии - R" nameEn="Attribute Change Crystal (R-grade)">
+		<!-- Позволяет сменить стихию оружия ранга R. -->
+		<!-- Can change an R-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="change_attr" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="12881-1" />
+		<!-- Change Attribute -->
+	</item>
+	<item id="33836" type="EtcItem" nameRu="Кристалл Смены Стихии - R95" nameEn="Attribute Change Crystal (R95-grade)">
+		<!-- Позволяет сменить стихию оружия ранга R95. -->
+		<!-- Can change an R95-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="change_attr" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="12881-1" />
+		<!-- Change Attribute -->
+	</item>
+	<item id="33837" type="EtcItem" nameRu="Кристалл Смены Стихии - R99" nameEn="Attribute Change Crystal (R99-grade)">
+		<!-- Позволяет сменить стихию оружия ранга R99. -->
+		<!-- Can change an R99-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="change_attr" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="12881-1" />
+		<!-- Change Attribute -->
+	</item>
+	<item id="33838" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (D)" nameEn="Destruction Scroll: Enchant Weapon (D-grade)">
+		<!-- Для модификации оружия Ранга D. Одноручный меч, одноручное дробящее, кинжал, древковое: Физ. Атк. 2. Двуручный меч, двуручное дробящее, парные клинки, кастеты: Физ. Атк. 2. Луки: Физ. Атк 4. Все оружие: Маг. Атк. 2. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. удваивается. При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. Нельзя использовать на оружие, модифицированное на +15 и выше. -->
+		<!-- P. Atk. +2 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +2 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +4 for bow weapons. M. Atk. +2 for all weapons. P. Atk./ M. Atk. Increases by double starting at +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22367-1" />
+		<!-- Destruction Scroll: Enchant Weapon (D-grade) -->
+	</item>
+	<item id="33839" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (C)" nameEn="Destruction Scroll: Enchant Weapon (C-grade)">
+		<!-- Для модификации оружия Ранга C. Одноручный меч, одноручное дробящее, кинжал, древковое: Физ. Атк. 3. Двуручный меч, двуручное дробящее, парные клинки, кастеты: Физ. Атк. 4. Луки: Физ. Атк 6. Все оружие: Маг. Атк. 3. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. удваивается. При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. Нельзя использовать на оружие, модифицированное на +15 и выше.  -->
+		<!-- P. Atk. +3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increases by double starting at +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22365-1" />
+		<!-- Destruction Scroll: Enchant Weapon (C-grade) -->
+	</item>
+	<item id="33840" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (B)" nameEn="Destruction Scroll: Enchant Weapon (B-grade)">
+		<!-- Для модификации оружия Ранга B. Одноручный меч, одноручное дробящее, кинжал, древковое: Физ. Атк. 3. Двуручный меч, двуручное дробящее, парные клинки, кастеты: Физ. Атк. 4. Луки: Физ. Атк 6. Все оружие: Маг. Атк. 3. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. удваивается. При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. Нельзя использовать на оружие, модифицированное на +15 и выше.  -->
+		<!-- P. Atk. +3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bow weapons. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increases by double starting at +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22363-1" />
+		<!-- Destruction Scroll: Enchant Weapon (B-grade) -->
+	</item>
+	<item id="33841" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (A)" nameEn="Destruction Scroll: Enchant Weapon (A-grade)">
+		<!-- Для модификации оружия Ранга A. Одноручный меч, одноручное дробящее, кинжал, древковое: Физ. Атк. +4. Двуручный меч, двуручное дробящее, парные клинки, кастеты: Физ. Атк. +5. Луки: Физ. Атк +8. Все оружие: Маг. Атк. +3. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. удваивается. При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. Нельзя использовать на оружие, модифицированное на +15 и выше. -->
+		<!-- P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bow weapons. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increases by double starting at +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22361-1" />
+		<!-- Destruction Scroll: Enchant Weapon (A-grade) -->
+	</item>
+	<item id="33842" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (S)" nameEn="Destruction Scroll: Enchant Weapon (S-grade)">
+		<!-- Для модификации оружия Ранга S. Одноручный меч, одноручное дробящее, кинжал, древковое: Физ. Атк. +5. Двуручный меч, двуручное дробящее, парные клинки, кастеты: Физ. Атк. +6. Луки: Физ. Атк +10. Все оружие: Маг. Атк. +4. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. удваивается. При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. Нельзя использовать на оружие, модифицированное на +15 и выше. -->
+		<!-- P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bow weapons. M. Atk. +4 for all weapons. P. Atk./ M. Atk. Increases by double starting at +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22359-1" />
+		<!-- Destruction Scroll: Enchant Weapon (S-grade) -->
+	</item>
+	<item id="33843" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Оружие (R)" nameEn="Destruction Scroll: Enchant Weapon (R-grade)">
+		<!-- Свиток для модификации оружия Ранга R. Одноручный меч, одноручное дробящее, кинжал, копье: Физ. Атк. +6. Двуручный меч, двуручное дробящее, парные клинки, кастеты, арбалет: Физ. Атк. +7. Луки: Физ. Атк. +12. Все оружие: Маг. Атк. +5. При модификации на +4 и выше бонус к Физ. Атк. и Маг. Атк. сильно увеличивается. Эффект усиления для благословенного оружия выше, чем для обычного. При неудачной модификации предмет благодаря силе Богини Разрушения не разбивается на кристаллы, но степень его модификации остается на прежнем уровне. Нельзя использовать для оружия, модифицированного на +15 и выше. -->
+		<!-- P. Atk. +6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. +7 for two-handed swords, two-handed blunts, dual swords, two-handed fist weapons, and crossbows. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. P. Atk./ M. Atk. greatly increase at +4. All amounts are increased for blessed weapons. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. Cannot be used on weapons +15 or above. -->
+		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="12872-1" />
+		<!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+	</item>
+	<item id="33844" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (D)" nameEn="Destruction Scroll: Enchant Armor (D-grade)">
+		<!-- Увеличивает Физ. Защ. брони и аксессуаров Ранга D на 1. При модификации на +4 и выше Физ. Защ. будет возрастать на 3. Безопасная модификация до +3 (полный доспех +4). При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. При модификации брони до +4 и выше HP также увеличивается в соответствии со значением модификации. Нельзя использовать на доспехи, модифицированные на +6 и выше. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22368-1" />
+		<!-- Destruction Scroll: Enchant Armor (D-grade) -->
+	</item>
+	<item id="33845" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (C)" nameEn="Destruction Scroll: Enchant Armor (C-grade)">
+		<!-- Увеличивает Физ. Защ. брони и аксессуаров Ранга C на 1. При модификации на +4 и выше Физ. Защ. будет возрастать на 3. Безопасная модификация до +3 (полный доспех +4). При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. При модификации брони до +4 и выше HP также увеличивается в соответствии со значением модификации. Нельзя использовать на доспехи, модифицированные на +6 и выше. -->
+		<!-- P. Def. +1 for C-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22366-1" />
+		<!-- Destruction Scroll: Enchant Armor (C-grade) -->
+	</item>
+	<item id="33846" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (B)" nameEn="Destruction Scroll: Enchant Armor (B-grade)">
+		<!-- Увеличивает Физ. Защ. брони и аксессуаров Ранга B на 1. При модификации на +4 и выше Физ. Защ. будет возрастать на 3. Безопасная модификация до +3 (полный доспех +4). При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. При модификации брони до +4 и выше HP также увеличивается в соответствии со значением модификации. Нельзя использовать на доспехи, модифицированные на +6 и выше. -->
+		<!-- P. Def. +1 for B-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22364-1" />
+		<!-- Destruction Scroll: Enchant Armor (B-grade) -->
+	</item>
+	<item id="33847" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (A)" nameEn="Destruction Scroll: Enchant Armor (A-grade)">
+		<!-- Увеличивает Физ. Защ. брони и аксессуаров Ранга A на 1. При модификации на +4 и выше Физ. Защ. будет возрастать на 3. Безопасная модификация до +3 (полный доспех +4). При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. При модификации брони до +4 и выше HP также увеличивается в соответствии со значением модификации. Нельзя использовать на доспехи, модифицированные на +6 и выше. -->
+		<!-- P. Def. +1 for A-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22362-1" />
+		<!-- Destruction Scroll: Enchant Armor (A-grade) -->
+	</item>
+	<item id="33848" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (S)" nameEn="Destruction Scroll: Enchant Armor (S-grade)">
+		<!-- Увеличивает Физ. Защ. брони и аксессуаров Ранга S на 1. При модификации на +4 и выше Физ. Защ. будет возрастать на 3. Безопасная модификация до +3 (полный доспех +4). При неудачной модификации предмет не исчезает и сохраняет уровень модификации за счет силы Богини Разрушения. При модификации брони до +4 и выше HP также увеличивается в соответствии со значением модификации. Нельзя использовать на доспехи, модифицированные на +6 и выше. -->
+		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant level starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22360-1" />
+		<!-- Destruction Scroll: Enchant Armor (S-grade) -->
+	</item>
+	<item id="33849" type="EtcItem" nameRu="Свиток Разрушения: Модифицировать Доспех (R)" nameEn="Destruction Scroll: Enchant Armor (R-grade)">
+		<!-- Свиток для модификации доспехов и аксессуаров Ранга R. Дает Физ. Защ. +2. При модификации на +4 и выше эффект значительно увеличивается. Безопасная модификация до +3. При модификации на +4 и выше добавляется эффект увеличения HP в зависимости от значения модификации. При неудачной модификации предмет благодаря силе Богини Разрушения не разбивается на кристаллы, но степень его модификации остается на прежнем уровне. Нельзя использовать для доспехов, модифицированных на +6 и выше. -->
+		<!-- P. Def. +2 for R-grade armor and accessories, and greatly increases it starting from +4. Can be safely enchanted up to +3. When enchanted to +4 or more, HP also increases according to the enchantment stats. If enchanting fails, the power of the Goddess of Destruction stops the item from crystallizing, and the existing enchantment value is maintained. Cannot be used +6 or above. -->
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="12873-1" />
+		<!-- Destruction Scroll: Enchant Armor (R-grade) -->
+	</item>
+	<item id="33850" type="EtcItem" nameRu="Камень: Модифицировать Оружие (D)" nameEn="Lucky Enchant Stone: Weapon (D-grade)">
+		<!-- При модификации оружия Ранга D увеличивает шанс успеха на 20%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +20% for weapons (D-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2515-1" />
+		<!-- Lucky Clover (D-grade) -->
+	</item>
+	<item id="33851" type="EtcItem" nameRu="Камень: Модифицировать Оружие (C)" nameEn="Lucky Enchant Stone: Weapon (C-grade)">
+		<!-- При модификации оружия Ранга C увеличивает шанс успеха на 18%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +18% for weapons (C-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i01" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2516-1" />
+		<!-- Lucky Clover (C-grade) -->
+	</item>
+	<item id="33852" type="EtcItem" nameRu="Камень: Модифицировать Оружие (B)" nameEn="Lucky Enchant Stone: Weapon (B-grade)">
+		<!-- При модификации оружия Ранга B увеличивает шанс успеха на 15%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +15% for weapons (B-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i02" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2517-1" />
+		<!-- Lucky Clover (B-grade) -->
+	</item>
+	<item id="33853" type="EtcItem" nameRu="Камень: Модифицировать Оружие (A)" nameEn="Lucky Enchant Stone: Weapon (A-grade)">
+		<!-- При модификации оружия Ранга A увеличивает шанс успеха на 12%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +12% for weapons (A-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i03" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2518-1" />
+		<!-- Lucky Clover (A-grade) -->
+	</item>
+	<item id="33854" type="EtcItem" nameRu="Камень: Модифицировать Оружие (S)" nameEn="Lucky Enchant Stone: Weapon (S-grade)">
+		<!-- При модификации оружия Ранга S увеличивает шанс успеха на 10%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +10% for weapons (S-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i04" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2519-1" />
+		<!-- Lucky Clover (S-grade) -->
+	</item>
+	<item id="33855" type="EtcItem" nameRu="Камень: Модифицировать Оружие (R)" nameEn="Lucky Enchant Stone: Weapon (R-grade)">
+		<!-- При модификации оружия Ранга R увеличивает шанс успеха на 10%. Используется с предметами +3-9. -->
+		<!-- Enchant success rate +10% for weapons (R-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9207-1" />
+		<!-- Lucky Clover (R-grade) -->
+	</item>
+	<item id="33856" type="EtcItem" nameRu="Камень: Модифицировать Доспех (D)" nameEn="Lucky Enchant Stone: Armor (D-grade)">
+		<!-- При модификации доспехов Ранга D увеличивает шанс успеха на 35%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +35% for armor (D-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2520-1" />
+		<!-- Lucky Clover (D-grade) -->
+	</item>
+	<item id="33857" type="EtcItem" nameRu="Камень: Модифицировать Доспех (C)" nameEn="Lucky Enchant Stone: Armor (C-grade)">
+		<!-- При модификации доспехов Ранга C увеличивает шанс успеха на 27%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +27% for armor (C-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2521-1" />
+		<!-- Lucky Clover (C-grade) -->
+	</item>
+	<item id="33858" type="EtcItem" nameRu="Камень: Модифицировать Доспех (B)" nameEn="Lucky Enchant Stone: Armor (B-grade)">
+		<!-- При модификации доспехов Ранга B увеличивает шанс успеха на 18%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +23% for armor (B-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_stone_i02" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2522-1" />
+		<!-- Lucky Clover (B-grade) -->
+	</item>
+	<item id="33859" type="EtcItem" nameRu="Камень: Модифицировать Доспех (A)" nameEn="Lucky Enchant Stone: Armor (A-grade)">
+		<!-- При модификации доспехов Ранга A увеличивает шанс успеха на 18%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +18% for armor (A-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2523-1" />
+		<!-- Lucky Clover (A-grade) -->
+	</item>
+	<item id="33860" type="EtcItem" nameRu="Камень: Модифицировать Доспех (S)" nameEn="Lucky Enchant Stone: Armor (S-grade)">
+		<!-- При модификации доспехов Ранга S увеличивает шанс успеха на 15%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +15% for armor (S-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_stone_i04" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="2524-1" />
+		<!-- Lucky Clover (S-grade) -->
+	</item>
+	<item id="33861" type="EtcItem" nameRu="Камень: Модифицировать Доспех (R)" nameEn="Lucky Enchant Stone: Armor (R-grade)">
+		<!-- При модификации доспехов Ранга R увеличивает шанс успеха на 15%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +15% for armor (R-grade). Can only be used with regular Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9208-1" />
+		<!-- Lucky Clover (R-grade) -->
+	</item>
+	<item id="33862" type="EtcItem" nameRu="Эликсир Благословения" nameEn="Elixir of Blessing">
+		<!-- На 30 мин. активирует эффект 1-го уровня Поэмы Рога, Поэмы Гитары, Поэмы Органа и Поэмы Барабана. Доступно персонажам 85-го уровня и выше. Время перезарядки: 2 мин. -->
+		<!-- For 30 minutes, receives the following level 1 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Can be used at level 85 or above. Cooldown is 2 min. -->
+		<set name="icon" val="icon.etc_super_potion_i03" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="elixir" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="9201-1" />
+		<!-- Elixir: Pipe Organ Melody -->
+		<set name="item_skill" val="9202-1" />
+		<!-- Elixir: Guitar Melody -->
+		<set name="item_skill" val="9198-1" />
+		<!-- Elixir: Horn Melody -->
+		<set name="item_skill" val="9199-1" />
+		<!-- Elixir: Drum Melody -->
+	</item>
+	<item id="33863" type="EtcItem" nameRu="Руда Огня - Super 60" nameEn="Fire Stone (+60)">
+		<!-- Стихия огня +60. Дополнительное увеличение сопротивления невозможно. Возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases fire attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12875-3" />
+		<!-- Fire Stone -->
+	</item>
+	<item id="33864" type="EtcItem" nameRu="Руда Воды - Super 60" nameEn="Water Stone (+60)">
+		<!-- Стихия воды +60. Дополнительное увеличение сопротивления невозможно. Также возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases water attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12876-3" />
+		<!-- Water Stone -->
+	</item>
+	<item id="33865" type="EtcItem" nameRu="Руда Земли - Super 60" nameEn="Earth Stone (+60)">
+		<!-- Стихия земли +60. Дополнительное увеличение сопротивления невозможно. Также возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases earth attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12878-3" />
+		<!-- Earth Stone -->
+	</item>
+	<item id="33866" type="EtcItem" nameRu="Руда Ветра - Super 60" nameEn="Wind Stone (+60)">
+		<!-- Стихия ветра +60. Дополнительное увеличение сопротивления невозможно. Также возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases wind attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12877-3" />
+		<!-- Wind Stone -->
+	</item>
+	<item id="33867" type="EtcItem" nameRu="Руда Тьмы - Super 60" nameEn="Dark Stone (+60)">
+		<!-- Стихия тьмы +60. Дополнительное увеличение сопротивления невозможно. Также возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases dark attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12880-3" />
+		<!-- Dark Stone -->
+	</item>
+	<item id="33868" type="EtcItem" nameRu="Руда Святости - Super 60" nameEn="Holy Stone (+60)">
+		<!-- Стихия святости +60. Дополнительное увеличение сопротивления невозможно. Также возможно усиление до 3-х стихий при модификации брони. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases holy attribute by 60 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12879-3" />
+		<!-- Holy Stone -->
+	</item>
+	<item id="33869" type="EtcItem" nameRu="Руда Огня - Super 150" nameEn="Fire Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию огня на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases fire attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12875-1" />
+		<!-- Fire Stone -->
+	</item>
+	<item id="33870" type="EtcItem" nameRu="Руда Воды - Super 150" nameEn="Water Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию воды на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases water attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12876-1" />
+		<!-- Water Stone -->
+	</item>
+	<item id="33871" type="EtcItem" nameRu="Руда Земли - Super 150" nameEn="Earth Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию земли на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases earth attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12878-1" />
+		<!-- Earth Stone -->
+	</item>
+	<item id="33872" type="EtcItem" nameRu="Руда Ветра - Super 150" nameEn="Wind Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию ветра на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases wind attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12877-1" />
+		<!-- Wind Stone -->
+	</item>
+	<item id="33873" type="EtcItem" nameRu="Руда Тьмы - Super 150" nameEn="Dark Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию тьмы на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases dark attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12880-1" />
+		<!-- Dark Stone -->
+	</item>
+	<item id="33874" type="EtcItem" nameRu="Руда Святости - Super 150" nameEn="Holy Stone (+150)">
+		<!-- Позволяет за один раз увеличить стихию святости на 3 уровня. Также возможно усиление до 3-х стихий при инкрустации в броню. Нельзя усилить стихии, противоположные друг другу. -->
+		<!-- Increases holy attribute by 150 at once. Additional Elemental attributes cannot be bestowed. 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_attr" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<!-- <set name="commissionItemType" val="ATTRIBUTE_STONE" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="12879-1" />
+		<!-- Holy Stone -->
+	</item>
+	<item id="33875" type="Weapon" nameRu="Острие Реквиема" nameEn="Requiem Shaper">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает силу Физ. Крит. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, physical Critical Damage increases. -->
+		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="dagger" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13279-3" />
+		<!-- Dagger Special Ability -->
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="369" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="33876" type="Weapon" nameRu="Резак Реквиема" nameEn="Requiem Cutter">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает Точность и шанс Физ. Крит. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<set name="icon" val="icon.weapon_estia_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="sword" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13252-3" />
+		<!-- One-handed Sword Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="422" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="33877" type="Weapon" nameRu="Эспадон Реквиема" nameEn="Requiem Slasher">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации +4 увеличивает Физ. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. additionally increases. -->
+		<set name="icon" val="icon.weapon_polion_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="sword" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1740" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13258-3" />
+		<!-- Two-handed Sword Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="514" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="33878" type="Weapon" nameRu="Мститель Реквиема" nameEn="Requiem Avenger">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает силу Физ. Крит. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, physical Critical Damage increases. -->
+		<set name="icon" val="icon.weapon_batista_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1740" />
+		<set name="material" val="fine_steel" />
+		<set name="enchant4_skill" val="13253-3" />
+		<!-- One-handed Blunt Special Ability -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="422" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="33879" type="Weapon" nameRu="Воитель Реквиема" nameEn="Requiem Fighter">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает Скор. Атк. и Физ. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<set name="icon" val="icon.weapon_fantasma_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="dualfist" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1550" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13264-3" />
+		<!-- Fist Weapon Special Ability -->
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="514" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="33880" type="Weapon" nameRu="Буревестник Реквиема" nameEn="Requiem Stormer">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 усиливает мультиатаку. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Multi-attack additionally increases. -->
+		<set name="icon" val="icon.weapon_soryu_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="pole" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="2010" />
+		<set name="material" val="bronze" />
+		<set name="item_skill" val="3599-1" />
+		<!-- Polearm Multi-attack -->
+		<set name="enchant4_skill" val="13263-3" />
+		<!-- Spear Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="80" />
+		<for>
+			<set order="0x08" stat="pAtk" val="422" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="33881" type="Weapon" nameRu="Бросок Реквиема" nameEn="Requiem Thrower">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает урон от физ. умений. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Skill Power increases. -->
+		<set name="icon" val="icon.weapon_grabathus_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="bow" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13289-3" />
+		<!-- Bow Special Ability -->
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<for>
+			<set order="0x08" stat="pAtk" val="831" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="33882" type="Weapon" nameRu="Страж Реквиема" nameEn="Requiem Shooter">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации +4 увеличивает Скор. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Atk. Spd. Increases. -->
+		<set name="icon" val="icon.weapon_shyayaka_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="crossbow" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1580" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13294-3" />
+		<!-- Crossbow Special Ability -->
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<for>
+			<set order="0x08" stat="pAtk" val="748" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="33883" type="Weapon" nameRu="Расчленитель Реквиема" nameEn="Requiem Buster">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает Маг. Точность и шанс Маг. Крит. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
+		<set name="icon" val="icon.weapon_kaynon_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="sword" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13295-3" />
+		<!-- Magic Sword Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="338" />
+			<set order="0x08" stat="mAtk" val="245" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="33884" type="Weapon" nameRu="Заклинатель Реквиема" nameEn="Requiem Caster">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает Маг. Точность и силу Маг. Крит. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
+		<set name="icon" val="icon.weapon_anatrian_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1080" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="wood" />
+		<set name="enchant4_skill" val="13296-3" />
+		<!-- Magic One-handed Blunt Special Ability -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="338" />
+			<set order="0x08" stat="mAtk" val="245" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="33885" type="Weapon" nameRu="Возмездие Реквиема" nameEn="Requiem Retributer">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает Маг. Атк., силу Маг. Крит. Атк. и Скор. Маг. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<set name="icon" val="icon.weapon_grangkaz_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1080" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="wood" />
+		<set name="enchant4_skill" val="13301-3" />
+		<!-- Magic Two-handed Blunt Special Ability -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="411" />
+			<set order="0x08" stat="mAtk" val="270" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="33886" type="Weapon" nameRu="Парные Мечи Реквиема" nameEn="Requiem Dual sword">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает шанс Физ. Крит. Атк. и Физ. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="dual" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13274-3" />
+		<!-- Dualsword Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="514" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="33887" type="Weapon" nameRu="Парные Кинжалы Реквиема" nameEn="Requiem Dual Dagger">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации на +4 увеличивает силу Физ. Крит. Атк. и Физ. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="dualdagger" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="2050" />
+		<set name="material" val="steel" />
+		<set name="enchant4_skill" val="13284-3" />
+		<!-- Dual Dagger Special Ability -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<cond msgId="1518">
+			<player canUseDualDaggers="true" />
+		</cond>
+		<for>
+			<set order="0x08" stat="pAtk" val="422" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="33888" type="Weapon" nameRu="Парные Дубины Реквиема" nameEn="Requiem Dual Blunt Weapon">
+		<!-- Можно вставить 2 обычных Кристалла Души и 1 особый Кристалл Души. При модификации +4 увеличивает урон от физ. умений и Физ. Атк. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="dual" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1740" />
+		<set name="material" val="fine_steel" />
+		<set name="enchant4_skill" val="13269-3" />
+		<!-- Dual Blunt Weapon Special Ability -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="514" />
+			<set order="0x08" stat="mAtk" val="186" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="33889" type="Armor" nameRu="Шлем Бессмертия" nameEn="Immortal Helmet">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) -->
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="530" />
+		<set name="material" val="bone" />
+		<for>
+			<add order="0x10" stat="pDef" val="114" />
+		</for>
+	</item>
+	<item id="33890" type="Armor" nameRu="Кираса Бессмертия" nameEn="Immortal Breastplate">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) При модификации на +4 снижает силу Физ. Крит. Атк. и увеличивает Физ. Защ. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="7520" />
+		<set name="material" val="bronze" />
+		<set name="item_skill" val="13063-1" />
+		<!-- Cloak Slot Activation (R-grade) -->
+		<set name="enchant4_skill" val="13310-3" />
+		<!-- Heavy Armor Top Special Ability -->
+		<for>
+			<add order="0x10" stat="pDef" val="304" />
+		</for>
+	</item>
+	<item id="33891" type="Armor" nameRu="Набедренники Бессмертия" nameEn="Immortal Gaiters">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) -->
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="3170" />
+		<set name="material" val="scale_of_dragon" />
+		<for>
+			<add order="0x10" stat="pDef" val="190" />
+		</for>
+	</item>
+	<item id="33892" type="Armor" nameRu="Рукавицы Бессмертия" nameEn="Immortal Gauntlets">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) -->
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="510" />
+		<set name="material" val="leather" />
+		<for>
+			<add order="0x10" stat="pDef" val="76" />
+		</for>
+	</item>
+	<item id="33893" type="Armor" nameRu="Сапоги Бессмертия" nameEn="Immortal Boots">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) -->
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1070" />
+		<set name="material" val="leather" />
+		<for>
+			<add order="0x10" stat="pDef" val="76" />
+		</for>
+	</item>
+	<item id="33894" type="Armor" nameRu="Щит Бессмертия" nameEn="Immortal Shield">
+		<!-- Можно добавить свойство комплекта (атак. или защит.) -->
+		<!-- Bestows an attack or defense type set option. -->
+		<set name="icon" val="icon.weapon_sacon_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1130" />
+		<set name="material" val="damascus" />
+		<for>
+			<set order="0x08" stat="sDef" val="415" />
+			<set order="0x08" stat="rShld" val="20" />
+			<add order="0x10" stat="rEvas" val="-8" />
+		</for>
+	</item>
+	<item id="33895" type="Armor" nameRu="Кожаный Шлем Бессмертия" nameEn="Immortal Leather Helmet">
+		<!-- Можно добавить свойство комплекта (смерт. или усил.) -->
+		<!-- Can bestow the assassin type or strong type set option. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="530" />
+		<set name="material" val="bone" />
+		<for>
+			<add order="0x10" stat="pDef" val="114" />
+		</for>
+	</item>
+	<item id="33896" type="Armor" nameRu="Кожаный Доспех Бессмертия" nameEn="Immortal Leather Armor">
+		<!-- Можно добавить свойство комплекта (смерт. или усил.). При модификации на +4 увеличивает Физ. Уклонение и Скорость, сопротивление физ. отрицательным эффектам, уменьшает шанс получения Физ. Крит. Атк. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="light" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="4140" />
+		<set name="material" val="bronze" />
+		<set name="item_skill" val="13063-1" />
+		<!-- Cloak Slot Activation (R-grade) -->
+		<set name="enchant4_skill" val="13311-3" />
+		<!-- Light Armor Top Special Ability -->
+		<for>
+			<add order="0x10" stat="pDef" val="243" />
+			<add order="0x10" stat="rEvas" val="5" />
+			<add order="0x10" stat="rEvas" val="5" />
+		</for>
+	</item>
+	<item id="33897" type="Armor" nameRu="Кожаные Брюки Бессмертия" nameEn="Immortal Leather Leggings">
+		<!-- Можно добавить свойство комплекта (смерт. или усил.) -->
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="light" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1320" />
+		<set name="material" val="scale_of_dragon" />
+		<for>
+			<add order="0x10" stat="pDef" val="152" />
+			<add order="0x10" stat="rEvas" val="3" />
+			<add order="0x10" stat="rEvas" val="3" />
+		</for>
+	</item>
+	<item id="33898" type="Armor" nameRu="Кожаные Перчатки Бессмертия" nameEn="Immortal Leather Gloves">
+		<!-- Можно добавить свойство комплекта (смерт. или усил.) -->
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="510" />
+		<set name="material" val="leather" />
+		<for>
+			<add order="0x10" stat="pDef" val="76" />
+		</for>
+	</item>
+	<item id="33899" type="Armor" nameRu="Кожаные Сапоги Бессмертия" nameEn="Immortal Leather Boots">
+		<!-- Можно добавить свойство комплекта (смерт. или усил.) -->
+		<!-- Bestows an assassin or enchant type set option. -->
+		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="s84" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1070" />
+		<set name="material" val="leather" />
+		<for>
+			<add order="0x10" stat="pDef" val="76" />
+		</for>
+	</item>
+</list>

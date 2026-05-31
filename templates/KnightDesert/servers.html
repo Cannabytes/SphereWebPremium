@@ -1,0 +1,36 @@
+<div class="sidebar__servers servers">
+    <div class="heading">
+        <h3 class="title mt mb">{{ phrase("servers_title")|raw }}</h3>
+    </div>
+    <div class="servers__list">
+        {% for server in getServerAll() %}
+        <a class="servers__server server" data-gw-server>
+            <div class="server__container">
+                <div class="server__row">
+                    <div class="server__title">
+                        {{ server.name }}
+                        <span class="color-orange">{{ server.chronicle }} - x{{ server.rateExp }}</span>
+                    </div>
+                    <div class="server__online">
+                        {% if server.getStatus().getGameServer() %}
+                        Online
+                        {% else %}
+                        Offline
+                        {% endif %}
+                        <span class="color-orange" data-server-percent>0</span><span class="color-orange">%</span>
+                    </div>
+                </div>
+
+                <div class="server__progress" data-gw-server-online="{{ server.getStatus().getOnline() }}" data-gw-server-online-max="{{ server.getMaxOnline() }}">
+                    {% set MaxOnlinePr = server.getStatus().getOnline() / server.getMaxOnline() * 100 %}
+                    {% if MaxOnlinePr > 100 %}
+                    {% set MaxOnlinePr = 100 %}
+                    {% endif %}
+                    <div class="server__load" data-server-load="" style="width: {{MaxOnlinePr}}%;"></div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<!-- END servers -->

@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="28500" type="EtcItem" nameRu="Королевские Слезы" nameEn="Royal Tears">
+		<!-- Эссенция искренних чувств Фринтезы. Дает положительный эффект и меняет внешний вид оружия на День Всех Влюбленных. -->
+		<!-- It contain's Frintezza's feelings. You get a buff and it changes the appearance of your weapon. -->
+		<set name="icon" val="BranchSys2.icon.g_illumination_skyblue" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28501" type="EtcItem" nameRu="Шоколад Королевской Симпатии" nameEn="Chocolate of Royal Sympathy">
+		<!-- По двойному щелчку на 2 ч. наделяет эффектом Королевская Симпатия (бонус опыта и SP +10%, сопротивление всем стихиям +20, СИЛ +2, ИНТ +2). Действует на всех членов группы. Суммируется с эффектами Королевская Преданность и Королевская Страсть. -->
+		<!-- Double-click to apply 'Compassion' effect to all party members. XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. Can be stacked with 'Devotion' and 'Desire' effects. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28502" type="EtcItem" nameRu="Конфета Королевской Преданности" nameEn="Candy of Royal Devotion">
+		<!-- По двойному щелчку на 2 ч. наделяет эффектом Королевская Преданность (бонус опыта и SP +10%, СИЛ +2, ИНТ +2, ЛВК +2, МДР +2). Действует на всех членов группы. Суммируется с эффектами Королевская Симпатия и Королевская Страсть. -->
+		<!-- Double-click to apply 'Devotion' effect to all party members. XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. Can be stacked with 'Compassion' and 'Desire' effects. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28503" type="EtcItem" nameRu="Печенье Королевской Страсти" nameEn="Cookie of Royal Desire">
+		<!-- По двойному щелчку на 2 ч. наделяет эффектом Королевская Страсть (бонус опыта и SP +10%, СИЛ +2, ИНТ +2, ВЫН +2, ДУХ +2). Действует на всех членов группы. Суммируется с эффектами Королевская Симпатия и Королевская Преданность. -->
+		<!-- Double-click to apply 'Desire' effect to all party members. XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<!-- <set name="is_event_restricted" val="true" \> -->
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="27848-1" />
+		<!-- Longing -->
+	</item>
+	<item id="28504" type="EtcItem" nameRu="Шоколад Фринтезы для Трансформации" nameEn="Frintezza's Transformation Chocolate">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. На 1 ч. перевоплощает в одно из следующих забавных существ: Снеговик, Пугало, Жестяной Голем, Глиняная Статуя, Красивая Глиняная Статуя, Крепкая Глиняная Статуя, Ветхая Глиняная Статуя. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28505" type="EtcItem" nameRu="Конфета Фринтезы для Трансформации" nameEn="Frintezza's Transformation Candy">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. На 1 ч. перевоплощает в одно из следующих забавных существ: Снеговик, Пугало, Жестяной Голем, Глиняная Статуя, Красивая Глиняная Статуя, Крепкая Глиняная Статуя, Ветхая Глиняная Статуя. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28506" type="EtcItem" nameRu="Печенье Фринтезы для Трансформации" nameEn="Frintezza's Transformation Cookie">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. На 1 ч. перевоплощает в одно из следующих забавных существ: Снеговик, Пугало, Жестяной Голем, Глиняная Статуя, Красивая Глиняная Статуя, Крепкая Глиняная Статуя, Ветхая Глиняная Статуя. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28507" type="EtcItem" nameRu="Шоколад Фринтезы для Призыва Друга" nameEn="Frintezza's Friend Summon Chocolate">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. Раз в 30 мин. можно призвать члена группы. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28508" type="EtcItem" nameRu="Конфета Фринтезы для Призыва Друга" nameEn="Frintezza's Friend Summon Candy">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. Раз в 30 мин. можно призвать члена группы. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28509" type="EtcItem" nameRu="Печенье Фринтезы для Призыва Друга" nameEn="Frintezza's Friend Summon Cookie">
+		<!-- Предмет, наполненный безграничной мощью Фринтезы. Раз в 30 мин. можно призвать члена группы. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="28510" type="EtcItem" nameRu="Камень Обработки Красного Костюма Дворянина" nameEn="Red Noblesse Appearance Stone">
+		<!-- Позволяет придать нагруднику или полному доспеху облик Красного Костюма Дворянина. Полностью изменяет облик доспехов. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28511" type="EtcItem" nameRu="Камень Обработки Школьной Формы Тип 1" nameEn="School Uniform A Appearance Stone">
+		<!-- Позволяет придать доспехам облик Школьной Формы Тип 1. Подходит как для нагрудника, так и для полного доспеха. Остальные элементы доспеха также обретают вид школьной формы 1-го типа. Вернуть первоначальный вид можно при помощи Свитка Восстановления Облика Снаряжения. -->
+		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28512" type="EtcItem" nameRu="Камень Обработки Школьной Формы Тип 2" nameEn="School Uniform B Appearance Stone">
+		<!-- Позволяет придать доспехам облик Школьной Формы Тип 2. Подходит как для нагрудника, так и для полного доспеха. Остальные элементы доспеха также обретают вид школьной формы 2-го типа. Вернуть первоначальный вид можно при помощи Свитка Восстановления Облика Снаряжения. -->
+		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28513" type="EtcItem" nameRu="Большой Красный и Синий Кошачий Глаз" nameEn="Advanced Red&amp;Blue Cat's Eye Treasure Chest">
+		<!-- Дважды щелкните, чтобы получить Большой Красный и Синий Кошачий Глаз (30 д.). -->
+		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28514" type="EtcItem" nameRu="Сундук с Чудесным Острием (7 д.)" nameEn="Mysterious Shaper 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесное Острие (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Shaper (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28515" type="EtcItem" nameRu="Сундук с Чудесным Резаком (7 д.)" nameEn="Mysterious Cutter 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Резак (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Cutter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28516" type="EtcItem" nameRu="Сундук с Чудесным Эспадоном (7 д.)" nameEn="Mysterious Slasher 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Эспадон (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Slasher (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28517" type="EtcItem" nameRu="Сундук с Чудесным Мстителем (7 д.)" nameEn="Mysterious Avenger 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Мститель (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Avenger (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28518" type="EtcItem" nameRu="Сундук с Чудесным Воином (7 д.)" nameEn="Mysterious Fighter 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Воин (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Fighter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28519" type="EtcItem" nameRu="Сундук с Чудесным Буревестником (7 д.)" nameEn="Mysterious Stormer 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Буревестник (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Stormer (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28520" type="EtcItem" nameRu="Сундук с Чудесным Броском (7 д.)" nameEn="Mysterious Thrower 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Бросок (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Thrower (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28521" type="EtcItem" nameRu="Сундук с Чудесным Стражем (7 д.)" nameEn="Mysterious Shooter 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Страж (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Shooter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28522" type="EtcItem" nameRu="Сундук с Чудесным Расчленителем (7 д.)" nameEn="Mysterious Buster 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Расчленитель (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Buster (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28523" type="EtcItem" nameRu="Сундук с Чудесным Заклинателем (7 д.)" nameEn="Mysterious Caster 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесный Заклинатель (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Caster (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28524" type="EtcItem" nameRu="Сундук с Чудесным Возмездием (7 д.)" nameEn="Mysterious Retributer 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесное Возмездие (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Retributer (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28525" type="EtcItem" nameRu="Сундук с Чудесными Парными Мечами (7 д.)" nameEn="Mysterious Dual sword 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесные Парные Мечи (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious dual sword (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28526" type="EtcItem" nameRu="Сундук с Чудесными Парными Кинжалами (7 д.)" nameEn="Mysterious Dual Dagger 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесные Парные Кинжалы (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Dual Dagger (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28527" type="EtcItem" nameRu="Сундук с Чудесными Парными Дубинами (7 д.)" nameEn="Mysterious Dual Blunt 7-day Pack">
+		<!-- Дважды щелкните, чтобы получить Чудесные Парные Дубины (7 д.). -->
+		<!-- Wrapped pack containing a Mysterious Dual Blunt (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28528" type="EtcItem" nameRu="Сундук с Сокровищами Страсти" nameEn="Passion Treasure Chest">
+		<!-- Сундук с Сокровищами, содержащий особые подарки Фомоны. -->
+		<!-- Treasure Chest with Pomona's gift. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="28529" type="EtcItem" nameRu="Сундук Затерянных Сокровищ Звезды Мессии" nameEn="Messiah's Castle's Lost Treasure Chest">
+		<!-- Дважды щелкните, чтобы в случайном порядке получить ценный предмет из затерянных сокровищ Звезды Мессии. -->
+		<!-- Double-click to obtain random lost treasures of Messiah's Castle. -->
+		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28530" type="EtcItem" nameRu="Лучший Камень Духа для Ослепительной Броши" nameEn="Top-grade Brooch Spirit Stone">
+		<!-- Камень высшего ранга для Броши Лавианроз. Улучшает характеристики броши. -->
+		<!-- Top-grade Spirit Stone for La Vie En Rose's Brooch. Can only be augmented for Radiant Brooch (Rare-type). -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28531" type="EtcItem" nameRu="Сундук Высшего Ранга для Поддержки Вернувшегося Героя" nameEn="Top-grade Returning Hero's Support Box">
+		<!-- Дважды щелкните, чтобы получить следующие предметы: Свиток: Модифицировать Оружие (R) 4 шт., Благ. Камень: Модифицировать Доспех (R) 5 шт., Благ. Камень: Модифицировать Оружие (R) 1 шт., Упаковка: Руна Мафр Высокого Качества 100% (1 шт.), Браслет Призыва Агатиона: Матрешка на 30 д. (1 шт.), Упаковка: Руна Опыта 100% на 7 д. (1 шт.), Благословенное Перо - Ивент (5 шт.), Красная Бутыль Вернувшегося Героя (100 шт.), Драгоценная Брошь Лавианроз (1 шт.), Рубин/ Сапфир/ Изумруд/ Камень Энергии Ур. 3 (30 д.). Для персонажей 95-го уровня и выше. -->
+		<!-- Double-click to get Scroll: Enchant Weapon (R-grade) x4, Blessed Lucky Enchant Stone: Armor (R-grade) x5, Blessed Lucky Enchant Stone: Weapon Pack (R-grade) x1, Prestige Rune 100% Pack x1, Agathion - Matryoshka (30-day) x1, XP Rune III 100% Pack (7-day) x1, Feather of Blessing (Event) x5, Returning Hero's Health Potion x100, La Vie En Rose's Noble Brooch x1, Lv.3 Ruby/ Sapphire/ Emerald/ Vital Stone (30-day). Lv. 95 or above. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="28532" type="Armor" nameRu="Рубин Ур. 3" nameEn="Ruby Lv. 3">
+		<!-- Урон от Зарядов Души и Зарядов Души Зверя +7,5%. При ношении двух одинаковых камней эффект будет действовать только от камня наивысшего уровня. -->
+		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28533" type="Armor" nameRu="Сапфир Ур. 3" nameEn="Sapphire Lv. 3">
+		<!-- Урон от Зарядов Духа и Благословенных Зарядов Духа +7,5%. При ношении двух одинаковых камней эффект будет действовать только от камня наивысшего уровня. -->
+		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28534" type="Armor" nameRu="Изумруд Ур. 3" nameEn="Emerald Lv. 3">
+		<!-- СИЛ +1, ЛВК +1, ВЫН +1, ИНТ +1, МДР +1, ДУХ +1. При ношении двух одинаковых камней эффект будет действовать только от камня наивысшего уровня. -->
+		<!-- When equipped, STR +1, DEX +1, CON +1, INT +1, WIT +1, and MEN +1. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28535" type="Armor" nameRu="Камень Энергии Ур. 3" nameEn="Vital Stone Lv. 3">
+		<!-- Бонус энергии +12%. Позволяет использовать умение Ветер Энергии. При ношении двух одинаковых камней эффект будет действовать только от камня наивысшего уровня. -->
+		<!-- Increases Vitality Status Bonus EXP by 12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28536" type="EtcItem" nameRu="Полный Мешок Коллекционера Букв - TOGETHER" nameEn="Complete Letter Set: TOGETHER">
+		<!-- Волшебный мешок с буквами TOGETHER. Дважды щелкните, чтобы получить все буквы слова TOGETHER. -->
+		<!-- Magic pouch that contains the letters of TOGETHER. Double-click to get all the letters in TOGETHER. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28537" type="EtcItem" nameRu="Полный Мешок Коллекционера Букв - LINEAGE II" nameEn="Complete Letter Set: LINEAGE II">
+		<!-- Волшебный мешок с буквами LINEAGE II. Дважды щелкните, чтобы получить все буквы слова LINEAGE II. -->
+		<!-- Magic pouch that contains the letters of LINEAGE II. Double-click to get all the letters in LINEAGE II. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28538" type="EtcItem" nameRu="Полный Мешок Коллекционера Букв - NCSOFT" nameEn="Complete Letter Set: NCSOFT">
+		<!-- Волшебный мешок с буквами NCSOFT. Дважды щелкните, чтобы получить все буквы слова NCSOFT. -->
+		<!-- Magic pouch that contains the letters of NCSOFT. Double-click to get all the letters in NCSOFT. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28539" type="EtcItem" nameRu="Камень Духа для Ослепительной Броши" nameEn="Brooch Spirit Stone">
+		<!-- Камень Духа для зачарования Усиленной Ослепительной Броши Лавианроз. Также используется в качестве материала для улучшения Изящной Броши. Отнесите этот камень Шадаю в Хейн, чтобы улучшить Изящную Брошь Лавианроз до Ослепительной. Для улучшения потребуются дополнительные материалы. -->
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Enchant Types. Shadai at Heine can imbue the enhanced Elegant Brooch with a special power. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="wood" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28540" type="EtcItem" nameRu="Камень Духа для Ослепительной Броши" nameEn="Brooch Spirit Stone">
+		<!-- Камень Духа для зачарования Редкой Ослепительной Броши Лавианроз. -->
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Rare Types. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28541" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (85)" nameEn="Secret Embryo Bait (85)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 85-го уровня и выше -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28542" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (95)" nameEn="Secret Embryo Bait (95)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 95-го уровня и выше -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28543" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (99)" nameEn="Secret Embryo Bait (99)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 99-го уровня и выше -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28544" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (102)" nameEn="Secret Embryo Bait (102)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 102-го уровня и выше -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28545" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (105)" nameEn="Secret Embryo Bait (105)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 105-го уровня и выше -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28546" type="EtcItem" nameRu="Купон на Сверкающую Волшебную Наживку" nameEn="Secret Embryo Bait Coupon">
+		<!-- Отнесите этот купон Рыбаку Фибсу в Хейн, чтобы обменять на Сверкающую Волшебную Наживку нужного ранга. -->
+		<!-- Can be exchanged at NPC Peeves in Heine for a Secret Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28547" type="EtcItem" nameRu="Сверкающий Волшебный Сундук" nameEn="Embryo Reward Box">
+		<!-- Дважды щелкните, чтобы получить в случайном порядке один из разнообразных предметов. -->
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28548" type="EtcItem" nameRu="Волшебный Сундук" nameEn="Smuggled Embryo Chest">
+		<!-- Дважды щелкните, чтобы получить Рыболовную Монету Хейна и, с определенной вероятностью, Сверкающий Волшебный Сундук. -->
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28549" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (85)" nameEn="Secret Embryo Bait (85)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 85-го уровня и выше. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28550" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (95)" nameEn="Secret Embryo Bait (95)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 95-го уровня и выше. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28551" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (99)" nameEn="Secret Embryo Bait (99)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 99-го уровня и выше. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28552" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (102)" nameEn="Secret Embryo Bait (102)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 102-го уровня и выше. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28553" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (105)" nameEn="Secret Embryo Bait (105)">
+		<!-- Время рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет получить Волшебный Сундук. Доступно персонажам 105-го уровня и выше. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28554" type="EtcItem" nameRu="Купон на Сверкающую Волшебную Наживку" nameEn="Secret Embryo Bait Coupon">
+		<!-- Отнесите этот купон Рыбаку Фибсу в Хейн, чтобы обменять на Сверкающую Волшебную Наживку нужного ранга. -->
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28555" type="EtcItem" nameRu="Сверкающий Волшебный Сундук" nameEn="Embryo Reward Box">
+		<!-- Дважды щелкните, чтобы получить в случайном порядке один из разнообразных предметов. -->
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28556" type="EtcItem" nameRu="Волшебный Сундук" nameEn="Smuggled Embryo Chest">
+		<!-- Дважды щелкните, чтобы получить Рыболовную Монету Хейна и, с определенной вероятностью, Сверкающий Волшебный Сундук. -->
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28557" type="EtcItem" nameRu="Особый Подарок Марио" nameEn="Galup's Special Gift">
+		<!-- Дважды щелкните, чтобы с определенной вероятностью получить один из следующих предметов: Полномочия Правителя, Таинственный Кристалл Души , Энергия Семи Печатей, Свиток Разрушения: Модифицировать Оружие (R), Камень Фреи: Модифицировать Оружие/ Доспех (R), Запечатанный Талисман Вожделения, Энергия Карли (Вожделение), Фрагмент Таинственного Кристалла Души, Свиток Трансформации в Лавочника, Источник Силы Императора, Коробка с Ушками Кролика/ Ушками Енота/ Кошачьими Ушками/ Модной Шляпой/ Нимбом Ангела/ Диадемой Демона/ Глазной Повязкой Пирата/ Глазной Повязкой Бандита/ Глазной Повязкой/ Праздничным Колпаком/ Элегантным Обручем Ангела/ Элегантными Рогами Черта, Сундук с Силой Гигантов/ Энергией Разрушения (20 шт.), Краска Ветра Ур. 5/ Ур.4 - УДЧ, Краска Ветра Ур. 5/ Ур.4 - ХАР, Камень Жизни для Головных Уборов, Камень Рун, Благословенный Свиток: Модифицировать Доспех (R), Свиток Гигантов: Модифицировать Доспех (R), Свиток: Модифицировать Доспех (R) (3 шт.), Сундук с Материалом для Производства (4 шт.), Самоцвет: Ранг R (5 шт.). -->
+		<!-- A special gift form Galup. Double-click to receive a good reward prepared specially by Galup. -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28558" type="EtcItem" nameRu="Набор Кровавых Материалов Хелиоса" nameEn="Bloody Helios Ingredient Set">
+		<!-- Дважды щелкните, чтобы получить материалы, необходимые для создания Кровавого Хелиоса. -->
+		<!-- Double-click to obtain the ingredients for crafting Bloody Helios. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28559" type="EtcItem" nameRu="Набор Кровавых Материалов Айдиоса" nameEn="Bloody Eternal Ingredient Set">
+		<!-- Дважды щелкните, чтобы получить материалы, необходимые для создания Кровавого Айдиоса. -->
+		<!-- Double-click to obtain the ingredients for crafting Bloody Eternal. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28560" type="EtcItem" nameRu="Набор Темных Материалов Хелиоса" nameEn="Dark Helios Ingredient Set">
+		<!-- Дважды щелкните, чтобы получить материалы, необходимые для создания Темного Хелиоса. -->
+		<!-- Double-click to obtain the ingredients for crafting Dark Helios. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28561" type="EtcItem" nameRu="Набор Темных Материалов Айдиоса" nameEn="Dark Eternal Ingredient Set">
+		<!-- Дважды щелкните, чтобы получить материалы, необходимые для создания Темного Айдиоса. -->
+		<!-- Double-click to obtain the ingredients for crafting Dark Eternal. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28562" type="EtcItem" nameRu="Набор Эликсиров и Свитков Шторма" nameEn="Storm Scroll and Miraculous Medicine Set">
+		<!-- Дважды щелкните, чтобы получить Свитки Шторма Фреи и Эликсиры Гран Каина. -->
+		<!-- Double-click to obtain Freya's Scroll of Storm and Gran Kain's Miraculous Medicine -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28563" type="EtcItem" nameRu="Счастливый Драгоценный Ларец" nameEn="Ultimate Fortune Jewelry Box">
+		<!-- Дважды щелкните, чтобы получить один из Счастливых Сундуков с Драгоценным Камнем. -->
+		<!-- Double-click to obtain 1 of the Fortune Jewelry Boxes. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28564" type="EtcItem" nameRu="Счастливый Сундук с Кошачьим Глазом" nameEn="Cat's Eye Fortune Box">
+		<!-- Дважды щелкните, чтобы получить Кошачий Глаз случайного уровня (1-5). -->
+		<!-- Double-click to obtain 1 Cat's Eye Lv. 1-5. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_catseye_i00" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28565" type="EtcItem" nameRu="Счастливый Сундук с Камнем Энергии" nameEn="Vital Stone Fortune Box">
+		<!-- Дважды щелкните, чтобы получить Камень Энергии случайного уровня (1-5). -->
+		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28566" type="EtcItem" nameRu="Счастливый Сундук с Танзанитом" nameEn="Tanzanite Fortune Box">
+		<!-- Дважды щелкните, чтобы получить Танзанит случайного уровня (1-5). -->
+		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28567" type="EtcItem" nameRu="Счастливый Сундук с Аметистом" nameEn="Amethyst Fortune Box">
+		<!-- Дважды щелкните, чтобы получить Аметист случайного уровня (1-5). -->
+		<!-- Double click to obtain one of Level 1-5 Amethysts. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28568" type="EtcItem" nameRu="Счастливый Сундук с Гранатом" nameEn="Garnet Treasure Fortune Box">
+		<!-- Дважды щелкните, чтобы получить 1 Гранат 1-5 Ур. -->
+		<!-- Double click to obtain one of Level 1-5 Garnets. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28569" type="EtcItem" nameRu="Сияющая Волшебная Наживка (85)" nameEn="Secret Embryo Bait (85)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 85 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28570" type="EtcItem" nameRu="Сияющая Волшебная Наживка (95)" nameEn="Secret Embryo Bait (95)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 95 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28571" type="EtcItem" nameRu="Сияющая Волшебная Наживка (99)" nameEn="Secret Embryo Bait (99)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 99 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28572" type="EtcItem" nameRu="Сияющая Волшебная Наживка (102)" nameEn="Secret Embryo Bait (102)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 102 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28573" type="EtcItem" nameRu="Сияющая Волшебная Наживка (105)" nameEn="Secret Embryo Bait (105)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 105 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28574" type="EtcItem" nameRu="Купон на Сияющую Волшебную Наживку" nameEn="Secret Embryo Bait Coupon">
+		<!-- Позволяет получить Сияющую Волшебную Наживку у Члена Гильдии Рыболовов в любой деревне. -->
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28575" type="EtcItem" nameRu="Сияющий Волшебный Сундук" nameEn="Embryo Reward Box">
+		<!-- Дважды щелкните, в случайном порядке получить один из множества разнообразных предметов. -->
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28576" type="EtcItem" nameRu="Волшебный Сундук" nameEn="Smuggled Embryo Chest">
+		<!-- Дважды щелкните, чтобы получить Рыболовную Монету Хейна. С определенным шансом дополнительно можно получить Сияющий Волшебный Сундук. -->
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28577" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (85)" nameEn="Secret Embryo Bait (85)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 85 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28578" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (95)" nameEn="Secret Embryo Bait (95)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 95 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28579" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (99)" nameEn="Secret Embryo Bait (99)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 99 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28580" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (102)" nameEn="Secret Embryo Bait (102)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 102 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28581" type="EtcItem" nameRu="Сверкающая Волшебная Наживка (105)" nameEn="Secret Embryo Bait (105)">
+		<!-- Длительность рыбалки: 45 сек. Время ожидания рыбалки: 15 сек.  Наживка для рыбалки. Позволяет поймать Волшебный Сундук. Для персонажей выше 105 уровня. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28582" type="EtcItem" nameRu="Купон на Сверкающую Волшебную Наживку" nameEn="Secret Embryo Bait Coupon">
+		<!-- Позволяет получить Сияющую Волшебную Наживку у Члена Гильдии Рыболовов в любой деревне. -->
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="leather" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28583" type="EtcItem" nameRu="Сверкающий Волшебный Сундук" nameEn="Embryo Reward Box">
+		<!-- Дважды щелкните, в случайном порядке получить один из множества разнообразных предметов. -->
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28584" type="EtcItem" nameRu="Волшебный Сундук" nameEn="Smuggled Embryo Chest">
+		<!-- Дважды щелкните, чтобы получить Рыболовную Монету Хейна. С определенным шансом дополнительно можно получить Сверкающий Волшебный Сундук. -->
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28585" type="Armor" nameRu="Плащ Эльморедена" nameEn="Elmoreden Cloak">
+		<!-- Плащ с эмблемой древнего королевства Эльмореден. Можно модифицировать при помощи свитка модификации максимум до +10, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. -->
+		<!-- Cloak with the crest of the ancient Elmoreden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27871" level="1" /> <!-- Elmoreden Cloak Basic Effect -->
+			<skill id="27872" level="1" type="ENCHANT" value="1" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="2" type="ENCHANT" value="2" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="3" type="ENCHANT" value="3" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="4" type="ENCHANT" value="4" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="5" type="ENCHANT" value="5" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="6" type="ENCHANT" value="6" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="7" type="ENCHANT" value="7" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="8" type="ENCHANT" value="8" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="9" type="ENCHANT" value="9" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="10" type="ENCHANT" value="10" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27880" level="1" type="ENCHANT" value="10" /> <!-- Blessing of Elmoreden -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28586" type="Armor" nameRu="Плащ Адена" nameEn="Aden Cloak">
+		<!-- Плащ с эмблемой древнего королевства Аден. Можно модифицировать при помощи свитка модификации максимум до +10, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. -->
+		<!-- Cloak with the crest of the ancient Aden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<set name="item_skill" val="27873-1" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27873" level="1" /> <!-- Aden Cloak Basic Effect -->
+			<skill id="27874" level="1" type="ENCHANT" value="1" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="2" type="ENCHANT" value="2" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="3" type="ENCHANT" value="3" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="4" type="ENCHANT" value="4" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="5" type="ENCHANT" value="5" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="6" type="ENCHANT" value="6" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="7" type="ENCHANT" value="7" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="8" type="ENCHANT" value="8" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="9" type="ENCHANT" value="9" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="10" type="ENCHANT" value="10" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27881" level="1" type="ENCHANT" value="10" /> <!-- Blessing of Aden -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28587" type="Armor" nameRu="Плащ Эльмора" nameEn="Elmore Cloak">
+		<!-- Плащ с эмблемой древнего королевства Эльмор. Можно модифицировать при помощи свитка модификации максимум до +10, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. -->
+		<!-- Cloak with the crest of the ancient Elmore Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27875" level="1" /> <!-- Aden Cloak Basic Effect -->
+			<skill id="27876" level="1" type="ENCHANT" value="1" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="2" type="ENCHANT" value="2" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="3" type="ENCHANT" value="3" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="4" type="ENCHANT" value="4" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="5" type="ENCHANT" value="5" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="6" type="ENCHANT" value="6" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="7" type="ENCHANT" value="7" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="8" type="ENCHANT" value="8" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="9" type="ENCHANT" value="9" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="10" type="ENCHANT" value="10" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27882" level="1" type="ENCHANT" value="10" /> <!-- Blessing of Elmore -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28588" type="Armor" nameRu="Плащ Феррита" nameEn="Ferios Cloak">
+		<!-- Плащ с эмблемой древнего королевства Феррит. Можно модифицировать при помощи свитка модификации максимум до +10, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. -->
+		<!-- Cloak with the crest of the ancient Ferios Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27877" level="1" /> <!-- Aden Cloak Basic Effect -->
+			<skill id="27878" level="1" type="ENCHANT" value="1" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="2" type="ENCHANT" value="2" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="3" type="ENCHANT" value="3" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="4" type="ENCHANT" value="4" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="5" type="ENCHANT" value="5" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="6" type="ENCHANT" value="6" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="7" type="ENCHANT" value="7" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="8" type="ENCHANT" value="8" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="9" type="ENCHANT" value="9" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="10" type="ENCHANT" value="10" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27885" level="1" type="ENCHANT" value="10" /> <!-- Blessing of Ferios -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28589" type="Armor" nameRu="Дегендарный Плащ Эльморедена" nameEn="Elmoreden Cloak - Legendary">
+		<!-- Легендарный плащ с эмблемой древнего королевства Эльмореден. Можно модифицировать при помощи свитка модификации максимум до +20, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. При модификации +15 можно использовать Камень Духа - Эльмореден для повторного придания дополнительных характеристик. -->
+		<!-- Legendary cloak with the crest of the ancient Elmoreden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27871" level="1" /> <!-- Elmoreden Cloak Basic Effect -->
+			<skill id="27872" level="1" type="ENCHANT" value="1" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="2" type="ENCHANT" value="2" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="3" type="ENCHANT" value="3" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="4" type="ENCHANT" value="4" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="5" type="ENCHANT" value="5" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="6" type="ENCHANT" value="6" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="7" type="ENCHANT" value="7" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="8" type="ENCHANT" value="8" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="9" type="ENCHANT" value="9" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="10" type="ENCHANT" value="10" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="11" type="ENCHANT" value="11" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="12" type="ENCHANT" value="12" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="13" type="ENCHANT" value="13" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="14" type="ENCHANT" value="14" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="15" type="ENCHANT" value="15" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="16" type="ENCHANT" value="16" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="17" type="ENCHANT" value="17" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="18" type="ENCHANT" value="18" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="19" type="ENCHANT" value="19" /> <!-- Elmoreden Cloak Enchant Effect -->
+			<skill id="27872" level="20" type="ENCHANT" value="20" /> <!-- Elmoreden Cloak Enchant Effect -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28590" type="Armor" nameRu="Легендарный Плащ Адена" nameEn="Aden Cloak - Legendary">
+		<!-- Легенадарный плащ с эмблемой древнего королевства Аден. Можно модифицировать при помощи свитка модификации максимум до +20, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. При модификации +15 можно использовать Камень Духа - Эльмореден для повторного придания дополнительных характеристик. -->
+		<!-- Legendary cloak with the crest of the ancient Aden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Aden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27873" level="1" /> <!-- Aden Cloak Basic Effect -->
+			<skill id="27874" level="1" type="ENCHANT" value="1" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="2" type="ENCHANT" value="2" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="3" type="ENCHANT" value="3" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="4" type="ENCHANT" value="4" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="5" type="ENCHANT" value="5" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="6" type="ENCHANT" value="6" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="7" type="ENCHANT" value="7" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="8" type="ENCHANT" value="8" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="9" type="ENCHANT" value="9" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="10" type="ENCHANT" value="10" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="11" type="ENCHANT" value="11" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="12" type="ENCHANT" value="12" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="13" type="ENCHANT" value="13" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="14" type="ENCHANT" value="14" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="15" type="ENCHANT" value="15" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="16" type="ENCHANT" value="16" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="17" type="ENCHANT" value="17" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="18" type="ENCHANT" value="18" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="19" type="ENCHANT" value="19" /> <!-- Aden Cloak Enchant Effect -->
+			<skill id="27874" level="20" type="ENCHANT" value="20" /> <!-- Aden Cloak Enchant Effect -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28591" type="Armor" nameRu="Легендарный Плащ Эльмора" nameEn="Elmore Cloak - Legendary">
+		<!-- Легендарный плащ с эмблемой древнего королевства Эльмор.\ Можно модифицировать при помощи свитка модификации максимум до +20, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. При модификации +15 можно использовать Камень Духа - Эльмореден для повторного придания дополнительных характеристик. -->
+		<!-- Legendary cloak with the crest of the ancient Elmore Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Elmore at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27875" level="1" /> <!-- Elmore Cloak Basic Effect -->
+			<skill id="27876" level="1" type="ENCHANT" value="1" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="2" type="ENCHANT" value="2" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="3" type="ENCHANT" value="3" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="4" type="ENCHANT" value="4" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="5" type="ENCHANT" value="5" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="6" type="ENCHANT" value="6" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="7" type="ENCHANT" value="7" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="8" type="ENCHANT" value="8" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="9" type="ENCHANT" value="9" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="10" type="ENCHANT" value="10" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="11" type="ENCHANT" value="11" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="12" type="ENCHANT" value="12" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="13" type="ENCHANT" value="13" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="14" type="ENCHANT" value="14" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="15" type="ENCHANT" value="15" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="16" type="ENCHANT" value="16" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="17" type="ENCHANT" value="17" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="18" type="ENCHANT" value="18" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="19" type="ENCHANT" value="19" /> <!-- Elmore Cloak Enchant Effect -->
+			<skill id="27876" level="20" type="ENCHANT" value="20" /> <!-- Elmore Cloak Enchant Effect -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28592" type="Armor" nameRu="Легендарный Плащ Феррита" nameEn="Ferios Cloak - Legendary">
+		<!-- Легендарный плащ с эмблемой древнего королевства Феррит. Можно модифицировать при помощи свитка модификации максимум до +20, характеристики зависят от уровня модификации. При модификации +10 можно использовать Камень Духа - Древнее Королевство для придания дополнительных характеристик. При модификации +15 можно использовать Камень Духа - Эльмореден для повторного придания дополнительных характеристик. -->
+		<!-- Legendary cloak with the crest of the ancient Ferios Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. +10 Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Ferios at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="2" />
+		<cond msgId="2453">
+			<player cloakStatus="1" />
+		</cond>	
+		<cond>
+			<player level="80" />
+		</cond>
+		<skills>
+			<skill id="27877" level="1" /> <!-- Ferios Cloak Basic Effect -->
+			<skill id="27878" level="1" type="ENCHANT" value="1" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="2" type="ENCHANT" value="2" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="3" type="ENCHANT" value="3" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="4" type="ENCHANT" value="4" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="5" type="ENCHANT" value="5" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="6" type="ENCHANT" value="6" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="7" type="ENCHANT" value="7" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="8" type="ENCHANT" value="8" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="9" type="ENCHANT" value="9" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="10" type="ENCHANT" value="10" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="11" type="ENCHANT" value="11" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="12" type="ENCHANT" value="12" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="13" type="ENCHANT" value="13" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="14" type="ENCHANT" value="14" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="15" type="ENCHANT" value="15" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="16" type="ENCHANT" value="16" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="17" type="ENCHANT" value="17" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="18" type="ENCHANT" value="18" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="19" type="ENCHANT" value="19" /> <!-- Ferios Cloak Enchant Effect -->
+			<skill id="27878" level="20" type="ENCHANT" value="20" /> <!-- Ferios Cloak Enchant Effect -->
+		</skills>
+		<for>
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x10" stat="pDef" val="50" />
+			<enchant val="0" order="0x0C" stat="mDef" />
+			<enchant val="0" order="0x0C" stat="pDef" />
+		</for>
+	</item>
+	<item id="28593" type="EtcItem" nameRu="Свиток: Модифицировать Плащ" nameEn="Scroll: Enchant Cloak">
+		<!-- Свиток для модификации плащей древних королевств максимум до +10. В случае успешной попытки уровень модификации +1, в случае неудачной - уровень модификации -1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="bless_scrl_enchant_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="28021-1" /> <!-- Scroll: Enchant Cloak -->
+	</item>
+	<item id="28594" type="EtcItem" nameRu="Свиток: Модифицировать Легендарный Плащ" nameEn="Scroll: Enchant Cloak - Legendary">
+		<!-- Свиток для модификации плащей древних королевств с +11 до +20. В случае успешной попытки уровень модификации +1, в случае неудачной - уровень модификации -1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +10, up to +20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="bless_scrl_enchant_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="28022-1" /> <!-- Scroll: Enchant Cloak - Legendary -->
+	</item>
+	<item id="28595" type="EtcItem" nameRu="Свиток: Модифицировать Древний Плащ" nameEn="Scroll: Ancient Cloak - Legendary">
+		<!-- Особый свиток для модификации плащей древних королевств с +8 до +20. Увеличивает шанс успешного применения на 10%. В случае успешной попытки уровень модификации +1, в случае неудачной - уровень модификации -1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="bless_scrl_enchant_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="28068-1" /> <!-- Scroll: Ancient Cloak - Legendary -->
+	</item>
+	<item id="28596" type="EtcItem" nameRu="Легендарный Свиток" nameEn="Legendary Scroll">
+		<!-- При помощи Менеджера Витаминов позволяет с определенным шансом присвоить легендарный ранг Плащу Эльморедена/ Адена/ Эльмора/ Феррита. -->
+		<!-- Exchange a Elmoreden/ Aden/ Elmore/ Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28597" type="EtcItem" nameRu="Камень Духа - Древнее Королевство" nameEn="Spirit Stone - Ancient Kingdom">
+		<!-- Позволяет зачаровать любой из плащей древних королевств модификации +10 и выше. При зачаровании присваивает в случайном порядке один из множества дополнительных эффектов. Отменить зачарование нельзя, но можно зачаровать повторно. -->
+		<!-- Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
+		<set name="material" val="wood" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28598" type="EtcItem" nameRu="Камень Духа - Эльмореден" nameEn="Spirit Stone - Elmoreden">
+		<!-- Позволяет зачаровать Легендарный Плащ Эльморедена модификации +15 и выше. При зачаровании присваивает в случайном порядке одно из множества дополнительных умений.Отменить зачарование нельзя, но можно зачаровать повторно. -->
+		<!-- Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28599" type="EtcItem" nameRu="Камень Духа - Аден" nameEn="Spirit Stone - Aden">
+		<!-- Позволяет зачаровать Легендарный Плащ Адена модификации +15 и выше. При зачаровании присваивает в случайном порядке одно из множества дополнительных умений. Отменить зачарование нельзя, но можно зачаровать повторно. -->
+		<!-- Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

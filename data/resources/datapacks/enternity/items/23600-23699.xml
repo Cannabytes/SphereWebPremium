@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="23600" type="EtcItem" nameRu="Камень: Модифицировать Доспех (R)" nameEn="Lucky Enchant Stone: Armor (R-grade)">
+		<!-- При модификации доспехов Ранга R увеличивает шанс успеха на 15%. Используется с предметами +3-9 (полный доспех +4-9). -->
+		<!-- Enchant success rate +15% for armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="ARMOR_ENCHANT_STONE" \> -->
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9208-1" />
+		<!-- Lucky Clover (R-grade) -->
+	</item>
+	<item id="23601" type="EtcItem" nameRu="Подарочный Комплект (ПА)" nameEn="PA - Gift Box">
+		<!-- Подарок, который можно получить после 1 ч. игры с ПА. Двойным щелчком мыши откройте коробку и получите подарок только для пользователей ПА. -->
+		<!-- Gift given after accumulating 1-hr worth of PA Points. Double-click to use. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="peel" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="cotton" />
+		<!-- PA Vitality (1-hour) - Event -->
+		<!-- PA - Blessing (1-hour) - Event -->
+		<set name="capsuled_items" val="23490,1,1,100;22280,1,1,100" />
+	</item>
+	<item id="23602" type="Armor" nameRu="Гусарские Крылья" nameEn="Hussar's Wing">
+		<!-- Оригинальный элемент доспехов, использовавшийся впервые польской армией в XVI-XVIII веках. Занимают ячейку плаща. -->
+		<!-- Special armor used first by the Polish army between the 16th - 18th century. Equip on cloak slot. -->
+		<set name="icon" val="BranchSys3.icon1.g_agathion_hussar_pl" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="back" />
+		<!-- <set name="commissionItemType" val="CLOAK" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="220" />
+		<set name="material" val="cloth" />
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x40" stat="fireRes" val="7" />
+			<add order="0x40" stat="waterRes" val="7" />
+			<add order="0x40" stat="windRes" val="7" />
+			<add order="0x40" stat="earthRes" val="7" />
+			<add order="0x40" stat="holyRes" val="7" />
+			<add order="0x40" stat="darkRes" val="7" />
+		</for>
+	</item>
+	<item id="23603" type="EtcItem" nameRu="Автоматическая Обработка Светового Оружия" nameEn="Automatic Appearance: Emerald Weapon">
+		<!-- Витаминный предмет Позволяет придать оружию вид аналогичного светового (включая щиты и символы).  Внимание: Когда используется умение Конверсия, обработка сбрасывается (Например: Одноручный меч -> Двуручный меч). -->
+		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. -->
+		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="is_stackable" val="true" />
+		<set name="material" val="cotton" />
+	</item>
+	<item id="23604" type="EtcItem" nameRu="Автоматическая Обработка Японского Оружия" nameEn="Automatic Appearance: Japanese Weapon">
+		<!-- Витаминный предмет Позволяет придать оружию вид аналогичного японского (включая щиты и символы).  Внимание: Когда используется умение Конверсия, обработка сбрасывается (Например: Одноручный меч -> Двуручный меч). -->
+		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. -->
+		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="is_stackable" val="true" />
+		<set name="material" val="cotton" />
+	</item>
+	<item id="23605" type="EtcItem" nameRu="Упаковка: Руна SP 50% (1 ч.) 1 шт." nameEn="SP Rune 50% Pack (1-hour)">
+		<!-- Витаминная упаковка Внутри содержится Руна SP 50% (1 ч.). -->
+		<!-- Wrapped Pack containing SP Rune 50% (1-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="steel" />
+		<!-- SP Rune 50% - 1-hour -->
+		<set name="capsuled_items" val="22959,1,1,100" />
+	</item>
+	<item id="23606" type="EtcItem" nameRu="Билет в Лабиринт Картии - 85 уровень - Соло" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo">
+		<!-- Витаминный предмет Билет на дополнительный вход в одиночный Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в одиночный Лабиринт Картии Ур. 85. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22842-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 85 Solo -->
+	</item>
+	<item id="23607" type="EtcItem" nameRu="Билет в Лабиринт Картии - 90 уровень - Соло" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo">
+		<!-- Витаминный предмет Билет на дополнительный вход в одиночный Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в одиночный Лабиринт Картии Ур. 90. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22843-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 90 Solo -->
+	</item>
+	<item id="23608" type="EtcItem" nameRu="Билет в Лабиринт Картии - 95 уровень - Соло" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo">
+		<!-- Витаминный предмет Билет на дополнительный вход в одиночный Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в одиночный Лабиринт Картии Ур. 95. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22844-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 95 Solo -->
+	</item>
+	<item id="23609" type="EtcItem" nameRu="Билет в Лабиринт Картии - 85 уровень - Группа" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 85 Party">
+		<!-- Витаминный предмет Билет на дополнительный вход в групповой Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в групповой Лабиринт Картии Ур. 85. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22845-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 85 Party -->
+	</item>
+	<item id="23610" type="EtcItem" nameRu="Билет в Лабиринт Картии - 90 уровень - Группа" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 90 Party">
+		<!-- Витаминный предмет Билет на дополнительный вход в групповой Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в групповой Лабиринт Картии Ур. 90. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22846-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 90 Party -->
+	</item>
+	<item id="23611" type="EtcItem" nameRu="Билет в Лабиринт Картии - 95 уровень - Группа" nameEn="Entrance Pass: Kartia's Labyrinth Lv. 95 Party">
+		<!-- Витаминный предмет Билет на дополнительный вход в групповой Лабиринт Картии. После двойного щелчка по призовому предмету снимается ограничение на вход в групповой Лабиринт Картии Ур. 95. Невозможно использовать внутри временной зоны. Можно использовать один раз в день вне временной зоны. -->
+		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22847-1" />
+		<!-- Extra Pass: Kartia's Labyrinth Lv. 95 Party -->
+	</item>
+	<item id="23612" type="EtcItem" nameRu="Эликсир Жизни (для Новичков)" nameEn="Elixir of Life (Novice)">
+		<!-- Витаминный предмет Восстанавливает 50% HP. Только персонажи ниже 84-го уровня могут использовать на себя. Повторное использование через 5 мин. -->
+		<!-- Recovers HP by 50%. Only for Lv. 84 or below to use on themselves. Cooldown is 5 min. -->
+		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_s_i00" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="reuse_delay" val="300000" />
+		<!-- <set name="is_event_restricted" val="true" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="elixir" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22044-7" />
+		<!-- Elixir of Life (Novice) -->
+	</item>
+	<item id="23613" type="Armor" nameRu="Корона Победителя Турнира - Каин" nameEn="2012 Tournament Winner's Crown - Cain">
+		<!-- Корона, которой награждается победитель турнира. Имя героя навсегда будет вписано в историю сервера. -->
+		<!-- Crown bestowed upon the winner of the tournament. The hero's name will be forever engraved in server history. -->
+		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="hairall" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="23614" type="EtcItem" nameRu="Зелье Поддержания Энергии - 10 мин." nameEn="Vitality Maintaining Potion (10-minute)">
+		<!-- Витаминный предмет Волшебное зелье для поддержания энергии. Время действия: 10 мин. Повторное применение через 30 мин. На него не распространяется ограничение не больше 5 штук в неделю. -->
+		<!-- Maintains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
+		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="shared_reuse_group" val="15" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="reuse_delay" val="1800000" />
+		<set name="item_skill" val="22848-1" />
+		<!-- Vitality Maintaining Potion -->
+	</item>
+	<item id="23615" type="Armor" nameRu="Маска из Черных Камней" nameEn="Black Gem Mask">
+		<!-- Витаминный предмет Маска, сделанная из Черных Камней. -->
+		<!-- Black gem mask made of luxurious metal. -->
+		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hair" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="wood" />
+		<set name="item_skill" val="21353-1" />
+		<!-- Vitality Recovery -->
+	</item>
+	<item id="23616" type="Armor" nameRu="Защитные Очки Ремесленника" nameEn="Artisan's Goggles">
+		<!-- Витаминный предмет Очки Ремесленника, защищающие глаза. Занимает 2 ячейки для головных уборов. -->
+		<!-- Large round goggles to protect your eyes. Uses 2 accessory slots. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="wood" />
+		<set name="item_skill" val="21354-1" />
+		<!-- Vitality Recovery -->
+	</item>
+	<item id="23617" type="EtcItem" nameRu="Упаковка: Зелье Поддержания Энергии" nameEn="Vitality Maintaining Potion Pack">
+		<!-- Упаковка призового предмета Внутри упаковано Зелье Поддержания Энергии. На него не распространяется ограничение не больше 5 штук в неделю. -->
+		<!-- Wrapped Pack containing Vitality Maintaining Potion with no weekly usage limit. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="steel" />
+		<!-- Vitality Maintaining Potion (10-minute) - No Weekly Usage Limit -->
+		<set name="capsuled_items" val="23614,1,1,100" />
+	</item>
+	<item id="23618" type="EtcItem" nameRu="Упаковка: Маска из Черных Камней (7 дн.)" nameEn="Black Gem Mask Pack (7-day)">
+		<!-- Витаминный предмет Внутри упакована Маска из Черных Камней (7 дн.) -->
+		<!-- Wrapped Pack containing Black Gem Mask (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="steel" />
+		<!-- Black Gem Mask - Vitality (7-day) (No Weekly Usage Limit) -->
+		<set name="capsuled_items" val="23615,1,1,100" />
+	</item>
+	<item id="23619" type="EtcItem" nameRu="Упаковка: Защитные Очки Ремесленника (7 дн.)" nameEn="Artisan's Goggles Pack (7-day)">
+		<!-- Витаминный предмет Внутри упакованы Защитные Очки Ремесленника (7 дн.) -->
+		<!-- Wrapped Pack containing Artisan's Goggles (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="steel" />
+		<!-- Artisan's Goggles - Vitality (7-day) (No Weekly Usage Limit) -->
+		<set name="capsuled_items" val="23616,1,1,100" />
+	</item>
+	<item id="23620" type="EtcItem" nameRu="Зелье Всплеска Энергии Дракона" nameEn="Dragon Vitality Replenishing Potion">
+		<!-- Витаминный предмет При использовании восполняет определенное количество энергии. Энергетический предмет без ограничения на использование. -->
+		<!-- Replenishes a certain amount of Vitality. Cooldown is 1 min. No weekly usage limit. -->
+		<set name="icon" val="icon.etc_potion_of_energy_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22849-1" />
+		<!-- Dragon Vitality Replenishing Potion -->
+	</item>
+	<item id="23621" type="EtcItem" nameRu="Зелье Остановки Энергии - 30 мин." nameEn="Vitality Suspending Potion (30-minute)">
+		<!-- Витаминный предмет Магическое снадобье, останавливающее энергию. Время действия: 30 мин. При использовании энергия не сокращается, но и бонусы энергии получить нельзя. Повторное использование через 60 мин. На него не распространяется ограничение не больше 5 штук в неделю. -->
+		<!-- Stops Vitality consumption and bonuses for 30 min. Cooldown is 60 min. No weekly usage limit. -->
+		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
+		<set name="weight" val="36" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="reuse_delay" val="3600000" />
+		<set name="shared_reuse_group" val="15" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22850-1" />
+		<!-- Vitality Suspending Potion -->
+	</item>
+	<item id="23622" type="EtcItem" nameRu="Смена Имени" nameEn="Name Change Ticket">
+		<!-- Для изменения имени персонажа: 1. Создайте нового персонажа с желаемым именем на этом же аккаунте. 2. Создайте обращение с темой "Смена имени персонажа" в Службу поддержки пользователей в категорию "Смена имени/ пола персонажа, названия клана". 3. Обращение должно быть создано с того же игрового аккаунта, на котором Вы хотите воспользоваться данной услугой. -->
+		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with "Rename Character" in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i01" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="Book" />
+		<set name="default_action" val="show_html" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="23623" type="EtcItem" nameRu="Смена Пола" nameEn="Gender Change Ticket">
+		<!-- Для изменения пола персонажа: 1. Создайте обращение с темой "Смена пола персонажа" в Службу поддержки пользователей в категорию "Смена имени/ пола персонажа, названия клана". 2. Обращение должно быть создано с того же игрового аккаунта, на котором Вы хотите воспользоваться данной услугой. Внимание! Услуга смены пола недоступна персонажам расы Камаэль. -->
+		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put "Change gender" in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i02" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="Book" />
+		<set name="default_action" val="capsule" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="23624" type="Armor" nameRu="Гуральская Шапка" nameEn="Gorale Hat">
+		<!-- Шапка горных жителей. Занимает 2 ячейки для головных уборов. -->
+		<!-- Hat worn by mountain dwellers. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys3.icon1.g_hair_gorale_hat_pl" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="hairall" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="23625" type="Armor" nameRu="Щегольская Шляпа" nameEn="Fancy Hat">
+		<!-- Шапка, которую носила польская знать в 17веке. Модная шляпа, украшенная птичьими перьями. Занимает 2 ячейки для головных уборов. -->
+		<!-- Fancy hat with feathers worn by Polish aristocrats in the 17th century. Requires 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys3.icon1.g_hair_fancy_hat_pl" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="hairall" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="23626" type="Armor" nameRu="Шапка Болельщика" nameEn="Hat of Cheers">
+		<!-- Шапка, в которой удачно сочетаются красный и белый цвета. Польские футбольные фанаты часто надевают такую шапку на футбольный матч. Занимает 2 ячейки для головных уборов. -->
+		<!-- Red and white hat worn by Polish fans at soccer games. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys3.icon1.g_hair_jester_hat_pl" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="hairall" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="23627" type="EtcItem" nameRu="Шоколадный Пончик" nameEn="Chocolate Doughnut">
+		<!-- Знаменитый польский шоколадный пончик. Поддержание энергии в течение 30 мин. Время перезарядки: 60 мин. Энергетический предмет с ограничением на использование. -->
+		<!-- Famous Polish chocolate doughnut. Maintains vitality for 30 min. Cooldown is 60 min. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys3.icon1.g_chocolate_doughnut_pl" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="reuse_delay" val="3600000" />
+		<set name="item_skill" val="22851-2" />
+		<!-- Chocolate Doughnut - Maintain Vitality -->
+	</item>
+	<item id="23628" type="EtcItem" nameRu="Пирожки" nameEn="Piroscki">
+		<!-- Знаменитая польская еда. Во время получения опыта на охоте в течение 30 мин. восстанавливается энергия. Энергетический предмет с ограничением на использование. -->
+		<!-- Famous Polish dish. Restores vitality upon XP gain through hunting for 30 min. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys3.icon1.g_dumpling_pl" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22852-1" />
+		<!-- Piroscki - Replenish Vitality -->
+	</item>
+	<item id="23629" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="60" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22853-1" />
+		<!-- Torun Gingerbread (1-hour) -->
+	</item>
+	<item id="23630" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="90" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22854-1" />
+		<!-- Torun Gingerbread (1.5-hour) -->
+	</item>
+	<item id="23631" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="120" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22855-1" />
+		<!-- Torun Gingerbread (2-hour) -->
+	</item>
+	<item id="23632" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="150" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22856-1" />
+		<!-- Torun Gingerbread (2.5-hour) -->
+	</item>
+	<item id="23633" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="180" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22857-1" />
+		<!-- Torun Gingerbread (3-hour) -->
+	</item>
+	<item id="23634" type="EtcItem" nameRu="Торуньский Пряник" nameEn="Torun Gingerbread">
+		<!-- Польская выпечка. При использовании в течение определенного времени увеличивает получаемый опыт на 50%. Можно использовать на любом уровне. -->
+		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="240" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22858-1" />
+		<!-- Torun Gingerbread (4-hour) -->
+	</item>
+	<item id="23635" type="EtcItem" nameRu="Огниво" nameEn="flint">
+		<!-- Витаминный предмет Позволяет развести Пылающий Костер, который в течение 30 мин. непрерывно искрится. Жар от искр исцеляет HP/ MP/ CP, во время использования сокращается расход MP. Если присесть поближе к огню, то эффект выздоровления будет максимальным. Член группы может получить все эффекты. -->
+		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/ MP/ CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
+		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<!-- <set name="is_event_restricted" val="true" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22860-1" />
+		<!-- Summon Roaring Campfire -->
+	</item>
+	<item id="23636" type="Armor" nameRu="Польский Плащ" nameEn="Polish Cloak">
+		<!-- Польский плащ. Украшен характерным узором. -->
+		<!-- Cloak for Poland only. Elaborately embroidered. -->
+		<set name="icon" val="BranchSys3.icon1.g_pl_cape" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="back" />
+		<!-- <set name="commissionItemType" val="CLOAK" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="220" />
+		<set name="material" val="cloth" />
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+			<add order="0x40" stat="fireRes" val="7" />
+			<add order="0x40" stat="waterRes" val="7" />
+			<add order="0x40" stat="windRes" val="7" />
+			<add order="0x40" stat="earthRes" val="7" />
+			<add order="0x40" stat="holyRes" val="7" />
+			<add order="0x40" stat="darkRes" val="7" />
+		</for>
+	</item>
+	<item id="23637" type="Armor" nameRu="Благословенная Серьга Антараса" nameEn="Blessed Antharas' Earring">
+		<!-- Благословенная Серьга Антараса на 3 д. MP +59, Физ./ Маг. Защ. +15%, ВЫН/ ДУХ+3, сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. При надевании двух таких серег эффект не суммируется. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +59, Bleed Resistance +50%, Bleed Attack Rate +50%, Stun/ Mental Resistance +40%, Stun/ Mental Attack +40%, CON +3, and MEN +3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance +100% temporarily. 3-day. Equipping two will only give the effect of one. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="equip_reuse_delay" val="7200" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="4320" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13314-1" />
+		<!-- Blessed Antharas' Earring -->
+		<set name="item_skill" val="13313-1" />
+		<!-- Blessed Antharas' Earring -->
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="23638" type="Armor" nameRu="Благословенная Серьга Антараса" nameEn="Blessed Antharas' Earring">
+		<!-- Благословенная Серьга Антараса на 7 д. MP +59, Физ./ Маг. Защ. +15%, ВЫН/ ДУХ+3, сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. При надевании двух таких серег эффект не суммируется. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +59, Bleed Resistance +50%, Bleed Attack Rate +50%, Stun/ Mental Resistance +40%, Stun/ Mental Attack +40%, CON +3, and MEN +3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance +100% temporarily. 7-day. Equipping two will only give the effect of one. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="equip_reuse_delay" val="7200" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13314-1" />
+		<!-- Blessed Antharas' Earring -->
+		<set name="item_skill" val="13313-1" />
+		<!-- Blessed Antharas' Earring -->
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="23639" type="Armor" nameRu="Благословенное Ожерелье Валакаса" nameEn="Blessed Valakas' Necklace">
+		<!-- Благословенное Ожерелье Валакаса на 3 д. MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию. Нельзя использовать на Олимпиаде. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% momentarily. 3-day. -->
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="neck" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="equip_reuse_delay" val="7200" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="4320" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13316-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<set name="item_skill" val="13315-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="23640" type="Armor" nameRu="Благословенное Ожерелье Валакаса" nameEn="Blessed Valakas' Necklace">
+		<!-- Благословенное Ожерелье Валакаса на 7 д. MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию. Нельзя использовать на Олимпиаде. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% temporarily. 7-day. -->
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="neck" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="equip_reuse_delay" val="7200" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13316-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<set name="item_skill" val="13315-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="23641" type="EtcItem" nameRu="Коробка Агатиона" nameEn="Star Agathion Pack">
+		<!-- Можно получить одного Агатиона (7 дн.) в случайном порядке. -->
+		<!-- Double-click to obtain a random Star Agathion (7-day). -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+		<set name="item_skill" val="9632-1" />
+		<!-- Star Agathion Pack -->
+	</item>
+	<item id="23642" type="EtcItem" nameRu="Звездная Конфета Всплеска Энергии" nameEn="Vitality Replenishing Star Candy">
+		<!-- При использовании восстанавливает определенное кол-во энергии. Энергетический предмет без ограничения на использование. -->
+		<!-- Replenishes an amount of Vitality. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="9629-1" />
+		<!-- Vitality Replenishing Star Candy -->
+	</item>
+	<item id="23643" type="EtcItem" nameRu="Звездная Конфета Восстановления Энергии" nameEn="Vitality Recovering Star Candy">
+		<!-- При использовании восстанавливает энергию в течение 10 мин. Энергетический предмет без ограничения на использование. -->
+		<!-- Replenishes Vitality for 10 min. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
+		<set name="weight" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="9630-1" />
+		<!-- Vitality Recovering Star Candy -->
+	</item>
+	<item id="23644" type="EtcItem" nameRu="Звездная Конфета Поддержания Энергии" nameEn="Vitality Maintaining Star Candy">
+		<!-- При использовании поддерживает уровень энергии в течение 10 мин. Энергетический предмет без ограничения на использование. -->
+		<!-- Replenishes Vitality for 10 min. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
+		<set name="weight" val="36" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="9631-1" />
+		<!-- Vitality Maintaining Star Candy -->
+	</item>
+	<item id="23645" type="EtcItem" nameRu="Зелье Восстановления MP" nameEn="MP Recovery Bonus Potion">
+		<!-- Витаминный предмет Магическое Зелье, при использовании мгновенно восстанавливает 50% MP.  -->
+		<!-- Restores 50% of Max MP. -->
+		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="is_event_restricted" val="true" \> -->
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="elixir" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="22214-1" />
+		<!-- MP Recovery Potion -->
+	</item>
+	<item id="23646" type="EtcItem" nameRu="Элитный Камень: Модифицировать Оружие (R)" nameEn="High-grade Lucky Enchant Stone: Weapon (R-grade)">
+		<!-- +20% к шансу успешной модификации оружия Ранга R. Используется с предметами +3~9. Нельзя использовать с предметами, модифицированными на +10 и выше. -->
+		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_wp" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9573-1" />
+		<!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+	</item>
+	<item id="23647" type="EtcItem" nameRu="Элитный Камень: Модифицировать Доспех (R)" nameEn="High-grade Lucky Enchant Stone: Armor (R-grade)">
+		<!-- +30% к шансу успешной модификации доспехов Ранга R. Используется с предметами +3~9. Нельзя использовать с предметами, модифицированными на +10 и выше. -->
+		<!-- Enchant success rate +30% for armor (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="scrl_inc_enchant_prop_am" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9574-1" />
+		<!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
+	</item>
+	<item id="23648" type="EtcItem" nameRu="Сундук Удачи Ордена Рыцарей" nameEn="Knighthood's Fortune Box">
+		<!-- Витаминный предмет Сундук с большим количеством сокровищ Ордена Рыцарей. Можно получить Коробку Руны Невитта, разнообразные Звездные Конфеты Энергии и хлопушки. -->
+		<!-- Wrapped Pack containing supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
+		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="cotton" />
+		<set name="item_skill" val="22861-1" />
+		<!-- Knighthood's Fortune Box -->
+	</item>
+	<item id="23649" type="EtcItem" nameRu="Сундук Удачи Королевской Стражи" nameEn="Royal Guard's Fortune Box">
+		<!-- Витаминный предмет Сундук с большим количеством сокровищ Королевской Стражи. Можно получить Свиток Благословения любого ранга, Свиток Снятия Оков любого ранга, разнообразные Свитка модификации и камни модификации. -->
+		<!-- Wrapped Pack containing supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="cotton" />
+		<set name="item_skill" val="22862-1" />
+		<!-- Royal Guard's Fortune Box -->
+	</item>
+	<item id="23650" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (R)" nameEn="Blessed Weapon Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга R облик оружия такого же типа ниже Ранга R (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22863-1" />
+		<!-- Blessed Weapon Appearance Stone (R-grade) -->
+	</item>
+	<item id="23651" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (S)" nameEn="Blessed Weapon Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга S облик оружия такого же типа ниже Ранга S (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22864-1" />
+		<!-- Blessed Weapon Appearance Stone (S-grade) -->
+	</item>
+	<item id="23652" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (A)" nameEn="Blessed Weapon Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга A облик оружия такого же типа ниже Ранга A (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22865-1" />
+		<!-- Blessed Weapon Appearance Stone (A-grade) -->
+	</item>
+	<item id="23653" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (B)" nameEn="Blessed Weapon Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга B облик оружия такого же типа ниже Ранга B (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22866-1" />
+		<!-- Blessed Weapon Appearance Stone (B-grade) -->
+	</item>
+	<item id="23654" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (C)" nameEn="Blessed Weapon Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга C облик оружия такого же типа ниже Ранга C (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22867-1" />
+		<!-- Blessed Weapon Appearance Stone (C-grade) -->
+	</item>
+	<item id="23655" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (D)" nameEn="Blessed Weapon Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга D облик оружия такого же типа ниже Ранга D (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22868-1" />
+		<!-- Blessed Weapon Appearance Stone (D-grade) -->
+	</item>
+	<item id="23656" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (R)" nameEn="Blessed Weapon Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга R облик оружия такого же типа ниже Ранга R (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22869-1" />
+		<!-- Blessed Weapon Appearance Stone (R-grade) -->
+	</item>
+	<item id="23657" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (S)" nameEn="Blessed Weapon Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга S облик оружия такого же типа ниже Ранга S (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22870-1" />
+		<!-- Blessed Weapon Appearance Stone (S-grade) -->
+	</item>
+	<item id="23658" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (A)" nameEn="Blessed Weapon Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга A облик оружия такого же типа ниже Ранга A (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22871-1" />
+		<!-- Blessed Weapon Appearance Stone (A-grade) -->
+	</item>
+	<item id="23659" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (B)" nameEn="Blessed Weapon Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга B облик оружия такого же типа ниже Ранга B (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22872-1" />
+		<!-- Blessed Weapon Appearance Stone (B-grade) -->
+	</item>
+	<item id="23660" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (C)" nameEn="Blessed Weapon Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга C облик оружия такого же типа ниже Ранга C (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22873-1" />
+		<!-- Blessed Weapon Appearance Stone (C-grade) -->
+	</item>
+	<item id="23661" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (D)" nameEn="Blessed Weapon Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга D облик оружия такого же типа ниже Ранга D (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22874-1" />
+		<!-- Blessed Weapon Appearance Stone (D-grade) -->
+	</item>
+	<item id="23662" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (R)" nameEn="Blessed Weapon Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга R облик оружия такого же типа ниже Ранга R (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22875-1" />
+		<!-- Blessed Weapon Appearance Stone (R-grade) -->
+	</item>
+	<item id="23663" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (S)" nameEn="Blessed Weapon Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга S облик оружия такого же типа ниже Ранга S (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22876-1" />
+		<!-- Blessed Weapon Appearance Stone (S-grade) -->
+	</item>
+	<item id="23664" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (A)" nameEn="Blessed Weapon Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга A облик оружия такого же типа ниже Ранга A (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22877-1" />
+		<!-- Blessed Weapon Appearance Stone (A-grade) -->
+	</item>
+	<item id="23665" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (B)" nameEn="Blessed Weapon Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга B облик оружия такого же типа ниже Ранга B (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22878-1" />
+		<!-- Blessed Weapon Appearance Stone (B-grade) -->
+	</item>
+	<item id="23666" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (C)" nameEn="Blessed Weapon Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга C облик оружия такого же типа ниже Ранга C (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22879-1" />
+		<!-- Blessed Weapon Appearance Stone (C-grade) -->
+	</item>
+	<item id="23667" type="EtcItem" nameRu="Благословенный Камень Обработки Оружия (D)" nameEn="Blessed Weapon Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик оружия. Может придать оружию Ранга D облик оружия такого же типа ниже Ранга D (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22880-1" />
+		<!-- Blessed Weapon Appearance Stone (D-grade) -->
+	</item>
+	<item id="23668" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (R)" nameEn="Blessed Armor Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга R облик доспехов того же типа Ранга R и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22881-1" />
+		<!-- Blessed Scroll: Modify Armor (R-grade) -->
+	</item>
+	<item id="23669" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (S)" nameEn="Blessed Armor Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга S облик доспехов того же типа Ранга S и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22882-1" />
+		<!-- Blessed Scroll: Modify Armor (S-grade) -->
+	</item>
+	<item id="23670" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (A)" nameEn="Blessed Armor Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга А облик доспехов того же типа Ранга A и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22883-1" />
+		<!-- Blessed Scroll: Modify Armor (A-grade) -->
+	</item>
+	<item id="23671" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (B)" nameEn="Blessed Armor Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга В облик доспехов того же типа Ранга B и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22884-1" />
+		<!-- Blessed Scroll: Modify Armor (B-grade) -->
+	</item>
+	<item id="23672" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (C)" nameEn="Blessed Armor Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга С облик доспехов того же типа Ранга C и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22885-1" />
+		<!-- Blessed Scroll: Modify Armor (C-grade) -->
+	</item>
+	<item id="23673" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (D)" nameEn="Blessed Armor Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга D облик доспехов того же типа Ранга D и ниже (на 1 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 1-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22886-1" />
+		<!-- Blessed Scroll: Modify Armor (D-grade) -->
+	</item>
+	<item id="23674" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (R)" nameEn="Blessed Armor Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга R облик доспехов того же типа Ранга R и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22887-1" />
+		<!-- Blessed Scroll: Modify Armor (R-grade) -->
+	</item>
+	<item id="23675" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (S)" nameEn="Blessed Armor Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга S облик доспехов того же типа Ранга S и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22888-1" />
+		<!-- Blessed Scroll: Modify Armor (S-grade) -->
+	</item>
+	<item id="23676" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (A)" nameEn="Blessed Armor Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга А облик доспехов того же типа Ранга A и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22889-1" />
+		<!-- Blessed Scroll: Modify Armor (A-grade) -->
+	</item>
+	<item id="23677" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (B)" nameEn="Blessed Armor Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга В облик доспехов того же типа Ранга B и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22890-1" />
+		<!-- Blessed Scroll: Modify Armor (B-grade) -->
+	</item>
+	<item id="23678" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (C)" nameEn="Blessed Armor Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга С облик доспехов того же типа Ранга C и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22891-1" />
+		<!-- Blessed Scroll: Modify Armor (C-grade) -->
+	</item>
+	<item id="23679" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (D)" nameEn="Blessed Armor Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга D облик доспехов того же типа Ранга D и ниже (на 7 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 7-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22892-1" />
+		<!-- Blessed Scroll: Modify Armor (D-grade) -->
+	</item>
+	<item id="23680" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (R)" nameEn="Blessed Armor Appearance Stone (R-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга R облик доспехов того же типа Ранга R и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_r" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22893-1" />
+		<!-- Blessed Scroll: Modify Armor (R-grade) -->
+	</item>
+	<item id="23681" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (S)" nameEn="Blessed Armor Appearance Stone (S-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга S облик доспехов того же типа Ранга S и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_s" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22894-1" />
+		<!-- Blessed Scroll: Modify Armor (S-grade) -->
+	</item>
+	<item id="23682" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (A)" nameEn="Blessed Armor Appearance Stone (A-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга А облик доспехов того же типа Ранга A и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_a" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22895-1" />
+		<!-- Blessed Scroll: Modify Armor (A-grade) -->
+	</item>
+	<item id="23683" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (B)" nameEn="Blessed Armor Appearance Stone (B-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга В облик доспехов того же типа Ранга B и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_b" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22896-1" />
+		<!-- Blessed Scroll: Modify Armor (B-grade) -->
+	</item>
+	<item id="23684" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (C)" nameEn="Blessed Armor Appearance Stone (C-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга С облик доспехов того же типа Ранга C и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_c" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22897-1" />
+		<!-- Blessed Scroll: Modify Armor (C-grade) -->
+	</item>
+	<item id="23685" type="EtcItem" nameRu="Благословенный Камень Обработки Доспехов (D)" nameEn="Blessed Armor Appearance Stone (D-grade)">
+		<!-- Витаминный предмет Позволяет изменить облик доспехов. Может придать доспехам Ранга D облик доспехов того же типа Ранга D и ниже (на 30 д.). Необходим предмет-прототип, внешний вид которого копируется. Прототип не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком. -->
+		<!-- Changes the appearance of D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting__am_stone_d" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="22898-1" />
+		<!-- Blessed Scroll: Modify Armor (D-grade) -->
+	</item>
+	<item id="23686" type="EtcItem" nameRu="Красный Энергетический Напиток Странника Мира" nameEn="Dimension Traveler's Red Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает незначительный всплеск энергии. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores some Vitality. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23687" type="EtcItem" nameRu="Синий Энергетический Напиток Странника Мира" nameEn="Dimension Traveler's Blue Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает больший всплеск энергии, чем Красный Энергетический Напиток Странника Мира. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Traveler's Red Vitality Potion. -->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23688" type="EtcItem" nameRu="Золотистый Энергетический Напиток Странника Мира" nameEn="Dimension Traveler's Gold Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает больший всплеск энергии, чем Синий Энергетический Напиток Странника Мира. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Traveler's Blue Vitality Potion. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23689" type="EtcItem" nameRu="Красный Энергетический Напиток Хранителя Мира" nameEn="Dimension Protector's Red Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает незначительный всплеск энергии. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores some Vitality. -->
+		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23690" type="EtcItem" nameRu="Синий Энергетический Напиток Хранителя Мира" nameEn="Dimension Protector's Blue Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает больший всплеск энергии, чем Красный Энергетический Напиток Хранителя Мира. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Protector's Red Vitality Potion. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23691" type="EtcItem" nameRu="Золотистый Энергетический Напиток Хранителя Мира" nameEn="Dimension Protector's Gold Vitality Potion">
+		<!-- Можно найти в наградном сундуке королевства Аден за покорение Лабиринта Картии. Обеспечивает больший всплеск энергии, чем Синий Энергетический Напиток Хранителя Мира. -->
+		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Protector's Blue Vitality Potion. -->
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="23692" type="Armor" nameRu="Туника Ниндзя" nameEn="Ninja Top">
+		<!-- Верх костюма Ниндзя. Используется в костюме. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. Внимание! Внешний вид некорректно отображается на Артеях. -->
+		<!-- Ninja Top. Part of a costume. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="chest" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="23693" type="Armor" nameRu="Штаны Ниндзя" nameEn="Ninja Pants">
+		<!-- Низ костюма Ниндзя. Используется в костюме. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. Внимание! Внешний вид некорректно отображается на Артеях. -->
+		<!-- Ninja Pants. Part of a costume. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_l" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="legs" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="23694" type="Armor" nameRu="Перчатки Ниндзя" nameEn="Ninja Gloves">
+		<!-- Перчатки костюма Ниндзя. Используется в костюме. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. Внимание! Внешний вид некорректно отображается на Артеях. -->
+		<!-- Ninja Gloves. Part of a costume. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_g" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="gloves" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="23695" type="Armor" nameRu="Ботинки Ниндзя" nameEn="Ninja Shoes">
+		<!-- Обувь костюма Ниндзя. Используется в костюме. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. Внимание! Внешний вид некорректно отображается на Артеях. -->
+		<!-- Ninja Shoes. Part of a costume. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_b" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="feet" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="23696" type="EtcItem" nameRu="Камень Обработки Туники Ниндзя" nameEn="Ninja Top Appearance Stone">
+		<!-- Витаминный предмет Камень обработки, придающий нагруднику вид Туники Ниндзя. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. -->
+		<!-- Changes the appearance of a top to that of a Ninja outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="22900-1" />
+		<!-- Ninja Top Appearance Stone -->
+	</item>
+	<item id="23697" type="EtcItem" nameRu="Камень Обработки Штанов Ниндзя" nameEn="Ninja Pants Appearance Stone">
+		<!-- Витаминный предмет Камень обработки, придающий набедренникам вид Штанов Ниндзя. Не требуется предмет-прототип. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. -->
+		<!-- Changes the appearance of pants to that of a Ninja outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="22901-1" />
+		<!-- Ninja Pants Appearance Stone -->
+	</item>
+	<item id="23698" type="EtcItem" nameRu="Камень Обработки Перчаток Ниндзя" nameEn="Ninja Gloves Appearance Stone">
+		<!-- Витаминный предмет Камень обработки, придающий перчаткам вид Перчаток Ниндзя. Не требуется предмет-прототип. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. -->
+		<!-- Changes the appearance of gloves to that of a Ninja outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="22902-1" />
+		<!-- Ninja Gloves Appearance Stone -->
+	</item>
+	<item id="23699" type="EtcItem" nameRu="Камень Обработки Ботинок Ниндзя" nameEn="Ninja Shoes Appearance Stone">
+		<!-- Витаминный предмет Камень обработки, придающий обуви вид Ботинок Ниндзя. Не требуется предмет-прототип. Добавляет новое умение при обработке Верха, Низа, Перчаток, Обуви. -->
+		<!-- Changes the appearance of shoes to that of a Ninja outfit. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="22903-1" />
+		<!-- Ninja Shoes Appearance Stone -->
+	</item>
+</list>

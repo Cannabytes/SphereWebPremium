@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48300" type="EtcItem" nameRu="Зелье Восстановления Решимости" nameEn="Resolute Recovery Potion">
+		<!-- Восстанавливает CP и 3000 HP. Время перезарядки отсутствует. Нельзя использовать на Олимпиаде. Предмет будет удален после завершения ивента. -->
+		<!-- Upon use, it restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. Cannot be used in the Olympiad. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48301" type="EtcItem" nameRu="Свиток Атаки: Решимость" nameEn="Resolute Attack Scroll">
+		<!-- Особый Свиток, который можно получить за Символ Очков Клана. Для членов клана на 30 мин. Физ./ Маг. Атк. +3%, мощность физ./ маг. умений +3%, очки опыта и SP +5%. Нельзя использовать вместе со Свитком Защиты: Решимость. Нельзя использовать на Олимпиаде и Фестивале Хаоса. Предмет будет удален после завершения ивента. -->
+		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Atk. by 3%, P./ M. Skill Power by 3%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with ?esolute Defense Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48302" type="EtcItem" nameRu="Свиток Защиты: Решимость" nameEn="Resolute Defense Scroll">
+		<!-- Особый Свиток, который можно получить за Символ Очков Клана. На 30 мин. для членов клана вокруг персонажа Физ./ Маг. Защ. +5%, сопротивление отрицательным эффектам +5%, очки опыта и SP +5%. Нельзя использовать вместе со Свитком Атаки: Решимость. Нельзя использовать на Олимпиаде и Фестивале Хаоса. Предмет будет удален после завершения ивента. -->
+		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Def. by 3%, Debuff Resistance by 5%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with ?esolute Attack Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48303" type="EtcItem" nameRu="Сундук с Руной Решимости (Рейдовые Очки) - 2 ч." nameEn="Resolute Raid Point Rune (2-hour) Box">
+		<!-- Особый Сундук, который можно получить за Символ Очков Клана. Дважды щелкните, чтобы получить Руну Решимости (2 ч.), увеличивающую полученные рейдовые очки на 100%. Предмет будет удален после завершения ивента. -->
+		<!-- Raid Point Rune box that can be obtained with Clan Point Tokens. Double-click to obtain a Resolute Raid Point Rune (2-hour) that increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<!-- Resolute Raid Point Rune -->
+		<set name="capsuled_items" val="48304,1,1,100" />
+	</item>
+	<item id="48304" type="EtcItem" nameRu="Руна Решимости - Рейдовые Очки" nameEn="Resolute Raid Point Rune">
+		<!-- При наличии в инвентаре получаемые рейдовые очки +100%. Предмет будет удален после завершения ивента. -->
+		<!-- Having it in the inventory increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune" />
+		<set name="time" val="120" />
+		<set name="item_skill" val="39177-1" />
+		<!-- Resolute Raid Point Rune -->
+	</item>
+	<item id="48305" type="Armor" nameRu="Благословенная Серьга Антараса - Щит" nameEn="Blessed Antharas' Earring - Shield">
+		<!-- Витаминный предмет MP +59, Физ. Защ./ Маг. Защ. +15%, ВЫН/ ДУХ +3,  сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. Эффект от двух таких серег (или серег с аналогичными особыми эффектами) не суммируется.  <Особые эффекты> Физ. Защ. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48306" type="Armor" nameRu="Благословенная Серьга Антараса - Земля" nameEn="Blessed Antharas' Earring - Earth">
+		<!-- Витаминный предмет MP +59, Физ. Защ./ Маг. Защ. +15%, ВЫН/ ДУХ +3,  сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. Эффект от двух таких серег (или серег с аналогичными особыми эффектами) не суммируется.  <Особые эффекты> Маг. Защ. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48307" type="Armor" nameRu="Благословенная Серьга Антараса - Чистота" nameEn="Blessed Antharas' Earring - Pure">
+		<!-- Витаминный предмет MP +59, Физ. Защ./ Маг. Защ. +15%, ВЫН/ ДУХ +3,  сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. Эффект от двух таких серег (или серег с аналогичными особыми эффектами) не суммируется.  <Особые эффекты> Сопротивление 6 стихиям +25 -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48308" type="Armor" nameRu="Благословенное Ожерелье Валакаса - Тело" nameEn="Blessed Valakas' Necklace - Body">
+		<!-- Витаминный предмет MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию.  <Особые эффекты> Макс. HP +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Max HP +5% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="48309" type="Armor" nameRu="Благословенное Ожерелье Валакаса - Дух" nameEn="Blessed Valakas' Necklace - Mind">
+		<!-- Витаминный предмет MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию.  <Особые эффекты> Время перезарядки умений -3% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power -3%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Skill Cooldown -3% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="48310" type="Armor" nameRu="Благословенное Ожерелье Валакаса - Барьер" nameEn="Blessed Valakas' Necklace - Barrier">
+		<!-- Витаминный предмет MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию.  <Особые эффекты> Сопротивление фиксированному урону +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Fixed Damage Resistance +5% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="48311" type="Armor" nameRu="Серьга Линдвиора - Щит" nameEn="Lindvior's Earring - Shield">
+		<!-- Витаминный предмет MP +59, сила Физ./ Маг. Крит. Атк. +10%, Скорость +5, ЛВК/ МДР +3, сопротивление тьме/ ветру +30, шанс обратить в камень и сопротивление окаменению +50%, шанс отталкивания/ опрокидывания/ притягивания и сопротивление отталкиванию/ опрокидыванию/ притягиванию +40%, сопротивление опасным зонам +40%, шанс отражения физ./маг. отрицательных эффектов +10%, шанс отражения магического урона +10%. Активное Умение: отменяет эффект отталкивания/ опрокидывания, на 5 сек. дает неуязвимость к отталкиванию/ опрокидыванию. При надевании двух таких серег эффект не суммируется.  <Особые эффекты> Физ. Защ. +4%. -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48312" type="Armor" nameRu="Серьга Линдвиора - Земля" nameEn="Lindvior's Earring - Earth">
+		<!-- Витаминный предмет MP +59, сила Физ./ Маг. Крит. Атк. +10%, Скорость +5, ЛВК/ МДР +3, сопротивление тьме/ ветру +30, шанс обратить в камень и сопротивление окаменению +50%, шанс отталкивания/ опрокидывания/ притягивания и сопротивление отталкиванию/ опрокидыванию/ притягиванию +40%, сопротивление опасным зонам +40%, шанс отражения физ./маг. отрицательных эффектов +10%, шанс отражения магического урона +10%. Активное Умение: отменяет эффект отталкивания/ опрокидывания, на 5 сек. дает неуязвимость к отталкиванию/ опрокидыванию. При надевании двух таких серег эффект не суммируется.  <Особые эффекты> Маг. Защ. +4%. -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48313" type="Armor" nameRu="Серьга Линдвиора - Чистота" nameEn="Lindvior's Earring - Pure">
+		<!-- Витаминный предмет MP +59, сила Физ./ Маг. Крит. Атк. +10%, Скорость +5, ЛВК/ МДР +3, сопротивление тьме/ ветру +30, шанс обратить в камень и сопротивление окаменению +50%, шанс отталкивания/ опрокидывания/ притягивания и сопротивление отталкиванию/ опрокидыванию/ притягиванию +40%, сопротивление опасным зонам +40%, шанс отражения физ./маг. отрицательных эффектов +10%, шанс отражения магического урона +10%. Активное Умение: отменяет эффект отталкивания/ опрокидывания, на 5 сек. дает неуязвимость к отталкиванию/ опрокидыванию. При надевании двух таких серег эффект не суммируется.  <Особые эффекты> Сопротивление 6 стихиям +25. -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="s84" />
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="48314" type="EtcItem" nameRu="Таинственный Сейф" nameEn="Suspicious Safe">
+		<!-- Найден в Таинственной Таверне. Содержит редкие предметы. Предмет будет удален после завершения ивента. -->
+		<!-- Suspicious safes traded tacitly in the Mystic Tavern. Use it to obtain a rare item. Will be deleted on Wednesday, October 25, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48315" type="EtcItem" nameRu="Сияющий Золотой Слиток" nameEn="Shiny Gold Bar">
+		<!-- Найден в Таинственной Таверне. Служил валютой в тайных сделках. Отнесите Менеджеру Витаминов, чтобы получить полезный предмет. Предмет будет удален после завершения ивента. -->
+		<!-- Expensive gold bars traded tacitly in the Mystic Tavern. Take it to a Dimensional Merchant to exchange it for useful items. Will be deleted on Wednesday, October 25, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.bm_gold_bar" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48316" type="EtcItem" nameRu="Бодрящее Пиво" nameEn="Vitality Beer">
+		<!-- Знаменитый напиток из Таинственной Таверны. Восполняет потраченную энергию. Отнесите его и Рыбное Рагу Менеджеру Витаминов, чтобы получить еще более редкое пиво. Нельзя использовать на Олимпиаде. Можно использовать только 5 раз в неделю. -->
+		<!-- Popular beer at the Mystic Tavern. Use it to recover Vitality. Take it along with some fish stew to a Dimensional Merchant to receive even more special beer in return. Cannot be used in the Olympiad. No weekly usage limit. -->
+		<set name="icon" val="icon.bm_honey_beer" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48317" type="EtcItem" nameRu="Сладкое Бодрящее Пиво" nameEn="Honey Vitality Beer">
+		<!-- Медовое пиво, которое варится в Тайной Таверне по старинному рецепту. Мгновенно восполняет потраченную энергию. На 10 мин. ВЫН/ ДУХ/ УДЧ/ ХАР +1. Если во время действия эффекта выпить еще одно Сладкое Бодрящее Пиво, можно усилить эффект максимум до Ур. 3  Сладкое Бодрящее Пиво Ур. 2: на 10 мин. ВЫН/ ДУХ/ УДЧ/ ХАР +2, очки опыта +10%. Сладкое Бодрящее Пиво Ур. 3: на 10 мин. ВЫН/ ДУХ/ УДЧ/ ХАР +3, очки опыта +30%.  Нельзя использовать вместе с Рыбным Рагу. Нельзя использовать на Олимпиаде. -->
+		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and CON/ MEN/ LUC/ CHA +1 for 10 minutes. Using additional ?oney Vitality Beer' while the buff is active enables up to Lv. 3 stacked effects.. Honey Vitality Beer Lv. 2: CON/ MEN/ LUC/ CHA +2 and XP gained +10% for 10 min. Honey Vitality Beer Lv. 3: CON/ MEN/ LUC/ CHA +3 and XP gained +30% for 10 min. Cannot be used together when fish stew. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_honey_beer" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="liquid" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48318" type="EtcItem" nameRu="Коробка с Кровавым Темным Усиливающим Камнем" nameEn="Dark Bloody Enhancement Stone Box">
+		<!-- Позволяет получить один из следующих предметов: Усиливающий Камень Кровавого/ Темного Айдиоса, Усиливающий Камень Кровавого/ Темного Хелиоса. -->
+		<!-- Use to obtain one of Dark Helios, Bloody Helios, Dark Eternal, or Bloody Eternal Enhancement Stones. -->
+		<set name="icon" val="icon.bm_pvp_pve_upgrade_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48319" type="EtcItem" nameRu="Коробка с Королевским Белым Счастливым Билетом" nameEn="Royal White Save Ticket Treasure Chest">
+		<!-- Можно получить один из следующих предметов: Королевский Белый Счастливый Билет ранга R/ R95/ R99. -->
+		<!-- Use to obtain one of R/ R95/ R99 Royal White Save Tickets. -->
+		<set name="icon" val="icon.bm_royal_white_ticket_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48320" type="EtcItem" nameRu="Коробка с Королевским Фиолетовым Счастливым Билетом" nameEn="Royal Purple Save Ticket Treasure Chest">
+		<!-- Можно получить один из следующих предметов: Королевский Фиолетовый Счастливый Билет ранга R/ R95/ R99. -->
+		<!-- Use to obtain one of R/ R95/ R99 Royal Purple Save Tickets. -->
+		<set name="icon" val="icon.bm_royal_purple_ticket_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48321" type="EtcItem" nameRu="Коробка с Браслетом Иного Измерения Ур. 6 (Обычный)" nameEn="Dimensional Bracelet Stage 6 (Basic) Pack">
+		<!-- Внутри находится Браслет Иного Измерения Ур. 6 (Обычный). -->
+		<!-- Double-click to obtain a Basic Dimensional Bracelet - Stage 6 (Non-exchangeable/ tradable). -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48322" type="EtcItem" nameRu="Коробка с Усиливающим Камнем Браслета Иного Измерения" nameEn="Dimensional Bracelet Enhancement Stone Pack">
+		<!-- Позволяет в случайном порядке получить один из шести Усиливающих Камней Браслета Иного Измерения. -->
+		<!-- Double-click to randomly obtain one of the 6 types of Dimensional Bracelet Enhancement Stones. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48323" type="EtcItem" nameRu="Божественная Книга Роста Звездного Агатиона" nameEn="Divine Zodiac Agathion Book of Growth">
+		<!-- Для развития Звездного Агатиона. При неудачной попытке улучшения показатель модификации сохраняется. -->
+		<!-- Scroll for the growth of Zodiac Agathions. Enchantment level does not drop when an enchant attempt fails. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_am" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="28066-1" />
+		<!-- Ancient Zodiac Agathion Charm Book of Growth -->
+	</item>
+	<item id="48324" type="EtcItem" nameRu="Коробка Мастера с Агатионом" nameEn="Agathion Masters Box">
+		<!-- Внутри находятся четыре Куба Звездного Агатиона. С некоторой вероятностью можно получить Божественную Книгу Роста Звездного Агатиона. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Zodiac Agathion Book of Growth. -->
+		<set name="icon" val="icon.bm_gold_relic_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48325" type="EtcItem" nameRu="Особая Коробка Мастера с Агатионом" nameEn="Special Agathion Masters Box">
+		<!-- Внутри находятся четыре Куба Звездного Агатиона и Божественная Книга Роста Звездного Агатиона. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Zodiac Agathion Book of Growth. -->
+		<set name="icon" val="icon.bm_gold_relic_box" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48326" type="Weapon" nameRu="Щит Бернштайна Ауфгабе" nameEn="Burnstein's Aufgabe Shield">
+		<!-- Меняет внешний вид щита на Щит Берштайна Ауфгабе. -->
+		<!-- Material item for crafting Burnstein's Aufgabe (Fallen) appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield1" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48327" type="Weapon" nameRu="Проклятый Щит Кельбима" nameEn="Kelbim's Geffelen Shulter">
+		<!-- Меняет внешний вид щита на Проклятый Щит Кельбима. -->
+		<!-- Material item for crafting Kelbim's Geffelen (Fallen) Shulter (Shoulder) appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield2" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48328" type="Weapon" nameRu="Осколок Ядра Супериона" nameEn="Superion Core Shard">
+		<!-- Меняет внешний вид щита на Осколок Ядра Супериона. -->
+		<!-- Material item for crafting Superion Core Shard appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield3" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48329" type="Weapon" nameRu="Отражатель Истхины" nameEn="Istina's Reflector">
+		<!-- Меняет внешний вид щита на Отражатель Истхины. -->
+		<!-- Material item for crafting Istina's Reflector (Reflecting mirror) appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield4" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48330" type="Weapon" nameRu="Ромбовидный Щит Тай" nameEn="Taiga Kite Shield">
+		<!-- Меняет внешний вид щита на Ромбовидный Щит Тай. -->
+		<!-- Material item for crafting Taiga Kite Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield5" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48331" type="Weapon" nameRu="Щит-Череп Тантар" nameEn="Tanta Skull Shield">
+		<!-- Меняет внешний вид щита на Щит-Череп Тантар. -->
+		<!-- Material item for crafting Tanta Skull Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield6" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48332" type="Weapon" nameRu="Прямоугольный Щит Раэль" nameEn="Rael Wrist Shield">
+		<!-- Меняет внешний вид щита на Прямоугольный Щит Раэль. -->
+		<!-- Material item for crafting Rael Wrist Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield7" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48333" type="Weapon" nameRu="Боевой Щит Кунда" nameEn="Kunda's Battle Shield">
+		<!-- Меняет внешний вид щита на Боевой Щит Кунда. -->
+		<!-- Material item for crafting Kunda's Battle Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield8" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48334" type="Weapon" nameRu="Щит Ледяного Цветка Фреи" nameEn="Freya's Ice Flower Shield">
+		<!-- Меняет внешний вид щита на Щит Ледяного Цветка Фреи. -->
+		<!-- Material item for crafting Freya's Ice Flower Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield9" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48335" type="Weapon" nameRu="Щит Маски Смерти" nameEn="Deathmask Shield">
+		<!-- Меняет внешний вид щита на Щит Маски Смерти. -->
+		<!-- Material item for crafting Deathmask Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield10" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48336" type="Weapon" nameRu="Щит Берсерка-Крестоносца" nameEn="Berserker's Crusader Shield">
+		<!-- Меняет внешний вид щита на Щит Берсерка-Крестоносца. -->
+		<!-- Material item for crafting Berserker's Crusader Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield11" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48337" type="Weapon" nameRu="Колесо Маршала" nameEn="Makkum's Cartwheel">
+		<!-- Меняет внешний вид щита на Колесо Маршала. -->
+		<!-- Material item for crafting Makkum's Cartwheel appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield12" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48338" type="Weapon" nameRu="Наплечники Порочного Ангела" nameEn="Poln Angel Shulter">
+		<!-- Меняет внешний вид наплечников на Наплечники Порочного Ангела. -->
+		<!-- Material item for crafting Poln Angel Shulter appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield13" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48339" type="Weapon" nameRu="Серебряный Скарабей" nameEn="Silver Scarab">
+		<!-- Меняет внешний вид щита на Серебряного Скарабея. -->
+		<!-- Material item for crafting Silver Scarab appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield14" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48340" type="Weapon" nameRu="Круглый Щит Вампира" nameEn="Vampire Fang Shield">
+		<!-- Меняет внешний вид щита на Колесо Маршала. -->
+		<!-- Material item for crafting Vampire Fang appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield15" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48341" type="Weapon" nameRu="Щит Осколка Льда" nameEn="Ice Shard Shield">
+		<!-- Меняет внешний вид щита на Щит Осколка Льда. -->
+		<!-- Material item for crafting Ice Shard Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield16" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48342" type="Weapon" nameRu="Щит Анджела Роса" nameEn="Angelos Shield">
+		<!-- Меняет внешний вид щита на Щит Анджела Роса. -->
+		<!-- Material item for crafting Angelos Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield17" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="fist" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48343" type="EtcItem" nameRu="Камень Обработки Щита Бернштайна Ауфгабе" nameEn="Burnstein's Aufgabe Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Бернштайна Ауфгабе. -->
+		<!-- Appearance Stone that gives a shield Burnstein's Aufgabe Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48344" type="EtcItem" nameRu="Камень Обработки Проклятого Щита Кельбима" nameEn="Kelbim's Geffelen Shulter Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Проклятого Щита Кельбима. -->
+		<!-- Appearance Stone that gives a shield Kelbim's Geffelen Shulter appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48345" type="EtcItem" nameRu="Камень Обработки Осколка Ядра Супериона" nameEn="Superion Core Shard Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Осколка Ядра Супериона. -->
+		<!-- Appearance Stone that gives a shield Superion Core Shard appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48346" type="EtcItem" nameRu="Камень Обработки Отражателя Истхины" nameEn="Istina Reflect Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Отражателя Истхины. -->
+		<!-- Appearance Stone that gives a shield Istina's Reflector appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48347" type="EtcItem" nameRu="Камень Обработки Ромбовидного Щита Тая" nameEn="Taiga Kite Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Ромбовидного Щита Тай. -->
+		<!-- Appearance Stone that gives a shield Taiga Kite Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48348" type="EtcItem" nameRu="Камень Обработки Щита-Черепа Тантара" nameEn="Tanta Skull Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита-Черепа Тантара. -->
+		<!-- Appearance Stone that gives a shield Tanta Skull Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48349" type="EtcItem" nameRu="Камень Обработки Прямоугольного Щита Раэль" nameEn="Rael Wrist Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Прямоугольного Щита Раэль. -->
+		<!-- Appearance Stone that gives a shield Rael Wrist Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48350" type="EtcItem" nameRu="Камень Обработки Боевого Щита Кунда" nameEn="Kunda's Battle Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Боевого Щита Кунда. -->
+		<!-- Appearance Stone that gives a shield Kunda's Battle Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48351" type="EtcItem" nameRu="Камень Обработки Щита Ледяного Цветка Фреи" nameEn="Freya's Ice Flower Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Ледяного Цветка Фреи. -->
+		<!-- Appearance Stone that gives a shield Freya's Ice Flower Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48352" type="EtcItem" nameRu="Камень Обработки Щита Маски Смерти" nameEn="Deathmask Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Маски Смерти. -->
+		<!-- Appearance Stone that gives a shield Deathmask Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48353" type="EtcItem" nameRu="Камень Обработки Щита Берсерка-Крестоносца" nameEn="Berserker's Crusader Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Берсерка-Крестоносца. -->
+		<!-- Appearance Stone that gives a shield Berserker's Crusader Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48354" type="EtcItem" nameRu="Камень Обработки Колеса Маршала" nameEn="Makkum's Cartwheel Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Колеса Маршала. -->
+		<!-- Appearance Stone that gives a shield Makkum's Cartwheel appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48355" type="EtcItem" nameRu="Камень Обработки Наплечников Порочного Ангела" nameEn="Poln Angel Shulter Appearance Stone">
+		<!-- На 30 д. придает наплечникам внешний вид Наплечников Порочного Ангела. -->
+		<!-- Appearance Stone that gives a shield Poln Angel Shulter appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48356" type="EtcItem" nameRu="Камень Обработки Серебряного Скарабея" nameEn="Silver Scarab Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Серебряного Скарабея -->
+		<!-- Appearance Stone that gives a shield Silver Scarab appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48357" type="EtcItem" nameRu="Камень Обработки Круглого Щита Вампира" nameEn="Vampire Fang Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Круглого Щита Вампира. -->
+		<!-- Appearance Stone that gives a shield Vampire Fang Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48358" type="EtcItem" nameRu="Камень Обработки Щита Осколка Льда" nameEn="Ice Shard Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Осколка Льда. -->
+		<!-- Appearance Stone that gives a shield Ice Shard Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48359" type="EtcItem" nameRu="Камень Обработки Щита Анджела Роса" nameEn="Angelos Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Анджела Роса -->
+		<!-- Appearance Stone that gives a shield Angelos Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48360" type="EtcItem" nameRu="Сундук Припасов Гильдии Путешественников" nameEn="Adventure Guild Support Box">
+		<!-- Выдается за выполнение задания Гильдии Путешественников. Дважды щелкните, чтобы получить разнообразные полезные предметы. -->
+		<!-- A support box received after completing the Adventure Guild faction missions. Double-click to obtain various items needed for growth. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48361" type="Armor" nameRu="Талисман Гильдии Путешественников" nameEn="Adventure Guild Talisman">
+		<!-- Талисман Гильдии Путешественников -->
+		<!-- Adventure Guild Talisman -->
+		<set name="icon" val="icon.etc_blackbird_talisman" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="s84" />
+		<set name="bodypart" val="underwear" />
+	</item>
+	<item id="48362" type="EtcItem" nameRu="Финальный Сундук Гильдии Путешественников" nameEn="Adventure Guild Completion Box">
+		<!-- Финальный Сундук Гильдии Путешественников -->
+		<!-- Adventure Guild Completion Box -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48363" type="EtcItem" nameRu="Тусклая Нить Нерупы" nameEn="Nerupa's Faint Threads">
+		<!-- Нить с силой Нерупы. Используйте ее, чтобы повернуть вспять время Бутона Литары и получить возможность создать Бутон Нерупы. Правда, неизвестно, чем обернутся игры со временем... Обладает слабой способностью поворачивать время назад. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are faint and weak in power of time regression. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48364" type="EtcItem" nameRu="Яркая Нить Нерупы" nameEn="Nerupa's Vivid Threads">
+		<!-- Нить с силой Нерупы. Используйте ее, чтобы повернуть вспять время Бутона Литары и получить возможность создать Бутон Нерупы. Правда, неизвестно, чем обернутся игры со временем… Обладает способностью поворачивать время назад. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are vivid and strong in power of time regression. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48365" type="EtcItem" nameRu="Ослепительная Нить Нерупы" nameEn="Nerupa's Intense Threads">
+		<!-- Нить с силой Нерупы. Используйте ее, чтобы повернуть вспять время Бутона Литары и получить возможность создать Бутон Нерупы. Правда, неизвестно, чем обернутся игры со временем... Это самая сильная из всех нитей Нерупы, поворачивающих время вспять, и побочный эффект у нее тоже самый сильный. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. Replete with Nerupa's power, these threads are the most effective among all of Nerupa's threads in turning back the time. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48366" type="EtcItem" nameRu="Ментальная Энергия Литары" nameEn="Lithra's Consideration">
+		<!-- Литара использует эту энергию, чтобы повелевать животными и растениями. Если извлечь ее из живых существ, то можно ослабить Литару. Соберите энергию и отнесите Нерупе. -->
+		<!-- Thoughts Lithra has planted to manipulate living creatures and gain more power. As Lithra's Consideration is tied with Lithra's power, removing it from creatures that serve Lithra weakens Lithra's power. Gather them and take them to Nerupa. -->
+		<set name="icon" val="icon.etc_ev_draco_gift_box" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48367" type="EtcItem" nameRu="Нить Судьбы" nameEn="Thread of Fate">
+		<!-- Нить, связывающая Нерупу, Литару и все живое в этом мире. Изначально была прозрачна, как воздух, но Нерупа при помощи магии сделала ее видимой. -->
+		<!-- The thread of fate that binds Nerupa, Lithra, and the Mother Tree together. Normally invisible, but Nerupa's power revealed it to living eyes. -->
+		<set name="icon" val="icon.etc_fortune_web" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48368" type="EtcItem" nameRu="Лепесток Бутона Нерупы" nameEn="Nerupa Bud Petals">
+		<!-- Принадлежит монстру, возникшему из Бутона Нерупы. Содержит данные, записанные во время поворота времени вспять. Благодаря лепестку Нерупа может видеть прошлое. -->
+		<!-- Petals that monsters born from the Nerupa Buds have.These are the proof of the impact of time regression. As Nerupa Bud Petals of the same shape contain different memories of time, Nerupa can read the memories through these petals. -->
+		<set name="icon" val="icon.etc_nerupa_petal" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48369" type="EtcItem" nameRu="Поручение - Пустошь (запад)" nameEn="Request - Wasteland West">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в западной части Пустоши. Для персонажей 96-106 уровня. Чтобы активировать задание, дважды щелкните по поручению. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Wasteland West. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="start_quest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48370" type="EtcItem" nameRu="Поручение - Пустошь (восток)" nameEn="Request - Wasteland East">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в восточной части Пустоши. Для персонажей 96-106 уровня. Чтобы активировать задание, дважды щелкните по поручению. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Wasteland East. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="start_quest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48371" type="EtcItem" nameRu="Поручение - Лес Неупокоенных" nameEn="Request - Forest of the Dead">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в Лесу Неупокоенных. Дважды щелкните, чтобы получить задание. Для персонажей 100-110 уровня. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Forest of the Dead. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="start_quest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48372" type="EtcItem" nameRu="Поручение - Болото Криков" nameEn="Request - Swamp of Screams">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса на Болоте Криков. Дважды щелкните, чтобы получить задание. Для персонажей 100-110 уровня. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Swamp of Screams. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="start_quest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48373" type="EtcItem" nameRu="Поручение - Пустошь (запад)" nameEn="Request - Wasteland West">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в западной части Пустоши. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Wasteland West. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48374" type="EtcItem" nameRu="Поручение - Пустошь (восток)" nameEn="Request - Wasteland East">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в восточной части Пустоши. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Wasteland East. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48375" type="EtcItem" nameRu="Поручение - Лес Неупокоенных" nameEn="Request - Forest of the Dead">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса в Лесу Неупокоенных. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Forest of the Dead. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48376" type="EtcItem" nameRu="Поручение - Болото Криков" nameEn="Request - Swamp of Screams">
+		<!-- Задание от Гильдии Охотников, для выполнения которого необходимо убить Рейдового Босса на Болоте Криков. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Swamp of Screams. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48377" type="EtcItem" nameRu="Следы Зла" nameEn="Traces of Evil Spirit">
+		<!-- Темный Маг Рафласия попросила персонажа добыть несколько образцов, необходимых для обряда очищения. Их можно получить из монстров на Алтаре Зла. -->
+		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a purification ritual. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48378" type="EtcItem" nameRu="Фрагмент Тела Монстра" nameEn="Beast Shard">
+		<!-- Темный Маг Рафласия попросила персонажа добыть Фрагмент Тела Монстра, необходимый для поминального обряда в честь павших воинов. Его можно получить из монстров на Алтаре Зла. -->
+		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a memorial ritual for her perished kin. -->
+		<set name="icon" val="icon.etc_bodypart_liver_i00" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48379" type="EtcItem" nameRu="Гнилая Желчь" nameEn="Putrefied Extract">
+		<!-- Бакалейщик Воллодос попросил персонажа добыть несколько образцов гнилой желчи монстров-насекомых в Кровавых Топях. -->
+		<!-- Extract that Grocer Vollodos asked you to collect by defeating bug monsters in the Bloody Swampland. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48380" type="EtcItem" nameRu="Гнилая Кровь" nameEn="Rotten Blood">
+		<!-- Бакалейщик Воллодос попросил персонажа добыть несколько образцов крови нежити в Кровавых Топях. -->
+		<!-- Blood that Grocer Vollodos asked you to collect by defeating demons and undead monsters in the Bloody Swampland. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48381" type="EtcItem" nameRu="След Мутировавшего Существа" nameEn="Traces of Mutation">
+		<!-- Выпадает из Мутировавшей Феи и Сатира, живущих в Волшебном Лесу. Нужно собрать несколько штук и отнести Сбежавшей от Кимериана Фее-Горожанину. -->
+		<!-- Traces obtained after defeating mutated fairies and satyrs in the Forest of Fairies. Take them to the Fairy Refugee. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48382" type="EtcItem" nameRu="Оболочка Разрушителя Коконов" nameEn="Cocoon Destroyer Shell">
+		<!-- Выпадает из Разрушителя Коконов в Лесу Кимериана. Нужно отнести Нерупе. -->
+		<!-- Shells obtained after defeating Cocoon Destroyers in Kimerian's Forest. Take them to Nerupa. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48383" type="EtcItem" nameRu="Модуль Управления" nameEn="Control Module">
+		<!-- Модуль, полученный после уничтожения голема на Острове Душ. Нужно отнести Хесету из Гильдии Черной Наковальни. -->
+		<!-- Control modules obtained after defeating the Berserk Commander Golems on the Isle of Souls. Take them to Hesed of the Black Anvil Guild. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48384" type="EtcItem" nameRu="Ядро Отчаяния" nameEn="Cannonball of Despair">
+		<!-- Снаряд для пушки в Тюрьме Изгнанников Тьмы. На 10 сек. оглушает Спасию и его двойников, снимает с них неуязвимость на 1 мин. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 seconds, and removes the Invincibility buff for 1 minute. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48385" type="EtcItem" nameRu="Ядро Безумия" nameEn="Cannonball of Lunacy">
+		<!-- Снаряд для пушки в Тюрьме Изгнанников Тьмы. На 10 сек. оглушает Спасию и его двойников, снимает с них неуязвимость на 1 мин. Двойники Спасии и его приспешники применяют умение Пламя Гнева и переходят в атаку.  -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and causes Spezion's clones and minions to use the ?razed Immolation' skill and self-destruct. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48386" type="EtcItem" nameRu="Ядро Гнева" nameEn="Cannonball of Rage">
+		<!-- Снаряд для пушки в Тюрьме Изгнанников Тьмы. На 10 сек. оглушает Спасию и его двойников, снимает с них неуязвимость на 1 мин. На 30 сек. сохраняет эффект Проникающая Ярость для двойников Спасии. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and inflicts ?roded Rage' buff on Spezion's clones and minions for 30 seconds. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="crystal" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48387" type="EtcItem" nameRu="Древняя Книга Роста Звездного Агатиона" nameEn="Ancient Zodiac Agathion Book of Growth">
+		<!-- Увеличивает Маг. Защ. Начиная с модификации +4 наделяет особыми характеристиками. Безопасное усиление начиная с модификации +3. Позволяет модифицировать максимум до +10. Начиная с модификации +1 увеличивает особые характеристики. В случае успеха гарантирует случайную модификацию в диапазоне от +1 до +3. Нельзя использовать для предметов с модификацией выше +7. Предмет будет удален после завершения ивента. -->
+		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. Will be deleted on Wednesday, January 3, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="48388" type="EtcItem" nameRu="Сундук Энергии Карли из Гильдии Алых Весов" nameEn="Red Libra Kaliel's Energy Box">
+		<!-- С определенным шансом позволяет получить Энергию Карли - Желание. -->
+		<!-- Use to randomly obtain either Kaliel's Energy- Desire or the Energy of Longing. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48389" type="EtcItem" nameRu="Фрагмент Куба Сверкающего Агатиона" nameEn="Shiny Agathion Cube Fragment">
+		<!-- Можно обменять у Рабочего Склада на Сияющую Книгу Роста Звездного Агатиона. -->
+		<!-- Can be exchanged for the Zodiac Agathion Book of Growth through the Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_ag" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48390" type="EtcItem" nameRu="Фрагмент Куба Сияющей Футболки" nameEn="Shiny Shirt Cube Fragment">
+		<!-- Можно обменять у Рабочего Склада на Слабый Свиток: Модифицировать Футболку. -->
+		<!-- Can be exchanged for the Faint Scroll: Enchant Elemental Shirt through the Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_tshirt" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48391" type="EtcItem" nameRu="Фрагмент Куба Волшебной Наживки" nameEn="Mysterious Bait Cube Fragment">
+		<!-- Можно обменять у Рабочего Склада на Волшебную Наживку. -->
+		<!-- Can be exchanged for the Mysterious Bait through the Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_lure" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48392" type="EtcItem" nameRu="Фрагмент Куба Сверкающего Талисмана" nameEn="Shiny Talisman Cube Fragment">
+		<!-- Можно обменять у Рабочего Склада на Энергию Карли - Желание. -->
+		<!-- Can be exchanged for either Energy of Longing or Sayha's Energy through the Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_talisman" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48393" type="EtcItem" nameRu="Сундук с Кубом Гильдии Путешественников" nameEn="Adventure Guild Cube Treasure Chest">
+		<!-- Выдается Герпой за выполнение задания Гильдии Путешественников. Дважды щелкните, чтобы посмотреть, что лежит внутри. -->
+		<!-- A cube treasure chest received from Herphah for completing the Adventure Guild missions. Double-click to obtain useful items periodically. -->
+		<set name="icon" val="icon.cube_piece_bless" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="48394" type="EtcItem" nameRu="Волшебная Наживка" nameEn="Mysterious Bait">
+		<!-- Время рыбалки: 105 сек. Время ожидания рыбалки: 15 сек.  Позволяет с малым шансом получить Синюю Коробку. -->
+		<!-- Fishing Time: 105 sec. Fishing Standby Time: 15 sec. There is a small chance of hooking a Reddish Box when fishing with this bait. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48395" type="Weapon" nameRu="Щит Бернштайна Флихита" nameEn="Burnstein's Pflicht Shield">
+		<!-- Меняет внешний вид щита на Щит Берштайна Флихита. -->
+		<!-- Material item for crafting Burnstein's Pflicht (Responsibility) Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield18" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<for>
+			<add order="0x10" stat="pDef" val="25" />
+		</for>
+	</item>
+	<item id="48396" type="EtcItem" nameRu="Камень Обработки Щита Бернштайна Флихита" nameEn="Burnstein's Pflicht Shield Appearance Stone">
+		<!-- На 30 д. придает щиту внешний вид Щита Бернштайна Флихита. -->
+		<!-- Appearance Stone that gives a shield Burnstein's Pflicht Shield appearance for 30 days. -->
+		<set name="icon" val="icon.shape_shifting_shield_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="48397" type="EtcItem" nameRu="Малый Сундук Хранителей Древа Жизни" nameEn="Mother Tree Guardians Basic Treasure Chest">
+		<!-- Выдается за выполнение задания Хранителей Древа Жизни в Тени Древа Жизни. Щелкните по предмету дважды, чтобы узнать, что лежит внутри. -->
+		<!-- A basic supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18601-4" />
+		<!-- Basic Supply Box -->
+	</item>
+	<item id="48398" type="EtcItem" nameRu="Средний Сундук Хранителей Древа Жизни" nameEn="Mother Tree Guardians Intermediate Treasure Chest">
+		<!-- Выдается за выполнение задания Хранителей Древа Жизни в Тени Древа Жизни. Щелкните по предмету дважды, чтобы узнать, что лежит внутри. -->
+		<!-- An intermediate supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18601-5" />
+		<!-- Basic Supply Box -->
+	</item>
+	<item id="48399" type="EtcItem" nameRu="Большой Сундук Хранителей Древа Жизни" nameEn="Mother Tree Guardians Advanced Treasure Chest">
+		<!-- Выдается за выполнение задания Хранителей Древа Жизни в Тени Древа Жизни. Щелкните по предмету дважды, чтобы узнать, что лежит внутри. -->
+		<!-- An advanced supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="peel" />
+		<set name="material" val="paper" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18601-6" />
+		<!-- Basic Supply Box -->
+	</item>
+</list>

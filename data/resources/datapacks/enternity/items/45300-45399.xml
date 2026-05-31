@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="45372" type="Armor" nameRu="Браслет Призыва Агатиона: Благословенные Рыбы" nameEn="Agathion - Blessed Pisces">
+		<!-- Браслет, позволяющий призвать Агатиона Рыб.  <Активное Умение> 1. Телепорт Агатиона: перемещает в Аден/ Руну/ Гиран/ Хейн. (Время перезарядки: 30 мин.)  <Предметное Умение> 1. Усиление Параметров: СИЛ/ ИНТ/ ВЫН/ ЛВК/ МДР/ ДУХ +1. 2. Усиление Стихий: атака и защита огня/ воды/ земли/ ветра/ тьмы/ святости +30. -->
+		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
+		<set name="icon" val="icon.agathion_magmeld_teleport" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="17619-1" />
+		<!-- Release Agathion's Seal -->
+		<set name="item_skill" val="17547-1" />
+		<!-- Agathion Teleport: Town of Aden -->
+		<set name="item_skill" val="17548-1" />
+		<!-- Agathion Teleport: Town of Rune -->
+		<set name="item_skill" val="17549-1" />
+		<!-- Agathion Teleport: Town of Giran -->
+		<set name="item_skill" val="17550-1" />
+		<!-- Agathion Teleport: Town of Heine -->
+		<set name="item_skill" val="17551-1" />
+		<!-- Balanced Power -->
+		<set name="item_skill" val="17622-1" />
+		<!-- Agathion Cute Trick -->
+		<set name="item_skill" val="26117-5" />
+		<!-- Zodiac Agathion Attribute Enchant -->
+		<set name="item_skill" val="9606-1" />
+		<!-- Sealing Agathion -->
+		<set name="unequip_skill" val="9606-1" />
+		<!-- Sealing Agathion -->
+	</item>
+	<item id="45373" type="EtcItem" nameRu="Коробка с Браслетом Призыва Агатиона: Благословенные Рыбы" nameEn="Blessed Pisces Agathion Bracelet Pack">
+		<!-- Дважды щелкните, чтобы получить Браслет Призыва Агатиона: Благословенные Рыбы (30 д.).  -->
+		<!-- Wrapped Pack containing a Super Advanced Seed Bracelet (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="paper" />
+		<!-- Agathion - Blessed Pisces - 30-day -->
+		<set name="capsuled_items" val="45372,1,1,100" />
+	</item>
+	<item id="45374" type="Weapon" nameRu="Бластер" nameEn="Laser Gun">
+		<!-- Необходим для уничтожения Охотника за Энергией. Позволяет применить умение Пиу-пиу. Предмет будет удален после завершения ивента. -->
+		<!-- Use this and its active skill Pew Pew to defeat Alien Researchers! Deleted after event. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="100" />
+		<set name="material" val="steel" />
+		<set name="attack_range" val="400" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set order="0x08" stat="rCrit" val="10" />
+		</for>
+	</item>
+	<item id="45375" type="EtcItem" nameRu="Космическая Еда" nameEn="Battle Rations">
+		<!-- На 30 мин. увеличивает на 6 одну из следующих характеристик: СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ, УДЧ, ХАР. Не действует вместе с другой Космической Едой и Рыбным Рагу. Нельзя использовать на Олимпиаде. Предмет будет удален после завершения ивента. -->
+		<!-- Random basic stat +6 for 30 min. Cannot be stacked with Fish Stew or other Alien Nano Supplements. -->
+		<set name="icon" val="icon.ev_invasion_buff_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="paper" />
+	</item>
+	<item id="45376" type="EtcItem" nameRu="Капсула Жизни" nameEn="Reward Capsule">
+		<!-- Дважды щелкните, чтобы получить хорошую награду. Нельзя использовать на Олимпиаде. -->
+		<!-- It looks like something nice might be inside! Cannot be used in Olympiad. -->
+		<set name="icon" val="icon.general_fuel_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="45377" type="EtcItem" nameRu="Подарочная Коробка L2B2" nameEn="L2B2's Gift Box">
+		<!-- Дважды щелкните, чтобы получить хорошую награду. Нельзя использовать на Олимпиаде. -->
+		<!-- Something nice might be inside! Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="45378" type="EtcItem" nameRu="Настойка Восстановления Энергии - Группа" nameEn="Vitality Replenishing Herb - Party">
+		<!-- С определенной вероятностью восстанавливает энергию. Можно использовать на всех членов группы. -->
+		<!-- Restores a certain amount of Vitality for all party members. -->
+		<set name="icon" val="icon.general_fuel_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="45379" type="EtcItem" nameRu="Результат Исследования Монстра" nameEn="Monster Research">
+		<!-- Результаты исследования монстров Адена. Если отнести ивентовому NPC L2B2, можно получить награду. -->
+		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="45380" type="Weapon" nameRu="Игрушечное Ружье Пришельца" nameEn="Depleted Plasma Gun">
+		<!-- Позволяет использовать Отталкивание. Время действия: 1 ч. -->
+		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hour. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="60" />
+		<set name="material" val="steel" />
+		<set name="attack_range" val="400" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set order="0x08" stat="rCrit" val="10" />
+		</for>
+	</item>
+	<item id="45381" type="Weapon" nameRu="Настоящее Ружье Пришельца" nameEn="Charged Plasma Gun">
+		<!-- Позволяет использовать Выстрел Духа. Время действия: 1 ч. -->
+		<!-- Be careful, this one is set to the highest power! Use this and you can also use the Spirit Hit skill. 1-hour. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="60" />
+		<set name="material" val="steel" />
+		<set name="attack_range" val="400" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="303" />
+			<set order="0x08" stat="rCrit" val="10" />
+		</for>
+	</item>
+	<item id="45382" type="Armor" nameRu="Шапка Мага" nameEn="Top Hat">
+		<!-- Головной убор, от которого просто веет волшебной тайной. Требуется 2 ячейки для головных уборов  -->
+		<!-- Magical-looking hat. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="45383" type="Armor" nameRu="Миловидный Ободок для Волос" nameEn="Maid Hairband">
+		<!-- Только для персонажей женского пола. Требуется 2 ячейки для головных уборов -->
+		<!-- Cute hairband. Female only. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.maid_hairband" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="45384" type="Armor" nameRu="Шляпа Лэй Фэна" nameEn="Laborer Hat">
+		<!-- Шляпа, принадлежавшая Лэй Фэну. Занимает 1 ячейку головных уборов. -->
+		<!-- Hat worn by Lei Feng. Uses 1 hair accessory slot. -->
+		<set name="icon" val="icon.people_cap" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hair" />
+	</item>
+	<item id="45385" type="Armor" nameRu="Маска Мародеров" nameEn="Ruthless Tribe Mask">
+		<!-- Маска, принадлежавшая мародерам. Занимает 1 ячейку головных уборов.  -->
+		<!-- Mask worn by a ruthless tribe. Uses 1 hair accessory slot. -->
+		<set name="icon" val="icon.crazy_driving_mask" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hair" />
+	</item>
+	<item id="45386" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45387" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45388" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45389" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45390" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45391" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45392" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45393" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45394" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45395" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45396" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45397" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45398" type="EtcItem" nameRu="Предмет для сравнения выпадаемых и обмениваемых кристаллов по странам" nameEn="Drop Rate Setting Comparison Purpose">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="45399" type="EtcItem" nameRu="Для просмотра автоматических подсказок" nameEn="Auto Tooltip Check">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+</list>

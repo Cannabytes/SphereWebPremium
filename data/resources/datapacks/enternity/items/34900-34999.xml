@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="34900" type="EtcItem" nameRu="Таинственный Знак" nameEn="Mysterious Mark">
+		<!-- Навевает смутное ощущение силы Тьмы. Можно обменять на Знаки Битвы у Управляющего Олимпиады и Таинственного Лакея в любом поселении. -->
+		<!-- A weak Power of Darkness can be felt. Marks of Battle can be exchanged through the Olympiad Manager Mysterious Butler located in each village. -->
+		<set name="icon" val="icon.etc_coins_black_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34901" type="EtcItem" nameRu="Манифест Альянса" nameEn="Proof of Alliance">
+		<!-- Можно обменять на Знаки Битвы у Торговца Клана Мулии в Руне. -->
+		<!-- Can be exchanged for Marks of Battle with Mulia in the Town of Rune. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34902" type="EtcItem" nameRu="Печать Амбиций" nameEn="Proof of Aspiration">
+		<!-- Можно обменять на Знаки Битвы у Торговца Клана Мулии в Руне. -->
+		<!-- Can be exchanged for Marks of Battle with Mulia in the Town of Rune. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34903" type="EtcItem" nameRu="Таинственная Тень" nameEn="Mysterious Shadow">
+		<!-- Для использования в соревнованиях Фестиваля Хаоса. Делает персонажа невидимым. Скорость -30%. -->
+		<!-- Item that can only be used in the Ceremony of Chaos Arena. Upon use, becomes hidden and decreases Speed by 30%. -->
+		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="15105-1" />
+		<!-- Mysterious Shadow -->
+	</item>
+	<item id="34904" type="EtcItem" nameRu="Таинственная Сила" nameEn="Mysterious Power">
+		<!-- Для использования в соревнованиях Фестиваля Хаоса. С вероятностью 50% наносит противнику смертельный удар, но при этом MP/ CP персонажа снижается до 1, а HP до 1/ 3. -->
+		<!-- Item that can only be used in the Ceremony of Chaos Arena. Your MP and CP are all reduced to 1 but 1/ 3 of your HP is maintained. Has a 50% chance of inflicting a lethal strike on the target. -->
+		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="15106-1" />
+		<!-- Mysterious Power -->
+	</item>
+	<item id="34905" type="EtcItem" nameRu="Особый Питомец Клана (Енот)" nameEn="Clan-exclusive Pet (Raccoon)">
+		<!-- Призывает питомца (Енот), способного ускорить развитие клана. По истечении 72 ч. есть вероятность приобретения дополнительного предмета. Доступно для призыва только персонажам, состоящим в клане 5-го уровня и выше.  -->
+		<!-- Item that summons a nurture-type clan pet (Raccoon). For 72 hours, you acquire 500 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
+		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_maintain" />
+		<set name="etcitem_type" val="pet_collar" />
+		<!-- <set name="commissionItemType" val="PET_SUPPLIES" \> -->
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="7102-1" />
+		<!-- Summon Clan Pet -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34906" type="EtcItem" nameRu="Особый Питомец Клана (Белый Кот)" nameEn="Clan-exclusive Pet (White Cat)">
+		<!-- Призывает питомца (Белый Кот), способного ускорить развитие клана. По истечении 72 ч. есть вероятность приобретения дополнительного предмета. Доступно для призыва только персонажам, состоящим в клане 5-го уровня и выше. -->
+		<!-- Item that summons a nurture-type clan pet (White Cat). For 72 hours, you acquire 500 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
+		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_maintain" />
+		<set name="etcitem_type" val="pet_collar" />
+		<!-- <set name="commissionItemType" val="PET_SUPPLIES" \> -->
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="7102-1" />
+		<!-- Summon Clan Pet -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34907" type="EtcItem" nameRu="Особый Питомец Клана (Пустынный Лис)" nameEn="Clan-exclusive Pet (Desert Fox)">
+		<!-- Призывает питомца (Пустынный Лис), способного ускорить развитие клана. По истечении 72 ч. есть вероятность приобретения дополнительного предмета. Доступно для призыва только персонажам, состоящим в клане 5-го уровня и выше. -->
+		<!-- Item that summons a nurture-type clan pet (Desert Fox). For 72 hours, you acquire 500 Clan Reputation each time it is summoned, and you have a chance of obtaining an additional item. Only PC's who belong to a clan that is above level 5 can summon it. -->
+		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_maintain" />
+		<set name="etcitem_type" val="pet_collar" />
+		<!-- <set name="commissionItemType" val="PET_SUPPLIES" \> -->
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="7102-1" />
+		<!-- Summon Clan Pet -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34908" type="EtcItem" nameRu="Бойцовский Питомец Клана" nameEn="Clan-exclusive Pet for Training">
+		<!-- Призывает питомца воюющего клана. В течение 30 сек. уменьшает HP питомца до 0. Репутация клана и героя +10. Призыв возможен только с PC участника клана. -->
+		<!-- Item that summons a Clan-exclusive Pet for Training. If the pet's HP becomes 0 within 30 seconds, you gain 50 Clan Reputation and 10 Individual Fame. -->
+		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="PET_SUPPLIES" \> -->
+		<set name="default_action" val="skill_maintain" />
+		<set name="etcitem_type" val="pet_collar" />
+		<set name="weight" val="10" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="7102-1" />
+		<!-- Summon Clan Pet -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34909" type="EtcItem" nameRu="Знак Партизан" nameEn="Mark of the Resistance">
+		<!-- Выдается за помощь партизанам. Необходим для входа в зону Битва с Таути. -->
+		<!-- Mark received for helping the Zofan Resistance. It is need to enter the Tauti battle. -->
+		<set name="icon" val="icon.scroll_of_verification_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34910" type="EtcItem" nameRu="Знак Аку" nameEn="Aku's Mark">
+		<!-- Выдается за помощь Аку. Необходим для входа в зону Битва с Таути (экстремальный). -->
+		<!-- Mark received for helping Aku. It is need to enter the Tauti battle (limited). -->
+		<set name="icon" val="icon.scroll_of_verification_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34911" type="EtcItem" nameRu="Полномочия Правителя" nameEn="Ruler's Authority">
+		<!-- Выдается победителю гонок Таинственного Особняка. Макс. HP/ MP/ CP +500, лимит веса +12 000, ускоренное восстановление HP/ MP, Урон в PvP +5%, сопротивление отражению урона +5, дополнительная Ячейка Снаряжения, Защита от 6 стихий +10. Получаемый урон в PvP -6%. Используется только в период чемпионата. -->
+		<!-- Item given to the winner of the tournament held in the Mysterious Mansion. Increases Max HP/ MP/ CP by 500, Weight Gauge by 12000, damage inflicted during PvP by 5%, Damage Reflect Resistance by 5, and Attribute Resistance by 10. Also increases HP/ MP Recovery Bonus Rate and Inventory Slot numbers. Decreases damage received during PvP by 6%. You can use these item skills only during the week of victory. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="34912" type="EtcItem" nameRu="Камень Призыва" nameEn="Summoning Stone">
+		<!-- Нужен для получения статуса Дворянина. Двойной щелчок по предмету позволяет призвать Дух Евы. -->
+		<!-- Summoning Stone that can be used during the Noblesse quest. Double-click on it to summon the Water Spirit Lanya. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="leather" />
+		<set name="item_skill" val="9445-1" />
+		<!-- Summoning Stone -->
+	</item>
+	<item id="34913" type="EtcItem" nameRu="Мешок с Материалами" nameEn="Sack Containing Ingredients">
+		<!-- Содержит 4 вида материалов для производства предмета, очищающего воду Богини Воды Евы. -->
+		<!-- Sack containing ingredients. it contains 4 types of ingredients needed to make a weapon that purifies the water of Eva, the goddess of water. -->
+		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
+		<set name="weight" val="10" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="34914" type="EtcItem" nameRu="Припасы Революционера" nameEn="Transport Goods - Aden">
+		<!-- Сундук, полученный от Командира Революционеров. При двойном щелчке по предмету можно получить Припасы Революционера. -->
+		<!-- Box stolen from the transportation unit. Give it to the revolutionaries to receive a campaign reward. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9465-1" />
+		<!-- Bundle -->
+	</item>
+	<item id="34915" type="EtcItem" nameRu="Доставка твердых ресурсов - Аден" nameEn="Hard Transport Goods - Aden">
+		<!-- Универсальный короб для транспортировки ресурсов. Если доставить его революционерам, можно получить награду.  -->
+		<!-- Box stolen from the transportation cart. Give it to the revolutionaries to receive a campaign reward. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9465-1" />
+		<!-- Bundle -->
+	</item>
+	<item id="34916" type="EtcItem" nameRu="Коробка для доставки" nameEn="Transport Box">
+		<!-- Короб для транспортировки ресурсов расположение войск. Если доставить его революционерам, можно получить награду.  -->
+		<!-- Box stolen from the transportation unit. Give it to the revolutionaries to receive a campaign reward. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="34917" type="EtcItem" nameRu="Улучшенная Коробка для Доставки" nameEn="Greater Transport Box">
+		<!-- Универсальный короб для транспортировки ресурсов. Если доставить его революционерам, можно получить награду.  -->
+		<!-- Box stolen from the transportation cart. Give it to the revolutionaries to receive a campaign reward. -->
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="34918" type="EtcItem" nameRu="Сундук Cокровищ Правителя Адена" nameEn="Treasure Chest of the King of Aden">
+		<!-- Сундук с Сокровищами Правителя Адена. Дважды щелкните, чтобы получить награду. -->
+		<!-- Precious treasure chest being delivered to the King of Aden. Double-click on it to obtain a reward. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9464-1" />
+		<!-- Treasure Chest of the King of Aden -->
+	</item>
+	<item id="34919" type="EtcItem" nameRu="Мешок податей" nameEn="Tax Bundle">
+		<!-- Если доставить его к революционерам, можно получить награду. -->
+		<!-- Deliver to the Revolutionaries to receive a Campaign Reward. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="34920" type="EtcItem" nameRu="Сундук Cокровищ Правителя Руны" nameEn="Treasure Chest of the King of Rune">
+		<!-- Сундук с Сокровищами Правителя Руны. Дважды щелкните, чтобы получить награду. -->
+		<!-- Precious treasure chest being delivered to the King of Rune. Double-click on it to obtain a reward. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9466-1" />
+		<!-- Treasure Chest of the King of Rune -->
+	</item>
+	<item id="34921" type="Weapon" nameRu="Меч Революционера" nameEn="Revolutionary's Sword">
+		<!-- Используется революционерами во время захвата военного транспорта. Доступно применение навыков. Можно использовать только в Зоне Осады. Только для персонажей 40-го уровня и выше. -->
+		<!-- Item used by the revolutionaries during an attack on the transportation unit. It can use powerful skills. Can only be used on the siege battlefield. Can only be used by characters who are above level 40. -->
+		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="sword" />
+		<set name="crystal_type" val="d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="ONE_HAND_SWORD" \> -->
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="19020-1" />
+		<!-- Revolution Eruption -->
+		<set name="item_skill" val="19021-1" />
+		<!-- Revolution Strike -->
+		<set name="item_skill" val="19028-1" />
+		<!-- Revolution Spirit -->
+		<set name="item_skill" val="19019-1" />
+		<!-- Revolution Blade -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="34922" type="Weapon" nameRu="Лук Революционера" nameEn="Revolutionary's Bow">
+		<!-- Используется революционерами во время захвата военного транспорта. Доступно применение навыков. Можно использовать только в Зоне Осады. Только для персонажей 40-го уровня и выше. -->
+		<!-- Item used by the revolutionaries during an attack on the transportation unit. It can use powerful skills. Can only be used on the siege battlefield. Can only be used by characters who are above level 40. -->
+		<set name="icon" val="icon.weapon_gastraphetes_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="bow" />
+		<set name="crystal_type" val="d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="BOW" \> -->
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1520" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="19023-1" />
+		<!-- Revolution Multi-Shot -->
+		<set name="item_skill" val="19024-1" />
+		<!-- Revolution Tornado Shot -->
+		<set name="item_skill" val="19028-1" />
+		<!-- Revolution Spirit -->
+		<set name="item_skill" val="19022-1" />
+		<!-- Revolution Shot -->
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="34923" type="Weapon" nameRu="Посох Революционера" nameEn="Revolutionary's Staff">
+		<!-- Используется революционерами во время захвата военного транспорта. Доступно применение навыков. Можно использовать только в Зоне Осады. Только для персонажей 40-го уровня и выше. -->
+		<!-- Item used by the revolutionaries during an attack on the transportation unit. It can use powerful skills. Can only be used on the siege battlefield. Can only be used by characters who are above level 40. -->
+		<set name="icon" val="icon.weapon_goathead_staff_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" \> -->
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1080" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="19026-1" />
+		<!-- Revolution Blast -->
+		<set name="item_skill" val="19027-1" />
+		<!-- Revolution Destruction -->
+		<set name="item_skill" val="19028-2" />
+		<!-- Revolution Spirit -->
+		<set name="item_skill" val="19025-1" />
+		<!-- Revolution Spike -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="34924" type="Weapon" nameRu="Скипетр Революционера" nameEn="Revolutionary's Wand">
+		<!-- Используется революционерами во время захвата военного транспорта. Доступно применение навыков. Можно использовать только в Зоне Осады. Только для персонажей 40-го уровня и выше. -->
+		<!-- Item used by the revolutionaries during an attack on the transportation unit. It can use powerful skills. Can only be used on the siege battlefield. Can only be used by characters who are above level 40. -->
+		<set name="icon" val="icon.weapon_life_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" \> -->
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="1080" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="item_skill" val="19029-1" />
+		<!-- Revolution Self CP Recovery -->
+		<set name="item_skill" val="19030-1" />
+		<!-- Revolution CP Recovery -->
+		<set name="item_skill" val="19031-1" />
+		<!-- Revolution Party CP Recovery -->
+		<set name="item_skill" val="19028-2" />
+		<!-- Revolution Spirit -->
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1" />
+			<set order="0x08" stat="mAtk" val="1" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="34925" type="Armor" nameRu="Плащ Света" nameEn="Cloak of Light">
+		<!-- Плащ света и почета. СИЛ, ЛВК +2, ВЫН +2, ИНТ +2, МДР +2, ДУХ +2, УДЧ +2, ХАР +2. Получаемый урон -5%. Дополнительно позволяет использовать Свиток Телепорта: Замок. Нельзя использовать в хаотическом состоянии. Доступно персонажу с рангом элитный член альянса и выше. -->
+		<!-- Cloak that symbolizes glory and light. STR/ MEN/ DEX/ WIT/ INT/ CON +2, and Damage Received -5%. Can use Escape:Castle skill. Cannot be used while in a chaotic state. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="item_skill" val="19041-1" />
+		<!-- King's Call -->
+		<set name="item_skill" val="19039-1" />
+		<!-- Cloak of Light -->
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="80" />
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34926" type="Armor" nameRu="Плащ Тьмы" nameEn="Cloak of Darkness">
+		<!-- Плащ тьмы. СИЛ +2, ЛВК +2, ВЫН +2, ИНТ +2, МДР +2, ДУХ +2, УДЧ +2, ХАР +2. Получаемый урон -5%. Дополнительно позволяет использовать Свиток Телепорта: Замок. Доступно персонажу с рангом элитный член альянса и выше. -->
+		<!-- Cloak that symbolizes avarice and darkness. STR/ MEN/ DEX/ WIT/ INT/ CON +2, and Damage Received -5%. Can use Escape: Castle skill. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="item_skill" val="19041-1" />
+		<!-- King's Call -->
+		<set name="item_skill" val="19040-1" />
+		<!-- Cloak of Darkness -->
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="80" />
+			<add order="0x10" stat="mDef" val="40" />
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34927" type="EtcItem" nameRu="Синий Сундук Хранителя Мира" nameEn="Dimension Keeper's Blue Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Blue-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9417-1" />
+		<!-- Dimension Keeper's Blue Box -->
+	</item>
+	<item id="34928" type="EtcItem" nameRu="Красный Сундук Хранителя Мира" nameEn="Dimension Keeper's Red Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Red-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9418-1" />
+		<!-- Dimension Keeper's Red Box -->
+	</item>
+	<item id="34929" type="EtcItem" nameRu="Золотистый Сундук Хранителя Мира" nameEn="Dimension Keeper's Golden Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Gold-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9419-1" />
+		<!-- Dimension Keeper's Golden Box -->
+	</item>
+	<item id="34930" type="EtcItem" nameRu="Синий Сундук Странника Мира" nameEn="Dimension Traveler's Blue Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Blue-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9420-1" />
+		<!-- Dimension Traveler's Blue Box -->
+	</item>
+	<item id="34931" type="EtcItem" nameRu="Красный Сундук Странника Мира" nameEn="Dimension Traveler's Red Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Red-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9421-1" />
+		<!-- Dimension Traveler's Red Box -->
+	</item>
+	<item id="34932" type="EtcItem" nameRu="Золотистый Сундук Странника Мира" nameEn="Dimension Traveler's Golden Box">
+		<!-- Это награда за победу над Демонами Измерения в Лабиринте Картии. Дважды щелкните, чтобы получить награду. -->
+		<!-- Gold-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9422-1" />
+		<!-- Dimension Traveler's Golden Box -->
+	</item>
+	<item id="34933" type="EtcItem" nameRu="Подарок Кранкена" nameEn="Kranken's Gift">
+		<!-- Подарок, наполненный Духом Кракена. Можно получить Свиток: Модифицировать Оружие (R) или Свиток: Модифицировать Доспех (R). -->
+		<!-- Gift containing Kranken's heart. Open to acquire a Scroll: Enchant Weapon (R-grade) or Scroll: Enchant Armor (R-grade). -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9423-1" />
+		<!-- Campaign Reward Pouch -->
+	</item>
+	<item id="34934" type="EtcItem" nameRu="Подарок Фофра" nameEn="Pobre's Gift">
+		<!-- Подарок, наполненный Духом Фофра. Можно получить Свиток: Модифицировать Оружие (R) или Свиток: Модифицировать Доспехи (R). -->
+		<!-- Gift containing Pobre's heart. Open to acquire a Scroll: Enchant Weapon (R-grade) or Scroll: Enchant Armor (R-grade). -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9424-1" />
+		<!-- Campaign Reward Pouch -->
+	</item>
+	<item id="34935" type="Armor" nameRu="Браслет Призыва Агатиона: Чан Хе Чжин" nameEn="Star Agathion - Heejin Jang">
+		<!-- ВЫН +3, ДУХ +3, лимит веса +10 000, Макс. HP/ MP/ CP +300, Маг. Защ. +5%, Макс. HP +5%, сопротивление всем стихиям +10. Активное умение: Благ. Телепорт. Использовать в течение 7 д. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="9407-1" />
+		<!-- Release Agathion's Seal - Jang Heejin -->
+		<set name="item_skill" val="9412-1" />
+		<!-- Agathion Cute Trick - Jang Heejin -->
+		<set name="item_skill" val="9530-1" />
+		<!-- Jang Heejin Agathion's Effect -->
+		<set name="item_skill" val="9531-1" />
+		<!-- Jang Heejin Agathion's Blessed Escape -->
+		<set name="unequip_skill" val="3267-1" />
+		<!-- Seal Agathion -->
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34936" type="Armor" nameRu="Браслет Призыва Агатиона: Чан Хек" nameEn="Star Agathion - Hyuk Jang">
+		<!-- ВЫН +3, ДУХ +3, лимит веса +10 000, Макс. HP/ MP/ CP +300, Физ. Атк. +5%, сопротивление всем стихиям +10. Активное умение: Благ. Телепорт. Использовать в течение 7 д. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="9408-1" />
+		<!-- Release Agathion's Seal - Jang Hyuk -->
+		<set name="item_skill" val="9413-1" />
+		<!-- Agathion Cute Trick - Jang Hyuk -->
+		<set name="item_skill" val="9532-1" />
+		<!-- Jang Hyuk Agathion's Effect -->
+		<set name="item_skill" val="9533-1" />
+		<!-- Jang Hyuk Agathion's Blessed Escape -->
+		<set name="unequip_skill" val="3267-1" />
+		<!-- Seal Agathion -->
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34937" type="Armor" nameRu="Браслет Призыва Агатиона: Ким Су Ро" nameEn="Star Agathion - Sooro Kim">
+		<!-- ВЫН +3, ДУХ +3, лимит веса +10 000, Макс. HP/ MP/ CP +300, Физ. Защ. +5%, Макс. HP +5%, сопротивление всем стихиям +10. Активное умение: Благ. Телепорт. Использовать в течение 7 д. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="9409-1" />
+		<!-- Release Agathion's Seal - Kim Sooro -->
+		<set name="item_skill" val="9414-1" />
+		<!-- Agathion Cute Trick - Kim Sooro -->
+		<set name="item_skill" val="9534-1" />
+		<!-- Kim Sooro Agathion's Effect -->
+		<set name="item_skill" val="9535-1" />
+		<!-- Kim Sooro Agathion's Blessed Escape -->
+		<set name="unequip_skill" val="3267-1" />
+		<!-- Seal Agathion -->
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34938" type="Armor" nameRu="Браслет Призыва Агатиона: Пак Чже Бом" nameEn="Star Agathion - Jaebum Park">
+		<!-- ВЫН +3, ДУХ +3, лимит веса +10 000, Макс. HP/ MP/ CP +300, Маг. Атк. +5%, сопротивление всем стихиям +10. Активное умение: Благ. Телепорт. Использовать в течение 7 д. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="9410-1" />
+		<!-- Release Agathion's Seal - Park Jaebum -->
+		<set name="item_skill" val="9415-1" />
+		<!-- Agathion Cute Trick - Park Jaebum -->
+		<set name="item_skill" val="9536-1" />
+		<!-- Park Jaebum Agathion's Effect -->
+		<set name="item_skill" val="9537-1" />
+		<!-- Park Jaebum Agathion's Blessed Escape -->
+		<set name="unequip_skill" val="3267-1" />
+		<!-- Seal Agathion -->
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34939" type="Armor" nameRu="Браслет Призыва Агатиона: Ким Син Ен" nameEn="Star Agathion - Shin-young Kim">
+		<!-- ВЫН +3, ДУХ +3, лимит веса +10 000, Макс. HP/ MP/ CP +300, сопротивление всем стихиям +10. Сокращает время перезарядки умения на и расход MP для умений на 3%. Активное умение: Благ. Телепорт. Использовать в течение 7 д. -->
+		<!-- 7-day. Increases CON +3, MEN +3, Weight Gauge by 10000, Max HP/ MP/ CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. Usable Skill: Blessed Escape. -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="9411-1" />
+		<!-- Release Agathion's Seal - Kim Shinyoung -->
+		<set name="item_skill" val="9416-1" />
+		<!-- Agathion Cute Trick - Kim Shinyoung -->
+		<set name="item_skill" val="9538-1" />
+		<!-- Kim Shinyoung Agathion's Effect -->
+		<set name="item_skill" val="9539-1" />
+		<!-- Kim Shinyoung Agathion's Blessed Escape -->
+		<set name="unequip_skill" val="3267-1" />
+		<!-- Seal Agathion -->
+		<for>
+			<add order="0x40" stat="fireRes" val="10" />
+			<add order="0x40" stat="waterRes" val="10" />
+			<add order="0x40" stat="windRes" val="10" />
+			<add order="0x40" stat="earthRes" val="10" />
+			<add order="0x40" stat="holyRes" val="10" />
+			<add order="0x40" stat="darkRes" val="10" />
+		</for>
+	</item>
+	<item id="34940" type="EtcItem" nameRu="Свиток: Модифицировать Головной Убор" nameEn="Scroll: Enchant Hair Accessory">
+		<!-- Маг. Защ. головного убора +2, а начиная с +4 Маг. Защ. значительно увеличивается. Безопасная модификация до +3. -->
+		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="1" />
+		<!-- <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" \> -->
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9234-1" />
+		<!-- Scroll: Enchant Hair Accessory -->
+	</item>
+	<item id="34941" type="EtcItem" nameRu="Камень Жизни для Головных Уборов" nameEn="Life Stone: Hair Accessory">
+		<!-- Камень Жизни для Головных Уборов. -->
+		<!-- Life Stone for Hair Accessories. -->
+		<set name="icon" val="icon.life_dust_hairacc_general" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="34942" type="EtcItem" nameRu="Коробка с Краской Гигантов Ур. 2" nameEn="Lv. 2 Giant Dye Pack">
+		<!-- Содержит одну из Красок Гигантов Ур. 2 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 2 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9425-1" />
+		<!-- Lv. 2 Giant Dye Pack -->
+	</item>
+	<item id="34943" type="EtcItem" nameRu="Коробка с Легендарной Краской Ур. 2" nameEn="Lv. 2 Legendary Dye Pack">
+		<!-- Содержит одну из Легендарных Красок Гигантов Ур. 2 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 2 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9426-1" />
+		<!-- Lv. 2 Legendary Dye Pack -->
+	</item>
+	<item id="34944" type="EtcItem" nameRu="Коробка с Древней Краской Ур. 2" nameEn="Lv. 2 Ancient Dye Pack">
+		<!-- Содержит одну из Древних Красок Гигантов Ур. 2 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 2 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9427-1" />
+		<!-- Lv. 2 Ancient Dye Pack -->
+	</item>
+	<item id="34945" type="EtcItem" nameRu="Коробка с Краской Гигантов Ур. 3" nameEn="Lv. 3 Giant Dye Pack">
+		<!-- Содержит одну из Красок Гигантов Ур. 3 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 3 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9428-1" />
+		<!-- Lv. 3 Giant Dye Pack -->
+	</item>
+	<item id="34946" type="EtcItem" nameRu="Коробка с Легендарной Краской Ур. 3" nameEn="Lv. 3 Legendary Dye Pack">
+		<!-- Содержит одну из Легендарных Красок Гигантов Ур. 3 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 3 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9429-1" />
+		<!-- Lv. 3 Legendary Dye Pack -->
+	</item>
+	<item id="34947" type="EtcItem" nameRu="Коробка с Древней Краской Ур. 3" nameEn="Lv. 3 Ancient Dye Pack">
+		<!-- Содержит одну из Древних Красок Гигантов Ур. 3 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 3 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9430-1" />
+		<!-- Lv. 3 Ancient Dye Pack -->
+	</item>
+	<item id="34948" type="EtcItem" nameRu="Сундук со Свитком Телепорта: Деревня" nameEn="Scroll of Escape Pack: Village">
+		<!-- Содержит Свиток Телепорта: Деревня 1 шт. -->
+		<!-- When opened, can acquire 1 Scroll of Escape to a random village. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9437-1" />
+		<!-- Scroll of Escape Pack: Village -->
+	</item>
+	<item id="34949" type="EtcItem" nameRu="Подарок Коллекционера Букв" nameEn="Letter Collector's Gift">
+		<!-- Подарок Коллекционера Букв Скор. Атк. +10%, Скор. Маг. +10%, Скорость +10, Макс. HP/ MP +10%. Изменяет облик доспехов и оружия. Время действия: 1 ч. Время перезарядки: 30 мин. -->
+		<!-- When Letter Collector's Gift is used, it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, and Max HP and Max MP by 10% for 2 hours. The appearance of the equipped weapon and armor change to a nostalgic style. Cooldown is 30 min. -->
+		<set name="icon" val="icon.shield_bread_i02" />
+		<set name="weight" val="5" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="9438-1" />
+		<!-- Letter Collector's Gift (9th Anniversary) -->
+	</item>
+	<item id="34950" type="EtcItem" nameRu="Коробка с Краской Гигантов Ур. 4" nameEn="Lv. 4 Giant Dye Pack">
+		<!-- Содержит одну из Красок Гигантов Ур. 4 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 4 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9431-1" />
+		<!-- Lv. 4 Giant Dye Pack -->
+	</item>
+	<item id="34951" type="EtcItem" nameRu="Коробка с Легендарной Краской Ур. 4" nameEn="Lv. 4 Legendary Dye Pack">
+		<!-- Содержит одну из Легендарных Красок Гигантов Ур. 4 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 4 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9432-1" />
+		<!-- Lv. 4 Legendary Dye Pack -->
+	</item>
+	<item id="34952" type="EtcItem" nameRu="Коробка с Древней Краской Ур. 4" nameEn="Lv. 4 Ancient Dye Pack">
+		<!-- Содержит одну из Древних Красок Гигантов Ур. 4 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 4 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9433-1" />
+		<!-- Lv. 4 Ancient Dye Pack -->
+	</item>
+	<item id="34953" type="EtcItem" nameRu="Коробка с Краской Гигантов Ур. 5" nameEn="Lv. 5 Giant Dye Pack">
+		<!-- Содержит одну из Красок Гигантов Ур. 5 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 5 Giant Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9434-1" />
+		<!-- Lv. 5 Giant Dye Pack -->
+	</item>
+	<item id="34954" type="EtcItem" nameRu="Коробка с Легендарной Краской Ур. 5" nameEn="Lv. 5 Legendary Dye Pack">
+		<!-- Содержит одну из Легендарных Красок Гигантов Ур. 5 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9435-1" />
+		<!-- Lv. 5 Legendary Dye Pack -->
+	</item>
+	<item id="34955" type="EtcItem" nameRu="Коробка с Древней Краской Ур. 5" nameEn="Lv. 5 Ancient Dye Pack">
+		<!-- Содержит одну из Древних Красок Гигантов Ур. 5 - СИЛ, ЛВК, ВЫН, ИНТ, МДР, ДУХ. -->
+		<!-- When opened, you can acquire 1 of the following Lv. 5 Ancient Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="capsule" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9436-1" />
+		<!-- Lv. 5 Ancient Dye Pack -->
+	</item>
+	<item id="34956" type="EtcItem" nameRu="День L2 - M" nameEn="Event Letter - M">
+		<!-- Предмет для ивента "День L2". Составьте определенное слово, отдайте его Коллекционеру Букв по имени Кот-Ангел и получите подарок! -->
+		<!-- Item for the Lineage II 8th Anniversary event. Combine with other letters to create a special word and bring it to Angel Cat to receive a great gift! -->
+		<set name="icon" val="icon.etc_alphabet_m_i00" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34957" type="EtcItem" nameRu="Документ Ковальдира" nameEn="Kbaldir's Letter">
+		<!-- Это послание отправлено Ковальдиром из Базы Альянса Кецеруса для Шизраку, заключенного в семенах Адского Огня. Для передачи Шизраку. -->
+		<!-- Letter sent by Kbaldir at the Keucereus Alliance Base to the Seed of Hellfire. Bring it to Sizrak in the Seed of Hellfire. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34958" type="EtcItem" nameRu="Проклятая Петра" nameEn="Unstable Petra">
+		<!-- Энергия жизни Софа, содержащая Энергию Огня. Отличается нестабильным состоянием. Для передачи Аку. -->
+		<!-- Life energy of the Zofans that contain energy of fire. But it is unstable. Bring it to Aku. -->
+		<set name="icon" val="icon.etc_torch_on_i09" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34959" type="EtcItem" nameRu="Петра" nameEn="Petra">
+		<!-- Энергия жизни Софа, содержащая Энергию Огня. Для передачи Аку. -->
+		<!-- Life energy of the Zofans that contain energy of fire. Bring it to Aku. -->
+		<set name="icon" val="icon.etc_torch_on_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34960" type="EtcItem" nameRu="Фрагмент Таути" nameEn="Tauti's Shard">
+		<!-- Фрагмент Таути. Этот предмет нужно передать Фергюсону. -->
+		<!-- Tauti's small shard. Bring it to Fergason. -->
+		<set name="icon" val="icon.piece_of_emery_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34961" type="EtcItem" nameRu="Семена Помощи" nameEn="Helping Seed">
+		<!-- Семена Помощи. Двойным кликом посадить Дерево Помощи в Осажденном районе. -->
+		<!-- Helping Herb. Double-click on it in a siege area to plant a Tree of Helping. -->
+		<set name="icon" val="icon.etc_help_seed_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="9444-1" />
+		<!-- Helping Seed -->
+	</item>
+	<item id="34962" type="EtcItem" nameRu="Следы от Порошка" nameEn="Ashes of Remnants">
+		<!-- Можно получить после посадки Дерева Помощи. -->
+		<!-- Ashes of Remnants. If you plant a Tree of Helping in a siege battle area, you can obtain Ashes of Remnants. -->
+		<set name="icon" val="icon.etc_powder_orange_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34963" type="EtcItem" nameRu="Таинственные Семена" nameEn="Mysterious Seed">
+		<!-- Семена неизвестного растения. Необходимы для того, чтобы расцвели цветы. -->
+		<!-- Mysterious plant seed that is need to make the flower bloom. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34964" type="EtcItem" nameRu="Белоснежник" nameEn="White Chrysanthemum">
+		<!-- Белый цветок. Название берет свое начало из распространенной легенды о чистой душе - белой, как снег, получившей божественное спасение.  -->
+		<!-- White chrysanthemum. Legend says that this flower blooms like a field of white snow when a pure soul receives salvation from the gods. -->
+		<set name="icon" val="icon.etc_flower_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34965" type="EtcItem" nameRu="Лилейник" nameEn="Daylily">
+		<!-- Желтый цветок, именуемый Лилейник. Считается, что эти цветы помогают избавляться от печалей и забот. -->
+		<!-- Yellow flower called a "Daylily." It symbolizes the alleviation of sorrow and grief. -->
+		<set name="icon" val="icon.etc_flower_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34966" type="EtcItem" nameRu="Пион" nameEn="Peony">
+		<!-- Красный Цветок Пиона. Эти цветы называют символом богатства и благородства. -->
+		<!-- Red flower called a "Peony." It once represented wealth and honor. -->
+		<set name="icon" val="icon.etc_flower_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34967" type="EtcItem" nameRu="Петуния" nameEn="Petunia">
+		<!-- Розовый Цветок Петуньи. При взгляде на него в душе возникает чувство умиротворения. -->
+		<!-- Pink flower called a "Petunia." It symbolizes a calm heart. -->
+		<set name="icon" val="icon.etc_flower_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34968" type="EtcItem" nameRu="Фиалка" nameEn="Pansy">
+		<!-- Пурпурный Цветок Фиалки. Цветок символизирует мысли и заботу о дорогом человеке.  -->
+		<!-- Purple flower called a "Pansy." It means, "Think of me." -->
+		<set name="icon" val="icon.etc_flower_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34969" type="EtcItem" nameRu="Ирис" nameEn="Iris">
+		<!-- Голубой Цветок Ириса. Имеет значение ожидания хороших известий.  -->
+		<!-- Blue flower called an "Iris". It symbolizes the bringing of good news. -->
+		<set name="icon" val="icon.etc_flower_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34970" type="EtcItem" nameRu="Куон" nameEn="Kuon">
+		<!-- Черный Цветок Куона. Из-за черного цвета его значение ошибочно толкуют как знак смерти, но на самом деле он символизирует память об умерших. -->
+		<!-- Black flower called a "Kuon." It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead. -->
+		<set name="icon" val="icon.etc_flower_i06" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34971" type="EtcItem" nameRu="Мясо Мертвеца" nameEn="Deadman's Flesh">
+		<!-- Кусок Мяса Мертвеца. Выдается за победу над нежитью в Крепости Гильотина. Для передачи Смотрителю Крепости Гильотина Родерику. -->
+		<!-- Chunk of dead flesh obtained after defeating the undead monsters in the Guillotine Fortress. Collect them and bring them to Warden Roderik of the Guillotine Fortress. -->
+		<set name="icon" val="icon.etc_bodypart_liver_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34972" type="EtcItem" nameRu="Приказ Харлана" nameEn="Harlan's Orders">
+		<!-- Приказ для Смотрителя Крепости Гильотина Эндриго, отправленное стражем Диона Харланом. Для детального осмотра щелкнуть два раза по предмету.  -->
+		<!-- Orders sent from Guard Harlan in the Town of Dion to Watchman Endrigo of the Guillotine Fortress. Double-click on it for more information. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="show_html" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="34973" type="EtcItem" nameRu="Отчет Эндриго" nameEn="Endrigo's Report">
+		<!-- Отчет для Смотрителя Крепости Гильотина Родерику, отправленное Смотрителем Крепости Гильотина Эндриго. Для детального осмотра щелкнуть два раза по предмету.  -->
+		<!-- Investigative document that Watchman Endrigo of the Guillotine Fortress asks to be delivered to his comrade Warden Roderik. Double-click on it for more information. -->
+		<set name="icon" val="icon.mercenary_certification_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="show_html" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="34974" type="EtcItem" nameRu="Стебель Мандрагоры" nameEn="Mandragora Stem">
+		<!-- Выдается за уничтожение Мандрагор в Крепости Гильотина. Для передачи Темному Эльфу Дадфене из Крепости Гильотина.  -->
+		<!-- Mandragora Stem obtained after defeating the Mandragora of Joy and Sorrow in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34975" type="EtcItem" nameRu="Корень Мандрагоры" nameEn="Mandragora Root">
+		<!-- Выдается за уничтожение Мандрагор в Крепости Гильотина. Для передачи Темному Эльфу Дадфене из Крепости Гильотина.  -->
+		<!-- Mandragora Root obtained after defeating the Mandragora of Prayer in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
+		<set name="icon" val="icon.etc_ginseng_gray_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34976" type="EtcItem" nameRu="Треснувшая Петра" nameEn="Disabled Petra">
+		<!-- Выдается за охоту в Семени Адского Пламени. Соберите ее и отнесите Сидзураку в Семени Адского Пламени. -->
+		<!-- Disabled Petra obtained through hunting in the Seed of Hellfire. Take it to Sizrak in the area. -->
+		<set name="icon" val="icon.etc_torch_off_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34977" type="EtcItem" nameRu="Огненное Колесо" nameEn="Saw-toothed Wheel of Hellfire">
+		<!-- Собирается в локации Семена Адского Пламени. В Семенах Адского Пламени заключена сила. Можно обменять на полезные товары у Контрабандиста Кокрана из Базы Альянса Кецеруса. -->
+		<!-- Item collected in the Seed of Hellfire. Contains energy of the Seed of Hellfire. If you take them to Special Product Broker Kirklan at the Kucereus clan outpost, you can exchange them for useful items. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34978" type="EtcItem" nameRu="Свиток Телепорта: Горячие Источники" nameEn="Scroll of Escape: Hot Springs">
+		<!-- Предмет, используемый в задании на испытание Духа. Для выполнения задания можно переместиться в специальный район Горячих Источников. Нельзя получить повторно. -->
+		<!-- Scroll of Escape to the Hot Springs area. Can only be used in the Soul Testing quest. Can move to the special hot springs area for the quest mission. Cannot be received again. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9446-1" />
+		<!-- Scroll of Escape: Hot Springs -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34979" type="EtcItem" nameRu="Свиток Телепорта: Кузница Богов" nameEn="Scroll of Escape: Forge of the Gods">
+		<!-- Предмет, используемый в задании на испытание Духа. Для выполнения задания можно переместиться в специальный район Кузницы Богов. Нельзя получить повторно. -->
+		<!-- Scroll of Escape to the Forge of the Gods. Can only be used in the Soul Testing quest. Can move to the special Forge of the Gods area for the quest mission. Cannot be received again. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9447-1" />
+		<!-- Scroll of Escape: Forge of the Gods -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34980" type="EtcItem" nameRu="Свиток Телепорта: Кристальный Остров" nameEn="Scroll of Escape: Isle of Prayer">
+		<!-- Предмет, используемый в задании на испытание Духа. Для выполнения задания можно переместиться в специальный район Кристального Острова. Нельзя получить повторно. -->
+		<!-- Scroll of Escape to the Isle of Prayer. Can only be used in the Soul Testing quest. Can move to the special Isle of Prayer area for the quest mission. Cannot be received again. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9448-1" />
+		<!-- Scroll of Escape: Isle of Prayer -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34981" type="EtcItem" nameRu="Свиток Телепорта: Замок Аден (осада)" nameEn="Scroll of Escape: Aden Castle (Siege)">
+		<!-- Предмет, используемый в задании на испытание Духа. Для выполнения задания можно переместиться в специальный район осады Замка Аден. Нельзя получить повторно. -->
+		<!-- Scroll of Escape to the Aden Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Aden Castle siege area for the quest mission. Cannot be received again. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9449-1" />
+		<!-- Scroll of Escape: Aden Battlefield -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34982" type="EtcItem" nameRu="Свиток Телепорта: Замок Руна (осада)" nameEn="Scroll of Escape: Rune Castle (Siege)">
+		<!-- Предмет, используемый в задании на испытание Духа. Для выполнения задания можно переместиться в специальный район осады Замка Руна. Нельзя получить повторно. -->
+		<!-- Scroll of Escape to the Rune Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Rune Castle siege area for the quest mission. Cannot be received again. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="9450-1" />
+		<!-- Scroll of Escape: Rune Battlefield -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="34983" type="EtcItem" nameRu="Получение права на дворянство" nameEn="Acquire Noblesse Privileges">
+		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34984" type="Armor" nameRu="Талисман Бессмертия" nameEn="Talisman - Infinity">
+		<!-- Макс. HP/ MP/ CP +100, Физ./ Маг. Точность +1, Физ./ Маг. Уклонение +1, эффект Гнева Вампира +2%, Скор. Атк./ Скор. Маг. +10. -->
+		<!-- Increases Max HP/ MP/ CP by 100, P. Accuracy and M. Accuracy by 1, P. Evasion and M. Evasion by 1 Vampiric Rage Effect by 2%, and Atk. Spd. and Casting Spd. by 10. -->
+		<set name="icon" val="icon.accessory_immortal_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13390-1" />
+		<!-- Unequip Talisman - Infinity -->
+		<set name="equip_skill" val="13384-1" />
+		<!-- Equip Talisman - Infinity -->
+		<set name="item_skill" val="8864-1" />
+		<!-- Talisman - Infinity -->
+	</item>
+	<item id="34985" type="Armor" nameRu="Талисман Разрушения" nameEn="Talisman - Destruction">
+		<!-- Макс. HP/ MP/ CP +100, Физ./ Маг. Точность +2, Физ./ Маг. Уклонение +2, эффект Гнева Вампира +2%, Скор. Атк./ Скор. Маг. +10, шанс Физ. Крит. Атк. +30, шанс Маг. Крит. Атк. +10. -->
+		<!-- Increases Max HP/ MP/ CP by 100, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 2%, Atk. Spd. and Casting Spd. by 10, P. Critical Rate by 30, and M. Critical Rate by 10. -->
+		<set name="icon" val="icon.accessory_destruction_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13391-1" />
+		<!-- Unequip Talisman - Destruction -->
+		<set name="equip_skill" val="13385-1" />
+		<!-- Equip Talisman - Destruction -->
+		<set name="item_skill" val="8864-2" />
+		<!-- Talisman - Destruction -->
+	</item>
+	<item id="34986" type="Armor" nameRu="Талисман Уничтожения" nameEn="Talisman - Annihilation">
+		<!-- Макс. HP/ MP/ CP +300, Физ./ Маг. Точность +2, Физ./ Маг. Уклонение +2, эффект Гнева Вампира +3%, Скор. Атк./ Скор. Маг. +20, шанс Физ. Крит. Атк. +30, шанс Маг. Крит. Атк. +10, Физ. Атк. +103, Маг. Атк. +156. -->
+		<!-- Increases Max HP/ MP/ CP by 300, P. Accuracy and M. Accuracy by 2, P. Evasion and M. Evasion by 2, Vampiric Rage Effect by 3%, Atk. Spd. and Casting Spd. by 20, P. Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
+		<set name="icon" val="icon.accessory_extermination_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13392-1" />
+		<!-- Unequip Talisman - Annihilation -->
+		<set name="equip_skill" val="13386-1" />
+		<!-- Equip Talisman - Annihilation -->
+		<set name="item_skill" val="8864-3" />
+		<!-- Talisman - Annihilation -->
+	</item>
+	<item id="34987" type="Armor" nameRu="Талисман Огня" nameEn="Talisman - Hellfire">
+		<!-- Макс. HP/ MP/ CP +400, Физ./ Маг. Точность +2, Физ./ Маг. Уклонение +2, эффект Гнева Вампира +3%, Скор. Атк./ Скор. Маг. +30, шанс Физ. Крит. Атк. +30, шанс Маг. Крит. Атк. +10, Физ. Атк. +103, Маг. Атк. +156, мощность умений +1%, сопротивление отражению урона +10%, Физ./ Маг. Защ. +20. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 400, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 30, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, M. Atk. by 156, Skill Power by 1%, Damage Reflect Resistance by 10, and P. and M. Def. by 20. -->
+		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13393-1" />
+		<!-- Unequip Talisman - Hellfire -->
+		<set name="equip_skill" val="13387-1" />
+		<!-- Equip Talisman - Hellfire -->
+		<set name="item_skill" val="8864-4" />
+		<!-- Talisman - Hellfire -->
+	</item>
+	<item id="34988" type="Armor" nameRu="Талисман Желания" nameEn="Talisman - Desire">
+		<!-- Макс. HP/ MP/ CP +500, Физ./ Маг. Точность +2, Физ./ Маг. Уклонение +2, эффект Гнева Вампира +3%, Скор. Атк./ Скор. Маг. +40, шанс Физ. Крит. Атк. +30, шанс Маг. Крит. Атк. +10, Физ. Атк. +203, Маг. Атк. +256, мощность умений +2%, сопротивление отражению урона +20%, Физ./ Маг. Защ. +40. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 500, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 40, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 203, M. Atk. by 256, Skill Power by 2%, Damage Reflect Resistance by 20, and P. and M. Def. by 40. MP consumption decreases by 1%. -->
+		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13394-1" />
+		<!-- Unequip Talisman - Desire -->
+		<set name="equip_skill" val="13388-1" />
+		<!-- Equip Talisman - Desire -->
+		<set name="item_skill" val="8864-5" />
+		<!-- Talisman - Desire -->
+	</item>
+	<item id="34989" type="Armor" nameRu="Талисман Вожделения" nameEn="Talisman - Longing">
+		<!-- Макс. HP/ MP/ CP +600, Физ./ Маг. Точность +2, Физ./ Маг. Уклонение +2, эффект Гнева Вампира +3%, Скор. Атк./ Скор. Маг. +50, шанс Физ. Крит. Атк. +30, шанс Маг. Крит. Атк. +10, Физ. Атк. +303, Маг. Атк. +356, мощность умений +4%, сопротивление отражению урона +30%, Физ./ Маг. Защ. +60. СИЛ/ ИНТ/ ВЫН/ ДУХ/ ЛВК/ МДР +2. Расход MP для умений -3%. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, Damage Reflect Resistance by 30, and P. M. Def. by 60, and STR/ INT/ CON/ MEN/ DEX/ WIT by 2. MP consumption decreases by 3%. -->
+		<set name="icon" val="icon.accessory_longing_talisman_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="unequip_skill" val="13395-1" />
+		<!-- Unequip Talisman - Longing -->
+		<set name="equip_skill" val="13389-1" />
+		<!-- Equip Talisman - Longing -->
+		<set name="item_skill" val="8864-6" />
+		<!-- Talisman - Longing -->
+	</item>
+	<item id="34990" type="EtcItem" nameRu="Испорченный Фрагмент Оружия" nameEn="Corroded Weapon Fragment">
+		<!-- Использовать нельзя. Продайте в магазин или обменяйте на новые материалы у Члена Союза Восстановления Адена. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<set name="icon" val="icon.etc_r_weapon_piece_i01" />
+		<set name="price" val="2500" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="etcitem_type" val="material" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="34991" type="EtcItem" nameRu="Испорченный Фрагмент Доспеха" nameEn="Corroded Armor Fragment">
+		<!-- Использовать нельзя. Продайте в магазин или обменяйте на новые материалы у Члена Союза Восстановления Адена. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<set name="icon" val="icon.etc_r_armor_piece_i01" />
+		<set name="price" val="1000" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="etcitem_type" val="material" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="34992" type="EtcItem" nameRu="Испорченный Самоцвет для Аксессуара" nameEn="Corroded Accessory Gem">
+		<!-- Использовать нельзя. Продайте в магазин или обменяйте на новые материалы у Члена Союза Восстановления Адена. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+		<set name="icon" val="icon.etc_r_acc_piece_i01" />
+		<set name="price" val="1000" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="etcitem_type" val="material" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="34993" type="EtcItem" nameRu="Улучшенный Кокс" nameEn="Greater Cokes">
+		<!-- Используется в качестве материала для изготовления предметов Ранга A и B. -->
+		<!-- Used as an ingredient to make A-grade or S-grade items. -->
+		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
+		<set name="price" val="22500" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="etcitem_type" val="material" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="34994" type="EtcItem" nameRu="Самоцветы" nameEn="Gemstone">
+		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="price" val="100" />
+		<set name="is_oly_restricted" val="true" />
+		<!-- <set name="commissionItemType" val="GEMSTONE" \> -->
+		<set name="etcitem_type" val="material" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="34995" type="EtcItem" nameRu="Расписка об Обмене Головного Убора" nameEn="Hair Accessory Exchange Certificate">
+		<!-- При помощи Члена Союза Восстановления Адена/ Лидера Альянса можно обменять на: Ушки Кролика, Ушки Енота, Кошачьи Ушки, Модную Шляпу, Нимб Ангела, Диадема Демона, Глазную Повязку Пирата, Глазную Повязку Бандита, Глазную Повязку, Праздничный Колпак, Элегантный Обруч Ангела, Элегантные Рога Черта. -->
+		<!-- Certificate that can be exchanged with the Aden Reconstruction Society Member or Leader for Rabbit Ears, Raccoon Ears, Cat Ears, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, or Refined Devil Horns. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="34996" type="Armor" nameRu="Плащ Ослепительного Света" nameEn="Cloak of Radiant Light">
+		<!-- Плащ, символизирующий славу и свет. СИЛ +4, ЛВК +4, ВЫН +4, ИНТ +4, МДР +4, ДУХ +4, УДЧ +4, ХАР +4. Получаемый урон -15%. Дополнительно позволяет использовать Благословенный Свиток Телепорта: Замок. Может быть экипирован только владельцем замка. Нельзя использовать в хаотическом состоянии. -->
+		<!-- Cloak that symbolizes glory and light. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +3, and Damage Received -15%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="CLOAK" \> -->
+		<set name="is_dropable" val="false" />
+		<set name="item_skill" val="19042-1" />
+		<!-- King's Summon -->
+		<set name="item_skill" val="19037-1" />
+		<!-- Cloak of Radiant Light -->
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="100" />
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x40" stat="fireRes" val="15" />
+			<add order="0x40" stat="waterRes" val="15" />
+			<add order="0x40" stat="windRes" val="15" />
+			<add order="0x40" stat="earthRes" val="15" />
+			<add order="0x40" stat="holyRes" val="15" />
+			<add order="0x40" stat="darkRes" val="15" />
+		</for>
+	</item>
+	<item id="34997" type="Armor" nameRu="Плащ Холодной Тьмы" nameEn="Cloak of Cold Darkness">
+		<!-- Плащ, символизирующий алчность и тьму. СИЛ +4, ЛВК +4, ВЫН +4, ИНТ +4, МДР +4, ДУХ +4, УДЧ +4, ХАР +4. Получаемый урон -15%. Дополнительно позволяет использовать Благословенный Свиток Телепорта: Замок. Может быть экипирован только владельцем замка. -->
+		<!-- Cloak that symbolizes avarice and darkness. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +3, and Damage Received -15%. Can use Escape: Castle skill. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="steel" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="CLOAK" \> -->
+		<set name="is_dropable" val="false" />
+		<set name="item_skill" val="19042-1" />
+		<!-- King's Summon -->
+		<set name="item_skill" val="19038-1" />
+		<!-- Cold Cloak of Darkness -->
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="100" />
+			<add order="0x10" stat="mDef" val="80" />
+			<add order="0x40" stat="fireRes" val="15" />
+			<add order="0x40" stat="waterRes" val="15" />
+			<add order="0x40" stat="windRes" val="15" />
+			<add order="0x40" stat="earthRes" val="15" />
+			<add order="0x40" stat="holyRes" val="15" />
+			<add order="0x40" stat="darkRes" val="15" />
+		</for>
+	</item>
+	<item id="34998" type="Weapon" nameRu="Одноручный Топор Таути" nameEn="Tauti's One-handed Axe">
+		<!-- Оружие из зачарованных осколков Таути. Урон в PvP +15%, Макс. HP +25%, Физ. Атк. +10%, Скор. Атк. +15%, шанс Физ. Крит. Атк. +150.  Дополнительно позволяет использовать умение Бешенство Таути.  Нельзя модифицировать, зачаровать, разбить на кристаллы, изменить облик, придать свойства стихий. Можно применить 1 Особый Кристалл Души. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ?auti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="BLUNT_WEAPON" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fine_steel" />
+		<set name="item_skill" val="8878-1" />
+		<!-- Tauti's Special Ability: One-handed Axe -->
+		<set name="item_skill" val="9459-1" />
+		<!-- Tauti's Wrath -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="698" />
+			<set order="0x08" stat="mAtk" val="303" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<add order="0x40" stat="darkPower" val="450" />
+		</for>
+	</item>
+	<item id="34999" type="Weapon" nameRu="Двуручный Топор Таути" nameEn="Tauti's Two-handed Axe">
+		<!-- Оружие из зачарованных осколков Таути. Урон в PvP +15%, Макс. HP +25%, Физ. Атк. +10%, Скор. Атк. +15%, шанс Физ. Крит. Атк. +150.  Дополнительно позволяет использовать умение Бешенство Таути.  Нельзя модифицировать, зачаровать, разбить на кристаллы, изменить облик, придать свойства стихий. Можно применить 1 Особый Кристалл Души. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill ?auti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="TWO_HAND_SWORD" \> -->
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="8879-1" />
+		<!-- Tauti's Special Ability: Axe -->
+		<set name="item_skill" val="9459-1" />
+		<!-- Tauti's Wrath -->
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="849" />
+			<set order="0x08" stat="mAtk" val="303" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<add order="0x40" stat="darkPower" val="450" />
+		</for>
+	</item>
+</list>

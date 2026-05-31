@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<!-- Custom Shadow Packs -->
+	<item id="99001" type="EtcItem" nameRu="Custom Коробка с Комплектом Теневого Доспеха (Тяжелый Доспех, Без Ранга)" nameEn="Custom No Grade Shadow Armor Set Box (Heavy Armor)">
+		<set name="icon" val="icon.armor_t02_u_i00" />
+		<set name="description" val="Открыв эту коробку, вы получите комплект теневого доспеха (тяжелый доспех)." />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="99000-1" />
+	</item>
+	<item id="99002" type="EtcItem" nameRu="Custom Коробка с Комплектом Теневого Доспеха (Легкий Доспех, Без Ранга)" nameEn="Custom No Grade Shadow Armor Set Box (Light Armor Use)">
+		<set name="icon" val="icon.armor_t04_u_i00" />
+		<set name="description" val="Открыв эту коробку, вы получите комплект теневого доспеха (легкий доспех)." />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="99000-2" />
+	</item>
+	<item id="99003" type="EtcItem" nameRu="Custom Коробка с Комплектом Теневого Доспеха (Мантия, Без Ранга)" nameEn="Custom No Grade Shadow Armor Set Box (Robe)">
+		<set name="icon" val="icon.armor_t06_u_i00" />
+		<set name="description" val="Открыв эту коробку, вы получите комплект теневого доспеха (мантия)." />
+		<set name="default_action" val="capsule" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="99000-3" />
+	</item>
+
+	<!-- Custom Support Packs -->
+	<item id="99004" type="EtcItem" nameRu="Custom Упаковка: Снаряжение для Воинов (Ранг D)" nameEn="Custom D-Grade Fighter Support Pack">
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="description" val="Упаковка с снаряжением для воинов ранга D." />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="99115,1,1,100;99116,1,1,100;99117,1,1,100;99118,5000,5000,100" />
+	</item>
+	<item id="99005" type="EtcItem" nameRu="Custom Упаковка: Снаряжение для Магов (Ранг D)" nameEn="Custom D-Grade Mage Support Pack">
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="description" val="Упаковка с снаряжением для магов ранга D." />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="99119,1,1,100;99120,5000,5000,100;99121,2,2,100;99122,2,2,100;99123,1,1,100;99124,1,1,100;99125,1,1,100" />
+	</item>
+
+	<!-- Custom Content Items -->
+	<item id="99100" type="Armor" nameRu="Custom Бронзовая Кираса" nameEn="Custom Bronze Breastplate">
+		<set name="icon" val="icon.armor_t34_u_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="heavy" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="bronze" />
+		<set name="weight" val="8920" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player races="HUMAN,ELF,DARKELF,ORC,DWARF,ERTHEIA" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="68" />
+		</for>
+	</item>
+	<item id="99101" type="Weapon" nameRu="Custom Фальшион" nameEn="Custom Falchion">
+		<set name="icon" val="icon.weapon_falchion_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="sword" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="bronze" />
+		<set name="weight" val="1530" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<for>
+			<set order="0x08" stat="pAtk" val="21" />
+			<set order="0x08" stat="mAtk" val="16" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="99102" type="Armor" nameRu="Custom Бронзовые Набедренники" nameEn="Custom Bronze Gaiters">
+		<set name="icon" val="icon.armor_t34_l_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="heavy" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="bronze" />
+		<set name="weight" val="3960" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player races="HUMAN,ELF,DARKELF,ORC,DWARF,ERTHEIA" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="43" />
+		</for>
+	</item>
+	<item id="99103" type="Armor" nameRu="Custom Наручи" nameEn="Custom Bracer">
+		<set name="icon" val="icon.armor_t30_g_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="weight" val="650" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="17" />
+		</for>
+	</item>
+	<item id="99104" type="Armor" nameRu="Custom Сапоги" nameEn="Custom Boots">
+		<set name="icon" val="icon.armor_t30_b_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="1310" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="17" />
+		</for>
+	</item>
+	<item id="99105" type="Armor" nameRu="Custom Кожаный Шлем" nameEn="Custom Leather Helmet">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="weight" val="650" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="23" />
+		</for>
+	</item>
+	<item id="99106" type="Armor" nameRu="Custom Коралловая Серьга" nameEn="Custom Coral Earring">
+		<set name="icon" val="icon.accessary_coral_earing_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="21" />
+		</for>
+	</item>
+	<item id="99107" type="Armor" nameRu="Custom Синее Коралловое Кольцо" nameEn="Custom Blue Coral Ring">
+		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="14" />
+		</for>
+	</item>
+	<item id="99108" type="Armor" nameRu="Custom Ожерелье с Синим Алмазом" nameEn="Custom Blue Diamond Necklace">
+		<set name="icon" val="icon.accessary_blue_diamond_necklace_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="28" />
+		</for>
+	</item>
+	<item id="99109" type="Armor" nameRu="Custom Рубаха из Толстой Кожи" nameEn="Custom Hard Leather Shirt">
+		<set name="icon" val="icon.armor_t30_u_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="light" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="weight" val="4720" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="53" />
+		</for>
+	</item>
+	<item id="99110" type="Armor" nameRu="Custom Набедренники из Толстой Кожи" nameEn="Custom Hard Leather Gaiters">
+		<set name="icon" val="icon.armor_t30_l_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="light" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="leather" />
+		<set name="weight" val="1610" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="33" />
+		</for>
+	</item>
+	<item id="99111" type="Armor" nameRu="Custom Костяной Щит" nameEn="Custom Bone Shield">
+		<set name="icon" val="icon.shield_bone_shield_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="bone" />
+		<set name="weight" val="1380" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player races="HUMAN,ELF,DARKELF,ORC,DWARF,ERTHEIA" />
+		</cond>
+		<for>
+			<sub order="0x10" stat="rEvas" val="8" />
+			<set order="0x08" stat="rShld" val="20" />
+			<set order="0x08" stat="sDef" val="90" />
+			<enchant val="0" order="0x0C" stat="sDef" />
+		</for>
+	</item>
+	<item id="99112" type="Armor" nameRu="Custom Туника Преданности" nameEn="Custom Tunic of Devotion">
+		<set name="icon" val="icon.armor_t55_u_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="magic" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="2090" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player races="HUMAN,ELF,DARKELF,ORC,DWARF,ERTHEIA" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="30" />
+			<add order="0x40" stat="maxMp" val="67" />
+		</for>
+	</item>
+	<item id="99113" type="Armor" nameRu="Custom Штаны Преданности" nameEn="Custom Stockings of Devotion">
+		<set name="icon" val="icon.armor_t55_l_i00" />
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="magic" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="cloth" />
+		<set name="weight" val="1040" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player races="HUMAN,ELF,DARKELF,ORC,DWARF,ERTHEIA" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="19" />
+			<add order="0x40" stat="maxMp" val="42" />
+		</for>
+	</item>
+	<item id="99114" type="Weapon" nameRu="Custom Посох Наемника" nameEn="Custom Apprentice's Staff">
+		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="bigblunt" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="wood" />
+		<set name="weight" val="1070" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_magic_weapon" val="true" />
+		<for>
+			<set order="0x08" stat="pAtk" val="23" />
+			<set order="0x08" stat="mAtk" val="24" />
+			<set order="0x08" stat="rCrit" val="4" />
+			<add order="0x10" stat="accCombat" val="4.75" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="99115" type="Weapon" nameRu="Custom Обычный Предмет - Лук Темных Эльфов" nameEn="Custom Common Item - Dark Elven Bow">
+		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="bow" />
+		<set name="bodypart" val="lrhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="500" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="48" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="610" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="2" />
+		<set name="reuse_delay" val="400" />
+		<for>
+			<set order="0x08" stat="pAtk" val="96" />
+			<set order="0x08" stat="mAtk" val="26" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="99116" type="Weapon" nameRu="Custom Обычный Предмет - Трехгранный Кинжал" nameEn="Custom Common Item - Poniard Dagger">
+		<set name="icon" val="icon.weapon_dirk_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="dagger" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="5" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="48" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="363" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<for>
+			<set order="0x08" stat="pAtk" val="45" />
+			<set order="0x08" stat="mAtk" val="32" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="99117" type="Weapon" nameRu="Custom Обычный Предмет - Кузнечный Молот" nameEn="Custom Common Item - Work Hammer">
+		<set name="icon" val="icon.weapon_work_hammer_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="blunt" />
+		<set name="bodypart" val="rhand" />
+		<set name="random_damage" val="20" />
+		<set name="attack_range" val="40" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="32" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="steel" />
+		<set name="weight" val="597" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<for>
+			<set order="0x08" stat="pAtk" val="40" />
+			<set order="0x08" stat="mAtk" val="26" />
+			<set order="0x08" stat="rCrit" val="4" />
+			<add order="0x10" stat="accCombat" val="4.75" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="99118" type="EtcItem" nameRu="Custom Заряды Души (Ранг D)" nameEn="Custom Soulshot (D-Grade)">
+		<set name="icon" val="br_cashtex.item.br_cash_soulshot_d_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="paper" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26060-1" />
+	</item>
+	<item id="99119" type="Weapon" nameRu="Custom Скованные Клыки Демона" nameEn="Custom Bound Demon's Fangs">
+		<set name="icon" val="icon.weapon_demon_fangs_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weapon_type" val="etc" />
+		<set name="crystal_type" val="d" />
+		<set name="crystal_count" val="90" />
+		<set name="weight" val="1600" />
+		<set name="price" val="0" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="steel" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="random_damage" val="10" />
+		<set name="attack_range" val="40" />
+		<for>
+			<set order="0x08" stat="pAtk" val="67" />
+			<set order="0x08" stat="mAtk" val="73" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="99120" type="EtcItem" nameRu="Custom Благословенный Заряд Духа: Ранг D" nameEn="Custom Blessed Spiritshot (D-Grade)">
+		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="2160-1" />
+	</item>
+	<item id="99121" type="Armor" nameRu="Custom Кольцо Преданности" nameEn="Custom Ring of Devotion">
+		<set name="icon" val="icon.accessary_ring_of_devotion_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="25" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="gold" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="16" />
+		</for>
+	</item>
+	<item id="99122" type="Armor" nameRu="Custom Серьга Багрового Полумесяца" nameEn="Custom Red Crescent Earring">
+		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="38" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="24" />
+		</for>
+	</item>
+	<item id="99123" type="Armor" nameRu="Custom Ожерелье Преданности" nameEn="Custom Necklace of Devotion">
+		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="51" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="silver" />
+		<set name="weight" val="150" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="mDef" val="32" />
+		</for>
+	</item>
+	<item id="99124" type="Armor" nameRu="Custom Кожаные Рукавицы" nameEn="Custom Leather Gauntlets">
+		<set name="icon" val="icon.armor_t18_g_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="47" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="leather" />
+		<set name="weight" val="640" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="22" />
+		</for>
+	</item>
+	<item id="99125" type="Armor" nameRu="Custom Голубые Замшевые Сапоги" nameEn="Custom Blue Buckskin Boots">
+		<set name="icon" val="icon.armor_t18_b_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_count" val="47" />
+		<set name="crystal_type" val="d" />
+		<set name="material" val="leather" />
+		<set name="weight" val="1300" />
+		<set name="price" val="0" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<for>
+			<add order="0x10" stat="pDef" val="22" />
+		</for>
+	</item>
+</list>

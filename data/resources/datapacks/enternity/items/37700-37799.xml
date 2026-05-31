@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="37700" type="Weapon" nameRu="Парные Кинжалы Белого Дня " nameEn="Valentine Dual Dagger">
+		<!-- Используется в качестве прототипа внешнего вида оружия. Форма Парных Кинжалов Белого Дня. -->
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="dualdagger" />
+		<set name="default_action" val="equip" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<set name="material" val="steel" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<cond msgId="1518">
+			<player canUseDualDaggers="true" />
+		</cond>
+		<for>
+			<set order="0x08" stat="pAtk" val="752" />
+			<set order="0x08" stat="mAtk" val="414" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37701" type="Weapon" nameRu="Парные Дубины Воина Белого Дня " nameEn="Valentine Dual Blunt Weapon">
+		<!-- Используется в качестве прототипа внешнего вида оружия. Форма Парных Дубин Воина Белого Дня. -->
+		<!-- Modifies the appearance of a weapon. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="equip" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="500" />
+		<set name="material" val="fine_steel" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="916" />
+			<set order="0x08" stat="mAtk" val="414" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37702" type="Armor" nameRu="Щит Белого Дня" nameEn="Valentine Shield">
+		<!-- Используется в качестве прототипа внешнего вида щита. Форма Щита Белого Дня. -->
+		<!-- Modifies the appearance of a shield. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="s84" />
+		<set name="crystal_count" val="1891" />
+		<set name="weight" val="1130" />
+		<set name="price" val="88681000" />
+		<set name="material" val="damascus" />
+		<for>
+			<set order="0x08" stat="sDef" val="546" />
+			<set order="0x08" stat="rShld" val="20" />
+			<add order="0x10" stat="rEvas" val="-8" />
+		</for>
+	</item>
+	<item id="37703" type="Armor" nameRu="Символ Белого Дня " nameEn="Valentine Sigil">
+		<!-- Настойка для изменения внешнего вида оружия в честь Дня всех влюбленных. -->
+		<!-- Modifies the appearance of a sigil. -->
+		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
+		<set name="armor_type" val="sigil" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="s84" />
+		<set name="crystal_count" val="1891" />
+		<set name="weight" val="920" />
+		<set name="price" val="88681000" />
+		<set name="material" val="steel" />
+		<for>
+			<add order="0x10" stat="pDef" val="150" />
+		</for>
+	</item>
+	<item id="37704" type="EtcItem" nameRu="Эликсир Любви" nameEn="Love Potion">
+		<!-- Настойка для изменения внешнего вида оружия в честь Дня всех влюбленных. -->
+		<!-- Herb that modifies the appearance of weapons for Valentine's Day. -->
+		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="item_skill" val="17154-1" />
+		<!-- Love Potion -->
+	</item>
+	<item id="37705" type="EtcItem" nameRu="Шоколад Заядлого Сердцееда" nameEn="Chocolate Truffle">
+		<!-- Шоколад, наполненный энергией Заядлого Сердцееда. Восстанавливает энергию в мирной зоне. По двойному щелчку можно использовать умение Страстный Поцелуй Заядлого Сердцееда. При наличии положительных эффектов распространяется еще и на членов группы. Можно получить эффекты Страстного Поцелуя Заядлого Сердцееда, Нежного Шепота Прекрасной Дамы и Самолюбования.  -->
+		<!-- Double click to cast Decadence (For 2 hours, STR +2, INT +2, and Attribute Resistance +20) on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. Cannot be stored in a warehouse. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17156-1" />
+		<!-- Decadence -->
+		<set name="item_skill" val="17161-1" />
+		<!-- Chocolate Truffle -->
+	</item>
+	<item id="37706" type="EtcItem" nameRu="Конфета Прекрасной Дамы " nameEn="Candy Heart">
+		<!-- Конфета, исполненная любви прекрасной дамы. Восстанавливает энергию в мирной зоне. Двойной щелчок для получения эффекта Нежный Шепот Прекрасной Дамы. Эффект действует на всех членов группы. Можно использовать вместе с эффектами Страстный Поцелуй Заядлого Сердцееда и Самолюбование.  -->
+		<!-- Double click to cast Sugar Rush (For 2 hours, STR +2, INT +2, DEX +2, and WIT +2) on the entire party. Can be stacked with Decadence and Forever Alone effects. Cannot be stored in a warehouse. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17157-1" />
+		<!-- Sugar Rush -->
+		<set name="item_skill" val="17162-1" />
+		<!-- Candy Heart -->
+	</item>
+	<item id="37707" type="EtcItem" nameRu="Печенье Самолюбования" nameEn="Comfort Cookie">
+		<!-- Печенье, которое заставляет съевшего его чувствовать себя богом. Восстанавливает энергию в мирной зоне путем повышения самооценки. По двойному щелчку можно использовать умение Самолюбование. При наличии положительных эффектов распространяется еще и на членов группы. Можно получить эффекты Страстный Поцелуй Заядлого Сердцееда, Нежный Шепот Прекрасной Дамы и Самолюбование.  -->
+		<!-- Double click to cast Forever Alone (For 2 hours, STR +2, INT +2, CON +2, and MEN +2) on the entire party. Can be stacked with Decadence and Sugar Rush effects. Cannot be stored in a warehouse. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17158-1" />
+		<!-- Forever Alone -->
+		<set name="item_skill" val="17163-1" />
+		<!-- Comfort Cookie -->
+	</item>
+	<item id="37708" type="EtcItem" nameRu="Шоколад Коко для Трансформации" nameEn="Coco's Transformation Chocolate">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. На 60 мин перевоплощает в Снеговика/ Пугало/ Жестяного Голема/ Глиняную Статую/ Красивую Глиняную Статую/ Крепкую Глиняную Статую/ Ветхую Глиняную Статую. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17159-1" />
+		<!-- Transformation Skill -->
+	</item>
+	<item id="37709" type="EtcItem" nameRu="Конфета Коко для Трансформации " nameEn="Coco's Transformation Candy">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. На 60 мин перевоплощает в Снеговика/ Пугало/ Жестяного Голема/ Глиняную Статую/ Красивую Глиняную Статую/ Крепкую Глиняную Статую/ Ветхую Глиняную Статую. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17159-1" />
+		<!-- Transformation Skill -->
+	</item>
+	<item id="37710" type="EtcItem" nameRu="Печенье Коко для Трансформации " nameEn="Coco's Transformation Cookie">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. На 60 мин перевоплощает в Снеговика/ Пугало/ Жестяного Голема/ Глиняную Статую/ Красивую Глиняную Статую/ Крепкую Глиняную Статую/ Ветхую Глиняную Статую. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17159-1" />
+		<!-- Transformation Skill -->
+	</item>
+	<item id="37711" type="EtcItem" nameRu="Шоколад Коко для Призыва Друга " nameEn="Coco's Friend Summon Chocolate">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. Раз в 30 мин. можно призвать друзей. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17160-1" />
+		<!-- Summon Friend -->
+	</item>
+	<item id="37712" type="EtcItem" nameRu="Конфета Коко для Призыва Друга " nameEn="Coco's Friend Summon Candy">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. Раз в 30 мин. можно призвать друзей. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17160-1" />
+		<!-- Summon Friend -->
+	</item>
+	<item id="37713" type="EtcItem" nameRu="Печенье Коко для Призыва Друга " nameEn="Coco's Friend Summon Cookie">
+		<!-- Предмет, наполненный магией Посланника Купидона Коко Брауни. Раз в 30 мин. можно призвать друзей. Умение активируется после выбора цели по двойному щелчку. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="potion" />
+		<set name="material" val="liquid" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="item_skill" val="17160-1" />
+		<!-- Summon Friend -->
+	</item>
+	<item id="37714" type="Armor" nameRu="Талисман Лилит" nameEn="Talisman - Lilith">
+		<!-- При надевании Маг. Защ. +552, бонус восстановления MР +3, сопротивление тьме +10, сопротивление отражению урона +6%. Не дает эффекта при ношении с Талисманами Анаким/ Семи Печатей. При надевании двух талисманов эффект не суммируется. -->
+		<!-- When equipped, M. Def. +552, MP Recovery Bonus by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<set name="icon" val="icon.lilith_talisman_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="150" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13569-1" />
+		<!-- Talisman - Lilith -->
+	</item>
+	<item id="37715" type="Armor" nameRu="Талисман Анаким" nameEn="Talisman - Anakim">
+		<!-- При надевании Физ. Защ. +971, бонус восстановления HP +6, сопротивление тьме/ святости +10, сопротивление отражению урона +6%. Не дает эффекта при ношении с Талисманами Лилит/ Семи Печатей. При надевании двух талисманов эффект не суммируется. -->
+		<!-- When equipped, P. Def. +971, HP Recovery Bonus by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<set name="icon" val="icon.anakim_talisman_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="150" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13569-2" />
+		<!-- Talisman - Lilith -->
+	</item>
+	<item id="37716" type="EtcItem" nameRu="Энергия Семи Печатей" nameEn="Seven Signs' Energy">
+		<!-- Если принести Управляющему Талисмана Семени Талисманы Лилит и Анаким, то можно получить Талисман Семи Печатей. -->
+		<!-- Bring Talisman - Lilith and Talisman - Anakim to the Seed Talisman Manager to receive a Talisman - Seven Signs. -->
+		<set name="icon" val="icon.sevensign_energy_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="37717" type="Armor" nameRu="Талисман Семи Печатей" nameEn="Talisman - Seven Signs">
+		<!-- При надевании Маг. Защ. +736, Физ. Защ. +1126, бонус восстановления MР +4, Скор. Восстановления HP +8, сопротивление всем стихиям +10, сопротивление отражению урона +14%. При надевании с Талисманами Вожделения или Позолоченного Дерева дополнительно атака стихией +50, сопротивление всем видам оружия +3%. При надевании двух талисманов эффект не суммируется. -->
+		<!-- When equipped, M. Def. +736, P. Def. +1126, MP Recovery Bonus +4, HP Recovery Bonus +8, all attribute resistance +10, and damage reflect resistance +14. When equipped with Talisman - Longing, Attribute Attack +50 and all weapon resistance +3%. Equipping two talismans will give the effect of one. -->
+		<set name="icon" val="icon.sevensign_talisman_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="150" />
+		<set name="weight" val="150" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13569-3" />
+		<!-- Talisman - Lilith -->
+	</item>
+	<item id="37718" type="Armor" nameRu="Сияющая Футболка Эйнхасад" nameEn="Shiny Elemental Shirt">
+		<!-- Витаминный предмет Сияющая магическая футболка, наполненная энергией Эйнхасад. С помощью Свитка: Модифицировать Футболку можно модифицировать до +10. При модификации на +4 и выше повышает пассивные характеристики, при модификации на +6 и выше добавляются различные умения. -->
+		<!-- Shining magic shirt containing Einhasad's energy. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or above, passive stats are increased. When enchanted to +6 or above, various active skills are bestowed. -->
+		<set name="icon" val="icon.ainhasard_shirt" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="underwear" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="2" />
+		<set name="weight" val="130" />
+		<set name="material" val="crystal" />
+		<skills>
+			<skill id="13563" level="1" type="ENCHANT" value="6" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="2" type="ENCHANT" value="7" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="3" type="ENCHANT" value="8" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="4" type="ENCHANT" value="9" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="5" type="ENCHANT" value="10" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="1" type="ENCHANT" value="7" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="2" type="ENCHANT" value="8" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="3" type="ENCHANT" value="9" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="4" type="ENCHANT" value="10" /> <!-- Einhasad's Protection -->
+			<skill id="13565" level="1" type="ENCHANT" value="8" /> <!-- Einhasad's Silence -->
+			<skill id="13565" level="2" type="ENCHANT" value="9" /> <!-- Einhasad's Silence -->
+			<skill id="13565" level="3" type="ENCHANT" value="10" /> <!-- Einhasad's Silence -->
+			<skill id="13566" level="1" type="ENCHANT" value="9" /> <!-- Einhasad's Salvation -->
+			<skill id="13566" level="2" type="ENCHANT" value="10" /> <!-- Einhasad's Salvation -->
+			<skill id="13567" level="1" type="ENCHANT" value="10" /> <!-- Einhasad's Blessing -->
+		</skills>
+		<for>
+			<add order="0x10" stat="pDef" val="28" />
+			<enchant order="0x0C" stat="pDef" val="0" />
+		</for>
+	</item>
+	<item id="37719" type="EtcItem" nameRu="Особая Коробка Паагрио" nameEn="Pa'agrio's Special Pack">
+		<!-- Дважды щелкните, чтобы получить Футболку Паагрио или с небольшой вероятностью Сияющую Футболку Эйнхасад.  Внимание: после распечатывания коробки футболка закрепляется за персонажем, ее дальнейшее перемещение невозможно. -->
+		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<set name="icon" val="icon.shirt_special_box_i02" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<!-- Pa'agrio's Shirt -->
+		<!-- Coco's Transformation Cookie -->
+		<set name="capsuled_items" val="23240,1,1,100;37710,1,1,5" />
+	</item>
+	<item id="37720" type="EtcItem" nameRu="Особая Коробка Мафр" nameEn="Maphr's Special Pack">
+		<!-- Дважды щелкните, чтобы получить Футболку Мафр или с небольшой вероятностью Сияющую Футболку Эйнхасад.  Внимание: после распечатывания коробки футболка закрепляется за персонажем, ее дальнейшее перемещение невозможно. -->
+		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<set name="icon" val="icon.shirt_special_box_i01" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<!-- Maphr's Shirt -->
+		<!-- Coco's Transformation Cookie -->
+		<set name="capsuled_items" val="23307,1,1,100;37710,1,1,5" />
+	</item>
+	<item id="37721" type="EtcItem" nameRu="Особая Коробка Сайхи" nameEn="Sayha's Special Pack">
+		<!-- Дважды щелкните, чтобы получить Футболку Сайхи или с небольшой вероятностью Сияющую Футболку Эйнхасад.  Внимание: после распечатывания коробки футболка закрепляется за персонажем, ее дальнейшее перемещение невозможно. -->
+		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<set name="icon" val="icon.shirt_special_box_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<!-- Sayha's Shirt -->
+		<!-- Coco's Transformation Cookie -->
+		<set name="capsuled_items" val="23301,1,1,100;37710,1,1,5" />
+	</item>
+	<item id="37722" type="EtcItem" nameRu="Особая Коробка Евы" nameEn="Eva's Special Pack">
+		<!-- Дважды щелкните, чтобы получить Футболку Евы или с небольшой вероятностью Сияющую Футболку Эйнхасад.  Внимание: после распечатывания коробки футболка закрепляется за персонажем, ее дальнейшее перемещение невозможно. -->
+		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<set name="icon" val="icon.shirt_special_box_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="fish" />
+		<!-- Eva's Shirt -->
+		<!-- Coco's Transformation Cookie -->
+		<set name="capsuled_items" val="23304,1,1,100;37710,1,1,5" />
+	</item>
+	<item id="37723" type="EtcItem" nameRu="Камень для Обмена Футболки" nameEn="Shirt Exchange Stone">
+		<!-- Камень, необходимый для обмена футболки, модифицированной до +8, на такую же футболку +10. Внимание: после обмена футболку нельзя обменять, выбросить или продать. -->
+		<!-- Bring this to the Fantasy Isle Paddy to exchange your +8 shirt for the same shirt but enchanted to +10. Note: the shirt cannot be traded after exchange. -->
+		<set name="icon" val="icon.shirt_stone" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="37724" type="EtcItem" nameRu="Энергия Шилен" nameEn="Shilen's Energy">
+		<!-- Вещество, конденсирующее силу Шилен. Нужна ученым в исследовательских целях, чтобы научиться противостоять Шилен. Продается по очень высокой цене.  -->
+		<!-- Material with the condensed power of Shilen. The groups that oppose Shilen purchase them for research,so they can be sold at stores for a high price. -->
+		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="price" val="10000000" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37725" type="Armor" nameRu="Форма NC Dinos" nameEn="NC Dinos Uniform">
+		<!-- Форма NC Dinos. При надевании отменяет эффект доспехов, но сохраняет эффект головного убора, оружия и магических доспехов. -->
+		<!-- NC Dinos Uniform. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="armor_type" val="heavy" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="1000" />
+		<set name="material" val="cloth" />
+		<set name="bodypart" val="alldress" />
+	</item>
+	<item id="37726" type="Armor" nameRu="Кепка Защитника NC Dinos" nameEn="NC Dinos Shortstop Cap">
+		<!-- Кепка Защитника NC Dinos -->
+		<!-- NC Dinos Defense Hat. -->
+		<set name="icon" val="icon.accessory_mining_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="steel" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="37727" type="EtcItem" nameRu="Подарочная Коробка Данди" nameEn="Toy Knight's Gift Box">
+		<!-- По двойному щелчку на 7 д. можно получить предметы Благословенная Серьга Антараса, Благословенное Ожерелье Валакаса, Кольцо Таути, Кольцо Земляного Червя, Серьга Бессмертного Закена, Пояс Полномочий Правителей. Будет удалена 8 мая. -->
+		<!-- Double click to acquire a 7-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="paper" />
+		<!-- Blessed Antharas' Earring - 7-day -->
+		<!-- Blessed Valakas' Necklace - 7-day -->
+		<!-- Tauti's Ring - 7-day -->
+		<!-- Earth Wyrm Heart Ring - 7-day -->
+		<!-- Blessed Zaken's Earring - 7-day -->
+		<!-- Ruler's Authority - 7-day -->
+		<set name="capsuled_items" val="37732,1,1,100;37733,1,1,100;37734,1,1,100;37735,1,1,100;37736,1,1,100;37737,1,1,100" />
+	</item>
+	<item id="37728" type="EtcItem" nameRu="Коробка Призыва Данди" nameEn="Dandy's Challenge Box">
+		<!-- Дважды щелкните, чтобы получить Свиток Призыва Данди и Форму NC Dinos. Предмет будет удален после окончания ивента. -->
+		<!-- Double click to acquire Dandy's Challenge Scroll and the NC Dinos Uniform. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="paper" />
+		<!-- Dandy's Scroll: Challenge -->
+		<!-- NC Dinos Uniform -->
+		<set name="capsuled_items" val="37731,1,1,100;37725,1,1,100" />
+	</item>
+	<item id="37729" type="EtcItem" nameRu="Свиток Доверия Данди" nameEn="Dandy's Scroll: Faith">
+		<!-- В течение 60 мин Физ. Атк. +5%, Скор. Атк. +5%, шанс Физ. Крит. Атк. +30, Маг. Атк. +10%, Скор. Маг. Атк. +5%, шанс Маг. Крит. Атк. +20, расход MP -3%, время перезарядки умений -3%. Не действуют положительные эффекты Страсти Данди и Поддержки Данди. -->
+		<!-- For 60 minutes, increases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Toy Knight's Cheer and Toy Knight's Passion buffs are not applied at the same time. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17188-1" />
+		<!-- Dandy's Scroll: Faith -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="37730" type="EtcItem" nameRu="Свиток Страсти Данди" nameEn="Dandy's Scroll: Passion">
+		<!-- В течение 60 мин полученный урон -10%. Не действуют положительные эффекты Доверия Данди и Поддержки Данди. -->
+		<!-- For 60 minutes, decreases all received damage by 10%. Dandy's Cheer and Dandy's Faith buffs are not applied at the same time. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17189-1" />
+		<!-- Dandy's Scroll: Passion -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="37731" type="EtcItem" nameRu="Свиток Призыва Данди" nameEn="Dandy's Scroll: Challenge">
+		<!-- В течение 60 мин. бонус опыта и SP +30%. Одновременно не действуют Свитки Энергии Славы/ Жаркой Страсти/ Роста Императора. -->
+		<!-- For 60 minutes, increases acquired XP and SP by 30%. Energy of Glory, Midsummer Passion, and Emperor's Growth scrolls are not applied at the same time. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17187-1" />
+		<!-- Dandy's Scroll: Challenge -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="37732" type="Armor" nameRu="Благословенная Серьга Антараса" nameEn="Blessed Antharas' Earring">
+		<!-- MP +59, Физ./ Маг. Защ. +15%, ВЫН/ ДУХ+3, сопротивление святости/ земле +30, сопротивление кровотечению и шанс кровопускания +50%, шанс оглушения/ ментальных атак и сопротивление оглушению/ ментальным атакам +40%, эффективность получаемого лечения +10%, расход MP для умений -5%, эффект Гнева Вампира 4% Активное Умение: позволяет использовать умение, отменяющее оглушение, и на 5 сек. дающее неуязвимость к оглушению. При надевании двух таких серег эффект не суммируется. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13313-1" />
+		<!-- Blessed Antharas' Earring -->
+		<set name="item_skill" val="13314-1" />
+		<!-- Blessed Antharas' Earring -->
+		<for>
+			<add order="0x10" stat="mDef" val="170" />
+		</for>
+	</item>
+	<item id="37733" type="Armor" nameRu="Благословенное Ожерелье Валакаса" nameEn="Blessed Valakas' Necklace">
+		<!-- MP +79, HP +625, Физ. Атк. +10%, Маг. Атк. +20%, шанс Маг. Крит. Атк. +20, СИЛ/ ИНТ+3, сопротивление огню +30, сопротивление тьме +20, шанс усыпления и сопротивление усыплению +50%, мощность физ. умений +5%, время перезарядки умений -10%, Отражение Урона +5% Активное Умение: позволяет использовать умение, отменяющее удержание, и на 5 сек. дает неуязвимость к удержанию. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. -->
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="neck" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="13315-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<set name="item_skill" val="13316-1" />
+		<!-- Blessed Valakas' Necklace -->
+		<for>
+			<add order="0x10" stat="mDef" val="226" />
+		</for>
+	</item>
+	<item id="37734" type="Armor" nameRu="Кольцо Таути" nameEn="Tauti's Ring">
+		<!-- Кольцо Таути. MP +38, сила Физ. Крит. Атк. +15%, мощность умений +5%, урон в PvP +5%, сопротивление огню/ тьме +25, сопротивление параличу/ воздушным оковам / изгнанию +10%, сопротивление отражению урона +5%, сопротивление вампиризму +5%, получаемый урон в PvP -5%, шанс Физ. Крит. Атк. при использовании дробящего оружия +54. При надевании двух таких колец эффект не суммируется (за исключением Маг. Защ. и сопротивления стихиям). Нельзя использовать на Олимпиаде. -->
+		<!-- Tauti's Ring. Fire/ Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/ yoke/ exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. P. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/ M. Def.) Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.accessary_tauti_ring" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="gold" />
+		<set name="item_skill" val="8870-1" />
+		<!-- Tauti's Ring -->
+		<for>
+			<add order="0x10" stat="mDef" val="108" />
+			<add order="0x40" stat="fireRes" val="25" />
+			<add order="0x40" stat="darkRes" val="25" />
+			<add order="0x40" stat="maxMp" val="38" />
+		</for>
+	</item>
+	<item id="37735" type="Armor" nameRu="Кольцо Земляного Червя" nameEn="Earth Wyrm Heart Ring">
+		<!-- MP +38, увеличивает сопротивление физ./ маг. отрицательным эффектам, Скор. Восстановления MP, силу Физ. Крит. Атк., Физ. Точность. Сопротивление отравлению +50%, шанс отравления +50%, сопротивление отталкиванию, опрокидыванию, притягиванию, атакам уязвимых мест +20%. Увеличивает Скор. Атк./ Скор. Маг., сопротивление ветру/ воде. Увеличивает Скор. Атк./ Скор. Маг., шанс Маг. Крит. Атк. членов группы и дарует им эффект Гнева Вампира. При одновременном ношении двух колец эффект не суммируется. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +38, P./ M. Debuff Resistance +15, MP Regeneration +3, P. Critical Damage +20%, and P. Accuracy +5. Poison Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20%, Atk. Spd. and Casting Spd. +6%, and Wind/ Water Resistance +30. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same rings are equipped. -->
+		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="13318-1" />
+		<!-- Earth Wyrm Heart Ring -->
+		<set name="item_skill" val="13319-1" />
+		<!-- Earth Wyrm Heart Ring -->
+		<set name="item_skill" val="13317-1" />
+		<!-- Earth Wyrm Heart Ring -->
+		<for>
+			<add order="0x10" stat="mDef" val="108" />
+		</for>
+	</item>
+	<item id="37736" type="Armor" nameRu="Серьга Бессмертного Закена" nameEn="Blessed Zaken's Earring">
+		<!-- MP +37, сопротивление кровотечению +30%, шанс кровопускания +30%, мощность лечения +15%, дает эффект Гнева Вампира, сопротивление оглушению и ментальным атакам +30%, шанс оглушения и ментальных атак +30%. Сопротивление тьме +15. При надевании двух таких серег эффект не суммируется, а при ношении вместе с обычной Серьгой Закена будут применяться только эффекты Серьги Бессмертного Закена. Нельзя использовать на Олимпиаде. -->
+		<!-- MP +37, Bleed Resistance +30%, Bleed Attack Rate +30%, Heal Amount +15%, Vampiric Rage Effect, Stun/ Mental resistance +30%, Stun/ Mental attack rate +30%, Dark Resistance +15. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="silver" />
+		<set name="item_skill" val="3559-2" />
+		<!-- Blessed Zaken's Earring -->
+		<for>
+			<add order="0x10" stat="mDef" val="94" />
+			<add order="0x40" stat="maxMp" val="37" />
+		</for>
+	</item>
+	<item id="37737" type="Armor" nameRu="Полномочия Правителя" nameEn="Ruler's Authority">
+		<!-- Выдается победителю Фестиваля Хаоса Таинственного Особняка. Макс. HP/ MP/ CP +1000, лимит веса +25 600, наносимый урон +8%, получаемый урон -9%, сопротивление отражению урона +5%, добавляет 36 количество ячеек в инвентаре, сопротивление всем стихиям +15. Нельзя использовать на Олимпиаде. Предмет будет удален после окончания ивента. -->
+		<!-- Item is given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36 and all Attribute Resistance by 15. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.belt_rulers_authority" />
+		<set name="armor_type" val="light" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="waist" />
+		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="cloth" />
+		<set name="item_skill" val="15145-1" />
+		<!-- Ruler's Authority -->
+		<for>
+			<add order="0x10" stat="pDef" val="50" />
+			<add order="0x40" stat="fireRes" val="15" />
+			<add order="0x40" stat="waterRes" val="15" />
+			<add order="0x40" stat="windRes" val="15" />
+			<add order="0x40" stat="earthRes" val="15" />
+			<add order="0x40" stat="holyRes" val="15" />
+			<add order="0x40" stat="darkRes" val="15" />
+		</for>
+	</item>
+	<item id="37738" type="EtcItem" nameRu="Тестовый Заряд Души: Ранг D" nameEn="Test Soulshot (D-grade)">
+		<!-- Тестовый Заряд Души, заряжает оружие Ранга D или C. -->
+		<!-- Soulshot for test use. To be included in the D-grade or C-grade load effect. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37739" type="EtcItem" nameRu="Тестовый Заряд Души: Ранг C" nameEn="Test Soulshot (C-grade)">
+		<!-- Тестовый Заряд Души, заряжает оружие Ранга D или C. -->
+		<!-- Soulshot for test use. To be included in the C-grade or D-grade load effect. -->
+		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
+		<set name="weight" val="2" />
+		<set name="crystal_type" val="c" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37740" type="EtcItem" nameRu="Усиленный Заряд Души: Без Ранга" nameEn="Reinforced Soulshot (No-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием без Ранга. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on no-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37741" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг D" nameEn="Reinforced Soulshot (D-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга D. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on D-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37742" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг C" nameEn="Reinforced Soulshot (C-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга C. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on C-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37743" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг B" nameEn="Reinforced Soulshot (B-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга B. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on B-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37744" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг A" nameEn="Reinforced Soulshot (A-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга A. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on A-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37745" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг S" nameEn="Reinforced Soulshot (S-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга S. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on S-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37746" type="EtcItem" nameRu="Усиленный Заряд Души: Ранг R" nameEn="Reinforced Soulshot (R-grade)">
+		<!-- Озаряет оружие ярким светом и мгновенно наносит врагу мощный удар. Используется с оружием Ранга R. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on R-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37747" type="EtcItem" nameRu="Усиленный Заряд Духа: Без Ранга" nameEn="Reinforced Spiritshot (No-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием без Ранга. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on no-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37748" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг D" nameEn="Reinforced Spiritshot (D-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга D. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on D-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37749" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг C" nameEn="Reinforced Spiritshot (C-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга C. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on C-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37750" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг B" nameEn="Reinforced Spiritshot (B-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга B. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on B-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37751" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг A" nameEn="Reinforced Spiritshot (A-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга A. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on A-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37752" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг S" nameEn="Reinforced Spiritshot (S-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга S. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on S-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37753" type="EtcItem" nameRu="Усиленный Заряд Духа: Ранг R" nameEn="Reinforced Spiritshot (R-grade)">
+		<!-- Озаряет оружие ярким светом и значительно усиливает магию. Используется с оружием Ранга R. -->
+		<!-- A powerful light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on R-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="crystal_type" val="d" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37754" type="EtcItem" nameRu="Универсальный Заряд Души" nameEn="All-purpose Soulshot">
+		<!-- проверка применения crystal_free -->
+		<!-- Confirm if it becomes crystal_free -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37755" type="EtcItem" nameRu="Универсальный Заряд Духа" nameEn="All-purpose Spiritshot">
+		<!-- проверка применения crystal_free -->
+		<!-- Confirm if it becomes crystal_free -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="weight" val="2" />
+		<set name="price" val="14" />
+		<set name="etcitem_type" val="Shot" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37756" type="EtcItem" nameRu="Чудодейственный Осколок" nameEn="Mysterious Fragment">
+		<!-- Можно обменять на различные предметы у Рабочего Склада. -->
+		<!-- Can exchange it for various items through the warehouse keeper. -->
+		<set name="icon" val="icon.pink_cube_piece" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="material" val="paper" />
+	</item>
+	<item id="37757" type="EtcItem" nameRu="Доказательство Участия в 50 Битвах Олимпиады" nameEn="Olympiad Match 50 Participation Certificate">
+		<!-- Свиток, подтверждающий участие в 50 битвах Олимпиады. Если отдать его Управляющему Олимпиады, можно получить значительную награду. -->
+		<!-- Document that proves participation in the Olympiad Match 50. Take this document to the Olympiad Manager to receive a whole reward. -->
+		<set name="icon" val="icon.mercenary_certification_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37758" type="EtcItem" nameRu="Сундук Упорного Героя Олимпиады" nameEn="Indomitable Hero's Olympiad Treasure Chest">
+		<!-- Сундук с наградой, дарованный воину, с упорством принимавшему участие в 50 Олимпиадах. -->
+		<!-- Treasure box given to a warrior participating in the Olympiad Match 50 with an indomitable will. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="37759" type="EtcItem" nameRu="Слабая Энергия Иного Измерения - Ур. 1" nameEn="Faint Dimensional Energy - Stage 1">
+		<!-- Можно получить награду у Мермедена или повысить уровень. Повысив уровень, можно получить еще больше награды. Однако для улучшения до 2-го уровня защита в следующем цикле должна быть успешной. На 15 д. -->
+		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage for even greater rewards. But, in order to raise to stage 2, the next period's defense must be successful. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37760" type="EtcItem" nameRu="Слабая Энергия Иного Измерения - Ур. 2" nameEn="Faint Dimensional Energy - Stage 2">
+		<!-- Можно получить награду у Мермедена или повысить уровень. Повысив уровень, можно получить еще больше награды. Однако для улучшения до 3-го уровня защита в следующем цикле должна быть успешной. На 15 д. -->
+		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 3, the next period's defense must be successful. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37761" type="EtcItem" nameRu="Слабая Энергия Иного Измерения - Ур. 3" nameEn="Faint Dimensional Energy - Stage 3">
+		<!-- Можно получить награду у Мермедена или повысить уровень. Повысив уровень, можно получить еще больше награды. Однако для улучшения до 4-го уровня защита в следующем цикле должна быть успешной. На 15 д. -->
+		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 4, the next period's defense must be successful. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37762" type="EtcItem" nameRu="Слабая Энергия Иного Измерения - Ур. 4" nameEn="Faint Dimensional Energy - Stage 4">
+		<!-- Энергия максимального уровня, позволяет получить награду у Мермедена. -->
+		<!-- Faint energy of dimensional strength. It is the highest stage for receiving rewards from Mermoden. -->
+		<set name="icon" val="icon.etc_magic_energy_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37763" type="Armor" nameRu="Почетный Плащ" nameEn="Exalted Cloak">
+		<!-- Плащ, свидетельствующий о почетном статусе обладателя. СИЛ +1, ЛВК +1, ВЫН +1, ИНТ +1, МДР +1, ДУХ +1, УДЧ +1, ХАР +1. -->
+		<!-- A cloak that symbolizes the Exalted status. STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +1. -->
+		<set name="icon" val="icon.cloak_noblesse2_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="220" />
+		<set name="material" val="cloth" />
+		<set name="item_skill" val="13771-1" />
+		<!-- Exalted Cloak -->
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="50" />
+			<add order="0x10" stat="mDef" val="40" />
+		</for>
+	</item>
+	<item id="37764" type="EtcItem" nameRu="Зелье CP Высшего Качества" nameEn="Superior CP Potion">
+		<!-- Восстанавливает 2000 CP. -->
+		<!-- Restores 2000 CP. -->
+		<set name="icon" val="icon.etc_cp_potion_i01" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37765" type="EtcItem" nameRu="Письмо Элрики" nameEn="Elikia's Letter">
+		<!-- Сообщение, переданное Элрикой Леоне Блэкберд.  -->
+		<!-- Message sent from Elikia to Leona Blackbird. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37766" type="EtcItem" nameRu="Осколок Хаоса" nameEn="Chaos Fragment">
+		<!-- Вещь, полученная за уничтожение монстров в районе Волшебных Мегалитов Белефа. -->
+		<!-- An item obtained by defeating monsters in the Beleth's Magic Circle area in Hellbound. -->
+		<set name="icon" val="icon.etc_stone_black_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37767" type="EtcItem" nameRu="Микстура Всплеска Энергии" nameEn="Vitality Replenishing Potion">
+		<!-- Микстура, увеличивающая очки энергии на определенное значение. -->
+		<!-- Potion that replenishes a certain amount of vitality points. -->
+		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37768" type="EtcItem" nameRu="Стартер Подъемника" nameEn="Crane Activator">
+		<!-- Магический предмет, позволяющий задействовать двигатель подъемника в Каменоломнях Повстанцев. Если вставить стартер в двигатель, то с некоторой вероятностью можно получить хорошую награду. -->
+		<!-- Activates the Crane at the Desert Quarry. Place it inside for a chance at a reward. -->
+		<set name="icon" val="icon.etc_freezing_core_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="37769" type="EtcItem" nameRu="Энергия Иного Измерения - Ур. 5" nameEn="Dimensional Energy - Stage 5">
+		<!-- Энергия максимального уровня, поможет получить награду у Мермедена. -->
+		<!-- Energy of the dimensions. It is the highest stage for receiving rewards from Mermoden. -->
+		<set name="icon" val="icon.etc_magic_energy_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37770" type="EtcItem" nameRu="Свиток Благословения - Оружие R" nameEn="Scroll of Blessing: Weapon (R-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Реквиема или Апокалипсиса на благословенное. -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Requiem or Apocalypse equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r2" />
+		<set name="weight" val="100" />
+		<set name="price" val="5267574" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="37771" type="EtcItem" nameRu="Свиток Благословения - Оружие R95" nameEn="Scroll of Blessing: Weapon (R95-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Фантазмы на благословенное.  -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Specter equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r95" />
+		<set name="weight" val="100" />
+		<set name="price" val="70637960" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37772" type="EtcItem" nameRu="Свиток Благословения - Оружие R99" nameEn="Scroll of Blessing: Weapon (R99-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Хелиоса на благословенное.  -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r99" />
+		<set name="weight" val="100" />
+		<set name="price" val="155659040" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37773" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Оружие R (100%)" nameEn="Recipe: Scroll of Blessing: Weapon (R-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Оружие R. Требуется умение Создать Предмет 12-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R-grade (weapon). Requires Create Item level 12. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="526757" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="recipe" />
+		<!-- <set name="commissionItemType" val="RECIPE" \> -->
+		<set name="recipe_id" val="4163" />
+		<!-- mk_wp_scroll_of_blessing_r_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37774" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Оружие R95 (100%)" nameEn="Recipe: Scroll of Blessing: Weapon (R95-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Оружие R95. Требуется умение Создать Предмет 13-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R95-grade (weapon). Requires Create Item level 13. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="7063796" />
+		<set name="etcitem_type" val="recipe" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="4164" />
+		<!-- mk_wp_scroll_of_blessing_r95_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37775" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Оружие R99 (100%)" nameEn="Recipe: Scroll of Blessing: Weapon (R99-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Оружие R99. Требуется умение Создать Предмет 14-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R99-grade (weapon). Requires Create Item level 14. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="15565904" />
+		<set name="etcitem_type" val="recipe" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="4165" />
+		<!-- mk_wp_scroll_of_blessing_r99_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37776" type="EtcItem" nameRu="Часть Свитка Благословения - Оружие R" nameEn="Scroll of Blessing Scraps: Weapon (R-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Оружие R. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R-grade (weapon). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r" />
+		<set name="weight" val="10" />
+		<set name="price" val="47408" />
+		<set name="etcitem_type" val="material" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="wood" />
+	</item>
+	<item id="37777" type="EtcItem" nameRu="Часть Свитка Благословения - Оружие R95" nameEn="Scroll of Blessing Scraps: Weapon (R95-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Оружие R95. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R95-grade (weapon). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r95" />
+		<set name="weight" val="10" />
+		<set name="price" val="635742" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="material" />
+		<!-- <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37778" type="EtcItem" nameRu="Часть Свитка Благословения - Оружие R99" nameEn="Scroll of Blessing Scraps: Weapon (R99-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Оружие R99. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R99-grade (weapon). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r99" />
+		<set name="weight" val="10" />
+		<set name="price" val="1400931" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="material" />
+		<!-- <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37779" type="EtcItem" nameRu="Свиток Благословения - Доспех R" nameEn="Scroll of Blessing: Armor (R-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Бессмертия или Ада на благословенное.  -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Immortal or Twilight equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r2" />
+		<set name="weight" val="100" />
+		<set name="price" val="1371850" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37780" type="EtcItem" nameRu="Свиток Благословения - Доспех R95" nameEn="Scroll of Blessing: Armor (R95-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Кадейры на благословенное.  -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Seraph equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r95" />
+		<set name="weight" val="100" />
+		<set name="price" val="19162980" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37781" type="EtcItem" nameRu="Свиток Благословения - Доспех R99" nameEn="Scroll of Blessing: Armor (R99-grade)">
+		<!-- Позволяет с небольшой вероятностью обменять у Кузнеца Маммона обыкновенное снаряжение Айдиоса на благословенное.  -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
+		<set name="icon" val="icon.bless_scroll_r99" />
+		<set name="weight" val="100" />
+		<set name="price" val="42227840" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37782" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Доспех R (100%)" nameEn="Recipe: Scroll of Blessing: Armor (R-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Доспех R. Требуется умение Создать Предмет 12-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R-grade (armor). Requires Create Item level 12. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="137185" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="recipe" />
+		<!-- <set name="commissionItemType" val="RECIPE" \> -->
+		<set name="recipe_id" val="4166" />
+		<!-- mk_am_scroll_of_blessing_r_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37783" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Доспех R95 (100%)" nameEn="Recipe: Scroll of Blessing: Armor (R95-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Доспех R95. Требуется умение Создать Предмет 13-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R95-grade (armor). Requires Create Item level 13. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="1916298" />
+		<set name="etcitem_type" val="recipe" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="4167" />
+		<!-- mk_am_scroll_of_blessing_r95_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37784" type="EtcItem" nameRu="Рецепт: Свиток Благословения - Доспех R99 (100%)" nameEn="Recipe: Scroll of Blessing: Armor (R99-grade)">
+		<!-- Для Мастера Тира. Рецепт изготовления Свитка Благословения - Доспех R99. Требуется умение Создать Предмет 14-го уровня. Вероятность успеха 100%. -->
+		<!-- Exclusive for Tyrr Maestro. Recipe for making a Scroll of Blessing: R99-grade (armor). Requires Create Item level 14. Success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="weight" val="30" />
+		<set name="price" val="4222784" />
+		<set name="etcitem_type" val="recipe" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="4168" />
+		<!-- mk_am_scroll_of_blessing_r99_gd35 -->
+		<set name="handler" val="Recipes" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37785" type="EtcItem" nameRu="Часть Свитка Благословения - Доспех R" nameEn="Scroll of Blessing Scraps: Armor (R-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Доспех R. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R-grade (armor). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r" />
+		<set name="weight" val="10" />
+		<set name="price" val="12347" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="material" />
+		<!-- <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37786" type="EtcItem" nameRu="Часть Свитка Благословения - Доспех R95" nameEn="Scroll of Blessing Scraps: Armor (R95-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Доспех R95. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R95-grade (armor). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r95" />
+		<set name="weight" val="10" />
+		<set name="price" val="172467" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="material" />
+		<!-- <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37787" type="EtcItem" nameRu="Часть Свитка Благословения - Доспех R99" nameEn="Scroll of Blessing Scraps: Armor (R99-grade)">
+		<!-- Основной материал, позволяющий создать Свиток Благословения - Доспех R99. -->
+		<!-- Main ingredient for making a Scroll of Blessing: R99-grade (armor). -->
+		<set name="icon" val="icon.etc_bless_scroll_fragment_r99" />
+		<set name="weight" val="10" />
+		<set name="price" val="380051" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="material" />
+		<!-- <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" \> -->
+		<set name="material" val="wood" />
+	</item>
+	<item id="37788" type="EtcItem" nameRu="Руна SP: Низкое Качество" nameEn="SP Rune (Low-grade)">
+		<!-- При наличии в инвентаре бонус SP +10%. На 1 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune_select" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37789" type="EtcItem" nameRu="Руна SP: Среднее Качество" nameEn="SP Rune (Mid-grade)">
+		<!-- При наличии в инвентаре бонус SP +20%. На 1 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 1-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune_select" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37790" type="EtcItem" nameRu="Руна SP: Высокое Качество" nameEn="SP Rune (High-grade)">
+		<!-- При наличии в инвентаре бонус SP +30%. На 1 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 1-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune_select" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37791" type="EtcItem" nameRu="Запечатанная Древняя Книга Демона" nameEn="Sealed Demonic Tome">
+		<!-- Плотно запечатанная Древняя Книга Демона. Хранитель Древних Книг Каравана Буденка собирает эти книги в Деревне Беженцев. -->
+		<!-- Ancient book of a tightly sealed demon. The ancient book managing caravan Budenka is collecting it in the Refugee Village. -->
+		<set name="icon" val="icon.etc_codex_of_giant_i02" />
+		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="material" val="leather" />
+	</item>
+	<item id="37792" type="EtcItem" nameRu="Зелье Защиты - Оглушение" nameEn="Potion of Protection: Stun">
+		<!-- Сопротивление оглушению +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Stun Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17195-1" />
+		<!-- Potion of Protection: Stun -->
+	</item>
+	<item id="37793" type="EtcItem" nameRu="Зелье Защиты - Удержание" nameEn="Potion of Protection: Hold">
+		<!-- Сопротивление удержанию +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Hold Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17196-1" />
+		<!-- Potion of Protection: Hold -->
+	</item>
+	<item id="37794" type="EtcItem" nameRu="Зелье Защиты - Кровотечение" nameEn="Potion of Protection: Bleed">
+		<!-- Сопротивление кровотечению +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Bleed Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17197-1" />
+		<!-- Potion of Protection: Bleed -->
+	</item>
+	<item id="37795" type="EtcItem" nameRu="Зелье Защиты - Паралич" nameEn="Potion of Protection: Paralyze">
+		<!-- Сопротивление параличу +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Paralysis Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17198-1" />
+		<!-- Potion of Protection: Paralyze -->
+	</item>
+	<item id="37796" type="EtcItem" nameRu="Зелье Защиты - Ментальная Сила" nameEn="Potion of Protection: Mental">
+		<!-- Сопротивление ментальным атакам +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to MEN Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17199-1" />
+		<!-- Potion of Protection: Mental -->
+	</item>
+	<item id="37797" type="EtcItem" nameRu="Зелье Защиты - Усыпление" nameEn="Potion of Protection: Sleep">
+		<!-- Сопротивление усыплению +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Sleep Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17200-1" />
+		<!-- Potion of Protection: Sleep -->
+	</item>
+	<item id="37798" type="EtcItem" nameRu="Зелье Защиты - Отравление" nameEn="Potion of Protection: Poison">
+		<!-- Сопротивление отравлению +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Poison Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17201-1" />
+		<!-- Potion of Protection: Poison -->
+	</item>
+	<item id="37799" type="EtcItem" nameRu="Зелье Защиты - Отталкивание / Опрокидывание" nameEn="Potion of Protection: Knock Back/ Knock Down">
+		<!-- Сопротивление отталкиванию/ опрокидыванию +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Knock back/ Knock Down Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17202-1" />
+		<!-- Potion of Protection: Knock Back/ Knock Down -->
+	</item>
+</list>

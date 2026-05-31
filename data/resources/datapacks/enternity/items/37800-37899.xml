@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="37800" type="EtcItem" nameRu="Зелье Защиты - Воздушные Оковы" nameEn="Potion of Protection: Aerial Yoke">
+		<!-- Сопротивление воздушным оковам +5%. Нельзя использовать на Олимпиаде. При использовании с другими Зельями Защиты эффект не суммируется. -->
+		<!-- When used, increases Resistance to Aerial Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="item_skill" val="17203-1" />
+		<!-- Potion of Protection: Aerial Yoke -->
+	</item>
+	<item id="37801" type="EtcItem" nameRu="Осколок Усиливающего Камня Кровавого Айдиоса" nameEn="Bloody Eternal Enhancement Stone Fragment">
+		<!-- Если принести 10 осколков Кузнецу Маммона, можно получить Усиливающий Камень Кровавого Айдиоса. -->
+		<!-- Bring 10 fragments to the Black of mammon to obtain a Bloody Eternal Enhancement Stone. -->
+		<set name="icon" val="icon.energy_condenser_fragment_pvp" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="37802" type="EtcItem" nameRu="Осколок Усиливающего Камня Темного Айдиоса" nameEn="Dark Eternal Enhancement Stone Fragment">
+		<!-- Если принести 10 осколков Кузнецу Маммона, можно получить Усиливающий Камень Темного Айдиоса. -->
+		<!-- Bring 10 fragments to the Black of mammon to obtain a Dark Eternal Enhancement Stone. -->
+		<set name="icon" val="icon.energy_condenser_fragment_pve" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="leather" />
+	</item>
+	<item id="37803" type="EtcItem" nameRu="Особый Свиток: Модифицировать Оружие Мастера Йоги" nameEn="Master Yogi's Special Scroll: Enchant Weapon">
+		<!-- Особый свиток модификации оружия, наполненный духовной силой Мастера Йоги. Используется только с Посохом Мастера Йоги, при неудачной модификации предмет не уничтожается, значение модификации сохраняется. Нельзя использовать с посохом выше +15. Нельзя использовать с предметами, увеличивающими шанс модификации.  -->
+		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or above. Lucky Enchant Stones cannot be used with this item. -->
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<set name="etcitem_type" val="ancient_crystal_enchant_wp" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37804" type="Armor" nameRu="Копия Тиары" nameEn="Replica Tiara">
+		<!-- Искусная копия Почетной Тиары. Атака стихией +30. -->
+		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus +30 when equipped. -->
+		<set name="icon" val="icon.accessory_noblesse2_tiara_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hair2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="item_skill" val="13772-1" />
+		<!-- Replica Tiara -->
+		<for>
+			<add order="0x40" stat="fireRes" val="15" />
+			<add order="0x40" stat="waterRes" val="15" />
+			<add order="0x40" stat="windRes" val="15" />
+			<add order="0x40" stat="earthRes" val="15" />
+			<add order="0x40" stat="holyRes" val="15" />
+			<add order="0x40" stat="darkRes" val="15" />
+		</for>
+	</item>
+	<item id="37805" type="Weapon" nameRu="Посох Мастера Йоги" nameEn="Master Yogi's Staff">
+		<!-- Посох Мастера Йоги, который позволит испытать удачу. Как можно больше! Ожидайте хорошей награды! -->
+		<!-- Test your luck! A good reward is waiting. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="11" />
+			<set order="0x08" stat="mAtk" val="12" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37806" type="Weapon" nameRu="Посох Мастера Йоги" nameEn="Master Yogi's Staff">
+		<!-- Посох Мастера Йоги, который позволит испытать удачу. Как можно больше! Ожидайте хорошей награды! -->
+		<!-- Test your luck! A good reward is waiting. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="11" />
+			<set order="0x08" stat="mAtk" val="12" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37807" type="Weapon" nameRu="Посох Мастера Йоги" nameEn="Master Yogi's Staff">
+		<!-- Посох Мастера Йоги, который позволит испытать удачу. Как можно больше! Ожидайте хорошей награды! -->
+		<!-- Test your luck! A good reward is waiting. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="11" />
+			<set order="0x08" stat="mAtk" val="12" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37808" type="Weapon" nameRu="Посох Мастера Йоги" nameEn="Master Yogi's Staff">
+		<!-- Посох Мастера Йоги, который позволит испытать удачу. Как можно больше! Ожидайте хорошей награды! -->
+		<!-- Test your luck! A good reward is waiting. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s84" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="11" />
+			<set order="0x08" stat="mAtk" val="12" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37809" type="EtcItem" nameRu="Чудесный Хрусталь" nameEn="Mysterious Crystal">
+		<!-- Сосуд духовной силы Мастера Йоды. Если принести его вместе с Посохом Мастера Йоги +15 ~ +17, можно обменять на предмет высокого Ранга. -->
+		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant level by 1. -->
+		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37810" type="Armor" nameRu="Шлем Киберкостюма" nameEn="Metal Suit Hair Accessory">
+		<!-- Шлем Киберкостюма. Используется в костюме. -->
+		<!-- Metal Suit Hair Accessory. Part of a costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_hair" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="cloth" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="37811" type="Armor" nameRu="Кираса Киберкостюма" nameEn="Metal Suit Breastplate">
+		<!-- Кираса Киберкостюма. Используется в костюме. -->
+		<!-- Metal Suit Breastplate. Part of a costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+		<set name="bodypart" val="chest" />
+	</item>
+	<item id="37812" type="Armor" nameRu="Набедренники Киберкостюма " nameEn="Metal Suit Gaiters">
+		<!-- Набедренники Киберкостюма. Используется в костюме. -->
+		<!-- Metal Suit Gaiters. Part of a costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+		<set name="bodypart" val="legs" />
+	</item>
+	<item id="37813" type="Armor" nameRu="Перчатки Киберкостюма" nameEn="Metal Suit Gloves">
+		<!-- Перчатки Киберкостюма. Используется в костюме. -->
+		<!-- Metal Suit Gloves. Part of a costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_g" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+		<set name="bodypart" val="gloves" />
+	</item>
+	<item id="37814" type="Armor" nameRu="Сапоги Киберкостюма " nameEn="Metal Suit Boots">
+		<!-- Сапоги Киберкостюма. Используется в костюме. -->
+		<!-- Metal Suit Boots. Part of a costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
+		<set name="default_action" val="equip" />
+		<set name="material" val="leather" />
+		<set name="bodypart" val="feet" />
+	</item>
+	<item id="37815" type="EtcItem" nameRu="Ящик с Железным Костюмом" nameEn="Metal Suit Pack">
+		<!-- Удивительный Сундук, содержащий Камень Обработки Шлема/ Кирасы/ Набедренников/ Перчаток/ Сапог Киберкостюма на 30 д. -->
+		<!-- Mysterious box containing 30-day limit appearance stone for Metal Shoot hair accessory, breastplate, gaiters, boots, and gloves. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="peel" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="37816" type="EtcItem" nameRu="Камень Обработки Шлема Киберкостюма" nameEn="Metal Suit Hair Accessory Appearance Stone">
+		<!-- Камень Обработки, на 30 д. придающий головному убору вид Шлема Киберкостюма. Доступно только для головных уборов, использующих 2 ячейки. -->
+		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37817" type="EtcItem" nameRu="Камень Обработки Кирасы Киберкостюма " nameEn="Metal Suit Breastplate Appearance Stone">
+		<!-- Камень Обработки, на 30 придающий нагруднику вид Кирасы Киберкостюма. -->
+		<!-- Changes the appearance of a top to that of a Metal Shoot breastplate for 30 days. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37818" type="EtcItem" nameRu="Камень Обработки Набедренников Киберкостюма" nameEn="Metal Suit Gaiters Appearance Stone">
+		<!-- Камень Обработки, на 30 д. придающий набедренникам вид Набедренников Киберкостюма. -->
+		<!-- Changes the appearance of a bottom to that of Metal Shoot gaiters for 30 days. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37819" type="EtcItem" nameRu="Камень Обработки Перчаток Киберкостюма " nameEn="Metal Suit Gloves Appearance Stone">
+		<!-- Камень Обработки, на 30 д. придающий перчаткам вид Перчаток Киберкостюма. -->
+		<!-- Changes the appearance of gloves to that of Metal Shoot gloves for 30 days. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37820" type="EtcItem" nameRu="Камень Обработки Сапог Киберкостюма " nameEn="Metal Suit Boots Appearance Stone">
+		<!-- Камень Обработки, на 30 д. придающий обуви вид Сапог Киберкостюма. -->
+		<!-- Changes the appearance of boots to that of Metal Shoot boots for 30 days. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="time" val="43200" />
+		<set name="etcitem_type" val="scroll" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37821" type="EtcItem" nameRu="Микстура Трансформации Киберкостюма " nameEn="Transformation Potion: Metal Suit">
+		<!-- В течение 1 ч. позволяет выглядеть так, будто персонаж надел Киберкостюм.  -->
+		<!-- Modifies your appearance into that of a Metal Suit for 1 hr. -->
+		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="weight" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="liquid" />
+	</item>
+	<item id="37822" type="EtcItem" nameRu="Свиток Телепорта: Остров Ада" nameEn="Scroll of Escape: Hellbound">
+		<!-- Свиток, который может переместить на Остров Ада. -->
+		<!-- Scroll that teleports you to Hellbound. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37823" type="EtcItem" nameRu="Подарок Леоны" nameEn="Leona's Gift">
+		<!-- Подарок, полученный от Леоны Блэкберд за борьбу со злом Острова Ада. Для персонажей 99 уровня и выше. -->
+		<!-- Blackbird's present that is given to the heroes who help in defeating the evil on Hellbound. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37824" type="EtcItem" nameRu="Купон на Камень Обработки Головного Убора " nameEn="Hair Accessory Appearance Stone Coupon">
+		<!-- Предмет, который можно обменять на Камень Обработки Головного Убора (15 д.). Можно обменять у Помощника Путешественников. -->
+		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
+		<set name="icon" val="icon..etc_level_bustup_ticket_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37825" type="EtcItem" nameRu="Купон на Камень Обработки Головного Убора " nameEn="Hair Accessory Appearance Stone Coupon">
+		<!-- Предмет, который можно обменять на Камень Обработки Головного Убора (30 д.). Можно обменять у Помощника Путешественников. -->
+		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (30-day limited). The exchange can be done through the Adventurers' Guide. -->
+		<set name="icon" val="icon..etc_level_bustup_ticket_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37826" type="EtcItem" nameRu="Камень Обработки Кепки NC Dinos" nameEn="NC Dinos Hat Appearance Stone">
+		<!-- Позволяет придать головному убору вид Кепки NC Dinos (15 д.). Облик можно копировать с предметов, занимающих аналогичное количество ячеек. Необходим предмет-прототип, внешний вид которого копируется, но сам он не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком.  Внимание: если изменить внешний вид головного убора на женский, то он станет недоступен персонажу мужского пола. -->
+		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37827" type="EtcItem" nameRu="Камень Обработки Кепки NC Dinos" nameEn="NC Dinos Hat Appearance Stone">
+		<!-- Позволяет придать головному убору вид Кепки NC Dinos (30 д.). Облик можно копировать с предметов, занимающих аналогичное количество ячеек. Необходим предмет-прототип, внешний вид которого копируется, но сам он не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком.  Внимание: если изменить внешний вид головного убора на женский, то он станет недоступен персонажу мужского пола. -->
+		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair1" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37828" type="EtcItem" nameRu="Камень Обработки Шляпы Зорро" nameEn="Vigilante Hat Appearance Stone">
+		<!-- Позволяет придать головному убору вид Шляпы Зорро (15 д.). Облик можно копировать с предметов, занимающих аналогичное количество ячеек. Необходим предмет-прототип, внешний вид которого копируется, но сам он не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком.  Внимание: если изменить внешний вид головного убора на женский, то он станет недоступен персонажу мужского пола. -->
+		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37829" type="EtcItem" nameRu="Камень Обработки Шляпы Зорро" nameEn="Vigilante Hat Appearance Stone">
+		<!-- Позволяет придать головному убору вид Шляпы Зорро (30 д.). Облик можно копировать с предметов, занимающих аналогичное количество ячеек. Необходим предмет-прототип, внешний вид которого копируется, но сам он не уничтожается. Характеристики предметов с измененным обликом остаются прежними. Применяется двойным щелчком.  Внимание: если изменить внешний вид головного убора на женский, то он станет недоступен персонажу мужского пола. -->
+		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37830" type="EtcItem" nameRu="Купон на Камень Обработки Оружия Белого Дня" nameEn="Valentine Appearance Stone Coupon: Weapon">
+		<!-- Предмет, который можно обменять на Камень Обработки Оружия (15 д.). Можно обменять у Помощника Путешественников. -->
+		<!-- Item that can be exchanged for a special appearance weapon appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37831" type="EtcItem" nameRu="Купон на Камень Обработки Оружия Белого Дня" nameEn="Valentine Appearance Stone Coupon: Weapon">
+		<!-- Предмет, который можно обменять у Помощника Путешественников на Камень Обработки Оружия (30 д.), придающий предмету особый внешний вид.  -->
+		<!-- Item that can be exchanged for a special weapon appearance stone (30-day). The exchange can be done through the Adventurers' Guide. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37832" type="EtcItem" nameRu="Камень Обработки Кинжала Белого Дня" nameEn="Valentine Appearance Stone: Dagger">
+		<!-- Позволяет придать кинжалу вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37833" type="EtcItem" nameRu="Камень Обработки Одноручного Меча Белого Дня" nameEn="Valentine Appearance Stone: One-handed Sword">
+		<!-- Позволяет придать одноручному мечу вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37834" type="EtcItem" nameRu="Камень Обработки Двуручного Меча Белого Дня" nameEn="Valentine Appearance Stone: Two-handed Sword">
+		<!-- Позволяет придать двуручному мечу вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37835" type="EtcItem" nameRu="Камень Обработки Одноручной Дубины Белого Дня" nameEn="Valentine Appearance Stone: One-handed Blunt Weapon">
+		<!-- Позволяет придать одноручному дробящему оружию вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37836" type="EtcItem" nameRu="Камень Обработки Кастета Белого Дня" nameEn="Valentine Appearance Stone: Fist Weapon">
+		<!-- Позволяет придать кастету вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37837" type="EtcItem" nameRu="Камень Обработки Копья Белого Дня" nameEn="Valentine Appearance Stone: Spear">
+		<!-- Позволяет придать древковому оружию вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37838" type="EtcItem" nameRu="Камень Обработки Лука Белого Дня" nameEn="Valentine Appearance Stone: Bow">
+		<!-- Позволяет придать луку вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37839" type="EtcItem" nameRu="Камень Обработки Арбалета Белого Дня" nameEn="Valentine Appearance Stone: Crossbow">
+		<!-- Позволяет придать арбалету вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37840" type="EtcItem" nameRu="Камень Обработки Одноручного Магического Меча Белого Дня" nameEn="Valentine Appearance Stone: One-handed Magic Sword">
+		<!-- Позволяет придать одноручному магическому мечу вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37841" type="EtcItem" nameRu="Камень Обработки Одноручной Магической Дубины Белого Дня" nameEn="Valentine Appearance Stone: One-handed Magic Blunt Weapon">
+		<!-- Позволяет придать одноручному магическому дробящему оружию вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37842" type="EtcItem" nameRu="Камень Обработки Двуручной Магической Дубины Белого Дня" nameEn="Valentine Appearance Stone: Two-handed Magic Blunt Weapon">
+		<!-- Позволяет придать двуручному магическому дробящему оружию вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37843" type="EtcItem" nameRu="Камень Обработки Парных Мечей Белого Дня" nameEn="Valentine Appearance Stone: Dual sword">
+		<!-- Позволяет придать парным мечам вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a dual sword to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37844" type="EtcItem" nameRu="Камень Обработки Парных Кинжалов Белого Дня" nameEn="Valentine Appearance Stone: Dual Dagger">
+		<!-- Позволяет придать парным кинжалам вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37845" type="EtcItem" nameRu="Камень Обработки Парных Дубин Белого Дня" nameEn="Valentine Appearance Stone: Dual Blunt Weapon">
+		<!-- Позволяет придать парному дробящему оружию вид оружия Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37846" type="EtcItem" nameRu="Камень Обработки Щита Белого Дня" nameEn="Valentine Appearance Stone: Shield">
+		<!-- Позволяет придать щиту вид Щита Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a shield to that of a Valentine's Day shield.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37847" type="EtcItem" nameRu="Камень Обработки Символа Белого Дня" nameEn="Valentine Appearance Stone: Sigil">
+		<!-- Позволяет придать символу вид Символа Белого Дня. На 15 д. -->
+		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil.15-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37848" type="EtcItem" nameRu="Камень Обработки Кинжала Белого Дня" nameEn="Valentine Appearance Stone: Dagger">
+		<!-- Позволяет придать кинжалу вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37849" type="EtcItem" nameRu="Камень Обработки Одноручного Меча Белого Дня" nameEn="Valentine Appearance Stone: One-handed Sword">
+		<!-- Позволяет придать одноручному мечу вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37850" type="EtcItem" nameRu="Камень Обработки Двуручного Меча Белого Дня" nameEn="Valentine Appearance Stone: Two-handed Sword">
+		<!-- Позволяет придать двуручному мечу вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37851" type="EtcItem" nameRu="Камень Обработки Одноручной Дубины Белого Дня" nameEn="Valentine Appearance Stone: One-handed Blunt Weapon">
+		<!-- Позволяет придать одноручному дробящему оружию вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37852" type="EtcItem" nameRu="Камень Обработки Кастета Белого Дня" nameEn="Valentine Appearance Stone: Fist Weapon">
+		<!-- Позволяет придать кастету вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37853" type="EtcItem" nameRu="Камень Обработки Копья Белого Дня" nameEn="Valentine Appearance Stone: Spear">
+		<!-- Позволяет придать древковому оружию вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37854" type="EtcItem" nameRu="Камень Обработки Лука Белого Дня" nameEn="Valentine Appearance Stone: Bow">
+		<!-- Позволяет придать луку вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37855" type="EtcItem" nameRu="Камень Обработки Арбалета Белого Дня" nameEn="Valentine Appearance Stone: Crossbow">
+		<!-- Позволяет придать арбалету вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37856" type="EtcItem" nameRu="Камень Обработки Одноручного Магического Меча Белого Дня" nameEn="Valentine Appearance Stone: One-handed Magic Sword">
+		<!-- Позволяет придать одноручному магическому мечу вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37857" type="EtcItem" nameRu="Камень Обработки Одноручной Магической Дубины Белого Дня" nameEn="Valentine Appearance Stone: One-handed Magic Blunt Weapon">
+		<!-- Позволяет придать одноручному магическому дробящему оружию вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37858" type="EtcItem" nameRu="Камень Обработки Двуручной Магической Дубины Белого Дня" nameEn="Valentine Appearance Stone: Two-handed Magic Blunt Weapon">
+		<!-- Позволяет придать двуручному магическому дробящему оружию вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37859" type="EtcItem" nameRu="Камень Обработки Парных Мечей Белого Дня" nameEn="Valentine Appearance Stone: Dual sword">
+		<!-- Позволяет придать парным мечам вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a dual sword to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37860" type="EtcItem" nameRu="Камень Обработки Парных Кинжалов Белого Дня" nameEn="Valentine Appearance Stone: Dual Dagger">
+		<!-- Позволяет придать парным кинжалам вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37861" type="EtcItem" nameRu="Камень Обработки Парных Дубин Белого Дня" nameEn="Valentine Appearance Stone: Dual Blunt Weapon">
+		<!-- Позволяет придать парному дробящему оружию вид оружия Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37862" type="EtcItem" nameRu="Камень Обработки Щита Белого Дня" nameEn="Valentine Appearance Stone: Shield">
+		<!-- Позволяет придать щиту вид Щита Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37863" type="EtcItem" nameRu="Камень Обработки Символа Белого Дня" nameEn="Valentine Appearance Stone: Sigil">
+		<!-- Позволяет придать символу вид Символа Белого Дня. Предмет действителен 30 д. -->
+		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="none" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37864" type="EtcItem" nameRu="Свиток SP Героя-Новичка" nameEn="Hero's SP Scroll (Novice)">
+		<!-- Дважды щелкните, чтобы получить 1 000 000 SP. -->
+		<!-- Double-click to obtain 1,000,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll1_i00" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37865" type="EtcItem" nameRu="Свиток SP Героя - Средний уровень" nameEn="Hero's SP Scroll (Experienced)">
+		<!-- Дважды щелкните, чтобы получить 5 000 000 SP. -->
+		<!-- Double-click to obtain 5,000,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll2_i00" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37866" type="EtcItem" nameRu="Свиток SP Героя - Высокий уровень" nameEn="Hero's SP Scroll (Expert)">
+		<!-- Дважды щелкните, чтобы получить 10 000 000 SP. -->
+		<!-- Double-click to obtain 10,000,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37867" type="EtcItem" nameRu="Свиток Героического Эпизода" nameEn="Valiant Scroll">
+		<!-- При использовании на 30 мин. Физ. Атк. +10%, Маг. Атк. +21%, Физ. Защ. +15%, Маг. Защ. +15%, Макс. HP/ MP/ CP +15%. Не исчезает в случае смерти. Нельзя использовать на Олимпиаде/ Фестивале Хаоса. -->
+		<!-- For 30 minutes, P. Atk. +10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="material" val="paper" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="17220-1" />
+		<!-- Valiant Scroll -->
+	</item>
+	<item id="37868" type="Weapon" nameRu="Оружие Героя - Кинжал" nameEn="Hero's Weapon: Dagger">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero" />
+		<set name="weapon_type" val="dagger" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13570-1" />
+		<!-- Hero's Weapon: Dagger -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="5" />
+		<for>
+			<set order="0x08" stat="pAtk" val="881" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37869" type="Weapon" nameRu="Оружие Героя - Одноручный Меч" nameEn="Hero's Weapon: One-handed Sword">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero" />
+		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13571-1" />
+		<!-- Hero's Weapon: One-handed Sword -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1007" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="37870" type="Weapon" nameRu="Оружие Героя - Двуручный Меч" nameEn="Hero's Weapon: Two-handed Sword">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
+		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13572-1" />
+		<!-- Hero's Weapon: Two-handed Sword -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1225" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="37871" type="Weapon" nameRu="Оружие Героя - Одноручная Дубина" nameEn="Hero's Weapon: One-handed Blunt Weapon">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero" />
+		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="fine_steel" />
+		<set name="item_skill" val="13573-1" />
+		<!-- Hero's Weapon: One-handed Blunt Weapon -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1007" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37872" type="Weapon" nameRu="Оружие Героя - Кастет" nameEn="Hero's Weapon: Fist Weapon">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero" />
+		<set name="weapon_type" val="dualfist" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13574-1" />
+		<!-- Hero's Weapon: Fist Weapon -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="5" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1225" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37873" type="Weapon" nameRu="Оружие Героя - Копье" nameEn="Hero's Weapon: Spear">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero" />
+		<set name="weapon_type" val="pole" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="bronze" />
+		<set name="item_skill" val="13115-1" />
+		<!-- Polearm Multi-attack -->
+		<set name="item_skill" val="13575-1" />
+		<!-- Hero's Weapon: Spear -->
+		<set name="attack_range" val="80" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1007" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37874" type="Weapon" nameRu="Оружие Героя - Лук" nameEn="Hero's Weapon: Bow">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero" />
+		<set name="weapon_type" val="bow" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="reuse_delay" val="1500" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13576-1" />
+		<!-- Hero's Weapon: Bow -->
+		<set name="attack_range" val="500" />
+		<set name="random_damage" val="5" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1983" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="293" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37875" type="Weapon" nameRu="Оружие Героя - Арбалет" nameEn="Hero's Weapon: Crossbow">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_shooter" />
+		<set name="weapon_type" val="crossbow" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="reuse_delay" val="1350" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13577-1" />
+		<!-- Hero's Weapon: Crossbow -->
+		<set name="attack_range" val="400" />
+		<set name="random_damage" val="5" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1786" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37876" type="Weapon" nameRu="Оружие Героя - Одноручный Магический Меч" nameEn="Hero's Weapon: One-handed Magic Sword">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_infinity_sword" />
+		<set name="weapon_type" val="sword" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13578-1" />
+		<!-- Hero's Weapon: One-handed Magic Sword -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="805" />
+			<set order="0x08" stat="mAtk" val="696" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="37877" type="Weapon" nameRu="Оружие Героя - Одноручная Магическая Дубина" nameEn="Hero's Weapon: One-handed Magic Blunt Weapon">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero" />
+		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="wood" />
+		<set name="item_skill" val="13579-1" />
+		<!-- Hero's Weapon: One-handed Magic Blunt Weapon -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="805" />
+			<set order="0x08" stat="mAtk" val="696" />
+			<set order="0x08" stat="pAtkSpd" val="379" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37878" type="Weapon" nameRu="Оружие Героя - Двуручная Магическая Дубина" nameEn="Hero's Weapon: Two-handed Magic Blunt Weapon">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero" />
+		<set name="weapon_type" val="blunt" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="wood" />
+		<set name="item_skill" val="13580-1" />
+		<!-- Hero's Weapon: Two-handed Magic Blunt Weapon -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="981" />
+			<set order="0x08" stat="mAtk" val="765" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37879" type="Weapon" nameRu="Оружие Героя - Парные Мечи" nameEn="Hero's Weapon: Dual sword">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualsword" />
+		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13581-1" />
+		<!-- Hero's Weapon: Dualsword -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1225" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<set order="0x08" stat="rCrit" val="8" />
+		</for>
+	</item>
+	<item id="37880" type="Weapon" nameRu="Оружие Героя - Парные Кинжалы" nameEn="Hero's Weapon: Dual Dagger">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualdagger" />
+		<set name="weapon_type" val="dualdagger" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+		<set name="item_skill" val="13582-1" />
+		<!-- Hero's Weapon: Dual Dagger -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="10" />
+		<cond msgId="1518">
+			<player canUseDualDaggers="true" />
+		</cond>
+		<for>
+			<set order="0x08" stat="pAtk" val="1007" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="433" />
+			<set order="0x08" stat="rCrit" val="12" />
+			<add order="0x10" stat="accCombat" val="-3.75" />
+		</for>
+	</item>
+	<item id="37881" type="Weapon" nameRu="Оружие Героя - Парные Дубины" nameEn="Hero's Weapon: Dual Blunt Weapon">
+		<!-- Оружие, наполненное силой Героя. Доступно персонажам всех уровней. На 15 д. Можно использовать с Зарядами Души/ Зарядами Духа/ Благ. Зарядами Духа без Ранга. Нельзя использовать на Олимпиаде. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_r_dualblunt" />
+		<set name="weapon_type" val="dual" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="21600" />
+		<set name="material" val="fine_steel" />
+		<set name="item_skill" val="13583-1" />
+		<!-- Hero's Weapon: Dual Blunt Weapon -->
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="1225" />
+			<set order="0x08" stat="mAtk" val="521" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="37882" type="EtcItem" nameRu="Купон на Оружие Героя" nameEn="Hero's Weapon Coupon">
+		<!-- Можно обменять на Оружие Героя (15 д.) у Помощника Путешественников. -->
+		<!-- Item that can be exchanged for a hero's weapon (15-day). The exchange can be done through the Adventurers' Guide. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_exchange_ticket_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37883" type="EtcItem" nameRu="Сундук с Эпизодами" nameEn="Valiant Chest">
+		<!-- Наградной ящик с подарком Героя. Дважды щелкните, чтобы получить Камень Обмена любого типа/ свиток SP. -->
+		<!-- Treasure box containing hero's present. Double click to acquire various appearance changing stones and SP scrolls. -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37884" type="EtcItem" nameRu="Эмблема Героя" nameEn="Hero's Badge">
+		<!-- Ивентовый предмет "Эпизод Героя". По окончанию ивента в зависимости от собранного количества каждому персонажу на сервере выдается награда. -->
+		<!-- Hero's episode event item. After the event ends, characters will receive a reward according to the acquired quantity on the live server. -->
+		<set name="icon" val="icon.tiat_seal_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37885" type="EtcItem" nameRu="Энергия Героя" nameEn="Hero's Energy">
+		<!-- Ивентовый предмет "Эпизод Героя". По окончанию ивента в на сервере можно обменять его у Помощника Путешественников на свиток очков опыта/ Руну SP. -->
+		<!-- Hero's episode event item. After the event ends, characters will be allowed to exchange them for XP scrolls and SP runes through the Adventurers' Guide on the live server. -->
+		<set name="icon" val="icon.tersi_specter_seed" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37886" type="EtcItem" nameRu="Свиток Очков Опыта Героя" nameEn="Hero's XP Scroll">
+		<!-- Свиток, дающий 1 млрд очков опыта. Доступно только для персонажей 85-го уровня и выше, при использовании персонажами 98-го уровня и ниже дается только 30% очков опыта. Недоступно для хаотических персонажей. -->
+		<!-- Scroll the replenishes 100,000,000 XP. Can only be used by characters above level 85. When used by characters below level 98, the XP is only replenished by 30%. Cannot be used by chaotic characters. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.exp_bottle_scroll" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="scroll" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37887" type="EtcItem" nameRu="Руна SP Героя" nameEn="Hero's SP Rune">
+		<!-- При наличии в инвентаре бонус SP +10%. На 1 д. Нельзя использовать на Олимпиаде. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day item. Cannot be used in the Olympiad. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune" />
+		<set name="time" val="1440" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37888" type="Armor" nameRu="Шляпа Зорро" nameEn="Vigilante Hat">
+		<!-- Шляпа Зорро -->
+		<!-- Vigilante Hat. -->
+		<set name="icon" val="icon.accessory_archer_hat_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="37889" type="EtcItem" nameRu="Настойка Роста" nameEn="Herb of Growth">
+		<!-- На 10 мин. бонус очков опыта и SP +50%. -->
+		<!-- For 10 min., XP/ SP obtained through hunting +50%. -->
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="for_npc" val="true" />
+		<set name="item_skill" val="16174-1" />
+		<!-- Superior Herb of Growth -->
+	</item>
+	<item id="37890" type="EtcItem" nameRu="Сильнодействующая Настойка Роста" nameEn="Major Herb of Growth">
+		<!-- На 10 мин. бонус очков опыта и SP +100%. -->
+		<!-- For 10 min., XP/ SP obtained through hunting +100%. -->
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="for_npc" val="true" />
+		<set name="item_skill" val="16175-1" />
+		<!-- Major Herb of Growth -->
+	</item>
+	<item id="37891" type="EtcItem" nameRu="Великая Настойка Роста" nameEn="Superior Herb of Growth">
+		<!-- На 5 мин. бонус очков опыта и SP +200%. -->
+		<!-- For 5 min., XP/ SP obtained through hunting +200%. -->
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="immediate_effect" val="1" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="paper" />
+		<set name="handler" val="ItemSkills" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="for_npc" val="true" />
+		<set name="item_skill" val="16176-1" />
+		<!-- Superior Herb of Growth -->
+	</item>
+	<item id="37892" type="EtcItem" nameRu="Наградной Сундук Леоны" nameEn="Leona's Reward Box">
+		<!-- Сундук с наградой, полученный от Леоны Блэкберд за помощь на Острове Ада. Предмет можно получить по двойному щелчку.  -->
+		<!-- Reward box given by Leona Blackbird of Hellbound for your help. Double click to acquire the item. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="capsule" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37893" type="EtcItem" nameRu="Кровавая Древняя Книга Демона" nameEn="Bloodied Demonic Tome">
+		<!-- Древняя Книга Демонов, наполненная кровью караванов. Хранитель Древних Книг Каравана Буденка собирает эти книги в Деревне Беженцев. -->
+		<!-- Ancient book of the demon stained with the blood of the caravan. The ancient book managing caravan Budenka is collecting it in the Refugee Village. -->
+		<set name="icon" val="icon.etc_codex_of_giant_i03" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="37894" type="EtcItem" nameRu="Улучшенное Зелье Восстановления Героя" nameEn="Healing Potion Improved Warrior’s Recovery Potion">
+		<!-- При использовании восстанавливает 5000 HP, также восстанавливает CP. Время перезарядки отсутствует. -->
+		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no cooldown. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="weight" val="180" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="liquid" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<!-- <set name="commissionItemType" val="POTION" \> -->
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17913-1" />
+		<!-- Supreme Windy Quick Healing Potion -->
+	</item>
+	<item id="37895" type="EtcItem" nameRu="Руна SP: Низкое Качество" nameEn="SP Rune (Low-grade)">
+		<!-- При наличии в инвентаре бонус SP +10%. На 7 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 7-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune_select" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37896" type="EtcItem" nameRu="Руна SP: Среднее Качество" nameEn="SP Rune (Mid-grade)">
+		<!-- При наличии в инвентаре бонус SP +20%. На 7 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 7-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune_select" />
+		<set name="time" val="10080" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="37897" type="EtcItem" nameRu="Руна SP: Высокое Качество" nameEn="SP Rune (High-grade)">
+		<!-- При наличии в инвентаре бонус SP +30%. На 7 д. -->
+		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 7-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
+		<set name="etcitem_type" val="rune" />
+		<set name="immediate_effect" val="1" />
+		<set name="material" val="paper" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="item_skill" val="22040-1" />
+		<!-- SP Rune 30% -->
+	</item>
+	<item id="37898" type="EtcItem" nameRu="Коробка с Руной SP Низкого Качества (1день) " nameEn="SP Rune Pack (Low-grade) (1-day)">
+		<!-- Дважды щелкните, чтобы получить Руну SP - Низкое Качество (1день). -->
+		<!-- Box containing Kat the Cat's gift. Double click to acquire 1 of the following at random: 150 Heavenly Recovery Potions, 1 Kat the Cat's Box of Roses, or 1 Emperor's Rune Box. Cannot be exchanged, dropped, sold in a private store, or used in an auction house. Can be shared within the same account through the Dimensional Merchant. Can be stored in a private warehouse. To be deleted on 30.10.13. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="37899" type="EtcItem" nameRu="Коробка с Руной SP Среднего Качества (1день) " nameEn="SP Rune Pack (Mid-grade) (1-day)">
+		<!-- Дважды щелкните, чтобы получить Руну SP - Среднее Качество (1день). -->
+		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. Cannot be used in the auction house. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+</list>

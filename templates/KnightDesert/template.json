@@ -1,0 +1,27 @@
+{
+  "key": "KnightDesert",
+  "name": "KnightDesert",
+  "type": "legacy-twig",
+  "entry": "index.html",
+  "description": "Legacy site template from SphereWeb 2 with Twig-compatible layout and partials.",
+  "preview": "screen.jpg",
+  "tags": ["legacy", "twig", "site"],
+  "routes": [
+    {
+      "pattern": "^/$",
+      "template": "index.html"
+    },
+    {
+      "pattern": "^/about/?$",
+      "template": "about-static-page.html"
+    },
+    {
+      "pattern": "^/page/(.+)$",
+      "template": "static.html"
+    },
+    {
+      "pattern": "^/read/(.+)$",
+      "template": "static.html"
+    }
+  ]
+}

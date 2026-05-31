@@ -1,0 +1,1 @@
+import{t as e}from"./useQuery-kkDy6y_Z.js";import{t}from"./queryKeys-BNDPcFLM.js";import{t as n}from"./forum.api-Oo36tc2E.js";var r=300*1e3,i=(i=!0)=>e({queryKey:t.forum.config,queryFn:n.getConfig,staleTime:r,refetchOnWindowFocus:!1,enabled:i});export{i as t};

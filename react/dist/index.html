@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SphereWeb3 x1000</title>
+    <script>
+      ;(function () {
+        var root = document.documentElement
+        var locale = 'ru'
+
+        try {
+          var localeRaw = window.localStorage.getItem('l2cabinet-locale')
+          var localeState = localeRaw ? JSON.parse(localeRaw).state : null
+
+          if (localeState && (localeState.locale === 'ru' || localeState.locale === 'en')) {
+            locale = localeState.locale
+          }
+        } catch (error) {}
+
+        root.lang = locale
+
+        try {
+          var themeRaw = window.localStorage.getItem('l2cabinet-theme')
+          var themeState = themeRaw ? JSON.parse(themeRaw).state : null
+          root.setAttribute('data-theme', themeState && themeState.theme ? themeState.theme : 'dark')
+        } catch (error) {
+          root.setAttribute('data-theme', 'dark')
+        }
+
+        if (root.hasAttribute('data-cabinet-template')) {
+          return
+        }
+
+        try {
+          var templateRaw = window.localStorage.getItem('sphereweb3-template-settings')
+          var templateSettings = templateRaw ? JSON.parse(templateRaw) : null
+          var cabinetTemplate = templateSettings && templateSettings.cabinetTemplate
+          var cabinetStyle = templateSettings && templateSettings.cabinetStyle
+          var title = templateSettings && templateSettings.title
+
+          if (cabinetTemplate) {
+            root.setAttribute('data-cabinet-template', String(cabinetTemplate).trim())
+          }
+          if (cabinetStyle) {
+            root.setAttribute('data-cabinet-style', String(cabinetStyle).trim())
+          }
+          if (title) {
+            root.setAttribute('data-cabinet-site-title', String(title).trim())
+          }
+        } catch (error) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-2iN8PwhP.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-D57Vegw5.js">
+    <link rel="modulepreload" crossorigin href="/assets/localeStore-B3Qkk1lY.js">
+    <link rel="modulepreload" crossorigin href="/assets/axios-Dgz6Ijmf.js">
+    <link rel="modulepreload" crossorigin href="/assets/themeStore-D2yRfO1n.js">
+    <link rel="modulepreload" crossorigin href="/assets/react-dom-BWtKWfLN.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-CWFnFyLL.js">
+    <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-DCJfEhwt.js">
+    <link rel="modulepreload" crossorigin href="/assets/infiniteQueryBehavior-B0GrtWdb.js">
+    <link rel="modulepreload" crossorigin href="/assets/mutation-DXpSAB59.js">
+    <link rel="modulepreload" crossorigin href="/assets/suspense-y40_FqmI.js">
+    <link rel="modulepreload" crossorigin href="/assets/useQuery-kkDy6y_Z.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-CPwrvVqN.js">
+    <link rel="modulepreload" crossorigin href="/assets/admin.api-DBokQOhk.js">
+    <link rel="modulepreload" crossorigin href="/assets/queryKeys-BNDPcFLM.js">
+    <link rel="modulepreload" crossorigin href="/assets/clsx-bBGfhTtu.js">
+    <link rel="modulepreload" crossorigin href="/assets/classNames-CfUf48ny.js">
+    <link rel="modulepreload" crossorigin href="/assets/Spinner-C0FW1jUW.js">
+    <link rel="modulepreload" crossorigin href="/assets/cabinetTemplateBootstrap-bIXqSE7N.js">
+    <link rel="modulepreload" crossorigin href="/assets/permissions-A7cMpAZv.js">
+    <link rel="stylesheet" crossorigin href="/assets/Spinner-DzcqcPOC.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-hQyu-UKn.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

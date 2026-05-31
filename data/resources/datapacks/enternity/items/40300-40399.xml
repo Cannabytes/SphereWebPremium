@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="40300" type="EtcItem" nameRu="Зелье Восстановления Фреи" nameEn="Freya's Recovery Potion">
+		<!-- Витаминный предмет При использовании восстанавливает 3500 HP, также восстанавливает CP. Время перезарядки отсутствует. Нельзя использовать на Олимпиаде. -->
+		<!-- Restores 3500 HP. If HP is full, CP is restored. No cooldown. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_potion" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="potion" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="18155-1" />
+		<!-- Freya's Recovery Potion -->
+	</item>
+	<item id="40301" type="Armor" nameRu="Шлем Buff" nameEn="Buff Helmet">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании УДЧ +3. -->
+		<!-- Uses 2 Hair Accessory slots. LUC +3. -->
+		<set name="icon" val="icon.buff_helmet" />
+		<set name="default_action" val="equip" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="40302" type="Armor" nameRu="Шлем Buff" nameEn="Buff Helmet">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ХАР +3. -->
+		<!-- Uses 2 Hair Accessory slots. CHA +3. -->
+		<set name="icon" val="icon.buff_helmet" />
+		<set name="default_action" val="equip" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="40303" type="EtcItem" nameRu="Билет к Спасии - Обычный" nameEn="Entrance Pass: Spezion (Normal)">
+		<!-- Билет на дополнительный вход в ежедневную временную зону. По двойному щелчку снимает ограничение на вход к Спасии (обычному). Невозможно использовать, не побывав в этой временной зоне. Можно использовать один раз за установленный период отката временной зоны. -->
+		<!-- Double-click to reset cooldown to Spezion's (normal) dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="isBlockResetReuse" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="40304" type="EtcItem" nameRu="Билет к Спасии - Экстремальный" nameEn="Entrance Pass: Spezion (Epic)">
+		<!-- Билет на дополнительный вход в ежедневную временную зону. По двойному щелчку снимает ограничение на вход к Спасии (экстремальный). Невозможно использовать, не побывав в этой временной зоне. Можно использовать один раз за установленный период отката временной зоны. -->
+		<!-- Double-click to reset cooldown to Spezion's (Epic) dungeon. Usable once a day outside instances while on a cooldown. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="isBlockResetReuse" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="40305" type="EtcItem" nameRu="Руна Квалификации - R99" nameEn="Expertise Rune (R99-grade)">
+		<!-- Предмет на 30 д. При наличии в инвентаре позволяет без штрафа использовать снаряжение ранга R99. -->
+		<!-- While possessed, allows you to equip R99-grade items without penalties. 30-day. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="rune" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="17577-1" />
+		<!-- Expertise Rune (R99-grade) -->
+	</item>
+	<item id="40306" type="EtcItem" nameRu="Сундук с Руной Квалификации" nameEn="Expertise Rune Pack">
+		<!-- Дважды щелкните, чтобы получить Руну Квалификации - R99 (30 д.). -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="fish" />
+		<!-- Expertise Rune (R99-grade) - 30-day -->
+		<set name="capsuled_items" val="40305,1,1,100" />
+	</item>
+	<item id="40307" type="EtcItem" nameRu="Динамичный Подарочный Пакет Мастера" nameEn="Dynamic Dual Master Gift Pack">
+		<!-- Дважды щелкните, чтобы получить Сундук с Руной Квалификации (30 д.) 1 шт., Упаковку: Чудесный Браслет Призыва Друга (30 д.) 1 шт. Нельзя использовать на Олимпиаде.  -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40308" type="EtcItem" nameRu="Динамичный Подарочный Пакет Рыцаря" nameEn="Dynamic Dual Knight Gift Pack">
+		<!-- Дважды щелкните, чтобы получить Сундук с Руной Квалификации (30 д.) 1 шт., Упаковку: Чудесный Браслет Призыва Друга (30 д.) 1 шт., Сундук с Редкими Аксессуарами Артей (7 д.) 2 шт. Нельзя использовать на Олимпиаде.  -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40309" type="EtcItem" nameRu="Свиток Телепорта: Деревня Гномов" nameEn="Scroll of Escape: Dwarven Village">
+		<!-- Магический Свиток, телепортирующий в Деревню Гномов. -->
+		<!-- Teleports you to Dwarven Village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="material" val="paper" />
+		<set name="item_skill" val="18167-1" />
+		<!-- Scroll of Escape: Ivory Tower -->
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+	</item>
+	<item id="40310" type="EtcItem" nameRu="Камень Обработки Шапки Деда Мороза " nameEn="Appearance Stone: Santa Hat">
+		<!-- Камень Обработки, меняющий облик головного убора на Шапку Деда Мороза. Доступно только для головных уборов, занимающих 2 ячейки. -->
+		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. Only for hair accessories that use 2 slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="none" />
+		<!-- <set name="commissionItemType" val="SCROLL_OTHER" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="material" val="steel" />
+	</item>
+	<item id="40311" type="EtcItem" nameRu="Подарок Ноэлли" nameEn="Noelle's Gift">
+		<!-- Подарок Ноэлли храбрецу, оказавшему помощь в поисках Деда Мороза. По двойному щелчку эффект восстановления Энергии на 6 ч. Энергия восстанавливается только в мирной зоне. Восстанавливает определенное количество Энергии по окончании действия эффекта даже вне мирной зоны. Предмет будет удален 20.01.2014. -->
+		<!-- Double-click to recover Vitality while in peaceful zones. A set amount of Vitality is also restored when the buff is about to expire. 6-hour. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="weight" val="5" />
+		<set name="etcitem_type" val="elixir" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="liquid" />
+		<set name="item_skill" val="16423-1" />
+		<!-- Noelle's Gift -->
+	</item>
+	<item id="40312" type="Armor" nameRu="Плащ Деда Мороза" nameEn="Santa's Cloak">
+		<!-- Легкий и прочный рождественский плащ. -->
+		<!-- Light and cozy cloak. -->
+		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="220" />
+		<set name="material" val="cloth" />
+		<cond>
+			<player level="80" />
+		</cond>
+		<for>
+			<add order="0x10" stat="pDef" val="20" />
+		</for>
+	</item>
+	<item id="40313" type="EtcItem" nameRu="Знак Деда Мороза" nameEn="Santa's Mark">
+		<!-- Знак того, что персонаж нашел Деда Мороза, а также Волшебный Носок, Волшебную Елку и Волшебного Снеговика. Отнесите его Управляющему Ивентами Ноэлли и получите награду. -->
+		<!-- Proof of your successful search for Santa alongside Tree Fairy, Stocking Fairy, and Snowman Fairy. Take this to Noelle for a reward. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
+		<set name="is_stackable" val="true" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="material" val="paper" />
+	</item>
+	<item id="40314" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании СИЛ +3.  -->
+		<!-- Uses 2 Hair Accessory slots. STR +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9554-1" />
+		<!-- Hair Accessory: STR -->
+	</item>
+	<item id="40315" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ЛВК +3. -->
+		<!-- Uses 2 Hair Accessory slots. DEX +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9555-1" />
+		<!-- Hair Accessory: DEX -->
+	</item>
+	<item id="40316" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ВЫН +3. -->
+		<!-- Uses 2 Hair Accessory slots. CON +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9556-1" />
+		<!-- Hair Accessory: CON -->
+	</item>
+	<item id="40317" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ДУХ +3.  -->
+		<!-- Uses 2 Hair Accessory slots. MEN +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9557-1" />
+		<!-- Hair Accessory: MEN -->
+	</item>
+	<item id="40318" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ИНТ +3.  -->
+		<!-- Uses 2 Hair Accessory slots. INT +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9558-1" />
+		<!-- Hair Accessory: INT -->
+	</item>
+	<item id="40319" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании МДР +3.  -->
+		<!-- Uses 2 Hair Accessory slots. WIT +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9559-1" />
+		<!-- Hair Accessory: WIT -->
+	</item>
+	<item id="40320" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании шанс Крит. Атк. +50.  -->
+		<!-- Uses 2 Hair Accessory slots. Critical Rate +50. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9560-1" />
+		<!-- Hair Accessory: Critical Rate -->
+	</item>
+	<item id="40321" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании сила Крит. Атк. +90, сила Маг. Крит. Атк. +68.  -->
+		<!-- Uses 2 Hair Accessory slots. P. Critical Damage +90, M. Critical Damage +68. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9561-1" />
+		<!-- Hair Accessory: Critical Damage -->
+	</item>
+	<item id="40322" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Физ. Защ. +5%.  -->
+		<!-- Uses 2 Hair Accessory slots. P. Def. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9562-1" />
+		<!-- Hair Accessory Circlet: P. Def. -->
+	</item>
+	<item id="40323" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Маг. Защ. +5%.  -->
+		<!-- Uses 2 Hair Accessory slots. M. Def. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9563-1" />
+		<!-- Hair Accessory: M. Def. -->
+	</item>
+	<item id="40324" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Уклонение +5.  -->
+		<!-- Uses 2 Hair Accessory slots. Evasion +5. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9564-1" />
+		<!-- Hair Accessory: Evasion -->
+	</item>
+	<item id="40325" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Физ. Атк. +5%.  -->
+		<!-- Uses 2 Hair Accessory slots. P. Atk. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9565-1" />
+		<!-- Hair Accessory: P. Atk. -->
+	</item>
+	<item id="40326" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Маг. Атк. +10%.  -->
+		<!-- Uses 2 Hair Accessory slots. M. Atk. +10%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9566-1" />
+		<!-- Hair Accessory: M. Atk. -->
+	</item>
+	<item id="40327" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании Точность +5.  -->
+		<!-- Uses 2 Hair Accessory slots. Accuracy +5. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9567-1" />
+		<!-- Hair Accessory: Accuracy -->
+	</item>
+	<item id="40328" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании УДЧ +3. -->
+		<!-- Uses 2 Hair Accessory slots. LUC +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18048-1" />
+		<!-- Hair Accessory: LUC -->
+	</item>
+	<item id="40329" type="Armor" nameRu="Шапка Деда Мороза" nameEn="Santa Hat">
+		<!-- Занимает 2 ячейки для головных уборов. При надевании ХАР +3. -->
+		<!-- Uses 2 Hair Accessory slots. CHA +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="1" />
+		<!-- <set name="isAppearanceable" val="true" \> -->
+		<set name="immediate_effect" val="1" />
+		<!-- <set name="commissionItemType" val="HAIR_ACCESSORY" \> -->
+		<set name="is_sellable" val="false" />
+		<set name="material" val="wood" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18049-1" />
+		<!-- Hair Accessory: CHA -->
+	</item>
+	<item id="40330" type="EtcItem" nameRu="Камень Обработки Костюма Деда Мороза" nameEn="Appearance Stone: Santa Suit">
+		<!-- Позволяет придать нагруднику или полному доспеху вид Костюма Деда Мороза. Полностью обработанный доспех выглядит как Костюм Деда Мороза. Исходный вид доспехов можно вернуть при помощи Свитка Восстановления Облика Снаряжения. -->
+		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="Book" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="none" />
+		<!-- <set name="commissionItemType" val="OTHER_ITEM" \> -->
+		<set name="material" val="steel" />
+	</item>
+	<item id="40331" type="EtcItem" nameRu="Комплект Магических Посохов - Артефакт Дружбы" nameEn="Magic Staff Set of Fortune">
+		<!-- После использования можно получить 5 Магических Посохов рангов S-C. Если не использовать, то предмет исчезнет через 90 дн. -->
+		<!-- Use to receive 5 magic staff weapons (S - C-grade). Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40332" type="Weapon" nameRu="Ветвь Древа Жизни - Артефакт Дружбы" nameEn="Mother Tree's Branch of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="a" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="226" />
+			<set order="0x08" stat="mAtk" val="167" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40333" type="Weapon" nameRu="Посох Злых Духов - Артефакт Дружбы" nameEn="Foundation Staff of Evil Spirits of Fortune">
+		<!-- <Особые свойства> Дает шанс 6% колдовства Проклятие Яда при использовании вредоносного умения на цель. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="b" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="189" />
+			<set order="0x08" stat="mAtk" val="145" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40334" type="Weapon" nameRu="Посох Инферно - Артефакт Дружбы " nameEn="Inferno Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="c" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="135" />
+			<set order="0x08" stat="mAtk" val="111" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40335" type="Weapon" nameRu="Булава Атубы - Артефакт Дружбы " nameEn="Atuba Mace of Fortune">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="d" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="fine_steel" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="90" />
+			<set order="0x08" stat="mAtk" val="79" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40336" type="Weapon" nameRu="Имперский Посох - Артефакт Дружбы " nameEn="Imperial Staff of Fortune">
+		<!-- <Особые свойства> Маг. Атк. +60. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="adamantaite" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="274" />
+			<set order="0x08" stat="mAtk" val="193" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40337" type="Weapon" nameRu="Посох Династии - Артефакт Дружбы" nameEn="Dynasty Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="325" />
+			<set order="0x08" stat="mAtk" val="222" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40338" type="EtcItem" nameRu="Комплект Снаряжения Бойца Артей" nameEn="Ertheia Fighter Equipment Set">
+		<!-- Комплект снаряжения для воинов Артей. Если не использовать, исчезнет через 90 д. -->
+		<!-- Item set for Ertheia Fighter classes. Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40339" type="EtcItem" nameRu="Комплект Снаряжения Мага Артей" nameEn="Ertheia Wizard Equipment Set">
+		<!-- Комплект снаряжения для магов Артей. Если не использовать, исчезнет через 90 д. -->
+		<!-- Item set for Ertheia Wizard classes. Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40340" type="EtcItem" nameRu="Комплект Кастетов - Артефакт Дружбы" nameEn="Fist Weapon Set of Fortune">
+		<!-- После использования можно получить 5 Кастетов рангов S-C. Если не использовать, исчезнет через 90 дн. -->
+		<!-- Use to receive 5 fist weapons (S - C-grade). Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40341" type="EtcItem" nameRu="Комплект Кастетов - Артефакт Дружбы" nameEn="Fist Weapon Set of Fortune">
+		<!-- После использования можно получить 3 Кастета рангов А-C. Если не использовать, исчезнет через 30 дн. -->
+		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40342" type="EtcItem" nameRu="Комплект Магических Посохов - Артефакт Дружбы" nameEn="Magic Staff Set of Fortune">
+		<!-- После использования можно получить 3 Магических Посоха рангов А-C. Если не использовать, исчезнет через 30 дн. -->
+		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40343" type="Weapon" nameRu="Ветвь Древа Жизни - Артефакт Дружбы" nameEn="Mother Tree's Branch of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="a" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="226" />
+			<set order="0x08" stat="mAtk" val="167" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40344" type="Weapon" nameRu="Посох Злых Духов - Артефакт Дружбы" nameEn="Foundation Staff of Evil Spirits of Fortune">
+		<!-- <Особые свойства> Дает шанс 6% колдовства Проклятие Яда при использовании вредоносного умения на цель. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="b" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="189" />
+			<set order="0x08" stat="mAtk" val="145" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40345" type="Weapon" nameRu="Посох Инферно - Артефакт Дружбы " nameEn="Inferno Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="c" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="135" />
+			<set order="0x08" stat="mAtk" val="111" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40346" type="Weapon" nameRu="Булава Атубы - Артефакт Дружбы " nameEn="Atuba Mace of Fortune">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="d" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="fine_steel" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="90" />
+			<set order="0x08" stat="mAtk" val="79" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40347" type="Weapon" nameRu="Имперский Посох - Артефакт Дружбы " nameEn="Imperial Staff of Fortune">
+		<!-- <Особые свойства> Маг. Атк. +60. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="adamantaite" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="274" />
+			<set order="0x08" stat="mAtk" val="193" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40348" type="Weapon" nameRu="Посох Династии - Артефакт Дружбы" nameEn="Dynasty Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="325" />
+			<set order="0x08" stat="mAtk" val="222" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40349" type="EtcItem" nameRu="Комплект Снаряжения Бойца Артей" nameEn="Ertheia Fighter Equipment Set">
+		<!-- Комплект снаряжения для воинов Артей. Если не использовать, исчезнет через 30 д. -->
+		<!-- Item set for Ertheia Fighter classes. Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40350" type="EtcItem" nameRu="Комплект Снаряжения Мага Артей" nameEn="Ertheia Wizard Equipment Set">
+		<!-- Комплект снаряжения для магов Артей. Если не использовать, исчезнет через 30 д. -->
+		<!-- Item set for Ertheia Warrior classes. Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40351" type="EtcItem" nameRu="Комплект Кастетов - Артефакт Дружбы" nameEn="Fist Weapon Set of Fortune">
+		<!-- После использования можно получить 3 Кастета рангов А-C. Если не использовать, исчезнет через 10 дн. -->
+		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40352" type="EtcItem" nameRu="Комплект Магических Посохов - Артефакт Дружбы" nameEn="Magic Staff Set of Fortune">
+		<!-- После использования можно получить 3 Магических Посоха рангов А-C. Если не использовать, исчезнет через 10 дн. -->
+		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40353" type="Weapon" nameRu="Ветвь Древа Жизни - Артефакт Дружбы" nameEn="Mother Tree's Branch of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="a" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="226" />
+			<set order="0x08" stat="mAtk" val="167" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40354" type="Weapon" nameRu="Посох Злых Духов - Артефакт Дружбы" nameEn="Foundation Staff of Evil Spirits of Fortune">
+		<!-- <Особые свойства> Дает шанс 6% колдовства Проклятие Яда при использовании вредоносного умения на цель. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="b" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="189" />
+			<set order="0x08" stat="mAtk" val="145" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40355" type="Weapon" nameRu="Посох Инферно - Артефакт Дружбы " nameEn="Inferno Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="c" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="135" />
+			<set order="0x08" stat="mAtk" val="111" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40356" type="Weapon" nameRu="Булава Атубы - Артефакт Дружбы " nameEn="Atuba Mace of Fortune">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="d" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="fine_steel" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="90" />
+			<set order="0x08" stat="mAtk" val="79" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40357" type="Weapon" nameRu="Имперский Посох - Артефакт Дружбы " nameEn="Imperial Staff of Fortune">
+		<!-- <Особые свойства> Маг. Атк. +60. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="adamantaite" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="274" />
+			<set order="0x08" stat="mAtk" val="193" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40358" type="Weapon" nameRu="Посох Династии - Артефакт Дружбы" nameEn="Dynasty Staff of Fortune">
+		<!-- <Особые свойства> Скор. Маг. +15%. Наносит дополнительный урон в PvP. Нельзя применить Кристалл Души. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="blunt" />
+		<set name="crystal_type" val="s" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="wood" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="attack_range" val="40" />
+		<set name="random_damage" val="20" />
+		<for>
+			<set order="0x08" stat="pAtk" val="325" />
+			<set order="0x08" stat="mAtk" val="222" />
+			<set order="0x08" stat="pAtkSpd" val="325" />
+			<add order="0x10" stat="accCombat" val="8" />
+			<set order="0x08" stat="rCrit" val="6" />
+		</for>
+	</item>
+	<item id="40359" type="EtcItem" nameRu="Комплект Снаряжения Бойца Артей" nameEn="Ertheia Fighter Equipment Set">
+		<!-- Комплект снаряжения для воинов Артей. Если не использовать, исчезнет через 10 д. -->
+		<!-- Item set for Ertheia Fighter classes. Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40360" type="EtcItem" nameRu="Комплект Снаряжения Мага Артей" nameEn="Ertheia Wizard Equipment Set">
+		<!-- Комплект снаряжения для магов Артей. Если не использовать, исчезнет через 10 д. -->
+		<!-- Item set for Ertheia Wizard classes. Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="fish" />
+	</item>
+	<item id="40361" type="EtcItem" nameRu="Сундук с Агатионом Джун" nameEn="Agathion - Joon Pack">
+		<!-- Дважды щелкните, чтобы получить Брелок Агатиона - Джун (30 д.). После открытия сундука Агатиона нельзя передавать внутри аккаунта. -->
+		<!-- Double-click to obtain an Agathion - Joon Charm (30-day). Cannot be shared once open. -->
+		<set name="icon" val="icon.lucky_bag_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="fish" />
+		<!-- Agathion Joon Charm (30-day) -->
+		<set name="capsuled_items" val="48133,1,1,100" />
+	</item>
+	<item id="40362" type="Armor" nameRu="Браслет Призыва Агатиона - Джун (30 д.)" nameEn="Agathion - Joon (30-day)">
+		<!-- Браслет, позволяющий призвать Агатиона Джун на 30 д. Нельзя использовать на Олимпиаде.  <Предметное умение> 1. Магия Джун: на 30 мин. бонус опыта и SP +10%, атака стихией +100, Физ. Атк. +20%, Маг. Атк. +30%, Скор. Атк. +10%, Скор. Маг. +10%, Физ. Точность +4, Маг. Точность +4, Скорость +10, Макс. HP/ MP/ CP +10%, Физ. Защ. +10%, Маг. Защ. +10%, расход MP для умений -10%. Не действует одновременно с такими эффектами как Запредельное Искушение и Свиток Чудесного Ветра Артей. Эффект не исчезает в случае смерти.  <Активное умение> 1. Воскрешение Джун: позволяет использовать благословленное воскрешение. Время перезарядки: 3 ч. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., XP/ SP Gain +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="default_action" val="equip" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="silver" />
+		<set name="bodypart" val="lbracelet" />
+	</item>
+	<item id="40363" type="EtcItem" nameRu="Морковка" nameEn="Carrot">
+		<!-- Вкусная сытная морковь. Соберите как минимум 40 штук и отдайте Вечно Голодному Марио в любом поселении, чтобы получить особый подарок. Предмет будет удален после окончания ивента. -->
+		<!-- Give some of these to High Horse Galup and you might get a special gift. -->
+		<set name="icon" val="icon.ev_carrot" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="gold" />
+	</item>
+	<item id="40364" type="EtcItem" nameRu="Кулек с Морковкой" nameEn="Carrot Pouch">
+		<!-- Дважды щелкните, чтобы получить от 7 до 63 морковок. Удаляется после завершения ивента. -->
+		<!-- Double-click to obtain 7 - 63 carrots. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="fish" />
+		<!-- Carrot -->
+		<set name="capsuled_items" val="40363,7,63,100" />
+	</item>
+	<item id="40365" type="EtcItem" nameRu="Подарок от Марио" nameEn="Galup's Special Luck Pouch">
+		<!-- Подарочный мешочек, полученный от Вечно Голодного Марио. Дважды щелкните, чтобы получить особую награду. Удаляется после завершения ивента. -->
+		<!-- Double-click to obtain special rewards prepared by Galup. -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="peel" />
+		<set name="immediate_effect" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<!-- <set name="extractableCountMin" val="1" \> -->
+		<!-- <set name="extractableCountMax" val="1" \> -->
+		<set name="material" val="paper" />
+		<!-- Mount - Unicorn -->
+		<!-- Unicorn Horn Circlet - Event -->
+		<!-- Rune Stone -->
+		<!-- Strawberry Cake (HP) -->
+		<!-- Blueberry Cake (MP) -->
+		<!-- Cheese Cake (CP) -->
+		<!-- Lv. 1 Windy CHA Dye - CHA +1 -->
+		<!-- Lv. 2 Windy CHA Dye - CHA +2 -->
+		<!-- Lv. 3 Windy CHA Dye - CHA +3 -->
+		<!-- Lv. 4 Windy CHA Dye - CHA +4 -->
+		<!-- Lv. 5 Windy CHA Dye - CHA +5 -->
+		<!-- Lv. 1 Windy LUC Dye - LUC +1 -->
+		<!-- Lv. 2 Windy LUC Dye - LUC +2 -->
+		<!-- Lv. 3 Windy LUC Dye - LUC +3 -->
+		<!-- Lv. 4 Windy LUC Dye - LUC +4 -->
+		<!-- Lv. 5 Windy LUC Dye - LUC +5 -->
+		<!-- Secret Ancient Tome Fragment -->
+		<!-- Bottle Fragment of Valakas' Soul -->
+		<!-- Bottle Fragment of Antharas' Soul -->
+		<!-- Bottle Fragment of Baium's Soul -->
+		<!-- Bottle Fragment of Orfen's Soul -->
+		<!-- Bottle Fragment of Queen Ant's Soul -->
+		<!-- Bottle Fragment of Frintezza's Soul -->
+		<!-- Bottle Fragment of Freya's Soul -->
+		<!-- Elcyum Powder -->
+		<!-- Blessed Scroll of Resurrection -->
+		<!-- Blessed Scroll of Escape -->
+		<!-- Raid Boss' Soul Pack -->
+		<!-- Agathion - Pegasus Pack -->
+		<set name="capsuled_items" val="22887,1,1,0.82;22265,1,1,0.82;39738,1,1,0.82;37008,1,1,11;37009,1,1,11;37010,1,1,11;39381,1,1,0.82;39382,1,1,0.82;39383,1,1,0.82;39384,1,1,0.82;39385,1,1,0.82;39386,1,1,0.82;39387,1,1,0.82;39388,1,1,0.82;39389,1,1,0.82;39390,1,1,0.82;40063,1,1,6;23861,1,1,0.82;23862,1,1,0.82;23863,1,1,0.82;23864,1,1,0.82;23865,1,1,0.82;23866,1,1,0.82;23867,1,1,0.82;36513,1,1,0.82;3936,1,1,21;1538,1,1,21;23860,1,1,0.82;23977,1,1,0.82" />
+	</item>
+	<item id="40366" type="EtcItem" nameRu="Подарок от Луиджи" nameEn="Galup's Gift Pouch">
+		<!-- Подарочный мешочек, полученный от подкрепившегося Луиджи. Дважды щелкните, чтобы получить 1 Кулек с Морковкой и почувствовать лошадиную силу. Удаляется после завершения ивента. -->
+		<!-- Galup's gift after he had eaten his fill. Double-click to obtain a Carrot Pouch and feel some Horse Power. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="40367" type="EtcItem" nameRu="Сундук с Благословением Кота-Ангела" nameEn="Angel Cat's Blessing Pack">
+		<!-- Дважды щелкните, чтобы получить Благословение Кота-Ангела - 1 шт. на 1 ч. Нельзя использовать на Олимпиаде. -->
+		<!-- Double-click to obtain an Angel Cat's Blessing (1-hour). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="40368" type="EtcItem" nameRu="Рекламный Подарочный BUFF-Сундук " nameEn="Buff Promotion Gift Box">
+		<!-- При использовании можно получить Камень Обработки Оружия (30 дн.) или (с низкой вероятностью) особый головной убор. Будет удален после окончания ивента. -->
+		<!-- Double-click for a chance to obtain a special weapon appearance stone (30-day) or a special hair accessory at a lower rate. -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="paper" />
+	</item>
+	<item id="40369" type="Armor" nameRu="Шляпа Наполеона" nameEn="Napoleon Hat">
+		<!-- Шляпа, которая наполняет желанием покорить мир. -->
+		<!-- A hat accessory for conquering the world. -->
+		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hair" />
+	</item>
+	<item id="40370" type="Armor" nameRu="Шляпа Сладкого Сыра" nameEn="Sweet Cheese Hat">
+		<!-- Шляпа, сделанная из аппетитного сыра. Если хорошо поискать, можно найти розовую мышку. -->
+		<!-- A delicious cheese hat. There might be a pink rat hiding in there somewhere. -->
+		<set name="icon" val="BranchSys.icon.br_goldrat_cap_i00" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="40371" type="Armor" nameRu="Шляпа Зорро" nameEn="Vigilante Hat">
+		<!-- Шляпа, которая наполняет чувством самоуверенности. -->
+		<!-- A swashbuckler's hat. -->
+		<set name="icon" val="icon.zorocap" />
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="wood" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="40372" type="Armor" nameRu="Agathion - Three-headed Dragon" nameEn="Agathion - Three-headed Dragon">
+		<!-- Can summon Pisces when equipped. <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.)\n\n(Passive Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
+		<set name="default_action" val="equip" />
+		<set name="weight" val="10" />
+		<set name="time" val="43200" />
+	</item>
+</list>
