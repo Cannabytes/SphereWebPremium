@@ -1,0 +1,1 @@
+import{t as e}from"./axios-Dgz6Ijmf.js";var t={getServers:async()=>(await e.get(`/stats/servers`)).data,getServerStats:async t=>(await e.get(`/stats/summary`,{params:t?{serverId:t}:void 0})).data,getServerStatsPage:async t=>(await e.get(`/stats`,{params:t?{serverId:t}:void 0})).data};export{t};
