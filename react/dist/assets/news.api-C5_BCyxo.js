@@ -1,0 +1,1 @@
+import{t as e}from"./axios-DoOM7qP7.js";var t={getLatest:async(t=`ru`,n=20)=>(await e.get(`/news`,{params:{lang:t,limit:n}})).data,getBySlug:async(t,n=`ru`)=>(await e.get(`/news/${t}`,{params:{lang:n}})).data};export{t};
