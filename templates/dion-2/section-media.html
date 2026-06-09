@@ -137,6 +137,7 @@
 
                     <div class="media__swiper media__swiper--streams swiper">
                     <div class="swiper-wrapper">
+        {% if streams() %}
         {% for stream in streams() %}
                         <div class="swiper-slide">
                             <div class="border media__slide">
@@ -155,6 +156,7 @@
                                 {% endif %}
                             </div>
                         </div>
+        {% endfor %}
         {% else %}
                         <div class="swiper-slide">
                             <div class="border media__slide media__slide--empty">
@@ -167,7 +169,7 @@
                                 </div>
                             </div>
                         </div>
-        {% endfor %}
+        {% endif %}
                     </div>
                 </div>
 
