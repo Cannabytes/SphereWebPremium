@@ -11,11 +11,17 @@
         var locale = 'ru'
 
         try {
-          var localeRaw = window.localStorage.getItem('l2cabinet-locale')
-          var localeState = localeRaw ? JSON.parse(localeRaw).state : null
+          var cookieMatch = document.cookie.match(/(?:^|;\s*)lang=([^;]+)/)
+          if (cookieMatch && cookieMatch[1]) {
+            var cookieLocale = decodeURIComponent(cookieMatch[1]).trim().toLowerCase()
+            locale = cookieLocale === 'en' ? 'en' : 'ru'
+          } else {
+            var localeRaw = window.localStorage.getItem('l2cabinet-locale')
+            var localeState = localeRaw ? JSON.parse(localeRaw).state : null
 
-          if (localeState && (localeState.locale === 'ru' || localeState.locale === 'en')) {
-            locale = localeState.locale
+            if (localeState && (localeState.locale === 'ru' || localeState.locale === 'en')) {
+              locale = localeState.locale
+            }
           }
         } catch (error) {}
 
@@ -55,11 +61,11 @@
         } catch (error) {}
       })()
     </script>
-    <script type="module" crossorigin src="/assets/index-BPpMmGVD.js"></script>
+    <script type="module" crossorigin src="/assets/index-BG8mkTq6.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-D57Vegw5.js">
-    <link rel="modulepreload" crossorigin href="/assets/localeStore-B3Qkk1lY.js">
-    <link rel="modulepreload" crossorigin href="/assets/axios-DgnWJuMP.js">
-    <link rel="modulepreload" crossorigin href="/assets/themeStore-BK4Twid3.js">
+    <link rel="modulepreload" crossorigin href="/assets/localeStore-C36hNZ4h.js">
+    <link rel="modulepreload" crossorigin href="/assets/axios-BsdTAh9b.js">
+    <link rel="modulepreload" crossorigin href="/assets/themeStore-CcEwdHyC.js">
     <link rel="modulepreload" crossorigin href="/assets/react-dom-BWtKWfLN.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-CWFnFyLL.js">
     <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-DCJfEhwt.js">
@@ -68,11 +74,11 @@
     <link rel="modulepreload" crossorigin href="/assets/suspense-y40_FqmI.js">
     <link rel="modulepreload" crossorigin href="/assets/useQuery-kkDy6y_Z.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-CPwrvVqN.js">
-    <link rel="modulepreload" crossorigin href="/assets/admin.api-DDz_XjKD.js">
+    <link rel="modulepreload" crossorigin href="/assets/admin.api-BAWN-97O.js">
     <link rel="modulepreload" crossorigin href="/assets/queryKeys-9foy8HxR.js">
     <link rel="modulepreload" crossorigin href="/assets/clsx-bBGfhTtu.js">
     <link rel="modulepreload" crossorigin href="/assets/classNames-CfUf48ny.js">
-    <link rel="modulepreload" crossorigin href="/assets/Spinner-OANPUwxZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/Spinner-CzTmmwsL.js">
     <link rel="modulepreload" crossorigin href="/assets/cabinetTemplateBootstrap-d7sWWSLa.js">
     <link rel="modulepreload" crossorigin href="/assets/permissions-A7cMpAZv.js">
     <link rel="stylesheet" crossorigin href="/assets/Spinner-C0jte2t6.css">
