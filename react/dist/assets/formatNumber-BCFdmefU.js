@@ -1,0 +1,1 @@
+var e=(e,t=`ru`)=>new Intl.NumberFormat(t===`ru`?`ru-RU`:`en-US`).format(e);export{e as t};
