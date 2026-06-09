@@ -1,0 +1,261 @@
+<section class="media">
+
+    <img class="media__bg-image" src="{{template}}/images/media-bg-1.webp" alt="media-bg-image"/>
+    <img class="media__bg-image" src="{{template}}/images/media-bg-2.webp" alt="media-bg-image"/>
+    <img class="media__bg-image" src="{{template}}/images/media-bg-3.webp" alt="media-bg-image"/>
+    <img class="media__bg-image" src="{{template}}/images/media-bg-4.webp" alt="media-bg-image"/>
+
+    <div class="container">
+        <div class="media__top">
+            <h3>{{ phrase('media_title') }}</h3>
+            <div class="media__switchers">
+                <button class="media__switcher-button active" type="button" data-index="1">
+                    {{ phrase('media_tab_streams') }}
+                </button>
+                <button class="media__switcher-button" type="button" data-index="2">
+                    {{ phrase('media_tab_videos') }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="media__content">
+        <div class="media__item active" data-index="1">
+            <div class="media__swiper-wrapper container">
+                <button class="media__swiper-prev" type="button">
+                    <svg width="30" height="40">
+                        <use xlink:href="{{template}}/images/icons.svg#arrow-type-2-left"></use>
+                    </svg>
+                </button>
+                <style>
+
+.media_video {
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    background: #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.media__slide {
+    width: 100%;
+}
+
+.media__slide .media__link,
+.media__slide .media_video,
+.media__slide .media__image {
+    display: block;
+    width: 100%;
+}
+
+.media__slide-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    min-height: 220px;
+    width: 100%;
+}
+
+.media__slide-text p {
+    margin: 0;
+}
+
+.media__slide--empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media__swiper {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.media__swiper--streams .swiper-slide {
+    cursor: grab;
+}
+
+.media__swiper--streams .swiper-slide:active {
+    cursor: grabbing;
+}
+
+.media__swiper--streams iframe,
+.media__swiper--streams img {
+    cursor: auto;
+}
+
+.media__swiper--streams .media__link {
+    cursor: pointer;
+}
+
+
+.media__swiper--videos .swiper-wrapper {
+    justify-content: center;
+}
+
+.media__swiper--videos .swiper-slide {
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+}
+
+.media__swiper--videos .swiper-slide:active {
+    cursor: grabbing;
+}
+
+.media__swiper--videos .media__slide {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.media__swiper--videos iframe,
+.media__swiper--videos img {
+    cursor: auto;
+}
+
+@media (max-width: 767px) {
+    .media__swiper--videos .swiper-wrapper {
+        justify-content: flex-start;
+    }
+
+    .media__swiper--videos .swiper-slide {
+        width: 100%;
+    }
+
+    .media__swiper--videos .media__slide {
+        max-width: none;
+    }
+}
+
+</style>
+
+                    <div class="media__swiper media__swiper--streams swiper">
+                    <div class="swiper-wrapper">
+        {% for stream in streams() %}
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                {% if stream_get_platform(stream.channel) == 'trovo' %}
+                                <a class="media__link" href="{{stream.channel}}" target="_blank" rel="noopener">
+                                    <img class="media__image" width="310" height="174" src="uploads/images/stream/trovo.jpg" alt="image"/>
+                                </a>
+                                {% else %}
+                                <iframe class="media_video" 
+                                        src="{{stream.src}}" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen
+                                        loading="lazy">
+                                </iframe>
+                                {% endif %}
+                            </div>
+                        </div>
+        {% else %}
+                        <div class="swiper-slide">
+                            <div class="border media__slide media__slide--empty">
+                                <div class="media__slide-text">
+                                    <p>{{ phrase('media_empty_streams_text') }}</p>
+                                    <a class="button" href="/stream">
+                                        <span>{{ phrase('media_empty_streams_button') }}</span>
+                                        <img class="button__bg" src="{{template}}/images/green-2.webp" alt="button-bg"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        {% endfor %}
+                    </div>
+                </div>
+
+
+                <button class="media__swiper-next" type="button">
+                    <svg width="30" height="40">
+                        <use xlink:href="{{template}}/images/icons.svg#arrow-type-2-right"></use>
+                    </svg>
+                </button>
+            </div>
+	 
+        </div>
+        <div class="media__item" data-index="2">
+            <div class="media__swiper-wrapper container">
+                <img class="media__bg-image" src="{{template}}/images/media-bg-1.webp" alt="media-bg-image"/>
+                <img class="media__bg-image" src="{{template}}/images/media-bg-2.webp" alt="media-bg-image"/>
+                <button class="media__swiper-prev" type="button">
+                    <svg width="30" height="40">
+                        <use xlink:href="{{template}}/images/icons.svg#arrow-type-2-left"></use>
+                    </svg>
+                </button>
+                <div class="media__swiper media__swiper--videos swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border media__slide">
+                                <iframe class="media_video" src="https://www.youtube.com/embed/cnryyPG1DfM?si=dvJpre9uq7wa-Zx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="media__swiper-next" type="button">
+                    <svg width="30" height="40">
+                        <use xlink:href="{{template}}/images/icons.svg#arrow-type-2-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+	
+    <div class="container media__container">
+					<img class="media__bg-image" src="{{template}}/images/media-bg-3.webp" alt="media-bg-image"/>
+					<img class="media__bg-image" src="{{template}}/images/media-bg-4.webp" alt="media-bg-image"/>
+					<div class="media__box">
+						<div class="line-top">
+							<svg width="1920" height="34">
+								<use xlink:href="{{template}}/images/icons.svg#line-3"></use>
+							</svg>
+						</div> 
+
+						<picture>
+							<source srcset="{{template}}/images/media-image-1-m.webp" media="(max-width: 768px)"/>
+							<img class="media__box-image-1" src="{{template}}/images/media-image-1.webp" alt="image"/>
+						</picture>
+						<picture>
+							<source srcset="{{template}}/images/media-image-2-m.webp" media="(max-width: 768px)"/>
+							<img class="media__box-image-2" src="{{template}}/images/media-image-2.webp" alt="image"/>
+						</picture>
+                        <h6>{{ phrase('media_cta_title') }}</h6>
+                        <p class="media__box-text">{{ phrase('media_cta_text') }}</p>
+                        <a class="button media__box-button" href="https://dion.town/stream">
+                            <span>{{ phrase('media_cta_button') }}</span>
+							<img class="button__bg" src="{{template}}/images/green-2.webp" alt="button-bg"/>
+						</a>
+					</div>
+				</div>
+</section>

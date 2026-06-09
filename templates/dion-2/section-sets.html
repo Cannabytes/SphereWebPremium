@@ -1,0 +1,30 @@
+{% if startpacks() %}
+<section class="sets">
+    <div class="container">
+    <h3 class="sets__title">{{ phrase('sets_title') }}</h3>
+        <ul class="sets__list">
+
+            {% for data in startpacks() %}
+            <li class="sets__item border">
+                <div class="sets__box">
+                    <img class="sets__image" src="{{template}}/images/silver-set.webp" alt="silver"/>
+                    <h5 class="sets__item-title"> {{ data.name }}</h5>
+                    <a class="button white sets__item-button" href="/main">
+                        <span>{{ phrase('sets_button_buy') }}</span>
+                        <img class="button__bg" src="{{template}}/images/orange.webp" alt="button-bg"/>
+                    </a>
+                </div>
+            </li>
+            {% endfor %}
+
+
+        </ul>
+    </div>
+    <div class="line-bottom">
+        <svg width="1920" height="60">
+            <use xlink:href="{{template}}/images/icons.svg#line-2"></use>
+        </svg>
+    </div>
+
+</section>
+{% endif %}

@@ -1,0 +1,31 @@
+{% set flagMap = {
+    'ru': 'ru',
+    'en': 'eng',
+    'es': 'esp',
+    'pt': 'pt',
+    'ua': 'ua',
+    'gr': 'gr'
+} %}
+{% set activeLang = lang_active() %}
+{% set activeCode = activeLang.lang %}
+{% set activeFlag = flagMap[activeCode]|default(activeCode) %}
+<div class="lang header__lang">
+    <button class="lang__button" type="button">
+        <img class="lang__button-img" src="{{template}}/images/{{activeFlag}}.svg?v=0.3" alt="{{activeCode|upper}}"/>
+        <span class="lang__active">{{activeCode|upper}}</span>
+        <svg width="14" height="14">
+            <use xlink:href="{{template}}/images/icons.svg#arrow-bottom"></use>
+        </svg>
+    </button>
+    <ul class="lang__list">
+        {% for lang in getAllowLang(false) %}
+            {% set langFlag = flagMap[lang.lang]|default(lang.lang) %}
+            <li class="lang__list-item">
+                <a class="lang__inner-button" data-lang="{{lang.lang}}" href="/user/change/lang/{{lang.lang}}">
+                    <img src="{{template}}/images/{{langFlag}}.svg?v=0.3" alt="{{lang.lang|upper}}"/>
+                    <span class="lang__active">{{lang.lang|upper}}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

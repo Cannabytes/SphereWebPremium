@@ -1,0 +1,35 @@
+<section class="news">
+    <div class="container news__inner">
+        <div class="news__tg">
+            <h3 class="news__title">{{ phrase('news_title_telegram') }}</h3>
+
+            <div class="news__block border">
+             <blockquote class="telegram-post" data-telegram-post="diontown/113" data-width="100%"></blockquote>
+<script async src="https://telegram.org/js/telegram-widget.js?22"></script>
+
+            </div>
+        </div>
+        <div class="news__wrapper">
+            <h3 class="news__title">{{ phrase('news_title_latest_topics') }}</h3>
+            <ul class="news__list">
+			
+				{% for forum in forum().lastThreads(5) %}
+                <li class="news__item">
+                    <a target="_blank" class="news__link" href="{{get_forum_link(forum)}}">
+                        <div class="news__link-top">
+                            <span>{{forum.username}}</span>
+                            <span class="news__date">{{forum.post_date|date('H:m:s')}}</span>
+                        </div>
+                        <span class="news__link-name">{{forum.message}}</span>
+                        <svg class="news__link-arrow" width="18" height="24">
+                            <use xlink:href="{{template}}/images/icons.svg#arrow-type-2-right"></use>
+                        </svg>
+                    </a>
+                </li>
+				 {% endfor %}  
+				 
+            </ul>
+
+        </div>
+    </div>
+</section>

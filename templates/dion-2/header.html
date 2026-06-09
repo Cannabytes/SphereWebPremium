@@ -1,0 +1,125 @@
+<header class="header">
+    <div class="container header__inner">
+        <a class="logo" href="/">
+            <img class="logo__img" fetchpriority="high" src="{{template}}/images/logo-small.webp" alt="logo"/>
+        </a>
+        <div class="header__menu">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="header__link" href="/signup">
+                        <svg width="20" height="20">
+                            <use xlink:href="{{template}}/images/icons.svg#profile-icon"></use>
+                        </svg>
+                        <span>{{phrase('nav_registration')}}</span>
+                    </a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__link" href="https://forum.dion.town/threads/podkljuchenie-k-serveru.158/" data-open-window="files">
+                        <svg width="20" height="20">
+                            <use xlink:href="{{template}}/images/icons.svg#file-icon"></use>
+                        </svg>
+                        <span>{{phrase('nav_files')}}</span>
+                    </a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__link" href="https://forum.dion.town/">
+                        <svg width="20" height="20">
+                            <use xlink:href="{{template}}/images/icons.svg#forum-icon"></use>
+                        </svg>
+                        <span>{{phrase('nav_forum')}}</span>
+                    </a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__link" href="https://forum.dion.town/forums/novosti-news-noticias-noticias-n-a.4/">
+                        <svg width="20" height="20">
+                            <use xlink:href="{{template}}/images/icons.svg#news-icon"></use>
+                        </svg>
+                        <span>{{phrase('nav_news')}}</span>
+                    </a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__link" href="/support">
+                        <svg width="20" height="20">
+                            <use xlink:href="{{template}}/images/icons.svg#support-icon"></use>
+                        </svg>
+                        <span>{{phrase('nav_help')}}</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="circle header__close" type="button">
+                <svg width="16" height="16">
+                    <use xlink:href="{{template}}/images/icons.svg#close-icon"></use>
+                </svg>
+            </button>
+            <ul class="socials header__socials">
+                <li class="socials__item">
+                    <a class="socials__link circle" href="https://discord.gg/diontown">
+                        <svg width="19" height="15">
+                            <use xlink:href="{{template}}/images/icons.svg#discord-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__link circle" href="https://t.me/diontown">
+                        <svg width="18" height="16">
+                            <use xlink:href="{{template}}/images/icons.svg#tg-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__link circle" href="https://www.youtube.com/@dion-town">
+                        <svg width="20" height="14">
+                            <use xlink:href="{{template}}/images/icons.svg#youtube-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__link circle" href="https://instagram.com/dion.town">
+                        <svg width="16" height="16">
+                            <use xlink:href="{{template}}/images/icons.svg#inst-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a class="socials__link circle" href="https://www.tiktok.com/@diontown">
+                        <svg width="16" height="17">
+                            <use xlink:href="{{template}}/images/icons.svg#tiktok-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        {% include 'lang.html' %}
+
+        <a class="button header__profile" href="/login">
+            <span>{{phrase('nav_account')}}</span>
+            <img class="button__bg" src="{{template}}/images/orange.webp" alt="button-bg"/>
+        </a>
+
+        <a class="circle header__profile-mobile" href="/login">
+            <svg width="16" height="16">
+                <use xlink:href="{{template}}/images/icons.svg#profile-2-icon"></use>
+            </svg>
+        </a>
+        <button class="circle header__menu-button" type="button">
+            <svg width="16" height="16">
+                <use xlink:href="{{template}}/images/icons.svg#burger-icon"></use>
+            </svg>
+        </button>
+    </div>
+	
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104605490', 'ym');
+
+    ym(104605490, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104605490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</header>

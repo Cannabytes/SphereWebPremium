@@ -1,0 +1,228 @@
+{% extends 'struct.html' %}
+
+{% block title %}
+    {{ phrase('nav_about') }}
+{% endblock %}
+
+{% block content %}
+    <section class="about-server bg">
+        <div class="container">
+            <h2 class="about-server__title">{{ phrase('about_page_title') }}</h2>
+            <div class="switcher">
+                <button class="button switcher__button active" type="button" data-index="1">
+                    <span>x800</span>
+                    <img class="button__bg" src="{{template}}/images/orange.webp" alt="button-bg"/>
+                </button>
+               
+            </div>
+
+            
+
+            <div class="switcher-content active" data-index="1">
+                <div class="border about-server__content">
+                    <div class="about-server__swiper swiper">
+                        <div class="swiper-wrapper about-server__buttons">
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button active" type="button" data-index="1">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-1.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ get_page(1).name }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="2">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-2.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ get_page(2).name }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="3">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-3.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ get_page(3).name }}</span>
+                                        <span>{{ phrase('about_page_tab3_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="4">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-4.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ get_page(4).name }}</span>
+                                        <span>{{ phrase('about_page_tab4_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="5">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-4.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab5_title') }}</span>
+                                        <span>{{ phrase('about_page_tab5_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="6">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-5.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab6_title') }}</span>
+                                        <span>{{ phrase('about_page_tab6_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="7">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-6.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab7_title') }}</span>
+                                        <span>{{ phrase('about_page_tab7_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="8">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-2.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab8_title') }}</span>
+                                        <span>{{ phrase('about_page_tab8_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="9">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-4.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab9_title') }}</span>
+                                        <span>{{ phrase('about_page_tab9_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="10">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-7.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab10_title') }}</span>
+                                        <span>{{ phrase('about_page_tab10_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="11">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-8.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab11_title') }}</span>
+                                        <span>{{ phrase('about_page_tab11_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="12">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-2.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab12_title') }}</span>
+                                        <span>{{ phrase('about_page_tab12_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="swiper-slide about-server__slide">
+                                <button class="about-server__button" type="button" data-index="13">
+                                    <img class="about-server__icon" src="{{template}}/images/about-server-2.webp" alt="icon"/>
+                                    <span>
+                                        <span class="about-server__button-value">{{ phrase('about_page_tab13_title') }}</span>
+                                        <span>{{ phrase('about_page_tab13_subtitle') }}</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="about-server__box active" data-index="1">
+                        <picture>
+                            <source srcset="{{template}}/images/about-server-image-m.webp" media="(max-width: 420px)"/>
+                            <source srcset="{{template}}/images/about-server-image-t.webp" media="(max-width: 769px)"/>
+                            <img class="about-server__image" src="{{template}}/images/about-server-image.webp" alt="image"/>
+                        </picture>
+                        <div class="about-server__box-container">
+
+                            <div class="about-server__wrapper">
+                                <h5 class="about-server__box-title">{{ get_page(1).name }}</h5>
+                            </div>
+                            
+                            <div class="about-server__line"></div>
+                            <div class="about-server__wrapper">
+                                {{ get_page(1).description|raw }}
+                            </div>
+                        </div>
+                    </div>
+
+  
+                    <div class="about-server__box " data-index="2">
+                        <picture>
+                            <source srcset="{{template}}/images/about-server-image-m.webp" media="(max-width: 420px)"/>
+                            <source srcset="{{template}}/images/about-server-image-t.webp" media="(max-width: 769px)"/>
+                            <img class="about-server__image" src="{{template}}/images/about-server-image.webp" alt="image"/>
+                        </picture>
+                        <div class="about-server__box-container">
+
+                            <div class="about-server__wrapper">
+                                <h5 class="about-server__box-title">{{ get_page(2).name }}</h5>
+                            </div>
+                            
+                            <div class="about-server__line"></div>
+                            <div class="about-server__wrapper">
+                                {{ get_page(2).description|raw }}
+                            </div>
+                        </div>
+                    </div>
+					
+					 <div class="about-server__box " data-index="3">
+                        <picture>
+                            <source srcset="{{template}}/images/about-server-image-m.webp" media="(max-width: 420px)"/>
+                            <source srcset="{{template}}/images/about-server-image-t.webp" media="(max-width: 769px)"/>
+                            <img class="about-server__image" src="{{template}}/images/about-server-image.webp" alt="image"/>
+                        </picture>
+                        <div class="about-server__box-container">
+
+                            <div class="about-server__wrapper">
+                                <h5 class="about-server__box-title">{{ get_page(3).name }}</h5>
+                            </div>
+                            
+                            <div class="about-server__line"></div>
+                            <div class="about-server__wrapper">
+                                {{ get_page(3).description|raw }}
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="about-server__box " data-index="4">
+                        <picture>
+                            <source srcset="{{template}}/images/about-server-image-m.webp" media="(max-width: 420px)"/>
+                            <source srcset="{{template}}/images/about-server-image-t.webp" media="(max-width: 769px)"/>
+                            <img class="about-server__image" src="{{template}}/images/about-server-image.webp" alt="image"/>
+                        </picture>
+                        <div class="about-server__box-container">
+
+                            <div class="about-server__wrapper">
+                                <h5 class="about-server__box-title">{{ get_page(4).name }}</h5>
+                            </div>
+                            
+                            <div class="about-server__line"></div>
+                            <div class="about-server__wrapper">
+                                {{ get_page(4).description|raw }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="switcher-content" data-index="2" style="height: 800px"></div>
+        </div>
+    </section>
+{% endblock %}
