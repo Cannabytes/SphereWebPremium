@@ -1,0 +1,1 @@
+import{t as e}from"./clsx-CQXsFDzQ.js";var t=(...t)=>e(t);export{t};
