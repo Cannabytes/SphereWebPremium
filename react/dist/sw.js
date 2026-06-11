@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'sphereweb3-shell-v3'
+const CACHE_VERSION = 'sphereweb3-shell-v4'
 const STATIC_CACHE = `${CACHE_VERSION}:static`
 const API_CACHE = `${CACHE_VERSION}:api`
 const STATIC_ASSETS = [
@@ -28,6 +28,12 @@ self.addEventListener('activate', (event) => {
   )
 })
 
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting()
+  }
+})
+
 self.addEventListener('fetch', (event) => {
   const request = event.request
   if (request.method !== 'GET') {
@@ -44,7 +50,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.pathname.startsWith('/assets/')) {
-    event.respondWith(staleWhileRevalidate(request, STATIC_CACHE))
+    event.respondWith(networkFirst(request, STATIC_CACHE))
     return
   }
 
@@ -90,24 +96,4 @@ async function networkFirst(request, cacheName) {
     }
     throw error
   }
-}
-
-async function staleWhileRevalidate(request, cacheName) {
-  const cache = await caches.open(cacheName)
-  const cached = await cache.match(request)
-  const network = fetch(request)
-    .then((response) => {
-      if (response.ok) {
-        cache.put(request, response.clone())
-      }
-      return response
-    })
-    .catch((error) => {
-      if (cached) {
-        return cached
-      }
-      throw error
-    })
-
-  return cached || network
 }
