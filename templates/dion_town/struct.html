@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ lang_active().lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ title_start_page() }}{% endblock %}</title>
+  <meta name="description" content="{{ description_start_page() }}">
+  <meta name="keywords" content="{{ keywords_start_page() }}">
+  <meta name="theme-color" content="#111116">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site_url }}">
+  <meta property="og:title" content="{{ title_start_page() }}">
+  <meta property="og:image" content="{{template}}/images/bg.jpg">
+  <meta property="og:description" content="{{ description_start_page() }}">
+  <meta property="og:site_name" content="{{ title_start_page() }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+SC:wght@400;500;600;700&family=Arsenal:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{{template}}/css/style.css" rel="stylesheet">
+  {% block styles %}{% endblock %}
+  {{ config().other().getAnalyticsHead()|raw }}
+</head>
+<body>
+{{ config().other().getAnalyticsBody()|raw }}
+
+<div class="preloader" id="preloader">
+  <img class="preloader__mark" src="{{template}}/images/logo-mark.svg" alt="">
+  <div class="preloader__dots">
+    <img src="{{template}}/images/ic-diamond.svg" alt=""><img src="{{template}}/images/ic-diamond.svg" alt=""><img src="{{template}}/images/ic-diamond.svg" alt="">
+  </div>
+  <img class="preloader__logo" src="{{template}}/images/logo-dion-town.svg" alt="DION TOWN">
+</div>
+
+{% include "navigation.html" %}
+
+{% block content %}{% endblock %}
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

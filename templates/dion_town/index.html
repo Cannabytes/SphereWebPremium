@@ -1,0 +1,288 @@
+{% extends "struct.html" %}
+
+{% block title %}
+{{ phrase_array({ 'ru': 'Главная', 'en': 'Home' }) }}
+{% endblock %}
+
+{% block content %}
+<div class="screen screen--hero">
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__shade"></div>
+    <div class="social-rail">
+      <a href="#" title="Discord"><img src="{{template}}/images/soc-discord.svg" alt="Discord"></a>
+      <a href="#" title="Telegram"><img src="{{template}}/images/soc-telegram.svg" alt="Telegram"></a>
+      <a href="#" title="TikTok"><img src="{{template}}/images/soc-tiktok.svg" alt="TikTok"></a>
+      <a href="#" title="VK"><img src="{{template}}/images/soc-vk.svg" alt="VK"></a>
+      <a href="#" class="ig" title="Instagram"><img class="pad" src="{{template}}/images/soc-instagram.svg" alt="Instagram"></a>
+      <a href="#" class="fb" title="Facebook"><img class="pad" src="{{template}}/images/soc-facebook.svg" alt="Facebook"></a>
+    </div>
+    <div class="hero__inner">
+      <img class="hero__logo-img" src="{{template}}/images/logo-dion-town.svg" alt="DION TOWN">
+      <h1 class="hero__tagline">{{ phrase_array({ 'ru': 'Residence &amp; MOBA Servers<br>Современный Interlude клиент', 'en': 'Residence &amp; MOBA Servers<br>Modern Interlude client' })|raw }}</h1>
+      <div class="hero__cta">
+        <a href="{{ alias('registration_user') }}" class="btn btn-start btn--lg"><span>{{ phrase_array({ 'ru': 'Начать играть', 'en': 'Start playing' }) }}</span></a>
+        <a href="#clientPanels" class="btn btn--about btn--lg"><span>{{ phrase_array({ 'ru': 'Описание проекта', 'en': 'Project overview' }) }}</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="status">
+    <div class="container">
+      <div class="status__grid">
+        {% set servers = getServerAll() %}
+        {% if servers %}
+          {% for server in servers %}
+            {% set crest_index = (i % 3) + 1 %}
+            <div class="status-card">
+              <img class="status-card__crest" src="{{template}}/images/crest-{{ crest_index }}.png" alt="">
+              <div class="status-card__body">
+                <div class="status-card__title">{{ server.name }}</div>
+                <div class="status-card__row"><img src="{{template}}/images/ic-dot.svg" alt=""> {{ server.online }} {{ phrase_array({ 'ru': 'онлайн', 'en': 'online' }) }}</div>
+                <div class="status-card__days">{{ server.chronicle }} x{{ server.rateExp }}</div>
+              </div>
+              <div class="badge {% if server.status.gameServer %}badge--new{% else %}badge--old{% endif %}">{% if server.status.gameServer %}on{% else %}off{% endif %}</div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="status-card">
+            <img class="status-card__crest" src="{{template}}/images/crest-1.png" alt="">
+            <div class="status-card__body">
+              <div class="status-card__title">DION TOWN</div>
+              <div class="status-card__row"><img src="{{template}}/images/ic-dot.svg" alt=""> 0 {{ phrase_array({ 'ru': 'онлайн', 'en': 'online' }) }}</div>
+              <div class="status-card__days">Interlude x1</div>
+            </div>
+            <div class="badge badge--old">off</div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section client screen">
+  <div class="container">
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-tab="0">{{ phrase_array({ 'ru': 'Клиент нового поколения', 'en': 'New generation client' }) }}</div>
+      <div class="tab" data-tab="1">{{ phrase_array({ 'ru': 'Высокая производительность', 'en': 'High performance' }) }}</div>
+      <div class="tab" data-tab="2">{{ phrase_array({ 'ru': 'Стабильность и поддержка', 'en': 'Stability and support' }) }}</div>
+      <div class="tab" data-tab="3">{{ phrase_array({ 'ru': 'Современные технологии', 'en': 'Modern technology' }) }}</div>
+      <div class="tab" data-tab="4">{{ phrase_array({ 'ru': 'Полная совместимость', 'en': 'Full compatibility' }) }}</div>
+      <div class="tab" data-tab="5">{{ phrase_array({ 'ru': 'Запас на будущее', 'en': 'Future ready' }) }}</div>
+    </div>
+    <div class="client__panels" id="clientPanels">
+      <div class="client__panel" data-tab="0">
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Клиент нового<br>поколения', 'en': 'New generation<br>client' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Собранный под DION TOWN клиент делает старт понятным, быстрым и визуально чистым. Мы сохранили знакомый игровой цикл и убрали всё лишнее.', 'en': 'The DION TOWN client keeps the start fast, clear and familiar while removing the noise.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+      <div class="client__panel" data-tab="1" hidden>
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Высокая<br>производительность', 'en': 'High<br>performance' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Оптимизированные настройки и современный рендеринг помогают держать стабильный FPS даже на средних машинах.', 'en': 'Optimized settings and modern rendering help keep a stable FPS on modest hardware.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+      <div class="client__panel" data-tab="2" hidden>
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Стабильность<br>и поддержка', 'en': 'Stability<br>and support' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Мы держим проект на предсказуемых обновлениях и не ломаем базовый игровой опыт без причины.', 'en': 'The project follows predictable updates and does not break the base experience without reason.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+      <div class="client__panel" data-tab="3" hidden>
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Современные<br>технологии', 'en': 'Modern<br>technology' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Новые сборки, аккуратный интерфейс и актуальные механики помогают проекту выглядеть свежо.', 'en': 'New builds, a clean interface and current mechanics keep the project looking fresh.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+      <div class="client__panel" data-tab="4" hidden>
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Полная<br>совместимость', 'en': 'Full<br>compatibility' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Классический геймплей остаётся знакомым, но при этом становится удобнее за счёт аккуратной доработки клиента.', 'en': 'Classic gameplay stays familiar while becoming more comfortable thanks to a polished client.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+      <div class="client__panel" data-tab="5" hidden>
+        <div>
+          <h2 class="client__h">{{ phrase_array({ 'ru': 'Запас<br>на будущее', 'en': 'Future<br>ready' })|raw }}</h2>
+          <p class="client__p">{{ phrase_array({ 'ru': 'Шаблон проекта собран так, чтобы легко расширяться новыми разделами, новостями и игровыми событиями.', 'en': 'The project template is built to grow with new sections, news and game events.' }) }}</p>
+          <a href="/about" class="btn btn--red"><span>{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</span></a>
+        </div>
+        <div class="client__img"><img src="{{template}}/images/flauron.png" alt="DION TOWN client"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section screen" id="files">
+  <div class="container">
+    <div class="files__grid">
+      <div class="files__col">
+        <h2 class="files__title">{{ phrase_array({ 'ru': 'Файлы для игры на сервере', 'en': 'Game files for the server' }) }}</h2>
+        <div class="file-card">
+          <div class="file-card__head">
+            <h3>{{ phrase_array({ 'ru': 'Клиент', 'en': 'Client' }) }}</h3>
+            <p>{{ phrase_array({ 'ru': 'Скачайте полный клиент игры и не забудьте запустить его через лаунчер.', 'en': 'Download the full game client and launch it through the launcher.' }) }}</p>
+          </div>
+          <div class="file-card__btns">
+            <a href="#" class="btn-dl"><img src="{{template}}/images/files-1.svg" alt=""><span>Download Google</span></a>
+            <a href="#" class="btn-dl"><img src="{{template}}/images/files-2.svg" alt=""><span>Download Torrent</span></a>
+          </div>
+        </div>
+        <div class="file-card">
+          <div class="file-card__head">
+            <h3>{{ phrase_array({ 'ru': 'Лаунчер', 'en': 'Launcher' }) }}</h3>
+            <p>{{ phrase_array({ 'ru': 'Автоматическое обновление и доставка клиента без лишних действий.', 'en': 'Automatic updates and client delivery without extra steps.' }) }}</p>
+          </div>
+          <div class="file-card__btns">
+            <a href="#" class="btn-dl"><img src="{{template}}/images/files-1.svg" alt=""><span>Download Google</span></a>
+            <a href="#" class="btn-dl"><img src="{{template}}/images/files-2.svg" alt=""><span>Download CDN&nbsp;1</span></a>
+          </div>
+        </div>
+        <p class="files__note">{{ phrase_array({ 'ru': 'Мы всегда готовы помочь!', 'en': 'We are always ready to help!' }) }}</p>
+        <p class="files__note">{{ phrase_array({ 'ru': 'Если у вас возникли проблемы со входом в игру, вы можете', 'en': 'If you have trouble logging in, you can' }) }} <a href="{{ alias('main') }}">{{ phrase_array({ 'ru': 'обратиться в поддержку', 'en': 'contact support' }) }}</a> {{ phrase_array({ 'ru': 'через личный кабинет.', 'en': 'through the personal cabinet.' }) }}</p>
+      </div>
+
+      <aside class="reg-card">
+        <div class="reg-card__inner">
+          <div class="reg-card__dragon"><img src="{{template}}/images/files-4.png" alt=""></div>
+          <div class="reg-card__logo"><img src="{{template}}/images/logo-mark.svg" alt="DION TOWN"></div>
+          <h3>{{ phrase_array({ 'ru': 'Регистрация<br>аккаунта', 'en': 'Account<br>registration' })|raw }}</h3>
+          <p>{{ phrase_array({ 'ru': 'Чтобы войти в игру, создайте мастер-аккаунт, войдите в кабинет и заведите нужное число игровых аккаунтов.', 'en': 'To enter the game, create a master account, sign in to the cabinet and create the required game accounts.' }) }}</p>
+          <a href="{{ alias('registration_user') }}" class="btn btn--green btn-create btn--block reg-card__btn"><span>{{ phrase_array({ 'ru': 'Создать аккаунт', 'en': 'Create account' }) }}</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section screen" id="spack">
+  <div class="container">
+    <h2 class="section__title">{{ phrase_array({ 'ru': 'Стартовые наборы', 'en': 'Starter packs' }) }}</h2>
+    <div class="packs">
+      <div class="pack pack--silver">
+        <div class="pack__inner">
+          <div class="pack__chest"><img src="{{template}}/images/chest-silver.png" alt="Silver"></div>
+          <div class="pack__name">SILVER</div>
+          <a href="#" class="btn btn--green"><span>{{ phrase_array({ 'ru': 'Купить', 'en': 'Buy' }) }}</span></a>
+        </div>
+      </div>
+      <div class="pack pack--gold">
+        <div class="pack__inner">
+          <div class="pack__chest"><img src="{{template}}/images/chest-gold.png" alt="Gold"></div>
+          <div class="pack__name">GOLD</div>
+          <a href="#" class="btn btn--green"><span>{{ phrase_array({ 'ru': 'Купить', 'en': 'Buy' }) }}</span></a>
+        </div>
+      </div>
+      <div class="pack pack--plat">
+        <div class="pack__inner">
+          <div class="pack__chest"><img src="{{template}}/images/chest-plat.png" alt="Platinum"></div>
+          <div class="pack__name">PLATINUM</div>
+          <a href="#" class="btn btn--green"><span>{{ phrase_array({ 'ru': 'Купить', 'en': 'Buy' }) }}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section screen">
+  <div class="container">
+    <div class="news">
+      {% set news_list = last_news(4) %}
+      {% if news_list %}
+        {% for news in news_list %}
+          <article class="news-card">
+            <div class="news-card__img"><img src="{{ news_poster(news.poster) }}" alt=""></div>
+            <div class="news-card__date">{{ news.date_create|date("d.m") }}</div>
+            <div class="news-card__inner">
+              <div>
+                <div class="news-card__tag">{{ phrase_array({ 'ru': 'Новости', 'en': 'News' }) }}</div>
+                <h3 class="news-card__h">{{ news.name }}</h3>
+                <div class="news-card__meta">{{ news.date_create|date("d.m.Y") }}</div>
+                <p class="news-card__desc">{{ news.description|raw }}</p>
+              </div>
+              <a href="{{ getPageLink(news) }}" class="news-card__btn">{{ phrase_array({ 'ru': 'Подробнее', 'en': 'Read more' }) }}</a>
+            </div>
+          </article>
+        {% endfor %}
+      {% else %}
+        <article class="news-card">
+          <div class="news-card__img"><img src="{{template}}/images/news-1.png" alt=""></div>
+          <div class="news-card__date">01.01</div>
+          <div class="news-card__inner">
+            <div>
+              <div class="news-card__tag">{{ phrase_array({ 'ru': 'Новости', 'en': 'News' }) }}</div>
+              <h3 class="news-card__h">{{ phrase_array({ 'ru': 'Новостей пока нет', 'en': 'No news yet' }) }}</h3>
+              <div class="news-card__meta">{{ phrase_array({ 'ru': 'Скоро появятся обновления', 'en': 'Updates will appear soon' }) }}</div>
+              <p class="news-card__desc">{{ phrase_array({ 'ru': 'В админке ещё не опубликованы материалы, но этот блок уже готов к работе.', 'en': 'No articles have been published yet, but this block is ready.' }) }}</p>
+            </div>
+            <a href="/news" class="news-card__btn">{{ phrase_array({ 'ru': 'Открыть новости', 'en': 'Open news' }) }}</a>
+          </div>
+        </article>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<div class="screen screen--end">
+  <section class="section">
+    <div class="container">
+      <div class="community">
+        <div class="comm-box">
+          <div class="comm-box__embed"></div>
+          <a class="btn-flat btn-flat--discord" href="#"><img src="{{template}}/images/ic-discord.svg" alt=""> Discord</a>
+        </div>
+        <div class="comm-box">
+          <div class="comm-box__embed"></div>
+          <a class="btn-flat btn-flat--tg" href="#"><img src="{{template}}/images/ic-telegram.svg" alt=""> Telegram</a>
+        </div>
+        <div class="comm-box">
+          <div class="stream__head">
+            <div class="stream__h">{{ phrase_array({ 'ru': 'Online трансляции', 'en': 'Live streams' }) }}</div>
+            <div class="stream__sub">{{ phrase_array({ 'ru': 'DION TOWN на современном клиенте', 'en': 'DION TOWN on a modern client' }) }}</div>
+          </div>
+          <div class="stream__media">
+            <div class="stream__track" id="streamTrack">
+              <div class="stream__slide" data-slide="0">
+                <img src="{{template}}/images/stream.png" alt="">
+                <div class="stream__cap">{{ phrase_array({ 'ru': 'Тут может быть<br>ваша трансляция!', 'en': 'Your stream could be<br>here!' })|raw }}</div>
+              </div>
+              <div class="stream__slide" data-slide="1" hidden>
+                <img src="{{template}}/images/stream.png" alt="">
+                <div class="stream__cap">{{ phrase_array({ 'ru': 'Слот 2 — ваша трансляция<br>скоро в эфире', 'en': 'Slot 2 - your stream<br>is coming soon' })|raw }}</div>
+              </div>
+              <div class="stream__slide" data-slide="2" hidden>
+                <img src="{{template}}/images/stream.png" alt="">
+                <div class="stream__cap">{{ phrase_array({ 'ru': 'Слот 3 — реклама вашего<br>стрима здесь', 'en': 'Slot 3 - promo for your<br>stream goes here' })|raw }}</div>
+              </div>
+              <div class="stream__slide" data-slide="3" hidden>
+                <img src="{{template}}/images/stream.png" alt="">
+                <div class="stream__cap">{{ phrase_array({ 'ru': 'Слот 4 — добавь свою<br>трансляцию', 'en': 'Slot 4 - add your<br>own stream' })|raw }}</div>
+              </div>
+            </div>
+            <div class="stream__arrow l" id="streamPrev"><img src="{{template}}/images/ic-chevron.svg" alt="{{ phrase_array({ 'ru': 'Назад', 'en': 'Previous' }) }}"></div>
+            <div class="stream__arrow r" id="streamNext"><img src="{{template}}/images/ic-chevron.svg" alt="{{ phrase_array({ 'ru': 'Вперёд', 'en': 'Next' }) }}"></div>
+            <div class="stream__dots" id="streamDots"><i class="on"></i><i></i><i></i><i></i></div>
+          </div>
+          <a href="#" class="btn-flat btn-flat--red"><img src="{{template}}/images/ic-tv.svg" alt=""> {{ phrase_array({ 'ru': 'Разместить трансляцию', 'en': 'Submit stream' }) }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "footer.html" %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{template}}/js/custom.js"></script>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "struct.html" %}
+
+{% block title %}
+{{ phrase_array({ 'ru': 'О проекте', 'en': 'About the project' }) }}
+{% endblock %}
+
+{% block styles %}
+<link href="{{template}}/css/about.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+  <div class="about-hero__bg"></div>
+  <div class="about-hero__shade"></div>
+  <h1>DION TOWN</h1>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-body about-body--solo">
+      <div class="about-content about-content--full">
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Общая информация', 'en': 'General information' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'DION TOWN — современный Interlude-проект, где важны комфорт, предсказуемость и чистый визуальный стиль.', 'en': 'DION TOWN is a modern Interlude project where comfort, predictability and a clean visual style matter.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Проект', 'en': 'Project' }) }}: <b>DION TOWN</b></span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Хроника', 'en': 'Chronicle' }) }}: <b>Interlude</b></span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Фокус', 'en': 'Focus' }) }}: <b>{{ phrase_array({ 'ru': 'PvP, кланы и осады', 'en': 'PvP, clans and sieges' }) }}</b></span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Подача', 'en': 'Presentation' }) }}: <b>{{ phrase_array({ 'ru': 'Чистая структура и понятная навигация', 'en': 'Clean structure and clear navigation' }) }}</b></span></li>
+          </ul>
+          <div class="about-shot"><img src="{{template}}/images/about-flauron.jpg" alt="DION TOWN"></div>
+        </article>
+
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Особенности проекта', 'en': 'Project features' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'Проект сочетает привычный Interlude-геймплей с аккуратной доработкой интерфейса и быстрым стартом для новых игроков.', 'en': 'The project combines familiar Interlude gameplay with a polished interface and a fast start for new players.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Современный клиент и удобный лаунчер.', 'en': 'Modern client and convenient launcher.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Стабильные обновления без лишнего шума.', 'en': 'Stable updates without unnecessary noise.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Быстрый доступ к файлам и регистрации.', 'en': 'Quick access to files and registration.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Новый проект с прицелом на долгую жизнь.', 'en': 'A new project designed to live long.' }) }}</span></li>
+          </ul>
+        </article>
+
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Стадии', 'en': 'Stages' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'Мы строим развитие сервера по понятным этапам, чтобы игроки всегда знали, что происходит дальше.', 'en': 'The server evolves in clear stages so players always know what comes next.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Старт и настройка проекта.', 'en': 'Project launch and tuning.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Первые события и первые войны.', 'en': 'First events and first wars.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Развитие кланов и экономики.', 'en': 'Clan growth and economy.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Расширение контента и сезонные обновления.', 'en': 'Content expansion and seasonal updates.' }) }}</span></li>
+          </ul>
+        </article>
+
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Карьера', 'en': 'Career' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'Прогресс игрока остаётся честным и понятным: основа — это игра, а не бесконечные обходные механики.', 'en': 'Player progression stays fair and clear: the core is playing, not endless workarounds.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Плавный рост уровня и экипировки.', 'en': 'Smooth growth in level and gear.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Удобный вход для соло и клановых игроков.', 'en': 'Friendly for solo and clan players alike.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Поддержка через личный кабинет.', 'en': 'Support through the personal cabinet.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Внятный путь от новичка до ключевого игрока.', 'en': 'A clear path from beginner to key player.' }) }}</span></li>
+          </ul>
+        </article>
+
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Кланы', 'en': 'Clans' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'Клановый контент всегда на первом плане: именно он создаёт долгую жизнь сервера и его главные истории.', 'en': 'Clan content always comes first: it creates the long life of the server and its main stories.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Активные клановые войны и осады.', 'en': 'Active clan wars and sieges.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Рейды, эпики и совместные цели.', 'en': 'Raids, epics and shared goals.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Удобная база для рекрутинга и развития.', 'en': 'A convenient base for recruiting and growth.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Стабильная инфраструктура для больших альянсов.', 'en': 'Stable infrastructure for large alliances.' }) }}</span></li>
+          </ul>
+        </article>
+
+        <article class="about-sec">
+          <h2>{{ phrase_array({ 'ru': 'Осады', 'en': 'Sieges' }) }}</h2>
+          <p class="lead">{{ phrase_array({ 'ru': 'Осады и крупные PvP-события — это кульминация проекта, где решается судьба территорий и кланов.', 'en': 'Sieges and large PvP events are the climax of the project, where territories and clans are decided.' }) }}</p>
+          <ul class="about-list">
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Замки, форты и ключевые точки контроля.', 'en': 'Castles, forts and key control points.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Сражения, которые видит весь сервер.', 'en': 'Battles the whole server can feel.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Подготовка, которая важнее случайности.', 'en': 'Preparation matters more than luck.' }) }}</span></li>
+            <li><img src="{{template}}/images/ic-bullet.svg" alt=""><span>{{ phrase_array({ 'ru': 'Здесь рождаются главные победы DION TOWN.', 'en': 'This is where DION TOWN victories are born.' }) }}</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}
