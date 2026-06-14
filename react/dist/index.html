@@ -15,18 +15,18 @@
           var cookieMatch = document.cookie.match(/(?:^|;\s*)lang=([^;]+)/)
           if (cookieMatch && cookieMatch[1]) {
             var cookieLocale = decodeURIComponent(cookieMatch[1]).trim().toLowerCase()
-            locale = cookieLocale === 'en' ? 'en' : 'ru'
+            locale = cookieLocale === 'en' || cookieLocale === 'es' || cookieLocale === 'ua' || cookieLocale === 'gr' ? cookieLocale : 'ru'
           } else {
             var localeRaw = window.localStorage.getItem('l2cabinet-locale')
             var localeState = localeRaw ? JSON.parse(localeRaw).state : null
 
-            if (localeState && (localeState.locale === 'ru' || localeState.locale === 'en')) {
+            if (localeState && (localeState.locale === 'ru' || localeState.locale === 'en' || localeState.locale === 'es' || localeState.locale === 'ua' || localeState.locale === 'gr')) {
               locale = localeState.locale
             }
           }
         } catch (error) {}
 
-        root.lang = locale
+        root.lang = locale === 'gr' ? 'el' : locale
 
         try {
           var themeRaw = window.localStorage.getItem('l2cabinet-theme')
@@ -62,11 +62,11 @@
         } catch (error) {}
       })()
     </script>
-    <script type="module" crossorigin src="/assets/index-BgAiKIT-.js"></script>
+    <script type="module" crossorigin src="/assets/index-C-xhO7rn.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-D57Vegw5.js">
-    <link rel="modulepreload" crossorigin href="/assets/localeStore-DoJ_tq1k.js">
-    <link rel="modulepreload" crossorigin href="/assets/axios-DZObQMXY.js">
-    <link rel="modulepreload" crossorigin href="/assets/preload-helper-CNRlp6kk.js">
+    <link rel="modulepreload" crossorigin href="/assets/localeStore-BwJ-HcU1.js">
+    <link rel="modulepreload" crossorigin href="/assets/axios-Dm3TdRpq.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-DsVlIgMg.js">
     <link rel="modulepreload" crossorigin href="/assets/react-dom-BWtKWfLN.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-E1B-aMr8.js">
     <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-DCJfEhwt.js">
@@ -74,12 +74,12 @@
     <link rel="modulepreload" crossorigin href="/assets/mutation-DXpSAB59.js">
     <link rel="modulepreload" crossorigin href="/assets/useQuery-cI0YDZGC.js">
     <link rel="modulepreload" crossorigin href="/assets/dist-SsxDZUl3.js">
-    <link rel="modulepreload" crossorigin href="/assets/admin.api-BQ5r4zOx.js">
+    <link rel="modulepreload" crossorigin href="/assets/admin.api-BtAJg7jt.js">
     <link rel="modulepreload" crossorigin href="/assets/queryKeys-CaPVq4_E.js">
     <link rel="modulepreload" crossorigin href="/assets/clsx-CQXsFDzQ.js">
     <link rel="modulepreload" crossorigin href="/assets/classNames-DNtyMNhU.js">
-    <link rel="modulepreload" crossorigin href="/assets/Spinner-QN4jj5Zk.js">
-    <link rel="modulepreload" crossorigin href="/assets/themeStore-C6sV1QO-.js">
+    <link rel="modulepreload" crossorigin href="/assets/Spinner-COH4Rbe8.js">
+    <link rel="modulepreload" crossorigin href="/assets/themeStore-CH4yVzNE.js">
     <link rel="modulepreload" crossorigin href="/assets/cabinetTemplateBootstrap-BL4Fq5Aq.js">
     <link rel="modulepreload" crossorigin href="/assets/permissions-D2ENOB1T.js">
     <link rel="stylesheet" crossorigin href="/assets/Spinner-C0jte2t6.css">
