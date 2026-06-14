@@ -1,1 +1,0 @@
-import{t as e}from"./Spinner-COH4Rbe8.js";export{e as default};
