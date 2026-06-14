@@ -1,0 +1,1 @@
+import{t as e}from"./menu-CV2_maBC.js";import{t}from"./message-square-BRauII_y.js";var n=e=>e.trim().toLowerCase().split(/[-_\s]+/).filter(Boolean).map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(``),r=r=>{let i=r.trim();return i===``?t:e[i]??e[n(i)]??t};export{r as t};

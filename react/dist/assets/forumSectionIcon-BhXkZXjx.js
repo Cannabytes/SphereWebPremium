@@ -1,1 +1,0 @@
-import{t as e}from"./menu-DLGvYUz3.js";import{t}from"./message-square-CkY9VxFw.js";var n=e=>e.trim().toLowerCase().split(/[-_\s]+/).filter(Boolean).map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(``),r=r=>{let i=r.trim();return i===``?t:e[i]??e[n(i)]??t};export{r as t};
