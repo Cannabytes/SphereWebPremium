@@ -1,1 +1,0 @@
-import{n as e,t}from"./arrow-up-qSxJgR3e.js";export{e as __iconNode,t as default};

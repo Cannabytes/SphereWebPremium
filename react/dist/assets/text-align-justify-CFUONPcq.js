@@ -1,1 +1,0 @@
-import{n as e,t}from"./text-align-justify-BG-JZQbg.js";export{e as __iconNode,t as default};

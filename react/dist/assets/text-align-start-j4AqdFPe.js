@@ -1,1 +1,0 @@
-import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`M21 5H3`,key:`1fi0y6`}],[`path`,{d:`M15 12H3`,key:`6jk70r`}],[`path`,{d:`M17 19H3`,key:`z6ezky`}]],n=e(`text-align-start`,t);export{t as n,n as t};

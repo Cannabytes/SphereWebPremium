@@ -1,1 +1,0 @@
-import{n as e,t}from"./scissors-JV71DVCj.js";export{e as __iconNode,t as default};

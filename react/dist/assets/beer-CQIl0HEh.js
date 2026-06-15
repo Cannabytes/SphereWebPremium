@@ -1,1 +1,0 @@
-import{n as e,t}from"./beer-DlHhv3ST.js";export{e as __iconNode,t as default};

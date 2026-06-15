@@ -1,1 +1,0 @@
-import{n as e,t}from"./text-align-center-Y0iRh_Qw.js";export{e as __iconNode,t as default};

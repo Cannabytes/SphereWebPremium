@@ -1,1 +1,0 @@
-import{n as e,t}from"./truck-B6-9xnzC.js";export{e as __iconNode,t as default};

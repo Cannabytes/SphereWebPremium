@@ -1,1 +1,0 @@
-import{n as e,t}from"./corner-down-right-C8ZTDjil.js";export{e as __iconNode,t as default};

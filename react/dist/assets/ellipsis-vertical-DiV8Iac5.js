@@ -1,1 +1,0 @@
-import{n as e,t}from"./ellipsis-vertical-CybPI6fp.js";export{e as __iconNode,t as default};

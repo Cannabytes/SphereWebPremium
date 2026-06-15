@@ -1,1 +1,0 @@
-import{n as e,t}from"./heading-2-2mtWo0Tr.js";export{e as __iconNode,t as default};

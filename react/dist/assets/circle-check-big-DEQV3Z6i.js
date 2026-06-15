@@ -1,1 +1,0 @@
-import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`M21.801 10A10 10 0 1 1 17 3.335`,key:`yps3ct`}],[`path`,{d:`m9 11 3 3L22 4`,key:`1pflzl`}]],n=e(`circle-check-big`,t);export{t as n,n as t};

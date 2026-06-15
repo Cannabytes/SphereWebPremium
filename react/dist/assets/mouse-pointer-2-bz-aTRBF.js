@@ -1,1 +1,0 @@
-import{n as e,t}from"./mouse-pointer-2-DKbavCn9.js";export{e as __iconNode,t as default};

@@ -1,1 +1,0 @@
-import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`m9 18 6-6-6-6`,key:`mthhwq`}]],n=e(`chevron-right`,t);export{t as n,n as t};

@@ -1,1 +1,0 @@
-import{n as e,t}from"./clipboard-check-CPJsUNSc.js";export{e as __iconNode,t as default};
