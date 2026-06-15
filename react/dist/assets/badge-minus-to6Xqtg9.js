@@ -1,0 +1,1 @@
+import{n as e,t}from"./badge-minus-BLlGmEIC.js";export{e as __iconNode,t as default};

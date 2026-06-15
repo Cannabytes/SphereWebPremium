@@ -1,0 +1,1 @@
+import{n as e,t}from"./dumbbell-CieV_ipa.js";export{e as __iconNode,t as default};

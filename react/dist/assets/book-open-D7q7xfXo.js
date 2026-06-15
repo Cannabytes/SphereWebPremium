@@ -1,0 +1,1 @@
+import{n as e,t}from"./book-open-Q0ZwbqQi.js";export{e as __iconNode,t as default};

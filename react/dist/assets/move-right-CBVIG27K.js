@@ -1,0 +1,1 @@
+import{n as e,t}from"./move-right-BO8zAnur.js";export{e as __iconNode,t as default};

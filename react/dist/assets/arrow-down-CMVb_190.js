@@ -1,0 +1,1 @@
+import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`M12 5v14`,key:`s699le`}],[`path`,{d:`m19 12-7 7-7-7`,key:`1idqje`}]],n=e(`arrow-down`,t);export{t as n,n as t};

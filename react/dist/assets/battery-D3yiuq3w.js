@@ -1,0 +1,1 @@
+import{n as e,t}from"./battery-B4ZqE5hp.js";export{e as __iconNode,t as default};

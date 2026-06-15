@@ -1,0 +1,1 @@
+import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`m8 3 4 8 5-5 5 15H2L8 3z`,key:`otkl63`}]],n=e(`mountain`,t);export{t as n,n as t};

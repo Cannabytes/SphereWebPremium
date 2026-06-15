@@ -1,0 +1,1 @@
+import{n as e,t}from"./piggy-bank-C2jTbJ07.js";export{e as __iconNode,t as default};

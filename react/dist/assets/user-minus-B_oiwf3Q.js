@@ -1,0 +1,1 @@
+import{n as e,t}from"./user-minus-BzK04LBW.js";export{e as __iconNode,t as default};

@@ -1,0 +1,1 @@
+import{t as e}from"./createLucideIcon-tRGM4DXL.js";var t=[[`path`,{d:`M14 17H5`,key:`gfn3mx`}],[`path`,{d:`M19 7h-9`,key:`6i9tg`}],[`circle`,{cx:`17`,cy:`17`,r:`3`,key:`18b49y`}],[`circle`,{cx:`7`,cy:`7`,r:`3`,key:`dfmy0x`}]],n=e(`settings-2`,t);export{t as n,n as t};

@@ -1,0 +1,1 @@
+import{n as e,t}from"./utensils-Bf0FzrdX.js";export{e as __iconNode,t as default};

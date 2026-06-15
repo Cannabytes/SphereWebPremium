@@ -1,0 +1,1 @@
+import{n as e,t}from"./building-BS5gEntX.js";export{e as __iconNode,t as default};

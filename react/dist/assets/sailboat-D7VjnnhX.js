@@ -1,0 +1,1 @@
+import{n as e,t}from"./sailboat-Jt1GBEVR.js";export{e as __iconNode,t as default};

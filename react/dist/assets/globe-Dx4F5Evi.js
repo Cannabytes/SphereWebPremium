@@ -1,0 +1,1 @@
+import{n as e,t}from"./globe-DXT6UyNz.js";export{e as __iconNode,t as default};

@@ -1,0 +1,1 @@
+import{n as e,t}from"./tram-front-35nyFIQk.js";export{e as __iconNode,t as default};

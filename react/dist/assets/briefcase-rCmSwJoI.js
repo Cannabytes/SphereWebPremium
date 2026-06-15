@@ -1,0 +1,1 @@
+import{n as e,t}from"./briefcase-CCtMcVwj.js";export{e as __iconNode,t as default};

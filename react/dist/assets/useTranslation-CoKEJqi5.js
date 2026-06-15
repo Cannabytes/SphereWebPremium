@@ -1,1 +1,0 @@
-import{t as e}from"./localeStore-B-7hVuE9.js";var t=()=>{let t=e(e=>e.locale),n=e(e=>e.catalog),r=e(e=>e.setLocale),i=e.getState().t;return{locale:t,catalog:n,isReady:n!==null,setLocale:r,t:i}};export{t};

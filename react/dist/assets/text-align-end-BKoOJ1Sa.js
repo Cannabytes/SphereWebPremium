@@ -1,0 +1,1 @@
+import{n as e,t}from"./text-align-end-C_yTS_sh.js";export{e as __iconNode,t as default};

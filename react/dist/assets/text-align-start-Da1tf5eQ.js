@@ -1,0 +1,1 @@
+import{n as e,t}from"./text-align-start-j4AqdFPe.js";export{e as __iconNode,t as default};
