@@ -116,7 +116,7 @@
       ]
     },
     "clan": {
-      "title": "Clan",
+      "title": "Clans",
       "enabled": true,
       "sortOrder": 50,
       "targetDb": "game",
@@ -145,7 +145,7 @@
       ]
     },
     "castle": {
-      "title": "Castles",
+      "title": "Castle",
       "enabled": true,
       "sortOrder": 60,
       "targetDb": "game",
@@ -168,7 +168,7 @@
       ]
     },
     "online_count": {
-      "title": "Online count",
+      "title": "Online Count",
       "enabled": true,
       "sortOrder": 70,
       "targetDb": "game",
@@ -180,10 +180,11 @@
       ]
     },
     "character_online": {
-      "title": "Character online",
+      "title": "Character Online",
       "description": "Проверка онлайн ли персонаж.",
       "sortOrder": 80,
       "targetDb": "game",
+      "isPublic": false,
       "query": [
         "SELECT online",
         "FROM characters",
@@ -191,10 +192,11 @@
       ]
     },
     "account_characters": {
-      "title": "Account characters",
+      "title": "Account Characters",
       "description": "Список всех персонажей аккаунта.",
       "sortOrder": 90,
       "targetDb": "game",
+      "isPublic": false,
       "query": [
         "SELECT characters.charId AS player_id,",
         "    characters.char_name AS player_name,",
@@ -215,10 +217,11 @@
       ]
     },
     "relocation": {
-      "title": "Relocation",
+      "title": "Character Relocation",
       "description": "Перемещение персонажа по координатам.",
       "sortOrder": 100,
       "targetDb": "game",
+      "isPublic": false,
       "query": [
         "UPDATE characters",
         "SET x = ?, y = ?, z = ?",
@@ -226,20 +229,22 @@
       ]
     },
     "add_item": {
-      "title": "Add item",
+      "title": "Add Item",
       "description": "Добавление предмета персонажу.",
       "sortOrder": 110,
       "targetDb": "game",
+      "isPublic": false,
       "query": [
         "INSERT INTO items_delayed (owner_id, item_id, count, enchant_level, payment_status, description)",
         "VALUES (?, ?, ?, ?, 1, 'SphereWeb')"
       ]
     },
     "account_password": {
-      "title": "Account password",
+      "title": "Account Password",
       "description": "Изменение пароля аккаунта.",
       "sortOrder": 120,
       "targetDb": "login",
+      "isPublic": false,
       "query": [
         "UPDATE accounts",
         "SET password = ?",
@@ -247,10 +252,11 @@
       ]
     },
     "account_list_by_email": {
-      "title": "Accounts by email",
+      "title": "Accounts by Email",
       "description": "Список игровых аккаунтов пользователя по e-mail профиля.",
-      "sortOrder": 125,
+      "sortOrder": 130,
       "targetDb": "login",
+      "isPublic": false,
       "query": [
         "SELECT login, password",
         "FROM accounts",
@@ -258,10 +264,11 @@
       ]
     },
     "account_create": {
-      "title": "Create account",
+      "title": "Create Account",
       "description": "Создание нового игрового аккаунта.",
-      "sortOrder": 130,
+      "sortOrder": 140,
       "targetDb": "login",
+      "isPublic": false,
       "passwordHashAlgorithm": "whirlpool",
       "query": [
         "INSERT INTO accounts (login, password, email)",
@@ -269,10 +276,11 @@
       ]
     },
     "account_check_free": {
-      "title": "Account availability",
+      "title": "Check Account Availability",
       "description": "Проверка свободен ли логин.",
-      "sortOrder": 140,
+      "sortOrder": 150,
       "targetDb": "login",
+      "isPublic": false,
       "query": [
         "SELECT login, password",
         "FROM accounts",
