@@ -1,0 +1,283 @@
+{
+  "key": "enternity",
+  "name": "Enternity",
+  "build": "Enternity",
+  "aliases": ["eternity"],
+  "passwordHashAlgorithm": "whirlpool",
+  "queries": {
+    "pvp": {
+      "title": "PvP",
+      "enabled": true,
+      "sortOrder": 10,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT",
+        "    characters.charId AS player_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.sex,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    clan_data.clan_name AS clan_name,",
+        "    clan_data.clan_level AS clan_level,",
+        "    characters.base_class AS class_id,",
+        "    characters.level AS level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM characters",
+        "LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id",
+        "WHERE characters.pvpkills > 0",
+        "ORDER BY characters.pvpkills DESC, characters.onlinetime DESC, characters.exp DESC",
+        "LIMIT 10"
+      ]
+    },
+    "pk": {
+      "title": "PK",
+      "enabled": true,
+      "sortOrder": 20,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT",
+        "    characters.charId AS player_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.sex,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    clan_data.clan_name AS clan_name,",
+        "    clan_data.clan_level AS clan_level,",
+        "    characters.base_class AS class_id,",
+        "    characters.level AS level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM characters",
+        "LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id",
+        "WHERE characters.pkkills > 0",
+        "ORDER BY characters.pkkills DESC, characters.onlinetime DESC, characters.exp DESC",
+        "LIMIT 10"
+      ]
+    },
+    "online": {
+      "title": "Online",
+      "enabled": true,
+      "sortOrder": 30,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT",
+        "    characters.charId AS player_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.sex,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    clan_data.clan_name AS clan_name,",
+        "    clan_data.clan_level AS clan_level,",
+        "    characters.base_class AS class_id,",
+        "    characters.level AS level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM characters",
+        "LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id",
+        "ORDER BY characters.onlinetime DESC",
+        "LIMIT 10"
+      ]
+    },
+    "exp": {
+      "title": "EXP",
+      "enabled": true,
+      "sortOrder": 40,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT",
+        "    characters.charId AS player_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.sex,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    clan_data.clan_name AS clan_name,",
+        "    clan_data.clan_level AS clan_level,",
+        "    characters.base_class AS class_id,",
+        "    characters.level AS level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM characters",
+        "LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id",
+        "ORDER BY characters.exp DESC, characters.onlinetime DESC",
+        "LIMIT 10"
+      ]
+    },
+    "clan": {
+      "title": "Clan",
+      "enabled": true,
+      "sortOrder": 50,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT",
+        "    clan_data.hasCastle AS castle_id,",
+        "    clan_data.reputation_score AS reputation_score,",
+        "    clan_data.leader_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.base_class AS class_id,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    characters.sex,",
+        "    clan_data.clan_name AS clan_name,",
+        "    clan_data.clan_level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest,",
+        "    (SELECT COUNT(*) FROM characters WHERE clanid = clan_data.clan_id) AS clan_count_members",
+        "FROM clan_data",
+        "LEFT JOIN characters ON clan_data.leader_id = characters.charId",
+        "ORDER BY clan_data.reputation_score DESC, clan_count_members DESC",
+        "LIMIT 10"
+      ]
+    },
+    "castle": {
+      "title": "Castles",
+      "enabled": true,
+      "sortOrder": 60,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT castle.id AS castle_id,",
+        "    castle.taxPercent AS tax,",
+        "    castle.treasury,",
+        "    castle.siegeDate AS siege_date,",
+        "    clan_data.clan_name,",
+        "    clan_data.clan_level,",
+        "    characters.char_name AS player_name,",
+        "    characters.base_class AS class_id,",
+        "    characters.sex,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM castle",
+        "LEFT JOIN clan_data ON castle.id = clan_data.hasCastle",
+        "LEFT JOIN characters ON clan_data.leader_id = characters.charId"
+      ]
+    },
+    "online_count": {
+      "title": "Online count",
+      "enabled": true,
+      "sortOrder": 70,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT COUNT(*) AS online",
+        "FROM characters",
+        "WHERE online = 1"
+      ]
+    },
+    "character_online": {
+      "title": "Character online",
+      "description": "Проверка онлайн ли персонаж.",
+      "sortOrder": 80,
+      "targetDb": "game",
+      "query": [
+        "SELECT online",
+        "FROM characters",
+        "WHERE char_name = ?"
+      ]
+    },
+    "account_characters": {
+      "title": "Account characters",
+      "description": "Список всех персонажей аккаунта.",
+      "sortOrder": 90,
+      "targetDb": "game",
+      "query": [
+        "SELECT characters.charId AS player_id,",
+        "    characters.char_name AS player_name,",
+        "    characters.pvpkills AS pvp,",
+        "    characters.pkkills AS pk,",
+        "    characters.sex,",
+        "    characters.online,",
+        "    characters.onlinetime AS time_in_game,",
+        "    characters.base_class AS class_id,",
+        "    characters.level,",
+        "    clan_data.clan_name,",
+        "    clan_data.clan_level,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.crest_id LIMIT 1) AS clan_crest,",
+        "    (SELECT data FROM crests WHERE crest_id = clan_data.ally_crest_id LIMIT 1) AS alliance_crest",
+        "FROM characters",
+        "LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id",
+        "WHERE characters.account_name = ?"
+      ]
+    },
+    "relocation": {
+      "title": "Relocation",
+      "description": "Перемещение персонажа по координатам.",
+      "sortOrder": 100,
+      "targetDb": "game",
+      "query": [
+        "UPDATE characters",
+        "SET x = ?, y = ?, z = ?",
+        "WHERE char_name = ?"
+      ]
+    },
+    "add_item": {
+      "title": "Add item",
+      "description": "Добавление предмета персонажу.",
+      "sortOrder": 110,
+      "targetDb": "game",
+      "query": [
+        "INSERT INTO items_delayed (owner_id, item_id, count, enchant_level, payment_status, description)",
+        "VALUES (?, ?, ?, ?, 1, 'SphereWeb')"
+      ]
+    },
+    "account_password": {
+      "title": "Account password",
+      "description": "Изменение пароля аккаунта.",
+      "sortOrder": 120,
+      "targetDb": "login",
+      "query": [
+        "UPDATE accounts",
+        "SET password = ?",
+        "WHERE login = ? AND email = ?"
+      ]
+    },
+    "account_list_by_email": {
+      "title": "Accounts by email",
+      "description": "Список игровых аккаунтов пользователя по e-mail профиля.",
+      "sortOrder": 125,
+      "targetDb": "login",
+      "query": [
+        "SELECT login, password",
+        "FROM accounts",
+        "WHERE email = ?"
+      ]
+    },
+    "account_create": {
+      "title": "Create account",
+      "description": "Создание нового игрового аккаунта.",
+      "sortOrder": 130,
+      "targetDb": "login",
+      "passwordHashAlgorithm": "whirlpool",
+      "query": [
+        "INSERT INTO accounts (login, password, email)",
+        "VALUES (?, ?, ?)"
+      ]
+    },
+    "account_check_free": {
+      "title": "Account availability",
+      "description": "Проверка свободен ли логин.",
+      "sortOrder": 140,
+      "targetDb": "login",
+      "query": [
+        "SELECT login, password",
+        "FROM accounts",
+        "WHERE login = ?"
+      ]
+    }
+  }
+}
