@@ -1,1 +1,0 @@
-import{a as e,n as t}from"./jsx-runtime-D57Vegw5.js";var n=e(t(),1),r=(e,t=300)=>{let[r,i]=(0,n.useState)(e);return(0,n.useEffect)(()=>{let n=window.setTimeout(()=>{i(e)},t);return()=>window.clearTimeout(n)},[e,t]),r};export{r as t};
