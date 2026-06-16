@@ -1,0 +1,133 @@
+{
+  "build": "L2jLisvus",
+  "block": true,
+  "passwordHashAlgorithm": "sha1",
+  "queries": {
+    "pvp": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, clan_data.clan_name AS clan_name, clan_data.clan_level AS clan_level, characters.base_class AS class_id, characters.level, null AS clan_crest, null AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id ORDER BY pvp DESC LIMIT 10;"
+      ]
+    },
+    "pk": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, clan_data.clan_name AS clan_name, clan_data.clan_level AS clan_level, characters.base_class AS class_id, characters.level, null AS clan_crest, null AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id ORDER BY pk DESC LIMIT 10;"
+      ]
+    },
+    "online": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, clan_data.clan_name AS clan_name, clan_data.clan_level AS clan_level, characters.base_class AS class_id, characters.level, null AS clan_crest, null AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id ORDER BY time_in_game DESC LIMIT 10;"
+      ]
+    },
+    "exp": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, clan_data.clan_name AS clan_name, clan_data.clan_level AS clan_level, characters.base_class AS class_id, characters.level, NULL AS clan_crest, NULL AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id ORDER BY characters.exp DESC, pk DESC LIMIT 10;"
+      ]
+    },
+    "clan": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT COALESCE(castle.id, 0) AS castle_id, 0 AS reputation_score, clan_data.leader_id AS leader_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.`online` AS online, characters.onlinetime AS time_in_game, characters.sex AS sex, clan_data.clan_name AS clan_name, clan_data.clan_level AS clan_level, NULL AS clan_crest, NULL AS alliance_crest, (SELECT COUNT(*) FROM characters c2 WHERE c2.clanid = clan_data.clan_id) AS clan_count_members FROM clan_data LEFT JOIN castle ON castle.id = clan_data.hasCastle LEFT JOIN characters ON characters.obj_Id = clan_data.leader_id ORDER BY reputation_score  DESC LIMIT 10;"
+      ]
+    },
+    "castle": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT castle.id AS castle_id, castle.taxPercent AS tax, castle.treasury, castle.siegeDate AS dataSiege, clan_data.clan_name, clan_data.clan_level, characters.char_name AS player_name, null AS clan_crest, null AS alliance_crest FROM castle LEFT JOIN clan_data ON castle.id = clan_data.hasCastle LEFT JOIN characters ON clan_data.leader_id = characters.obj_Id"
+      ]
+    },
+    "online_count": {
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT  COUNT(*) AS `online`  FROM `characters` WHERE `online`=1;"
+      ]
+    },
+    "character_online": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT `online` FROM characters WHERE char_name = ?;"
+      ]
+    },
+    "account_characters": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, characters.base_class AS class_id, characters.`level`, clan_data.clan_name, clan_data.clan_level, null AS clan_crest, null AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id WHERE characters.account_name = ?"
+      ]
+    },
+    "relocation": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "UPDATE `characters` SET `x` = ?, `y` = ?, `z` = ? WHERE `char_name` = ?"
+      ]
+    },
+    "add_item": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "INSERT INTO `items` (`owner_id`, `object_id`, `item_id`, `count`, `enchant_level`, `loc`, `loc_data`, `price_sell`, `price_buy`) SELECT ?, COALESCE(MAX(`object_id`), 0) + 100000, ?, ?, 0, 'INVENTORY', 0, 0, 0 FROM `items`;"
+      ]
+    },
+    "account_password": {
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "UPDATE `accounts` SET `password` = ? WHERE `login` = ? AND `email` = ?;"
+      ]
+    },
+    "account_list_by_email": {
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT `login`, `password` FROM `accounts` WHERE `email` = ?;"
+      ]
+    },
+    "account_create": {
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "INSERT INTO `accounts` (`login`, `password`, `email`) VALUES (?, ?, ?);"
+      ]
+    },
+    "account_check_free": {
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT `login`, `password` FROM `accounts` WHERE `login` = ?;"
+      ]
+    },
+    "items_to_warehouse": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "UPDATE `items` SET `loc` = 'WAREHOUSE' WHERE `loc` = 'INVENTORY' AND `owner_id` = ?"
+      ]
+    },
+    "remove_hwid": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        ""
+      ]
+    },
+    "plugin_get_farm_top": {
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT items.item_id AS item_id, SUM(items.count) AS total_count, (SELECT owner_id FROM items AS sub_items WHERE sub_items.item_id = items.item_id GROUP BY sub_items.owner_id ORDER BY SUM(sub_items.count) DESC LIMIT 1) AS top_owner_id, (SELECT char_name FROM characters WHERE obj_Id = (SELECT owner_id FROM items AS sub_items WHERE sub_items.item_id = items.item_id GROUP BY sub_items.owner_id ORDER BY SUM(sub_items.count) DESC LIMIT 1)) AS top_owner_name, (SELECT SUM(count) FROM items AS owner_items WHERE owner_items.item_id = items.item_id AND owner_items.owner_id = (SELECT owner_id FROM items AS sub_items WHERE sub_items.item_id = items.item_id GROUP BY sub_items.owner_id ORDER BY SUM(sub_items.count) DESC LIMIT 1)) AS top_owner_item_count FROM items WHERE items.item_id IN (%s) GROUP BY items.item_id;"
+      ]
+    }
+  }
+}
