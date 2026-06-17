@@ -248,7 +248,7 @@
       "query": [
         "UPDATE accounts",
         "SET password = ?",
-        "WHERE login = ? AND email = ?"
+        "WHERE login = ? AND l2email = ?"
       ]
     },
     "account_list_by_email": {
@@ -260,7 +260,7 @@
       "query": [
         "SELECT login, password",
         "FROM accounts",
-        "WHERE email = ?"
+        "WHERE l2email = ?"
       ]
     },
     "account_create": {
@@ -271,7 +271,7 @@
       "isPublic": false,
       "passwordHashAlgorithm": "whirlpool",
       "query": [
-        "INSERT INTO accounts (login, password, email)",
+        "INSERT INTO accounts (login, password, l2email)",
         "VALUES (?, ?, ?)"
       ]
     },
