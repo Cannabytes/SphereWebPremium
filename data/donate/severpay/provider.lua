@@ -93,11 +93,12 @@ function webhook(ctx)
   if input_sign == "" then
     return json_fail("Invalid input", 400)
   end
+  local signed_body = json_without_keys(ctx.request.body or "{}", "sign")
   input.sign = nil
 
   local matched = nil
   for _, merchant in ipairs(rows(ctx.settings.merchants)) do
-    local expected = hmac_sha256_hex(json_encode(input), value(merchant.token, ""))
+    local expected = hmac_sha256_hex(signed_body, value(merchant.token, ""))
     if constant_time_equal(expected, input_sign) then
       matched = merchant
       break
