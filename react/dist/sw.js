@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'sphereweb3-shell-v4'
+const CACHE_VERSION = 'sphereweb3-shell-v5'
 const STATIC_CACHE = `${CACHE_VERSION}:static`
 const API_CACHE = `${CACHE_VERSION}:api`
 const STATIC_ASSETS = [
@@ -21,10 +21,17 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys
-        .filter((key) => !key.startsWith(CACHE_VERSION))
-        .map((key) => caches.delete(key))))
-      .then(() => self.clients.claim()),
+      .then((keys) => {
+        const staleKeys = keys.filter((key) => !key.startsWith(CACHE_VERSION))
+        const hasStaleShellCache = staleKeys.some((key) => key.startsWith('sphereweb3-shell-'))
+        return Promise.all(staleKeys.map((key) => caches.delete(key)))
+          .then(() => self.clients.claim())
+          .then(() => {
+            if (hasStaleShellCache) {
+              return reloadWindowClients()
+            }
+          })
+      }),
   )
 })
 
@@ -50,7 +57,6 @@ self.addEventListener('fetch', (event) => {
   }
 
   if (url.pathname.startsWith('/assets/')) {
-    event.respondWith(networkFirst(request, STATIC_CACHE))
     return
   }
 
@@ -96,4 +102,14 @@ async function networkFirst(request, cacheName) {
     }
     throw error
   }
+}
+
+async function reloadWindowClients() {
+  const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+  await Promise.all(clients.map((client) => {
+    if (!client.url || typeof client.navigate !== 'function') {
+      return undefined
+    }
+    return client.navigate(client.url).catch(() => undefined)
+  }))
 }
