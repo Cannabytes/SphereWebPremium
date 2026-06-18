@@ -11,10 +11,29 @@ function meta()
     currencies = { "RUB" },
     settings = {
       { key = "access_token", label = "Access token", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "currency", label = "Валюта", type = "select", default = "RUB", options = {
         { value = "RUB", label = "RUB" },
       }},
       { key = "verify_signature", label = "Проверять подпись webhook", type = "checkbox", default = true },
+    },
+  }
+end
+
+function public(ctx)
+  local currency = value(ctx.settings.currency, "RUB")
+  return {
+    options = {
+      {
+        key = "default",
+        label = "Wata",
+        description = "Оплата в " .. currency,
+        currency = currency,
+        icon = "ShieldCheck",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

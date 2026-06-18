@@ -23,6 +23,8 @@ function meta()
             { value = "EUR", label = "EUR" },
             { value = "BYN", label = "BYN" },
           }},
+          { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+          { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
         },
       },
     },
@@ -38,6 +40,8 @@ function public(ctx)
       description = "Оплата в " .. value(merchant.currency, "RUB"),
       currency = value(merchant.currency, "RUB"),
       icon = "Receipt",
+      minAmount = tonumber(merchant.min_amount or 0),
+      maxAmount = tonumber(merchant.max_amount or 0),
       payload = { index = i },
     }
   end

@@ -12,8 +12,27 @@ function meta()
       { key = "secret_key", label = "Secret key", type = "password", required = true, secret = true },
       { key = "publishable_key", label = "Publishable key", type = "text" },
       { key = "webhook_secret_key", label = "Webhook secret", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0.5 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "currency", label = "Валюта", type = "select", default = "USD", options = stripe_currencies() },
       { key = "payment_methods", label = "Payment methods", type = "text", default = "card", hint = "Через запятую: card,klarna,link,ideal и т.д." },
+    },
+  }
+end
+
+function public(ctx)
+  local currency = string.upper(value(ctx.settings.currency, "USD"))
+  return {
+    options = {
+      {
+        key = "default",
+        label = "Stripe",
+        description = value(ctx.settings.payment_methods, "card") .. " · " .. currency,
+        currency = currency,
+        icon = "CreditCard",
+        minAmount = tonumber(ctx.settings.min_amount or 0.5),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

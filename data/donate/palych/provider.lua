@@ -11,6 +11,8 @@ function meta()
     settings = {
       { key = "shop_id", label = "Shop ID", type = "text", required = true },
       { key = "api_token", label = "API token", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "signature_token", label = "Webhook token", type = "password", secret = true, hint = "Если не заполнен, для подписи webhook используется API token." },
       { key = "currency", label = "Валюта", type = "select", default = "RUB", options = {
         { value = "RUB", label = "RUB" },
@@ -25,7 +27,15 @@ end
 function public(ctx)
   return {
     options = {
-      { key = "default", label = "Палыч", description = "Оплата в " .. value(ctx.settings.currency, "RUB"), currency = value(ctx.settings.currency, "RUB"), icon = "Landmark" },
+      {
+        key = "default",
+        label = "Палыч",
+        description = "Оплата в " .. value(ctx.settings.currency, "RUB"),
+        currency = value(ctx.settings.currency, "RUB"),
+        icon = "Landmark",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

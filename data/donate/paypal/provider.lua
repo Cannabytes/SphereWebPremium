@@ -19,6 +19,8 @@ function meta()
           { key = "label", label = "Название", type = "text", default = "PayPal" },
           { key = "client_id", label = "Client ID", type = "text", required = true },
           { key = "client_secret", label = "Client Secret", type = "password", required = true, secret = true },
+          { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+          { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
           { key = "mode", label = "Режим", type = "select", default = "LIVE", options = {
             { value = "LIVE", label = "LIVE" },
             { value = "SANDBOX", label = "SANDBOX" },
@@ -40,6 +42,8 @@ function public(ctx)
       currency = value(account.currency, "USD"),
       icon = "BadgeDollarSign",
       badge = value(account.mode, "LIVE"),
+      minAmount = tonumber(account.min_amount or 0),
+      maxAmount = tonumber(account.max_amount or 0),
       payload = { index = i },
     }
   end

@@ -19,6 +19,8 @@ function meta()
           { key = "label", label = "Название", type = "text", default = "Pally" },
           { key = "shop_id", label = "Shop ID", type = "text", required = true },
           { key = "api_key", label = "API token", type = "password", required = true, secret = true },
+          { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+          { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
           { key = "currency", label = "Валюта", type = "select", default = "RUB", options = currency_options() },
         },
       },
@@ -38,6 +40,8 @@ function public(ctx)
       description = "Оплата в " .. value(gateway.currency, "RUB"),
       currency = value(gateway.currency, "RUB"),
       icon = "CreditCard",
+      minAmount = tonumber(gateway.min_amount or 0),
+      maxAmount = tonumber(gateway.max_amount or 0),
       payload = { index = i },
     }
   end

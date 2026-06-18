@@ -11,9 +11,28 @@ function meta()
     settings = {
       { key = "publicKey", label = "Публичный ключ / Project ID", type = "text", required = true },
       { key = "secretKey", label = "Секретный ключ", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "currency", label = "Валюта", type = "select", default = "RUB", options = currency_options() },
       { key = "description", label = "Описание платежа", type = "text", default = "Покупка Donate Coin" },
       { key = "paymentType", label = "Payment type", type = "text", default = "card" },
+    },
+  }
+end
+
+function public(ctx)
+  local currency = value(ctx.settings.currency, "RUB")
+  return {
+    options = {
+      {
+        key = "default",
+        label = "UnitPay",
+        description = "Оплата в " .. currency,
+        currency = currency,
+        icon = "Landmark",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

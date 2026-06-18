@@ -11,6 +11,8 @@ function meta()
     settings = {
       { key = "receiver", label = "Receiver / номер кошелька", type = "text", required = true },
       { key = "secret_key", label = "Секретный ключ уведомлений", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "payment_type", label = "Тип оплаты", type = "select", default = "AC", options = {
         { value = "AC", label = "Банковская карта" },
         { value = "PC", label = "YooMoney кошелек" },
@@ -18,6 +20,22 @@ function meta()
     },
     links = {
       { label = "Настройка уведомлений", url = "https://yoomoney.ru/transfer/myservices/http-notification?lang=ru" },
+    },
+  }
+end
+
+function public(ctx)
+  return {
+    options = {
+      {
+        key = "default",
+        label = "YooMoney",
+        description = "RUB",
+        currency = "RUB",
+        icon = "WalletCards",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

@@ -13,12 +13,31 @@ function meta()
       { key = "shop_id", label = "Shop ID", type = "text", required = true },
       { key = "api_key", label = "API key", type = "password", required = true, secret = true },
       { key = "secret_key", label = "Webhook secret key", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "currency", label = "Валюта счета", type = "select", default = "USD", options = {
         { value = "USD", label = "USD" },
         { value = "USDT", label = "USDT" },
         { value = "EUR", label = "EUR" },
         { value = "RUB", label = "RUB" },
       }},
+    },
+  }
+end
+
+function public(ctx)
+  local currency = value(ctx.settings.currency, "USD")
+  return {
+    options = {
+      {
+        key = "default",
+        label = "CryptoCloud",
+        description = "Оплата в " .. currency,
+        currency = currency,
+        icon = "Bitcoin",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end

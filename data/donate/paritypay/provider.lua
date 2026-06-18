@@ -19,6 +19,8 @@ function meta()
           { key = "shop_id", label = "Shop ID", type = "text", required = true },
           { key = "secret_key_1", label = "Secret key 1", type = "password", required = true, secret = true },
           { key = "secret_key_2", label = "Secret key 2", type = "password", required = true, secret = true },
+          { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+          { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
           { key = "currency", label = "Валюта", type = "select", default = "RUB", options = currency_options() },
           { key = "service", label = "Сервис", type = "select", default = "sbp", options = {
             { value = "", label = "Авто" },
@@ -42,6 +44,8 @@ function public(ctx)
       currency = value(gateway.currency, "RUB"),
       icon = "QrCode",
       badge = value(gateway.service, ""),
+      minAmount = tonumber(gateway.min_amount or 0),
+      maxAmount = tonumber(gateway.max_amount or 0),
       payload = { index = i },
     }
   end

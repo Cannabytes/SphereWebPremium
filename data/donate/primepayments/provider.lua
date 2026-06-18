@@ -12,7 +12,25 @@ function meta()
       { key = "project_id", label = "Project ID", type = "text", required = true },
       { key = "secret_1", label = "Secret 1", type = "password", required = true, secret = true },
       { key = "secret_2", label = "Secret 2", type = "password", required = true, secret = true },
+      { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
+      { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
       { key = "pay_way", label = "Pay way", type = "text", default = "1", hint = "Код способа оплаты PrimePayments. По умолчанию 1." },
+    },
+  }
+end
+
+function public(ctx)
+  return {
+    options = {
+      {
+        key = "default",
+        label = "PrimePayments",
+        description = "Pay way " .. value(ctx.settings.pay_way, "1") .. " · RUB",
+        currency = "RUB",
+        icon = "BadgeDollarSign",
+        minAmount = tonumber(ctx.settings.min_amount or 0),
+        maxAmount = tonumber(ctx.settings.max_amount or 0),
+      },
     },
   }
 end
