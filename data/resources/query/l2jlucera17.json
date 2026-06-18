@@ -139,6 +139,15 @@
         "UPDATE `accounts` SET `password` = ? WHERE `login` = ? AND `email` = ?;"
       ]
     },
+    "account_change_email": {
+      "title": "Change Account Email",
+      "sortOrder": 125,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "UPDATE `accounts` SET `email` = ? WHERE `login` = ? AND COALESCE(`email`, '') = ?;"
+      ]
+    },
     "account_list_by_email": {
       "title": "Accounts by Email",
       "sortOrder": 130,
@@ -163,7 +172,7 @@
       "targetDb": "login",
       "isPublic": false,
       "query": [
-        "SELECT `login`, `password` FROM `accounts` WHERE `login` = ?;"
+        "SELECT `login`, `password`, `email` AS `email` FROM `accounts` WHERE `login` = ?;"
       ]
     },
     "items_to_warehouse": {

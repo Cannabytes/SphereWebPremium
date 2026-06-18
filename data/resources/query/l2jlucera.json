@@ -1,6 +1,9 @@
 {
   "build": "L2jLucera",
   "block": true,
+  "aliases": [
+    "Lucera3"
+  ],
   "passwordHashAlgorithm": "whirlpool",
   "queries": {
     "pvp": {
@@ -111,6 +114,15 @@
         "UPDATE `accounts` SET `password` = ? WHERE `login` = ? AND `l2email` = ?;"
       ]
     },
+    "account_change_email": {
+      "title": "Change Account Email",
+      "sortOrder": 125,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "UPDATE `accounts` SET `l2email` = ? WHERE `login` = ? AND COALESCE(`l2email`, '') = ?;"
+      ]
+    },
     "account_list_by_email": {
       "title": "Accounts by Email",
       "sortOrder": 130,
@@ -135,7 +147,7 @@
       "targetDb": "login",
       "isPublic": false,
       "query": [
-        "SELECT `login`, `password` FROM `accounts` WHERE `login` = ?;"
+        "SELECT `login`, `password`, `l2email` AS `email` FROM `accounts` WHERE `login` = ?;"
       ]
     },
     "items_to_warehouse": {
