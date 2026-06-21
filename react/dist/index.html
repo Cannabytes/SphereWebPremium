@@ -5,6 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SphereWeb3 x1000</title>
+    <script>
+      ;(function () {
+        var originalLog = console.log
+
+        console.log = function () {
+          if (arguments.length > 0 && typeof arguments[0] === 'string' && arguments[0].indexOf('[Telegram.WebView] ') === 0) {
+            return
+          }
+
+          return originalLog.apply(console, arguments)
+        }
+      })()
+    </script>
     <script src="https://telegram.org/js/telegram-web-app.js?62"></script>
     <script>
       ;(function () {
@@ -62,7 +75,7 @@
         } catch (error) {}
       })()
     </script>
-    <script type="module" crossorigin src="/assets/index-Dt0fpUDH.js"></script>
+    <script type="module" crossorigin src="/assets/index-Do6lJFCq.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-D57Vegw5.js">
     <link rel="modulepreload" crossorigin href="/assets/localeStore-B-7hVuE9.js">
     <link rel="modulepreload" crossorigin href="/assets/axios-CmK2axVa.js">
