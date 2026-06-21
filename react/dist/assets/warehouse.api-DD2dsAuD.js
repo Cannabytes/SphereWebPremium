@@ -1,1 +1,0 @@
-import{t as e}from"./axios-CmK2axVa.js";var t={getMyWarehouse:async()=>(await e.get(`/profile/warehouse`)).data.items??[],deliverToCharacter:async t=>(await e.post(`/profile/warehouse/deliver`,t)).data,exchangeBalance:async t=>(await e.post(`/profile/balance/exchange`,t)).data};export{t};
