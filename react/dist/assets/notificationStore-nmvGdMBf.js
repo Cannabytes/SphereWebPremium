@@ -1,0 +1,1 @@
+import{a as e}from"./localeStore-LtK6AUaS.js";var t=e(e=>({unread:0,setUnread:t=>e({unread:t})}));export{t};
