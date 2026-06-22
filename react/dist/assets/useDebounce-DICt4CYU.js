@@ -1,1 +1,0 @@
-import{n as e,s as t}from"./jsx-runtime-DTJ6URaS.js";var n=t(e(),1),r=(e,t=300)=>{let[r,i]=(0,n.useState)(e);return(0,n.useEffect)(()=>{let n=window.setTimeout(()=>{i(e)},t);return()=>window.clearTimeout(n)},[e,t]),r};export{r as t};

@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-DTJ6URaS.js";import{t}from"./TodoApp-DrijuxZk.js";var n=e(),r=()=>(0,n.jsx)(`div`,{className:`page`,children:(0,n.jsx)(t,{})});export{r as default};
