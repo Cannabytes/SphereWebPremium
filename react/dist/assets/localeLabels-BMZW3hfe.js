@@ -1,0 +1,1 @@
+var e={ru:`Русский`,ua:`Українська`,en:`English`,es:`Español`,pt:`Português`,gr:`Ελληνικά`},t=Object.entries(e).map(([e,t])=>({value:e,label:t}));export{e as n,t};
