@@ -1,0 +1,1 @@
+import{o as e}from"./localeStore-DD0sScOv.js";var t=e(e=>({unread:0,setUnread:t=>e({unread:t})}));export{t};

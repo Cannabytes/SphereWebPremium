@@ -1,1 +1,0 @@
-var e=e=>/\.webm(?:[?#].*)?$/i.test(e.trim());export{e as t};
