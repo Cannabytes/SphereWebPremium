@@ -1,1 +1,0 @@
-import{a as e}from"./localeStore-Cbzr2CCH.js";var t=e(e=>({isOpen:!1,section:`avatar`,open:t=>e({isOpen:!0,section:t}),close:()=>e({isOpen:!1})}));export{t};

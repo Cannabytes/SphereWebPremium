@@ -1,0 +1,1 @@
+var e={page:`_page_1m4jr_1`,backLink:`_backLink_1m4jr_11`,hero:`_hero_1m4jr_29`,heroCopy:`_heroCopy_1m4jr_43`,badge:`_badge_1m4jr_53`,externalLink:`_externalLink_1m4jr_95`,cover:`_cover_1m4jr_113`,article:`_article_1m4jr_127`,content:`_content_1m4jr_137`};export{e as t};

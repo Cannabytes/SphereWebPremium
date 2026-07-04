@@ -1,0 +1,1 @@
+import{o as e}from"./localeStore-Drj87Dev.js";var t=e(e=>({unread:0,setUnread:t=>e({unread:t})}));export{t};
