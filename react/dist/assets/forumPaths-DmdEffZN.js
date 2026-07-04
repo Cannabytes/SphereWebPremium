@@ -1,1 +1,0 @@
-var e=e=>e.trim().replace(/\s+/g,`-`),t=(e,t)=>`/forum/${e}/${t}`,n=(e,t)=>`/forum/${e}/${t}/new`,r=()=>`/forum/settings`,i=t=>`/forum/thread/${encodeURIComponent(`${e(t.slug||t.title||`thread`)}.${t.id}`)}`;export{i,t as n,r,n as t};

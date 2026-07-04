@@ -1,0 +1,1 @@
+import{n as e}from"./localeStore-Drj87Dev.js";var t=(t,n)=>{let r=n.trim().startsWith(`/`)?n.trim():`/${n.trim()}`;return`/${e(t)}${r}`};export{t};
