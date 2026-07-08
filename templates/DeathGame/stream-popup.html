@@ -1,0 +1,15 @@
+<div id="popup">
+    <div class="popup_fade" onclick="hide()"></div>
+    <div class="popup_content">
+        <a class="popup_close" onclick="hide()"></a>
+        <div class="title">
+            <span>{{phrase("media_stream_request")}}</span>
+            <p>{{phrase("media_contact_desc")}}</p>
+        </div>
+        <form id="popup_send" method="POST" action="/support">
+            <input type="text" name="name" placeholder="{{phrase("media_name")}}" required>
+            <input type="text" name="contact" placeholder="{{phrase("media_contact")}}" required>
+            <input type="submit" name="ok" class="ok" value="{{phrase("media_submit")}}">
+        </form>
+    </div>
+</div>

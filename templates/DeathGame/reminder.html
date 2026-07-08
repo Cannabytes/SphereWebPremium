@@ -1,0 +1,19 @@
+<div id="wrapper" class="single">
+    <div id="inner">
+        <div class="general_title wow animated05 slideInDown">
+            <span>{{phrase("reminder_title")}}</span>
+            <p>{{phrase("reminder_desc")}}</p>
+        </div>
+
+        <form id="send_mail" class="wow animated05 fadeInUp" method="POST" action="/support">
+            <div class="send_input">
+                <input type="text" name="contact" class="fio" placeholder="{{phrase("reminder_placeholder")}}" required>
+                <div class="text">
+                    <span>{{phrase("reminder_safe")|raw}}</span>
+                </div>
+            </div>
+
+            <input type="submit" name="ok" class="ok" value="{{phrase("reminder_submit")}}">
+        </form>
+    </div>
+</div>

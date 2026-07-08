@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="{{lang_active().lang}}">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="{{description_start_page()}}">
+<meta name="keywords" content="{{keywords_start_page()}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title_start_page()}}">
+<meta property="og:description" content="{{description_start_page()}}">
+<meta property="og:image" content="{{template}}/images/logo.png">
+<meta property="og:locale" content="{{og_locale}}">
+<title>{{title_start_page()}}</title>
+<link rel="stylesheet" href="{{template}}/css/style.css" type="text/css">
+<link rel="stylesheet" href="{{template}}/css/animate.css" type="text/css">
+<script type="text/javascript" src="{{template}}/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{{template}}/js/js.js"></script>
+<script type="text/javascript" src="{{template}}/js/circle-progress.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+$(window).load(function(){
+    setTimeout(function(){
+  $('.progress').each(function(index, element) {
+          index = index+1;
+          $(element).attr('id','progress'+index);
+  });
+                  $('.progress').each(function(index, element) {
+                      var $element = $(element);
+                      var value = Number($element.attr('data-online')) || 0;
+                      $element.find('.circle').circleProgress({
+                          value: Math.max(0, Math.min(value / 1000, 1)),
+                          emptyFill: 'rgba(0,0,0,0)',
+                          thickness: 32,
+                          startAngle: 4.73,
+                          fill: { image: "{{template}}/images/full.png" }
+                      });
+                  });
+    }, 2000);
+});
+});
+</script>
+<script type="text/javascript">function get_timer_274(string_274) {var date_new_274 = string_274; var date_t_274 = new Date(date_new_274);var date_274 = new Date();var timer_274 = date_t_274 - date_274;if(date_t_274 > date_274) {var day_274 = parseInt(timer_274/(60*60*1000*24));if(day_274 < 10) {day_274 = "0" + day_274;}day_274 = day_274.toString();var hour_274 = parseInt(timer_274/(60*60*1000))%24;if(hour_274 < 10) {hour_274 = "0" + hour_274;}hour_274 = hour_274.toString();var min_274 = parseInt(timer_274/(1000*60))%60;if(min_274 < 10) {min_274 = "0" + min_274;}min_274 = min_274.toString();var sec_274 = parseInt(timer_274/1000)%60;if(sec_274 < 10) {sec_274 = "0" + sec_274;}sec_274 = sec_274.toString();$(".timerhello_274 .result .result-day").text(day_274);$(".timerhello_274 .result .result-hour").text(hour_274);$(".timerhello_274 .result .result-minute").text(min_274);$(".timerhello_274 .result .result-second").text(sec_274);}else {$(".timerhello_274 .result .result-day").text("00");$(".timerhello_274 .result .result-hour").text("00");$(".timerhello_274 .result .result-minute").text("00");$(".timerhello_274 .result .result-second").text("00");} }function getfrominputs_274(){string_274 = "01/13/2099 00:00";get_timer_274(string_274);setInterval(function(){get_timer_274(string_274);},1000);}$(document).ready(function(){ getfrominputs_274();});</script>
+<script type="text/javascript" src="{{template}}/js/wow.min.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+    setTimeout(function(){
+    new WOW().init();
+    }, 2000);
+});
+ </script>
+{{ config().other().getAnalyticsHead()|raw }}
+</head>
+<body>
+{{ config().other().getAnalyticsBody()|raw }}
+<div id="general">
+    {% include "navigation.html" %}
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+</div>
+{% include "stream-popup.html" %}
+</body>
+</html>

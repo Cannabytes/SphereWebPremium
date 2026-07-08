@@ -1,0 +1,36 @@
+<div id="wrapper" class="media">
+    <div id="inner">
+        <div class="general_title">
+            <span>{{phrase("media_title")}}</span>
+            <p>{{phrase("media_desc")}}</p>
+        </div>
+
+        <div class="media_content">
+            {% for stream in streams() %}
+            {% if i == 0 %}
+            <div class="media_left wow animated05 flipInX">
+                <iframe src="{{stream.src}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <div class="media_right">
+                {% for stream in streams() %}
+                {% if i > 0 %}
+                <div class="item wow animated05 flipInX">
+                    <iframe src="{{stream.src}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item_text wow animated05 flipInX">
+                    - {{stream.channel}}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="media_send wow animated05 zoomIn">
+            {{phrase("media_invite")}}
+            <span>{{phrase("media_invite_cta")}}</span>
+            <a onclick="show()" class="media_btn">{{phrase("media_stream_request")}}</a>
+        </div>
+    </div>
+</div>

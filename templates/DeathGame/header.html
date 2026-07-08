@@ -1,0 +1,24 @@
+<div id="wrapper" class="header">
+    <div id="inner">
+        <a href="/" class="logo"></a>
+
+        <div id="status">
+            {% for server in getServerAll() %}
+            {% set serverPercent = server.getStatus().getOnline() / server.getMaxOnline() * 1000 %}
+            {% if serverPercent > 1000 %}
+            {% set serverPercent = 1000 %}
+            {% endif %}
+            <div class="progress wow animated05 flipInY" data-online="{{serverPercent}}">
+                <div class="circle"></div>
+                <div class="online">
+                    <span>{{server.getStatus().getOnline()}}</span>
+                    <p>{{server.getName()}} x{{server.getRateExp()}}</p>
+                </div>
+                <div class="slink">
+                    <a href="/statistic/pvp">{{phrase("status_statistics")}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{% extends 'struct.html' %}
+
+{% block content %}
+{% set news = get_page(GET[0]) %}
+{% if news == false or news.trash %}
+<script>document.location.href = '/'</script>
+{% endif %}
+{% if news.link %}
+<script>document.location.href = '{{news.link}}'</script>
+{% endif %}
+{% set newsDate = news.date_create %}
+{% if not newsDate or newsDate == '<nil>' or newsDate == 'null' %}
+{% set newsDate = news.DateCreate %}
+{% endif %}
+<div id="wrapper" class="single">
+    <div id="inner">
+        <div class="general_title wow animated05 slideInDown">
+            <span>{{news.name}}</span>
+            <p>{{newsDate|date("d.m.Y")}}</p>
+        </div>
+        <div class="content">
+            <div class="news wow animated05 flipInX">
+                {% if news.poster %}
+                <div class="text"><img src="{{news_poster(news.poster)}}" alt="{{news.name}}"></div>
+                {% endif %}
+                <div class="text">{{news.description|raw}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

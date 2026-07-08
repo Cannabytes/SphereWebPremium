@@ -1,0 +1,44 @@
+{% set newsList = last_news(3) %}
+<div id="wrapper" class="single">
+    <div id="inner">
+        <div class="general_title wow animated05 slideInDown">
+            <span>{{phrase("news_title")}}</span>
+            <p>{{phrase("news_desc")}}</p>
+        </div>
+
+        <div class="content">
+            {% if newsList %}
+            {% set mainNews = newsList[0] %}
+            {% set mainNewsDate = mainNews.date_create %}
+            {% if not mainNewsDate or mainNewsDate == '<nil>' or mainNewsDate == 'null' %}
+            {% set mainNewsDate = mainNews.DateCreate %}
+            {% endif %}
+            <div class="news wow animated05 flipInX">
+                <div class="title">{{mainNews.name}}</div>
+                <div class="date">{{phrase("news_date_label")}}: {{mainNewsDate|date("d.m.Y")}}</div>
+                <div class="text">
+                    {{mainNews.description|raw}}
+                </div>
+                <div class="info">
+                    <a href="{{getPageLink(mainNews)}}" class="more">{{phrase("news_more")}}</a>
+                </div>
+            </div>
+            <div class="side_news">
+                {% for news in newsList %}
+                {% if i > 0 %}
+                <a href="{{getPageLink(news)}}" class="item wow animated05 flipInX">
+                    <div class="title">{{news.name}}</div>
+                    <div class="text">{{news.description|raw}}</div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="news wow animated05 flipInX">
+                <div class="title">{{phrase("news_empty_title")}}</div>
+                <div class="text">{{phrase("news_empty_desc")}}</div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

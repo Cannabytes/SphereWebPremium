@@ -1,0 +1,26 @@
+<div class="lang wow animated05 slideInDown notranslate">
+    <div class="active">
+        <span>{{lang_active().lang}}</span>
+        <div class="img">
+            {% if lang_active().lang == 'ru' %}
+            <img src="{{template}}/images/ico-ru.png" alt="{{lang_active().name}}">
+            {% else %}
+            <img src="{{template}}/images/ico-en.png" alt="{{lang_active().name}}">
+            {% endif %}
+        </div>
+    </div>
+    <div class="sub">
+        {% for lang in getAllowLang() %}
+        <a href="/user/change/lang/{{lang.lang}}">
+            <span>{{lang.lang}}</span>
+            <div class="img">
+                {% if lang.lang == 'ru' %}
+                <img src="{{template}}/images/ico-ru.png" alt="{{lang.name}}">
+                {% else %}
+                <img src="{{template}}/images/ico-en.png" alt="{{lang.name}}">
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>

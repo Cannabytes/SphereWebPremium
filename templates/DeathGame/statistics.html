@@ -1,0 +1,76 @@
+<div id="wrapper" class="side">
+    <div id="inner">
+        <div class="side_content">
+            <div class="top_player wow animated05 slideInLeft">
+                <div class="title">{{phrase("rating_title")}}</div>
+                {% for server in getServerAll() %}
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th width="9%" align="center">{{phrase("rating_rank")}}</th>
+                            <th width="65%" align="left">{{server.getName()}} x{{server.getRateExp()}}</th>
+                            <th width="11%" align="right">{{phrase("rating_pvp")}}</th>
+                            <th width="4%" align="center">/</th>
+                            <th width="11%" align="left">{{phrase("rating_pk")}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for player in statistic_get_pvp(server.getId(), 10) %}
+                        <tr>
+                            <td width="9%" align="center">{{i+1}}</td>
+                            <td width="65%" align="left">{{player.player_name|raw}}</td>
+                            <td width="11%" align="right">{{player.pvp}}</td>
+                            <td width="4%" align="center">/</td>
+                            <td width="11%" align="left">{{player.pk}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endfor %}
+            </div>
+
+            <div class="timer_block wow animated05 zoomIn">
+                <div class="title">{{phrase("timer_title")}}</div>
+                <div class="text">{{phrase("timer_server")}}</div>
+                <div class="second-my timerhello timerhello_274">
+                    <div class="second-my-content">
+                        <div class="result">
+                            <div class="item">
+                                <span class="result-day items">00</span>
+                                <span class="name">{{phrase("timer_days")}}</span>
+                            </div>
+                            <div class="item"><span class="dot">:</span></div>
+                            <div class="item">
+                                <span class="result-hour items">00</span>
+                                <span class="name">{{phrase("timer_hours")}}</span>
+                            </div>
+                            <div class="item"><span class="dot">:</span></div>
+                            <div class="item">
+                                <span class="result-minute items">00</span>
+                                <span class="name">{{phrase("timer_minutes")}}</span>
+                            </div>
+                            <div class="item"><span class="dot">:</span></div>
+                            <div class="item">
+                                <span class="result-second items">00</span>
+                                <span class="name">{{phrase("timer_seconds")}}</span>
+                            </div>
+                        </div>
+                        <div class="clearf"></div>
+                    </div>
+                </div>
+
+                <a href="{{alias('registration_user')}}" class="register">{{phrase("timer_register")}}</a>
+            </div>
+
+            <div class="shares_block wow animated05 slideInRight">
+                <div class="title">{{phrase("promo_title")}}</div>
+                <div>
+                    <div class="item"><span>{{phrase("promo_1")|raw}}</span></div>
+                    <div class="item"><span>{{phrase("promo_2")|raw}}</span></div>
+                    <div class="item"><span>{{phrase("promo_3")|raw}}</span></div>
+                    <div class="item"><span>{{phrase("promo_4")|raw}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
