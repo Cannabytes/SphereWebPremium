@@ -64,19 +64,32 @@ function create_payment(ctx)
     error("Максимальная сумма для способа " .. value(method.name, "") .. ": " .. tostring(max_amount) .. " " .. value(method.currency, "UAH"))
   end
 
-  local options = {
-    amount = amount,
-    currency = value(method.currency, "UAH"),
-    orderId = ctx.order.public_id,
-    paymentSystem = method.paymentSystem,
-    fullCallback = 0,
+  local amount_text = string.format("%.2f", amount)
+  local currency = value(method.currency, "UAH")
+  local order_id = string.gsub(ctx.order.public_id, "_", "-")
+  local fields = {
+    { "amount", amount_text },
+    { "currency", currency },
+    { "orderId", order_id },
+    { "paymentSystem", value(method.paymentSystem, "") },
+    { "urlResult", value(ctx.provider.webhook_url, "") },
+    { "urlSuccess", value(ctx.order.success_url, "") },
+    { "urlFail", value(ctx.order.fail_url, "") },
+    { "fullCallback", "0" },
   }
-  options.sign = md5_hex(tostring(options.amount) .. options.currency .. options.orderId .. options.paymentSystem .. tostring(options.fullCallback) .. value(ctx.settings.secret_api_key, ""))
+  local sign_values = {}
+  local form = {}
+  for _, field in ipairs(fields) do
+    sign_values[#sign_values + 1] = field[2]
+    form[#form + 1] = url_encode(field[1]) .. "=" .. url_encode(field[2])
+  end
+  local sign = md5_hex(table.concat(sign_values) .. value(ctx.settings.secret_api_key, ""))
+  form[#form + 1] = "sign=" .. url_encode(sign)
   local response = http_request({
     method = "POST",
     url = API_PAYMENT_URL .. "?token=" .. url_encode(value(ctx.settings.public_api_key, "")),
     headers = { ["Content-Type"] = "application/x-www-form-urlencoded" },
-    body = form_encode(options),
+    body = table.concat(form, "&"),
     timeout_ms = 30000,
   })
   local body = json_decode(response.body or "{}")
@@ -85,9 +98,9 @@ function create_payment(ctx)
   end
   return {
     redirect_url = body.url,
-    external_id = ctx.order.public_id,
+    external_id = value(body.id, order_id),
     amount = amount,
-    currency = options.currency,
+    currency = currency,
     payload = body,
   }
 end
@@ -97,34 +110,33 @@ function webhook(ctx)
   local sign = first(form.sign)
   local amount = first(form.amount)
   local order_id = first(form.orderId)
-  local currency = value(first(form.currency), "UAH")
-  if sign == "" or amount == "" or order_id == "" then
+  if sign == "" or tonumber(amount) == nil or tonumber(amount) <= 0 or order_id == "" then
     return { status = "rejected", response_status = 400, response_body = "FAIL" }
   end
   local expected = md5_hex(amount .. order_id .. value(ctx.settings.secret_api_key, ""))
   if not constant_time_equal(expected, sign) then
     return { status = "rejected", response_status = 400, response_body = "FAIL" }
   end
+  local payment_status = string.lower(first(form.status))
+  if payment_status ~= "" and payment_status ~= "success" then
+    return { status = "ignored", response_body = "OK", payload = flatten_form(form) }
+  end
   return {
     status = "paid",
-    order_id = order_id,
-    external_id = sign,
-    amount = tonumber(amount),
-    currency = currency,
+    order_id = string.gsub(order_id, "^dn%-", "dn_"),
+    external_id = first(form.id),
     response_body = "OK",
     payload = flatten_form(form),
   }
 end
 
 function find_method(methods, key)
-  local first_method = nil
   for _, method in ipairs(rows(methods)) do
-    first_method = first_method or method
     if value(method.key, method.paymentSystem) == key then
       return method
     end
   end
-  return first_method
+  return nil
 end
 
 function api_error(body, fallback)
