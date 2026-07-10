@@ -12,15 +12,26 @@ function meta()
       { key = "public_api_key", label = "Public API key", type = "text", required = true },
       { key = "secret_api_key", label = "Secret API key", type = "password", required = true, secret = true },
       {
+        key = "credit_amount_source",
+        label = "Как рассчитывать начисление пользователю",
+        type = "select",
+        required = true,
+        default = "payer_paid",
+        hint = "Если выбрать полную оплату пользователя, комиссия BetaTransfer не уменьшит начисление. Во втором варианте баланс рассчитывается только по сумме, фактически полученной сайтом после удержания комиссии.",
+        options = {
+          { value = "payer_paid", label = "Со всей суммы, заплаченной пользователем (до комиссии)" },
+          { value = "merchant_received", label = "Только с суммы, полученной сайтом (после комиссии)" },
+        },
+      },
+      {
         key = "payment_methods",
         label = "Способы оплаты",
         type = "rows",
         required = true,
         hint = "Каждая запись появится отдельным способом оплаты у пользователя.",
         columns = {
-          { key = "key", label = "Код", type = "text", required = true, placeholder = "card_uah" },
           { key = "name", label = "Название", type = "text", required = true, placeholder = "Карта UAH" },
-          { key = "paymentSystem", label = "Payment system", type = "text", required = true },
+          { key = "paymentSystem", label = "PaymentSystem BetaTransfer", type = "text", required = true, placeholder = "P2R_RUB" },
           { key = "currency", label = "Валюта", type = "select", default = "UAH", options = currency_options() },
           { key = "min", label = "Мин. сумма", type = "number", default = 0 },
           { key = "max", label = "Макс. сумма", type = "number", default = 0 },
@@ -34,7 +45,7 @@ end
 function public(ctx)
   local options = {}
   for _, method in ipairs(rows(ctx.settings.payment_methods)) do
-    local key = value(method.key, method.paymentSystem)
+    local key = value(method.paymentSystem, "")
     options[#options + 1] = {
       key = key,
       label = value(method.name, key),
@@ -75,6 +86,7 @@ function create_payment(ctx)
     { "urlResult", value(ctx.provider.webhook_url, "") },
     { "urlSuccess", value(ctx.order.success_url, "") },
     { "urlFail", value(ctx.order.fail_url, "") },
+    { "payerId", value(ctx.user.id, "") },
     { "fullCallback", "0" },
   }
   local sign_values = {}
@@ -121,10 +133,23 @@ function webhook(ctx)
   if payment_status ~= "" and payment_status ~= "success" then
     return { status = "ignored", response_body = "OK", payload = flatten_form(form) }
   end
+  local currency = first(form.currency)
+  if currency == "" then
+    return { status = "rejected", response_status = 400, response_body = "FAIL", reason = "BetaTransfer webhook: currency is missing" }
+  end
+  local credit_amount = amount
+  if value(ctx.settings.credit_amount_source, "payer_paid") ~= "merchant_received" then
+    credit_amount = first(form.paidAmount)
+  end
+  if tonumber(credit_amount) == nil or tonumber(credit_amount) <= 0 then
+    return { status = "rejected", response_status = 400, response_body = "FAIL", reason = "BetaTransfer webhook: selected credit amount is missing" }
+  end
   return {
     status = "paid",
     order_id = string.gsub(order_id, "^dn%-", "dn_"),
     external_id = first(form.id),
+    amount = tonumber(credit_amount),
+    currency = currency,
     response_body = "OK",
     payload = flatten_form(form),
   }
@@ -132,7 +157,7 @@ end
 
 function find_method(methods, key)
   for _, method in ipairs(rows(methods)) do
-    if value(method.key, method.paymentSystem) == key then
+    if value(method.paymentSystem, "") == key then
       return method
     end
   end

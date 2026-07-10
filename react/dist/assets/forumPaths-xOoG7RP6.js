@@ -1,0 +1,1 @@
+var e=e=>e.trim().replace(/\s+/g,`-`),t=(e,t)=>`/forum/${e}/${t}`,n=(e,t)=>`/forum/${e}/${t}/new`,r=()=>`/forum/settings`,i=t=>{let n=`.${t.id}`,r=e(t.slug||t.title||`thread`);for(;r.endsWith(`${n}${n}`);)r=r.slice(0,-n.length);return r.endsWith(n)||(r+=n),`/forum/thread/${encodeURIComponent(r)}`};export{i,t as n,r,n as t};
