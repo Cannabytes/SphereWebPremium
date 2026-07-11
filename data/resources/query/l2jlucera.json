@@ -156,7 +156,7 @@
       "targetDb": "game",
       "isPublic": false,
       "query": [
-        "SELECT object_id, item_type AS item_id, amount AS count, enchant AS enchant_level, location FROM items WHERE owner_id = ? ORDER BY location, item_type;"
+        "SELECT item_id AS object_id, item_type AS item_id, amount AS count, enchant AS enchant_level, location FROM items WHERE owner_id = ? ORDER BY location, item_type;"
       ]
     },
     "account_create": {
