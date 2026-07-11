@@ -129,6 +129,33 @@
         "SELECT `login`, `password` FROM `accounts` WHERE `l2email` = ?;"
       ]
     },
+    "admin_account_list": {
+      "title": "Admin Account List",
+      "sortOrder": 132,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT l2email AS email, login FROM accounts ORDER BY login;"
+      ]
+    },
+    "admin_character_list": {
+      "title": "Admin Character List",
+      "sortOrder": 134,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT account_name, char_name FROM characters;"
+      ]
+    },
+    "character_items": {
+      "title": "Character Items",
+      "sortOrder": 136,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT object_id, item_id, count, enchant_level, loc AS location FROM items WHERE owner_id = ? ORDER BY loc, item_id;"
+      ]
+    },
     "account_create": {
       "title": "Create Account",
       "sortOrder": 140,
