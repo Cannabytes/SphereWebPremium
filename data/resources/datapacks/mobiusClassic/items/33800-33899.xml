@@ -1,163 +1,1888 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33806" name="Improved Scroll: Enchant D-grade Weapon" type="EtcItem">
-		<!-- Can be used for enchanting D-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+	<item id="33800" name="Mentee Certificate" type="EtcItem">
+		<!-- Mentee Diploma. At level 85 or above, you can go find the Mentor Guide and exchange it for Diplomas. Diplomas can be exchanged for R-grade equipment after Awakening. -->
+		<set name="icon" val="icon.mentee_certificate" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33801" name="Mentoring Guidebook" type="EtcItem">
+		<!-- Double-click to learn more about the mentorship system that allows you to get mentor/ mentee buffs and other bonuses. -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="handler" val="Book" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="33802" name="Package: Mentee Certificate" type="EtcItem">
+		<!-- 1 per account. Double-click to obtain Mentee Certificate and Mentoring Guidebook. Once the pack is open, its contents cannot be transferred to other characters within the account. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="33800" min="1" max="1" chance="100" /> <!-- Mentee Certificate -->
+			<item id="33801" min="1" max="1" chance="100" /> <!-- Mentoring Guidebook -->
+		</capsuled_items>
+	</item>
+	<item id="33803" name="Mentee Coupon" type="EtcItem">
+		<!-- Double-click to obtain Package: Mentee Certificate. -->
+		<set name="icon" val="icon.mentee_coupon" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33804" name="Mentee's Mark" type="EtcItem">
+		<!-- Given to the mentor when their mentee reaches a certain level. Can be exchanged for useful items through the Mentor Guide. -->
+		<set name="icon" val="icon.mentee_mark" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33805" name="Diploma" type="EtcItem">
+		<!-- Acquired after graduating from being a Mentee. You can go find the Mentor Guide to exchange it for various items. -->
+		<set name="icon" val="icon.mentee_graduate_proof" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33806" name="Giant's Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For D-grade weapons. One-handed sword/ blunt/ staff, dagger, spear, two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +2. Bow: P. Atk. +4. All weapons: M. Atk. +2. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_d" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9244" level="1" /> <!-- Improved Scroll: Enchant D-grade Weapon -->
+			<skill id="9244" level="1" /> <!-- Giant's Scroll: Enchant D-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33807" name="Improved Scroll: Enchant C-grade Weapon" type="EtcItem">
-		<!-- Can be used for enchanting C-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+	<item id="33807" name="Giant's Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For C-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +3. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +4. Bow: P. Atk. +6. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_c" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9246" level="1" /> <!-- Improved Scroll: Enchant C-grade Weapon -->
+			<skill id="9246" level="1" /> <!-- Giant's Scroll: Enchant C-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33808" name="Improved Scroll: Enchant B-grade Weapon" type="EtcItem">
-		<!-- Can be used for enchanting B-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+	<item id="33808" name="Giant's Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For B-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +3. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +4. Bow: P. Atk. +6. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_b" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9248" level="1" /> <!-- Improved Scroll: Enchant B-grade Weapon -->
+			<skill id="9248" level="1" /> <!-- Giant's Scroll: Enchant B-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33809" name="Improved Scroll: Enchant A-grade Weapon" type="EtcItem">
-		<!-- Can be used for enchanting A-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+	<item id="33809" name="Giant's Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For A-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +4. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +5. Bow: P. Atk. +8. All weapons: M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9250" level="1" /> <!-- Improved Scroll: Enchant A-grade Weapon -->
+			<skill id="9250" level="1" /> <!-- Giant's Scroll: Enchant A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33810" name="Improved Scroll: Enchant S-grade Weapon" type="EtcItem">
-		<!-- Can be used for enchanting D-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
+	<item id="33810" name="Giant's Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For A-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +5. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists: P. Atk. +6. Bow: P. Atk. +10. All weapons: M. Atk. +4. Starting from +4, P./ M. Atk. bonus is doubled. Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="51295" level="1" /> <!-- Improved Scroll: Enchant S-grade Weapon -->
+			<skill id="9252" level="1" /> <!-- Giant's Scroll: Enchant S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="33812" name="Improved Scroll: Enchant D-grade Armor" type="EtcItem">
-		<!-- Can be used for enchanting D-grade upper armor/ lower armor/ full-body armor/ helmets/ gloves/ boots/ sigils/ shields. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+	<item id="33811" name="Giant's Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For R-grade weapons. One-handed sword/ blunt/ staff, dagger, spear: P. Atk. +6. Two-handed sword/ blunt/ staff, dual daggers, dual swords, fists, crossbow: P. Atk. +7. Bow: P. Atk. +12. All weapons: M. Atk. +5. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Enchanting is random from +1 to +3. Cannot be used with weapons enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9254" level="1" /> <!-- Giant's Scroll: Enchant R-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33812" name="Giant's Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_d" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9245" level="1" /> <!-- Improved Scroll: Enchant D-grade Armor -->
+			<skill id="9245" level="1" /> <!-- Giant's Scroll: Enchant D-grade Armor -->
 		</skills>
 	</item>
-	<item id="33813" name="Improved Scroll: Enchant C-grade Armor" type="EtcItem">
-		<!-- Can be used for enchanting C-grade upper armor/ lower armor/ full-body armor/ helmets/ gloves/ boots/ sigils/ shields. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+	<item id="33813" name="Giant's Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For C-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_c" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9247" level="1" /> <!-- Improved Scroll: Enchant C-grade Armor -->
+			<skill id="9247" level="1" /> <!-- Giant's Scroll: Enchant C-grade Armor -->
 		</skills>
 	</item>
-	<item id="33814" name="Improved Scroll: Enchant B-grade Armor" type="EtcItem">
-		<!-- Can be used for enchanting B-grade upper armor/ lower armor/ full-body armor/ helmets/ gloves/ boots/ sigils/ shields. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+	<item id="33814" name="Giant's Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_b" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9249" level="1" /> <!-- Improved Scroll: Enchant B-grade Armor -->
+			<skill id="9249" level="1" /> <!-- Giant's Scroll: Enchant B-grade Armor -->
 		</skills>
 	</item>
-	<item id="33815" name="Improved Scroll: Enchant A-grade Armor" type="EtcItem">
-		<!-- Can be used for enchanting A-grade upper armor/ lower armor/ full-body armor/ helmets/ gloves/ boots/ sigils/ shields. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+	<item id="33815" name="Giant's Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For A-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="9251" level="1" /> <!-- Improved Scroll: Enchant A-grade Armor -->
+			<skill id="9251" level="1" /> <!-- Giant's Scroll: Enchant A-grade Armor -->
 		</skills>
 	</item>
-	<item id="33816" name="Improved Scroll: Enchant S-grade Armor" type="EtcItem">
-		<!-- The item is not available. <font color=eeaa22>Enchanting is safe up to +4. Enchanting is random from +1 to +3.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
+	<item id="33816" name="Giant's Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9253" level="1" /> <!-- Giant's Scroll: Enchant S-grade Armor -->
+		</skills>
+	</item>
+	<item id="33817" name="Giant's Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, the effect is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Enchanting is random from +1 to +3. Cannot be used with equipment enchanted to +30 and higher. <Enchant success rate>. +1 - 57%. +2 - 29%. +3 - 14% -->
+		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9255" level="1" /> <!-- Giant's Scroll: Enchant R-grade Armor -->
+		</skills>
+	</item>
+	<item id="33818" name="Scroll: Enchant Hair Accessory" additionalName="Event" type="EtcItem">
+		<!-- M. Def. +2. Starting from +4, M. Def. bonus is greatly increased. Enchanting is safe up to +3. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9234" level="1" /> <!-- Scroll: Enchant Head Accessory -->
+		</skills>
+	</item>
+	<item id="33819" name="Life Stone: Hair Accessory" additionalName="Event" type="EtcItem">
+		<!-- Outdated and almost no longer used. Can be exchanged for Spirit Stones through a blacksmith in any town. -->
+		<set name="icon" val="icon.life_dust_hairacc_general" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33820" name="Decayed D-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33821" name="Decayed C-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33822" name="Decayed B-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33823" name="Decayed A-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33824" name="Decayed S-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33825" name="Decayed Unbind Scroll (S80-grade)" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33826" name="R-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Unbinds a R-grade bound item through Head Blacksmith in any town. Has a low chance to obtain a blessed item. -->
+		<set name="icon" val="icon.cursed_free_r" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33827" name="R95-grade Unbind Scroll" additionalName="Event" type="EtcItem">
+		<!-- Unbinds a R95-grade bound item through Head Blacksmith in any town. Has a low chance to obtain a blessed item. -->
+		<set name="icon" val="icon.cursed_free_r95" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33828" name="Decayed A-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.etc_bead_red_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33829" name="Decayed S-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33830" name="Decayed S80-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33831" name="Decayed R-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33832" name="Decayed R95-grade Soul Crystal Change Stone" additionalName="Event" type="EtcItem">
+		<!-- Not used. Can be sold to a trader. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="33833" name="S-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
+		<!-- Can change an S-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="crystal_type" val="S" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CHANGE_ATTR" />
+		<set name="handler" val="ChangeAttributeCrystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="12881" level="1" /> <!-- Change Property -->
+		</skills>
+	</item>
+	<item id="33834" name="S80-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
+		<!-- Can change an S80 -grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="crystal_type" val="S80" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CHANGE_ATTR" />
+		<set name="handler" val="ChangeAttributeCrystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="12881" level="1" /> <!-- Change Property -->
+		</skills>
+	</item>
+	<item id="33835" name="R-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
+		<!-- Can change an R-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CHANGE_ATTR" />
+		<set name="handler" val="ChangeAttributeCrystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="12881" level="1" /> <!-- Change Property -->
+		</skills>
+	</item>
+	<item id="33836" name="R95-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
+		<!-- Can change an R95-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="crystal_type" val="R95" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CHANGE_ATTR" />
+		<set name="handler" val="ChangeAttributeCrystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="12881" level="1" /> <!-- Change Property -->
+		</skills>
+	</item>
+	<item id="33837" name="R99-grade Attribute Change Crystal" additionalName="Event" type="EtcItem">
+		<!-- Can change an R99-grade weapon's attribute. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="crystal_type" val="R99" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CHANGE_ATTR" />
+		<set name="handler" val="ChangeAttributeCrystal" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="12881" level="1" /> <!-- Change Property -->
+		</skills>
+	</item>
+	<item id="33838" name="Destruction Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +2 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22367" level="1" /> <!-- Destruction Scroll: Enchant D-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33839" name="Destruction Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual dagger/ sword, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22365" level="1" /> <!-- Destruction Scroll: Enchant C-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33840" name="Destruction Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22363" level="1" /> <!-- Destruction Scroll: Enchant B-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33841" name="Destruction Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22361" level="1" /> <!-- Destruction Scroll: Enchant A-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33842" name="Destruction Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22359" level="1" /> <!-- Destruction Scroll: Enchant S-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33843" name="Destruction Scroll: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Through the Goddess of Destruction's power, in case of failure the item is not crystallized, and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="12872" level="1" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
+		</skills>
+	</item>
+	<item id="33844" name="Destruction Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22368" level="1" /> <!-- Destruction Scroll: Enchant D-grade Armor -->
+		</skills>
+	</item>
+	<item id="33845" name="Destruction Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for C-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22366" level="1" /> <!-- Destruction Scroll: Enchant C-grade Armor -->
+		</skills>
+	</item>
+	<item id="33846" name="Destruction Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for B-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22364" level="1" /> <!-- Destruction Scroll: Enchant B-grade Armor -->
+		</skills>
+	</item>
+	<item id="33847" name="Destruction Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for A-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22362" level="1" /> <!-- Destruction Scroll: Enchant A-grade Armor -->
+		</skills>
+	</item>
+	<item id="33848" name="Destruction Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with equipment enchanted to +6 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22360" level="1" /> <!-- Destruction Scroll: Enchant S-grade Armor -->
+		</skills>
+	</item>
+	<item id="33849" name="Destruction Scroll: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For R-grade armor and accessories. P. Def. +2. Starting from +4, P. Def. bonus is greatly increased, HP is increased with each enchant value. Enchanting is safe up to +3. Due to the Goddess of Destruction's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used with equipment enchanted to +6 and higher. -->
+		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="12873" level="1" /> <!-- Destruction Scroll: Enchant R-grade Armor -->
+		</skills>
+	</item>
+	<item id="33850" name="Stone: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +20% for D-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2515" level="1" /> <!-- D-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33851" name="Stone: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +18% for C-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i01" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2516" level="1" /> <!-- C-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33852" name="Stone: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +15% for B-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i02" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2517" level="1" /> <!-- B-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33853" name="Stone: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +12% for A-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i03" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2518" level="1" /> <!-- A-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33854" name="Stone: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +10% for S-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_stone_i04" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2519" level="1" /> <!-- S-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33855" name="Stone: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +10% for R-grade weapons. Only for items enchanted from +3 to +9. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9207" level="1" /> <!-- R-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33856" name="Stone: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +35% for D-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2520" level="1" /> <!-- D-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33857" name="Stone: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +27% for C-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_stone_i01" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2521" level="1" /> <!-- C-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33858" name="Stone: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +18% for B-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_stone_i02" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2522" level="1" /> <!-- B-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33859" name="Stone: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +18% for A-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_stone_i03" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2523" level="1" /> <!-- A-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33860" name="Stone: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +15% for S-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_stone_i04" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="2524" level="1" /> <!-- S-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33861" name="Stone: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +15% for R-grade armor. Only for items enchanted from +3 to +9 (from +4 to +9 for full-body armor). -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9208" level="1" /> <!-- R-grade Lucky Clover -->
+		</skills>
+	</item>
+	<item id="33862" name="Elixir of Blessing" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., enables the effects of Musician's Melody Lv. 2. Required level: 85+. Cooldown: 2 min. -->
+		<set name="icon" val="icon.etc_super_potion_i03" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="120000" />
+		<set name="shared_reuse_group" val="7" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="39759" level="1" /> <!-- Musician's Melody - Elixir of Blessing -->
+		</skills>
+	</item>
+	<item id="33863" name="Fire Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Fire Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="51296" level="1" /> <!-- Improved Scroll: Enchant S-grade Armor -->
+			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
+	</item>
+	<item id="33864" name="Water Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Water Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12876" level="3" /> <!-- Water Stone -->
+		</skills>
+	</item>
+	<item id="33865" name="Earth Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Earth Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12878" level="3" /> <!-- Earth Stone -->
+		</skills>
+	</item>
+	<item id="33866" name="Wind Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Wind Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12877" level="3" /> <!-- Wind Stone -->
+		</skills>
+	</item>
+	<item id="33867" name="Dark Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Dark Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12880" level="3" /> <!-- Dark Stone -->
+		</skills>
+	</item>
+	<item id="33868" name="Holy Stone (+60)" additionalName="Event" type="EtcItem">
+		<!-- Holy Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12879" level="3" /> <!-- Holy Stone -->
+		</skills>
+	</item>
+	<item id="33869" name="Fire Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Fire attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12875" level="1" /> <!-- Fire Stone -->
+		</skills>
+	</item>
+	<item id="33870" name="Water Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Water attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12876" level="1" /> <!-- Water Stone -->
+		</skills>
+	</item>
+	<item id="33871" name="Earth Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Earth attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12878" level="1" /> <!-- Earth Stone -->
+		</skills>
+	</item>
+	<item id="33872" name="Wind Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Wind attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12877" level="1" /> <!-- Wind Stone -->
+		</skills>
+	</item>
+	<item id="33873" name="Dark Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Dark attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12880" level="1" /> <!-- Dark Stone -->
+		</skills>
+	</item>
+	<item id="33874" name="Holy Stone (+150)" additionalName="Event" type="EtcItem">
+		<!-- Enhances the Holy attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12879" level="1" /> <!-- Holy Stone -->
+		</skills>
+	</item>
+	<item id="33875" name="Requiem Shaper" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
+		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">369</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dagger -->
+		</skills>
+	</item>
+	<item id="33876" name="Requiem Cutter" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, P. Accuracy and Critical Rate for basic attacks. -->
+		<set name="icon" val="icon.weapon_estia_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">422</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Sword -->
+		</skills>
+	</item>
+	<item id="33877" name="Requiem Slasher" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and additionally P. Atk. -->
+		<set name="icon" val="icon.weapon_polion_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1740" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">514</stat>
+			<stat type="mAtk">245</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Sword -->
+		</skills>
+	</item>
+	<item id="33878" name="Requiem Avenger" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and Critical Damage for basic attacks. -->
+		<set name="icon" val="icon.weapon_batista_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1740" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">422</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Blunt Weapon -->
+		</skills>
+	</item>
+	<item id="33879" name="Requiem Fighter" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, Atk. Spd. and additionally P. Atk. -->
+		<set name="icon" val="icon.weapon_fantasma_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1550" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">514</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Fist Weapon -->
+		</skills>
+	</item>
+	<item id="33880" name="Requiem Stormer" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and the number of targets hit on attack. -->
+		<set name="icon" val="icon.weapon_soryu_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="2010" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pAtk">422</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Spear -->
+		</skills>
+	</item>
+	<item id="33881" name="Requiem Thrower" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and P. Skill Power. -->
+		<set name="icon" val="icon.weapon_grabathus_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">831</stat>
+			<stat type="mAtk">245</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Bow -->
+		</skills>
+	</item>
+	<item id="33882" name="Requiem Guardian" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage and additionally Atk. Spd. -->
+		<set name="icon" val="icon.weapon_shyayaka_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1580" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">748</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Crossbow -->
+		</skills>
+	</item>
+	<item id="33883" name="Requiem Buster" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Rate. -->
+		<set name="icon" val="icon.weapon_kaynon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1520" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">338</stat>
+			<stat type="mAtk">245</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Magic Sword -->
+		</skills>
+	</item>
+	<item id="33884" name="Requiem Caster" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, M. Accuracy and M. Skill Critical Damage. -->
+		<set name="icon" val="icon.weapon_anatrian_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1080" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<stats>
+			<stat type="pAtk">338</stat>
+			<stat type="mAtk">245</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13296" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - One-handed Staff -->
+		</skills>
+	</item>
+	<item id="33885" name="Requiem Retributer" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, M. Atk., M. Skill Critical Damage and Casting Spd. -->
+		<set name="icon" val="icon.weapon_grangkaz_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1080" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<stats>
+			<stat type="pAtk">411</stat>
+			<stat type="mAtk">270</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13301" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Two-handed Staff -->
+		</skills>
+	</item>
+	<item id="33886" name="Requiem Dual Swords" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Rate for basic attacks and additionally P. Atk. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">514</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13274" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Swords -->
+		</skills>
+	</item>
+	<item id="33887" name="Requiem Dual Daggers" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, Critical Damage for basic attacks and additionally P. Atk. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="2050" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">422</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13284" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Daggers -->
+		</skills>
+	</item>
+	<item id="33888" name="Requiem Dual Blunt Weapons" additionalName="Event" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, increases Soulshot/ Spiritshot damage, P. Skill Power and additionally P. Atk. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1740" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">514</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="13269" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Dual Blunt Weapons -->
+		</skills>
+	</item>
+	<item id="33889" name="Immortal Helmet" additionalName="Heavy armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Heavy armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pDef">114</stat>
+		</stats>
+	</item>
+	<item id="33890" name="Immortal Breastplate" additionalName="Heavy armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Heavy armor, can be upgraded by the Blacksmith in any town. Starting from +4, decreases received Critical Damage from basic attacks and increases P. Def. -->
+		<set name="icon" val="icon.armor_t501_u_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="7520" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pDef">304</stat>
+		</stats>
+		<skills>
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Heavy Armor -->
+		</skills>
+	</item>
+	<item id="33891" name="Immortal Gaiters" additionalName="Heavy armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Heavy armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t501_l_i00" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="3170" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<stats>
+			<stat type="pDef">190</stat>
+		</stats>
+	</item>
+	<item id="33892" name="Immortal Gauntlets" additionalName="Heavy armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Heavy armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t501_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="33893" name="Immortal Boots" additionalName="Heavy armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Heavy armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t501_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="33894" name="Immortal Shield" additionalName="Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.weapon_sacon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1130" />
+		<set name="material" val="DAMASCUS" />
+		<stats>
+			<stat type="sDef">415</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+	</item>
+	<item id="33895" name="Immortal Leather Helmet" additionalName="Light armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Light armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
+		<stats>
+			<stat type="pDef">114</stat>
+		</stats>
+	</item>
+	<item id="33896" name="Immortal Leather Armor" additionalName="Light armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Light armor, can be upgraded by the Blacksmith in any town. Starting from +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases received Critical Rate from basic attacks. -->
+		<set name="icon" val="icon.armor_t502_u_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="4140" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pDef">243</stat>
+			<stat type="rEvas">5</stat>
+			<stat type="mEvas">5</stat>
+		</stats>
+		<skills>
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property - Light Armor -->
+		</skills>
+	</item>
+	<item id="33897" name="Immortal Leather Leggings" additionalName="Light armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Light armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t502_l_i00" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1320" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<stats>
+			<stat type="pDef">152</stat>
+			<stat type="rEvas">3</stat>
+			<stat type="mEvas">3</stat>
+		</stats>
+	</item>
+	<item id="33898" name="Immortal Leather Gloves" additionalName="Light armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Light armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t502_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
+	</item>
+	<item id="33899" name="Immortal Leather Boots" additionalName="Light armor / Event" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal. Light armor, can be upgraded by the Blacksmith in any town. -->
+		<set name="icon" val="icon.armor_t502_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
+		<stats>
+			<stat type="pDef">76</stat>
+		</stats>
 	</item>
 </list>

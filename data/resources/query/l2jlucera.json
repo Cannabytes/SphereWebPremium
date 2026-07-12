@@ -156,7 +156,7 @@
       "targetDb": "game",
       "isPublic": false,
       "query": [
-        "SELECT item_id AS object_id, item_type AS item_id, amount AS count, enchant AS enchant_level, location FROM items WHERE owner_id = ? ORDER BY location, item_type;"
+        "SELECT i.item_id AS object_id, i.item_type AS item_id, i.amount AS count, i.enchant AS enchant_level, i.location, COALESCE(v.stat1, 0) AS augmentation_stat1, COALESCE(v.stat2, 0) AS augmentation_stat2 FROM items i LEFT JOIN items_variation v ON v.item_id = i.item_id WHERE i.owner_id = ? ORDER BY i.location, i.item_type;"
       ]
     },
     "account_create": {

@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80900" name="Bloodstained Akamanah Dual Blunt Weapon" type="Weapon">
+		<!-- Cannot be enchanted, crystallized or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Enables active skills Soul's Insanity, Soul's Confinement, and Soul's Release. -->
+		<set name="icon" val="icon.aka_manaf_dual_blunt_2" />
+		<set name="is_cursed_weapon" val="true" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="equip_reuse_delay" val="300" />
+		<set name="ensoulNormalSlots" val="2" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
+			<skill id="35537" level="1" /> <!-- Soul's Confinement - Akamanah -->
+			<skill id="35538" level="1" /> <!-- Soul's Release - Akamanah -->
+			<skill id="36618" level="1" /> <!-- Bloodstained Akamanah -->
+		</skills>
+	</item>
+	<item id="80901" name="Zariche's Blood" type="EtcItem">
+		<!-- A material for making a Bloodstained Zariche weapon. -->
+		<set name="icon" val="icon.zariche_blood" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80902" name="Akamanah's Blood" type="EtcItem">
+		<!-- A material for making a Bloodstained Akamanah weapon. -->
+		<set name="icon" val="icon.aka_manaf_blood" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80903" name="Zariche's Sealed Box" type="EtcItem">
+		<!-- A chest in which the madness of the Demonic Sword Zariche is sealed. Double-click to obtain a Bloodthirsty Zariche weapon or Zariche's Blood. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80901" min="1" max="1" chance="6.666667" /> <!-- Zariche's Blood -->
+			<item id="80698" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Shaper -->
+			<item id="80699" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Cutter -->
+			<item id="80700" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Slasher -->
+			<item id="80701" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Avenger -->
+			<item id="80702" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Fighter -->
+			<item id="80703" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Stormer -->
+			<item id="80704" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Thrower -->
+			<item id="80705" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Guardian -->
+			<item id="80706" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Buster -->
+			<item id="80707" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Caster -->
+			<item id="80708" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Retributer -->
+			<item id="80709" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Dual Swords -->
+			<item id="80710" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Dual Daggers -->
+			<item id="80711" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Zariche Dual Blunt Weapons -->
+		</capsuled_items>
+	</item>
+	<item id="80904" name="Akamanah's Sealed Box" type="EtcItem">
+		<!-- A chest in which the madness of the Blood Sword Akamanah is sealed. Double-click to obtain a Bloodthirsty Akamanah weapon or Akamanah's Blood. -->
+		<set name="icon" val="icon.aka_manaf_box" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80902" min="1" max="1" chance="6.666667" /> <!-- Akamanah's Blood -->
+			<item id="80859" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Shaper -->
+			<item id="80860" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Cutter -->
+			<item id="80861" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Slasher -->
+			<item id="80862" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Avenger -->
+			<item id="80863" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Fighter -->
+			<item id="80864" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Stormer -->
+			<item id="80865" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Thrower -->
+			<item id="80866" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Guardian -->
+			<item id="80867" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Buster -->
+			<item id="80868" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Caster -->
+			<item id="80869" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Retributer -->
+			<item id="80870" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Dual Swords -->
+			<item id="80871" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Dual Daggers -->
+			<item id="80872" min="1" max="1" chance="6.666667" /> <!-- Bloodthirsty Akamanah Dual Blunt Weapon -->
+		</capsuled_items>
+	</item>
+	<item id="80905" name="Fioren's Crystal Prison's Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Fioren's Crystal Prison. -->
+		<set name="icon" val="icon.timezone_refill_1" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39542" level="1" /> <!-- Fioren's Crystal Prison's Time Stone -->
+		</skills>
+	</item>
+	<item id="80906" name="Primeval Isle's Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Jamoa's Camp. -->
+		<set name="icon" val="icon.timezone_refill_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39543" level="1" /> <!-- Jamoa's Camp's Time Stone -->
+		</skills>
+	</item>
+	<item id="80907" name="PA Summoning Stick" type="EtcItem">
+		<!-- Double-click to summon either Pa'agrio Orc or Pa'agrio Orc Hero. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39544" level="1" /> <!-- PA Summoning Stick -->
+		</skills>
+	</item>
+	<item id="80908" name="Lv. 95 Achievement Reward Box" type="EtcItem">
+		<!-- Double-click to obtain a talisman and a bracelet, as well as some supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Spiritshot - Event -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="48072" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet - 15-day -->
+			<item id="48124" min="1" max="1" chance="100" /> <!-- Agathion Charm: Fairy -->
+			<item id="48848" min="15" max="15" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot - Event -->
+			<item id="34985" min="1" max="1" chance="100" /> <!-- Talisman of Destruction -->
+			<item id="39634" min="1" max="1" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
+		</capsuled_items>
+	</item>
+	<item id="80909" name="Lv. 99 Achievement Reward Box" type="EtcItem">
+		<!-- Double-click to obtain a brooch and a jewel, as well as some supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Spiritshot - Event -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="38891" min="1" max="1" chance="100" /> <!-- Diamond Lv. 2 -->
+			<item id="38881" min="1" max="1" chance="100" /> <!-- Emerald Lv. 2 -->
+			<item id="38768" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brooch Lv. 1 -->
+			<item id="48848" min="25" max="25" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="38896" min="1" max="1" chance="100" /> <!-- Pearl Lv. 2 -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot - Event -->
+		</capsuled_items>
+	</item>
+	<item id="80910" name="Lv. 100 Achievement Reward Box" type="EtcItem">
+		<!-- Double-click to obtain a belt and some supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Spiritshot - Event -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="47044" min="1" max="1" chance="100" /> <!-- Commando Belt -->
+			<item id="48848" min="35" max="35" chance="100" /> <!-- Freya's Ice Rose - Event -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot - Event -->
+		</capsuled_items>
+	</item>
+	<item id="80911" name="+5 Warrior's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain Warrior's Circlet enchanted to +5. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<capsuled_items>
+			<item id="48202" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Warrior's Circlet -->
+		</capsuled_items>
+		<skills>
+			<skill id="39539" level="1" /> <!-- +5 Warrior's Circlet Box -->
+		</skills>
+	</item>
+	<item id="80912" name="+5 Wizard's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain Wizard's Circlet enchanted to +5. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<capsuled_items>
+			<item id="48205" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Wizard's Circlet -->
+		</capsuled_items>
+		<skills>
+			<skill id="39540" level="1" /> <!-- +5 Wizard's Circlet Box -->
+		</skills>
+	</item>
+	<item id="80913" name="+5 Knight's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain +5 Knight's Circlet. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<capsuled_items>
+			<item id="48208" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Knight's Circlet -->
+		</capsuled_items>
+		<skills>
+			<skill id="39541" level="1" /> <!-- +5 Knight's Circlet Box -->
+		</skills>
+	</item>
+	<item id="80914" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
+		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Ivory Tower Crater. Double-click to accept. Can only be used once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80915" name="Red Libra Request - Breka's Stronghold" type="EtcItem">
+		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in Breka's Stronghold. Double-click to accept. Can only be used once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80916" name="Red Libra Request - Isle of Prayer" type="EtcItem">
+		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters on the Isle of Prayer. Double-click to accept. Can only be used once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80917" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Ivory Tower Crater. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80918" name="Red Libra Request - Breka's Stronghold" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Breka's Stronghold. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80919" name="Red Libra Request - Isle of Prayer" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Isle of Prayer. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80920" name="Emperor's Vitality Tonic" additionalName="Event" type="EtcItem">
+		<!-- Contains the strength of the emperor. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_recall_potion3" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<conditions>
+			<player MaximumVitalityPoints="140000" />
+		</conditions>
+		<skills>
+			<skill id="39547" level="1" /> <!-- Emperor's Vitality Tonic -->
+		</skills>
+	</item>
+	<item id="80921" name="Lindvior's Treasure Chest" type="EtcItem">
+		<!-- A treasure chest obtained for the raid against Lindvior. Double-click to obtain 1 rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80922" name="Caring Rok's Icy Candy" type="EtcItem">
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, all attack power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39549" level="1" /> <!-- Caring Rok's Icy Candy -->
+		</skills>
+	</item>
+	<item id="80923" name="Caring Rok's Candy Full of Passion" type="EtcItem">
+		<!-- A candy emanating Caring Rok's passion. Endows with passion and vitality. Recovers 1 of 4 vitality bars. Cannot be used in the Olympiad. No usage limit. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i03" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39550" level="1" /> <!-- Caring Rok's Candy Full of Passion -->
+		</skills>
+	</item>
+	<item id="80924" name="Spellbook: Renewed Energy of Power" type="EtcItem">
+		<!-- Allows to learn the dual class skill Renewed Inspiration of Power. Only for the main class -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="85" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="39551" level="1" /> <!-- Spellbook: Renewed Inspiration of Power -->
+		</skills>
+	</item>
+	<item id="80925" name="Potion of Protection: Confusion" type="EtcItem">
+		<!-- When used, Confusion Resistance +5, received PvP damage -3%.Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39553" level="1" /> <!-- Potion of Protection - Confusion -->
+		</skills>
+	</item>
+	<item id="80926" name="Potion of Protection: Infection" type="EtcItem">
+		<!-- When used, Infection Resistance +5, received PvP damage -3%.Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39555" level="1" /> <!-- Potion of Protection - Infection -->
+		</skills>
+	</item>
+	<item id="80927" name="Potion of Protection: Obstruction" type="EtcItem">
+		<!-- When used, Obstruction Resistance +5, received PvP damage -3%.Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="39557" level="1" /> <!-- Potion of Protection - Obstruction -->
+		</skills>
+	</item>
+	<item id="80928" name="Potion of Protection: Stupor" type="EtcItem">
+		<!-- When used, Stupor Resistance +5, received PvP damage -3%.Cannot be used in the Olympiad. The effect does not stack with other Potions of Protection. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
+		<set name="weight" val="10" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="39559" level="1" /> <!-- Potion of Protection - Stupor -->
+		</skills>
+	</item>
+	<item id="80929" name="Package: Mysterious R-grade Soulshots" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 50,000 Soulshots. -->
+		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="34609" min="50000" max="50000" chance="100" /> <!-- Mysterious Soulshot - Event -->
+		</capsuled_items>
+	</item>
+	<item id="80930" name="Package: Mysterious Blessed R-grade Spiritshots" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 20,000 Mysterious Spiritshots. -->
+		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="34616" min="20000" max="20000" chance="100" /> <!-- Mysterious Spiritshot - Event -->
+		</capsuled_items>
+	</item>
+	<item id="80931" name="Greater Zodiac Agathion Cube" type="EtcItem">
+		<!-- Double-click to obtain a Greater Zodiac Agathion Charms imbued with the power of stars. -->
+		<set name="icon" val="icon.star_agathion_cube_2" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="80936" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Virgo -->
+			<item id="80937" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Capricorn -->
+			<item id="80938" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Libra -->
+			<item id="80939" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Aries -->
+			<item id="80940" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Taurus -->
+			<item id="80941" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Leo -->
+			<item id="80942" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Gemini -->
+			<item id="80943" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Scorpio -->
+			<item id="80944" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Aquarius -->
+			<item id="80945" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Pisces -->
+			<item id="80946" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Sagittarius -->
+			<item id="80947" min="1" max="1" chance="8.333333" /> <!-- Greater Agathion Charm: Cancer -->
+		</capsuled_items>
+	</item>
+	<item id="80932" name="Greater Zodiac Agathion's Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Greater Zodiac Agathion Charms. Increases the agathion's M. Def. The maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="35551" level="1" /> <!-- Greater Zodiac Agathion's Book of Growth -->
+		</skills>
+	</item>
+	<item id="80933" name="Greater Zodiac Agathion's Book of Growth Box" additionalName="Event" type="EtcItem">
+		<!-- A lucky gift from the Festival Fairy. Double-click to obtain 4 Greater Zodiac Agathion's Books of Growth. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="80932" min="4" max="4" chance="100" /> <!-- Greater Zodiac Agathion's Book of Growth -->
+		</capsuled_items>
+	</item>
+	<item id="80934" name="Festival Fairy's Crystal Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 3-500 crystals. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_questitem" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="0" />
+		<skills>
+			<skill id="39560" level="1" /> <!-- Festival Fairy's Box: Crystals -->
+		</skills>
+	</item>
+	<item id="80935" name="Small Fairy's Lucky Coin Pack" additionalName="Not used" type="EtcItem">
+		<!-- Double-click to obtain 15 Fairy's Lucky Coins. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49783" min="15" max="15" chance="100" /> <!-- Fairy's Lucky Coin - Event -->
+		</capsuled_items>
+	</item>
+	<item id="80936" name="Greater Agathion Virgo Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Virgo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_virgo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35045" level="1" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="35045" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Virgo -->
+			<skill id="28130" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Virgo -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80937" name="Greater Agathion Capricorn Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Capricorn. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_capr_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35046" level="1" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="35046" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Capricorn -->
+			<skill id="28131" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Capricorn -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80938" name="Greater Agathion Libra Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Libra. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_lib_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35047" level="1" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="35047" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Libra -->
+			<skill id="28132" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Libra -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80939" name="Greater Agathion Aries Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Aries. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_aries_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35048" level="1" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="35048" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Aries -->
+			<skill id="28133" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aries -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80940" name="Greater Agathion Taurus Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Taurus. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_tau_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35049" level="1" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="35049" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Taurus -->
+			<skill id="28134" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Taurus -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80941" name="Greater Agathion Leo Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Leo. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_leo_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35050" level="1" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="35050" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Leo -->
+			<skill id="28135" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Leo -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80942" name="Greater Agathion Gemini Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Gemini. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_gem_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35051" level="1" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="35051" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Gemini -->
+			<skill id="28136" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Gemini -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80943" name="Greater Agathion Scorpio Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Scorpio. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_sco_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35052" level="1" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="35052" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Scorpio -->
+			<skill id="28137" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Scorpio -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80944" name="Greater Agathion Aquarius Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Aquarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_aqu_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35053" level="1" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="35053" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Aquarius -->
+			<skill id="28138" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Aquarius -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80945" name="Greater Agathion Pisces Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Pisces. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_pis_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35054" level="1" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="35054" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Pisces -->
+			<skill id="28139" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Pisces -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80946" name="Greater Agathion Sagittarius Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Sagittarius. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_sag_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35055" level="1" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="35055" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Sagittarius -->
+			<skill id="28140" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Sagittarius -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80947" name="Greater Agathion Cancer Charm" type="Armor">
+		<!-- Contains the power of Greater Agathion Cancer. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. Agathion charms can be exchanged for Books of Growth through the Fishing Guild. <Enchanting>. Use Greater Zodiac Agathion's Book of Growth. -->
+		<set name="icon" val="icon.agathion_can_star_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="35056" level="1" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="35056" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Secondary Skill: Agathion Cancer -->
+			<skill id="28141" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Cancer -->
+			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
+		</skills>
+	</item>
+	<item id="80948" name="Antharas Treasure Chest" type="EtcItem">
+		<!-- A treasure chest obtained for the raid against Antharas. Double-click to obtain 1 rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80949" name="Only for monsters (Lord Ishka)" type="Weapon">
+		<!-- For monsters, not in use -->
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="300" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="pAtk">50</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="80950" name="Secret Material" type="EtcItem">
+		<!-- Secret material needed to make Special Antidote. Gather and take them to Guard Kallesin at the entrance of the Ruins of Agony. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80951" name="Breath of Death" type="EtcItem">
+		<!-- The source of the energy that reanimates dead beings. Gather and take them to Tarti in the Town of Gludio. -->
+		<set name="icon" val="icon.etc_ashes_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80952" name="Corrupted Energy" type="EtcItem">
+		<!-- It is what turned the relatively gentle Growlers into violent beasts. You can feel the miasma of the corrupted Wind Spirit Realm. Gather and take them to Researcher Pio. -->
+		<set name="icon" val="icon.etc_crystal_piece_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80953" name="Embedded Shard" type="EtcItem">
+		<!-- Shards embedded in Leaf and Arbor's bodies. There are lingering traces of Dark Arts. It might be the reason why Leaf and Arbor have been unintelligible. Gather and take them to Researcher Pio. -->
+		<set name="icon" val="icon.etc_piece_holy_light" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80954" name="Orc Empowering Potion" type="EtcItem">
+		<!-- A potion that made the Turek Orcs become powerful. This could be the cause behind the Turek Orcs. hitherto one of the lesser orc tribes. suddenly becoming so strong. Gather and take them to Reclous the Hermit. -->
+		<set name="icon" val="icon.etc_ev_draco_purple_bottle" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80955" name="Ketra Order" type="EtcItem">
+		<!-- An order sent secretly to the Ketra Orcs. It may be why some of the Ketra Orcs have come to the Orc Barracks. Gather and take them to Reclous the Hermit. -->
+		<set name="icon" val="icon.etc_ketra_badge_captn_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80956" name="Paulina's R-grade Equipment Set" additionalName="For Dual Class" type="EtcItem">
+		<!-- An R-grade equipment set granted upon getting dual class. For characters on dual class only. -->
+		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18597" level="7" /> <!-- Paulina's R-grade Equipment Set - Dual Class -->
+		</skills>
+	</item>
+	<item id="80957" name="Heavenly Talisman" type="Armor">
+		<!-- Max HP/ MP/ CP +7%, P./ M. Accuracy +2, P./ M. Evasion +2, Vampiric Rage +5%, Atk. Spd./ Casting Spd. +70, Critical Rate for basic attacks +3%, M. Atk. +3%, all attack power +7%, Damage Reflection Resistance +40, Fixed Damage Resistance +15%, P. Def. +750, M. Def. +750, all stats +3, Skill MP Consumption -3%, skill cooldown -3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enchanting>. Use Gran Kain's Scroll: Enchant Talisman. -->
+		<set name="icon" val="icon.accessory_heaven_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="8864" level="8" /> <!-- Heavenly Talisman -->
+			<skill id="36277" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Heavenly Talisman: Enchant Effect -->
+			<skill id="36277" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Heavenly Talisman: Enchant Effect -->
+			<skill id="35552" level="1" type="ON_EQUIP" /> <!-- Heavenly Talisman -->
+			<skill id="35553" level="1" type="ON_UNEQUIP" /> <!-- Remove Heavenly Talisman -->
+		</skills>
+	</item>
+	<item id="80958" name="Sealed Heavenly Talisman" type="EtcItem">
+		<!-- Required level: 85+. Double-click to obtain Heavenly Talisman. -->
+		<set name="icon" val="icon.accessory_heaven_talisman" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80957" min="1" max="1" chance="100" /> <!-- Heavenly Talisman -->
+		</capsuled_items>
+	</item>
+	<item id="80959" name="Epic Talisman" type="Armor">
+		<!-- M. Def. +1500, P. Def. +1500, MP Recovery Rate +4, HP Recovery Rate +8, Attribute Resistance +30, Damage Reflection Resistance +20, received Critical Rate from basic attacks and P./ M. skills -15%, all received Critical Damage -15%. Effects of several identical talismans do not stack -->
+		<set name="icon" val="icon.epic_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="30" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="13569" level="4" /> <!-- Epic Talisman -->
+			<skill id="36315" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Epic Talisman: Enchant Effect -->
+			<skill id="36315" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Epic Talisman: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="80960" name="Pantheon's Museum's Time Stone" additionalName="Event" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Pantheon's Museum. -->
+		<set name="icon" val="icon.timezone_refill_3" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39562" level="1" /> <!-- Pantheon's Museum's Time Stone -->
+		</skills>
+	</item>
+	<item id="80961" name="Maphr's Blessing" additionalName="1-day" type="EtcItem">
+		<!-- A special rune imbued with Maphr's blessing. When in inventory, sustains Vitality. Available for 1 d. -->
+		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<skills>
+			<skill id="39563" level="1" /> <!-- Maphr's Blessing (1-day) -->
+		</skills>
+	</item>
+	<item id="80962" name="Maphr's Blessing Chest" type="EtcItem">
+		<!-- Double-click to obtain Maphr's Blessing. -->
+		<set name="icon" val="icon.lucky_bag_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="80961" min="1" max="1" chance="100" /> <!-- Maphr's Blessing - 1-day -->
+		</capsuled_items>
+	</item>
+	<item id="80963" name="Bloodstained Talisman of Protection" additionalName="8-hour" type="Armor">
+		<!-- Talisman of Protection stained with the blood of Zariche or Akamanah. P. Def. +850, M. Def. +850, received damage -3%, Bow/ Crossbow Resistance +3%, Dagger/ Dual Daggers Resistance +3%, Fixed Damage Resistance +5%, received M. Skill Critical Damage -3%, received damage when immobilized -3% -->
+		<set name="icon" val="icon.cursed_defend_talisman_lv1" />
+		<set name="bodypart" val="deco1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="480" />
+		<skills>
+			<skill id="35554" level="1" /> <!-- Bloodstained Talisman of Protection -->
+		</skills>
+	</item>
+	<item id="80964" name="Energy of Protection" type="EtcItem">
+		<!-- A compound material for upgrading Talisman of Protection Lv. 9 or lower. In case of failure, Talisman of Protection is not destroyed, but its upgrade level is reset to a certain value. However, Energy of Protection is consumed in any case. -->
+		<set name="icon" val="icon.defend_talisman_energy" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80965" name="Shining Talisman Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 of the following rare items: Sealed Talisman of Longing, Energy of Longing, Talisman of Lilith, Talisman of Anakim, Energy of Seven Signs, Sealed Talisman of Insanity. -->
+		<set name="icon" val="BranchSys3.icon1.g_ev_invite_fantasy_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80966" name="Dragon's Shining Box" type="EtcItem">
+		<!-- Double-click to obtain 1 of the following rare items: Dragon Claw, Dragon's Ring, Dragon's Earring, Dragon's Necklace, High-grade Dragon Weapon Box, Mid-grade Dragon Weapon Box, Low-grade Dragon Weapon Box. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80967" name="Scroll of Aden Green Squad" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., acquired XP/ SP +30%, Vitality bonus +30%, all stats +1. -->
+		<set name="icon" val="icon.ev_green_aden_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39564" level="1" /> <!-- Scroll of Aden Green Squad -->
+		</skills>
+	</item>
+	<item id="80968" name="Alice's Lost Time" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for a gift through Alice. -->
+		<set name="icon" val="icon.skill5239" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80969" name="Master Engineer's Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 1 of the following items: Forgotten Spellbook Chapter 1, Rune Stone, Superior Giant's Codex - Chapter 1, Superior Giant's Codex Manuscript, My Teleport Scroll. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="13302" min="20" max="20" chance="20" /> <!-- My Teleport Scroll - Event -->
+			<item id="48876" min="1" max="1" chance="20" /> <!-- Forgotten Spellbook - Chapter 1 -->
+			<item id="30297" min="1" max="1" chance="20" /> <!-- Superior Giant's Codex Manuscript -->
+			<item id="39738" min="1" max="1" chance="20" /> <!-- Rune Stone -->
+			<item id="46150" min="1" max="1" chance="20" /> <!-- Superior Giant's Codex - Chapter 1 -->
+		</capsuled_items>
+	</item>
+	<item id="80970" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 6" type="EtcItem">
+		<!-- Required for learning Dignity of the Exalted Lv. 6. Only for the main class. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="18345" level="6" /> <!-- Spellbook: Dignity of the Exalted Lv. 6 -->
+		</skills>
+	</item>
+	<item id="80971" name="Dragon's Relic" type="EtcItem">
+		<!-- Double-click to obtain 1 rare item. -->
+		<set name="icon" val="icon.bm_dragon_present_poket" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80972" name="Corroded Requiem Dual Sword Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.weapon_estia_i00_piece" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80973" name="Corroded Requiem Dual Dagger Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.weapon_aspeda_i00_piece" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80974" name="Corroded Requiem Dual Blunt Weapon Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.weapon_batista_i00_piece" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80975" name="Corroded Apocalypse Dual Sword Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80976" name="Corroded Apocalypse Dual Dagger Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80977" name="Corroded Apocalypse Dual Blunt Weapon Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80978" name="Corroded Specter Dual Sword Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80979" name="Corroded Specter Dual Dagger Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80980" name="Corroded Specter Dual Blunt Weapon Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80981" name="Corroded Helios Dual Sword Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80982" name="Corroded Helios Dual Dagger Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80983" name="Corroded Helios Dual Blunt Weapon Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80984" name="Recipe: Requiem Dual Swords (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Requiem Dual Swords. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1323" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80985" name="Recipe: Requiem Dual Daggers (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Requiem Dual Daggers. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1324" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80986" name="Recipe: Requiem Dual Blunt Weapon (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Requiem Dual Blunt Weapon. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1325" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80987" name="Recipe: Apocalypse Dual Swords (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Apocalypse Dual Swords. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1326" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80988" name="Recipe: Apocalypse Dual Daggers (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Apocalypse Dual Daggers. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1327" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80989" name="Recipe: Apocalypse Dual Blunt Weapon (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Apocalypse Dual Blunt Weapon. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1328" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80990" name="Recipe: Specter Dual Swords (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Specter Dual Swords. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1329" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80991" name="Recipe: Specter Dual Daggers (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Specter Dual Daggers. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1330" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80992" name="Recipe: Specter Dual Blunt Weapon (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Specter Dual Blunt Weapon. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1331" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80993" name="Recipe: Helios Dual Swords (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Helios Dual Swords. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1332" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80994" name="Recipe: Helios Dual Daggers (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Helios Dual Daggers. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1333" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80995" name="Recipe: Helios Dual Blunt Weapon (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Helios Dual Blunt Weapon. Requires Create Item Lv. 11. The success rate is 60%. With a low chance, the crafted item can be Blessed. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="recipe_id" val="1334" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="80996" name="Fioren's Crystal Prison's Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Fioren's Crystal Prison. Required level: 105+. -->
+		<set name="icon" val="icon.timezone_refill_1" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39565" level="1" /> <!-- Fioren's Crystal Prison's Time Stone -->
+		</skills>
+	</item>
+	<item id="80997" name="Jamoa's Camp's Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Jamoa's Camp. Required level: 105+. -->
+		<set name="icon" val="icon.timezone_refill_2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39566" level="1" /> <!-- Jamoa's Camp's Time Stone -->
+		</skills>
+	</item>
+	<item id="80998" name="Pantheon's Museum's Time Stone" type="EtcItem">
+		<!-- Adds 60 min. to the hunting time in Pantheon's Museum. Required level: 105+. -->
+		<set name="icon" val="icon.timezone_refill_3" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39567" level="1" /> <!-- Pantheon's Museum's Time Stone -->
+		</skills>
+	</item>
+	<item id="80999" name="My Teleport Book Lv. 2" type="EtcItem">
+		<!-- My Teleport locations +1. Can be expanded after 18 slots (maximum - 24). -->
+		<set name="icon" val="icon.bookmark_book_i00" />
+		<set name="default_action" val="CALL_SKILL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39568" level="1" /> <!-- My Teleport Book Lv. 2 -->
+		</skills>
+	</item>
+</list>

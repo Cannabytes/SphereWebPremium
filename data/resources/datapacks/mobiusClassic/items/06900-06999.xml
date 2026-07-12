@@ -1,69 +1,1367 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6900" name="Recipe: Arcana Mace (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Arcana Mace. Requires Create Item Lv. 9. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="976000" />
+		<set name="recipe_id" val="645" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="6901" name="Recipe: Arrow of Light (100%)" type="EtcItem">
-		<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+		<!-- For Dwarves only. A recipe for Arrow of Light. Requires Create Item Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="price" val="200000" />
-		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="625" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6917" name="Monster Only (Poisonous Dart)" additionalName="Sealed" type="Weapon">
-		<set name="icon" val="icon.weapon_monster_i00" />
+	<item id="6902" name="Pledge Shield" type="Armor">
+		<!-- Shield that can only be used by the members of a clan that owns a clan hall. -->
+		<set name="icon" val="icon.shield_pledge_shield_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="price" val="2" />
-		<set name="weight" val="6" />
-		<set name="bodypart" val="rhand" />
-		<set name="weapon_type" val="FIST" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="bodypart" val="rhand" />
-		<set name="weapon_type" val="FIST" />
-	</item>
-	<item id="6918" name="Monster Only (Silence Shield)" additionalName="Sealed" type="Armor">
-		<set name="icon" val="icon.weapon_monster_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
-		<set name="price" val="2580" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="weight" val="1380" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="price" val="1980" />
+		<conditions msgId="1518">
+			<and>
+				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
+				<player clanHall="-1" />
+			</and>
+		</conditions>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">90</stat>
 		</stats>
 	</item>
-	<item id="6919" name="Monster Only (Ketra Orc Shield)" additionalName="Sealed" type="Armor">
+	<item id="6903" name="Music Box M" type="EtcItem">
+		<!-- Music Box playing Minu's music. Disappear after the one-time use. -->
+		<set name="icon" val="icon.etc_m_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="reuse_delay" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2187" level="1" /> <!-- Item - Special Sound Crystal -->
+		</skills>
+	</item>
+	<item id="6904" name="Party Mask Fabric" type="EtcItem">
+		<!-- Key material for making Party Mask. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6905" name="Lady's Hairpin Fragment" type="EtcItem">
+		<!-- Key material for making Lady's Hairpin. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6906" name="Pirate's Eyepatch String" type="EtcItem">
+		<!-- Key component for making Pirate's Eyepatch. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_braided_hemp_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6907" name="Monocle Piece" type="EtcItem">
+		<!-- Key material for making Monocle. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_bark_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+	</item>
+	<item id="6908" name="Corroded Fish Oil" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_oil_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6909" name="Corroded Greater Fish Oil" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_oil_i01" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="250" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6910" name="Corroded Premium Fish Oil" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_oil_i02" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1250" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6911" name="Corroded Fish Scale" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_scale_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6912" name="Corroded Shiny Fish Scale" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_scale_i01" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6913" name="Corroded Fish Gem" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_gem_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6914" name="Corroded Shiny Fish Gem" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fish_gem_i01" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6915" name="Corroded Thin Fish Bone" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fang_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6916" name="Corroded Thick Fish Bone" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_fang_ivory_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="450" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6917" name="Monster Only (Poisonous Dart)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="6" />
+		<set name="price" val="2" />
+		<set name="commissionItemType" val="OTHER_WEAPON" />
+		<set name="for_npc" val="true" />
+	</item>
+	<item id="6918" name="Monster Only (Silence Shield)" type="Armor">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1380" />
+		<set name="price" val="2580" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">90</stat>
+		</stats>
+	</item>
+	<item id="6919" name="Monster Only (Ketra Orc Shield)" type="Armor">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="price" val="15680" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="weight" val="1320" />
+		<set name="price" val="15680" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">142</stat>
 		</stats>
+	</item>
+	<item id="6920" name="Recipe: Corroded Greater Fish Oil (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Corroded Greater Fish Oil. Requires Create Common Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="50" />
+		<set name="recipe_id" val="680" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6921" name="Recipe: Corroded Premium Fish Oil (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Corroded Premium Fish Oil. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="250" />
+		<set name="recipe_id" val="681" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6922" name="Recipe: Party Mask (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Party Mask. Requires Create Item Common Lv. 4. With a certain chance, creates a head accessory enhanced with a locket. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="682" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6923" name="Recipe: Lady's Hairpin (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Lady's Hairpin. Requires Create Item Common Lv. 4. With a certain chance, creates a head accessory enhanced with a locket. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="683" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6924" name="Recipe: Pirate's Eyepatch (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Pirate's Eyepatch. Requires Create Item Common Lv. 4. With a certain chance, creates a head accessory enhanced with a locket. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="684" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6925" name="Recipe: Monocle (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Monocle. Requires Create Item Common Lv. 4. With a certain chance, creates a head accessory enhanced with a locket. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="685" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6926" name="Recipe: HP Replenishing Potion (100%)" type="EtcItem">
+		<!-- For all races. A recipe for HP Replenishing Potion. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18" />
+		<set name="recipe_id" val="686" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6927" name="Recipe: Greater HP Replenishing Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Greater HP Replenishing Potion. Requires Create Common Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="66" />
+		<set name="recipe_id" val="687" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6928" name="Recipe: Major HP Replenishing Potion (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Potent HP Replenishing Potion. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="180" />
+		<set name="recipe_id" val="688" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6929" name="Recipe: Antidote (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Antidote. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="15" />
+		<set name="recipe_id" val="689" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6930" name="Recipe: Greater Antidote (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater Antidote. Requires Create Common Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="36" />
+		<set name="recipe_id" val="690" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6931" name="Recipe: Bandage (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Bandage. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="15" />
+		<set name="recipe_id" val="691" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6932" name="Recipe: Emergency Dressing (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Emergency Dressing. Requires Create Common Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="36" />
+		<set name="recipe_id" val="692" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6933" name="Recipe: Wind Walk Potion (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Wind Walk Potion. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="240" />
+		<set name="recipe_id" val="693" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6934" name="Recipe: Haste Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Haste Potion. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="480" />
+		<set name="recipe_id" val="694" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6935" name="Recipe: Greater Wind Walk Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Greater Wind Walk Potion. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="600" />
+		<set name="recipe_id" val="695" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6936" name="Recipe: Greater Haste Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Greater Haste Potion. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="1200" />
+		<set name="recipe_id" val="696" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6937" name="Recipe: Magic Haste Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Magic Haste Potion. Requires Create Common Item Lv. 1. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="480" />
+		<set name="recipe_id" val="697" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6938" name="Recipe: Greater Magic Haste Potion (100%)" type="EtcItem">
+		<!-- For all races. Recipe for Greater Magic Haste Potion. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="1200" />
+		<set name="recipe_id" val="698" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6939" name="Recipe: Mysterious Potion (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Mystic Potion. Requires Create Common Item Lv. 2. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="2000" />
+		<set name="recipe_id" val="699" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6940" name="Recipe: Facelifting Potion A (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Facelifting Potion A. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="700" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6941" name="Recipe: Facelifting Potion B (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Facelifting Potion B. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="701" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6942" name="Recipe: Facelifting Potion C (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Facelifting Potion C. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="702" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6943" name="Recipe: Dye Potion A (100%)" type="EtcItem">
+		<!-- A recipe for Dye Potion A (for all races). Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="703" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6944" name="Recipe: Dye Potion B (100%)" type="EtcItem">
+		<!-- A recipe for Dye Potion B (for all races). Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="704" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6945" name="Recipe: Dye Potion C (100%)" type="EtcItem">
+		<!-- A recipe for Dye Potion C (for all races). Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="705" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6946" name="Recipe: Dye Potion D (100%)" type="EtcItem">
+		<!-- A recipe for Dye Potion D (for all races). Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="706" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6947" name="Recipe: Hair Style Change Potion A (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion A. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="707" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6948" name="Recipe: Hair Style Change Potion B (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion B. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="708" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6949" name="Recipe: Hair Style Change Potion C (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion C. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="709" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6950" name="Recipe: Hair Style Change Potion D (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion D. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="710" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6951" name="Recipe: Hair Style Change Potion E (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion E. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="711" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6952" name="Recipe: Hair Style Change Potion F (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion F. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="712" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6953" name="Recipe: Hair Style Change Potion G (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Hairstyle Change Potion G. Requires Create Common Item Lv. 3. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="4000" />
+		<set name="recipe_id" val="713" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6954" name="Recipe: STR Dye (STR +1 CON -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for STR Dye <STR +1 CON -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="714" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6955" name="Recipe: STR Dye (STR +1 DEX -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for STR Dye <STR +1 DEX -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="715" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6956" name="Recipe: CON Dye (CON +1 STR -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for CON Dye <CON +1 STR -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="716" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6957" name="Recipe: CON Dye (CON +1 DEX -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for CON Dye <CON +1 DEX -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="717" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6958" name="Recipe: DEX Dye (DEX +1 STR -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for DEX Dye <DEX +1 STR -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="718" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6959" name="Recipe: DEX Dye (DEX +1 CON -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for DEX Dye <DEX +1 CON -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="719" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6960" name="Recipe: INT Dye (INT +1 MEN -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for INT Dye <INT +1 MEN -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="720" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6961" name="Recipe: INT Dye (INT +1 WIT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for INT Dye <INT +1 WIT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="721" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6962" name="Recipe: MEN Dye (MEN +1 INT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for MEN Dye <MEN +1 INT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="722" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6963" name="Recipe: MEN Dye (MEN +1 WIT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for MEN Dye <MEN +1 WIT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="723" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6964" name="Recipe: WIT Dye (WIT +1 INT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for WIT Dye <WIT +1 INT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="724" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6965" name="Recipe: WIT Dye (WIT +1 MEN -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for WIT Dye <WIT +1 MEN -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="7000" />
+		<set name="recipe_id" val="725" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6966" name="Recipe: Greater STR Dye (STR +1 CON -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +1 CON -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="726" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6967" name="Recipe: Greater STR Dye (STR +1 DEX -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +1 DEX -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="727" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6968" name="Recipe: Greater CON Dye (CON +1 STR -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +1 STR -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="728" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6969" name="Recipe: Greater CON Dye (CON +1 DEX -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +1 DEX -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="729" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6970" name="Recipe: Greater DEX Dye (DEX +1 STR -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +1 STR -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="730" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6971" name="Recipe: Greater DEX Dye (DEX +1 CON -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +1 CON -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="731" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6972" name="Recipe: Greater INT Dye (INT +1 MEN -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +1 MEN -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="732" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6973" name="Recipe: Greater INT Dye (INT +1 WIT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +1 WIT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="733" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6974" name="Recipe: Greater MEN Dye (MEN +1 INT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +1 INT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="734" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6975" name="Recipe: Greater MEN Dye (MEN +1 WIT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +1 WIT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="735" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6976" name="Recipe: Greater WIT Dye (WIT +1 INT -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater WIT Dye <WIT +1 INT -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="736" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6977" name="Recipe: Greater WIT Dye (WIT +1 MEN -1) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater WIT Dye <WIT +1 MEN -1>. Requires Create Common Item Lv. 4. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="10000" />
+		<set name="recipe_id" val="737" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6978" name="Recipe: Greater STR Dye (STR +2 CON -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +2 CON -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="738" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6979" name="Recipe: Greater STR Dye (STR +2 DEX -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +2 DEX -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="739" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6980" name="Recipe: Greater CON Dye (CON +2 STR -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +2 STR -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="740" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6981" name="Recipe: Greater CON Dye (CON +2 DEX -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +2 DEX -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="741" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6982" name="Recipe: Greater DEX Dye (DEX +2 STR -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +2 STR -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="742" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6983" name="Recipe: Greater DEX Dye (DEX +2 CON -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +2 CON -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="743" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6984" name="Recipe: Greater INT Dye (INT +2 MEN -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +2 MEN -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="744" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6985" name="Recipe: Greater INT Dye (INT +2 WIT -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +2 WIT -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="745" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6986" name="Recipe: Greater MEN Dye (MEN +2 INT -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +2 INT -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="746" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6987" name="Recipe: Greater MEN Dye (MEN +2 WIT -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +2 WIT -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="747" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6988" name="Recipe: Greater WIT Dye (WIT +2 INT -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater WIT Dye <WIT +2 INT -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="748" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6989" name="Recipe: Greater WIT Dye (WIT +2 MEN -2) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater WIT Dye <WIT +2 MEN -2>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="12000" />
+		<set name="recipe_id" val="749" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6990" name="Recipe: Greater STR Dye (STR +3 CON -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +3 CON -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="750" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6991" name="Recipe: Greater STR Dye (STR +3 DEX -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater STR Dye <STR +3 DEX -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="751" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6992" name="Recipe: Greater CON Dye (CON +3 STR -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +3 STR -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="752" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6993" name="Recipe: Greater CON Dye (CON +3 DEX -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater CON Dye <CON +3 DEX -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="753" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6994" name="Recipe: Greater DEX Dye (DEX +3 STR -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +3 STR -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="754" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6995" name="Recipe: Greater DEX Dye (DEX +3 CON -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater DEX Dye <DEX +3 CON -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="755" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6996" name="Recipe: Greater INT Dye (INT +3 MEN -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +3 MEN -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="756" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6997" name="Recipe: Greater INT Dye (INT +3 WIT -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater INT Dye <INT +3 WIT -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="757" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6998" name="Recipe: Greater MEN Dye (MEN +3 INT -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +3 INT -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="758" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="6999" name="Recipe: Greater MEN Dye (MEN +3 WIT -3) (100%)" type="EtcItem">
+		<!-- For all races. A recipe for Greater MEN Dye <MEN +3 WIT -3>. Requires Create Common Item Lv. 5. -->
+		<set name="icon" val="icon.etc_recipe_green_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="18000" />
+		<set name="recipe_id" val="759" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 	</item>
 </list>

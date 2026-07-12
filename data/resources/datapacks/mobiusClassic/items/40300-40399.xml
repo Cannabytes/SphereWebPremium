@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="40300" name="Freya's Recovery Potion" type="EtcItem">
+		<!-- Recovers 3500 HP. If HP is full, recovers CP. No cooldown. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.freya_potion" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="18155" level="1" /> <!-- Freya's Recovery Potion -->
+		</skills>
+	</item>
+	<item id="40301" name="Buff Helmet" additionalName="LUC" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, LUC +3. -->
+		<set name="icon" val="icon.buff_helmet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Head Accessory: LUC -->
+		</skills>
+	</item>
+	<item id="40302" name="Buff Helmet" additionalName="CHA" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, CHA +3. -->
+		<set name="icon" val="icon.buff_helmet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Head Accessory: CHA -->
+		</skills>
+	</item>
+	<item id="40303" name="Extra Pass: Spezion (Normal)" type="EtcItem">
+		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Spezion's normal dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18165" level="1" /> <!-- Extra Pass: Spezion (Normal) -->
+		</skills>
+	</item>
+	<item id="40304" name="Extra Pass: Spezion (Epic)" type="EtcItem">
+		<!-- An extra pass to a daily instance zone. Double-click to reset the instance zone timer for Spezion's epic dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_kalie_instantzone_re" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18166" level="1" /> <!-- Extra Pass: Spezion (Epic) -->
+		</skills>
+	</item>
+	<item id="40305" name="R99-grade Expertise Rune" additionalName="30-day" type="EtcItem">
+		<!-- Available for 30 d. When in inventory, allows you to use R99-grade equipment without penalty. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="17577" level="1" /> <!-- R99-grade Expertise Rune -->
+		</skills>
+	</item>
+	<item id="40306" name="R99-grade Expertise Rune Pack" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain R99-grade Expertise Rune (30-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="40305" min="1" max="1" chance="100" /> <!-- R99-grade Expertise Rune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 Expertise Rune Pack (30-day) and 1 Package: Miraculous Friend Summon Bracelet (30-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40306" min="1" max="1" chance="100" /> <!-- R99-grade Expertise Rune Pack - 30-day -->
+			<item id="37673" min="1" max="1" chance="100" /> <!-- Package: Miraculous Friend Summon Bracelet (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="40308" name="Dynamic Dual Knight Gift Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 Expertise Rune Pack (30-day), 1 Package: Miraculous Friend Summon Bracelet (30-day) and 2 Ertheia's Rare Accessory Packs (7-day). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40306" min="1" max="1" chance="100" /> <!-- R99-grade Expertise Rune Pack - 30-day -->
+			<item id="37673" min="1" max="1" chance="100" /> <!-- Package: Miraculous Friend Summon Bracelet (30-day) -->
+			<item id="40213" min="2" max="2" chance="100" /> <!-- Ertheia's Rare Accessory Pack - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="40309" name="Scroll of Escape: Dwarven Village" type="EtcItem">
+		<!-- A magic scroll for teleporting to the Dwarven Village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="18167" level="1" /> <!-- Scroll of Escape: Dwarven Village -->
+		</skills>
+	</item>
+	<item id="40310" name="Appearance Stone: Santa Hat" type="EtcItem">
+		<!-- Changes the appearance of a head accessory to that of Santa Hat. Can only be used on head accessories equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="16424" level="1" /> <!-- Appearance Stone: Santa Hat -->
+		</skills>
+	</item>
+	<item id="40311" name="Noelle's Gift" type="EtcItem">
+		<!-- Double-click to recover Vitality while in peaceful zones. For 6 h. A set amount of Vitality is also restored when the buff is about to expire. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="weight" val="5" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="16423" level="1" /> <!-- Noelle's Gift -->
+		</skills>
+	</item>
+	<item id="40312" name="Santa's Cloak" type="Armor">
+		<!-- Light and cozy cloak. -->
+		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
+		<conditions msgId="2453">
+			<player cloakStatus="true" />
+		</conditions>
+		<stats>
+			<stat type="pDef">20</stat>
+		</stats>
+	</item>
+	<item id="40313" name="Santa's Mark" type="EtcItem">
+		<!-- Proof of your successful search for Santa alongside Tree Fairy, Stocking Fairy, and Snowman Fairy. Take this to Noelle for a reward. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="40314" name="Santa Hat" additionalName="STR" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, STR +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9554" level="1" /> <!-- Head Accessory: STR -->
+		</skills>
+	</item>
+	<item id="40315" name="Santa Hat" additionalName="DEX" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, DEX +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9555" level="1" /> <!-- Head Accessory: DEX -->
+		</skills>
+	</item>
+	<item id="40316" name="Santa Hat" additionalName="CON" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, CON +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9556" level="1" /> <!-- Head Accessory: CON -->
+		</skills>
+	</item>
+	<item id="40317" name="Santa Hat" additionalName="MEN" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, MEN +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9557" level="1" /> <!-- Head Accessory: MEN -->
+		</skills>
+	</item>
+	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, INT +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9558" level="1" /> <!-- Head Accessory: INT -->
+		</skills>
+	</item>
+	<item id="40319" name="Santa Hat" additionalName="WIT" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, WIT +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9559" level="1" /> <!-- Head Accessory: WIT -->
+		</skills>
+	</item>
+	<item id="40320" name="Santa Hat" additionalName="Critical Rate" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, Critical Rate for basic attacks +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9560" level="1" /> <!-- Head Accessory: P. Critical Rate -->
+		</skills>
+	</item>
+	<item id="40321" name="Santa Hat" additionalName="Critical Damage" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, Critical Damage for basic attacks +90, M. Skill Critical Damage +68. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9561" level="1" /> <!-- Head Accessory: Critical Damage -->
+		</skills>
+	</item>
+	<item id="40322" name="Santa Hat" additionalName="P. Def." type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, P. Def. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9562" level="1" /> <!-- Head Accessory: P. Def. -->
+		</skills>
+	</item>
+	<item id="40323" name="Santa Hat" additionalName="M. Def." type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, M. Def. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9563" level="1" /> <!-- Head Accessory: M. Def. -->
+		</skills>
+	</item>
+	<item id="40324" name="Santa Hat" additionalName="Evasion" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, Evasion +5. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9564" level="1" /> <!-- Head Accessory: P. Evasion -->
+		</skills>
+	</item>
+	<item id="40325" name="Santa Hat" additionalName="P. Atk." type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, P. Atk. +5%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9565" level="1" /> <!-- Head Accessory: P. Atk. -->
+		</skills>
+	</item>
+	<item id="40326" name="Santa Hat" additionalName="M. Atk." type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, M. Atk. +10%. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9566" level="1" /> <!-- Head Accessory: M. Atk. -->
+		</skills>
+	</item>
+	<item id="40327" name="Santa Hat" additionalName="Accuracy" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, P. Accuracy +5. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9567" level="1" /> <!-- Head Accessory: P. Accuracy -->
+		</skills>
+	</item>
+	<item id="40328" name="Santa Hat" additionalName="LUC" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, LUC +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18048" level="1" /> <!-- Head Accessory: LUC -->
+		</skills>
+	</item>
+	<item id="40329" name="Santa Hat" additionalName="CHA" type="Armor">
+		<!-- Equipped in 2 head accessory slots. When equipped, CHA +3. -->
+		<set name="icon" val="icon.accessory_santas_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18049" level="1" /> <!-- Head Accessory: CHA -->
+		</skills>
+	</item>
+	<item id="40330" name="Appearance Stone: Santa Outfit" type="EtcItem">
+		<!-- Changes the appearance of your entire armor to that of Santa Outfit. The armor's default appearance can be restored with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="22764" level="1" /> <!-- Appearance Stone: Santa Outfit -->
+		</skills>
+	</item>
+	<item id="40331" name="Magic Staff Set of Fortune" additionalName="90-day" type="EtcItem">
+		<!-- Use to receive 5 magic staff weapons (S - C-grade). Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40332" min="1" max="1" chance="100" /> <!-- Branch of the Mother Tree - Fortune - 90-day -->
+			<item id="40333" min="1" max="1" chance="100" /> <!-- Staff of Evil Spirits - Fortune - 90-day -->
+			<item id="40334" min="1" max="1" chance="100" /> <!-- Inferno Staff - Fortune - 90-day -->
+			<item id="40336" min="1" max="1" chance="100" /> <!-- Imperial Staff - Fortune - 90-day -->
+			<item id="40337" min="1" max="1" chance="100" /> <!-- Dynasty Staff - Fortune - 90-day -->
+		</capsuled_items>
+	</item>
+	<item id="40332" name="Branch of the Mother Tree of Fortune" additionalName="90-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">226</stat>
+			<stat type="mAtk">167</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40333" name="Staff of Evil Spirits - Fortune" additionalName="90-day" type="Weapon">
+		<!-- <Special properties>. With a 6% chance, inflicts Curse Poison when applying a debuff on the target. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="B" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="C" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40335" name="Atuba Mace of Fortune" additionalName="90-day" type="Weapon">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">90</stat>
+			<stat type="mAtk">79</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
+		<!-- <Special properties>. M. Atk. +60. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3575" level="1" /> <!-- Special Property: Empower -->
+		</skills>
+	</item>
+	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">325</stat>
+			<stat type="mAtk">222</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40338" name="Ertheia Fighter Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Item set for Ertheia Fighter classes. Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40340" min="1" max="1" chance="100" /> <!-- Fist Weapon Set - Fortune - 90-day -->
+			<item id="16979" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune (A-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune (A-grade) - 90-day -->
+			<item id="16980" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune (B-grade) - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune (B-grade) - 90-day -->
+			<item id="16981" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune (C-grade) - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune (C-grade) - 90-day -->
+			<item id="21786" min="1" max="1" chance="100" /> <!-- Package: Draconic Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21805" min="1" max="1" chance="100" /> <!-- Package: Dynasty Leather Armor Set - Fortune (S-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+		</capsuled_items>
+	</item>
+	<item id="40339" name="Ertheia Wizard Equipment Set" additionalName="90-day" type="EtcItem">
+		<!-- Item set for Ertheia Wizard classes. Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40331" min="1" max="1" chance="100" /> <!-- Magic Staff Set - Fortune - 90-day -->
+			<item id="16983" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Robe Set - Fortune (A-grade) - 90-day -->
+			<item id="16999" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune (A-grade) - 90-day -->
+			<item id="16984" min="1" max="1" chance="100" /> <!-- Package: Avadon Robe Set - Fortune (B-grade) - 90-day -->
+			<item id="17000" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune (B-grade) - 90-day -->
+			<item id="16985" min="1" max="1" chance="100" /> <!-- Package: Karmian Robe Set - Fortune (C-grade) - 90-day -->
+			<item id="17001" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune (C-grade) - 90-day -->
+			<item id="21792" min="1" max="1" chance="100" /> <!-- Package: Major Arcana Robe Set - Fortune (S-grade) - 90-day -->
+			<item id="21816" min="1" max="1" chance="100" /> <!-- Package: Tateossian Accessories - Fortune (S-grade) - 90-day -->
+			<item id="21812" min="1" max="1" chance="100" /> <!-- Package: Dynasty Robe Set - Fortune (S-grade) - 90-day -->
+			<item id="21820" min="1" max="1" chance="100" /> <!-- Package: Dynasty Accessories - Fortune (S-grade) - 90-day -->
+		</capsuled_items>
+	</item>
+	<item id="40340" name="Fist Weapon Set of Fortune" additionalName="90-day" type="EtcItem">
+		<!-- Use to receive 5 fist weapons (S - C-grade). Disappears after 90 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="129600" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21839" min="1" max="1" chance="100" /> <!-- Dynasty Bagh-Nakh - Fortune - 90-day -->
+			<item id="21827" min="1" max="1" chance="100" /> <!-- Demon Splinter - Fortune - 90-day -->
+			<item id="16944" min="1" max="1" chance="100" /> <!-- Sobekk's Hurricane - Fortune - 90-day -->
+			<item id="16945" min="1" max="1" chance="100" /> <!-- Bellion Cestus - Fortune - 90-day -->
+			<item id="16946" min="1" max="1" chance="100" /> <!-- Great Pata - Fortune - 90-day -->
+		</capsuled_items>
+	</item>
+	<item id="40341" name="Fist Weapon Set of Fortune" additionalName="30-day" type="EtcItem">
+		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="15056" min="1" max="1" chance="100" /> <!-- Sobekk's Hurricane - Fortune - 30-day -->
+			<item id="15057" min="1" max="1" chance="100" /> <!-- Bellion Cestus - Fortune - 30-day -->
+			<item id="15058" min="1" max="1" chance="100" /> <!-- Great Pata - Fortune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="40342" name="Magic Staff Set of Fortune" additionalName="30-day" type="EtcItem">
+		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40343" min="1" max="1" chance="100" /> <!-- Branch of the Mother Tree - Fortune - 30-day -->
+			<item id="40344" min="1" max="1" chance="100" /> <!-- Staff of Evil Spirits - Fortune - 30-day -->
+			<item id="40345" min="1" max="1" chance="100" /> <!-- Inferno Staff - Fortune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="40343" name="Branch of the Mother Tree of Fortune" additionalName="30-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">226</stat>
+			<stat type="mAtk">167</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40344" name="Staff of Evil Spirits - Fortune" additionalName="30-day" type="Weapon">
+		<!-- <Special properties>. With a 6% chance, inflicts Curse Poison when applying a debuff on the target. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="B" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="C" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40346" name="Atuba Mace of Fortune" additionalName="30-day" type="Weapon">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">90</stat>
+			<stat type="mAtk">79</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
+		<!-- <Special properties>. M. Atk. +60. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3575" level="1" /> <!-- Special Property: Empower -->
+		</skills>
+	</item>
+	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">325</stat>
+			<stat type="mAtk">222</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40349" name="Ertheia Fighter Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Item set for Ertheia Fighter classes. Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40341" min="1" max="1" chance="100" /> <!-- Fist Weapon Set - Fortune - 30-day -->
+			<item id="15250" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune - 30-day -->
+			<item id="15274" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune - 30-day -->
+			<item id="15251" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune - 30-day -->
+			<item id="15275" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune - 30-day -->
+			<item id="15252" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune - 30-day -->
+			<item id="15276" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="40350" name="Ertheia Wizard Equipment Set" additionalName="30-day" type="EtcItem">
+		<!-- Item set for Ertheia Warrior classes. Disappears after 30 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40342" min="1" max="1" chance="100" /> <!-- Magic Staff Set - Fortune - 30-day -->
+			<item id="15254" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Robe Set - Fortune - 30-day -->
+			<item id="15274" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune - 30-day -->
+			<item id="15255" min="1" max="1" chance="100" /> <!-- Package: Avadon Robe Set - Fortune - 30-day -->
+			<item id="15275" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune - 30-day -->
+			<item id="15256" min="1" max="1" chance="100" /> <!-- Package: Karmian Robe Set - Fortune - 30-day -->
+			<item id="15276" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="40351" name="Fist Weapon Set of Fortune" additionalName="10-day" type="EtcItem">
+		<!-- Use to receive 3 fist weapons (A - C-grade). Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="15170" min="1" max="1" chance="100" /> <!-- Sobekk's Hurricane - Fortune - 10-day -->
+			<item id="15171" min="1" max="1" chance="100" /> <!-- Bellion Cestus - Fortune - 10-day -->
+			<item id="15172" min="1" max="1" chance="100" /> <!-- Great Pata - Fortune - 10-day -->
+		</capsuled_items>
+	</item>
+	<item id="40352" name="Magic Staff Set of Fortune" additionalName="10-day" type="EtcItem">
+		<!-- Use to receive 3 magic staff weapons (A - C-grade). Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40353" min="1" max="1" chance="100" /> <!-- Branch of the Mother Tree - Fortune - 10-day -->
+			<item id="40354" min="1" max="1" chance="100" /> <!-- Staff of Evil Spirits - Fortune - 10-day -->
+			<item id="40355" min="1" max="1" chance="100" /> <!-- Inferno Staff - Fortune - 10-day -->
+		</capsuled_items>
+	</item>
+	<item id="40353" name="Branch of the Mother Tree of Fortune" additionalName="10-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="A" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">226</stat>
+			<stat type="mAtk">167</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40354" name="Staff of Evil Spirits - Fortune" additionalName="10-day" type="Weapon">
+		<!-- <Special properties>. With a 6% chance, inflicts Curse Poison when applying a debuff on the target. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="B" />
+		<set name="weight" val="930" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">189</stat>
+			<stat type="mAtk">145</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="C" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">135</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="1" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40356" name="Atuba Mace of Fortune" additionalName="10-day" type="Weapon">
+		<set name="icon" val="icon.weapon_atuba_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="1010" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">90</stat>
+			<stat type="mAtk">79</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
+		<!-- <Special properties>. M. Atk. +60. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="910" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">274</stat>
+			<stat type="mAtk">193</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3575" level="1" /> <!-- Special Property: Empower -->
+		</skills>
+	</item>
+	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
+		<!-- <Special properties>. Casting Spd. +15%. Deals additional PvP damage. No soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">325</stat>
+			<stat type="mAtk">222</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="3047" level="2" /> <!-- Special Property: Acumen -->
+		</skills>
+	</item>
+	<item id="40359" name="Ertheia Fighter Equipment Set" additionalName="10-day" type="EtcItem">
+		<!-- Item set for Ertheia Fighter classes. Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40351" min="1" max="1" chance="100" /> <!-- Fist Weapon Set - Fortune - 10-day -->
+			<item id="15226" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Light Armor Set - Fortune - 10-day -->
+			<item id="15270" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune - 10-day -->
+			<item id="15227" min="1" max="1" chance="100" /> <!-- Package: Doom Leather Armor Set - Fortune - 10-day -->
+			<item id="15271" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune - 10-day -->
+			<item id="15228" min="1" max="1" chance="100" /> <!-- Package: Plated Leather Armor Set - Fortune - 10-day -->
+			<item id="15272" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune - 10-day -->
+		</capsuled_items>
+	</item>
+	<item id="40360" name="Ertheia Wizard Equipment Set" additionalName="10-day" type="EtcItem">
+		<!-- Item set for Ertheia Wizard classes. Disappears after 10 days if unused. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="14400" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40352" min="1" max="1" chance="100" /> <!-- Magic Staff Set - Fortune - 10-day -->
+			<item id="15230" min="1" max="1" chance="100" /> <!-- Package: Dark Crystal Robe Set - Fortune - 10-day -->
+			<item id="15270" min="1" max="1" chance="100" /> <!-- Majestic Set - Fortune - 10-day -->
+			<item id="15231" min="1" max="1" chance="100" /> <!-- Package: Avadon Robe Set - Fortune - 10-day -->
+			<item id="15271" min="1" max="1" chance="100" /> <!-- Black Ore Set - Fortune - 10-day -->
+			<item id="15232" min="1" max="1" chance="100" /> <!-- Package: Karmian Robe Set - Fortune - 10-day -->
+			<item id="15272" min="1" max="1" chance="100" /> <!-- Set of Seal - Fortune - 10-day -->
+		</capsuled_items>
+	</item>
+	<item id="40361" name="Agathion Joon Pack" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Agathion Charm: Joon (30-day). Cannot be transferred within the account once opened. -->
+		<set name="icon" val="icon.lucky_bag_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="48133" min="1" max="1" chance="100" /> <!-- Agathion Charm: Joon (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="40362" name="Agathion Joon (30-day)" type="Armor">
+		<!-- A bracelet for summoning Agathion Joon. Available for 30 d. Cannot be used in the Olympiad. <Item skill>. 1. Joon's Magic: For 30 min., acquired XP/ SP +10%, Attribute Attack +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP Consumption -10%. The effect does not stack with Art of Seduction or Ertheia's Miraculous Wind Scroll. The effect remains after death. <Active skill>. 1. Joon's Resurrection: Enables Blessed Resurrection. Cooldown: 3 h. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="18172" level="1" /> <!-- Joon's Magic -->
+			<skill id="18174" level="1" /> <!-- Agathion Joon -->
+			<skill id="18173" level="1" /> <!-- Joon's Resurrection -->
+			<skill id="18175" level="1" /> <!-- Joon's Cute Trick -->
+		</skills>
+	</item>
+	<item id="40363" name="Carrot" type="EtcItem">
+		<!-- Collect 40 and bring them to High Horse Galup at any settlement to get a special gift. -->
+		<set name="icon" val="icon.ev_carrot" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18169" level="1" /> <!-- Throw Carrot -->
+		</skills>
+	</item>
+	<item id="40364" name="Carrot Pouch" type="EtcItem">
+		<!-- Double-click to obtain 7 to 63 carrots. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="40363" min="7" max="63" chance="100" /> <!-- Carrot -->
+		</capsuled_items>
+	</item>
+	<item id="40365" name="Galup's Gift" type="EtcItem">
+		<!-- Double-click to obtain special rewards prepared by Galup. -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Unicorn Bracelet -->
+			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Unicorn Horn Circlet - Event -->
+			<item id="39738" min="1" max="1" chance="0.82" /> <!-- Rune Stone -->
+			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP) -->
+			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (MP) -->
+			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheesecake (CP) -->
+			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Windy CHA Dye Lv. 1 - CHA +1 -->
+			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Windy CHA Dye Lv. 2 - CHA +2 -->
+			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Windy CHA Dye Lv. 3 - CHA +3 -->
+			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Windy CHA Dye Lv. 4 - CHA +4 -->
+			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Windy CHA Dye Lv. 5 - CHA +5 -->
+			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Windy LUC Dye Lv. 1 - LUC +1 -->
+			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Windy LUC Dye Lv. 2 - LUC +2 -->
+			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Windy LUC Dye Lv. 3 - LUC +3 -->
+			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Windy LUC Dye Lv. 4 - LUC +4 -->
+			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Windy LUC Dye Lv. 5 - LUC +5 -->
+			<item id="40063" min="1" max="1" chance="6" /> <!-- Secret Ancient Tome Fragment -->
+			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Valakas' Soul Bottle Fragment -->
+			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Antharas' Soul Bottle Fragment -->
+			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Baium's Soul Bottle Fragment -->
+			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Orfen's Soul Bottle Fragment -->
+			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Queen Ant's Soul Bottle Fragment -->
+			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Frintezza's Soul Bottle Fragment -->
+			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Freya's Soul Bottle Fragment -->
+			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elcyum Powder -->
+			<item id="3936" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="1538" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Escape -->
+			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Raid Boss' Soul Pack -->
+			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Package: Agathion Pegasus -->
+		</capsuled_items>
+		<skills>
+			<skill id="18170" level="1" /> <!-- Galup's Gift -->
+		</skills>
+	</item>
+	<item id="40366" name="Galup's Gift Pouch" type="EtcItem">
+		<!-- Galup's gift after he has eaten his fill. Double-click to obtain 1 Carrot Pouch and feel some Horse Power. -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18171" level="1" /> <!-- Horse Power -->
+		</skills>
+	</item>
+	<item id="40367" name="Angel Cat's Blessing Pack" type="EtcItem">
+		<!-- Double-click to obtain 1 Angel Cat's Blessing (1-hour). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35669" min="1" max="1" chance="100" /> <!-- Angel Cat's Blessing -->
+		</capsuled_items>
+	</item>
+	<item id="40368" name="Buff Promotion Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click for a chance to obtain a weapon appearance stone (30-day) or a special head accessory (a low chance). -->
+		<set name="icon" val="icon.etc_pi_box_love_pack" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18179" level="1" /> <!-- Christmas Gift -->
+		</skills>
+	</item>
+	<item id="40369" name="Napoleon Hat" additionalName="30-day" type="Armor">
+		<!-- A hat accessory for conquering the world. -->
+		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="40370" name="Sweet Cheese Hat" additionalName="30-day" type="Armor">
+		<!-- A delicious cheese hat. There might be a pink rat hiding in there somewhere. -->
+		<set name="icon" val="BranchSys.icon.br_goldrat_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="40371" name="Vigilante Hat" additionalName="30-day" type="Armor">
+		<!-- A swashbuckler's hat. -->
+		<set name="icon" val="icon.zorocap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="40372" name="Agathion - Three-headed Dragon" additionalName="30-day" type="Armor">
+		<!-- Can summon Pisces when equipped. <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.) (Passive Skill) 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="time" val="43200" />
+	</item>
+</list>

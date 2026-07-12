@@ -1,7 +1,993 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23957" name="Illusion 1" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23900" name="Agathion Anakim" type="Armor">
+		<!-- Summons Agathion Anakim. -->
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21388" level="1" /> <!-- Summon Agathion Anakim -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23901" name="Wondrous Dark Resistance Dye" additionalName="Dark Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Dark Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23902" name="Wondrous Holy Resistance Dye" additionalName="Holy Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Holy Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23903" name="Wondrous Fire Resistance Dye" additionalName="Fire Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Fire Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23904" name="Wondrous Water Resistance Dye" additionalName="Water Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Water Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_water" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23905" name="Wondrous Wind Resistance Dye" additionalName="Wind Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Wind Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_wind" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23906" name="Wondrous Earth Resistance Dye" additionalName="Earth Resistance / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Earth Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_earth" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23907" name="Wondrous Debuff Resistance Dye" additionalName="Buff Cancel Resistance / Debuff Resistance / Debuff Reflection / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Infection/ Stupor/ Confusion/ Obstruction Resistance +20, Buff Cancel Resistance +20, P./ M. Debuff Reflection Rate +5%). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_debuff" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23908" name="Wondrous Invincibility Boost Dye" additionalName="Invincibility Duration Increase / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (basic attack/ skill invincibility duration +50%). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_buff" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23909" name="Wondrous Boss Defense Dye" additionalName="P. Def. / M. Def. / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (Earth Resistance +120 when fighting common monsters). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_normal" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23910" name="Wondrous Antharas Defense Dye" additionalName="P. Def. / M. Def. / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (P./ M. Def. +20% when fighting Antharas). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_antaras" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23911" name="Wondrous Valakas Defense Dye" additionalName="P. Def. / M. Def. / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (P./ M. Def. +20% when fighting Valakas). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_valakas" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23912" name="Wondrous Lindvior Defense Dye" additionalName="P. Def. / M. Def. / 7-day" type="EtcItem">
+		<!-- Take it to the Dye Merchant in town to get a 7-day tattoo that grants certain bonuses (P./ M. Def. +20% when fighting Lindvior). Requirements: all classes. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_boss_lindvior" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23913" name="One-handed Sword of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23914" name="Dagger of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">80</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="23915" name="Two-handed Sword of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="209" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">112</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23916" name="Fist Weapon of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualfist_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">112</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="23917" name="Spear of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_pole_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23918" name="Bow of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="2" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">191</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="23919" name="Crossbow of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">117</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23920" name="One-handed Blunt Weapon of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_blunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="23921" name="Magic Sword of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">90</stat>
+			<stat type="mAtk">79</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="23922" name="One-handed Staff of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_blunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="23923" name="Two-handed Staff of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_twohand_blunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">152</stat>
+			<stat type="mAtk">122</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="23924" name="Dual Swords of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weight" val="247" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">51</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23925" name="Dual Daggers of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualdagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="D" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">107</stat>
+			<stat type="mAtk">181</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+	</item>
+	<item id="23926" name="Dual Blunt Weapons of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualblunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">125</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="23927" name="Shield of Tears" type="Weapon">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_shield_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="23928" name="Sigil of Tears" type="Armor">
+		<!-- Russia's weapon crafting contest finalist. A prototype for Appearance Stone. -->
+		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sigil_i00" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="crystal_type" val="D" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="sDef">47</stat>
+			<stat type="rShld">20</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+	</item>
+	<item id="23929" name="Appearance Stone: One-handed Sword of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed sword to that of One-handed Sword of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26089" level="1" /> <!-- Appearance Stone: One-handed Sword of Tears -->
+		</skills>
+	</item>
+	<item id="23930" name="Appearance Stone: Dagger of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a dagger to that of Dagger of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26090" level="1" /> <!-- Appearance Stone: Dagger of Tears -->
+		</skills>
+	</item>
+	<item id="23931" name="Appearance Stone: Two-handed Sword of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed sword to that of Two-handed Sword of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26091" level="1" /> <!-- Appearance Stone: Two-handed Sword of Tears -->
+		</skills>
+	</item>
+	<item id="23932" name="Appearance Stone: Fist Weapon of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a fist weapon to that of Fist Weapon of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26092" level="1" /> <!-- Appearance Stone: Fist Weapon of Tears -->
+		</skills>
+	</item>
+	<item id="23933" name="Appearance Stone: Spear of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a spear to that of Spear of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26093" level="1" /> <!-- Appearance Stone: Spear of Tears -->
+		</skills>
+	</item>
+	<item id="23934" name="Appearance Stone: Bow of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a bow to that of Bow of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_bow" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26094" level="1" /> <!-- Appearance Stone: Bow of Tears -->
+		</skills>
+	</item>
+	<item id="23935" name="Appearance Stone: Crossbow of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a crossbow to that of Crossbow of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_crossbow" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26095" level="1" /> <!-- Appearance Stone: Crossbow of Tears -->
+		</skills>
+	</item>
+	<item id="23936" name="Appearance Stone: One-handed Blunt Weapon of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed blunt weapon to that of One-handed Blunt Weapon of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26096" level="1" /> <!-- Appearance Stone: One-handed Blunt Weapon of Tears -->
+		</skills>
+	</item>
+	<item id="23937" name="Appearance Stone: Magic Sword of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a magic sword to that of Magic Sword of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26097" level="1" /> <!-- Appearance Stone: Magic Sword of Tears -->
+		</skills>
+	</item>
+	<item id="23938" name="Appearance Stone: One-handed Staff of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a one-handed staff to that of One-handed Staff of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26098" level="1" /> <!-- Appearance Stone: One-handed Staff of Tears -->
+		</skills>
+	</item>
+	<item id="23939" name="Appearance Stone: Two-handed Staff of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed blunt weapon to that of Two-handed Staff of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26099" level="1" /> <!-- Appearance Stone: Two-handed Staff of Tears -->
+		</skills>
+	</item>
+	<item id="23940" name="Appearance Stone: Dual Swords of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of dual swords to that of Dual Swords of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26100" level="1" /> <!-- Appearance Stone: Dual Swords of Tears -->
+		</skills>
+	</item>
+	<item id="23941" name="Appearance Stone: Dual Daggers of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of dual daggers to that of Dual Daggers of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26101" level="1" /> <!-- Appearance Stone: Dual Daggers of Tears -->
+		</skills>
+	</item>
+	<item id="23942" name="Appearance Stone: Dual Blunt Weapons of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of dual blunt weapons to that of Dual Blunt Weapons of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26102" level="1" /> <!-- Appearance Stone: Dual Blunt Weapons of Tears -->
+		</skills>
+	</item>
+	<item id="23943" name="Appearance Stone: Shield of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Shield of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_shield" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26103" level="1" /> <!-- Appearance Stone: Shield of Tears -->
+		</skills>
+	</item>
+	<item id="23944" name="Appearance Stone: Sigil of Tears" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a sigil to that of Sigil of Tears. Duration: 7 d. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sigil" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26104" level="1" /> <!-- Appearance Stone: Sigil of Tears -->
+		</skills>
+	</item>
+	<item id="23945" name="Package: High-grade Maphr's Rune 100%" additionalName="3-hour" type="EtcItem">
+		<!-- Double-click to obtain 1 Maphr's High-grade Rune 100% (3-hour). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="180" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23755" min="1" max="1" chance="100" /> <!-- Maphr's High-grade Rune 100% - 3-hour -->
+		</capsuled_items>
+	</item>
+	<item id="23946" name="Nevit's Rune Box (Dragon Rising) 100% (1-hour)" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Rune (Dragon Rising) (1-hour). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23391" min="1" max="1" chance="100" /> <!-- Nevit's Rune (Dragon Rising) 100% - 1-hour -->
+		</capsuled_items>
+	</item>
+	<item id="23947" name="Kamaloka Secret Chest Key" type="EtcItem">
+		<!-- Kamaloka's reward key. Can be used for opening good treasure chests in Infernal Kamaloka and Lunatic Kamaloka. -->
+		<set name="icon" val="icon.aphros_key" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23948" name="Kamaloka Chest Key" type="EtcItem">
+		<!-- Kamaloka's reward key. Can be used for opening good treasure chests in Infernal Kamaloka and Lunatic Kamaloka. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="23949" name="Returning Hero's Wondrous Cubic" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Vitality Replenishing Herb Drink (30-min.), Feather of Blessing, Heavenly Cocktail (2 pcs.), Scroll of Escape Pack: Village, MP Recovery Potion. -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="26108" level="1" /> <!-- Returning Hero's Miraculous Cube -->
+		</skills>
+	</item>
+	<item id="23950" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Returning Hero's Mark (250 pcs.), Returning Hero's Potion Pack and Returning Hero's Supply Pack (1 of each). -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23951" min="1" max="1" chance="100" /> <!-- Returning Hero's Supply Pack -->
+			<item id="36021" min="1" max="1" chance="100" /> <!-- Returning Hero's Potion Pack -->
+			<item id="33511" min="250" max="250" chance="100" /> <!-- Returning Hero's Mark -->
+		</capsuled_items>
+	</item>
+	<item id="23951" name="Returning Hero's Support Box" type="EtcItem">
+		<!-- Double-click to obtain Returning Hero's Shirt, Returning Hero's Belt, and Returning Hero's Miraculous Cube. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23949" min="1" max="1" chance="100" /> <!-- Returning Hero's Miraculous Cube -->
+			<item id="33509" min="1" max="1" chance="100" /> <!-- Returning Hero's Shirt -->
+			<item id="33510" min="1" max="1" chance="100" /> <!-- Returning Hero's Belt -->
+		</capsuled_items>
+	</item>
+	<item id="23952" name="Extra Pass: Infernal/ Lunatic Kamaloka" type="EtcItem">
+		<!-- Entry Pass to Infernal and Lunatic Kamaloka. Use to reset cooldown and enter the dungeon up to 5 times within the cooldown. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="time" val="1440" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="26109" level="1" /> <!-- Extra Pass: Epic Kamaloka -->
+		</skills>
+	</item>
+	<item id="23953" name="2014 World Olympiad Hero's Accessory" type="Armor">
+		<!-- A head accessory of the victor of the 2014 World Olympiad. A symbol of the strongest hero of all servers. When equipped, all stats +5. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<skills>
+			<skill id="26110" level="1" /> <!-- 2014 World Olympiad Hero's Accessory -->
+		</skills>
+	</item>
+	<item id="23954" name="2014 World Olympiad Semifinalist's Accessory" type="Armor">
+		<!-- A head accessory of the runner-up of the 2014 World Olympiad. A symbol of the 2nd strongest hero of all servers. When equipped, all stats +2. -->
+		<set name="icon" val="icon.accessory_archer_hat2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="material" val="WOOD" />
+		<skills>
+			<skill id="26111" level="1" /> <!-- 2014 World Olympiad Semifinalist's Accessory -->
+		</skills>
+	</item>
+	<item id="23955" name="Kamaloka Secret Chest" type="EtcItem">
+		<!-- Kamaloka Secret Chest that can be found in the Infernal Kamaloka and Lunatic Kamaloka. Double-click to obtain one of the following items: Dark Helios Upgrade Stone, Dark Eternal Upgrade Stone, Bloody Helios Upgrade Stone, Bloody Eternal Upgrade Stone, Life Stone: Giant's Power, Scroll of Blessing - R99-grade Weapon, Scroll of Blessing - R99-grade Armor, Top-grade R-grade Life Stone, Top-grade R95-grade Life Stone, Top-grade R99-grade Life Stone, Giant's Scroll: Enchant R-grade Armor, Giant's Scroll: Enchant R-grade Weapon, Fire Stone - Super 60, Water Stone - Super 60, Earth Stone - Super 60, Wind Stone - Super 60, Holy Stone - Super 60, Dark Stone - Super 60, Gemstone. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="26112" level="1" /> <!-- Kamaloka Secret Chest -->
+		</skills>
+	</item>
+	<item id="23956" name="Kamaloka Chest" type="EtcItem">
+		<!-- Identical to the Kamaloka Chest found in Infernal and Lunatic Kamaloka. Has a chance of obtaining either a Blessed Scroll: Enchant R-grade Weapon/ Armor, High-grade R/ R95/ R99-grade Life Stone, Scroll: Enchant R-grade Weapon/ Armor, an Attribute Stone, or Blessed Scroll of Resurrection. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="26113" level="1" /> <!-- Kamaloka Chest -->
+		</skills>
+	</item>
+	<item id="23957" name="Illusion 1" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -9,8 +995,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23958" name="Illusion 2" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23958" name="Illusion 2" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -18,8 +1003,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23959" name="Illusion 3" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23959" name="Illusion 3" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -27,8 +1011,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23960" name="Illusion 4" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23960" name="Illusion 4" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -36,8 +1019,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23961" name="Illusion 5" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23961" name="Illusion 5" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -45,8 +1027,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23962" name="Illusion 6" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23962" name="Illusion 6" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -54,8 +1035,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23963" name="Illusion 7" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23963" name="Illusion 7" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -63,8 +1043,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23964" name="Illusion 8" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23964" name="Illusion 8" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -72,8 +1051,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23965" name="Illusion 9" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23965" name="Illusion 9" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -81,8 +1059,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23966" name="Illusion 10" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23966" name="Illusion 10" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -90,8 +1067,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23967" name="Illusion 11" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23967" name="Illusion 11" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -99,8 +1075,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23968" name="Illusion 12" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23968" name="Illusion 12" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -108,8 +1083,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23969" name="Illusion 13" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23969" name="Illusion 13" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -117,8 +1091,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23970" name="Illusion 14" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23970" name="Illusion 14" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -126,8 +1099,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23971" name="Illusion 15" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23971" name="Illusion 15" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -135,8 +1107,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23972" name="Illusion 16" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23972" name="Illusion 16" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -144,8 +1115,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23973" name="Illusion 17" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23973" name="Illusion 17" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -153,8 +1123,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23974" name="Illusion 18" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23974" name="Illusion 18" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -162,8 +1131,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23975" name="Illusion 19" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23975" name="Illusion 19" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -171,13 +1139,434 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
-	<item id="23976" name="Illusion 20" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. -->
+	<item id="23976" name="Illusion 20" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+	</item>
+	<item id="23977" name="Package: Agathion Pegasus" type="EtcItem">
+		<!-- Double-click to obtain Agathion Pegasus. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23978" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Pegasus -->
+		</capsuled_items>
+	</item>
+	<item id="23978" name="Agathion Pegasus" type="Armor">
+		<!-- A bracelet for summoning Agathion Pegasus. -->
+		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21037" level="1" /> <!-- Summon Agathion Pegasus -->
+			<skill id="23036" level="1" /> <!-- Agathion's Cute Trick - Pegasus -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23979" name="Appearance Stone: Vampire Top" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="26082" level="1" /> <!-- Appearance Stone: Vampire Top -->
+		</skills>
+	</item>
+	<item id="23980" name="Appearance Stone: Vampire Pants" type="EtcItem">
+		<!-- Changes the appearance of pants to those of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="26083" level="1" /> <!-- Appearance Stone: Vampire Pants -->
+		</skills>
+	</item>
+	<item id="23981" name="Appearance Stone: Vampire Gloves" type="EtcItem">
+		<!-- Changes the appearance of gloves to those of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="26084" level="1" /> <!-- Appearance Stone: Vampire Gloves -->
+		</skills>
+	</item>
+	<item id="23982" name="Appearance Stone: Vampire Shoes" type="EtcItem">
+		<!-- Changes the appearance of shoes to those of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="26085" level="1" /> <!-- Appearance Stone: Vampire Shoes -->
+		</skills>
+	</item>
+	<item id="23983" name="Vampiric Hair Accessory Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a head accessory into that of Vampire Head Accessory. Can only be used on head accessories equipped in 2 slots. Can be stored in the clan warehouse. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<skills>
+			<skill id="26086" level="1" /> <!-- Appearance Stone: Vampire Head Accessory -->
+		</skills>
+	</item>
+	<item id="23984" name="Traces of Ancient Kartia's Labyrinth" additionalName="PA Event" type="EtcItem">
+		<!-- Obtained for PA points. Perhaps, a Kartia Researcher may know more about it. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
+		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" additionalName="PA Event" type="EtcItem">
+		<!-- Obtained for PA points. Resets the cooldown to Ancient Kartia's Labyrinth. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="26115" level="1" /> <!-- Extra Pass -->
+		</skills>
+	</item>
+	<item id="23986" name="Growth Rune Pack" type="EtcItem">
+		<!-- Double-click to obtain Growth Rune (30-day). -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40055" min="1" max="1" chance="100" /> <!-- Growth Rune (30-day) -->
+		</capsuled_items>
+	</item>
+	<item id="23987" name="Growth Rune (30-day)" type="EtcItem">
+		<!-- When in inventory, acquired XP/ SP +20%. The effect stacks with all XP/ SP bonus effects, except Emperor's Rune. -->
+		<set name="icon" val="icon.ev_charge_run" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="17117" level="1" /> <!-- Growth Rune -->
+		</skills>
+	</item>
+	<item id="23988" name="Wondrous Wind Scroll" type="EtcItem">
+		<!-- For 60 min., Max HP/ MP/ CP +30%, P. Def. +30%, M. Def. +30%, P. Atk. +10%, M. Atk. +20%, skill cooldown -10%. Additionally, Wind Attack/ Resistance +20. Cannot be used in the Olympiad. The effect does not stack with Art of Seduction. -->
+		<set name="icon" val="icon.ev_charge_scroll" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="28340" level="1" /> <!-- Ertheia's Miraculous Wind Scroll -->
+		</skills>
+	</item>
+	<item id="23989" name="Agathion Virgo" additionalName="Lv. 1" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 37 min. 30 sec. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +5. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="549" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26175" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="1" /> <!-- Healing Light -->
+			<skill id="26117" level="1" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23990" name="Agathion Virgo" additionalName="Lv. 2" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 35 min. 2. Balanced Power: MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +5. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1098" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26175" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="2" /> <!-- Healing Light -->
+			<skill id="26117" level="1" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="1" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23991" name="Agathion Virgo" additionalName="Lv. 3" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 32 min. 30 sec. 2. Balanced Power: MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +10. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1722" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26175" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="3" /> <!-- Healing Light -->
+			<skill id="26117" level="2" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="1" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23992" name="Agathion Virgo" additionalName="Lv. 4" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 30 min. 2. Balanced Power: CON/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +10. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2342" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26175" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="4" /> <!-- Healing Light -->
+			<skill id="26117" level="2" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="2" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23993" name="Agathion Virgo" additionalName="Lv. 5" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 27 min. 30 sec. 2. Balanced Power: CON/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +15. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="1558" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26187" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="5" /> <!-- Healing Light -->
+			<skill id="26117" level="3" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="2" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23994" name="Agathion Virgo" additionalName="Lv. 6" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 25 min. 2. Balanced Power: CON/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +15. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2244" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26187" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="6" /> <!-- Healing Light -->
+			<skill id="26117" level="3" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="3" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23995" name="Agathion Virgo" additionalName="Lv. 7" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 22 min. 30 sec. 2. Balanced Power: CON/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +20. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="2618" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26187" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="7" /> <!-- Healing Light -->
+			<skill id="26117" level="4" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="3" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23996" name="Agathion Virgo" additionalName="Lv. 8" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 20 min. 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +20. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="3292" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26187" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="8" /> <!-- Healing Light -->
+			<skill id="26117" level="4" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="4" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23997" name="Agathion Virgo" additionalName="Lv. 9" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 17 min. 30 sec. 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +25. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="4153" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26199" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="9" /> <!-- Healing Light -->
+			<skill id="26117" level="5" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="4" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23998" name="Agathion Virgo" additionalName="Lv. 10" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 15 min. 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +25. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="4989" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26199" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="10" /> <!-- Healing Light -->
+			<skill id="26117" level="5" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="5" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="23999" name="Agathion Virgo" additionalName="Lv. 11" type="Armor">
+		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Fully recovers entire party's HP/ MP/ CP. With a certain chance, removes debuffs. Cooldown: 12 min. 30 sec. 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 3. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. -->
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="5899" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="26199" level="1" /> <!-- Summon Agathion Virgo -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17622" level="1" /> <!-- Agathion's Cute Trick - Virgo -->
+			<skill id="27349" level="11" /> <!-- Healing Light -->
+			<skill id="26117" level="6" /> <!-- Starlight Agathion Attribute Buff -->
+			<skill id="26116" level="5" /> <!-- Starlight Agathion Buffing Skill -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
 	</item>
 </list>

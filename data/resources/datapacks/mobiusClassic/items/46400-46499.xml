@@ -1,46 +1,1014 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46402" name="Not Available - Tainted Wynn Summoner Cloak (NPC Only)" additionalName="Not available" type="Armor">
-		<!-- The item is not available. A cloak of a magic monster from the Cemetery. -->
+	<item id="46400" name="NPC Feoh Wizard Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back" />
-		<set name="immediate_effect" val="true" />
+		<set name="weight" val="240" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">7</stat>
+		</stats>
+	</item>
+	<item id="46401" name="NPC Iss Enchanter Transformation Cloak" type="Armor">
+		<set name="icon" val="icon.armor_back04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">7</stat>
+		</stats>
+	</item>
+	<item id="46402" name="NPC Wynn Summoner Transformation Cloak" type="Armor">
+		<set name="icon" val="icon.armor_back04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">7</stat>
+		</stats>
+	</item>
+	<item id="46403" name="NPC Aeore Healer Transformation Cloak" type="Armor">
+		<set name="icon" val="icon.armor_back04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">7</stat>
+		</stats>
+	</item>
+	<item id="46404" name="Emergency Whistle - Aden Vanguard" type="EtcItem">
+		<!-- Can only be used by a party leader during the battle with Legate Burnstein on the 3rd level of the Command Post. Summons one of the five Aden Vanguard warriors. Cannot be used on the 1st and 2nd levels of the Command Post. Duration: 30 min. Can only be used in the Command Post. -->
+		<set name="icon" val="icon.etc_dragon_flute_i00" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<!-- TODO: Skill 18504 -->
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18504" level="1" /> <!-- Emergency Whistle - Aden Vanguard -->
+		</skills>
+	</item>
+	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
+		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
+		<set name="icon" val="icon.mrk_basket_i00" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18505" level="1" /> <!-- Mr. K's Gift Basket -->
+		</skills>
+	</item>
+	<item id="46406" name="Angel Cat's Energy" type="EtcItem">
+		<!-- For 30 min., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, acquired XP/ SP +30%. -->
+		<set name="icon" val="icon.skilltransform4" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="weight" val="5" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18506" level="1" /> <!-- Angel Cat's Energy -->
+		</skills>
+	</item>
+	<item id="46407" name="Tattered Monk Clothes" type="EtcItem">
+		<!-- Tattered clothes are the remains of the monks you battled in the Monastery of Silence. The clothes are nothing more than rags after their years of use. Let's take them to Greymore in the Monastery of Silence. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46408" name="Torch" type="EtcItem">
+		<!-- A torch requested by Blacksmith Vulcan at lower level of the Forge of Gods. Collect several of these and take them to Vulcan. -->
+		<set name="icon" val="icon.etc_torch_on_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46409" name="Plain Dinosaur Bone" type="EtcItem">
+		<!-- Singsing from the Primeval Isle requested bones so that the natives can conduct research. Collect these and take them to Karakawei. -->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46410" name="Dinosaur Tissue" type="EtcItem">
+		<!-- Dinosaur tissue used by magicians and Dwarven artisans for research. Collect these and take them to Dinn of Primeval Isle. -->
+		<set name="icon" val="icon.etc_bodypart_heart_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46411" name="Dinosaur Egg" type="EtcItem">
+		<!-- Ancient eggs used by magicians and Dwarven artisans for research. Collect these and take them to Dinn of Primeval Isle. -->
+		<set name="icon" val="icon.etc_dragon_egg_i05" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46412" name="Broken Golem Shard" type="EtcItem">
+		<!-- Shard obtained from hunting Golems in the Pavel Ruins. Collect these and take them to Collector Gutenhagen. -->
+		<set name="icon" val="icon.etc_plate_white_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46413" name="Dinosaur Fang Necklace" type="EtcItem">
+		<!-- Dinosaur fang necklace obtained for defeating the Elroki Raiders who attacked the Primeval Isle Wharf. Collect these and take them to Dinn of Primeval Isle to get a reward. -->
+		<set name="icon" val="icon.etc_ketra_friendship_1_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46414" name="Sheep Hat - Physical" additionalName="7-day" type="Armor">
+		<!-- When equipped, STR +3, P. Atk. +3%. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<skills>
+			<skill id="13850" level="1" /> <!-- Sheep Hat - Physical -->
+		</skills>
+	</item>
+	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
+		<!-- When equipped, INT +3, M. Atk. +3%. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<skills>
+			<skill id="13851" level="1" /> <!-- Sheep Hat - M. Power -->
+		</skills>
+	</item>
+	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
+		<!-- When equipped, CON +3, P./ M. Def. +3%. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<skills>
+			<skill id="13852" level="1" /> <!-- Sheep Hat - Defense -->
+		</skills>
+	</item>
+	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" type="EtcItem">
+		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
+		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46418" name="Friend-or-Foe Warrior's Amulet" additionalName="14-day" type="EtcItem">
+		<!-- If stored in the inventory, STR/ INT/ CON/ DEX/ WIT/ MEN/ LUC/ CHA +1. -->
+		<set name="icon" val="BranchSys3.icon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="20160" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18507" level="1" /> <!-- MOPP Ally Identification Amulet -->
+		</skills>
+	</item>
+	<item id="46419" name="Sheep Hat" type="Armor">
+		<!-- A hat shaped like a white sheep. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+	</item>
+	<item id="46420" name="Sheep Bait" type="EtcItem">
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters below level 85. -->
+		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46421" name="R Sheep Bait" type="EtcItem">
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters of level 85-94. -->
+		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters of level 95-98. -->
+		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Required level: 99+. -->
+		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46424" name="Sheep Hat" additionalName="14-day" type="Armor">
+		<!-- A hat shaped like a white sheep. Equipped in 2 head accessory slots. <Active skill>. 1. Blessed Resurrection (cooldown: 60 min.). 2. Baa~: When used, grants 2 Sheep Bait Coupons (once a day). -->
+		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<skills>
+			<skill id="13849" level="1" /> <!-- Baa~ -->
+			<skill id="13848" level="1" /> <!-- Blessed Resurrection -->
+		</skills>
+	</item>
+	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged for Sheep Bait (30 pcs.) for your level through the Fishing Guildsmen in any town. -->
+		<set name="icon" val="branchsys2.action5016" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46426" name="For NPC_Right Hand Glass" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
 		<stats>
-			<stat type="pDef">1</stat>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
+	<item id="46427" name="For NPC_Right Hand Cup" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="46428" name="For NPC_Right Hand Meat" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="46429" name="For NPC_Left Hand Glass" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="46430" name="For NPC_Left Hand Meat" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="1850" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
+	<item id="46431" name="Harp's Reward Box" type="EtcItem">
+		<!-- Reward for killing monsters in the Blazing Swamp. Double-click to use. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<!-- TODO Skill 18508 -->
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18508" level="1" /> <!-- Harp's Reward Pack -->
+		</skills>
+	</item>
+	<item id="46432" name="Divine Box" type="EtcItem">
+		<!-- Reward for defeating the pagans inside the Pagan Temple. Double-click to use. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18509" level="1" /> <!-- Divine Box -->
+		</skills>
+	</item>
+	<item id="46433" name="Cursed Grave Goods" type="EtcItem">
+		<!-- Items made by angry spirits to use physical force. Collect these and take them to Karuda in the Crypts of Disgrace to receive a reward. -->
+		<set name="icon" val="icon.etc_totem_black_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46434" name="Karuda's Reward Coupon" type="EtcItem">
+		<!-- Coupon received for helping Karuda in the Crypts of Disgrace. Exchange it for a reward through Karuda. -->
+		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46435" name="Heine Exclusive Bait (85-89)" type="EtcItem">
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 85-Lv. 89. -->
+		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46436" name="Heine Exclusive Bait (90-94)" type="EtcItem">
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 90-Lv. 94. -->
+		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46437" name="Heine Exclusive Bait (95-98)" type="EtcItem">
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 95-Lv. 98. -->
+		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46438" name="Heine Exclusive Bait (99+)" type="EtcItem">
+		<!-- Fishing Time: 105 sec. Fishing Wait Time: 15 sec. Fishing Bait. Fish using this bait to catch Ugly Fish. Nimble Fish. Powerful Fish. Has a very low chance of obtaining Wind Vitality Tonic. Heine Treasure Chest. or Seed Bracelet Treasure Chest. Can only be used by Lv. 99+. -->
+		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="46439" name="Heine Special Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through the Fishing Guildsmen in any town. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46440" name="Heine Treasure Chest" type="EtcItem">
+		<!-- Double-click to randomly obtain one of a wide variety of items. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27640" min="1" max="1" chance="100" /> <!-- Heine's Fishing Coin -->
+		</capsuled_items>
+	</item>
+	<item id="46441" name="Seed Bracelet Pack (30-day)" type="EtcItem">
+		<!-- Double-click to obtain one of following items: High-grade/ Top-grade/ Superior Seed Bracelet (30-day). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18511" level="1" /> <!-- Zodiac Agathion Box -->
+		</skills>
+	</item>
+	<item id="46442" name="Heine Special Fishing Tools - 300 Pack" type="EtcItem">
+		<!-- Double-click to get 300 Heine Special Bait Coupons and 300 Fishing Shots. -->
+		<set name="icon" val="icon.etc_bm_lure_box_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46439" min="300" max="300" chance="100" /> <!-- Heine's Special Bait Coupon -->
+			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shot -->
+		</capsuled_items>
+	</item>
+	<item id="46443" name="Heine Special Fishing Tools - 3,000 Pack" type="EtcItem">
+		<!-- Double-click to obtain 3000 Heine Special Bait Coupons, 3000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
+		<set name="icon" val="icon.etc_bm_lure_box_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46439" min="3000" max="3000" chance="100" /> <!-- Heine's Special Bait Coupon -->
+			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shot -->
+			<item id="45493" min="1" max="1" chance="100" /> <!-- Fishing Rod Pack (30-day) -->
+		</capsuled_items>
+	</item>
 	<item id="46444" name="Kain's Soul Crystal Lv. 1" type="EtcItem">
-		<!-- A crystal that contains the soul of a monster. Adds a special effect to a weapon. The crystal's level can be increased through compounding. -->
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
 		<set name="icon" val="icon.ensoul_big_p" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="CRYSTAL" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46445" name="Kain's Soul Crystal Lv. 2" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46446" name="Kain's Soul Crystal Lv. 3" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46447" name="Kain's Soul Crystal Lv. 4" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46448" name="Kain's Soul Crystal Lv. 5" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46449" name="Kain's Soul Crystal Lv. 6" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46450" name="Kain's Soul Crystal Lv. 7" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46451" name="Kain's Soul Crystal Lv. 8" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46452" name="Kain's Soul Crystal Lv. 9" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46453" name="Kain's Soul Crystal Lv. 10" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46454" name="Kain's Soul Crystal Lv. 11" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46455" name="Kain's Soul Crystal Lv. 12" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46456" name="Kain's Soul Crystal Lv. 13" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46457" name="Kain's Soul Crystal Lv. 14" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46458" name="Kain's Soul Crystal Lv. 15" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to P. Atk./ Atk. Spd./ Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46459" name="Mermoden's Soul Crystal Lv. 1" type="EtcItem">
-		<!-- A crystal that contains the soul of a monster. Adds a special effect to a weapon. The crystal's level can be increased through compounding. -->
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
 		<set name="icon" val="icon.ensoul_big_m" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="CRYSTAL" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46460" name="Mermoden's Soul Crystal Lv. 2" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46461" name="Mermoden's Soul Crystal Lv. 3" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46462" name="Mermoden's Soul Crystal Lv. 4" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46463" name="Mermoden's Soul Crystal Lv. 5" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46464" name="Mermoden's Soul Crystal Lv. 6" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46465" name="Mermoden's Soul Crystal Lv. 7" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46466" name="Mermoden's Soul Crystal Lv. 8" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46467" name="Mermoden's Soul Crystal Lv. 9" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46468" name="Mermoden's Soul Crystal Lv. 10" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46469" name="Mermoden's Soul Crystal Lv. 11" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46470" name="Mermoden's Soul Crystal Lv. 12" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46471" name="Mermoden's Soul Crystal Lv. 13" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46472" name="Mermoden's Soul Crystal Lv. 14" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46473" name="Mermoden's Soul Crystal Lv. 15" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to M. Atk./ Casting Spd./ M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46474" name="Leona's Soul Crystal Lv. 1" type="EtcItem">
-		<!-- A crystal that contains the soul of a monster. Adds a special effect to a weapon. The crystal's level can be increased through compounding. -->
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="CRYSTAL" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46475" name="Leona's Soul Crystal Lv. 2" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46476" name="Leona's Soul Crystal Lv. 3" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46477" name="Leona's Soul Crystal Lv. 4" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46478" name="Leona's Soul Crystal Lv. 5" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46479" name="Leona's Soul Crystal Lv. 6" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46480" name="Leona's Soul Crystal Lv. 7" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46481" name="Leona's Soul Crystal Lv. 8" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46482" name="Leona's Soul Crystal Lv. 9" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46483" name="Leona's Soul Crystal Lv. 10" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46484" name="Leona's Soul Crystal Lv. 11" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46485" name="Leona's Soul Crystal Lv. 12" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46486" name="Leona's Soul Crystal Lv. 13" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46487" name="Leona's Soul Crystal Lv. 14" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46488" name="Leona's Soul Crystal Lv. 15" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Atk. Spd./ Critical Rate for basic attacks. Adds a selected additional effect to a weapon: Bonus to Critical Rate for basic attacks/ Critical Damage for basic attacks/ P. Skill Critical Rate/ P. Skill Critical Damage/ Max HP. Additionally, increases PvP damage. Critical Rate for basic attacks bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_pp" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46489" name="Pantheon's Soul Crystal Lv. 1" type="EtcItem">
-		<!-- A crystal that contains the soul of a monster. Adds a special effect to a weapon. The crystal's level can be increased through compounding. -->
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="CRYSTAL" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46490" name="Pantheon's Soul Crystal Lv. 2" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46491" name="Pantheon's Soul Crystal Lv. 3" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46492" name="Pantheon's Soul Crystal Lv. 4" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46493" name="Pantheon's Soul Crystal Lv. 5" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46494" name="Pantheon's Soul Crystal Lv. 6" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46495" name="Pantheon's Soul Crystal Lv. 7" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46496" name="Pantheon's Soul Crystal Lv. 8" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46497" name="Pantheon's Soul Crystal Lv. 9" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. <Upgrade>. Compounding with the identical soul crystal. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46498" name="Pantheon's Soul Crystal Lv. 10" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46499" name="Pantheon's Soul Crystal Lv. 11" type="EtcItem">
+		<!-- A crystal that contains the soul of a monster. Adds a selected special effect to a weapon: Bonus to Casting Spd./ M. Skill Critical Rate. Adds a selected additional effect to a weapon: Bonus to M. Skill Critical Rate/ M. Skill Critical Damage/ Max MP. Additionally, increases PvP damage. M. Skill Critical Rate bonuses do not stack if selected twice. The higher a crystal's level is, the more powerful its effect. <How to use>. Talk to the Blacksmith in any town to insert the crystal in your equipment. -->
+		<set name="icon" val="icon.ensoul_big_mm" />
+		<set name="etcitem_type" val="ENSOUL_STONE" />
+		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
 	</item>
 </list>

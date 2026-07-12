@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48300" name="Resolute Recovery Potion" type="EtcItem">
+		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_potion_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39180" level="1" /> <!-- Challenge Recovery Potion -->
+		</skills>
+	</item>
+	<item id="48301" name="Resolute Attack Scroll" type="EtcItem">
+		<!-- A special scroll that can be obtained for Clan Point Tokens. For 30 min., clan members' P./ M. Atk. +3%, P./ M. Skill Power +3%, acquired XP/ SP +5%. The effect does not stack with Defense Scroll: Resolve. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
+		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39178" level="1" /> <!-- Attack Scroll: Resolve -->
+		</skills>
+	</item>
+	<item id="48302" name="Resolute Defense Scroll" type="EtcItem">
+		<!-- A special scroll that can be obtained for Clan Point Tokens. For 30 min., nearby clan members' P./ M. Def. +5%, Debuff Resistance +5%, acquired XP/ SP +5%. The effect does not stack with Attack Scroll: Resolve. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
+		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39179" level="1" /> <!-- Defense Scroll: Resolve -->
+		</skills>
+	</item>
+	<item id="48303" name="Resolute Raid Point Rune (2-hour) Box" type="EtcItem">
+		<!-- A special chest that can be obtained with Clan Point Tokens. Double-click to obtain Challenge Rune (2-hour) that increases raid points obtained by 100%. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48304" min="1" max="1" chance="100" /> <!-- Challenge Rune - Raid Points - 2-hour -->
+		</capsuled_items>
+	</item>
+	<item id="48304" name="Resolute Raid Point Rune" additionalName="2-hour" type="EtcItem">
+		<!-- Having it in the inventory increases Raid Points gained by 100%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="39177" level="1" /> <!-- Challenge Rune - Raid Points -->
+		</skills>
+	</item>
+	<item id="48305" name="Blessed Antharas' Earring - Shield" additionalName="30-day" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Holy/ Earth Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. P. Def. +4% -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13314" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="18657" level="1" /> <!-- Craft Effect - Shield -->
+		</skills>
+	</item>
+	<item id="48306" name="Blessed Antharas' Earring - Earth" additionalName="30-day" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. M. Def. +4% -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13314" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="18658" level="1" /> <!-- Craft Effect - Earth -->
+		</skills>
+	</item>
+	<item id="48307" name="Blessed Antharas' Earring - Pure" additionalName="30-day" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25 -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13314" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="18659" level="1" /> <!-- Craft Effect - Pure -->
+		</skills>
+	</item>
+	<item id="48308" name="Blessed Valakas' Necklace - Body" additionalName="30-day" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. <Special effect>. Max HP +5% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">226</stat>
+		</stats>
+		<skills>
+			<skill id="13316" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="18654" level="1" /> <!-- Craft Effect - Body -->
+		</skills>
+	</item>
+	<item id="48309" name="Blessed Valakas' Necklace - Mind" additionalName="30-day" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. <Special effect>. Skill cooldown -3% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">226</stat>
+		</stats>
+		<skills>
+			<skill id="13316" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="18655" level="1" /> <!-- Craft Effect - Mind -->
+		</skills>
+	</item>
+	<item id="48310" name="Blessed Valakas' Necklace - Barrier" additionalName="30-day" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. <Special effect>. Fixed Damage Resistance +5% -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">226</stat>
+		</stats>
+		<skills>
+			<skill id="13316" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="18656" level="1" /> <!-- Craft Effect - Barrier -->
+		</skills>
+	</item>
+	<item id="48311" name="Lindvior's Earring - Shield" additionalName="30-day" type="Armor">
+		<!-- MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. P. Def. +4% -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18657" level="1" /> <!-- Craft Effect - Shield -->
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
+	</item>
+	<item id="48312" name="Lindvior's Earring - Earth" additionalName="30-day" type="Armor">
+		<!-- MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. M. Def. +4% -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18658" level="1" /> <!-- Craft Effect - Earth -->
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
+	</item>
+	<item id="48313" name="Lindvior's Earring - Pure" additionalName="30-day" type="Armor">
+		<!-- MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. <Special effect>. 6 Attribute Resistance +25 -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="18659" level="1" /> <!-- Craft Effect - Pure -->
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
+	</item>
+	<item id="48314" name="Suspicious Safe" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Double-click to obtain rare items. -->
+		<set name="icon" val="icon.bm_strongbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39184" level="1" /> <!-- Mysterious Safe -->
+		</skills>
+	</item>
+	<item id="48315" name="Shiny Gold Bar" type="EtcItem">
+		<!-- Found in the Mystic Tavern. Can be used for crafting useful items. -->
+		<set name="icon" val="icon.bm_gold_bar" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48316" name="Vitality Beer" type="EtcItem">
+		<!-- A famous drink from the Mystic Tavern. Recovers some Vitality. Can be exchanged for Honey Vitality Beer through the Game Assistant. Cannot be used in the Olympiad. A Vitality item with no restrictions. -->
+		<set name="icon" val="icon.bm_honey_beer" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39183" level="1" /> <!-- Vitality Beer -->
+		</skills>
+	</item>
+	<item id="48317" name="Honey Vitality Beer" type="EtcItem">
+		<!-- Honey beer made from Mystic Tavern's special recipe. When used, recovers Vitality. For 10 min., CON/ MEN/ LUC/ CHA +1. Using another Honey Vitality Beer while its effect is active, stacks its effect up to Lv. 3. Vitality item with no restrictions. Honey Vitality Beer Lv. 2: For 10 min., CON/ MEN/ LUC/ CHA +2, acquired XP +10%. Honey Vitality Beer Lv. 3: For 10 min, CON/ MEN/ LUC/ CHA +3, acquired XP +30%. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_honey_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="300000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="29648" level="1" /> <!-- Honey Dark Beer -->
+		</skills>
+	</item>
+	<item id="48318" name="Dark Bloody Enhancement Stone Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Dark Weapon/ Bloody Weapon/ Dark Armor/ Bloody Armor Upgrade Stone. -->
+		<set name="icon" val="icon.bm_pvp_pve_upgrade_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39184" level="1" /> <!-- Mysterious Safe -->
+		</skills>
+	</item>
+	<item id="48319" name="Royal White Save Ticket Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade White Save Ticket. -->
+		<set name="icon" val="icon.bm_royal_white_ticket_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39184" level="1" /> <!-- Mysterious Safe -->
+		</skills>
+	</item>
+	<item id="48320" name="Royal Purple Save Ticket Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade Purple Save Ticket. -->
+		<set name="icon" val="icon.bm_royal_purple_ticket_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39184" level="1" /> <!-- Mysterious Safe -->
+		</skills>
+	</item>
+	<item id="48321" name="Dimensional Bracelet Box Lv. 6 (Basic)" type="EtcItem">
+		<!-- Double-click to obtain a Basic Dimensional Bracelet Lv. 6 (Non-exchangeable/ tradable). -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39992" min="1" max="1" chance="100" /> <!-- Dimensional Bracelet Lv. 6 - Common -->
+		</capsuled_items>
+	</item>
+	<item id="48322" name="Dimensional Bracelet Enhancement Stone Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the six Dimensional Bracelet Upgrade Stones. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39184" level="1" /> <!-- Mysterious Safe -->
+		</skills>
+	</item>
+	<item id="48323" name="Zodiac Agathion's Divine Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Zodiac Agathion Charms. In case of failure, the enchant value remains the same. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="39185" level="1" /> <!-- Divine Book of Growth: Zodiac Agathion -->
+		</skills>
+	</item>
+	<item id="48324" name="Agathion Master's Box" type="EtcItem">
+		<!-- Double-click to obtain four Zodiac Agathion Cubes. There is also a chance to obtain Divine Book of Growth: Zodiac Agathion. -->
+		<set name="icon" val="icon.bm_gold_relic_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="2" />
+		<capsuled_items>
+			<item id="48066" min="4" max="4" chance="100" /> <!-- Zodiac Agathion Cube -->
+			<item id="48323" min="1" max="1" chance="5" /> <!-- Divine Book of Growth: Zodiac Agathion -->
+		</capsuled_items>
+		<skills>
+			<skill id="39186" level="1" /> <!-- Zodiac Agathion Box -->
+		</skills>
+	</item>
+	<item id="48325" name="Special Agathion Master's Box" type="EtcItem">
+		<!-- Double-click to obtain four Zodiac Agathion Cubes and Divine Book of Growth: Zodiac Agathion. -->
+		<set name="icon" val="icon.bm_gold_relic_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48066" min="4" max="4" chance="100" /> <!-- Zodiac Agathion Cube -->
+			<item id="48323" min="1" max="1" chance="100" /> <!-- Divine Book of Growth: Zodiac Agathion -->
+		</capsuled_items>
+	</item>
+	<item id="48326" name="Burnstein's Aufgabe Shield" type="Armor">
+		<!-- Material item for crafting Burnstein's Aufgabe (Fallen) appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48327" name="Kelbim's Geffelen Shulter" type="Armor">
+		<!-- Material item for crafting Kelbim's Geffelen Shulter appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48328" name="Superion Core Shard" type="Armor">
+		<!-- Material item for crafting Superion Core Shard appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield3" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48329" name="Istina's Reflector" type="Armor">
+		<!-- Material item for crafting Istina's Reflector (Reflecting mirror) appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield4" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48330" name="Taiga Kite Shield" type="Armor">
+		<!-- Material item for crafting Taiga Kite Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield5" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48331" name="Tanta Skull Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Tantar Skull Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield6" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48332" name="Rael Tribe Wrist Shield" type="Armor">
+		<!-- Changes the shield appearance to that of Rael's Square Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield7" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48333" name="Kunda's Battle Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Kunda's Battle Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield8" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48334" name="Freya's Ice Flower Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Freya's Ice Flower Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield9" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48335" name="Deathmask Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Deathmask Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield10" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48336" name="Berserker's Crusader Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Berserker's Crusader Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield11" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48337" name="Makkum's Cartwheel" type="Armor">
+		<!-- Changes a shield's appearance to that of Makkum's Cartwheel. -->
+		<set name="icon" val="icon.shapeshift_npc_shield12" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48338" name="Fallen Angel Shulter" type="Armor">
+		<!-- Changes shoulder guards' appearance to that of Fallen Angel Shulter. -->
+		<set name="icon" val="icon.shapeshift_npc_shield13" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48339" name="Silver Scarab" type="Armor">
+		<!-- Changes a shield's appearance to that of Silver Scarab. -->
+		<set name="icon" val="icon.shapeshift_npc_shield14" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48340" name="Vampire Fang Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Makkum's Cartwheel. -->
+		<set name="icon" val="icon.shapeshift_npc_shield15" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48341" name="Ice Shard Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Ice Shard Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield16" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48342" name="Angelus Shield" type="Armor">
+		<!-- Changes a shield's appearance to that of Angelus Shield. -->
+		<set name="icon" val="icon.shapeshift_npc_shield17" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48343" name="Burnstein's Aufgabe Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Burnstein's Aufgabe Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="1" /> <!-- Appearance Stone: Burnstein's Aufgabe Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48344" name="Kelbim's Geffelen Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Kelbim's Geffelen Shulter for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="2" /> <!-- Appearance Stone: Kelbim's Geffelen Shulter (30-day) -->
+		</skills>
+	</item>
+	<item id="48345" name="Superion Core Shard Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Superion Core Shard for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="3" /> <!-- Appearance Stone: Superion Core Shard (30-day) -->
+		</skills>
+	</item>
+	<item id="48346" name="Istina Reflect Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Istina's Reflector for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="4" /> <!-- Appearance Stone: Istina's Reflector (30-day) -->
+		</skills>
+	</item>
+	<item id="48347" name="Taiga Kite Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Taiga Kite Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="5" /> <!-- Appearance Stone: Taiga Kite Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48348" name="Tanta Tribe Skull Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a shield to that of Tantar Skull Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="6" /> <!-- Appearance Stone: Tantar Skull Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48349" name="Rael Tribe Wrist Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Rael's Square Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="7" /> <!-- Appearance Stone: Rael's Square Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48350" name="Kunda's Battle Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Kunda's Battle Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="8" /> <!-- Appearance Stone: Kunda's Battle Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48351" name="Freya's Ice Flower Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Freya's Ice Flower Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="9" /> <!-- Appearance Stone: Freya's Ice Flower Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48352" name="Deathmask Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Deathmask Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="10" /> <!-- Appearance Stone: Deathmask Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48353" name="Berserker's Crusader Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Berserker's Crusader Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="11" /> <!-- Appearance Stone: Berserker's Crusader Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48354" name="Makkum's Cartwheel Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Makkum's Cartwheel for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="12" /> <!-- Appearance Stone: Makkum's Cartwheel (30-day) -->
+		</skills>
+	</item>
+	<item id="48355" name="Fallen Angel Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes shoulder guards' appearance to that of Fallen Angel Shulter for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="13" /> <!-- Appearance Stone: Fallen Angel Shulter (30-day) -->
+		</skills>
+	</item>
+	<item id="48356" name="Silver Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Silver Scarab for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="14" /> <!-- Appearance Stone: Silver Scarab (30-day) -->
+		</skills>
+	</item>
+	<item id="48357" name="Vampire Fang Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Vampire Fang Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="15" /> <!-- Appearance Stone: Vampire Fang Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48358" name="Ice Shard Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Ice Shard Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="16" /> <!-- Appearance Stone: Ice Shard Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48359" name="Angelus Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Angelus Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="17" /> <!-- Appearance Stone: Angelus Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48360" name="Adventure Guild Support Box" type="EtcItem">
+		<!-- Given for completing the Adventurers' Guild's request. Double-click to obtain various useful items. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48361" name="Adventure Guild Talisman" type="Armor">
+		<!-- Adventurers' Guild's Talisman -->
+		<set name="icon" val="icon.etc_blackbird_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="R" />
+		<set name="bodypart" val="underwear" />
+	</item>
+	<item id="48362" name="Adventure Guild Completion Box" type="EtcItem">
+		<!-- Adventurers' Guild's Final Pack -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48363" name="Nerupa's Faint Threads" type="EtcItem">
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are faint and weak. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48364" name="Nerupa's Vivid Threads" type="EtcItem">
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are vivid and strong. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48365" name="Nerupa's Intense Threads" type="EtcItem">
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. Replete with Nerupa's power, these threads are the most effective among all of Nerupa's threads. -->
+		<set name="icon" val="icon.glimmer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48366" name="Lithra's Consideration" type="EtcItem">
+		<!-- Thoughts Lithra has planted to manipulate living creatures and gain more power. As Lithra's Consideration is tied with Lithra's power, removing it from creatures that serve Lithra weakens Lithra's power. Gather them and take them to Nerupa. -->
+		<set name="icon" val="icon.etc_ev_draco_gift_box" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48367" name="Thread of Fate" type="EtcItem">
+		<!-- The thread of fate that binds Nerupa, Lithra, and the Mother Tree together. It is normally not visible to the naked eye, but Nerupa's power allows for it to be seen. -->
+		<set name="icon" val="icon.etc_fortune_web" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48368" name="Nerupa Bud Petals" type="EtcItem">
+		<!-- Petals of the monsters born from Nerupa Buds. These are evidence of the impact of time regression. As Nerupa Bud Petals of the same shape contain different memories of time, Nerupa can read memories through these petals. -->
+		<set name="icon" val="icon.etc_nerupa_petal" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48369" name="Request - Wasteland West" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the western Wasteland. Required level: 96-106. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48370" name="Request - Wasteland East" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the eastern Wasteland. Required level: 96-106. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48371" name="Request - Forest of the Dead" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the Forest of the Dead. Required level: 100+. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48372" name="Request - Swamp of Screams" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the Swamp of Screams. Required level: 100+. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48373" name="Request - Wasteland West" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the western Wasteland. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48374" name="Request - Wasteland East" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the eastern Wasteland. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48375" name="Request - Forest of the Dead" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the Forest of the Dead. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48376" name="Request - Swamp of Screams" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat a raid boss in the Swamp of Screams. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48377" name="Traces of Evil Spirit" type="EtcItem">
+		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a purification ritual. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48378" name="Monster Fragment" type="EtcItem">
+		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a memorial ritual for her perished kin. -->
+		<set name="icon" val="icon.etc_bodypart_liver_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48379" name="Putrefied Extract" type="EtcItem">
+		<!-- The extract that Grocer Vollodos asked you to collect by defeating bugs in the Bloody Swampland. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48380" name="Rotten Blood" type="EtcItem">
+		<!-- Blood that Grocer Vollodos asked you to collect by defeating demons and undead monsters in the Bloody Swampland. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48381" name="Traces of Mutation" type="EtcItem">
+		<!-- Obtained after defeating Mutated Fairies and Satyrs in the Magic Forest. Collect several of these and take them to the Fairy Refugee. -->
+		<set name="icon" val="icon.change_elemental_crystal" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48382" name="Cocoon Destroyer Shell" type="EtcItem">
+		<!-- Shells obtained after defeating Cocoon Destroyers in Kimerian's Forest. Take them to Nerupa. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48383" name="Control Module" type="EtcItem">
+		<!-- Control modules obtained after defeating the Control Golems on the Isle of Souls. Take them to Hesed of the Black Anvil Guild. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48384" name="Cannonball of Despair" type="EtcItem">
+		<!-- A shell that can be used on a cannon in the Prison of Darkness. Stuns Spezion and his clones for 10 sec., removes invincibility from them for 1 min. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48385" name="Cannonball of Lunacy" type="EtcItem">
+		<!-- A shell that can be used on a cannon in the Prison of Darkness. Stuns Spezion and his clones for 10 sec., removes invincibility from them for 1 min. Forces Spezion's clones and minions to use the Wrath Fire skill and attack. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48386" name="Cannonball of Rage" type="EtcItem">
+		<!-- A shell that can be used on a cannon in the Prison of Darkness. Stuns Spezion and his clones for 10 sec., removes invincibility from them for 1 min. Applies the Eroded Rage effect on Spezion's clones for 30 sec. -->
+		<set name="icon" val="icon.big_gun_shot_i00" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48387" name="Ancient Zodiac Agathion's Book of Growth" additionalName="Event" type="EtcItem">
+		<!-- Required for upgrading Zodiac agathions. Increases the agathion's M. Def. Starting from +4, enables its primary skills. Enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. Enchanting is random from +1 to +3. Cannot be used with agathions enchanted to +7 or higher. <Enchant success rate>. +1 - 65%. +2 - 30%. +3 - 5% -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35073" level="1" /> <!-- Ancient Book of Growth: Zodiac Agathion -->
+		</skills>
+	</item>
+	<item id="48388" name="Red Libra Kaliel's Energy Box" type="EtcItem">
+		<!-- Double-click to obtain Kaliel's Energy - Desire with a certain chance. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39188" level="1" /> <!-- Red Libra's Kaliel's Energy Pack -->
+		</skills>
+	</item>
+	<item id="48389" name="Shiny Agathion Cube Fragment" type="EtcItem">
+		<!-- Can be exchanged for the Shiny Zodiac Agathion Book of Growth through a Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_ag" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48390" name="Shiny T-shirt Cube Fragment" type="EtcItem">
+		<!-- Can be exchanged for Faint Scroll: Enchant Shirt through a Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_tshirt" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48391" name="Mysterious Bait Cube Fragment" type="EtcItem">
+		<!-- Can be exchanged for the Mysterious Bait through a Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_lure" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48392" name="Shiny Talisman Cube Fragment" type="EtcItem">
+		<!-- Can be exchanged for Kaliel's Energy - Desire through a Warehouse Keeper. -->
+		<set name="icon" val="icon.cube_piece_talisman" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48393" name="Adventure Guild Cube Box" type="EtcItem">
+		<!-- Given by Herphah for completing the Adventurers' Guild's mission. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.cube_piece_bless" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="48394" name="Mysterious Bait" type="EtcItem">
+		<!-- Fishing Time: 105 sec. Fishing Standby Time: 15 sec. There is a small chance of hooking a Reddish Box when fishing with this bait. Can be exchanged for Bait (R99) through a Warehouse Keeper in any town. -->
+		<set name="icon" val="icon.fishing_cube_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48395" name="Burnstein's Pflicht Shield" type="Weapon">
+		<!-- Material item for crafting Burnstein's Pflicht (Responsibility) Shield appearance. -->
+		<set name="icon" val="icon.shapeshift_npc_shield18" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+		</stats>
+	</item>
+	<item id="48396" name="Burnstein's Pflicht Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes a shield's appearance to that of Burnstein's Pflicht Shield for 30 d. Items with modified appearance cannot be traded until they revert to their original form. -->
+		<set name="icon" val="Icon.shape_shifting_shield_i00" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39187" level="18" /> <!-- Appearance Stone: Burnstein's Pflicht Shield (30-day) -->
+		</skills>
+	</item>
+	<item id="48397" name="Mother Tree Guardians Basic Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
+		<!-- Given for completing the Mother Tree Guardians' mission in the Shadow of the Mother Tree. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="3" />
+		<set name="extractableCountMax" val="3" />
+		<capsuled_items>
+			<item id="35327" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Shaper Fragment -->
+			<item id="35328" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Cutter Fragment -->
+			<item id="35329" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Slasher Fragment -->
+			<item id="35330" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Avenger Fragment -->
+			<item id="35331" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Fighter Fragment -->
+			<item id="35332" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Thrower Fragment -->
+			<item id="35334" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Guardian Fragment -->
+			<item id="35335" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Caster Fragment -->
+			<item id="35337" min="1" max="1" chance="6.666667" /> <!-- Corroded Helios Retributer Fragment -->
+			<item id="36523" min="1" max="1" chance="6.666667" /> <!-- Corroded Adamantite Nugget -->
+			<item id="36524" min="1" max="1" chance="6.666667" /> <!-- Corroded Orichalcum -->
+			<item id="36543" min="1" max="1" chance="6.666667" /> <!-- Corroded Adamantite Wire -->
+			<item id="36544" min="1" max="1" chance="6.666667" /> <!-- Corroded Orichalcum Wire -->
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="3" max="3" chance="100" /> <!-- Life Crystal -->
+		</capsuled_items>
+	</item>
+	<item id="48398" name="Mother Tree Guardians Intermediate Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
+		<!-- Given for completing the Mother Tree Guardians' mission in the Shadow of the Mother Tree. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="3" />
+		<set name="extractableCountMax" val="3" />
+		<capsuled_items>
+			<item id="35327" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Shaper Fragment -->
+			<item id="35328" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Cutter Fragment -->
+			<item id="35329" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Slasher Fragment -->
+			<item id="35330" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Avenger Fragment -->
+			<item id="35331" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Fighter Fragment -->
+			<item id="35332" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Thrower Fragment -->
+			<item id="35334" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Guardian Fragment -->
+			<item id="35335" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Caster Fragment -->
+			<item id="35337" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Retributer Fragment -->
+			<item id="36514" min="1" max="1" chance="6.250000" /> <!-- Elcyum Crystal -->
+			<item id="36523" min="1" max="1" chance="6.250000" /> <!-- Corroded Adamantite Nugget -->
+			<item id="36524" min="1" max="1" chance="6.250000" /> <!-- Corroded Orichalcum -->
+			<item id="36543" min="1" max="1" chance="6.250000" /> <!-- Corroded Adamantite Wire -->
+			<item id="36544" min="1" max="1" chance="6.250000" /> <!-- Corroded Orichalcum Wire -->
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="6" max="6" chance="100" /> <!-- Life Crystal -->
+		</capsuled_items>
+	</item>
+	<item id="48399" name="Mother Tree Guardians Advanced Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
+		<!-- Given for completing the Mother Tree Guardians' mission in the Shadow of the Mother Tree. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="3" />
+		<set name="extractableCountMax" val="3" />
+		<capsuled_items>
+			<item id="35327" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Shaper Fragment -->
+			<item id="35328" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Cutter Fragment -->
+			<item id="35329" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Slasher Fragment -->
+			<item id="35330" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Avenger Fragment -->
+			<item id="35331" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Fighter Fragment -->
+			<item id="35332" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Thrower Fragment -->
+			<item id="35334" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Guardian Fragment -->
+			<item id="35335" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Caster Fragment -->
+			<item id="35337" min="1" max="1" chance="6.250000" /> <!-- Corroded Helios Retributer Fragment -->
+			<item id="36514" min="1" max="1" chance="6.250000" /> <!-- Elcyum Crystal -->
+			<item id="36523" min="1" max="1" chance="6.250000" /> <!-- Corroded Adamantite Nugget -->
+			<item id="36524" min="1" max="1" chance="6.250000" /> <!-- Corroded Orichalcum -->
+			<item id="36543" min="1" max="1" chance="6.250000" /> <!-- Corroded Adamantite Wire -->
+			<item id="36544" min="1" max="1" chance="6.250000" /> <!-- Corroded Orichalcum Wire -->
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="9" max="9" chance="100" /> <!-- Life Crystal -->
+		</capsuled_items>
+	</item>
+</list>

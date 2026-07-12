@@ -1,50 +1,1904 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36079" name="Yum Yum Candy" type="EtcItem">
-		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +15%. Stacks with Nom Nom Candy. Temporary event item. -->
-		<set name="icon" val="icon.etc_whiteday_candy_i05" />
-		<set name="is_clan_depositable" val="false" />
+	<item id="36000" name="Heavenly P. Def. Cookie" type="EtcItem">
+		<!-- For 1 h., P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, P. Critical Damage +35%, Shield Defense Rate +30%, Shield Defense +50%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_defence_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9570" level="1" /> <!-- Heavenly Defense Cookie -->
+		</skills>
+	</item>
+	<item id="36001" name="Heavenly Magic Cookie" type="EtcItem">
+		<!-- For 1 h., M. Atk. +40%, M. Skill Critical Rate +100%, Casting Spd. +15%, skill cooldown -20%, MP Consumption -15%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_magic_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9571" level="1" /> <!-- Heavenly Magic Cookie -->
+		</skills>
+	</item>
+	<item id="36002" name="Heavenly CP Cookie" type="EtcItem">
+		<!-- For 1 h., Max CP +20%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_cp_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9572" level="1" /> <!-- Heavenly CP Cookie -->
+		</skills>
+	</item>
+	<item id="36003" name="Heavenly P. Atk. Special Box" type="EtcItem">
+		<!-- Double-click to obtain Special Cocktail (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="83254" min="10" max="10" chance="100" /> <!-- Special Cocktail -->
+		</capsuled_items>
+	</item>
+	<item id="36004" name="Heavenly P. Def. Special Box" type="EtcItem">
+		<!-- Double-click to obtain Special Cocktail (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="83254" min="10" max="10" chance="100" /> <!-- Special Cocktail -->
+		</capsuled_items>
+	</item>
+	<item id="36005" name="Heavenly Magic Special Box" type="EtcItem">
+		<!-- Double-click to obtain Special Cocktail (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="83254" min="10" max="10" chance="100" /> <!-- Special Cocktail -->
+		</capsuled_items>
+	</item>
+	<item id="36006" name="Heavenly CP Increase Special Box" type="EtcItem">
+		<!-- Double-click to obtain Special Cocktail (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="83254" min="10" max="10" chance="100" /> <!-- Special Cocktail -->
+		</capsuled_items>
+	</item>
+	<item id="36007" name="High-grade Enchant Stone Special Box" type="EtcItem">
+		<!-- Double-click to obtain High-grade Stone: Enchant R-grade Weapon and High-grade Stone: Enchant R-grade Armor. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36008" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Weapon -->
+			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Armor -->
+		</capsuled_items>
+	</item>
+	<item id="36008" name="High-grade Stone: Enchant R-grade Weapon" type="EtcItem">
+		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9573" level="1" /> <!-- High-grade Stone: Enchant R-grade Weapon -->
+		</skills>
+	</item>
+	<item id="36009" name="High-grade Stone: Enchant R-grade Armor" type="EtcItem">
+		<!-- Enchant success rate +30% for R-grade armor. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9574" level="1" /> <!-- High-grade Stone: Enchant R-grade Armor -->
+		</skills>
+	</item>
+	<item id="36010" name="Heavenly P. Atk. Cookie" additionalName="Event" type="EtcItem">
+		<!-- For 1 h., P. Atk. +22%, Critical Rate for basic attacks +100%, Critical Damage for basic attacks +70%, Atk. Spd. +10%, Speed +10. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_attack_cookie" />
+		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9660" level="1" /> <!-- Heavenly Attack Cookie - Event -->
+		</skills>
+	</item>
+	<item id="36011" name="Heavenly P. Def. Cookie" additionalName="Event" type="EtcItem">
+		<!-- For 1 h., P. Def. +45%, M. Def. +15%, Critical Rate for basic attacks and M. skills +100%, P. Critical Damage +35%, Shield Defense Rate +30%, Shield Defense +50%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_defence_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9661" level="1" /> <!-- Heavenly Defense Cookie - Event -->
+		</skills>
+	</item>
+	<item id="36012" name="Heavenly Magic Cookie" additionalName="Event" type="EtcItem">
+		<!-- For 1 h., M. Atk. +40%, M. Skill Critical Rate +100%, Casting Spd. +15%, skill cooldown -20%, MP Consumption -15%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_magic_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9662" level="1" /> <!-- Heavenly Magic Cookie - Event -->
+		</skills>
+	</item>
+	<item id="36013" name="Heavenly CP Cookie" additionalName="Event" type="EtcItem">
+		<!-- For 1 h., Max CP +20%. Cooldown: 60 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_cp_cookie" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="9663" level="1" /> <!-- Heavenly CP Cookie - Event -->
+		</skills>
+	</item>
+	<item id="36014" name="Heavenly P. Atk. Special Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Heavenly Cocktail (10 pcs.) and Heavenly Attack Cookie (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="36010" min="10" max="10" chance="100" /> <!-- Heavenly Attack Cookie - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36015" name="Heavenly P. Def. Special Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Heavenly Cocktail (10 pcs.) and Heavenly Defense Cookie (10 pcs.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="36011" min="10" max="10" chance="100" /> <!-- Heavenly Defense Cookie - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36016" name="Heavenly Magic Special Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 10 Heavenly Cocktails, 10 Heavenly Magic Cookies. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="36012" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36017" name="Heavenly CP Increase Special Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 10 Heavenly Cocktails, 10 Heavenly CP Cookies. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="36013" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36018" name="High-grade Enchant Stone Special Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain High-grade Stone: Enchant R-grade Weapon and High-grade Stone: Enchant R-grade Armor. -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36019" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Weapon - Event -->
+			<item id="36020" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Armor - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36019" name="High-grade Stone: Enchant R-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +20% for R-grade weapons. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
+		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9573" level="1" /> <!-- High-grade Stone: Enchant R-grade Weapon -->
+		</skills>
+	</item>
+	<item id="36020" name="High-grade Stone: Enchant R-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- Enchant success rate +30% for R-grade armor. Only for items enchanted from +3 to +9. Cannot be used with items enchanted to +10 and higher. -->
+		<set name="icon" val="icon.ench_am_potion_violet_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="9574" level="1" /> <!-- High-grade Stone: Enchant R-grade Armor -->
+		</skills>
+	</item>
+	<item id="36021" name="Returning Hero's Potion Pack" type="EtcItem">
+		<!-- Double-click to obtain Returning Hero's Red Bottle (30 pcs.), Package: Returning Hero's Vitality Replenishing Juice (3 pcs.), Special Cocktail (6 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="83254" min="6" max="6" chance="100" /> <!-- Special Cocktail -->
+		</capsuled_items>
+	</item>
+	<item id="36022" name="Returning Hero's Health Potion" type="EtcItem">
+		<!-- Recovers 3000 HP. If HP is full, recovers CP. No cooldown. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_bm_hero_red_potion" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_event_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="9575" level="1" /> <!-- Returning Hero's Red Bottle -->
+		</skills>
+	</item>
+	<item id="36023" name="Returning Hero's Support Box" type="EtcItem">
+		<!-- Double-click to obtain Returning Hero's Shirt, Returning Hero's Belt, and Returning Hero's Miraculous Cube. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36024" min="1" max="1" chance="100" /> <!-- Returning Hero's Miraculous Cube -->
+			<item id="33509" min="1" max="1" chance="100" /> <!-- Returning Hero's Shirt -->
+			<item id="33510" min="1" max="1" chance="100" /> <!-- Returning Hero's Belt -->
+		</capsuled_items>
+	</item>
+	<item id="36024" name="Returning Hero's Wondrous Cubic" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Vitality Replenishing Herb Drink (30-min.), PA Coupon - 700 Points, Heavenly Cocktail (2 pcs.), Scroll of Escape Pack: Village, Blessed Scroll of Escape. -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="9576" level="1" /> <!-- Returning Hero's Miraculous Cube -->
+		</skills>
+	</item>
+	<item id="36025" name="Feather of Blessing - Kartia's Labyrinth" type="EtcItem">
+		<!-- Allows to be resurrected after the death in Kartia's Labyrinth (XP death penalty -50%). -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36026" name="High-grade Feather of Blessing - Kartia's Labyrinth" type="EtcItem">
+		<!-- Allows to be resurrected in Kartia's Labyrinth (XP death penalty -100%). -->
+		<set name="icon" val="icon.etc_feather_gold_i00" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36027" name="Lump of Fur" type="EtcItem">
+		<!-- Clan Production Request A - Provide the leather machine with a Lump of Fur from Cute Buffalo. -->
+		<set name="icon" val="icon.etc_mane_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36028" name="Fruit Charged with Water" type="EtcItem">
+		<!-- Clan Craft Request B - Water Energy Fruit. Take it to Impatient Mahum Chef. -->
+		<set name="icon" val="icon.etc_codran_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36029" name="Fruit Charged with Fire" type="EtcItem">
+		<!-- Clan Craft Request B - Fire Energy Fruit. Take it to Impatient Mahum Chef. -->
+		<set name="icon" val="icon.etc_codran_i03" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36030" name="Fruit Charged with Wind" type="EtcItem">
+		<!-- Clan Craft Request B - Wind Energy Fruit. Take it to Impatient Mahum Chef. -->
+		<set name="icon" val="icon.etc_codran_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36031" name="Multi Hammer - 1" type="Weapon">
+		<!-- Clan Handicraft Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="9586" level="1" /> <!-- Repair Stone-gathering Robot -->
+		</skills>
+	</item>
+	<item id="36032" name="Multi Hammer" type="Weapon">
+		<!-- Item used in clan requests. -->
+		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36033" name="Multi Hammer - 3" type="Weapon">
+		<!-- Clan Production Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
+		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="9659" level="1" /> <!-- Repair Energy Supplier -->
+		</skills>
+	</item>
+	<item id="36034" name="Multi Hammer - 4" type="Weapon">
+		<!-- Clan Production Request B - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
+		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36035" name="Multi Hammer - 5" type="Weapon">
+		<!-- Alternative Clan Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="9591" level="1" /> <!-- Repair Todd's Robot -->
+		</skills>
+	</item>
+	<item id="36036" name="Multi Hammer - 6" type="Weapon">
+		<!-- Alternative Clan Request B - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
+		<set name="icon" val="icon.weapon_iron_hammer_i00" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="9593" level="1" /> <!-- Repair Robot of Repairs -->
+			<skill id="9689" level="1" /> <!-- Activate Summon Device -->
+		</skills>
+	</item>
+	<item id="36037" name="Mysterious Incantation" type="EtcItem">
+		<!-- Can only be used in the Ceremony of Chaos. Pulls the target to you. -->
+		<set name="icon" val="icon.etc_grankain_chain" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
+		<conditions addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</conditions>
+		<skills>
+			<skill id="9594" level="1" /> <!-- Mysterious Incantation -->
+		</skills>
+	</item>
+	<item id="36038" name="Mysterious Defense" type="EtcItem">
+		<!-- Can only be used in the Ceremony of Chaos. Makes you invincible for 5 sec. -->
+		<set name="icon" val="icon.etc_grankain_protect" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
+		<conditions addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</conditions>
+		<skills>
+			<skill id="9595" level="1" /> <!-- Mysterious Defense -->
+		</skills>
+	</item>
+	<item id="36039" name="Eternal Core Sword - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_incessantcore_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36040" name="Lava Saw - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_lavamond_saw_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36041" name="Eversor Mace - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_expowder_mace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36042" name="Sacredium - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_sacredumors_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36043" name="Contristo Hammer - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_pereztear_hammer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36044" name="Cyclic Cane - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_psyskilt_cane_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36045" name="Mamba Edge - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_mambaedge_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36046" name="Jade Claw - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_jademice_claw_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="36047" name="Demitelum - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_ghostcleaner_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="36048" name="Eternal Core Dual Sword - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="36049" name="Mamba Edge Dual Dagger - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.dual_dagger_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="11421" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="8298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Focus -->
+		</skills>
+	</item>
+	<item id="36050" name="Recurve Thorne Bow - Ceremony of Chaos" type="Weapon">
+		<set name="icon" val="icon.weapon_recurvethorne_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="S80" />
+		<set name="crystal_count" val="9872" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<stats>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="36051" name="Clan Cloak - Standard" type="Armor">
+		<!-- Alliance sealed with blood! A cloak specifically designed for clans. Available only to clan members. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
+		<conditions msgId="2453">
+			<player cloakStatus="true" />
+		</conditions>
+		<stats>
+			<stat type="pDef">50</stat>
+			<stat type="mDef">40</stat>
+		</stats>
+	</item>
+	<item id="36052" name="Clan Cloak - Clan Hall (Auction)" type="Armor">
+		<!-- Alliance sealed with blood! A cloak specifically designed for clans. Available only to members of a clan that owns a clan hall. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="5000000" />
+		<set name="material" val="CLOTH" />
+		<conditions msgId="2453">
+			<player cloakStatus="true" />
+		</conditions>
+		<stats>
+			<stat type="pDef">50</stat>
+			<stat type="mDef">40</stat>
+		</stats>
+	</item>
+	<item id="36053" name="Clan Cloak - Castle" type="Armor">
+		<!-- Alliance sealed with blood! A cloak specifically designed for clans. Available only to members of a clan that owns a castle. STR/ INT +2. -->
+		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="15000000" />
+		<set name="material" val="CLOTH" />
+		<conditions msgId="2453">
+			<player cloakStatus="true" />
+		</conditions>
+		<stats>
+			<stat type="pDef">50</stat>
+			<stat type="mDef">40</stat>
+		</stats>
+		<skills>
+			<skill id="13405" level="1" /> <!-- Clan Cloak - Castle -->
+		</skills>
+	</item>
+	<item id="36054" name="Red Gate Key" type="EtcItem">
+		<!-- Key that the Spiculas in Nornil's Cave have. Its use is not known. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36055" name="Scroll: Stronghold Siege (10-second)" type="EtcItem">
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 10 sec. -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9596" level="1" /> <!-- Stronghold Siege (10 sec.) -->
+		</skills>
+	</item>
+	<item id="36056" name="Scroll: Stronghold Siege (20-second)" type="EtcItem">
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 20 sec. -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9597" level="1" /> <!-- Stronghold Siege (20 sec.) -->
+		</skills>
+	</item>
+	<item id="36057" name="Scroll: Stronghold Siege (30-second)" type="EtcItem">
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 30 sec. -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9598" level="1" /> <!-- Stronghold Siege (30 sec.) -->
+		</skills>
+	</item>
+	<item id="36058" name="Scroll: Stronghold Siege (40-second)" type="EtcItem">
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 40 sec. -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9599" level="1" /> <!-- Stronghold Siege (40 sec.) -->
+		</skills>
+	</item>
+	<item id="36059" name="Scroll: Stronghold Siege (50-second)" type="EtcItem">
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 50 sec. -->
+		<set name="icon" val="icon.etc_doom_capture" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9600" level="1" /> <!-- Fortress Siege (50-sec.) -->
+		</skills>
+	</item>
+	<item id="36060" name="Penitent's Manacles" type="Armor">
+		<!-- Summons Agathion Sin Eater. The bracelet must be removed in order to seal the agathion. After unequipping the bracelet, Hour of Penitence will not be active for 10 sec. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9601" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36061" name="Penitent's Manacles" type="Armor">
+		<!-- Summons Agathion Sin Eater. The bracelet must be removed in order to seal the agathion. After unequipping the bracelet, Hour of Penitence will not be active for 10 sec. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9602" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36062" name="Penitent's Manacles" type="Armor">
+		<!-- Summons Agathion Sin Eater. The bracelet must be removed in order to seal the agathion. After unequipping the bracelet, Hour of Penitence will not be active for 10 sec. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9603" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36063" name="Penitent's Manacles" type="Armor">
+		<!-- Summons Agathion Sin Eater. The bracelet must be removed in order to seal the agathion. After unequipping the bracelet, Hour of Penitence will not be active for 10 sec. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9604" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36064" name="Penitent's Manacles" type="Armor">
+		<!-- Summons Agathion Sin Eater. The bracelet must be removed in order to seal the agathion. After unequipping the bracelet, Hour of Penitence will not be active for 10 sec. -->
+		<set name="icon" val="icon.etc_leash_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="useSkillDisTime" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9605" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36065" name="Verna's Vaccine" type="EtcItem">
+		<!-- Vaccine made by Verna. Can be used on Golem Generators that occasionally come out of Scout Golems in Nornil's Cave. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9584" level="1" /> <!-- Verna's Vaccine -->
+		</skills>
+	</item>
+	<item id="36066" name="Water from the Garden of Eva" type="EtcItem">
+		<!-- Water scooped from deep inside the Garden of Eva. Probably not the Clearest Water. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="36067" name="Clearest Water" type="EtcItem">
+		<!-- The cleanest water received from the Lady of the Lake. Can be used on the Mother Tree at the center of Elven Village. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9579" level="1" /> <!-- Clearest Water -->
+		</skills>
+	</item>
+	<item id="36068" name="Brightest Light" type="EtcItem">
+		<!-- The Brightest Light received from Nerupa in the Arms of Timiniel in Magmeld. Can be used in front of Shillien's Stone Statue towering at the center of Dark Elf Village. -->
+		<set name="icon" val="icon.tersi_specter_seed" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9580" level="1" /> <!-- Brightest Light -->
+		</skills>
+	</item>
+	<item id="36069" name="Purest Soul" type="EtcItem">
+		<!-- The Purest Soul received from Enfeux in the Valley of Saints. Can be used in front of the Cave of Souls close to Kamael Village. -->
+		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9581" level="1" /> <!-- Purest Soul -->
+		</skills>
+	</item>
+	<item id="36070" name="Fiercest Flame" type="EtcItem">
+		<!-- The Fiercest Flame from the Blacksmith of Flame Vulcan at the Forge of Gods. Can be used in front of the Pa'agrio Temple in the Orc Village. -->
+		<set name="icon" val="icon.etc_torch_on_i09" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9582" level="1" /> <!-- Fiercest Flame -->
+		</skills>
+	</item>
+	<item id="36071" name="Immortal Love" type="EtcItem">
+		<!-- Letter that shows the Fondest Heart of the Blacksmith of Flame Vulcan. Can be used in the Deserted Dwarven House. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
+		<skills>
+			<skill id="9583" level="1" /> <!-- Eternal Love -->
+		</skills>
+	</item>
+	<item id="36072" name="Mysterious Letter" type="EtcItem">
+		<!-- Mysterious Letter handed over by Subclass Master Raina living on the Talking Island. Double-click to check the content. -->
+		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Bypass" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="36073" name="Vaccine Box" type="EtcItem">
+		<!-- Box that contains a vaccine for Virus Laido. Deliver it to Dwarves who are sealing Spicula Clone Generator Brand. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="36074" name="Yin's Trace" type="EtcItem">
+		<!-- Fragments with information about Metusela Clone Generator Brand. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
+		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="36075" name="Yin's Enigmatic Trace" type="EtcItem">
+		<!-- Fragments from which information about Metusela Clone Generator Brand has been erased. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
+		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="36076" name="Verna's Red Gate Key" type="EtcItem">
+		<!-- Key for opening the Red Gate of Nornil Dungeon. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36077" name="Crumbs of Penitence" type="EtcItem">
+		<!-- Mark of Penitence. Sins scattered in the world have been made into crumbs by the Sin Eater. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36078" name="Certificate - Dual Class" type="EtcItem">
+		<!-- A magic scroll that contains the concentrated power of a dual class. To get this power, take the scroll to Trandon in Talking Island Village or Gallias in Aden. -->
+		<set name="icon" val="icon.etc_dualchange" />
+		<set name="weight" val="2" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="36079" name="Yum Yum Candy" type="EtcItem">
+		<!-- Yum Yum Candy made of peanuts grown by Maphr, the goddess of earth, for the holiday. Acquired XP/ SP +25%. The effect stacks with Nom Nom Candy. Effects of two identical candies do not stack. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i05" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9618" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
 	</item>
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
-		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +15%. Stacks with Yum Yum Candy. Temporary event item. -->
+		<!-- Nom Nom Candy made of peanuts grown by Maphr, the goddess of earth, for the holiday. Acquired XP/ SP +25%. The effect stacks with Yum Yum Candy. Effects of two identical candies do not stack. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9619" level="1" /> <!-- Nom Nom Candy -->
 		</skills>
 	</item>
 	<item id="36081" name="Yummy Gift Box" type="EtcItem">
-		<!-- You can get one box per account. Double-click to obtain two Yum Yum Candies or two Nom Nom Candies. (The item will be removed after the event is over.) -->
+		<!-- A special gift box crafted for the holiday. Can be obtained once per account. Double-click to obtain 2 Yum Yum Candies or 2 Nom Nom Candies. -->
 		<set name="icon" val="icon.etc_candy_basket_i04_1" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->
+		</skills>
+	</item>
+	<item id="36082" name="Scroll of Escape: Isle of Souls Harbor" type="EtcItem">
+		<!-- A magic scroll for teleporting to the Isle of Souls' Harbor. Cannot be sold in a store. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9617" level="1" /> <!-- Scroll of Escape: Isle of Souls' Harbor -->
+		</skills>
+	</item>
+	<item id="36083" name="Agathion Innocent Heejin" type="Armor">
+		<!-- A bracelet for summoning Agathion Innocent Hye-jin (30-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9407" level="1" /> <!-- Summon Agathion Hye-jin Jang -->
+			<skill id="9412" level="1" /> <!-- Agathion's Cute Trick - Hye-jin Jang -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9622" level="1" /> <!-- Innocent Heejin Teleport: Talking Island Village -->
+			<skill id="9623" level="1" /> <!-- Innocent Heejin's Teleport: Aden -->
+			<skill id="9624" level="1" /> <!-- Innocent Heejin's Teleport: Magmeld -->
+			<skill id="9625" level="1" /> <!-- Innocent Heejin Teleport: Keucereus Alliance Base -->
+			<skill id="9626" level="1" /> <!-- Innocent Heejin's Gift -->
+			<skill id="9627" level="1" /> <!-- Innocent Heejin's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36084" name="Star Agathion Dandy Hyuk" type="Armor">
+		<!-- A bracelet for summoning Agathion Dandy Hyuk (30-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9408" level="1" /> <!-- Summon Agathion Hyuk Jang -->
+			<skill id="9413" level="1" /> <!-- Agathion's Cute Trick - Hyuk Jang -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9635" level="1" /> <!-- Dandy Hyuk's Teleport: Talking Island Village -->
+			<skill id="9636" level="1" /> <!-- Dandy Hyuk's Teleport: Aden -->
+			<skill id="9637" level="1" /> <!-- Dandy Hyuk's Teleport: Magmeld -->
+			<skill id="9638" level="1" /> <!-- Dandy Hyuk's Teleport: Keucereus Alliance Base -->
+			<skill id="9639" level="1" /> <!-- Dandy Hyuk's Gift -->
+			<skill id="9640" level="1" /> <!-- Dandy Hyuk's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36085" name="Star Agathion Powerful Sooro" type="Armor">
+		<!-- A bracelet for summoning Agathion Powerful Sooro (30-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9409" level="1" /> <!-- Summon Agathion Sooro Kim -->
+			<skill id="9414" level="1" /> <!-- Agathion's Cute Trick - Sooro Kim -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9641" level="1" /> <!-- Powerful Sooro's Teleport: Talking Island Village -->
+			<skill id="9642" level="1" /> <!-- Powerful Sooro's Teleport: Aden -->
+			<skill id="9643" level="1" /> <!-- Powerful Sooro's Teleport: Magmeld -->
+			<skill id="9644" level="1" /> <!-- Powerful Sooro's Teleport: Keucereus Alliance Base -->
+			<skill id="9645" level="1" /> <!-- Powerful Sooro's Gift -->
+			<skill id="9646" level="1" /> <!-- Powerful Sooro's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36086" name="Star Agathion Chic Jaebum" type="Armor">
+		<!-- A bracelet for summoning Agathion Chic Jaebum (30-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9410" level="1" /> <!-- Summon Agathion Jaebum Park -->
+			<skill id="9415" level="1" /> <!-- Agathion's Cute Trick - Jaebum Park -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9647" level="1" /> <!-- Chic Jaebum's Teleport: Talking Island Village -->
+			<skill id="9648" level="1" /> <!-- Chic Jaebum's Teleport: Aden -->
+			<skill id="9649" level="1" /> <!-- Chic Jaebum's Teleport: Magmeld -->
+			<skill id="9650" level="1" /> <!-- Chic Jaebum's Teleport: Keucereus Alliance Base -->
+			<skill id="9651" level="1" /> <!-- Chic Jaebum's Gift -->
+			<skill id="9652" level="1" /> <!-- Chic Jaebum's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36087" name="Star Agathion Cute Shinyoung" type="Armor">
+		<!-- A bracelet for summoning Agathion Cute Shinyoung (30-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9411" level="1" /> <!-- Summon Agathion Shinyoung Kim -->
+			<skill id="9416" level="1" /> <!-- Agathion's Cute Trick - Shinyoung Kim -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9653" level="1" /> <!-- Cute Shinyoung's Teleport: Talking Island Village -->
+			<skill id="9654" level="1" /> <!-- Cute Shinyoung's Teleport: Aden -->
+			<skill id="9655" level="1" /> <!-- Cute Shinyoung's Teleport: Magmeld -->
+			<skill id="9656" level="1" /> <!-- Cute Shinyoung's Teleport: Keucereus Alliance Base -->
+			<skill id="9657" level="1" /> <!-- Cute Shinyoung's Gift -->
+			<skill id="9658" level="1" /> <!-- Cute Shinyoung's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36088" name="Package: Agathion Innocent Hye-jin (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Agathion Bracelet: Innocent Hye-jin (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36083" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Innocent Hye-jin -->
+		</capsuled_items>
+	</item>
+	<item id="36089" name="Package: Agathion Dandy Hyuk (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Agathion Bracelet: Dandy Hyuk (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36084" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Dandy Hyuk -->
+		</capsuled_items>
+	</item>
+	<item id="36090" name="Package: Agathion Powerful Soo-ro (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Agathion Bracelet: Powerful Sooro (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36085" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Powerful Sooro -->
+		</capsuled_items>
+	</item>
+	<item id="36091" name="Package: Agathion Chic Jaebum (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Agathion Bracelet: Chic Jaebum (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36086" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Chic Jaebum -->
+		</capsuled_items>
+	</item>
+	<item id="36092" name="Package: Agathion Cute Shin-young (30-day)" type="EtcItem">
+		<!-- Double-click to obtain Agathion Bracelet: Cute Shinyoung (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_wish_pack" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="36087" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Cute Shinyoung -->
+		</capsuled_items>
+	</item>
+	<item id="36093" name="Star Agathion's Gift" type="EtcItem">
+		<!-- Double-click to obtain one of the following randomly: Vitality Replenishing Star Candy, Vitality Recovering Star Candy and Vitality Sustaining Star Candy. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i02" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="9628" level="1" /> <!-- Agathion Gift Box -->
+		</skills>
+	</item>
+	<item id="36094" name="Vitality Replenishing Star Candy" type="EtcItem">
+		<!-- Recharges a certain amount of Vitality when used. No limitations on use. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9629" level="1" /> <!-- Vitality Replenishing Star Candy -->
+		</skills>
+	</item>
+	<item id="36095" name="Vitality Recovering Star Candy" type="EtcItem">
+		<!-- When used, vitality is recovered for 10 min. When vitality is recovered through hunting and XP is acquired, some of it is replenished. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="9630" level="1" /> <!-- Vitality Recovering Star Candy -->
+		</skills>
+	</item>
+	<item id="36096" name="Vitality Maintaining Star Candy" type="EtcItem">
+		<!-- When used, sustains Vitality for 10 min. Vitality item with unlimited usage. -->
+		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
+		<set name="weight" val="36" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="9631" level="1" /> <!-- Vitality Sustaining Star Candy -->
+		</skills>
+	</item>
+	<item id="36097" name="Agathion Innocent Heejin" type="Armor">
+		<!-- A bracelet for summoning Agathion Innocent Hye-jin (7-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9407" level="1" /> <!-- Summon Agathion Hye-jin Jang -->
+			<skill id="9412" level="1" /> <!-- Agathion's Cute Trick - Hye-jin Jang -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9622" level="1" /> <!-- Innocent Heejin Teleport: Talking Island Village -->
+			<skill id="9623" level="1" /> <!-- Innocent Heejin's Teleport: Aden -->
+			<skill id="9624" level="1" /> <!-- Innocent Heejin's Teleport: Magmeld -->
+			<skill id="9625" level="1" /> <!-- Innocent Heejin Teleport: Keucereus Alliance Base -->
+			<skill id="9626" level="1" /> <!-- Innocent Heejin's Gift -->
+			<skill id="9627" level="1" /> <!-- Innocent Heejin's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36098" name="Star Agathion Dandy Hyuk" type="Armor">
+		<!-- A bracelet for summoning Agathion Dandy Hyuk (7-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9408" level="1" /> <!-- Summon Agathion Hyuk Jang -->
+			<skill id="9413" level="1" /> <!-- Agathion's Cute Trick - Hyuk Jang -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9635" level="1" /> <!-- Dandy Hyuk's Teleport: Talking Island Village -->
+			<skill id="9636" level="1" /> <!-- Dandy Hyuk's Teleport: Aden -->
+			<skill id="9637" level="1" /> <!-- Dandy Hyuk's Teleport: Magmeld -->
+			<skill id="9638" level="1" /> <!-- Dandy Hyuk's Teleport: Keucereus Alliance Base -->
+			<skill id="9639" level="1" /> <!-- Dandy Hyuk's Gift -->
+			<skill id="9640" level="1" /> <!-- Dandy Hyuk's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="36099" name="Star Agathion Powerful Sooro" type="Armor">
+		<!-- A bracelet for summoning Agathion Powerful Sooro (7-day). <Active skills>. 1. Agathion's Blessing. For 60 min., acquired XP/ SP +30% (cooldown: 5 min.). 2. Agathion's Teleportation. Teleports to various places (cooldown: 30 min.). 3. Agathion's Gift. Gives 1 random Vitality replenishing/ sustaining/ recovering item (cooldown: 20 h.). -->
+		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="9409" level="1" /> <!-- Summon Agathion Sooro Kim -->
+			<skill id="9414" level="1" /> <!-- Agathion's Cute Trick - Sooro Kim -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="9641" level="1" /> <!-- Powerful Sooro's Teleport: Talking Island Village -->
+			<skill id="9642" level="1" /> <!-- Powerful Sooro's Teleport: Aden -->
+			<skill id="9643" level="1" /> <!-- Powerful Sooro's Teleport: Magmeld -->
+			<skill id="9644" level="1" /> <!-- Powerful Sooro's Teleport: Keucereus Alliance Base -->
+			<skill id="9645" level="1" /> <!-- Powerful Sooro's Gift -->
+			<skill id="9646" level="1" /> <!-- Powerful Sooro's Blessing -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
 	</item>
 </list>

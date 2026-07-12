@@ -1,16 +1,1316 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47579" name="Christmas Party Herb" additionalName="Sealed" type="EtcItem">
-		<!-- For 2 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, HP/ MP Recovery Rate +30%, Speed +10. Changes your armor appearance to that of the Santa Suit. The effect disappears on logout. -->
-		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="material" val="PAPER" />
+	<item id="47501" name="Rune Stone Fragment" type="EtcItem">
+		<!-- A stone fragment with an ancient symbol engraved on it. Ten of these fragments can be exchanged for Rune Stone through Lias in the Dimensional Rift. -->
+		<set name="icon" val="icon.low_energy_condense_i05" />
+		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="47502" name="Superior Giant's Codex Chapter 1 - Fragment" type="EtcItem">
+		<!-- A single page from Superior Giant's Codex Chapter 1. Ten of these pages can be exchanged for Superior Giant's Codex Chapter 1 through Lias in the Dimensional Rift. -->
+		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="47503" name="High-grade Weapon Augmenting Stone" type="EtcItem">
+		<!-- A rare mineral solidified by shock from physical and magical strikes and dimensional abnormalities. Required for augmenting weapons. The higher the Augmenting Stone's level, the higher the augmentation value. -->
+		<set name="icon" val="icon.renewal_mineral_r95_i00" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="47504" name="Lias Supply Items" type="EtcItem">
+		<!-- Supplies given by Lias to agents having completed "Dimensional Rift - 100-day Subjugation Operation". -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
+		<set name="extractableCountMin" val="4" />
+		<set name="extractableCountMax" val="4" />
+		<capsuled_items>
+			<item id="47087" min="1" max="1" chance="50" /> <!-- Jewelry Box -->
+			<item id="47503" min="1" max="1" chance="50" /> <!-- High-grade Augmenting Stone: Weapon -->
+			<item id="47086" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack -->
+			<item id="47501" min="1" max="1" chance="100" /> <!-- Rune Stone Fragment -->
+			<item id="47502" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex Chapter 1 - Fragment -->
+		</capsuled_items>
+	</item>
+	<item id="47505" name="Bracelet of the Conqueror - CON" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, CON +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13964" level="1" /> <!-- Bracelet of the Conqueror - CON -->
+		</skills>
+	</item>
+	<item id="47506" name="Bracelet of the Conqueror - MEN" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, MEN +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13965" level="1" /> <!-- Bracelet of the Conqueror - MEN -->
+		</skills>
+	</item>
+	<item id="47507" name="Bracelet of the Conqueror - DEX" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, DEX +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13966" level="1" /> <!-- Bracelet of the Conqueror - DEX -->
+		</skills>
+	</item>
+	<item id="47508" name="Bracelet of the Conqueror - WIT" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, WIT +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13967" level="1" /> <!-- Bracelet of the Conqueror - WIT -->
+		</skills>
+	</item>
+	<item id="47509" name="Bracelet of the Conqueror - STR" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, STR +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13968" level="1" /> <!-- Bracelet of the Conqueror - STR -->
+		</skills>
+	</item>
+	<item id="47510" name="Bracelet of the Conqueror - INT" type="Armor">
+		<!-- When equipped, unlocks 5 talisman slots. HP +531, INT +3. -->
+		<set name="icon" val="icon.ertheia_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13969" level="1" /> <!-- Bracelet of the Conqueror - INT -->
+		</skills>
+	</item>
+	<item id="47511" name="Dimensional Traces" type="EtcItem">
+		<!-- Traces that have naturally accumulated during activity in the Dimensional Rift. They carry dimensional energy, and help to reach special areas within the Dimensional Rift. -->
+		<set name="icon" val="icon.etc_black_freezing_core_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="47512" name="Attacker's Soul" type="EtcItem">
+		<!-- The soul of the Attacker that attempts to attack through the Dimensional Rift. Collect these and take them to the Dimensional Researcher Lias. -->
+		<set name="icon" val="icon.etc_hard_fossil_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="47513" name="Request - Altar of Evil" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Bloody Swampland and the Altar of Evil. Required level: 85-93. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47514" name="Request - Gludio Territory" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Gludio Territory. Required level: 85-93. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47515" name="Request - Turek Orc Campsite" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Orc Barracks. Required level: 87-97. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47516" name="Request - Elven Forest" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Elven Forest and the Shadow of the Mother Tree. Required level: 88-98. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47517" name="Request - Fairy Settlement" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Fairy Settlement. Required level: 88-98. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47518" name="Request - Garden of Beasts" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Garden of Beasts. Required level: 89-99. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47519" name="Request - North of the Town of Giran" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Gorgon Flower Garden and Breka's Stronghold. Required level: 92-102. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Bloody Swampland. Required level: 92-102. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47521" name="Request - Field of Silence" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat mighty monsters in the Field of Silence and Field of Whispers. Required level: 102+. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47522" name="Request - The Immortal Plateau" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Immortal Plateau. Required level: 93-103. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47523" name="Request - Isle of Souls" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters on the Isle of Souls. Required level: 93-103. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47524" name="Request - Cemetery" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Seal of Shillien and the Cemetery. Required level: 93-103. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47525" name="Request - Valley of Saints" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Valley of Saints. Required level: 93-103. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47526" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the south of the Isle of Prayer. Required level: 96-106. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47527" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the north of the Isle of Prayer. Required level: 96-106. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47528" name="Request - Garden of Spirits" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters in the Garden of Spirits. Required level: 100-110. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47529" name="Request - Atelia Fortress" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat strong monsters near the Atelia Fortress. Required level: 100-110. Double-click to accept. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47530" name="Request - Altar of Evil" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Bloody Swampland and the Altar of Evil. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47531" name="Request - Gludio Territory" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Gludio Territory. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47532" name="Request - Turek Orc Campsite" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Orc Barracks. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47533" name="Request - Elven Forest" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Elven Forest and Shadow of the Mother Tree. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47534" name="Request - Fairy Settlement" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Fairy Settlement. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47535" name="Request - Garden of Beasts" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Garden of Beasts. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47536" name="Request - North of the Town of Giran" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Gorgon Flower Garden and Breka's Stronghold. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Bloody Swampland. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47538" name="Request - Field of Silence" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Field of Silence and the Field of Whispers. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47539" name="Request - The Immortal Plateau" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters on the Immortal Plateau. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47540" name="Request - Isle of Souls" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters on the Isle of Souls. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47541" name="Request - Cemetery" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters at the Seal of Shillien and Cemetery. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47542" name="Request - Valley of Saints" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Valley of Saints. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47543" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the south of the Isle of Prayer. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47544" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the north of the Isle of Prayer. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47545" name="Request - Garden of Spirits" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters around the Garden of Spirits. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47546" name="Request - Atelia Fortress" type="EtcItem">
+		<!-- A request from the Hunters' Guild calling on you to defeat powerful monsters in the Atelia Fortress. -->
+		<set name="icon" val="icon.hunter_comminssion_paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47547" name="Corroded Bait" type="EtcItem">
+		<!-- A common bait that is not used anymore. Can be sold to a shop. -->
+		<set name="icon" val="icon.etc_normal_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="price" val="3000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="47548" name="Bait" additionalName="R99" type="EtcItem">
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 99. Fishing with this bait has a low chance of yielding a Reddish Box. -->
+		<set name="icon" val="icon.etc_huge_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="price" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="47549" name="PA Bait" type="EtcItem">
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PAs. -->
+		<set name="icon" val="icon.etc_bait_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="47550" name="Ugly Fish" type="EtcItem">
+		<!-- Can be exchanged for a fish dish through the Fishing Guild members. -->
+		<set name="icon" val="icon.etc_angler_i01" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="47551" name="Nimble Fish" type="EtcItem">
+		<!-- Can be exchanged for a fish dish or an appearance stone through the Fishing Guildsmen. -->
+		<set name="icon" val="icon.etc_tuna_i01" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="47552" name="Powerful Fish" type="EtcItem">
+		<!-- Can be exchanged for Elcyum Powder through the Fishing Guild members. -->
+		<set name="icon" val="icon.etc_bream_i01" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="47553" name="Blue Box" type="EtcItem">
+		<!-- Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48065" min="1" max="1" chance="50" /> <!-- Zodiac Cube Fragment -->
+			<item id="38154" min="50" max="50" chance="50" /> <!-- Fishing Shot -->
+		</capsuled_items>
+	</item>
+	<item id="47554" name="Reddish Box" type="EtcItem">
+		<!-- Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39720" min="1" max="1" chance="16.666667" /> <!-- Freya's Luck Potion -->
+			<item id="47556" min="1" max="1" chance="16.666667" /> <!-- Stardust -->
+			<item id="48065" min="1" max="1" chance="16.666667" /> <!-- Zodiac Cube Fragment -->
+			<item id="8034" min="1" max="1" chance="16.666667" /> <!-- Rainbow Springs Clan Hall War Decree -->
+			<item id="38154" min="50" max="50" chance="16.666667" /> <!-- Fishing Shot -->
+			<item id="45494" min="1" max="1" chance="16.666667" /> <!-- Sturdy Fishing Rod -->
+		</capsuled_items>
+	</item>
+	<item id="47555" name="Purplish Box" type="EtcItem">
+		<!-- Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39720" min="1" max="1" chance="16.666667" /> <!-- Freya's Luck Potion -->
+			<item id="47556" min="1" max="1" chance="16.666667" /> <!-- Stardust -->
+			<item id="47574" min="1" max="1" chance="16.666667" /> <!-- PA Treasure Chest -->
+			<item id="48065" min="1" max="1" chance="16.666667" /> <!-- Zodiac Cube Fragment -->
+			<item id="38154" min="50" max="50" chance="16.666667" /> <!-- Fishing Shot -->
+			<item id="45494" min="1" max="1" chance="16.666667" /> <!-- Sturdy Fishing Rod -->
+		</capsuled_items>
+	</item>
+	<item id="47556" name="Stardust" type="EtcItem">
+		<!-- Ingredient needed to exchange Elementary Seed Bracelet. -->
+		<set name="icon" val="icon.star_crystal_piece" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000000" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47557" name="Master Fishing Rod Lv. 1" type="Weapon">
+		<!-- Fishing time -10 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
+		<set name="icon" val="icon.fishing_rod01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47558" name="Master Fishing Rod Lv. 2" type="Weapon">
+		<!-- Fishing time -15 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
+		<set name="icon" val="icon.fishing_rod02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47559" name="Master Fishing Rod Lv. 3" type="Weapon">
+		<!-- Fishing time -20 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
+		<set name="icon" val="icon.fishing_rod03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47560" name="Master Fishing Rod Lv. 4" type="Weapon">
+		<!-- Fishing time -25 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
+		<set name="icon" val="icon.fishing_rod04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47561" name="Master Fishing Rod Lv. 5" type="Weapon">
+		<!-- Fishing time -30 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
+		<set name="icon" val="icon.fishing_rod05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47562" name="Santiago's Reel Fragment" type="EtcItem">
+		<!-- Ingredient necessary for production of the Master Fishing Rod. Also needed when leveling up the Master Fishing Rod. -->
+		<set name="icon" val="icon.etc_power_of_soul" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="47563" name="Seed Bracelet Pack" type="EtcItem">
+		<!-- Double-click to obtain Elementary Seed Bracelet. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="48060" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet -->
+		</capsuled_items>
+	</item>
+	<item id="47564" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="18672" level="1" /> <!-- New Year Herb Drink -->
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
 		</skills>
+	</item>
+	<item id="47565" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47566" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47567" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47568" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47569" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47570" name="Reward for Defeating the Giant Monsters" type="EtcItem">
+		<!-- A reward for defeating powerful monsters. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18664" level="1" /> <!-- Reward for Defeating the Giant Monsters -->
+		</skills>
+	</item>
+	<item id="47571" name="Basic Supply Box" additionalName="Fishing Guild" type="EtcItem">
+		<!-- A supply box from Santiago for your hard work in reviving the Fishing Guild. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="weight" val="10" />
+		<set name="material" val="FISH" />
+		<capsuled_items>
+			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->
+			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
+			<item id="47562" min="2" max="2" chance="100" /> <!-- Santiago's Reel Fragment -->
+		</capsuled_items>
+	</item>
+	<item id="47572" name="Intermediate Supply Box" additionalName="Fishing Guild" type="EtcItem">
+		<!-- A supply box from Santiago for your efforts in reviving the Fishing Guild. Double-click to obtain an item. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="weight" val="10" />
+		<set name="material" val="FISH" />
+		<skills>
+			<skill id="18665" level="1" /> <!-- Santiago's Reward Pack -->
+		</skills>
+	</item>
+	<item id="47573" name="Magic Spices" type="EtcItem">
+		<!-- Santiago has invented new recipes without seasonings. Can be exchanged for Nimble Fish through Santiago in Heine. -->
+		<set name="icon" val="icon.etc_powder_orange_i00" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="47574" name="PA Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain an item. -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18666" level="1" /> <!-- PA Treasure Box -->
+		</skills>
+	</item>
+	<item id="47575" name="Royal R-grade White Save Ticket" type="EtcItem">
+		<!-- Enchant success rate +15% when using a common enchant scroll. For R-grade armor. Can only be used with items enchanted from +3 to +9. In case of failure, the item is not crystallized, but its enchant value is decreased by 1. -->
+		<set name="icon" val="icon.bm_royal_white_save_ticket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18667" level="1" /> <!-- Royal R-grade Blue Save Ticket - Armor -->
+		</skills>
+	</item>
+	<item id="47576" name="Royal R95-grade White Save Ticket" type="EtcItem">
+		<!-- Enchant success rate +15% when using a common enchant scroll. For R95-grade armor. In case of failure, the item is not crystallized, but its enchant value is decreased by 1. -->
+		<set name="icon" val="icon.bm_royal_white_save_ticket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18668" level="1" /> <!-- Royal R95-grade Blue Save Ticket - Armor -->
+		</skills>
+	</item>
+	<item id="47577" name="Royal R99-grade White Save Ticket" type="EtcItem">
+		<!-- Enchant success rate +15% when using a common enchant scroll. For R99-grade armor. Can only be used with items enchanted from +3 to +9. In case of failure, the item is not crystallized, but its enchant value is decreased by 1. -->
+		<set name="icon" val="icon.bm_royal_white_save_ticket" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18669" level="1" /> <!-- Royal R99-grade Blue Save Ticket - Armor -->
+		</skills>
+	</item>
+	<item id="47578" name="Gran Kain's Miraculous Medicine" type="EtcItem">
+		<!-- The legendary elixir said to have been concocted from Gran Kain's secret recipe. Recovers 7000 HP. If HP is full, recovers CP. Can be used under most debuffs. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_grankain_potion" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="18670" level="1" /> <!-- Gran Kain's Elixir -->
+		</skills>
+	</item>
+	<item id="47579" name="Christmas Party Herb" type="EtcItem">
+		<!-- Christmas Party Herb. P. Atk./ M. Atk./ P. Def./ M. Def. are increased by 50%, and you are turned into Santa for 2 min. Effect disappears when restarted. -->
+		<set name="icon" val="icon.general_fuel_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="47580" name="Practice Fishing Rod" additionalName="1-hour" type="Weapon">
+		<!-- A shoddy fishing rod that has been given to you for practice. It's fine for practice, though. -->
+		<set name="icon" val="icon.weapon_fishing_rod_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FISHINGROD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47581" name="Transformation Scroll: Tow" type="EtcItem">
+		<!-- Transforms into Clay Statue for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18673" level="1" /> <!-- Transformation Scroll: Clay Statue -->
+		</skills>
+	</item>
+	<item id="47582" name="Transformation Scroll: Lady Tow" type="EtcItem">
+		<!-- Transforms into Beautiful Clay Statue for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18674" level="1" /> <!-- Transformation Scroll: Beautiful Clay Statue -->
+		</skills>
+	</item>
+	<item id="47583" name="Transformation Scroll: Angry Tow" type="EtcItem">
+		<!-- Transforms into Solid Clay Statue for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18675" level="1" /> <!-- Transformation Scroll: Solid Clay Statue -->
+		</skills>
+	</item>
+	<item id="47584" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
+		<!-- Transforms into Old Clay Statue for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18676" level="1" /> <!-- Transformation Scroll: Old Clay Statue -->
+		</skills>
+	</item>
+	<item id="47585" name="Transformation Scroll: Pig" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into a pig for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18677" level="1" /> <!-- Transformation Scroll: Pig -->
+		</skills>
+	</item>
+	<item id="47586" name="Transformation Scroll: Rabbit" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into a rabbit for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18678" level="1" /> <!-- Transformation Scroll: Rabbit -->
+		</skills>
+	</item>
+	<item id="47587" name="Transformation Scroll: Queen Ant" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into a Queen Ant for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18679" level="1" /> <!-- Transformation Scroll: Queen Ant -->
+		</skills>
+	</item>
+	<item id="47588" name="Transformation Scroll: Orfen" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into Orfen for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18680" level="1" /> <!-- Transformation Scroll: Orfen -->
+		</skills>
+	</item>
+	<item id="47589" name="Transformation Scroll: Anakim" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into Anakim for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18681" level="1" /> <!-- Transformation Scroll: Anakim -->
+		</skills>
+	</item>
+	<item id="47590" name="Transformation Scroll: Lilith" type="EtcItem">
+		<!-- No special abilities, but allows you to transform into Lilith for 10 min. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18682" level="1" /> <!-- Transformation Scroll: Lilith -->
+		</skills>
+	</item>
+	<item id="47591" name="Cat Fighter Appearance Stone - Ertheia Only" type="EtcItem">
+		<!-- Changes the appearance of fist weapons to that of a Cat Fighter. Note!. For Ertheia only. Choose new appearance carefully. -->
+		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18683" level="1" /> <!-- Appearance Stone: Cat Fighter -->
+		</skills>
+	</item>
+	<item id="47592" name="Warm Bear Paws Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of fist weapons to that of Warm Bear Paws. -->
+		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18684" level="1" /> <!-- Appearance Stone: Warm Bear Paws -->
+		</skills>
+	</item>
+	<item id="47593" name="Boxing Glove Appearance Stone - Ertheia Only" type="EtcItem">
+		<!-- Changes the appearance of fist weapons to that of Boxing Gloves. Note!. For Ertheia only. Choose new appearance carefully. -->
+		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18685" level="1" /> <!-- Appearance Stone: Boxing Glove -->
+		</skills>
+	</item>
+	<item id="47594" name="Cupid's Arrow Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a bow to that of Cupid's Bow. -->
+		<set name="icon" val="icon.shape_shifting_bow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18686" level="1" /> <!-- Appearance Stone: Cupid's Bow -->
+		</skills>
+	</item>
+	<item id="47595" name="Wedding Bouquet Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a one-handed blunt weapon to that of a Wedding Bouquet. -->
+		<set name="icon" val="icon.shape_shifting_blunt_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18687" level="1" /> <!-- Appearance Stone: Wedding Bouquet - One-handed Blunt Weapon -->
+		</skills>
+	</item>
+	<item id="47596" name="Pig Lollipop Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a dagger to that of Lollipop. -->
+		<set name="icon" val="icon.shape_shifting_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="18688" level="1" /> <!-- Appearance Stone: Lollipop -->
+		</skills>
+	</item>
+	<item id="47597" name="Wedding Bouquet" type="Weapon">
+		<set name="icon" val="BranchSys2.icon.br_wedding_bouquet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1600" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">1</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47598" name="Cupid's Bow" type="Weapon">
+		<set name="icon" val="icon.bm_krono_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="900" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="47599" name="Pig Lollipop" type="Weapon">
+		<set name="icon" val="icon.bm_pig_candy" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
 	</item>
 </list>

@@ -1,6 +1,384 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="47826" name="Hanbok" additionalName="Sealed" type="Armor">
+	<item id="47800" name="Red Libra's Request - Kartia's Labyrinth Lv. 95 (Party)" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate Kalios in Kartia's Labyrinth (Lv. 95, Party). -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="47801" name="Red Libra Request - Crystal Prison (Baylor)" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate Baylor in the Crystal Prison. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="47802" name="Red Libra Request - Nightmare Kamaloka" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate Dark Rider in Nightmare Kamaloka. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="47803" name="Red Libra Request - Embryo Command Post" type="EtcItem">
+		<!-- A request issued by the Red Libra Merchants to eliminate Commander Burnstein in the Command Post. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="47804" name="Faint Scroll: Enchant Elemental Shirt" type="EtcItem">
+		<!-- An enchant scroll for Sayha's/ Eva's/ Maphr's/ Pa'agrio's Shirt, Shiny Elemental Shirt and Physical/ Magical Reflect Shirt. In case of failure the enchant value remains the same. Cannot be used with shirts enchanted to +7 and higher. -->
+		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="18769" level="1" /> <!-- Faint Scroll: Enchant Elemental Shirt -->
+		</skills>
+	</item>
+	<item id="47805" name="Scroll: Enchant Brilliant Elemental Shirt" type="EtcItem">
+		<!-- An enchant scroll for shirts. In case of failure, the enchant value remains the same. -->
+		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="18770" level="1" /> <!-- Shining Scroll: Enchant Shirt -->
+		</skills>
+	</item>
+	<item id="47806" name="Einhasad's Charisma Potion" type="EtcItem">
+		<!-- When used, CHA +5 for 30 min. The effect does not stack with Freya's Luck Potion, Freya's Charisma Potion, Archangel's Grace, or High Priest's Grace. Cooldown: 5 min. The effect remains after death. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_instant_charisma_potion_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18771" level="1" /> <!-- Einhasad's Charisma Potion -->
+		</skills>
+	</item>
+	<item id="47807" name="Sayha's Talisman Lv. 1" type="Armor">
+		<!-- Grants Sayha's power, when equipped. P. Def. +112, M. Def. +74, acquired XP/ SP +1%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Upgrade>. Compound with Sayha's Talisman of the same level. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27787" level="1" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47808" name="Sayha's Talisman Lv. 2" type="Armor">
+		<!-- Grants Sayha's power, when equipped. P. Def. +225, M. Def. +147, acquired XP/ SP +2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Upgrade>. Compound with Sayha's Talisman of the same level. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27787" level="2" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47809" name="Sayha's Talisman Lv. 3" type="Armor">
+		<!-- Grants Sayha's power, when equipped. P. Def. +450, M. Def. +294, acquired XP/ SP +3%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Upgrade>. Compound with Sayha's Talisman of the same level. -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27787" level="3" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47810" name="Sayha's Talisman Lv. 4" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +2%, skill cooldown -2%. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27787" level="4" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47811" name="Sayha's Talisman Lv. 5" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +901, M. Def. +589, acquired XP/ SP +7%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +2%, skill cooldown -2%. Active skill:. Sayha's Grace Lv. 1. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
+			<skill id="27787" level="5" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47812" name="Sayha's Talisman Lv. 6" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +1126, M. Def. +736, acquired XP/ SP +10%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +3%, skill cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
+			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
+			<skill id="27787" level="6" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47813" name="Sayha's Talisman Lv. 7" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +1351, M. Def. +883, acquired XP/ SP +15%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +3%, skill cooldown -3%. Active skills:. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="27789" level="1" /> <!-- Sayha's Grace -->
+			<skill id="27790" level="1" /> <!-- Sayha's Encouragement -->
+			<skill id="27791" level="1" /> <!-- Sayha's Anger -->
+			<skill id="27787" level="7" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47814" name="Sayha's Talisman Lv. 8" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +1576, M. Def. +1030, acquired XP/ SP +20%. If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +5%, skill cooldown -5%. Active skills:. Sayha's Grace Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Sayha's Support Lv. 1. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="27789" level="2" /> <!-- Sayha's Grace -->
+			<skill id="27790" level="2" /> <!-- Sayha's Encouragement -->
+			<skill id="27791" level="2" /> <!-- Sayha's Anger -->
+			<skill id="27792" level="1" /> <!-- Sayha's Support -->
+			<skill id="27787" level="8" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47815" name="Sayha's Talisman Lv. 9" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +1801, M. Def. +1178, acquired XP/ SP +25%, Recovery Potions' Effect +5000 (except percentage-recovery items). If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +5%, skill cooldown -5%. Active skills:. Sayha's Grace Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Sayha's Support Lv. 2. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="27789" level="3" /> <!-- Sayha's Grace -->
+			<skill id="27790" level="3" /> <!-- Sayha's Encouragement -->
+			<skill id="27791" level="3" /> <!-- Sayha's Anger -->
+			<skill id="27792" level="2" /> <!-- Sayha's Support -->
+			<skill id="27787" level="9" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47816" name="Sayha's Talisman Lv. 10" type="Armor">
+		<!-- When equipped, grants Sayha's powers: P. Def. +2027, M. Def. +1325, acquired XP/ SP +30%, Recovery Potions' Effect +7000 (except percentage-recovery items). If Venir's Talisman Lv. 12+ or Soul Talisman Lv. 1+ is equipped, all attack power +9%, skill cooldown -5%. Active skills:. Sayha's Grace Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Sayha's Support Lv. 3. Effects of two identical talismans do not stack -->
+		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="27789" level="4" /> <!-- Sayha's Grace -->
+			<skill id="27790" level="4" /> <!-- Sayha's Encouragement -->
+			<skill id="27791" level="4" /> <!-- Sayha's Anger -->
+			<skill id="27792" level="3" /> <!-- Sayha's Support -->
+			<skill id="27787" level="10" /> <!-- Sayha's Talisman -->
+		</skills>
+	</item>
+	<item id="47817" name="Sayha's Talisman Pack" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 1. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47807" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 1 -->
+		</capsuled_items>
+	</item>
+	<item id="47818" name="Dimensional Bracelet Pack Lv. 6" type="EtcItem">
+		<!-- Double-click to obtain Dimensional Bracelet Lv. 6. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47819" min="1" max="1" chance="100" /> <!-- Dimensional Bracelet Lv. 6 - CHA +5 -->
+		</capsuled_items>
+	</item>
+	<item id="47819" name="Dimensional Bracelet Lv. 6" additionalName="CHA +5" type="Armor">
+		<!-- When equipped, unlocks 6 talisman slots. CHA +5. -->
+		<set name="icon" val="icon.dimension_bracelet_i05" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
+			<skill id="18057" level="1" /> <!-- Dimensional Bracelet -->
+		</skills>
+	</item>
+	<item id="47820" name="Sayha's Talisman Pack Lv. 9" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 9. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47815" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 9 -->
+		</capsuled_items>
+	</item>
+	<item id="47821" name="Sayha's Talisman Pack Lv. 10" type="EtcItem">
+		<!-- Double-click to obtain Sayha's Talisman Lv. 10. The talisman cannot be dropped or exchanged. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47816" min="1" max="1" chance="100" /> <!-- Sayha's Talisman Lv. 10 -->
+		</capsuled_items>
+	</item>
+	<item id="47822" name="Puss the Cat's Evidence Photo" type="EtcItem">
+		<!-- Photo of the cute face of Puss the Cat. Required to get a blessing buff from Puss the Cat. -->
+		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47823" name="Festival Fairy's Gift Wrap" additionalName="Event" type="EtcItem">
+		<!-- Festival Fairy's Chuseok gift. Double-click to obtain Vitality Recovery Honey Rice Cakes (100 pcs.), Festival Fairy's Five-colored Rice Cake (15 pcs.), Festival Fairy's Five-colored Sweets (10 pcs.). -->
+		<set name="icon" val="icon.event_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47824" min="10" max="10" chance="100" /> <!-- Sweet Rice Cake - Event -->
+			<item id="47825" min="1" max="1" chance="100" /> <!-- Traditional Hanbok - Event -->
+		</capsuled_items>
+	</item>
+	<item id="47824" name="Sweet Rice Cake" additionalName="Event" type="EtcItem">
+		<!-- A sweet rice cake. When used, recovers HP. Cooldown: 1 min. -->
+		<set name="icon" val="icon.ev_ricecake_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18790" level="1" /> <!-- Sweet Rice Cake -->
+		</skills>
+	</item>
+	<item id="47825" name="Hanbok Outfit" additionalName="Event" type="EtcItem">
+		<!-- When used, for 30 min., all stats +1, changes the armor appearance to that of Hanbok. Cooldown: 5 min. -->
+		<set name="icon" val="icon.ev_kr_traditional_dress" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18791" level="1" /> <!-- Traditional Hanbok -->
+		</skills>
+	</item>
+	<item id="47826" name="Hanbok" type="Armor">
 		<!-- An item to make Hanbok Outfit. -->
 		<set name="icon" val="icon.ev_kr_traditional_dress" />
 		<set name="default_action" val="EQUIP" />
@@ -12,6 +390,1062 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="47827" name="Test Adena Capsule" type="EtcItem">
+		<!-- Double-click to obtain 50 billion adena. -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="57" min="2147483647" max="2147483647" chance="100" /> <!-- Adena -->
+		</capsuled_items>
+	</item>
+	<item id="47828" name="Adena Test Box" type="EtcItem">
+		<!-- Double-click to obtain 100 or 500 billion adena. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47829" name="Lionel Hunter Mission List - 4" type="EtcItem">
+		<!-- The 4th request from Lionel Hunter that should be fulfilled to obtain a new Exalted Power. Complete missions from Commando Captain Sporcha in the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, the Fishing Guild Leader Santiago in Heine, and the Hunters' Guild President Arcturus in the Hunters' Village. Your another option is to go to Head Priest Sylvain in Dion's Temple of Einhasad. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47830" name="Leona's Certificate" type="EtcItem">
+		<!-- The certificate received for completing Commando Captain Sporcha's mission from Fire Dragon Bride Leona Blackbird. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47831" name="Kekropus' Certificate" type="EtcItem">
+		<!-- The certificate received for completing Giant Tracker Leader Krenaht's mission from Hierarch Kekropus. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47832" name="Santiago's Certificate" type="EtcItem">
+		<!-- A certificate for completing Fishing Guild Leader Santiago's mission. Take all your certificates to Lionel Hunter in Heine to get new abilities. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47833" name="Arcturus' Certificate" type="EtcItem">
+		<!-- A certificate for completing Hunters' Guild Leader Arcturus' mission. Take all your certificates to Lionel Hunter in Heine to get new abilities. -->
+		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47834" name="Lionel Hunter Mission List - 5" type="EtcItem">
+		<!-- Lionel Hunter's 5th list of missions for you to get new abilities. You must complete the missions from the following people: Master Cyphona and Commissary Dinford in the Blackbird Campsite, Mystic Tavern's Owner Settlen, Admiral Keucereus from the Keucereus Alliance Base. Another way is for you to complete a mission from Cardinal Seresin from Oren. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47835" name="Ferin's Certificate" type="EtcItem">
+		<!-- A certificate from Ferin for completing Master Cyphona's mission. Take all your certificates to Eva's Knight Lionel Hunter in Heine to get new abilities. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47836" name="Logart Van Dyke's Certificate" type="EtcItem">
+		<!-- A certificate from Logart van Dyke for completing Commissary Dinford's mission. Take all your certificates to Eva's Knight Lionel Hunter in Heine to get new abilities. -->
+		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47837" name="Settlen's Certificate" type="EtcItem">
+		<!-- The certificate received for completing Mystic Tavern Owner Settlen's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
+		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47838" name="Keucereus' Certificate" type="EtcItem">
+		<!-- A certificate for completing Admiral Keucereus' mission. Take all your certificates to Lionel Hunter in Heine to get new abilities. -->
+		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47839" name="Proof of Qualification" type="EtcItem">
+		<!-- Proof obtained after killing the monsters spoken of by Commando Captain Sporcha in Hellbound. All you have to do is take it to Fire Dragon Bride Leona Blackbird in the Hellbound Refugee Camp. -->
+		<set name="icon" val="icon.etc_black_freezing_core_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47840" name="Blackbird Clan's Certification" type="EtcItem">
+		<!-- Proof of reaching Amity Level 6 with the Blackbird Clan. Take this with the other certifications to Kekropus, and you can receive Kekropus' Certification. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47841" name="Giant Trackers Certification" type="EtcItem">
+		<!-- Proof of reaching Amity Level 6 with the Giant Trackers. Take this with the other certifications to Kekropus, and you can receive Kekropus' Certification. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47842" name="Special Fish Stew" type="EtcItem">
+		<!-- Special fish stew from the Fishing Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="47843" name="Proof of Strength" type="EtcItem">
+		<!-- A proof of killing monsters, collected for Eva's Knight Lionel Hunter from Heine. Take it to Lionel Hunter. -->
+		<set name="icon" val="icon.etc_freezing_core_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="47844" name="Mother Tree Guardian's Certification" type="EtcItem">
+		<!-- A certificate for reaching the Mother Tree Guardians' faction Lv. 6. Can exchanged for Logart van Dyke's Certificate in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47845" name="Unworldly Visitors' Certification" type="EtcItem">
+		<!-- A certificate for reaching the Unworldly Visitors' faction Lv. 6. Can exchanged for Logart van Dyke's Certificate in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47846" name="Kingdom's Royal Guard's Certification" type="EtcItem">
+		<!-- A certificate for reaching the Kingdom's Royal Guards' faction Lv. 6. Can exchanged for Logart van Dyke's Certificate in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47847" name="Story Book - Tauti" type="EtcItem">
+		<!-- A story book containing all the stories of Tauti in the Mystic Tavern -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47848" name="Story Book - Kelbim" type="EtcItem">
+		<!-- A story book containing all the stories of Kelbim in the Mystic Tavern -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47849" name="Story Book - Freya" type="EtcItem">
+		<!-- A story book containing all the stories of Freya in the Mystic Tavern -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47850" name="Story Book - Kain van Halter" type="EtcItem">
+		<!-- A story book containing all the stories of Kain van Halter in the Mystic Tavern -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47851" name="Sayha's Energy" type="EtcItem">
+		<!-- Required for upgrading Sayha's Talisman Lv. 8 or lower. In case of failure, Sayha's Talisman is not destroyed. However, Sayha's Energy is consumed in any case. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_energy" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47852" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 4" type="EtcItem">
+		<!-- Required for learning Dignity of the Exalted Lv. 4. Only for the main class. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="18345" level="4" /> <!-- Spellbook: Dignity of the Exalted Lv. 4 -->
+		</skills>
+	</item>
+	<item id="47853" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 5" type="EtcItem">
+		<!-- Required for learning Dignity of the Exalted Lv. 5. Only for the main class. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="18345" level="5" /> <!-- Spellbook: Dignity of the Exalted Lv. 5 -->
+		</skills>
+	</item>
+	<item id="47854" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 1" type="EtcItem">
+		<!-- Required for learning Vitality of the Exalted Lv. 1. Only for the main class. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="18793" level="1" /> <!-- Spellbook: Vitality of the Exalted Lv. 1 -->
+		</skills>
+	</item>
+	<item id="47855" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 2" type="EtcItem">
+		<!-- Required for learning Vitality of the Exalted Lv. 2. Only for the main class. -->
+		<set name="icon" val="icon.giant_book_i02" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<conditions msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</conditions>
+		<skills>
+			<skill id="18793" level="2" /> <!-- Spellbook: Vitality of the Exalted Lv. 2 -->
+		</skills>
+	</item>
+	<item id="47866" name="Star Sign" type="EtcItem">
+		<!-- A reward for completing the Fishing Guild Leader Santiago's mission. Required for upgrading Seed Bracelets. -->
+		<set name="icon" val="icon.star_sign" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47867" name="Frenzied Tauti's One-handed Axe" type="Weapon">
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for basic attacks +15%, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Rage skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
+		<set name="icon" val="icon.tauti_weapon_one_hand_axe_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Rage -->
+			<skill id="8878" level="2" /> <!-- Frenzied Tauti's One-handed Axe -->
+		</skills>
+	</item>
+	<item id="47868" name="Frenzied Tauti's Two-handed Axe" type="Weapon">
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for basic attacks +15%, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Rage skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
+		<set name="icon" val="icon.tauti_weapon_two_hand_axe_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1013</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Rage -->
+			<skill id="8879" level="2" /> <!-- Frenzied Tauti's Two-handed Axe -->
+		</skills>
+	</item>
+	<item id="47869" name="Frenzied Tauti's Dual Axe" type="Weapon">
+		<!-- A weapon made from Frenzied Tauti's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Atk. Spd. +15%, Critical Rate for basic attacks +15%, P. Skill Power +5%, Attribute Attack +150. Additionally, enables the Frenzied Tauti's Rage skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented, imbued with an attribute. -->
+		<set name="icon" val="icon.tauti_weapon_dual_axe_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1700" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1013</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Rage -->
+			<skill id="8880" level="2" /> <!-- Frenzied Tauti's Dual Axe -->
+		</skills>
+	</item>
+	<item id="47870" name="Insane Kelbim's Dagger" type="Weapon">
+		<!-- Kelbim's Dagger made from Insane Kelbim's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for basic attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.kelbim_weapon_cutter_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">773</stat>
+			<stat type="mAtk">384</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+			<skill id="13816" level="2" /> <!-- Insane Kelbim's Dagger -->
+		</skills>
+	</item>
+	<item id="47871" name="Insane Kelbim's Dual Dagger" type="Weapon">
+		<!-- Kelbim's dual daggers made from Insane Kelbim's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for basic attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.kelbim_weapon_dual_dagger_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">884</stat>
+			<stat type="mAtk">384</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+			<skill id="13817" level="2" /> <!-- Insane Kelbim's Dual Daggers -->
+		</skills>
+	</item>
+	<item id="47872" name="Insane Kelbim's Bow" type="Weapon">
+		<!-- Kelbim's Bow made from Insane Kelbim's Fragment. PvP damage +15%, Max HP +25%, P./ M. Atk. +10%, Critical Damage for basic attacks and P./ M. skills +15%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +150, all attack power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.kelbim_weapon_bow_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1740</stat>
+			<stat type="mAtk">513</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+			<skill id="13818" level="2" /> <!-- Insane Kelbim's Bow -->
+		</skills>
+	</item>
+	<item id="47873" name="Insane Kelbim's Crossbow" type="Weapon">
+		<!-- Kelbim's crossbow made from Insane Kelbim's Fragment. PvP damage +15%, Max HP +25%, P. Atk. +10%, Critical Damage for basic attacks +15%, Atk. Spd. +15%, Attribute Attack +150, P. Skill Power +5%. Additionally, enables the Spirit of Kelbim skill. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.kelbim_weapon_crossbow_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="reuse_delay" val="1350" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1567</stat>
+			<stat type="mAtk">384</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="darkPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+			<skill id="13819" level="2" /> <!-- Insane Kelbim's Crossbow -->
+		</skills>
+	</item>
+	<item id="47874" name="Enhanced Shadow Shaper" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_dagger_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">728</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+		</stats>
+		<skills>
+			<skill id="13842" level="13" /> <!-- Enhanced Shadow Shaper -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47875" name="Enhanced Shadow Cutter" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_onehand_sword_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+		</stats>
+		<skills>
+			<skill id="13837" level="13" /> <!-- Enhanced Shadow Cutter -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47876" name="Enhanced Shadow Slasher" type="Weapon">
+		<!-- A weapon from Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +10%, Critical Rate for basic attacks and P./ M. skills +10%, Critical Damage for basic attacks and P./ M. skills +5%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_twohand_sword_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1013</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+		</stats>
+		<skills>
+			<skill id="13838" level="13" /> <!-- Enhanced Shadow Slasher -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47877" name="Enhanced Shadow Fighter" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_fist_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1013</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+		</stats>
+		<skills>
+			<skill id="13839" level="13" /> <!-- Enhanced Shadow Fighter -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47878" name="Enhanced Shadow Stormer" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_spear_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+		</stats>
+		<skills>
+			<skill id="13840" level="13" /> <!-- Enhanced Shadow Stormer -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="47879" name="Enhanced Shadow Thrower" type="Weapon">
+		<!-- A weapon from Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +10%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_bow_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1640</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="critRate">12</stat>
+		</stats>
+		<skills>
+			<skill id="13843" level="13" /> <!-- Enhanced Shadow Thrower -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47880" name="Enhanced Shadow Guardian" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +5%, Critical Damage for basic attacks +10%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_crossbow_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1476</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="critRate">12</stat>
+		</stats>
+		<skills>
+			<skill id="13844" level="13" /> <!-- Enhanced Shadow Guardian -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47881" name="Enhanced Shadow Buster" type="Weapon">
+		<!-- An Ashen Shadow Revolutionaries' weapon enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, M. Atk. +10%, M. Skill Critical Rate +5%, M. Skill Critical Damage +10%, Casting Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special Soul Crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_onehand_magic_sword_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">666</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+		</stats>
+		<skills>
+			<skill id="13845" level="13" /> <!-- Enhanced Shadow Buster -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47882" name="Enhanced Shadow Retributer" type="Weapon">
+		<!-- A weapon from Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P./ M. Atk. +10%, Critical Damage for basic attacks/ M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted, crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_twohand_magic_blunt_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">811</stat>
+			<stat type="mAtk">532</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="critRate">6</stat>
+		</stats>
+		<skills>
+			<skill id="13846" level="13" /> <!-- Enhanced Shadow Retributer -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47883" name="Enhanced Shadow Dual Swords" type="Weapon">
+		<!-- A weapon from the Ashen Shadow Camp enhanced through researches of Shadai, Ishuma and the Blacksmith of Mammon. PvE damage +10%, Max HP/ MP +15%, P. Atk. +10%, Critical Rate for basic attacks +10%, Critical Damage for basic attacks +5%, Atk. Spd. +15%, Attribute Attack +150. The item's appearance cannot be modified. Cannot be enchanted or crystallized. 1 special soul crystal can be inserted. Can be augmented and imbued with an attribute. -->
+		<set name="icon" val="icon.shadow_dual_sword_1_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R99" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1013</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+		</stats>
+		<skills>
+			<skill id="13841" level="13" /> <!-- Enhanced Shadow Dual Swords -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="47884" name="Frenzied Tauti's Fragment" type="EtcItem">
+		<!-- Sculpture created by condensing the power of Frenzied Tauti. You can strengthen Tauti's weapon by giving it the power of Frenzied Tauti. -->
+		<set name="icon" val="icon.tauti_piece_high" />
+		<set name="material" val="LEATHER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47885" name="Insane Kelbim's Fragment" type="EtcItem">
+		<!-- Sculpture created by condensing the power of Insane Kelbim. You can strengthen Tauti's weapon by giving it the power of Insane Kelbim. -->
+		<set name="icon" val="icon.kelbim_piece_high" />
+		<set name="material" val="LEATHER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47886" name="Enhanced Shadow Ingot" type="EtcItem">
+		<!-- An Enhanced Shadow Ingot, the result of research by Shadai, Ishuma, and the Blacksmith of Mammon. If you go to Neti in the Town of Gludio, you can enhance your Shadow weapon. -->
+		<set name="icon" val="icon.shadow_change_stone_high" />
+		<set name="material" val="LEATHER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47887" name="Special Fish Stew" type="EtcItem">
+		<!-- A special fish stew made using Santiago's new recipe. After creating 50 and bringing them to Santiago with 80 Gemstones, you can be recognized as a leader. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="material" val="FISH" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="47888" name="Tauti's Crystal" type="EtcItem">
+		<!-- A Tauti Weapon Crystal made by Ishuma. It is used as a material to strengthen Tauti weapons. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i03" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47889" name="Kelbim's Crystal" type="EtcItem">
+		<!-- A Kelbim Weapon Crystal made by Kaysia. It is used as a material to strengthen Kelbim weapons. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i02" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47890" name="Research Shadow Weapon" type="Weapon">
+		<!-- An Ashen Shadow Revolutionaries' weapon researched by Blacksmith of Mammon. Cannot be enchanted with Scroll: Enchant Shadow Weapon, only Scrolls: Enchant Weapon of the appropriate grade can be used. Take it to Blacksmith of Mammon after enchanting to +7. -->
+		<set name="icon" val="icon.weapon_shadow_dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mAtk">1</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47891" name="Crystal with Magical Power" type="EtcItem">
+		<!-- A crystal received after destroying the Hellbound Monsters. It seems to have magical power. If you collect this and bring it to Shadai, you can get Shadai's solution. -->
+		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47892" name="Ore with Giant's Energy" type="EtcItem">
+		<!-- Ore received on killing monsters the Giant's Cave. Can be exchanged for Ishuma's Minerals. -->
+		<set name="icon" val="icon.etc_earth_crystal_1_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47893" name="Shadai's Solution" type="EtcItem">
+		<!-- A solution with magic powers made by Shadai heating crystals in a laboratory. Take this and the Ishuma's minerals together to find the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.etc_madicine_bottle_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47894" name="Ishuma's Minerals" type="EtcItem">
+		<!-- Minerals made by Ishuma's synthesis in the lab using the Giant's ore. Let's go to the Blacksmith of Mammon with this and Shadai's Solution. -->
+		<set name="icon" val="icon.etc_synthetic_cokes_i01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47895" name="Shadow Ingot Fragment" type="EtcItem">
+		<!-- A sculpture created by the Blacksmith of Mammon during the study of the Shadow Ingot. It feels like it can be restored through compounding. You can exchange 10 Shadow Ingot Fragments for a Shadow ingot by visiting Neti in the Town of Gludio. Items made through compounding cannot be exchanged/ traded, so be careful when combining. -->
+		<set name="icon" val="icon.r_soul_stone_piece_i03" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="47896" name="Improved Shadow Ingot" type="EtcItem">
+		<!-- An Improved Shadow Ingot, a composite of Shadow Ingot pieces. It does not seem to be appropriate for Shadow Weapon Enhance as it has different properties from the Shadow Ingot. It should be brought to the Blacksmith of Mammon. -->
+		<set name="icon" val="icon.etc_lump_silver_i00" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47897" name="NPC: Alfred von Hellmann" type="Weapon">
+		<!-- For NPC: Vampire -->
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="144" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47898" name="NPC_Vampire Crossbow" type="Weapon">
+		<!-- For NPC. -->
+		<set name="icon" val="icon.weapon_taslam_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">198</stat>
+			<stat type="mAtk">83</stat>
+			<stat type="critRate">10</stat>
+			<stat type="accCombat">-1.5</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="47899" name="Shadow Crystal" type="EtcItem">
+		<!-- Crystals made by crystallizing research Shadow Weapons. A special material that can interest the blacksmiths. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 </list>

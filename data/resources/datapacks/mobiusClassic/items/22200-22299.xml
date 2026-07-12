@@ -1,63 +1,1584 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="22221" name="Stable Scroll: Enchant S-grade Weapon" type="EtcItem">
-		<!-- The item is not available. <font color=eeaa22>Enchanting is safe up to +4. In case of failure, the enchant value remains the same.</font>. <font color=ff6666>Cannot be used with weapons enchanted to +7 and higher.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
-		<set name="default_action" val="SKILL_REDUCE" />
+	<item id="22200" name="Agathion Chorong" additionalName="33-day / Event" type="Armor">
+		<!-- A bracelet for summoning Agathion Chorong. You cannot receive Agathion Chorong's gift if you have no free space in your inventory. -->
+		<set name="icon" val="BranchSys2.icon.event_agathion_han_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="47520" />
+		<skills>
+			<skill id="21259" level="1" /> <!-- Summon Agathion Chorong -->
+			<skill id="21260" level="1" /> <!-- Message -->
+			<skill id="23334" level="1" /> <!-- Agathion's Cute Trick - Chorong -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="22201" name="Package: Agathion Chorong" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Agathion Chorong. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22200" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Chorong - 33-day / Event -->
+		</capsuled_items>
+	</item>
+	<item id="22202" name="High-grade Weapon Pack (S80-grade)" additionalName="Event" type="EtcItem">
+		<!-- Pack containing S80-grade weapon. Which one could it be? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22357" level="1" /> <!-- S84-grade Weapon Pack -->
+		</skills>
+	</item>
+	<item id="22203" name="Vorpal Armor Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a Vorpal weapon. Which one will you get? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22358" level="1" /> <!-- Vorpal Armor Pack -->
+		</skills>
+	</item>
+	<item id="22204" name="Attribute Stone Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain an Attribute Stone. Which one will you get? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22381" level="1" /> <!-- Attribute Stone Pack -->
+		</skills>
+	</item>
+	<item id="22205" name="Attribute Crystal Pack" additionalName="Event" type="EtcItem">
+		<!-- Box containing Attribute Crystal. Which one could it be? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22382" level="1" /> <!-- Attribute Crystal Pack -->
+		</skills>
+	</item>
+	<item id="22206" name="Soul Crystal Box Lv. 17" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Soul Crystal Lv. 17. Which one could it be...? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22355" level="1" /> <!-- Soul Crystal Box Lv. 17 -->
+		</skills>
+	</item>
+	<item id="22207" name="Soul Crystal Box Lv. 18" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Soul Crystal Lv. 18. Which one could it be...? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22356" level="1" /> <!-- Soul Crystal Box Lv. 18 -->
+		</skills>
+	</item>
+	<item id="22208" name="Bad Bunny's Necklace Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Bad Bunny's Necklace - 7-day or 30-day. Which one will you get? -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22377" level="1" /> <!-- Bad Bunny's Necklace Pack -->
+		</skills>
+	</item>
+	<item id="22209" name="Bad Bunny's Earring Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Bad Bunny's Earring - 7-day or 30-day. Which one will you get? -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22378" level="1" /> <!-- Bad Bunny's Earring Pack -->
+		</skills>
+	</item>
+	<item id="22210" name="Bad Bunny's Ring Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Bad Bunny's Ring - 7-day or 30-day. Which one will you get? -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22379" level="1" /> <!-- Bad Bunny's Ring Pack -->
+		</skills>
+	</item>
+	<item id="22211" name="Bad Bunny's Necklace" additionalName="7-day / Event" type="Armor">
+		<!-- Its effects are MP+300, HP+500, CP+1035, increased P. Atk., increased M. Atk., Wild Magic Effect, and increased Critical Damage. 7-day. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">125</stat>
+			<stat type="maxMp">50</stat>
+		</stats>
+		<skills>
+			<skill id="21261" level="1" /> <!-- Bad Bunny's Necklace -->
+		</skills>
+	</item>
+	<item id="22212" name="Bad Bunny's Earring" additionalName="7-day / Event" type="Armor">
+		<!-- MP +37, HP +250. Grants Vampiric Rage effect, increases P. Accuracy and decreases M. Skill Cooldown/ MP Consumption. Effects of two identical earrings do not stack. Available for 7 d. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">94</stat>
+			<stat type="maxMp">37</stat>
+		</stats>
+		<skills>
+			<skill id="21262" level="1" /> <!-- Bad Bunny's Earring -->
+		</skills>
+	</item>
+	<item id="22213" name="Bad Bunny's Ring" additionalName="7-day / Event" type="Armor">
+		<!-- MP +25. Increases Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. Available for 7 d. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">62</stat>
+			<stat type="maxMp">25</stat>
+		</stats>
+		<skills>
+			<skill id="21263" level="1" /> <!-- Bad Bunny's Ring -->
+		</skills>
+	</item>
+	<item id="22214" name="Bad Bunny's Necklace" additionalName="30-day / Event" type="Armor">
+		<!-- MP +300, HP +500, CP +1035, increases P./ M. Atk. and Critical Damage. Grants Wild Magic Effect. 30-day. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">125</stat>
+			<stat type="maxMp">50</stat>
+		</stats>
+		<skills>
+			<skill id="21261" level="1" /> <!-- Bad Bunny's Necklace -->
+		</skills>
+	</item>
+	<item id="22215" name="Bad Bunny's Earring" additionalName="30-day / Event" type="Armor">
+		<!-- MP +37, HP +250. Grants Vampiric Rage effect, increases P. Accuracy and decreases M. Skill Cooldown/ MP Consumption. Effects of two identical earrings do not stack. Available for 30 d. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">94</stat>
+			<stat type="maxMp">37</stat>
+		</stats>
+		<skills>
+			<skill id="21262" level="1" /> <!-- Bad Bunny's Earring -->
+		</skills>
+	</item>
+	<item id="22216" name="Bad Bunny's Ring" additionalName="30-day / Event" type="Armor">
+		<!-- MP +25. Increases Atk. Spd. and Casting Spd. Effects of two identical rings do not stack. Available for 30 d. -->
+		<set name="icon" val="branchsys2.icon2.g_accessory_event_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">62</stat>
+			<stat type="maxMp">25</stat>
+		</stats>
+		<skills>
+			<skill id="21263" level="1" /> <!-- Bad Bunny's Ring -->
+		</skills>
+	</item>
+	<item id="22217" name="Agathion Chorong's Gift Set" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 2-5 Agathion Chorong's Gifts. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22380" level="1" /> <!-- Agathion Chorong's Gift Set -->
+		</skills>
+	</item>
+	<item id="22218" name="Destruction Enchant Scroll Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Destruction Scroll: Enchant S-grade Weapon. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22221" min="1" max="1" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
+		</capsuled_items>
+	</item>
+	<item id="22219" name="Destruction S-grade Enchant Scroll Set" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Destruction Scroll: Enchant S-grade Weapon (3 pcs.) and Destruction Scroll: Enchant S-grade Armor (3 pcs.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22221" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Weapon - Event -->
+			<item id="22222" min="3" max="3" chance="100" /> <!-- Destruction Scroll: Enchant S-grade Armor - Event -->
+		</capsuled_items>
+	</item>
+	<item id="22220" name="Agathion Chorong's Gift" additionalName="Event" type="EtcItem">
+		<!-- Agathion Chorong's gift. Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22354" level="1" /> <!-- Agathion Chorong's Gift -->
+		</skills>
+	</item>
+	<item id="22221" name="Destruction Scroll: Enchant S-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For S-grade weapons. P. Atk. +5 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +6 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
-			<skill id="51293" level="1" /> <!-- Stable Scroll: Enchant S-grade Weapon -->
+			<skill id="22359" level="1" /> <!-- Destruction Scroll: Enchant S-grade Weapon -->
 		</skills>
 	</item>
-	<item id="22222" name="Stable Scroll: Enchant S-grade Armor" type="EtcItem">
-		<!-- The item is not available. <font color=eeaa22>Enchanting is safe up to +4. In case of failure, the enchant value remains the same.</font>. <font color=ff6666>Cannot be used with armor and accessories enchanted to +6 and higher.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.giant_scrl_of_ench_am_s" />
+	<item id="22222" name="Destruction Scroll: Enchant S-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For S-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with equipment enchanted to +6 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
-			<skill id="51294" level="1" /> <!-- Stable Scroll: Enchant S-grade Armor -->
+			<skill id="22360" level="1" /> <!-- Destruction Scroll: Enchant S-grade Armor -->
 		</skills>
 	</item>
-	<item id="22223" name="Stable Scroll: Enchant A-grade Weapon" type="EtcItem">
-		<!-- A scroll for enchanting A-grade weapons. <font color=eeaa22>Enchanting is safe up to +4. In case of failure, the enchant value remains the same.</font>. <font color=ff6666>Cannot be used with weapons enchanted to +7 and higher.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
+	<item id="22223" name="Destruction Scroll: Enchant A-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For A-grade weapons. P. Atk. +4 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +5 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
-			<skill id="22361" level="1" /> <!-- Stable Scroll: Enchant A-grade Weapon -->
+			<skill id="22361" level="1" /> <!-- Destruction Scroll: Enchant A-grade Weapon -->
 		</skills>
 	</item>
-	<item id="22224" name="Stable Scroll: Enchant A-grade Armor" type="EtcItem">
-		<!-- A scroll for enchanting A-grade upper armor/ lower armor/ full-body armor/ helmets/ gloves/ boots/ sigils/ shields. <font color=eeaa22>Enchanting is safe up to +4. In case of failure, the enchant value remains the same.</font>. <font color=ff6666>Cannot be used with armor and accessories enchanted to +6 and higher.</font>. <font color=ff6666>Cannot be used for mass enchanting.</font> -->
-		<set name="icon" val="icon.giant_scrl_of_ench_am_a" />
+	<item id="22224" name="Destruction Scroll: Enchant A-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for A-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
-			<skill id="22362" level="1" /> <!-- Stable Scroll: Enchant A-grade Armor -->
+			<skill id="22362" level="1" /> <!-- Destruction Scroll: Enchant A-grade Armor -->
 		</skills>
+	</item>
+	<item id="22225" name="Destruction Scroll: Enchant B-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For B-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="22363" level="1" /> <!-- Destruction Scroll: Enchant B-grade Weapon -->
+		</skills>
+	</item>
+	<item id="22226" name="Destruction Scroll: Enchant B-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for B-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="22364" level="1" /> <!-- Destruction Scroll: Enchant B-grade Armor -->
+		</skills>
+	</item>
+	<item id="22227" name="Destruction Scroll: Enchant C-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For C-grade weapons. P. Atk. +3 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +4 for two-handed swords/ blunts/ staffs, dual dagger/ sword, fists. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="22365" level="1" /> <!-- Destruction Scroll: Enchant C-grade Weapon -->
+		</skills>
+	</item>
+	<item id="22228" name="Destruction Scroll: Enchant C-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- P. Def. +1 for C-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the power of the Goddess of Destruction stops the item from resetting and maintains its existing enchant value. HP gradually increases with each enchant value starting from +4. Cannot be used on armor +6 or above. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="22366" level="1" /> <!-- Destruction Scroll: Enchant C-grade Armor -->
+		</skills>
+	</item>
+	<item id="22229" name="Destruction Scroll: Enchant D-grade Weapon" additionalName="Event" type="EtcItem">
+		<!-- For D-grade weapons. P. Atk. +2 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +2 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. Due to the power of the Goddess of Destruction, in case of failure, the item does not disappear and its enchant value remains the same. Cannot be used with weapons enchanted to +15 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="22367" level="1" /> <!-- Destruction Scroll: Enchant D-grade Weapon -->
+		</skills>
+	</item>
+	<item id="22230" name="Destruction Scroll: Enchant D-grade Armor" additionalName="Event" type="EtcItem">
+		<!-- For D-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, HP is increased with each enchant value. Enchanting is safe up to +3 for common armor and to +4 for full-body armor. In case of failure, the item does not disappear, and its enchant value remains the same due to the Goddess of Destruction's power. Cannot be used with equipment enchanted to +6 and higher. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="22368" level="1" /> <!-- Destruction Scroll: Enchant D-grade Armor -->
+		</skills>
+	</item>
+	<item id="22231" name="Mysterious Blessed S-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="22369" level="1" /> <!-- Blessed S-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="22232" name="Package: Mysterious S-grade Soulshots" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 1000 Mysterious S-grade Soulshots. -->
+		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_s_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22370" level="1" /> <!-- Package: Mysterious S-grade Soulshots -->
+		</skills>
+	</item>
+	<item id="22233" name="Package: Mysterious Blessed S-grade Spiritshots" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 1000 Mysterious Blessed S-grade Soulshots. -->
+		<set name="icon" val="br_cashtex.item.br_cash_pack_of_blessed_spiritshot_s_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="500" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22371" level="1" /> <!-- Package: Mysterious Blessed S-grade Spiritshots -->
+		</skills>
+	</item>
+	<item id="22234" name="Sweet Chocolate Box" type="EtcItem">
+		<!-- Double-click to obtain Sweet Chocolate (3 pcs.) and Valentine's Day Love Pouch (1 pc.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22235" min="3" max="3" chance="100" /> <!-- Sweet Chocolate -->
+			<item id="22236" min="1" max="1" chance="100" /> <!-- Valentine's Day Love Pouch -->
+		</capsuled_items>
+	</item>
+	<item id="22235" name="Sweet Chocolate" type="EtcItem">
+		<!-- For 30 min., recovers Vitality when acquiring XP while hunting. Cannot be used repeatedly. Cooldown: 60 min. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="22374" level="1" /> <!-- Sweet Chocolate -->
+		</skills>
+	</item>
+	<item id="22236" name="Valentine's Day Love Pouch" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Formal Wear (14-day), Agathion Seal Bracelet - Chuchu (14-day), Wild Rose Pig Candy (14-day), Scroll: Enchant Head Accessory (for warriors or wizards). -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22375" level="1" /> <!-- Valentine's Day Love Pouch -->
+		</skills>
+	</item>
+	<item id="22237" name="Shiny Couple Ring" type="Armor">
+		<!-- A ring that allows you to summon another player. Both the summoner and the one being summoned must be in a party and have these rings equipped. Cooldown: 1 h. -->
+		<set name="icon" val="icon.accessory_shiny_couple_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="GOLD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<stats>
+			<stat type="mDef">7</stat>
+		</stats>
+		<skills>
+			<skill id="21264" level="1" /> <!-- Summon Friend -->
+		</skills>
+	</item>
+	<item id="22238" name="Scroll: Hair Accessory (Warrior)" type="EtcItem">
+		<!-- A scroll that adds a Warrior property to a head accessory. -->
+		<set name="icon" val="BranchSys.icon.br_scroll_of_transformation_i00" />
+		<set name="material" val="PAPER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="2007" level="1" /> <!-- Scroll: Enchant A-grade Armor -->
+		</skills>
+	</item>
+	<item id="22239" name="Scroll: Hair Accessory (Wizard)" type="EtcItem">
+		<!-- A scroll that adds a Wizard property to a head accessory. -->
+		<set name="icon" val="BranchSys.icon.br_scroll_of_transformation_i00" />
+		<set name="material" val="PAPER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="2007" level="1" /> <!-- Scroll: Enchant A-grade Armor -->
+		</skills>
+	</item>
+	<item id="22240" name="Enhanced Rose Spirit Coupon (5-hour)" additionalName="Event" type="EtcItem">
+		<!-- A coupon that can be exchanged for Enhanced Rose Spirit Minion Necklace (5-hour). -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="22241" name="Sweet Chocolate Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Sweet Chocolate (3 pcs.) and Valentine's Day Love Pouch (1 pc.). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22242" min="3" max="3" chance="100" /> <!-- Sweet Chocolate - Event -->
+			<item id="22236" min="1" max="1" chance="100" /> <!-- Valentine's Day Love Pouch -->
+		</capsuled_items>
+	</item>
+	<item id="22242" name="Sweet Chocolate" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., replenishes Vitality when acquiring XP while hunting. Cannot be used repeatedly. Cooldown: 60 min. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="22376" level="1" /> <!-- Sweet Chocolate -->
+		</skills>
+	</item>
+	<item id="22243" name="(Not used)" additionalName="Event" type="Armor">
+		<!-- Not used -->
+		<set name="icon" val="icon.accessory_shiny_couple_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<stats>
+			<stat type="mDef">7</stat>
+		</stats>
+		<skills>
+			<skill id="21264" level="1" /> <!-- Summon Friend -->
+		</skills>
+	</item>
+	<item id="22244" name="Mysterious C-grade Soulshot" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with C-grade weapons. -->
+		<set name="icon" val="icon.bm_spirit_bullet_green" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="2151" level="1" /> <!-- C-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="22245" name="Mysterious B-grade Soulshot" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with B-grade weapons. -->
+		<set name="icon" val="icon.bm_spirit_bullet_red" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="2152" level="1" /> <!-- B-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="22246" name="Mysterious A-grade Soulshot" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with A-grade weapons. -->
+		<set name="icon" val="icon.bm_spirit_bullet_silver" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="2153" level="1" /> <!-- A-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="22247" name="Mysterious S-grade Soulshot" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.bm_spirit_bullet_gold" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="2154" level="1" /> <!-- S-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="22248" name="Package: Mysterious Soulshots" type="EtcItem">
+		<!-- Double-click to obtain 10,000 Mysterious Soulshots of grades from C to S. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22244" min="10000" max="10000" chance="100" /> <!-- Mysterious C-grade Soulshot -->
+			<item id="22245" min="10000" max="10000" chance="100" /> <!-- Mysterious B-grade Soulshot -->
+			<item id="22246" min="10000" max="10000" chance="100" /> <!-- Mysterious A-grade Soulshot -->
+			<item id="22247" min="10000" max="10000" chance="100" /> <!-- Mysterious S-grade Soulshot -->
+		</capsuled_items>
+	</item>
+	<item id="22249" name="Mysterious Blessed C-grade Spiritshot" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with C-grade weapons. -->
+		<set name="icon" val="icon.bm_spell_shot_green" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="2161" level="1" /> <!-- Blessed C-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="22250" name="Mysterious Blessed B-grade Spiritshot" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with B-grade weapons. -->
+		<set name="icon" val="icon.bm_spell_shot_red" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="2162" level="1" /> <!-- Blessed B-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="22251" name="Mysterious Blessed A-grade Spiritshot" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with A-grade weapons. -->
+		<set name="icon" val="icon.bm_spell_shot_silver" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="2163" level="1" /> <!-- Blessed A-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="22252" name="Mysterious Blessed S-grade Spiritshot" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.bm_spell_shot_gold" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed S-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="22253" name="Package: Mysterious Blessed Spiritshots" type="EtcItem">
+		<!-- Double-click to obtain 2000 Mysterious Blessed Spiritshots of C-grade to S-grade. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22249" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed C-grade Spiritshot -->
+			<item id="22250" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed B-grade Spiritshot -->
+			<item id="22251" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed A-grade Spiritshot -->
+			<item id="22252" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed S-grade Spiritshot -->
+		</capsuled_items>
+	</item>
+	<item id="22254" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. 30-day. Cooldown: 1 h. -->
+		<set name="icon" val="icon.bm_ring_of_friendship" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="21265" level="1" /> <!-- Summon Friend -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="22255" name="Package: Mysterious Friend Summon Bracelet (30-day)" type="EtcItem">
+		<!-- Double-click to obtain 1 Miraculous Friend Summon Bracelet (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22254" min="1" max="1" chance="100" /> <!-- Miraculous Friend Summon Bracelet - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="22256" name="Chic Silver Chapeau" type="Armor">
+		<!-- Fashionable Feather Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22257" name="Fancy Flower Hat" type="Armor">
+		<!-- Fancy Flower Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_flowerhat_for_lady" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22258" name="Unicorn Horn Circlet" type="Armor">
+		<!-- Unicorn Horn Circlet. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_horncirclet_of_unicorn" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22259" name="Forest Forget-me-not Hat" type="Armor">
+		<!-- Forest Forget-me-not Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_forgetmenot_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22260" name="White Uniform Hat" type="Armor">
+		<!-- White Uniform Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_navy_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22261" name="Golden Viking Circlet" type="Armor">
+		<!-- A golden Viking Circlet. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_vikingcirclet_gold" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22262" name="Mischievous Bee Hat" type="Armor">
+		<!-- Mischievous Bee Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_bee_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22263" name="Chic Silver Chapeau" additionalName="Event" type="Armor">
+		<!-- Fashionable Feather Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22264" name="Fancy Flower Hat" additionalName="Event" type="Armor">
+		<!-- Fancy Flower Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_flowerhat_for_lady" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22265" name="Unicorn Horn Circlet" additionalName="Event" type="Armor">
+		<!-- Unicorn Horn Circlet. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_horncirclet_of_unicorn" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22266" name="Forest Forget-me-not Hat" additionalName="Event" type="Armor">
+		<!-- Forest Forget-me-not Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_forgetmenot_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22267" name="White Uniform Hat" additionalName="Event" type="Armor">
+		<!-- White Uniform Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_navy_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22268" name="Golden Viking Circlet" additionalName="Event" type="Armor">
+		<!-- A golden Viking Circlet. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_vikingcirclet_gold" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22269" name="Mischievous Bee Hat" additionalName="Event" type="Armor">
+		<!-- Mischievous Bee Hat. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon2.pi_bee_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+	</item>
+	<item id="22270" name="Pathfinder Supplies (Lv. 42)" type="EtcItem">
+		<!-- An old supply box. Double-click to obtain an item with a certain chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22383" level="1" /> <!-- Pathfinder Supplies -->
+		</skills>
+	</item>
+	<item id="22271" name="Pathfinder Supplies (Lv. 43)" type="EtcItem">
+		<!-- An old supply box. Double-click to obtain an item with a certain chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22384" level="1" /> <!-- Pathfinder Supplies -->
+		</skills>
+	</item>
+	<item id="22272" name="Pathfinder Supplies (Lv. 44)" type="EtcItem">
+		<!-- An old supply box. Double-click to obtain an item with a certain chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i07" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22385" level="1" /> <!-- Pathfinder Supplies -->
+		</skills>
+	</item>
+	<item id="22273" name="Infected Kanabion Tissue Research Paper" type="EtcItem">
+		<!-- Research report about the infected kanabion. Deliver it to the Pathfinder in Rune Castle. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="22274" name="PA - Transformation Scroll Box" additionalName="Event" type="EtcItem">
+		<!-- A gift given after 2 h. of playing with PA. Double-click to obtain a random transformation scroll. Care to know which one? -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22386" level="1" /> <!-- PA Transformation Scroll Pack -->
+		</skills>
+	</item>
+	<item id="22275" name="PA - Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A gift that can be received after playing with active PA for 1 h. Double-click to open and get a gift. PA only. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22279" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hour) - Event -->
+			<item id="22280" min="1" max="1" chance="100" /> <!-- PA Blessing (1-hour) - Event -->
+		</capsuled_items>
+	</item>
+	<item id="22276" name="PA - Transformation Stick Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a transformation stick. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22388" level="1" /> <!-- PA - Transformation Stick Pack -->
+		</skills>
+	</item>
+	<item id="22277" name="PA - Hair Accessory Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a head accessory. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22389" level="1" /> <!-- PA - Head Accessory Box -->
+		</skills>
+	</item>
+	<item id="22278" name="PA - Luxury Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to open and get a gift. PA only. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="material" val="COTTON" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22390" level="1" /> <!-- PA - Luxury Box -->
+		</skills>
+	</item>
+	<item id="22279" name="PA Vitality (1-hour)" additionalName="Event" type="EtcItem">
+		<!-- When used, replenishes Vitality for 1 h. when hunting monsters. Cooldown: 60 min. Vitality item with limited usage. -->
+		<set name="icon" val="icon.etc_pccafe_point_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="shared_reuse_group" val="107" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
+		<skills>
+			<skill id="22407" level="1" /> <!-- PA Vitality -->
+		</skills>
+	</item>
+	<item id="22280" name="PA Blessing (1-hour)" additionalName="Event" type="EtcItem">
+		<!-- HP Recovery Rate/ Max MP/ P. Critical Damage +20%. For 1 h., applies the following effects: Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3000" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22253" level="1" /> <!-- Prophecy of Water -->
+			<skill id="22256" level="1" /> <!-- Might -->
+			<skill id="22257" level="1" /> <!-- Wind Walk -->
+			<skill id="22258" level="1" /> <!-- Haste -->
+			<skill id="22259" level="1" /> <!-- Vampiric Rage -->
+			<skill id="22260" level="1" /> <!-- Berserker Spirit -->
+			<skill id="22261" level="1" /> <!-- Empower -->
+			<skill id="22262" level="1" /> <!-- Acumen -->
+			<skill id="22263" level="1" /> <!-- Shield -->
+			<skill id="22264" level="1" /> <!-- Focus -->
+			<skill id="22265" level="1" /> <!-- Death Whisper -->
+			<skill id="22266" level="1" /> <!-- Guidance -->
+			<skill id="22267" level="1" /> <!-- Clarity -->
+			<skill id="22268" level="1" /> <!-- Wild Magic -->
+			<skill id="22269" level="6" /> <!-- Concentration -->
+		</skills>
+	</item>
+	<item id="22281" name="Sujin Transformation Stick" additionalName="7-day / Event" type="Weapon">
+		<!-- A stick for transforming into Blessed Child Sujin. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
+			<skill id="21196" level="1" /> <!-- Blessed Child Transformation Skill: Sujin -->
+		</skills>
+	</item>
+	<item id="22282" name="Package: Sujin Transformation Stick (7-day)" additionalName="Event" type="EtcItem">
+		<!-- It contains a stick that transforms you into a the Blessed Child Sujin. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22281" min="1" max="1" chance="100" /> <!-- Sujin Transformation Stick - 7-day / Event -->
+		</capsuled_items>
+	</item>
+	<item id="22283" name="Trejuo Transformation Stick" additionalName="7-day / Event" type="Weapon">
+		<!-- A stick for transforming into Blessed Child Trejuo. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">1</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
+			<skill id="21195" level="1" /> <!-- Trejuo Transformation -->
+		</skills>
+	</item>
+	<item id="22284" name="Package: Trejuo Transformation Stick (7-day)" additionalName="Event" type="EtcItem">
+		<!-- It contains a stick that transforms you into a the Blessed Child Trejuo. -->
+		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22283" min="1" max="1" chance="100" /> <!-- Trejuo Transformation Stick - 7-day / Event -->
+		</capsuled_items>
+	</item>
+	<item id="22285" name="Eva's Circlet" additionalName="Event" type="Armor">
+		<!-- A circlet that contains Eva's mysterious powers. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_circlet_of_eva_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="22286" name="Jewelry Box - Talisman" type="EtcItem">
+		<!-- A jewelry box with treasures. Double-click to obtain a talisman with a certain chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="material" val="CRYSTAL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22391" level="1" /> <!-- Jewelry Box - Talisman -->
+		</skills>
+	</item>
+	<item id="22287" name="Agathion Chuchu" additionalName="33-day / Event" type="Armor">
+		<!-- Summons Agathion Chuchu. You cannot receive Chuchu's gift if you have no free space in your inventory. -->
+		<set name="icon" val="icon.high_agathion_bracelet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="47520" />
+		<skills>
+			<skill id="21266" level="1" /> <!-- Summon Agathion Chuchu -->
+			<skill id="21267" level="1" /> <!-- Message -->
+			<skill id="23336" level="1" /> <!-- Agathion's Cute Trick - Chuchu -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="22288" name="Package: Agathion Chuchu" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Agathion Chuchu. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22287" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Chuchu - 33-day / Event -->
+		</capsuled_items>
+	</item>
+	<item id="22289" name="Agathion Chuchu's Gift" additionalName="Event" type="EtcItem">
+		<!-- Agathion Chuchu's gift. Double-click to obtain a random item. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="material" val="COTTON" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="22402" level="1" /> <!-- Agathion Chuchu's Gift -->
+		</skills>
+	</item>
+	<item id="22290" name="Recipe: Valentine Cake" additionalName="Event" type="EtcItem">
+		<!-- The recipe for Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_recipe_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="recipe_id" val="3001" /> <!-- mk_ev_happy_cake_racipe -->
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="22291" name="Valentine Cake" additionalName="Event" type="EtcItem">
+		<!-- A simple and sweet Valentine Cake. The magic in this cake might give you a reward, or change into a Tasty Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_1_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22392" level="1" /> <!-- Low-grade Cake of Happiness -->
+		</skills>
+	</item>
+	<item id="22292" name="Tasty Valentine Cake" additionalName="Event" type="EtcItem">
+		<!-- A very tasty Valentine Cake. The magic in this cake might give you a reward, or change into a Delicious Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_2_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22393" level="1" /> <!-- Mid-grade Cake of Happiness -->
+		</skills>
+	</item>
+	<item id="22293" name="Delicious Valentine Cake" additionalName="Event" type="EtcItem">
+		<!-- A very delicious Valentine Cake. The magic in this cake might give you a reward, or change into a Decadent Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_3_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22394" level="1" /> <!-- High-grade Cake of Happiness -->
+		</skills>
+	</item>
+	<item id="22294" name="Decadent Valentine Cake" additionalName="Event" type="EtcItem">
+		<!-- The best Valentine Cake you can make from the recipe. Take it to the Queen of Hearts along with Miraculous Cake Decorations to get Miraculous Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_4_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22395" level="1" /> <!-- Top-grade Cake of Happiness -->
+		</skills>
+	</item>
+	<item id="22295" name="Miraculous Valentine Cake" additionalName="30-day / Event" type="EtcItem">
+		<!-- Ultimate cake received from the Valentine Messenger Queen of Hearts. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cake_5_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22396" level="1" /> <!-- Divine Cake of Happiness -->
+		</skills>
+	</item>
+	<item id="22296" name="Cake Ingredient: Dark Chocolate" additionalName="Event" type="EtcItem">
+		<!-- Ingredient for making a Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="22297" name="Cake Ingredient: White Chocolate" additionalName="Event" type="EtcItem">
+		<!-- Ingredient for making a Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_whitechoco_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="22298" name="Cake Ingredient: Fresh Cream" additionalName="Event" type="EtcItem">
+		<!-- Ingredient for making a Valentine Cake. -->
+		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="22299" name="Package: Miraculous Valentine Cake: Special Ingredient" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Miraculous Cake Decorations. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22300" min="1" max="1" chance="100" /> <!-- Miraculous Cake Decorations - 15-day / Event -->
+		</capsuled_items>
 	</item>
 </list>

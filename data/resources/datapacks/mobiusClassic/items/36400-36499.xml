@@ -1,18 +1,2971 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36413" name="Single Mesh Armor" additionalName="Sealed" type="Armor">
+	<item id="36400" name="Nevit's Hourglass (1-hour)" type="EtcItem">
+		<!-- When used, acquired XP +50% for 1 h. For all levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="9828" level="1" /> <!-- Nevit's Hourglass (1-hour) -->
+		</skills>
+	</item>
+	<item id="36401" name="Lucky Pouch" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain 2 Scrolls: Midsummer Passion and 1 Beora's Ancient Energy. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36404" min="2" max="2" chance="100" /> <!-- Scroll: Midsummer Passion - Event -->
+			<item id="36094" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+		</capsuled_items>
+	</item>
+	<item id="36402" name="High-grade Lucky Pouch" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Scroll: Midsummer Passion (6 pcs.), Beora's Ancient Energy (1 pc.), Feather of Blessing (2 pcs.), Special Cocktail (2 pcs.), High-grade Stone: Enchant R-grade Armor (1 pc.). Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36404" min="6" max="6" chance="100" /> <!-- Scroll: Midsummer Passion - Event -->
+			<item id="36094" min="2" max="2" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			<item id="10649" min="2" max="2" chance="100" /> <!-- Feather of Blessing -->
+			<item id="34082" min="2" max="2" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Stone: Enchant R-grade Armor -->
+		</capsuled_items>
+	</item>
+	<item id="36403" name="Top-grade Lucky Pouch" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Scroll: Midsummer Passion (12 pcs.), Beora's Ancient Energy (1 pc.), Feather of Blessing (3 pcs.), Special Cocktail (2 pcs.), Destructive Energy (2 pcs.), Rare Accessory Pack (Time-limited). If you are very lucky, you might also get Rare Accessory Pack (Permanent), R99-grade Weapon Pack and Unbind Scroll Pack. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_pouch_gold_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36404" min="12" max="12" chance="100" /> <!-- Scroll: Midsummer Passion - Event -->
+			<item id="36094" min="2" max="2" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			<item id="10649" min="3" max="3" chance="100" /> <!-- Feather of Blessing -->
+			<item id="34082" min="2" max="2" chance="100" /> <!-- Heavenly Cocktail -->
+			<item id="35562" min="2" max="2" chance="100" /> <!-- Destructive Energy -->
+			<item id="36405" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack (Time-limited) - Event -->
+			<item id="36406" min="1" max="1" chance="0.001" /> <!-- Rare Accessory Pack (Permanent) - Event -->
+			<item id="36407" min="1" max="1" chance="0.01" /> <!-- R99-grade Weapon Pack - Event -->
+			<item id="36408" min="1" max="1" chance="0.1" /> <!-- Unbind Scroll - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
+		<!-- Acquired XP/ SP +30% for 1 h. The effect does not stack with those of Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Vital Wind, Bard's Wind. -->
+		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9832" level="1" /> <!-- Scroll: Midsummer Passion -->
+		</skills>
+	</item>
+	<item id="36405" name="Rare Accessory Pack (Expiratory)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Antharas' Blessed Earring (14-day), Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36409" min="1" max="1" chance="100" /> <!-- Antharas' Blessed Earring - 14-day -->
+			<item id="36410" min="1" max="1" chance="100" /> <!-- Valakas' Blessed Necklace - 14-day -->
+			<item id="36411" min="1" max="1" chance="100" /> <!-- Tauti's Ring (14-day) - Event -->
+			<item id="36412" min="1" max="1" chance="100" /> <!-- Earth Wyrm's Ring (14-day) - Event -->
+		</capsuled_items>
+	</item>
+	<item id="36406" name="Rare Accessory Pack (Permanent)" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Antharas' Blessed Earring (14-day), Valakas' Blessed Necklace, Tauti's Ring, Earth Wyrm's Ring. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9829" level="1" /> <!-- Rare Accessory Pack (Permanent) -->
+		</skills>
+	</item>
+	<item id="36407" name="R99-grade Weapon Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the unidentified Helios weapons. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9830" level="1" /> <!-- R99-grade Weapon Pack -->
+		</skills>
+	</item>
+	<item id="36408" name="Unbind Scroll Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain an Unbind Scroll for R-grade/ R95-grade/ R99-grade Weapon/ Armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9831" level="1" /> <!-- Unbind Scroll Pack -->
+		</skills>
+	</item>
+	<item id="36409" name="Blessed Antharas' Earring" additionalName="14-day" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
+		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<stats>
+			<stat type="mDef">170</stat>
+		</stats>
+		<skills>
+			<skill id="13314" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
+		</skills>
+	</item>
+	<item id="36410" name="Blessed Valakas' Necklace" additionalName="14-day" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<stats>
+			<stat type="mDef">226</stat>
+		</stats>
+		<skills>
+			<skill id="13316" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
+		</skills>
+	</item>
+	<item id="36411" name="Tauti's Ring (14-day)" additionalName="Event" type="Armor">
+		<!-- Fire/ Dark Resistance +25, MP +38, Critical Damage for basic attacks +15%, P. Skill Power +5%, PvP damage +5%, Confusion/ Obstruction Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, received PvP damage -5%. When using a blunt weapon, P. Critical Rate +54. Effects of two identical rings do not stack (excluding M. Def. and Attribute Resistance). -->
+		<set name="icon" val="icon.accessary_tauti_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<stats>
+			<stat type="mDef">108</stat>
+		</stats>
+		<skills>
+			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
+		</skills>
+	</item>
+	<item id="36412" name="Earth Wyrm's Heart Ring (14-day)" additionalName="Event" type="Armor">
+		<!-- MP +38, MP Recovery Rate +3, Critical Damage for basic attacks +20%, P. Accuracy +5, Infection Atk. Rate and Resistance +50, Confusion/ Danger Zone Resistance +20, Atk. Spd./ Casting Spd. +6%, Wind/ Water Resistance +30. Effects of two identical rings do not stack. <Active skills>. Heartbeat Accelerate: For 5 min., party members' Atk. Spd./ Casting Spd. +5%, Vampiric Rage effect +2% (cooldown: 2 h.). Pure Blood: Removes Infection debuffs (cooldown: 2 h.). -->
+		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="crystal_type" val="R" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="20160" />
+		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
+		<stats>
+			<stat type="mDef">108</stat>
+		</stats>
+		<skills>
+			<skill id="13318" level="1" /> <!-- Earth Wyrm's Ring - Heartbeat Accelerate -->
+			<skill id="13319" level="1" /> <!-- Earth Wyrm's Ring - Pure Blood -->
+			<skill id="13317" level="1" /> <!-- Earth Wyrm's Ring -->
+		</skills>
+	</item>
+	<item id="36413" name="Single Mesh Armor" type="Armor">
 		<!-- Changes into single mesh in a certain area. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
+		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="price" val="5000000" />
+		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
+	</item>
+	<item id="36414" name="Dragon Claw" type="EtcItem">
+		<!-- Required for making Dragon weapons. -->
+		<set name="icon" val="icon.etc_toenail_dragon" />
+		<set name="weight" val="2" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36415" name="Dragon Blood" type="EtcItem">
+		<!-- Required for using dragon weapon's skills. -->
+		<set name="icon" val="icon.etc_blood_gragon" />
+		<set name="weight" val="2" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="500000" />
+	</item>
+	<item id="36416" name="Dragon Tooth" type="EtcItem">
+		<!-- Required for using dragon weapon's skills. -->
+		<set name="icon" val="icon.etc_tooth_gragon" />
+		<set name="weight" val="2" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="36417" name="Antharas Shaper" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1039</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36418" name="Antharas Slasher" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36419" name="Antharas Thrower" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_bow_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">2339</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36420" name="Antharas Buster" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36421" name="Antharas Cutter" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36422" name="Antharas Stormer" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Number of targets hit on a basic attack +4. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_spear_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="POLE" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="2010" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="BRONZE" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="36423" name="Antharas Fighter" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1550" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36424" name="Antharas Avenger" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36425" name="Antharas Dual Blunt Weapon" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36426" name="Antharas Dual Swords" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36427" name="Valakas Shaper" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1039</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36428" name="Valakas Cutter" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36429" name="Valakas Slasher" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36430" name="Valakas Thrower" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">2339</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36431" name="Valakas Buster" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36432" name="Valakas Caster" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1080" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36433" name="Valakas Retributer" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1080" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
+		<stats>
+			<stat type="pAtk">1157</stat>
+			<stat type="mAtk">759</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="critRate">6</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36434" name="Lindvior Shaper" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_dagger_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1039</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36435" name="Lindvior Thrower" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_bow_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">2339</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36436" name="Lindvior Slasher" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="1740" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36437" name="Lindvior Caster" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">950</stat>
+			<stat type="mAtk">690</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36438" name="Lindvior Cutter" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
+		<set name="weight" val="1520" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="critRate">8</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36439" name="Lindvior Guardian" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="weight" val="1580" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">2106</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36440" name="Lindvior Dual Daggers" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 1. -->
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="critRate">12</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="36441" name="Antharas Shaper" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1877</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36442" name="Antharas Slasher" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36443" name="Antharas Thrower" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4225</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36444" name="Antharas Buster" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1716</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36445" name="Antharas Cutter" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36446" name="Antharas Stormer" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36447" name="Antharas Fighter" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36448" name="Antharas Avenger" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36449" name="Antharas Dual Blunt Weapon" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36450" name="Antharas Dual Swords" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36451" name="Valakas Shaper" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1877</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36452" name="Valakas Cutter" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36453" name="Valakas Slasher" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36454" name="Valakas Thrower" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4225</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36455" name="Valakas Buster" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1716</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36456" name="Valakas Caster" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1716</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36457" name="Valakas Retributer" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">2090</stat>
+			<stat type="mAtk">1371</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36458" name="Lindvior Shaper" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1877</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36459" name="Lindvior Thrower" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">4225</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36460" name="Lindvior Slasher" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36461" name="Lindvior Caster" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1716</stat>
+			<stat type="mAtk">1247</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36462" name="Lindvior Cutter" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36463" name="Lindvior Guardian" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">3804</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36464" name="Lindvior Dual Daggers" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 2. -->
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36465" name="Antharas Shaper" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2177</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36466" name="Antharas Slasher" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36467" name="Antharas Thrower" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">4898</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36468" name="Antharas Buster" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36469" name="Antharas Cutter" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36470" name="Antharas Stormer" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36471" name="Antharas Fighter" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36472" name="Antharas Avenger" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36473" name="Antharas Dual Blunt Weapon" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36474" name="Antharas Dual Swords" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36475" name="Valakas Shaper" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2177</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36476" name="Valakas Cutter" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36477" name="Valakas Slasher" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36478" name="Valakas Thrower" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">4898</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36479" name="Valakas Buster" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36480" name="Valakas Caster" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36481" name="Valakas Retributer" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2423</stat>
+			<stat type="mAtk">1590</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36482" name="Lindvior Shaper" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2177</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36483" name="Lindvior Thrower" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">4898</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36484" name="Lindvior Slasher" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36485" name="Lindvior Caster" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">1990</stat>
+			<stat type="mAtk">1446</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36486" name="Lindvior Cutter" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36487" name="Lindvior Guardian" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">4411</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36488" name="Lindvior Dual Daggers" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Lindvior's Duplicity. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Lindvior weapon Lv. 3. -->
+		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8899" level="1" /> <!-- Lindvior's Duplicity -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36489" name="Antharas Shaper" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2523</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36490" name="Antharas Slasher" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1676</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36491" name="Antharas Thrower" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_bow_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">5678</stat>
+			<stat type="mAtk">1676</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36492" name="Antharas Buster" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2307</stat>
+			<stat type="mAtk">1676</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36493" name="Antharas Cutter" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36494" name="Antharas Stormer" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_spear_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36495" name="Antharas Fighter" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36496" name="Antharas Avenger" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36497" name="Antharas Dual Blunt Weapon" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36498" name="Antharas Dual Swords" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Antharas' Lash. Antharas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get an Antharas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="earthPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
+			<skill id="8895" level="1" /> <!-- Antharas' Lash -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="36499" name="Valakas Shaper" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Valakas' Bite. Valakas' Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Valakas weapon Lv. 4. -->
+		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2523</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="firePower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
+			<skill id="8897" level="1" /> <!-- Valakas' Bite -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
 	</item>
 </list>

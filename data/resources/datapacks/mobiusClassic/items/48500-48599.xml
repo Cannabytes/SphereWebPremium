@@ -1,0 +1,1709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48500" name="Dragon's Relic Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="2" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48502" min="5" max="5" chance="100" /> <!-- Scroll: Enchant Miraculous Weapon -->
+			<item id="29379" min="1" max="1" chance="3.03" /> <!-- Peeves' Purple Potion -->
+			<item id="29677" min="1" max="1" chance="3.03" /> <!-- Freya's Glittering Ice Rose -->
+			<item id="29916" min="1" max="1" chance="3.03" /> <!-- +20 Supreme Krishna Weapon Pack -->
+			<item id="36414" min="1" max="1" chance="3.03" /> <!-- Dragon Claw -->
+			<item id="36515" min="6" max="6" chance="3.03" /> <!-- Elcyum -->
+			<item id="37560" min="5" max="5" chance="3.03" /> <!-- Emperor's Vitality Tonic -->
+			<item id="39738" min="10" max="10" chance="3.03" /> <!-- Rune Stone -->
+			<item id="47494" min="5" max="5" chance="3.03" /> <!-- Selenite -->
+			<item id="48831" min="1" max="1" chance="3.03" /> <!-- Jewel Energy -->
+			<item id="48840" min="1" max="1" chance="3.03" /> <!-- Ultimate Luxurious Jewelry Box Lv. 1 -->
+			<item id="48876" min="1" max="1" chance="3.03" /> <!-- Forgotten Spellbook - Chapter 1 -->
+			<item id="48912" min="1" max="1" chance="3.03" /> <!-- Gran Kain's Shining Scroll: Enchant R-grade Weapon -->
+			<item id="80000" min="1" max="1" chance="3.03" /> <!-- Artifact Fragment -->
+			<item id="80449" min="1" max="1" chance="3.03" /> <!-- Royal Black Save Ticket -->
+			<item id="80501" min="1" max="1" chance="3.03" /> <!-- Royal Gold Save Ticket -->
+			<item id="80502" min="1" max="1" chance="3.03" /> <!-- Gran Kain's Shining Scroll: Enchant R-grade Armor -->
+			<item id="80636" min="1" max="1" chance="3.03" /> <!-- Artifact Crystal -->
+			<item id="80817" min="2" max="2" chance="3.03" /> <!-- Wondrous Cocktail -->
+			<item id="80932" min="1" max="1" chance="3.03" /> <!-- Greater Zodiac Agathion's Book of Growth -->
+			<item id="80958" min="1" max="1" chance="3.03" /> <!-- Sealed Heavenly Talisman -->
+			<item id="80964" min="1" max="1" chance="3.03" /> <!-- Energy of Protection -->
+			<item id="81059" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (P. Atk.) - STR +5, DEX +5, CHA +4 -->
+			<item id="81069" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (Critical Damage for Basic Attacks) - STR +5, DEX +5, CHA +4 -->
+			<item id="81079" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (P. Skill Critical Damage) - STR +5, DEX +5, CHA +4 -->
+			<item id="81099" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Atk.) - INT +5, WIT +5, CHA +4 -->
+			<item id="81109" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Critical Damage) - INT +5, WIT +5, CHA +4 -->
+			<item id="81119" min="1" max="1" chance="3.03" /> <!-- Legendary Dye Lv. 5 (M. Skill Power) - INT +5, WIT +5, CHA +4 -->
+			<item id="81134" min="2" max="2" chance="3.03" /> <!-- Crystal of Dyes -->
+			<item id="81453" min="1" max="1" chance="3.03" /> <!-- Enhanced Rune Stone -->
+			<item id="81706" min="1" max="1" chance="3.03" /> <!-- Scroll: Enchant Superior Seed Bracelet -->
+			<item id="81729" min="1" max="1" chance="3.03" /> <!-- Augmenting Stone: Accessory -->
+			<item id="81747" min="2" max="2" chance="3.03" /> <!-- Royal Honey Dark Beer -->
+			<item id="81759" min="2" max="2" chance="3.03" /> <!-- Glowing Royal Dragon's Attribute Potion - XP -->
+		</capsuled_items>
+		<skills>
+			<skill id="39201" level="2" /> <!-- Dragon's Relic Pack -->
+		</skills>
+	</item>
+	<item id="48501" name="Shining Dragon's Relic Chest" type="EtcItem">
+		<!-- Double-click the box to obtain a very rare item at random. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39201" level="3" /> <!-- Shining Dragon's Relic Pack -->
+		</skills>
+	</item>
+	<item id="48502" name="Scroll: Enchant Mysterious Weapon" type="EtcItem">
+		<!-- Can only be used for enchanting Mysterious Dragon Slayer that can be bought for runes from Dragon Slayer Luna in any town. Cannot be used with items that boost enchant success rate. -->
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39204" level="1" /> <!-- Scroll: Enchant Miraculous Weapon -->
+		</skills>
+	</item>
+	<item id="48503" name="Mysterious and Special Weapon Enchant Scroll" type="EtcItem">
+		<!-- Required for enchanting Mysterious Dragon Slayer that can be purchased for runes from the Dragon Slayer in any town during the event. Enchanting is random from +1 to +3. Can be used for enchanting up to +14 -->
+		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_WP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="39204" level="2" /> <!-- Scroll: Enchant Miraculous Special Weapon -->
+		</skills>
+	</item>
+	<item id="48504" name="Capsule: +10 Bloody Armor Set" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: +10 Bloody Eternal Heavy/ Light/ Robe set. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="48505" min="1" max="1" chance="30.33" /> <!-- Capsule: +10 Bloody Heavy Armor -->
+			<item id="48506" min="1" max="1" chance="30.33" /> <!-- Capsule: +10 Bloody Light Armor -->
+			<item id="48507" min="1" max="1" chance="30.33" /> <!-- Capsule: +10 Bloody Robe -->
+		</capsuled_items>
+		<skills>
+			<skill id="39201" level="4" /> <!-- +10 Bloody Armor Set Pack -->
+		</skills>
+	</item>
+	<item id="48505" name="Capsule: +10 Bloody Heavy Armor" type="EtcItem">
+		<!-- Double-click to obtain Bloody Eternal heavy armor set enchanted to +10. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="6" />
+		<set name="extractableCountMax" val="6" />
+		<capsuled_items>
+			<item id="17435" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Eternal Shield -->
+			<item id="35079" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Helmet - Heavy armor -->
+			<item id="35080" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Breastplate - Heavy armor -->
+			<item id="35081" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Gaiters - Heavy armor -->
+			<item id="35082" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Gauntlets - Heavy armor -->
+			<item id="35083" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Boots - Heavy armor -->
+		</capsuled_items>
+		<skills>
+			<skill id="39202" level="1" /> <!-- Capsule: +10 Bloody Heavy Armor -->
+		</skills>
+	</item>
+	<item id="48506" name="Capsule: +10 Bloody Light Armor" type="EtcItem">
+		<!-- Double-click to obtain Bloody Eternal light armor set enchanted to +10. Can be removed automatically on July 12, 2017. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="5" />
+		<set name="extractableCountMax" val="5" />
+		<capsuled_items>
+			<item id="35085" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Leather Helmet - Light armor -->
+			<item id="35086" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Leather Armor - Light armor -->
+			<item id="35087" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Leather Leggings - Light armor -->
+			<item id="35088" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Leather Gloves - Light armor -->
+			<item id="35089" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Leather Boots - Light armor -->
+		</capsuled_items>
+		<skills>
+			<skill id="39202" level="2" /> <!-- Capsule: +10 Bloody Light Armor -->
+		</skills>
+	</item>
+	<item id="48507" name="Capsule: +10 Bloody Robe" type="EtcItem">
+		<!-- Double-click to obtain Bloody Eternal robe set enchanted to +10. Can be removed automatically on July 12, 2017. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="6" />
+		<set name="extractableCountMax" val="6" />
+		<capsuled_items>
+			<item id="35090" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Circlet - Robe -->
+			<item id="35091" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Tunic - Robe -->
+			<item id="35092" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Stockings - Robe -->
+			<item id="35093" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Gloves - Robe -->
+			<item id="35094" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Bloody Eternal Shoes - Robe -->
+			<item id="17446" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Eternal Sigil -->
+		</capsuled_items>
+		<skills>
+			<skill id="39202" level="3" /> <!-- Capsule: +10 Bloody Robe -->
+		</skills>
+	</item>
+	<item id="48508" name="+5 Zodiac Agathion Box" type="EtcItem">
+		<!-- Double-click to obtain +5 Zodiac Agathion Charm. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="35147" level="2" /> <!-- +5 Zodiac Agathion Cube -->
+		</skills>
+	</item>
+	<item id="48509" name="+6 Zodiac Agathion Box" type="EtcItem">
+		<!-- Double-click to obtain +6 Zodiac Agathion Charm. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="35147" level="3" /> <!-- +6 Zodiac Agathion Cube -->
+		</skills>
+	</item>
+	<item id="48510" name="+7 Zodiac Agathion Box" type="EtcItem">
+		<!-- Double-click to obtain +7 Zodiac Agathion Charm. -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="35147" level="4" /> <!-- +7 Zodiac Agathion Cube -->
+		</skills>
+	</item>
+	<item id="48511" name="Royal Red Save Ticket Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Royal R-/ R95-/ R99-grade Red Save Ticket. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39206" level="1" /> <!-- Royal Red Save Ticket Box -->
+		</skills>
+	</item>
+	<item id="48512" name="NPC Only_Lionel Hunter" type="Weapon">
+		<!-- NPC only weapon -->
+		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1500" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">17</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="48513" name="Elysium Recovery Potion" additionalName="Event" type="EtcItem">
+		<!-- When used, recovers 5000 HP. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17263" level="1" /> <!-- Hero's Quick HP Replenishing Potion -->
+		</skills>
+	</item>
+	<item id="48514" name="Red Libra Request - Shadow of the Mother Tree" type="EtcItem">
+		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Shadow of the Mother Tree. Double-click to accept. Can only be used once a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48515" name="Red Libra Request - Shadow of the Mother Tree" type="EtcItem">
+		<!-- A request from the Red Libra Guild calling on you to defeat powerful monsters in the Shadow of the Mother Tree. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48516" name="Medal of Honor" type="EtcItem">
+		<!-- A medal awarded to those who contributed to a faction. Can be exchanged for 100 Faction Points of a desired faction through Ivory Tower Wizard Valleria in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_badge_black_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48517" name="Grand Medal of Honor" type="EtcItem">
+		<!-- An honorable medal awarded to those who contributed greatly to a faction. Can be exchanged for 1000 Faction Points of a desired faction through Ivory Tower Wizard Valleria in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_badge_gold_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48518" name="Adventure Guild Cube" type="EtcItem">
+		<!-- Given to the graduates of the Adventurers' Guild. Double-click to obtain Adventurers' Guild Supply Box. When used 5 and 10 times, Home Run Ball (2 pcs.) is obtained. -->
+		<set name="icon" val="icon.special_cube_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48519" name="Adventure Guild Supply Box" type="EtcItem">
+		<!-- Double-click to obtain PA Points Coupon (720 Points), Beora's Ancient Energy (1 pc.), Emperor's Rune (2-hour). -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38096" min="1" max="1" chance="100" /> <!-- Emperor's Rune - 2-hour -->
+			<item id="45819" min="1" max="1" chance="100" /> <!-- PA Points Coupon (720 Points) -->
+			<item id="82305" min="1" max="1" chance="100" /> <!-- Beora's Ancient Energy -->
+		</capsuled_items>
+	</item>
+	<item id="48520" name="Red Libra's Fortune Scroll" additionalName="Event" type="EtcItem">
+		<!-- Fills your body with a special energy of the new world. For 30 min., P./ M. Atk. +20%, Atk. Spd./ Casting Spd. +20%, Critical Rate/ Damage for basic attacks and P./ M. skills +20%, Speed +30. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39207" level="1" /> <!-- Novice's Luck Scroll -->
+		</skills>
+	</item>
+	<item id="48521" name="Red Libra's Adena Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain adena. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48522" name="Red Libra's Scroll of Blessing Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain Scroll of Blessing - R95-/ R99-grade. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48523" name="Red Libra's Rare Earring Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing the Elysium Buffalos. Double-click to obtain one of the following items: Antharas' Blessed Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring, Lindvior's Earring. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48524" name="Red Libra's Rare Ring Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing the Elysium Buffalos. Double-click to obtain one of the following items: Baium's Soul Ring, Tauti's Ring, Earth Wyrm's Ring. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48525" name="Red Libra's Rare Necklace Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffalos. Double-click to obtain one of the following items: Valakas' Blessed Necklace, Angel's Necklace, Harnak's Enhanced Necklace. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48526" name="Red Libra's Talisman Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A gift for healing Elysium Buffalos. Double-click to obtain one of the following items: Energy of Longing, Energy of Seven Signs, Sealed Talisman of Longing/ Insanity/ Seven Signs. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="6" /> <!-- Red Libra's Talisman Gift Box -->
+		</skills>
+	</item>
+	<item id="48527" name="Red Libra's Suit Appearance Stone Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain one of the following items: Appearance Stone: White Knight Outfit, Appearance Stone: Light Assassin Outfit. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Appearance" />
+		<skills>
+			<skill id="39208" level="7" /> <!-- Red Libra's Suit Appearance Stone Gift Box -->
+		</skills>
+	</item>
+	<item id="48528" name="Red Libra's Outfit Appearance Stone Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain one of the following items: Appearance Stone: Healer Outfit, Appearance Stone: Chevalier Outfit, Appearance Stone: Kat the Cat Outfit, Appearance Stone: Wolf Barbarian Outfit, Appearance Stone: Valkyrie Outfit. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Appearance" />
+		<skills>
+			<skill id="39208" level="8" /> <!-- Red Libra's Outfit Appearance Stone Gift Box -->
+		</skills>
+	</item>
+	<item id="48529" name="Red Libra's Soul Crystal Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's or Lionel's Soul Crystal Lv. 8. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48530" name="Red Libra's Spirit Stone Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain Top-grade Spirit Stone (3 pcs.) and Life Stone: Giant's Power 3-unit Pack. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48531" name="Red Libra's Lv. 5 Legendary Dye Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A gift box earned for restoring Exhausted Elysium Buffalos. Double-click to obtain 10 Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, MEN. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48532" name="Red Libra's Seed Bracelet Gift Box" additionalName="Event" type="EtcItem">
+		<!-- A reward for healing Elysium Buffaloes. Double-click to obtain Top-grade Seed Bracelet/ Superior Seed Bracelet. -->
+		<set name="icon" val="icon.event_mahum_coinbox" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39208" level="1" /> <!-- Red Libra's Adena Gift Box -->
+		</skills>
+	</item>
+	<item id="48533" name="Trace of Evil" type="EtcItem">
+		<!-- The item that Corzet asked you to gather after defeating demons in the Silent Valley. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48534" name="Dust of Destroyed Demon" type="EtcItem">
+		<!-- The item that Corzet asked you to gather as evidence of defeating demons in the Silent Valley. -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48535" name="Scroll of Escape: Silent Valley" type="EtcItem">
+		<!-- When used, teleports to the Silent Valley. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35100" level="3" /> <!-- Scroll of Escape: Silent Valley -->
+		</skills>
+	</item>
+	<item id="48536" name="Soul Quartz" type="EtcItem">
+		<!-- A crystal containing the power of a special soul, which is made by imbuing Clan Shards with the power of magic. Used to summon a Raid Monster through a Soul Summon Stone. -->
+		<set name="icon" val="icon.etc_shinecryst_red_i00" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48537" name="Bait" type="EtcItem">
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. A common fishing bait. Fishing with this bait has a low chance of yielding Bluish Box. -->
+		<set name="icon" val="icon.etc_normal_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="4000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48538" name="Bait" additionalName="R102" type="EtcItem">
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 102. Fishing with this bait has a low chance of yielding a Reddish Box. -->
+		<set name="icon" val="icon.etc_huge_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="bodypart" val="lhand" />
+		<set name="price" val="25000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48539" name="Bait" additionalName="R105" type="EtcItem">
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 105. Fishing with this bait has a low chance of yielding a Reddish Box. -->
+		<set name="icon" val="icon.etc_huge_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="bodypart" val="lhand" />
+		<set name="price" val="30000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48540" name="Rotten Fried Fish" type="EtcItem">
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.fishing_buff_p_dmg" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39209" level="1" /> <!-- Fried Fish -->
+		</skills>
+	</item>
+	<item id="48541" name="Rotten Steamed Fish" type="EtcItem">
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.fishing_buff_m_dmg" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39210" level="1" /> <!-- Steamed Fish -->
+		</skills>
+	</item>
+	<item id="48542" name="Rotten Grilled Fish" type="EtcItem">
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.fishing_buff_pm_speed" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39211" level="1" /> <!-- Grilled Fish -->
+		</skills>
+	</item>
+	<item id="48543" name="Rotten Braised Fish" type="EtcItem">
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.fishing_buff_hp_mp" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="39212" level="1" /> <!-- Braised Fish -->
+		</skills>
+	</item>
+	<item id="48544" name="Rotten Royal Fish Soup" type="EtcItem">
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48545" name="Leona Blackbird's Message" type="EtcItem">
+		<!-- A message from Leona Blackbird, seeking the help of warriors in defeating Etis van Etina and restoring peace. -->
+		<set name="icon" val="icon.etc_blackbire_message_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48546" name="Token of Etina" type="EtcItem">
+		<!-- A token Etis van Etina gives to those assigned with important missions. Only those carrying out an important mission for Etis van Etina possess it. Take the token to Devianne for further investigation. -->
+		<set name="icon" val="icon.etc_etina_sign_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48547" name="Raw Atelia" type="EtcItem">
+		<!-- Dark Atelia that demons were extracting. It is not fully extracted yet. Gather and take this Dark Atelia to Devianne at the entrance of the Atelia Refinery. -->
+		<set name="icon" val="icon.etc_astatine_extraction_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48548" name="Origin of Giants" type="EtcItem">
+		<!-- An item you found near the destroyed throne after defeating Helios. It is a part of the life and power source of the Giants. If you gather many, you can use some of the Giants' power. Gather and take them to Leona Blackbird. -->
+		<set name="icon" val="icon.etc_giant_source_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48549" name="Fragment of Condensed Energy" type="EtcItem">
+		<!-- A fragment of Condensed Energy you can obtain by defeating demons in charge of the key process of refining the Dimensional Energy. Gather these fragments and take them to Devianne at the Atelia Refinery. -->
+		<set name="icon" val="icon.etc_condensed_energy_01" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48550" name="Crystal of Condensed Energy" type="EtcItem">
+		<!-- A crystal of Condensed Energy you can obtain by defeating Dark Atelia Guardians including Atelia Guardian Harke, Atelia Guardian Ergalion and Atelia Guardian Spira. Take it to Devianne to receive an additional reward. -->
+		<set name="icon" val="icon.etc_condensed_energy_02" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48551" name="Olympiad Class Winner's Rune" type="EtcItem">
+		<!-- A reward for the mighty warrior who has taken the first place at the Olympiad. When in inventory, acquired XP/ SP +30%, damage +5%, Speed +7, received damage -5%. Will be deleted once the Olympiad cycle ends. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.rune_olympiad_legend_server" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39219" level="1" /> <!-- Olympiad Rune - 1st Place -->
+		</skills>
+	</item>
+	<item id="48552" name="Olympiad Class Runner-up's Rune" type="EtcItem">
+		<!-- A reward for the mighty warrior who has taken the second place at the Olympiad. When in inventory, acquired XP/ SP +20%, damage +3%, Speed +3, received damage -3%. Will be deleted once the Olympiad cycle ends. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.rune_olympiad_legend_server" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39220" level="1" /> <!-- Olympiad Rune - 2nd Place -->
+		</skills>
+	</item>
+	<item id="48553" name="Legend Celebration Rune" additionalName="2-hour" type="EtcItem">
+		<!-- A reward for all characters of the server where a new Legend - the winner of the World Olympiad - is from. When in inventory, Vitality bonus +10%, damage +1%, Speed +1, received damage -1%. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.rune_olympiad_legend_server" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="39221" level="1" /> <!-- Legend Celebration Rune -->
+		</skills>
+	</item>
+	<item id="48554" name="Legend's Infinity Shaper" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="weight" val="1300" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2926</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35191" level="1" /> <!-- Special Property: Legend's Infinity Shaper -->
+		</skills>
+	</item>
+	<item id="48555" name="Legend's Infinity Cutter" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2926</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35192" level="1" /> <!-- Special Property: Legend's Infinity Cutter -->
+		</skills>
+	</item>
+	<item id="48556" name="Legend's Infinity Slasher" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3573</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35193" level="1" /> <!-- Special Property: Legend's Infinity Slasher -->
+		</skills>
+	</item>
+	<item id="48557" name="Legend's Infinity Avenger" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2926</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35194" level="1" /> <!-- Special Property: Legend's Infinity Avenger -->
+		</skills>
+	</item>
+	<item id="48558" name="Legend's Infinity Fighter" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3545</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35195" level="1" /> <!-- Special Property: Legend's Infinity Fighter -->
+		</skills>
+	</item>
+	<item id="48559" name="Legend's Infinity Stormer" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2926</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35196" level="1" /> <!-- Special Property: Legend's Infinity Stormer -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="48560" name="Legend's Infinity Thrower" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">5785</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35197" level="1" /> <!-- Special Property: Legend's Infinity Thrower -->
+		</skills>
+	</item>
+	<item id="48561" name="Legend's Infinity Guardian" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">5364</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35198" level="1" /> <!-- Special Property: Legend's Infinity Guardian -->
+		</skills>
+	</item>
+	<item id="48562" name="Legend's Infinity Buster" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_infinity_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2496</stat>
+			<stat type="mAtk">2360</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35199" level="1" /> <!-- Special Property: Legend's Infinity Buster -->
+		</skills>
+	</item>
+	<item id="48563" name="Legend's Infinity Caster" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">2496</stat>
+			<stat type="mAtk">2360</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35200" level="1" /> <!-- Special Property: Legend's Infinity Caster -->
+		</skills>
+	</item>
+	<item id="48564" name="Legend's Infinity Retributer" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3052</stat>
+			<stat type="mAtk">2518</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="accMagic">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35201" level="1" /> <!-- Special Property: Legend's Infinity Retributer -->
+		</skills>
+	</item>
+	<item id="48565" name="Legend's Infinity Dual Swords" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_r_dualsword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3573</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35202" level="1" /> <!-- Special Property: Legend's Infinity Dual Swords -->
+		</skills>
+	</item>
+	<item id="48566" name="Legend's Infinity Dual Daggers" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1300" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3573</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35203" level="1" /> <!-- Special Property: Legend's Infinity Dual Daggers -->
+		</skills>
+	</item>
+	<item id="48567" name="Legend's Infinity Dual Blunt Weapons" type="Weapon">
+		<!-- The Olympiad Legend's weapon. When equipped, damage +60%, Max HP/ MP/ CP +40%, Atk. Spd./ Casting Spd. +30%, acquired XP/ SP +50%, skill cooldown -5%. -->
+		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1300" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<conditions msgId="1518">
+			<player isHero="true" />
+		</conditions>
+		<stats>
+			<stat type="pAtk">3573</stat>
+			<stat type="mAtk">1965</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="holyPower">450</stat>
+		</stats>
+		<skills>
+			<skill id="35204" level="1" /> <!-- Special Property: Legend's Infinity Dual Blunt Weapons -->
+		</skills>
+	</item>
+	<item id="48568" name="Guard Agathion Fragment" type="EtcItem">
+		<!-- A fragment containing the power of Guardians who inherited the angels' power. Can be exchanged for Agathion Charm: Guard or Scroll of Growth through the Merchant of Mammon. -->
+		<set name="icon" val="icon.guard_ag_piece_1" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48569" name="Angel's Breath" type="EtcItem">
+		<!-- A material item required to infuse the Guard Agathion's Breath. -->
+		<set name="icon" val="icon.star_pomander" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="price" val="4500000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48570" name="Guard Agathion's Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Guard agathions. Increases the agathion's M. Def. Starting from +4, enables its primary skills. Enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
+		<set name="icon" val="icon.guard_scrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="weight" val="120" />
+		<skills>
+			<skill id="39234" level="1" /> <!-- Book of Growth: Agathion Guardian -->
+		</skills>
+	</item>
+	<item id="48571" name="Ancient Guard Agathion's Book of Growth" type="EtcItem">
+		<!-- Required for upgrading Guard agathions. Increases the agathion's M. Def. Starting from +4, enables its primary skills. Enchanting is safe up to +3 -->
+		<set name="icon" val="icon.guard_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="weight" val="120" />
+		<skills>
+			<skill id="39235" level="1" /> <!-- Ancient Book of Growth: Agathion Guardian -->
+		</skills>
+	</item>
+	<item id="48572" name="Masia's Guard Agathion Charm" type="Armor">
+		<!-- Contains the power of Agathion Masia's Guardian. Secondary skills are enabled only when an R-grade heavy armor set enchanted to +8 or higher or an L-grade heavy armor set is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Book of Growth: Agathion Guardian. -->
+		<set name="icon" val="icon.agathion_masia_guard_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="39225" level="1" /> <!-- Primary Skill: Agathion Masia's Guardian -->
+			<skill id="39225" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Primary Skill: Agathion Masia's Guardian -->
+			<skill id="39225" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Primary Skill: Agathion Masia's Guardian -->
+			<skill id="39225" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Primary Skill: Agathion Masia's Guardian -->
+			<skill id="39222" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Masia's Guardian -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48573" name="Paulina's Guard Agathion Charm" type="Armor">
+		<!-- Contains the power of Agathion Paulina's Guardian. Secondary skills are enabled only when an R-grade light armor set enchanted to +8 or higher or an L-grade light armor set is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Book of Growth: Agathion Guardian. -->
+		<set name="icon" val="icon.agathion_pollyne_guard_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="39229" level="1" /> <!-- Primary Skill: Agathion Paulina's Guardian -->
+			<skill id="39229" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Primary Skill: Agathion Paulina's Guardian -->
+			<skill id="39229" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Primary Skill: Agathion Paulina's Guardian -->
+			<skill id="39229" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Primary Skill: Agathion Paulina's Guardian -->
+			<skill id="39226" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Paulina's Guardian -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48574" name="Tersi's Guard Agathion Charm" type="Armor">
+		<!-- Contains the power of Agathion Tersi's Guardian. Secondary skills are enabled only when an R-grade robe set enchanted to +8 or higher or an L-grade robe set is equipped. Equipping the charm in the main slot summons the agathion and enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. <Enchanting>. Use Book of Growth: Agathion Guardian. -->
+		<set name="icon" val="icon.agathion_tersi_guard_1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="agathion" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35087" level="1" /> <!-- Agathion's Cute Trick -->
+			<skill id="39333" level="1" /> <!-- Primary Skill: Agathion Tersi's Guardian -->
+			<skill id="39333" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Primary Skill: Agathion Tersi's Guardian -->
+			<skill id="39333" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Primary Skill: Agathion Tersi's Guardian -->
+			<skill id="39333" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Primary Skill: Agathion Tersi's Guardian -->
+			<skill id="39330" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Tersi's Guardian -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48575" name="Superior Seed Bracelet Lv. 2" type="Armor">
+		<!-- When equipped, unlocks the main agathion slot and 2 additional slots. Can be upgraded through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +50. 3. Vitality bonus +10%. <Upgrade>. Can be enhanced up to Superior Seed Bracelet Lv. 3 for Star Signs by the Head Blacksmith in any village. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="35082" level="2" /> <!-- Superior Seed Bracelet Lv. 2 -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48576" name="Superior Seed Bracelet Lv. 3" type="Armor">
+		<!-- When equipped, unlocks the main agathion slot and 3 additional slots. Can be upgraded through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +50. 3. Vitality bonus +15%. <Upgrade>. Can be enhanced up to Superior Seed Bracelet Lv. 4 for Star Signs by the Head Blacksmith in any village. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="35082" level="3" /> <!-- Superior Seed Bracelet Lv. 3 -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48577" name="Superior Seed Bracelet Lv. 4" type="Armor">
+		<!-- When equipped, unlocks the main agathion slot and 4 additional slots. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Attack +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +50. 3. Vitality bonus +20%. <Enchanting>. Use Scroll: Enchant Superior Seed Bracelet or Gran Kain's Superior Shining Enchant Scroll. <Upgrade>. Take a Superior Seed Bracelet enchanted to +10 and Crystals of Dawn to the Head Blacksmith in any town to get the Silvery Seed Bracelet. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="35082" level="4" /> <!-- Superior Seed Bracelet Lv. 4 -->
+			<skill id="35658" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="35658" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Superior Seed Bracelet Lv. 4: Enchant Effect -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+		</skills>
+	</item>
+	<item id="48578" name="Demon Slayer's Proof" type="EtcItem">
+		<!-- Evidence that proves you have defeated demons and prevented Atelia refinement. Take these to Leona Blackbird. -->
+		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="48579" name="Blackbird Clan Basic Box" additionalName="Atelia Refinery" type="EtcItem">
+		<!-- Given as a reward for helping the Blackbird Clan in the Atelia Refinery. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47256" min="3" max="3" chance="100" /> <!-- Demon Crystal -->
+		</capsuled_items>
+	</item>
+	<item id="48580" name="Blackbird Clan Intermediate Box" additionalName="Atelia Refinery" type="EtcItem">
+		<!-- Given as a reward for helping the Blackbird Clan in the Atelia Refinery. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47256" min="6" max="6" chance="100" /> <!-- Demon Crystal -->
+		</capsuled_items>
+	</item>
+	<item id="48581" name="Blackbird Clan Advanced Box" additionalName="Atelia Refinery" type="EtcItem">
+		<!-- Given as a reward for helping the Blackbird Clan in the Atelia Refinery. Double-click to obtain what is inside. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47256" min="9" max="9" chance="100" /> <!-- Demon Crystal -->
+		</capsuled_items>
+	</item>
+	<item id="48582" name="Scroll: Enchant Mask" type="EtcItem">
+		<!-- Required for enchanting masks. Enchanting is safe up to +3 -->
+		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39238" level="1" /> <!-- Episode Enchant Scroll -->
+		</skills>
+	</item>
+	<item id="48583" name="Giant's Scroll: Enchant Mask" type="EtcItem">
+		<!-- Required for enchanting masks. Enchanting is safe up to +3 -->
+		<set name="icon" val="icon.episode_scrl_of_ench_hair" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="GIANT_ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39239" level="1" /> <!-- Episode Special Enchant Scroll -->
+		</skills>
+	</item>
+	<item id="48584" name="Savior's Mask" type="Armor">
+		<!-- A mask granted only to those credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina in the Hall of Etina. M. Def. +5%. <Enchanting>. Use Scroll: Enchant Mask. -->
+		<set name="icon" val="icon.episode_mask_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="35205" level="1" /> <!-- Savior's Mask: Base Effect -->
+			<skill id="35206" level="1" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Savior's Mask: Enchant Effect -->
+			<skill id="35206" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Savior's Mask: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="48585" name="Savior's Wish" type="EtcItem">
+		<!-- The embodiment of the wish of the saviors who saved Aden from Etis van Etina. Can be obtained from the Blackbird Clan for completing the 'Savior's Path - Hall of Etina' quest or purchased at a set price. Can be used through Elikia in Gludio. -->
+		<set name="icon" val="icon.episode_token" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48586" name="Scroll Fragment: Enchant Savior's Mask" type="EtcItem">
+		<!-- Take several of these to Elikia in Gludio to get Scroll: Enchant Savior's Mask. -->
+		<set name="icon" val="icon.episode_scroll_token" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48587" name="Goblin Liquor" type="EtcItem">
+		<!-- For 2 min., P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. +100%, acquired XP/ SP +10%. The effect disappears on logout. -->
+		<set name="icon" val="icon.bm_goblin_buff_herong" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48588" name="Goblin Cudgel" type="EtcItem">
+		<!-- Double-click to obtain a rare item. -->
+		<set name="icon" val="icon.bm_goblin_weapon" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39240" level="1" /> <!-- Goblin Cudgel -->
+		</skills>
+	</item>
+	<item id="48589" name="Energy of Topaz" type="EtcItem">
+		<!-- Has a chance to produce a Greater Topaz if combined with a level 5 Topaz. -->
+		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48590" name="Energy of Ruby" type="EtcItem">
+		<!-- Has a chance to produce a Greater Ruby if combined with a level 5 Ruby. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48591" name="Energy of Obsidian" type="EtcItem">
+		<!-- Has a chance to produce a Greater Obsidian if combined with a level 5 Obsidian. -->
+		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48592" name="Energy of Opal" type="EtcItem">
+		<!-- Has a chance to produce a Greater Opal if combined with a level 5 Opal. -->
+		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48593" name="Energy of Emerald" type="EtcItem">
+		<!-- Has a chance to produce a Greater Emerald if combined with a level 5 Emerald. -->
+		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48594" name="Energy of Aquamarine" type="EtcItem">
+		<!-- Has a chance to produce a Greater Aquamarine if combined with a level 5 Aquamarine. -->
+		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48595" name="Energy of Diamond" type="EtcItem">
+		<!-- Has a chance to produce a Greater Diamond if combined with a level 5 Diamond. -->
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48596" name="Energy of Pearl" type="EtcItem">
+		<!-- Has a chance to produce a Greater Pearl if combined with a level 5 Pearl. -->
+		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48597" name="Energy of Sapphire" type="EtcItem">
+		<!-- Has a chance to produce a Greater Sapphire if combined with a level 5 Sapphire. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48598" name="Energy of Vital Stone" type="EtcItem">
+		<!-- Has a chance to produce a Greater Vital Stone if combined with a level 5 Vital Stone. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48599" name="Energy of Garnet" type="EtcItem">
+		<!-- Has a chance to produce a Greater Garnet if combined with a level 5 Garnet. -->
+		<set name="icon" val="icon.etc_bm_jewel_garnet" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

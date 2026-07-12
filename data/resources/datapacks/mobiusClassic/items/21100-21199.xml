@@ -1,26 +1,1018 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="21162" name="Wedding Veil" additionalName="Not Available" type="Armor">
-		<!-- The item is not available. A pure white wedding veil. Female only. <font color=eeaa22>Equipped in the left head accessory slot.</font> -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="21100" name="Shiny Cube Fragment S-grade Armor" type="EtcItem">
+		<!-- Go to Warehouse Keeper to exchange it for Blessed Scroll: Enchant S-grade Armor. -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_a_piece_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="21101" name="Shiny Cube D-grade Weapon Fragment" type="EtcItem">
+		<!-- Can be exchanged for Blessed Scroll: Enchant D-grade Weapon through the Warehouse Keeper. -->
+		<set name="icon" val="icon.event_cubic_piece_i02" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="21102" name="Shiny Cube C-grade Weapon Fragment" type="EtcItem">
+		<!-- Can be exchanged for Blessed Scroll: Enchant C-grade Weapon through the Warehouse Keeper. -->
+		<set name="icon" val="icon.event_cubic_piece_i03" />
+		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="21103" name="Shiny Cube B-grade Weapon Fragment" type="EtcItem">
+		<!-- Can be exchanged for Blessed Scroll: Enchant B-grade Weapon through the Warehouse Keeper. -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="21104" name="Shiny Cube A-grade Weapon Fragment" type="EtcItem">
+		<!-- Can be exchanged for Blessed Scroll: Enchant A-grade Weapon through the Warehouse Keeper. -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i03" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="21105" name="Shiny Cube Fragment S-grade Weapon" type="EtcItem">
+		<!-- Can be exchanged for Blessed Scroll: Enchant S-grade Weapon through the Warehouse Keeper. -->
+		<set name="icon" val="Branchsys2.icon.shine_cubic_w_piece_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+	</item>
+	<item id="21106" name="Wondrous Cubic - 1 time use" type="EtcItem">
+		<!-- Double-click to create Cube Fragment that can be exchanged for Scroll: Enchant Weapon/ Armor (disappears when used). -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<!-- TODO: Manage global (main class <-> subclasses) reuse for skills. -->
+		<set name="handler" val="ItemSkills" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="22180" level="1" /> <!-- Miraculous Cube (1-time) -->
+		</skills>
+	</item>
+	<item id="21107" name="Refined Cube - 1 time use" type="EtcItem">
+		<!-- Double-click to create various types of augmenting stones (disappears when used). -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i03" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ELIXIR" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22181" level="1" /> <!-- Refined Cube (1-time) -->
+		</skills>
+	</item>
+	<item id="21108" name="Warm Bear Hat" type="Armor">
+		<!-- A hat from polar bear fur that makes you feel warm just by looking at it. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_polar_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21109" name="Warm Bear Hat" additionalName="7-day" type="Armor">
+		<!-- A hat from polar bear fur that makes you feel warm just by looking at it. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_polar_bear_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21222" level="1" /> <!-- Attribute Resistance -->
+		</skills>
+	</item>
+	<item id="21110" name="Warm Bear Paws" type="Weapon">
+		<!-- Fist weapon that looks like cozy bear paws. P. Atk. is very low. -->
+		<set name="icon" val="BranchSys2.icon.br_polar_bear_wp_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<!-- Truncated value. -->
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="21111" name="Warm Bear Paws" additionalName="7-day" type="Weapon">
+		<!-- Fist weapon that looks like cozy bear paws. P. Atk. is very low. -->
+		<set name="icon" val="BranchSys2.icon.br_polar_bear_wp_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="450" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pAtk">5</stat>
+			<stat type="mAtk">5</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<!-- Truncated value. -->
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="21223" level="1" /> <!-- Ultimate Defense -->
+		</skills>
+	</item>
+	<item id="21112" name="Stag Beetle Hat" type="Armor">
+		<!-- A hat shaped like a stag beetle with two tough jaws. Equipped in 2 head accessory slots. Cannot be traded, dropped or sold, can be stored in the private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_stagbeetle_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21113" name="Stag Beetle Hat" additionalName="7-day" type="Armor">
+		<!-- A hat shaped like a stag beetle with two tough jaws. Equipped in 2 head accessory slots. Cannot be traded, dropped or sold, can be stored in the private warehouse. -->
+		<set name="icon" val="BranchSys2.icon.br_stagbeetle_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21224" level="1" /> <!-- Great Adventurer's Soul Power -->
+		</skills>
+	</item>
+	<item id="21114" name="Beetle Hat" type="Armor">
+		<!-- A hat shaped like a beetle with a large horn. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_hornbeetle_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="21115" name="Beetle Hat" additionalName="7-day" type="Armor">
+		<!-- A hat shaped like a beetle with a large horn. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_hornbeetle_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21225" level="1" /> <!-- Brave Warrior's Soul Power -->
+		</skills>
+	</item>
+	<item id="21116" name="Ladybug Hat" type="Armor">
+		<!-- A spotted hat shaped like a ladybug. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_ladybug_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21117" name="Ladybug Hat" additionalName="7-day" type="Armor">
+		<!-- A spotted hat shaped like a ladybug. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_ladybug_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21226" level="1" /> <!-- Great Wizard's Soul Power -->
+		</skills>
+	</item>
+	<item id="21118" name="Praying Mantis Hat" type="Armor">
+		<!-- A hat shaped like a praying mantis with sharp claws. -->
+		<set name="icon" val="BranchSys2.icon.br_mantis_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="21119" name="Praying Mantis Hat" additionalName="7-day" type="Armor">
+		<!-- A hat shaped like a praying mantis with sharp claws. -->
+		<set name="icon" val="BranchSys2.icon.br_mantis_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21227" level="1" /> <!-- Great Adventurer's Soul Power -->
+		</skills>
+	</item>
+	<item id="21120" name="Grasshopper Hat" type="Armor">
+		<!-- A hat shaped like a grasshopper with large eyes. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_locust_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21121" name="Grasshopper Hat" additionalName="7-day" type="Armor">
+		<!-- A hat shaped like a grasshopper with large eyes. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_locust_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21228" level="1" /> <!-- Brave Warrior's Soul Power -->
+		</skills>
+	</item>
+	<item id="21122" name="Gold-rimmed Glasses" type="Armor">
+		<!-- Expensive-looking gold-rimmed glasses. Equipped in 1 head accessory slot. -->
+		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21123" name="Gold-rimmed Glasses" additionalName="7-day" type="Armor">
+		<!-- Expensive-looking gold-rimmed glasses. Equipped in 1 head accessory slot. -->
+		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21231" level="1" /> <!-- Ultimate Critical Attack -->
+		</skills>
+	</item>
+	<item id="21124" name="White Uniform Hat" type="Armor">
+		<!-- A white uniform hat that makes you feel like a proper seaman. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="21125" name="White Uniform Hat" additionalName="7-day" type="Armor">
+		<!-- A white uniform hat that makes you feel like a proper seaman. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21230" level="1" /> <!-- Improve Magic -->
+		</skills>
+	</item>
+	<item id="21126" name="Warrior's Helmet" type="Armor">
+		<!-- An ancient helmet of a brave warrior. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+	</item>
+	<item id="21127" name="Warrior's Helmet" additionalName="7-day" type="Armor">
+		<!-- An ancient helmet of a brave warrior. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="21229" level="1" /> <!-- Blood Awakening -->
+		</skills>
+	</item>
+	<item id="21128" name="Package: Warm Bear Hat" type="EtcItem">
+		<!-- Double-click to obtain Warm Bear Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21108" min="1" max="1" chance="100" /> <!-- Warm Bear Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21129" name="Package: Warm Bear Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Warm Bear Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21109" min="1" max="1" chance="100" /> <!-- Warm Bear Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21130" name="Package: Warm Bear Paws" type="EtcItem">
+		<!-- Double-click to obtain Warm Bear Paws. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21110" min="1" max="1" chance="100" /> <!-- Warm Bear Paws -->
+		</capsuled_items>
+	</item>
+	<item id="21131" name="Package: Warm Bear Paws (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Warm Bear Paws (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21111" min="1" max="1" chance="100" /> <!-- Warm Bear Paws - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21132" name="Package: Stag Beetle Hat" type="EtcItem">
+		<!-- Double-click to obtain Stag Beetle Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21112" min="1" max="1" chance="100" /> <!-- Stag Beetle Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21133" name="Package: Stag Beetle Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Stag Beetle Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21113" min="1" max="1" chance="100" /> <!-- Stag Beetle Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21134" name="Package: Beetle Hat" type="EtcItem">
+		<!-- Double-click to obtain Beetle Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21114" min="1" max="1" chance="100" /> <!-- Beetle Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21135" name="Package: Beetle Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Beetle Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21115" min="1" max="1" chance="100" /> <!-- Beetle Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21136" name="Package: Ladybug Hat" type="EtcItem">
+		<!-- Double-click to obtain Ladybug Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21116" min="1" max="1" chance="100" /> <!-- Ladybug Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21137" name="Package: Ladybug Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Ladybug Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21117" min="1" max="1" chance="100" /> <!-- Ladybug Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21138" name="Package: Praying Mantis Hat" type="EtcItem">
+		<!-- Double-click to obtain Praying Mantis Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21118" min="1" max="1" chance="100" /> <!-- Praying Mantis Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21139" name="Package: Praying Mantis Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Praying Mantis Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21119" min="1" max="1" chance="100" /> <!-- Praying Mantis Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21140" name="Package: Grasshopper Hat" type="EtcItem">
+		<!-- Double-click to obtain Grasshopper Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21120" min="1" max="1" chance="100" /> <!-- Grasshopper Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21141" name="Package: Grasshopper Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Grasshopper Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21121" min="1" max="1" chance="100" /> <!-- Grasshopper Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21142" name="Package: Gold-rimmed Glasses" type="EtcItem">
+		<!-- Double-click to obtain Gold-rimmed Glasses. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21122" min="1" max="1" chance="100" /> <!-- Gold-rimmed Glasses -->
+		</capsuled_items>
+	</item>
+	<item id="21143" name="Package: Gold-rimmed Glasses (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Gold-rimmed Glasses (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21123" min="1" max="1" chance="100" /> <!-- Gold-rimmed Glasses - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21144" name="Package: White Uniform Hat" type="EtcItem">
+		<!-- Double-click to obtain White Uniform Hat. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21124" min="1" max="1" chance="100" /> <!-- White Uniform Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21145" name="Package: White Uniform Hat (7-day)" type="EtcItem">
+		<!-- Double-click to obtain White Uniform Hat (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21125" min="1" max="1" chance="100" /> <!-- White Uniform Hat - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21146" name="Package: Warrior's Helmet" type="EtcItem">
+		<!-- Double-click to obtain Warrior's Helmet. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21126" min="1" max="1" chance="100" /> <!-- Warrior's Helmet -->
+		</capsuled_items>
+	</item>
+	<item id="21147" name="Package: Warrior's Helmet (7-day)" type="EtcItem">
+		<!-- Double-click to obtain Warrior's Helmet (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21127" min="1" max="1" chance="100" /> <!-- Warrior's Helmet - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21148" name="Transformation Scroll: Dragon Master Lee" type="EtcItem">
+		<!-- A scroll for transforming into Dragon Master Lee. The effect lasts for 1 h. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="22183" level="1" /> <!-- Transformation Scroll: Dragon Master Lee -->
+		</skills>
+	</item>
+	<item id="21149" name="Transformation Scroll: Dragon Master Karin" type="EtcItem">
+		<!-- A scroll for transforming into Dragon Master Karin. The effect lasts for 1 h. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<skills>
+			<skill id="22184" level="1" /> <!-- Transformation Scroll: Dragon Master Karin -->
+		</skills>
+	</item>
+	<item id="21150" name="Shiny Platform Summon Bracelet" type="Armor">
+		<!-- Can stand upon the Shiny Platform with brilliant lighting when equipped. -->
+		<set name="icon" val="BranchSys2.Icon.br_shiny_platform_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21232" level="1" /> <!-- Shiny Platform -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="21151" name="Shiny Lighting" type="EtcItem">
+		<!-- Scroll that summons brilliant, shiny lighting. Can strike a cool pose with lighting from below. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22185" level="1" /> <!-- Shiny Lighting -->
+		</skills>
+	</item>
+	<item id="21152" name="Agathion Singer and Dancer" type="Armor">
+		<!-- A bracelet for summoning Agathion Singer and Dancer. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21233" level="1" /> <!-- Summon Agathion Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Agathion's Cute Trick - Singer and Dancer -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="21153" name="Agathion Singer and Dancer" additionalName="7-day" type="Armor">
+		<!-- A bracelet for summoning Agathion Singer and Dancer. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21233" level="1" /> <!-- Summon Agathion Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Agathion's Cute Trick - Singer and Dancer -->
+			<skill id="23235" level="1" /> <!-- Agathion Singer and Dancer's Special Skill - Song of Hunter -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="21154" name="Package: Agathion Singer and Dancer" type="EtcItem">
+		<!-- Double-click to obtain Agathion Singer and Dancer. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21152" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Singer and Dancer -->
+		</capsuled_items>
+	</item>
+	<item id="21155" name="Package: Agathion Singer and Dancer" type="EtcItem">
+		<!-- Double-click to obtain Agathion Singer and Dancer (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21153" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Singer and Dancer - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21156" name="Big Wedding Cake" type="EtcItem">
+		<!-- A scroll for summoning a large three-layer Wedding Cake, a must-have at any wedding. -->
+		<set name="icon" val="BranchSys2.Icon.br_big_wedding_cake_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22188" level="1" /> <!-- Summon Big Wedding Cake -->
+		</skills>
+	</item>
+	<item id="21157" name="Flower Shower" type="EtcItem">
+		<!-- Flower shower sprinkled on the bride and groom. -->
+		<set name="icon" val="BranchSys2.Icon.br_flower_shower_i00" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22189" level="1" /> <!-- Flower Shower -->
+		</skills>
+	</item>
+	<item id="21158" name="Echo Crystal" type="EtcItem">
+		<!-- Crystal that emits a fantasy-like sound when used. -->
+		<set name="icon" val="BranchSys2.Icon.br_eco_crystal_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22186" level="1" /> <!-- Echo Crystal - Theme of Celebration -->
+		</skills>
+	</item>
+	<item id="21159" name="Wedding Ring - Male" type="Armor">
+		<!-- Wedding ring exchanged by an engaged couple. Male only. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_ring_m_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="GOLD" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">1</stat>
+		</stats>
+	</item>
+	<item id="21160" name="Wedding Ring - Female" type="Armor">
+		<!-- Wedding ring exchanged by an engaged couple. Female only. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_ring_f_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="material" val="GOLD" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="mDef">1</stat>
+		</stats>
+	</item>
+	<item id="21161" name="Wedding Cake Package" type="EtcItem">
+		<!-- Wrapped wedding pack containing honeymoon ticket and a big wedding cake. -->
+		<set name="icon" val="BranchSys2.Icon.br_wedding_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
+		<capsuled_items>
+			<item id="21156" min="1" max="1" chance="100" /> <!-- Big Wedding Cake -->
+			<item id="21164" min="1" max="1" chance="100" /> <!-- Honeymoon Ticket - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21162" name="Wedding Veil" type="Armor">
+		<!-- A pure white wedding veil. Female only. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="BranchSys2.icon.br_wedding_vail_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="21163" name="Wedding Bouquet" type="Weapon">
-		<!-- A wedding bouquet composed of lovely flowers. Female only. -->
+		<!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. -->
 		<set name="icon" val="BranchSys2.icon.br_wedding_bouquet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
@@ -31,19 +1023,601 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21165" name="Agathion Zaken's Spirit Swords" additionalName="Not Available" type="Armor">
-		<!-- The item is not available. Zaken cannot be attacked, the skill will be removed. The bracelet is only issued by ID. -->
-		<set name="icon" val="icon.etc_ertheia2" />
-		<set name="bodypart" val="lbracelet" />
+	<item id="21164" name="Honeymoon Ticket" additionalName="7-day" type="EtcItem">
+		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 h. Vitality item with limited usage. -->
+		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="22187" level="1" /> <!-- Honeymoon Ticket - Joy of Vitality -->
+		</skills>
+	</item>
+	<item id="21165" name="Agathion Zaken's Spirit Swords" type="Armor">
+		<!-- Summons Zaken's Spirit Swords, which is made up of Zaken's 6 swords. -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21234" level="1" /> <!-- Summon Agathion Zaken's Spirit Swords -->
+			<skill id="23236" level="1" /> <!-- Agathion Cute Trick - Zaken's Spirit Swords -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="21166" name="Agathion Zaken's Spirit Swords" additionalName="7-day" type="Armor">
+		<!-- Summons Zaken's Spirit Swords, which is made up of Zaken's 6 swords. -->
+		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
 		<skills>
-			<skill id="55417" level="1" type="ON_UNEQUIP" /> <!-- Release Agathion - One-eyed Bat Drove -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="21234" level="1" /> <!-- Summon Agathion Zaken's Spirit Swords -->
+			<skill id="23236" level="1" /> <!-- Agathion Cute Trick - Zaken's Spirit Swords -->
+			<skill id="23237" level="1" /> <!-- Swords' Song -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
 		</skills>
+	</item>
+	<item id="21167" name="Package: Agathion Zaken's Spirit Swords" type="EtcItem">
+		<!-- Double-click to obtain Agathion Zaken's Spirit Swords. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21165" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Zaken's Spirit Swords -->
+		</capsuled_items>
+	</item>
+	<item id="21168" name="Package: Agathion Zaken's Spirit Swords" type="EtcItem">
+		<!-- Double-click to obtain Agathion Zaken's Spirit Swords (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21166" min="1" max="1" chance="100" /> <!-- Agathion Seal Bracelet - Zaken's Spirit Swords - 7-day -->
+		</capsuled_items>
+	</item>
+	<item id="21169" name="Birthday Present Pack" type="EtcItem">
+		<!-- A birthday gift from Alegria. Double-click to obtain 1 Birthday Vitality Potion, Birthday Cake and Birthday Hat. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21170" min="1" max="1" chance="100" /> <!-- Birthday Vitality Potion -->
+			<item id="21595" min="1" max="1" chance="100" /> <!-- Birthday Cake -->
+			<item id="21594" min="1" max="1" chance="100" /> <!-- Birthday Hat -->
+		</capsuled_items>
+	</item>
+	<item id="21170" name="Birthday Vitality Potion" type="EtcItem">
+		<!-- When used, for 12 h. Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="80" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<conditions addName="1" msgId="113">
+			<player flyMounted="false" />
+		</conditions>
+		<skills>
+			<skill id="22182" level="1" /> <!-- Birthday Vitality Buff -->
+		</skills>
+	</item>
+	<item id="21171" name="Transformation Scroll: Treasure Hunter" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Treasure Hunter for 10 min. If used on Fantasy Isle, you can find Event Treasure Chests. No effect if used while already transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22190" level="1" /> <!-- Transformation Scroll: Treasure Hunter -->
+		</skills>
+	</item>
+	<item id="21172" name="Transformation Scroll: Onyx Beast" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into an Onyx Beast for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22191" level="1" /> <!-- Transformation Scroll: Onyx Beast -->
+		</skills>
+	</item>
+	<item id="21173" name="Transformation Scroll: Doom Wraith" additionalName="Event" type="EtcItem">
+		<!-- A scroll that transforms you into Fate Knight for 30 min. No effect if you are already transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22192" level="1" /> <!-- Transformation Scroll: Fate Knight -->
+		</skills>
+	</item>
+	<item id="21174" name="Transformation Scroll: Grail Apostle" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into Grail Apostle for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22193" level="1" /> <!-- Transformation Scroll: Grail Apostle -->
+		</skills>
+	</item>
+	<item id="21175" name="Transformation Scroll: Unicorn" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Unicorn for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22194" level="1" /> <!-- Transformation Scroll: Unicorn -->
+		</skills>
+	</item>
+	<item id="21176" name="Transformation Scroll: Lilim Knight" additionalName="Event" type="EtcItem">
+		<!-- A scroll that transforms you into Lilim's Knight for 30 min. No effect if you are already transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22195" level="1" /> <!-- Transformation Scroll: Lilim's Knight -->
+		</skills>
+	</item>
+	<item id="21177" name="Transformation Scroll: Golem Guardian" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Golem Guardian for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22196" level="1" /> <!-- Transformation Scroll: Golem Guardian -->
+		</skills>
+	</item>
+	<item id="21178" name="Transformation Scroll: Inferno Drake" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into an Inferno Drake for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22197" level="1" /> <!-- Transformation Scroll: Inferno Drake -->
+		</skills>
+	</item>
+	<item id="21179" name="Transformation Scroll: Dragon Bomber" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Dragon Bomber for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22198" level="1" /> <!-- Transformation Scroll: Dragon Bomber -->
+		</skills>
+	</item>
+	<item id="21180" name="Transformation Scroll: Heretic" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Heretic for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22199" level="1" /> <!-- Transformation Scroll: Heretic -->
+		</skills>
+	</item>
+	<item id="21181" name="Transformation Scroll: Veil Master" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into Valley Master for 30 min. No effect if you are already transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22200" level="1" /> <!-- Transformation Scroll: Valley Master -->
+		</skills>
+	</item>
+	<item id="21182" name="Transformation Scroll: Saber Tooth Tiger" additionalName="Event" type="EtcItem">
+		<!-- A scroll that transforms you into Saber-toothed Tiger for 30 min. No effect if you are already transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22201" level="1" /> <!-- Transformation Scroll: Saber-toothed Tiger -->
+		</skills>
+	</item>
+	<item id="21183" name="Transformation Scroll: Oel Mahum" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into an Oel Mahum for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22202" level="1" /> <!-- Transformation Scroll: Oel Mahum -->
+		</skills>
+	</item>
+	<item id="21184" name="Transformation Scroll: Doll Blader" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Doll Blader for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22203" level="1" /> <!-- Transformation Scroll: Doll Blader -->
+		</skills>
+	</item>
+	<item id="21185" name="Transformation Scroll: Zaken" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into Zaken for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22204" level="1" /> <!-- Transformation Scroll: Zaken -->
+		</skills>
+	</item>
+	<item id="21186" name="Transformation Scroll: Anakim" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into Anakim for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22205" level="1" /> <!-- Transformation Scroll: Anakim -->
+		</skills>
+	</item>
+	<item id="21187" name="Transformation Scroll: Venom" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Venom for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22206" level="1" /> <!-- Transformation Scroll: Venom -->
+		</skills>
+	</item>
+	<item id="21188" name="Transformation Scroll: Gordon" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Gordon for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22207" level="1" /> <!-- Transformation Scroll: Gordon -->
+		</skills>
+	</item>
+	<item id="21189" name="Transformation Scroll: Ranku" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Ranku for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22208" level="1" /> <!-- Transformation Scroll: Ranku -->
+		</skills>
+	</item>
+	<item id="21190" name="Transformation Scroll: Kechi" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into Kechi for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22209" level="1" /> <!-- Transformation Scroll: Kechi -->
+		</skills>
+	</item>
+	<item id="21191" name="Transformation Scroll: Demon Prince" additionalName="Event" type="EtcItem">
+		<!-- Transforms you into a Demon Prince for 30 min. No effect if used while transformed. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="22210" level="1" /> <!-- Transformation Scroll: Demon Prince -->
+		</skills>
+	</item>
+	<item id="21192" name="Package: Dimensional Diamond" type="EtcItem">
+		<!-- Double-click to obtain 50 Dimensional Diamonds. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="7562" min="50" max="50" chance="100" /> <!-- Dimensional Diamond -->
+		</capsuled_items>
+	</item>
+	<item id="21193" name="Dimensional Diamond" additionalName="Event" type="EtcItem">
+		<!-- Crystal that is filled with magical power. It is needed when casting Teleportation magic. If you collect this item and take them to a gatekeeper, you can trade them for various types of Scroll of Escape. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+	</item>
+	<item id="21194" name="Package: Blessed Scroll of Escape" type="EtcItem">
+		<!-- Double-click to obtain 1 Blessed Scroll of Escape. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21195" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
+		</capsuled_items>
+	</item>
+	<item id="21195" name="Blessed Scroll of Escape" type="EtcItem">
+		<!-- A magic scroll for teleporting to the nearest village. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i01" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="reuse_delay" val="4000" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="22211" level="1" /> <!-- Blessed Scroll of Escape -->
+		</skills>
+	</item>
+	<item id="21196" name="Package: Superior Quick HP Replenishing Potion" type="EtcItem">
+		<!-- Double-click to obtain 5 Superior Quick HP Replenishing Potions. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="21197" min="5" max="5" chance="100" /> <!-- Great Quick HP Replenishing Potion -->
+		</capsuled_items>
+	</item>
+	<item id="21197" name="Superior Quick HP Replenishing Potion" type="EtcItem">
+		<!-- A magic potion that momentarily recovers a great amount of HP. Cannot be used when HP are full. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="reuse_delay" val="500" />
+		<set name="is_event_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22212" level="1" /> <!-- Great Quick Healing Potion -->
+		</skills>
+	</item>
+	<item id="21198" name="Package: Mysterious Scroll: Drum Melody (2 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain 2 Wondrous Scrolls: Drum Melody. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="PEEL" />
+		<capsuled_items>
+			<item id="21200" min="2" max="2" chance="100" /> <!-- Wondrous Scroll: Drum Melody -->
+		</capsuled_items>
+	</item>
+	<item id="21199" name="Package: Mysterious Scroll: Drum Melody (8 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain 8 Wondrous Scrolls: Drum Melody. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="PEEL" />
+		<capsuled_items>
+			<item id="21200" min="8" max="8" chance="100" /> <!-- Wondrous Scroll: Drum Melody -->
+		</capsuled_items>
 	</item>
 </list>

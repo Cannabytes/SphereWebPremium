@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="8203" name="Monster Only (Venom Sword)" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="8200" name="Corroded Fisherman's Potion - White" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_oblivion_white_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="100" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_event_restricted" val="true" />
+		<skills>
+			<skill id="2274" level="8" /> <!-- Fisherman's Potion - White -->
+		</skills>
+	</item>
+	<item id="8201" name="Corroded Fisherman's Potion - Black" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_oblivion_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="100" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_event_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+	</item>
+	<item id="8202" name="Corroded Fisherman's Recovery Potion" type="EtcItem">
+		<!-- A corroded item. Can be sold at a shop. -->
+		<set name="icon" val="icon.etc_oblivion_black_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="100" />
+		<set name="price" val="5000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2275" level="1" /> <!-- Fisherman's Recovery Potion -->
+		</skills>
+	</item>
+	<item id="8203" name="Monster Only (Venom Sword)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="weight" val="1560" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
 			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">325</stat>
@@ -22,12 +72,16 @@
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="rhand" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
 			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -35,69 +89,364 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8205" name="Monster Only (Heretic Priest's Sickle)" type="Weapon">
-		<!-- NPC Item -->
+	<item id="8205" name="Monster Only (Heretic Priest's Sickle)" type="Armor">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
 	<item id="8206" name="Monster Only (Heretic Priest Sword)" type="Weapon">
-		<!-- NPC Item -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
+			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="8207" name="Monster Only (Heretic Private Axe)" type="Weapon">
-		<!-- NPC Item -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
+			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="8208" name="Monster Only (Heretic Private Staff)" type="Weapon">
-		<!-- NPC Item -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="8209" name="Monster Only (Lidia Von Helmann Sword)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8210" name="Monster Only (Monk Warrior Shield)" type="Armor">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="4800" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">230</stat>
+		</stats>
+	</item>
+	<item id="8211" name="Monster Only (Monk Warrior Sword)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8212" name="Monster Only (Solina Brother Mace)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8213" name="Monster Only (Solina Father Mace)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8214" name="Monster Only (Solina Priest Pole)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1920" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="8215" name="Monster Only (Zombie Enlisted Man Sword)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2090" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8216" name="Monster Only (Zombie Enlisted Man Claw)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1350" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8217" name="Monster Only (Zombie Gate Guard Spear)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8218" name="Monster Only (Zombie Laborer Axe)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8219" name="Monster Only (Zombie Laborer Sword)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1560" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="8220" name="Monster Only (Grail Apostle Bow)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1950" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="8221" name="Monster Only (Grail Apostle Spear)" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1920" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<stats>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
@@ -112,16 +461,1003 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
 		<stats>
 			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+	</item>
+	<item id="8223" name="Seed: Twin Codran" type="EtcItem">
+		<!-- A seed of Twin Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8224" name="Seed: Great Codran" type="EtcItem">
+		<!-- A seed of Great Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="75" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8225" name="Seed: Desert Codran" type="EtcItem">
+		<!-- A seed of Desert Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8226" name="Seed: Blue Coba" type="EtcItem">
+		<!-- Seed of Blue Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 62-72. -->
+		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8227" name="Seed: Red Coba" type="EtcItem">
+		<!-- Seed of Red Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 65-75. -->
+		<set name="icon" val="icon.etc_red_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8228" name="Seed: Golden Coba" type="EtcItem">
+		<!-- Seed of Golden Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 68-78. -->
+		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="650" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8229" name="Seed: Desert Coba" type="EtcItem">
+		<!-- Seed of Desert Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 71-81. -->
+		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="750" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8230" name="Seed: Alternative Twin Codran" type="EtcItem">
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8231" name="Seed: Alternative Great Codran" type="EtcItem">
+		<!-- A seed of Alternative Great Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 56-66 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="75" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8232" name="Seed: Alternative Desert Codran" type="EtcItem">
+		<!-- A seed of Alternative Desert Codran. To get the fruit, plant this seed onto a monster in the Rune area. For best results, a level 59-69 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8233" name="Seed: Alternative Blue Coba" type="EtcItem">
+		<!-- Seed of Alternative Blue Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 62-72. -->
+		<set name="icon" val="icon.etc_blue_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8234" name="Seed: Alternative Red Coba" type="EtcItem">
+		<!-- Seed of Alternative Red Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 65-75. -->
+		<set name="icon" val="icon.etc_red_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8235" name="Seed: Alternative Golden Coba" type="EtcItem">
+		<!-- Seed of Alternative Golden Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 68-78. -->
+		<set name="icon" val="icon.etc_golden_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="650" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8236" name="Seed: Alternative Desert Coba" type="EtcItem">
+		<!-- Seed of Alternative Desert Coba. Plant it in a monster in the Rune area for it to bear a fruit. For best results the character and the monster should be of Lv. 71-81. -->
+		<set name="icon" val="icon.etc_desert_coba_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="750" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8237" name="Seed: Dark Coda" type="EtcItem">
+		<!-- A seed of Dark Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8238" name="Seed: Red Coda" type="EtcItem">
+		<!-- A seed of Red Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8239" name="Seed: Chilly Coda" type="EtcItem">
+		<!-- A seed of Chilly Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8240" name="Seed: Blue Coda" type="EtcItem">
+		<!-- A seed of Blue Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8241" name="Seed: Golden Coda" type="EtcItem">
+		<!-- A seed of Golden Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8242" name="Seed: Lute Coda" type="EtcItem">
+		<!-- A seed of Lute Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8243" name="Seed: Desert Coda" type="EtcItem">
+		<!-- A seed of Desert Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8244" name="Seed: Red Cobol" type="EtcItem">
+		<!-- A seed of Red Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8245" name="Seed: Chilly Cobol" type="EtcItem">
+		<!-- A seed of Chilly Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8246" name="Seed: Blue Cobol" type="EtcItem">
+		<!-- A seed of Blue Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8247" name="Seed: Thorn Cobol" type="EtcItem">
+		<!-- A seed of Thorn Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8248" name="Seed: Golden Cobol" type="EtcItem">
+		<!-- A seed of Golden Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8249" name="Seed: Great Cobol" type="EtcItem">
+		<!-- A seed of Great Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8250" name="Seed: Red Codran" type="EtcItem">
+		<!-- A seed of Red Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8251" name="Seed: Sea Codran" type="EtcItem">
+		<!-- A seed of Sea Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8252" name="Seed: Chilly Codran" type="EtcItem">
+		<!-- A seed of Chilly Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8253" name="Seed: Blue Codran" type="EtcItem">
+		<!-- A seed of Blue Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8254" name="Seed: Twin Codran" type="EtcItem">
+		<!-- A seed of Twin Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8255" name="Seed: Alternative Dark Coda" type="EtcItem">
+		<!-- A seed of Alternative Dark Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8256" name="Seed: Alternative Red Coda" type="EtcItem">
+		<!-- A seed of Alternative Red Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 8-18 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8257" name="Seed: Alternative Chilly Coda" type="EtcItem">
+		<!-- A seed of Alternative Chilly Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 11-21 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8258" name="Seed: Alternative Blue Coda" type="EtcItem">
+		<!-- A seed of Alternative Blue Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 14-24 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8259" name="Seed: Alternative Golden Coda" type="EtcItem">
+		<!-- A seed of Alternative Golden Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 17-27 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8260" name="Seed: Alternative Lute Coda" type="EtcItem">
+		<!-- A seed of Alternative Lute Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 20-30 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8261" name="Seed: Alternative Desert Coda" type="EtcItem">
+		<!-- A seed of Alternative Desert Coda. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 23-33 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8262" name="Seed: Alternative Red Cobol" type="EtcItem">
+		<!-- A seed of Alternative Red Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 26-36 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8263" name="Seed: Alternative Chilly Cobol" type="EtcItem">
+		<!-- A seed of Alternative Chilly Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 29-39 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8264" name="Seed: Alternative Blue Cobol" type="EtcItem">
+		<!-- A seed of Alternative Blue Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 32-42 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8265" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- A seed of Alternative Thorn Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 35-45 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8266" name="Seed: Alternative Golden Cobol" type="EtcItem">
+		<!-- A seed of Alternative Golden Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 38-48 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8267" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8268" name="Seed: Alternative Red Codran" type="EtcItem">
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8269" name="Seed: Alternative Sea Codran" type="EtcItem">
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 45-55 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8270" name="Seed: Alternative Chilly Codran" type="EtcItem">
+		<!-- A seed of Alternative Chilly Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 47-57 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8271" name="Seed: Alternative Blue Codran" type="EtcItem">
+		<!-- A seed of Alternative Blue Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 50-60 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8272" name="Seed: Alternative Twin Codran" type="EtcItem">
+		<!-- A seed of Alternative Twin Codran. To get the fruit, plant this seed onto a monster in the Schuttgart area. For best results, a level 53-63 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="8273" name="Anteroom Key" type="EtcItem">
+		<!-- Opens the door to one of the Anterooms within the Pagan Temple. -->
+		<set name="icon" val="icon.etc_old_key_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2235" level="1" /> <!-- Anteroom Key -->
+		</skills>
+	</item>
+	<item id="8274" name="Chapel Key" type="EtcItem">
+		<!-- Opens the door to the chapel in the Pagan Temple. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2236" level="1" /> <!-- Chapel Key -->
+		</skills>
+	</item>
+	<item id="8275" name="Key of Darkness" type="EtcItem">
+		<!-- The key that opens the Door of Darkness located at the altar within the Pagan Temple. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2237" level="1" /> <!-- Key of Darkness -->
+		</skills>
+	</item>
+	<item id="8276" name="Sekina's Scale" type="EtcItem">
+		<!-- The scale obtained by defeating Sekina, Maluk's Witch. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8277" name="Themis' Scale" type="EtcItem">
+		<!-- Obtain this scale by defeating Palibati Queen Themis. -->
+		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8278" name="Vermilion Shard" type="EtcItem">
+		<!-- Debris obtained by defeating Vermilion, the Blood Tree. -->
+		<set name="icon" val="icon.etc_bark_gold_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8279" name="Nucleus of Hekaton Prime" type="EtcItem">
+		<!-- Nucleus obtained by defeating Hekaton Prime -->
+		<set name="icon" val="icon.etc_bead_silver_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8280" name="Tiphon Shard" type="EtcItem">
+		<!-- Debris obtained by defeating Tiphon, Gargoyle Lord. -->
+		<set name="icon" val="icon.etc_gargoyle_claw_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8281" name="Glaki's Necleus" type="EtcItem">
+		<!-- A nucleus obtained from defeating Glaki, the last Lesser Giant. -->
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8282" name="Rahha's Fang" type="EtcItem">
+		<!-- Fangs obtained by defeating Rahha. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8283" name="Giant Poison Bee's Sting" type="EtcItem">
+		<!-- A proof that a monster has been destroyed for the safety of the Strip Mine. Take it to Warehouse Keeper Norman in Gludin. -->
+		<set name="icon" val="icon.etc_sting_a_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8284" name="Cloudy Gem" type="EtcItem">
+		<!-- A proof that a monster has been destroyed for the safety of the Strip Mine. Take it to Warehouse Keeper Norman in Gludin. -->
+		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8285" name="Talon of Young Araneid" type="EtcItem">
+		<!-- A proof that a monster has been destroyed for the safety of the Strip Mine. Take it to Warehouse Keeper Norman in Gludin. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8286" name="Fairy Breath" type="EtcItem">
+		<!-- The last breath of the crazy Wind Spirit. Take it to Galatea, Gludin Village's Summoner, for the study of balancing spirit power. -->
+		<set name="icon" val="icon.etc_dragons_blood_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8287" name="Star Stone" type="EtcItem">
+		<!-- The Star Stone that slipped out of the box. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8288" name="Yumi's Letter" type="EtcItem">
+		<!-- The letter from Yumi to Newyear, the Head Blacksmith. -->
+		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8289" name="Star Stone" type="EtcItem">
+		<!-- The Star Stone that Yumi asked you to find and bring back. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8290" name="Flower of Pavel" type="EtcItem">
+		<!-- The strange flower from Atlanta. -->
+		<set name="icon" val="icon.etc_flower_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8291" name="Heart of Atlanta" type="EtcItem">
+		<!-- The stone found where Atlanta was last seen. It should be given to Wendy. -->
+		<set name="icon" val="icon.etc_inf_ore_medium_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8292" name="Wendy's Necklace" type="EtcItem">
+		<!-- The necklace that became Wendy's last gift. It's not powerful, but it Has great historical significance. -->
+		<set name="icon" val="icon.accessary_necklace_of_devotion_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="8293" name="Trainer License" type="EtcItem">
+		<!-- A mark required for participating in a clan hall war. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8294" name="Recipe: Steel Sword (100%)" type="EtcItem">
 		<!-- For Dwarves only. A recipe for Steel Sword. Requires Create Item Lv. 2. The success rate is 100%. -->
@@ -131,8 +1467,64 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
-		<set name="price" val="8180" />
+		<set name="price" val="1636" />
 		<set name="recipe_id" val="783" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8295" name="Recipe: Lesser Giant's Sword (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Lesser Giant's Sword. Requires Create Item Lv. 3. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_blue_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="5600" />
+		<set name="recipe_id" val="785" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8296" name="Recipe: Pa'agrian Sword (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Pa'agrio Sword. Requires Create Item Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17200" />
+		<set name="recipe_id" val="789" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8297" name="Recipe: Guardian's Sword (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Guardian's Sword. Requires Create Item Lv. 7. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52400" />
+		<set name="recipe_id" val="811" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="8298" name="Recipe: Guardian's Sword (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Guardian's Sword. Requires Create Item Lv. 7. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="52400" />
+		<set name="recipe_id" val="810" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />

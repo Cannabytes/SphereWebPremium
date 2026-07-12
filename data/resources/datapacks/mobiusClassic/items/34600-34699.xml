@@ -1,181 +1,1420 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34603" name="Mysterious No-grade Soulshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Soulshots increase a weapon's power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
-		<set name="is_sellable" val="false" />
+	<item id="34600" name="PA - Transformation Scroll: Rose (F)" additionalName="PA exclusive" type="EtcItem">
+		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 10 min. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9324" level="1" /> <!-- PA - Rose Transformation (Female) -->
+		</skills>
+	</item>
+	<item id="34601" name="PA - Transformation Scroll: Rose (M)" additionalName="PA exclusive" type="EtcItem">
+		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 10 min. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9323" level="1" /> <!-- PA - Rose Transformation (Male) -->
+		</skills>
+	</item>
+	<item id="34602" name="PA - Quick HP Replenishing Potion" additionalName="PA exclusive" type="EtcItem">
+		<!-- A magic potion that momentarily recovers HP. Cannot be used when HP are full. -->
+		<set name="icon" val="icon.etc_potion_gold_i00" />
+		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="500" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_event_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="9292" level="1" /> <!-- PA - Quick HP Replenishing Potion -->
+		</skills>
+	</item>
+	<item id="34603" name="Mysterious No-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Soulshots increase weapon power. Used with No-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="SoulShots" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<skills>
-			<skill id="9293" level="1" /> <!-- Mysterious No-grade Soulshot -->
+			<skill id="9293" level="1" /> <!-- PA - No-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="34604" name="Mysterious D-grade Soulshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Soulshots increase a weapon's power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34604" name="Mysterious D-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with D-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="SoulShots" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<skills>
-			<skill id="9294" level="1" /> <!-- Mysterious D-grade Soulshot -->
+			<skill id="9294" level="1" /> <!-- PA - D-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="34605" name="Mysterious C-grade Soulshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Soulshots increase a weapon's power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34605" name="Mysterious C-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with C-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="SoulShots" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<skills>
-			<skill id="9295" level="1" /> <!-- Mysterious C-grade Soulshot -->
+			<skill id="9295" level="1" /> <!-- PA - C-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="34606" name="Mysterious B-grade Soulshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34606" name="Mysterious B-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with B-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="SoulShots" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<skills>
-			<skill id="9296" level="1" /> <!-- Mysterious B-grade Soulshot -->
+			<skill id="9296" level="1" /> <!-- PA - B-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="34607" name="Mysterious A-grade Soulshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Increases a weapon's physical power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34607" name="Mysterious A-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with A-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="SoulShots" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<skills>
-			<skill id="9297" level="1" /> <!-- Mysterious A-grade Soulshot -->
+			<skill id="9297" level="1" /> <!-- PA - A-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Spiritshots increase a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34608" name="Mysterious S-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Increases a weapon's physical power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="9298" level="1" /> <!-- PA - S-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="34609" name="Mysterious R-grade Soulshot" additionalName="Event" type="EtcItem">
+		<!-- Soulshots increase weapon power. Used with weapons. -->
+		<set name="icon" val="icon.soulshot_r_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
+		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="9299" level="1" /> <!-- PA - R-grade Soulshot -->
+		</skills>
+	</item>
+	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with No-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_white_i01" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="BlessedSpiritShot" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9300" level="1" /> <!-- Blessed No-grade Spiritshot -->
+			<skill id="9300" level="1" /> <!-- PA - Blessed No-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="34611" name="Mysterious Blessed D-grade Spiritshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Spiritshots increase a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34611" name="Mysterious Blessed D-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with D-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="BlessedSpiritShot" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9301" level="1" /> <!-- Mysterious Blessed D-grade Spiritshot -->
+			<skill id="9301" level="1" /> <!-- PA - Blessed D-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="34612" name="Mysterious Blessed C-grade Spiritshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Spiritshots increase a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34612" name="Mysterious Blessed C-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with C-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="BlessedSpiritShot" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9302" level="1" /> <!-- Mysterious Blessed C-grade Spiritshot -->
+			<skill id="9302" level="1" /> <!-- PA - Blessed C-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="34613" name="Mysterious Blessed B-grade Spiritshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Spiritshots increase a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34613" name="Mysterious Blessed B-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with B-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="BlessedSpiritShot" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="8906" level="1" /> <!-- Mysterious Blessed B-grade Spiritshot -->
+			<skill id="9303" level="1" /> <!-- PA - Blessed B-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="34614" name="Mysterious Blessed A-grade Spiritshot" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. Spiritshots increase a weapon's magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="34614" name="Mysterious Blessed A-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with A-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="9304" level="1" /> <!-- PA - Blessed A-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="34615" name="Mysterious Blessed S-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<skills>
+			<skill id="9305" level="1" /> <!-- PA - Blessed S-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="34616" name="Mysterious Blessed R-grade Spiritshot" additionalName="Event" type="EtcItem">
+		<!-- Increases weapons' magic power. Used with weapons. -->
+		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="R" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="9306" level="1" /> <!-- PA - Blessed R-grade Spiritshot -->
+		</skills>
+	</item>
+	<item id="34617" name="PA - Agathion's Gift" additionalName="PA exclusive" type="EtcItem">
+		<!-- When used, you can receive an Agathion's gift. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="weight" val="20" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="9318" level="1" /> <!-- Open PA Points Coupon -->
+		</skills>
+	</item>
+	<item id="34618" name="PA - Enhanced Cocktail" additionalName="PA exclusive" type="EtcItem">
+		<!-- Cocktail from rare fruits. When consumed, you will feel the effect of Musician's Melody and Sonata Performance for 30 min. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
+		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="8907" level="1" /> <!-- Mysterious Blessed A-grade Spiritshot -->
+			<skill id="39761" level="1" /> <!-- Musician's Melody - Enhanced Cocktail -->
+			<skill id="39770" level="1" /> <!-- Sonata Performance - Enhanced Cocktail -->
+		</skills>
+	</item>
+	<item id="34619" name="PA Points Coupon" additionalName="PA exclusive" type="EtcItem">
+		<!-- Click on the item to acquire PA Points. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9319" level="1" /> <!-- Use PA Points Coupon -->
+		</skills>
+	</item>
+	<item id="34620" name="Heavenly Cocktail" type="EtcItem">
+		<!-- For 60 min., applies the effects of Musician's Melody Lv. 1. Cooldown: 60 min. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="39760" level="1" /> <!-- Musician's Melody - Heavenly Cocktail -->
+		</skills>
+	</item>
+	<item id="34621" name="R-grade Talisman - Half-kill/ Lethal Strike Resistance (Passive)" type="Armor">
+		<!-- Increases Half-kill/ Lethal Strike Resistance. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="1" />
+		<set name="duration" val="60" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="13368" level="1" /> <!-- R-grade Talisman - Half-kill/ Lethal Strike Resistance -->
+		</skills>
+	</item>
+	<item id="34622" name="R-grade Talisman - Half-kill/ Lethal Strike Resistance (Active)" type="Armor">
+		<!-- When used, increases Half-kill/ Lethal Strike Resistance. Shadow item. -->
+		<set name="icon" val="icon.r85_talisman_md_up_passive" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="duration" val="60" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="13367" level="1" /> <!-- R-grade Talisman - Half-kill/ Lethal Strike Resistance (Active) -->
+		</skills>
+	</item>
+	<item id="34623" name="Pa'agrio's Shirt" type="Armor">
+		<!-- A magic shirt filled with the power of Pa'agrio, the God of Fire. Can be enchanted up to +10 with Scroll: Enchant Shirt. Starting from +7, removes debuffs and grants invincibility for some time. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_fire" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="UNDERWEAR" />
+		<set name="bodypart" val="underwear" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+		<skills>
+			<skill id="21326" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Elemental Shirt: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="34624" name="Sayha's Shirt" type="Armor">
+		<!-- A magic shirt filled with the power of Sayha, the God of Wind. Can be enchanted up to +10 with Scroll: Enchant Shirt. Starting from +7, enables a teleportation skill (cannot be used in the Olympiad). -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_wind" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="UNDERWEAR" />
+		<set name="bodypart" val="underwear" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+		<skills>
+			<skill id="21326" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Elemental Shirt: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="34625" name="Eva's Shirt" type="Armor">
+		<!-- A magic shirt filled with the power of Eva, the Goddess of Water. Can be enchanted up to +10 with Scroll: Enchant Shirt. Starting from +7, recovers HP/ MP/ CP. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="UNDERWEAR" />
+		<set name="bodypart" val="underwear" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+		<skills>
+			<skill id="21326" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Elemental Shirt: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="34626" name="Maphr's Shirt" type="Armor">
+		<!-- A magic shirt filled with the power of Maphr, the Goddess of Earth. Can be enchanted up to +10 with Scroll: Enchant Shirt. Starting from +7, increases enchant success rate. -->
+		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_earth" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="UNDERWEAR" />
+		<set name="bodypart" val="underwear" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_limit" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
+		<stats>
+			<stat type="pDef">28</stat>
+		</stats>
+		<skills>
+			<skill id="21326" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Elemental Shirt: Enchant Effect -->
+		</skills>
+	</item>
+	<item id="34627" name="Scroll: Enchant Elemental Shirt" type="EtcItem">
+		<!-- An enchant scroll for Sayha's/ Eva's/ Maphr's/ Pa'agrio's Shirt, Shiny Elemental Shirt and Physical/ Magical Reflect Shirt. When enchanted, P./ M. Def. +1. Starting from +4, P. Def. +3, basic stats (CON, MEN, STR, INT, DEX and WIT) are increasing with each enchant value. Enchanting is safe up to +3. The maximum enchant value is +10. Depending on the shirt type and its enchant value (from +4 to +10), additional bonuses are applied. -->
+		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9396" level="1" /> <!-- Scroll: Enchant Elemental Shirt -->
+		</skills>
+	</item>
+	<item id="34628" name="Einhasad's Energy" type="EtcItem">
+		<!-- Applies the Vitality Replenishing Herb Drink's effect for an hour. Cannot be traded, dropped or sold at a private store. Can be transferred within the account through the Game Assistant. Can be stored in the private warehouse. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9375" level="1" /> <!-- Einhasad's Energy -->
+		</skills>
+	</item>
+	<item id="34629" name="Pirate's Eyepatch" type="Armor">
+		<!-- Pirate's Eyepatch -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34630" name="Outlaw's Eyepatch" type="Armor">
+		<!-- Outlaw's Eyepatch -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34631" name="Eyepatch" type="Armor">
+		<!-- Eyepatch -->
+		<set name="icon" val="icon.Accessary_one_eye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34632" name="Party Hat" type="Armor">
+		<!-- Party Hat -->
+		<set name="icon" val="icon.accessory_party_hat_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34633" name="Refined Angel Ring" type="Armor">
+		<!-- Refined Angel Ring -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34634" name="Refined Devil Horn" type="Armor">
+		<!-- Refined Devil Horn -->
+		<set name="icon" val="icon.accessory_devil_horn_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
+	</item>
+	<item id="34635" name="Pirate's Eyepatch - STR Pendant" type="EtcItem">
+		<!-- Can be combined with Pirate's Eyepatch to get Pirate's Eyepatch - STR. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34636" name="Pirate's Eyepatch - DEX Pendant" type="EtcItem">
+		<!-- Can be combined with Pirate's Eyepatch to get Pirate's Eyepatch - DEX. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34637" name="Outlaw's Eyepatch - CON Pendant" type="EtcItem">
+		<!-- Can be combined with Outlaw's Eyepatch to get Outlaw's Eyepatch - CON. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34638" name="Outlaw's Eyepatch - MEN Pendant" type="EtcItem">
+		<!-- Can be combined with Outlaw's Eyepatch to get Outlaw's Eyepatch - MEN. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34639" name="Eyepatch - INT Pendant" type="EtcItem">
+		<!-- Can be combined with Eyepatch to get Eyepatch - INT. -->
+		<set name="icon" val="icon.Accessary_one_eye_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34640" name="Eyepatch - WIT Pendant" type="EtcItem">
+		<!-- Can be combined with Eyepatch to get Eyepatch - WIT. -->
+		<set name="icon" val="icon.Accessary_one_eye_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34641" name="Party Hat - Critical Rate Pendant" type="EtcItem">
+		<!-- Can increase P. Critical Rate by equipping a Party Hat. -->
+		<set name="icon" val="icon.accessory_party_hat_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34642" name="Party Hat - Critical Damage Pendant" type="EtcItem">
+		<!-- Can increase P. Critical Damage by equipping a Party Hat. -->
+		<set name="icon" val="icon.accessory_party_hat_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34643" name="Refined Angel Ring - P. Def. Pendant" type="EtcItem">
+		<!-- Can P. Def. +equipping a Refined Angel Ring. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34644" name="Refined Angel Ring - M. Def. Pendant" type="EtcItem">
+		<!-- Can M. Def. +equipping a Refined Angel Ring. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34645" name="Refined Angel Ring - Evasion Pendant" type="EtcItem">
+		<!-- Can increase Evasion by equipping a Refined Angel Ring. -->
+		<set name="icon" val="icon.accessory_angel_ring_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34646" name="Refined Devil Horn - P. Atk. Pendant" type="EtcItem">
+		<!-- Combine with Refined Devil Horn to obtain Refined Devil Horn - P. Atk. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34647" name="Refined Devil Horn - M. Atk. Pendant" type="EtcItem">
+		<!-- Can M. Atk. +equipping a Refined Devil Horn. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34648" name="Refined Devil Horn - Accuracy Pendant" type="EtcItem">
+		<!-- Can increase Accuracy by equipping a Refined Devil Horn. -->
+		<set name="icon" val="icon.accessory_devil_horn_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="34649" name="Fire Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the fire attribute. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9325" level="1" /> <!-- Fire Stone -->
+		</skills>
+	</item>
+	<item id="34650" name="Water Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the water attribute. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9326" level="1" /> <!-- Water Stone -->
+		</skills>
+	</item>
+	<item id="34651" name="Wind Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the wind attribute. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9327" level="1" /> <!-- Wind Stone -->
+		</skills>
+	</item>
+	<item id="34652" name="Earth Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the earth attribute. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9328" level="1" /> <!-- Earth Stone -->
+		</skills>
+	</item>
+	<item id="34653" name="Holy Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the holy attribute. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9329" level="1" /> <!-- Holy Stone -->
+		</skills>
+	</item>
+	<item id="34654" name="Dark Stone Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the dark attribute. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9330" level="1" /> <!-- Dark Stone -->
+		</skills>
+	</item>
+	<item id="34655" name="Fire Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the fire attribute. -->
+		<set name="icon" val="icon.etc_fire_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9325" level="2" /> <!-- Fire Crystal -->
+		</skills>
+	</item>
+	<item id="34656" name="Water Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the water attribute. -->
+		<set name="icon" val="icon.etc_water_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9326" level="2" /> <!-- Water Crystal -->
+		</skills>
+	</item>
+	<item id="34657" name="Wind Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the wind attribute. -->
+		<set name="icon" val="icon.etc_wind_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9327" level="2" /> <!-- Wind Crystal -->
+		</skills>
+	</item>
+	<item id="34658" name="Earth Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the earth attribute. -->
+		<set name="icon" val="icon.etc_earth_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9328" level="2" /> <!-- Earth Crystal -->
+		</skills>
+	</item>
+	<item id="34659" name="Holy Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the holy attribute. -->
+		<set name="icon" val="icon.etc_holy_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9329" level="2" /> <!-- Holy Crystal -->
+		</skills>
+	</item>
+	<item id="34660" name="Dark Crystal Fragment" type="EtcItem">
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the dark attribute. -->
+		<set name="icon" val="icon.etc_unholy_crystal_i00" />
+		<set name="weight" val="1" />
+		<set name="price" val="4000" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_CURSED" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9330" level="2" /> <!-- Dark Crystal -->
+		</skills>
+	</item>
+	<item id="34661" name="Fire Stone (+60)" type="EtcItem">
+		<!-- Fire Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12875" level="3" /> <!-- Fire Stone -->
+		</skills>
+	</item>
+	<item id="34662" name="Water Stone (+60)" type="EtcItem">
+		<!-- Water Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12876" level="3" /> <!-- Water Stone -->
+		</skills>
+	</item>
+	<item id="34663" name="Earth Stone (+60)" type="EtcItem">
+		<!-- Earth Attribute +60. Additional resistance increase is unavailable. Up to three attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12878" level="3" /> <!-- Earth Stone -->
+		</skills>
+	</item>
+	<item id="34664" name="Wind Stone (+60)" type="EtcItem">
+		<!-- Wind Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12877" level="3" /> <!-- Wind Stone -->
+		</skills>
+	</item>
+	<item id="34665" name="Dark Stone (+60)" type="EtcItem">
+		<!-- Dark Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12880" level="3" /> <!-- Dark Stone -->
+		</skills>
+	</item>
+	<item id="34666" name="Holy Stone (+60)" type="EtcItem">
+		<!-- Holy Attribute +60. Additional resistance increase is unavailable. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="12879" level="3" /> <!-- Holy Stone -->
+		</skills>
+	</item>
+	<item id="34667" name="Fire Stone (+150)" type="EtcItem">
+		<!-- Enhances the Fire attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_fire_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12875" level="1" /> <!-- Fire Stone -->
+		</skills>
+	</item>
+	<item id="34668" name="Water Stone (+150)" type="EtcItem">
+		<!-- Enhances the Water attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_water_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12876" level="1" /> <!-- Water Stone -->
+		</skills>
+	</item>
+	<item id="34669" name="Earth Stone (+150)" type="EtcItem">
+		<!-- Enhances the Earth attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_earth_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12878" level="1" /> <!-- Earth Stone -->
+		</skills>
+	</item>
+	<item id="34670" name="Wind Stone (+150)" type="EtcItem">
+		<!-- Enhances the Wind attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_wind_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12877" level="1" /> <!-- Wind Stone -->
+		</skills>
+	</item>
+	<item id="34671" name="Dark Stone (+150)" type="EtcItem">
+		<!-- Enhances the Dark attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_unholy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12880" level="1" /> <!-- Dark Stone -->
+		</skills>
+	</item>
+	<item id="34672" name="Holy Stone (+150)" type="EtcItem">
+		<!-- Enhances the Holy attribute by 3 levels at once. Up to 3 attributes can be bestowed to armor. Opposite attributes cannot be enhanced. -->
+		<set name="icon" val="icon.etc_holy_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<skills>
+			<skill id="12879" level="1" /> <!-- Holy Stone -->
+		</skills>
+	</item>
+	<item id="34673" name="Scroll: Seal D-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_d" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34674" name="Scroll: Seal C-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_c" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34675" name="Scroll: Seal B-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_b" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34676" name="Scroll: Seal A-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_a" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34677" name="Scroll: Seal S-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_s" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34678" name="Scroll: Seal Weapon (S80-grade)" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_s" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34679" name="Scroll: Seal R-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34680" name="Scroll: Seal R95-grade Weapon" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34681" name="Scroll: Seal R99-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_wp_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34682" name="Scroll: Seal D-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34683" name="Scroll: Seal C-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_c" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34684" name="Scroll: Seal B-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_b" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34685" name="Scroll: Seal A-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_a" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34686" name="Scroll: Seal S-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_s" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34687" name="Scroll: Seal Armor (S80-grade)" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_s" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34688" name="Scroll: Seal R-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34689" name="Scroll: Seal R95-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34690" name="Scroll: Seal R99-grade Armor" type="EtcItem">
+		<!-- A scroll that converts bound items to an unidentified state. The item's enchant value is reset. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_r" />
+		<set name="weight" val="120" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="34691" name="Hair Accessory Pack" type="EtcItem">
+		<!-- Double-click to obtain a head accessory. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9337" level="1" /> <!-- Head Accessory Box -->
+		</skills>
+	</item>
+	<item id="34692" name="Pendant Pack" type="EtcItem">
+		<!-- Double-click to obtain a locket for head accessories. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9338" level="1" /> <!-- Locket Box -->
+		</skills>
+	</item>
+	<item id="34693" name="Attribute Stone Fragment Box" type="EtcItem">
+		<!-- Attribute Stone Fragment Box -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9339" level="1" /> <!-- Attribute Stone Fragment Box -->
+		</skills>
+	</item>
+	<item id="34694" name="Hero's Enchant Stone Pack" type="EtcItem">
+		<!-- Double-click to obtain Enchant Stone. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9341" level="1" /> <!-- Hero's Enchant Stone Pack -->
+		</skills>
+	</item>
+	<item id="34695" name="Hero's Destruction Enchant Scroll Pack" type="EtcItem">
+		<!-- Box containing Enchant Scroll of Destruction. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9342" level="1" /> <!-- Hero's Destruction Enchant Scroll Pack -->
+		</skills>
+	</item>
+	<item id="34696" name="Hero's Blessed Enchant Scroll Pack" type="EtcItem">
+		<!-- Double-click to obtain a blessed enchant scroll. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9343" level="1" /> <!-- Hero's Blessed Enchant Scroll Pack -->
+		</skills>
+	</item>
+	<item id="34697" name="Hero's Unbind Scroll Pack" type="EtcItem">
+		<!-- Double-click to obtain Unbind Scroll. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9344" level="1" /> <!-- Hero's Unbind Scroll Pack -->
+		</skills>
+	</item>
+	<item id="34698" name="Hero's Attribute Crystal Pack" type="EtcItem">
+		<!-- Double-click to obtain an attribute crystal or a stone (+60/ +150). -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="9340" level="1" /> <!-- Hero's Attribute Crystal Pack -->
+		</skills>
+	</item>
+	<item id="34699" name="Giant's Attribute Crystal Pack" type="EtcItem">
+		<!-- Item that is added to the Aden reconstruction renewal. It's functions have not materialized yet. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="12871" level="1" /> <!-- Hero's Treasure Chest -->
 		</skills>
 	</item>
 </list>

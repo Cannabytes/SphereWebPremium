@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5900" name="Coin Collecting Album" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. A coin-collecting album made of high-quality leather. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5900" name="Coin Collecting Album" type="EtcItem">
+		<!-- A coin-collecting album made of high-quality leather. -->
+		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -48,16 +48,208 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 	</item>
+	<item id="5904" name="Wesley's Mixing Stone" type="EtcItem">
+		<!-- Small gemstone that is given by Wesley. This item is required to use a mixing urn. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5905" name="Magister's Mixing Stone" type="EtcItem">
+		<!-- Gemstone that activates the mixing urn in the basement of the Ivory Tower. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="5906" name="Anniversary Gift Box (10 Honey Rice Cakes)" type="EtcItem">
+		<!-- A gift for the L2 anniversary. Double-click to obtain 10 Sweet Cakes and 1 Lineage II Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13420" min="10" max="10" chance="100" /> <!-- Multi-Colored Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5907" name="Anniversary Gift Box (9 Honey Rice Cakes)" type="EtcItem">
+		<!-- A gift for the L2 anniversary. Double-click to obtain 9 Sweet Cakes and 1 Lineage II Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13420" min="9" max="9" chance="100" /> <!-- Multi-Colored Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5908" name="Red Soul Crystal Lv. 13" type="EtcItem">
+		<!-- Red crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
+		<set name="icon" val="icon.etc_soul_stone_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="5909" name="Anniversary Gift Box (8 Honey Rice Cakes)" type="EtcItem">
+		<!-- A gift for the L2 anniversary. Double-click to obtain 8 Sweet Cakes and 1 Lineage II Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13420" min="8" max="8" chance="100" /> <!-- Multi-Colored Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5910" name="Anniversary Gift Box (7 Honey Rice Cakes)" type="EtcItem">
+		<!-- A gift box for the anniversary of Lineage II. Contains 7 Multi-colored Honey Rice Cakes and 1 Lineage II Commemorative Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13420" min="7" max="7" chance="100" /> <!-- Multi-Colored Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5911" name="Green Soul Crystal Lv. 13" type="EtcItem">
+		<!-- Green crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
+		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="5912" name="Anniversary Gift Box (6 Honey Rice Cakes)" type="EtcItem">
+		<!-- A gift for the L2 anniversary. Double-click to obtain 6 Sweet Cakes and 1 Lineage II Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13420" min="6" max="6" chance="100" /> <!-- Multi-Colored Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5913" name="Anniversary Gift Box (3 Honey Wheat Cakes)" type="EtcItem">
+		<!-- A gift for the L2 anniversary. Double-click to obtain 3 Cakes and 1 Lineage II Mark. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="13421" min="3" max="3" chance="100" /> <!-- Honey Wheat Cake -->
+			<item id="13419" min="1" max="1" chance="100" /> <!-- Souvenir: Lineage II Mark -->
+		</capsuled_items>
+	</item>
+	<item id="5914" name="Blue Soul Crystal Lv. 13" type="EtcItem">
+		<!-- Blue crystal that contains the light of absorbed souls. Level 13. Once saturated, it bestows special abilities to a weapon. Consumes 26 MP when used. A crystal of this level is said to absorb souls on its own, so you don't have to use it directly on monsters. -->
+		<set name="icon" val="icon.etc_soul_stone_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2096" level="1" /> <!-- Soul Crystal -->
+		</skills>
+	</item>
+	<item id="5915" name="Pirate's Treasure Map" type="EtcItem">
+		<!-- Map that was created after putting together the map pieces found on Alligator Island. It appears to have a mark showing the location of treasure! -->
+		<set name="icon" val="icon.etc_map_ivory_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
 	<item id="5916" name="Spellbook Page" type="EtcItem">
 		<!-- Torn piece of paper that seems to have been ripped out of a spellbook. If you Double-click it, you can examine it closely. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
+		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2171" level="1" /> <!-- Spellbook Paper -->
@@ -68,47 +260,43 @@
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
-		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5918" name="Kranvel's Spellbook: Chapter of Water" type="EtcItem">
 		<!-- A chapter from the spellbook of Great Mage Kranvel. Collect all chapters - Fire, Water, Wind and Earth, and take them to Elder Casian. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
-		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5919" name="Kranvel's Spellbook: Chapter of Wind" type="EtcItem">
 		<!-- A chapter from the spellbook of Great Mage Kranvel. Collect all chapters - Fire, Water, Wind and Earth, and take them to Elder Casian. -->
 		<set name="icon" val="icon.etc_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
-		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5920" name="Kranvel's Spellbook: Chapter of Earth" type="EtcItem">
 		<!-- A chapter from the spellbook of Great Mage Kranvel. Collect all chapters - Fire, Water, Wind and Earth, and take them to Elder Casian. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
-		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="false" />
+		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5921" name="Worthless Piece of Paper" type="EtcItem">
 		<!-- Paper piece that has useless scribbles written on it. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="80" />
+		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -299,6 +487,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2172" level="1" /> <!-- Scroll of Giants -->
@@ -393,6 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2173" level="1" /> <!-- Book of Giants -->
@@ -499,6 +689,90 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
+	</item>
+	<item id="5965" name="Blank Scroll" type="EtcItem">
+		<!-- Spellbook that does not contain any magical power. Perhaps it can be helpful if you deal with Mammon's Trader? -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
+	</item>
+	<item id="5966" name="Ancient Red Papyrus" type="EtcItem">
+		<!-- Papyrus scroll found in the Tower of Insolence. If you Double-click it, you can read its contents. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2176" level="1" /> <!-- Ancient Papyrus -->
+		</skills>
+	</item>
+	<item id="5967" name="Ancient Blue Papyrus" type="EtcItem">
+		<!-- Papyrus scroll found in the Tower of Insolence. If you Double-click it, you can read its contents. -->
+		<set name="icon" val="icon.etc_paper_blue_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2176" level="2" /> <!-- Ancient Papyrus -->
+		</skills>
+	</item>
+	<item id="5968" name="Ancient Black Papyrus" type="EtcItem">
+		<!-- Papyrus scroll found in the Tower of Insolence. If you Double-click it, you can read its contents. -->
+		<set name="icon" val="icon.etc_paper_black_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2176" level="3" /> <!-- Ancient Papyrus -->
+		</skills>
+	</item>
+	<item id="5969" name="Ancient White Papyrus" type="EtcItem">
+		<!-- Papyrus scroll found in the Tower of Insolence. If you Double-click it, you can read its contents. -->
+		<set name="icon" val="icon.etc_paper_white_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
+		<skills>
+			<skill id="2176" level="4" /> <!-- Ancient Papyrus -->
+		</skills>
+	</item>
+	<item id="5970" name="Ancient Chain Letter" type="EtcItem">
+		<!-- Mysterious letter found in the Tower of Insolence. Its text reads "if you send this letter to 10 other people, you will have good luck! -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5971" name="Joke Book of Ancient Times" type="EtcItem">
 		<!-- Collection of jokes of Galfredo Romer, a Royal Clown. -->
@@ -656,6 +930,105 @@
 	<item id="5988" name="Imperial Genealogy 5" type="EtcItem">
 		<!-- The genealogy of the Elmoreden royal family. The fifth of five chapters. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5989" name="Blueprint: Tower of Insolence (1st Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 1st of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5990" name="Blueprint: Tower of Insolence (2nd Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 2nd of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5991" name="Blueprint: Tower of Insolence (3rd Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 3rd of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5992" name="Blueprint: Tower of Insolence (4th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 4th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5993" name="Blueprint: Tower of Insolence (5th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 5th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5994" name="Blueprint: Tower of Insolence (6th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 6th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5995" name="Blueprint: Tower of Insolence (7th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 7th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5996" name="Blueprint: Tower of Insolence (8th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 8th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5997" name="Blueprint: Tower of Insolence (9th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 9th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5998" name="Blueprint: Tower of Insolence (10th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 10th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5999" name="Blueprint: Tower of Insolence (11th Floor)" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 11th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="400" />

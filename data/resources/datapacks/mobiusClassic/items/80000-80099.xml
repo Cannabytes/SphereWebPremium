@@ -1,46 +1,2427 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="80091" name="Not Available - Krishna Cutter" additionalName="Not available" type="Weapon">
-		<!-- The item is not available. A weapon of a melee-fighting monster from the Cemetery. -->
-		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lhand" />
+	<item id="80000" name="Artifact Fragment" type="EtcItem">
+		<!-- Required for crafting artifacts. Take it to Artifact Merchant Alexandria in Giran to obtain the following items: Artifact - Received Damage When Immobilized, Artifact - P. Skill Power, Artifact - M. Skill Power. -->
+		<set name="icon" val="icon.bm_artifact_peice" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80001" name="Superior Seed Bracelet Lv. 1" additionalName="30-day" type="Armor">
+		<!-- When equipped, unlocks the main agathion slot and 1 additional slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate +50, Fire/ Water/ Earth/ Wind/ Dark/ Holy Resistance +30. 3. Vitality bonus +5%. -->
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="35083" level="1" /> <!-- Seed Teleport: Aden -->
+			<skill id="35084" level="1" /> <!-- Seed Teleport: Rune -->
+			<skill id="35085" level="1" /> <!-- Seed Teleport: Giran -->
+			<skill id="35086" level="1" /> <!-- Seed Teleport: Heine -->
+			<skill id="35082" level="1" /> <!-- Superior Seed Bracelet Lv. 1 -->
+		</skills>
+	</item>
+	<item id="80002" name="Blessed Antharas' Earring" additionalName="Event" type="Armor">
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Resistance +30, Infection Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Received Healing +10%, Skill MP Consumption -5%, Vampiric Rage effect +4%. Active skill: Removes Shock debuffs and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
+		<set name="icon" val="icon.bm_earring_of_antaras" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="equip_reuse_delay" val="7200" />
+		<stats>
+			<stat type="mDef">170</stat>
+			<stat type="maxMp">59</stat>
+		</stats>
+		<skills>
+			<skill id="13314" level="1" /> <!-- Antharas' Blessed Earring -->
+			<skill id="13313" level="1" /> <!-- Antharas' Blessed Earring -->
+		</skills>
+	</item>
+	<item id="80003" name="Blessed Valakas' Necklace" additionalName="Event" type="Armor">
+		<!-- MP +79, Max HP +625, P. Atk. +10%, M. Atk. +20%, M. Skill Critical Rate +2%, STR/ INT +3, Fire Resistance +30, Dark Resistance +20, Stupor Atk. Rate and Resistance +50, P. Skill Power +5%, skill cooldown -10%, Damage Reflection +5%. Active skill: Removes Hold and grants immunity to Obstruction for 5 sec. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">226</stat>
+			<stat type="maxMp">79</stat>
+		</stats>
+		<skills>
+			<skill id="13316" level="1" /> <!-- Valakas' Blessed Necklace -->
+			<skill id="13315" level="1" /> <!-- Valakas' Blessed Necklace -->
+		</skills>
+	</item>
+	<item id="80004" name="Lindvior's Earring" additionalName="Event" type="Armor">
+		<!-- MP +59, Critical Damage for basic attacks and M. skills +10%, Speed +5, DEX/ WIT +3, Dark/ Wind Resistance +30, Petrification Atk. Rate and Resistance +50, Confusion Atk. Rate and Resistance +40, Danger Zone Resistance +40, P./ M. Debuff Reflection Rate +10%, M. Damage Reflection Rate +10%. Active skill: Removes Knockback/ Knockdown debuffs, and grants immunity to Confusion for 5 sec. Effects of two identical earrings do not stack. -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">170</stat>
+			<stat type="maxMp">59</stat>
+		</stats>
+		<skills>
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
+	</item>
+	<item id="80005" name="Letter - V" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_v_i00" />
 		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80006" name="Letter I" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_i_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80007" name="Letter C" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_c_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80008" name="Letter T" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_t_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80009" name="Letter O" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_o_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80010" name="Letter R" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_r_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80011" name="Letter - Y" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_y_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80012" name="Letter - K" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_k_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80013" name="Letter E" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_e_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80014" name="Letter A" additionalName="Event" type="EtcItem">
+		<!-- Combine letters into words 'Victory Korea' or 'Korea' and take them to the event NPC to get a reward. -->
+		<set name="icon" val="icon.etc_alphabet_a_i00" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="80015" name="Gold Trophy" type="EtcItem">
+		<!-- A trophy for Lineage 2 warriors that wish victory for Korea. Double-click to obtain a reward. -->
+		<set name="icon" val="icon.ev_2018_soccer_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39398" level="1" /> <!-- Gold Trophy -->
+		</skills>
+	</item>
+	<item id="80016" name="Soccer Ball Herb" type="EtcItem">
+		<!-- Party Herb for 2018 Russia World Cup -->
+		<set name="icon" val="icon.ev_soccer_herb" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80017" name="Red Mask of Victory" additionalName="2018" type="Armor">
+		<!-- An event head accessory. Additional effects are applied when equipped along with Knight's/ Wizard's/ Warrior's Circlet enchanted to +7. Equipped in 1 head accessory slot. M. Def. +6%, Debuff Resistance +7%, P. Atk./ M. Atk./ P. Def. +1%. -->
+		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">15</stat>
+		</stats>
+		<skills>
+			<skill id="35257" level="1" /> <!-- Mask of Spirits (2018) -->
+		</skills>
+	</item>
+	<item id="80018" name="Soccer Ball of Victory" type="EtcItem">
+		<!-- A soccer ball prepared for the victory of Korea. For 1 h., acquired XP/ SP +100%. The effect does not stack with Fall of the Dragon, Nevit's Hourglass and Dandy's Home Run Ball. -->
+		<set name="icon" val="icon.ev_2018_soccer_homerunball" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39400" level="1" /> <!-- Soccer Ball of Victory -->
+		</skills>
+	</item>
+	<item id="80019" name="Hat of Cheers" type="Armor">
+		<!-- A red-and-white hat worn by Polish fans at soccer games. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.ev_2018_soccer_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="80020" name="White Potion" type="EtcItem">
+		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, Skill MP Consumption -15%. Additionally, acquired XP/ SP +30%. Cooldown: 5 min. The effect does not stack with Art of Seduction and Pa'agrio's Blessing.Cannot be used in the Olympiad. To remove the effect, press Alt + Left Mouse Button. -->
+		<set name="icon" val="icon.ev_bm_white_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39401" level="1" /> <!-- White Potion -->
+		</skills>
+	</item>
+	<item id="80021" name="Paulina's Helios Shaper" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
 		<stats>
-			<stat type="pAtk">92</stat>
-			<stat type="mAtk">54</stat>
+			<stat type="pAtk">729</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80022" name="Paulina's Helios Cutter" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
 	</item>
-	<item id="80097" name="Not Available - Krishna Guardian" additionalName="Not available" type="Weapon">
-		<!-- The item is not available. A weapon of a ranged monster from the Cemetery. -->
-		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
+	<item id="80023" name="Paulina's Helios Slasher" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="D" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
-		<set name="mp_consume" val="2" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1014</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80024" name="Paulina's Helios Avenger" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80025" name="Paulina's Helios Fighter" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_fist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1014</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80026" name="Paulina's Helios Stormer" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_spear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="80027" name="Paulina's Helios Thrower" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="reuse_delay" val="1500" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1641</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80028" name="Paulina's Helios Guardian" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="reuse_delay" val="1350" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1477</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80029" name="Paulina's Helios Buster" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">666</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="35268" level="1" /> <!-- Paulina's Blessing - Magic -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80030" name="Paulina's Helios Caster" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">666</stat>
+			<stat type="mAtk">484</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="35268" level="1" /> <!-- Paulina's Blessing - Magic -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80031" name="Paulina's Helios Retributer" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">811</stat>
+			<stat type="mAtk">532</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35269" level="1" /> <!-- Paulina's Blessing - Magic -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80032" name="Paulina's Helios Dual Swords" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1014</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80033" name="Paulina's Helios Dual Daggers" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="2050" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">833</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80034" name="Paulina's Helios Dual Blunt Weapon" type="Weapon">
+		<!-- <Special properties>. Atk. Spd./ Casting Spd. +15%, Critical Rate for basic attacks and P./ M. skills +5%, Critical Damage for basic attacks and P./ M. skills +10%, Max HP +15%, PvE damage +10%. Cannot be enchanted, augmented, crystallized or imbued with an attribute. No soul crystal can be inserted. The item's appearance cannot be modified. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1014</stat>
+			<stat type="mAtk">363</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Blessing - Combat -->
+			<skill id="13847" level="1" /> <!-- Unique Effect: PvE Damage Up -->
+		</skills>
+	</item>
+	<item id="80035" name="Paulina's Eternal Helmet" additionalName="Heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">156</stat>
+		</stats>
+	</item>
+	<item id="80036" name="Paulina's Eternal Breastplate" additionalName="Heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_heavy_upbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">417</stat>
+		</stats>
+	</item>
+	<item id="80037" name="Paulina's Eternal Gaiters" additionalName="Heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_heavy_downbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">260</stat>
+		</stats>
+	</item>
+	<item id="80038" name="Paulina's Eternal Gauntlets" additionalName="Heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_heavy_gloves" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80039" name="Paulina's Eternal Boots" additionalName="Heavy armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shoes" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80040" name="Paulina's Eternal Shield" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shield" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="rEvas">-8</stat>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">569</stat>
+		</stats>
+	</item>
+	<item id="80041" name="Paulina's Eternal Leather Helmet" additionalName="Light armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">156</stat>
+		</stats>
+	</item>
+	<item id="80042" name="Paulina's Eternal Leather Armor" additionalName="Light armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_light_upbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">333</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="80043" name="Paulina's Eternal Leather Leggings" additionalName="Light armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_light_downbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">208</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="80044" name="Paulina's Eternal Leather Gloves" additionalName="Light armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_light_gloves" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80045" name="Paulina's Eternal Leather Boots" additionalName="Light armor" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_light_shoes" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80046" name="Paulina's Eternal Circlet" additionalName="Robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_armor_circlet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">156</stat>
+		</stats>
+	</item>
+	<item id="80047" name="Paulina's Eternal Tunic" additionalName="Robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_robe_upbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">49</stat>
+			<stat type="pDef">229</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="80048" name="Paulina's Eternal Stockings" additionalName="Robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_robe_downbody" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">33</stat>
+			<stat type="pDef">143</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="80049" name="Paulina's Eternal Gloves" additionalName="Robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_robe_gloves" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80050" name="Paulina's Eternal Shoes" additionalName="Robe" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted, crystallized or imbued with an attribute. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_robe_shoes" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">104</stat>
+		</stats>
+	</item>
+	<item id="80051" name="Paulina's Eternal Sigil" type="Armor">
+		<!-- 1 common soul crystal and 1 special soul crystal can be inserted. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_robe_sigil" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="ensoulNormalSlots" val="1" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pDef">52</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="rEvas">-8</stat>
+		</stats>
+	</item>
+	<item id="80052" name="Paulina's Eternal Necklace" additionalName="Skill Cooldown" type="Armor">
+		<!-- MP +65, skill cooldown -10%. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_necklace" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">178</stat>
+			<stat type="maxMp">65</stat>
+		</stats>
+		<skills>
+			<skill id="35258" level="1" /> <!-- Paulina's Eternal Necklace - Skill Cooldown -->
+		</skills>
+	</item>
+	<item id="80053" name="Paulina's Eternal Earring" additionalName="MP Consumption" type="Armor">
+		<!-- MP +49, Received Healing +10%, MP Consumption -5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">133</stat>
+			<stat type="maxMp">49</stat>
+		</stats>
+		<skills>
+			<skill id="35259" level="1" /> <!-- Paulina's Eternal Earring - MP Consumption -->
+		</skills>
+	</item>
+	<item id="80054" name="Paulina's Eternal Earring" additionalName="Vampiric Rage" type="Armor">
+		<!-- MP +49, Vampiric Rage effect +5%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">133</stat>
+			<stat type="maxMp">49</stat>
+		</stats>
+		<skills>
+			<skill id="35260" level="1" /> <!-- Paulina's Eternal Earring - Vampiric Rage -->
+		</skills>
+	</item>
+	<item id="80055" name="Paulina's Eternal Ring" additionalName="Critical Rate" type="Armor">
+		<!-- MP +33, Critical Rate for basic attacks +5%, M. Skill Critical Rate +5%. Effects of two identical rings do not stack. Cannot be enchanted and crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">89</stat>
+			<stat type="maxMp">33</stat>
+		</stats>
+		<skills>
+			<skill id="35261" level="1" /> <!-- Paulina's Eternal Ring - Critical Rate -->
+		</skills>
+	</item>
+	<item id="80056" name="Paulina's Eternal Ring" additionalName="Critical Damage" type="Armor">
+		<!-- MP +33, P. Critical Damage for basic attacks and P./ M. skills +15%. Effects of two identical earrings do not stack. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_1_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">89</stat>
+			<stat type="maxMp">33</stat>
+		</stats>
+		<skills>
+			<skill id="35262" level="1" /> <!-- Paulina's Eternal Ring - Critical Damage -->
+		</skills>
+	</item>
+	<item id="80057" name="Paulina's Eternal Bracelet" type="Armor">
+		<!-- MP +225, unlocks 6 talisman slots. P. Atk./ M. Atk./ P. Def./ M. Def. +3%. Cannot be enchanted or crystallized. -->
+		<set name="icon" val="icon.bm_polyne_R99_bracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="maxMp">225</stat>
+		</stats>
+		<skills>
+			<skill id="35270" level="1" /> <!-- Paulina's Eternal Bracelet -->
+		</skills>
+	</item>
+	<item id="80058" name="+5 Shiny Elemental Shirt Pack" type="EtcItem">
+		<!-- Double-click to obtain +5 Shiny Elemental Shirt. -->
+		<set name="icon" val="icon.ainhasard_shirt_box_1" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Shiny Elemental Shirt -->
+		</capsuled_items>
+		<skills>
+			<skill id="39402" level="1" /> <!-- +5 Shiny Elemental Shirt Pack -->
+		</skills>
+	</item>
+	<item id="80059" name="+5 Physical Reflect Shirt Pack" type="EtcItem">
+		<!-- Double-click to obtain +5 Physical Reflect Shirt. -->
+		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46193" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Physical Reflect Shirt -->
+		</capsuled_items>
+		<skills>
+			<skill id="39403" level="1" /> <!-- +5 Physical Reflect Shirt Pack -->
+		</skills>
+	</item>
+	<item id="80060" name="+5 Magical Reflect Shirt Pack" type="EtcItem">
+		<!-- Double-click to obtain +5 Magical Reflect Shirt. -->
+		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46194" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Magical Reflect Shirt -->
+		</capsuled_items>
+		<skills>
+			<skill id="39404" level="1" /> <!-- +5 Magical Reflect Shirt Pack -->
+		</skills>
+	</item>
+	<item id="80061" name="Emperor's Special Cocktail" additionalName="Attack" type="EtcItem">
+		<!-- For 60 min., applies the following effects: Musician's Melody Lv. 5, Warrior's Harmony Lv. 2, Drum Concert, United Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39766" level="1" /> <!-- Fever Melody - Wondrous Cocktail -->
+			<skill id="39411" level="1" /> <!-- Attribute Resistance - Emperor's Special Cocktail -->
+			<skill id="39771" level="1" /> <!-- Drumbeat of Serenity - Wondrous Cocktail -->
+			<skill id="39418" level="1" /> <!-- Warrior's Harmony - Emperor's Special Cocktail -->
+		</skills>
+	</item>
+	<item id="80062" name="Emperor's Special Cocktail" additionalName="Magic" type="EtcItem">
+		<!-- For 60 min., applies the following effects: Musician's Melody Lv. 5, Wizard's Harmony Lv. 2, Drum Concert, United Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39766" level="1" /> <!-- Fever Melody - Wondrous Cocktail -->
+			<skill id="39411" level="1" /> <!-- Attribute Resistance - Emperor's Special Cocktail -->
+			<skill id="39771" level="1" /> <!-- Drumbeat of Serenity - Wondrous Cocktail -->
+			<skill id="39419" level="1" /> <!-- Wizard's Harmony - Emperor's Special Cocktail -->
+		</skills>
+	</item>
+	<item id="80063" name="Emperor's Special Cocktail" additionalName="Defense" type="EtcItem">
+		<!-- For 60 min., applies the following effects: Musician's Melody Lv. 5, Knight's Harmony Lv. 2, Drum Concert, United Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
+		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39766" level="1" /> <!-- Fever Melody - Wondrous Cocktail -->
+			<skill id="39411" level="1" /> <!-- Attribute Resistance - Emperor's Special Cocktail -->
+			<skill id="39771" level="1" /> <!-- Drumbeat of Serenity - Wondrous Cocktail -->
+			<skill id="39417" level="1" /> <!-- Knight's Harmony - Emperor's Special Cocktail -->
+		</skills>
+	</item>
+	<item id="80064" name="Challenger's Scroll of Growth" type="EtcItem">
+		<!-- For 10 min., acquired XP/ SP while hunting +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-105. The effect does not stack with Freya's Frozen Scroll and Freya's Scroll of Storm. -->
+		<set name="icon" val="icon.bm_challenger_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39405" level="1" /> <!-- Challenger's Growth Scroll -->
+		</skills>
+	</item>
+	<item id="80065" name="Extra Pass: Altar of Shillien" type="EtcItem">
+		<!-- An extra pass to an instance zone. Double-click to reset the instance zone timer for Altar of Shillien. Can only be used when on a cooldown to the instance zone. Can only be used once a day outside of the dungeon. -->
+		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39406" level="1" /> <!-- Extra Pass: Altar of Shillien -->
+		</skills>
+	</item>
+	<item id="80066" name="Fafurion Avenger" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_avenger_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<stats>
-			<stat type="pAtk">92</stat>
-			<stat type="mAtk">54</stat>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="80067" name="Fafurion Fighter" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_fighter_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="80068" name="Fafurion Stormer" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Number of targets hit on a basic attack +4. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_stormer_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1188</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+		</skills>
+	</item>
+	<item id="80069" name="Fafurion Retributer" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_retributer_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1157</stat>
+			<stat type="mAtk">759</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="80070" name="Fafurion Dual Blunt Weapon" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_dual_blunt_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="80071" name="Fafurion Dual Swords" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. No soul crystal can be inserted. Can be augmented. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 1. -->
+		<set name="icon" val="icon.fafurion_onehand_dual_sword_i00" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="29396" level="1" /> <!-- Dragon Fighter -->
+		</skills>
+	</item>
+	<item id="80072" name="Fafurion Avenger" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_avenger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80073" name="Fafurion Fighter" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_fighter_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80074" name="Fafurion Stormer" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_stormer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2146</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80075" name="Fafurion Retributer" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_retributer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2090</stat>
+			<stat type="mAtk">1371</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80076" name="Fafurion Dual Blunt Weapon" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80077" name="Fafurion Dual Swords" additionalName="Lv. 1" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 2. -->
+		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">500</stat>
+		</stats>
+		<skills>
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80078" name="Fafurion Avenger" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_avenger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80079" name="Fafurion Fighter" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_fighter_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80080" name="Fafurion Stormer" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_stormer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2488</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80081" name="Fafurion Retributer" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_retributer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2423</stat>
+			<stat type="mAtk">1590</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80082" name="Fafurion Dual Blunt Weapon" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80083" name="Fafurion Dual Swords" additionalName="Lv. 2" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +30%. Max HP/ MP/ CP +30%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +30%. All attack power +10%. All Critical Rate +30%. All Critical Damage +30%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 3. -->
+		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3027</stat>
+			<stat type="mAtk">1084</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="36616" level="1" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80084" name="Fafurion Avenger" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_avenger_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80085" name="Fafurion Fighter" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_fighter_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80086" name="Fafurion Stormer" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. Number of targets hit on a basic attack +4. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_stormer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2884</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80087" name="Fafurion Retributer" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_retributer_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">2809</stat>
+			<stat type="mAtk">1843</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80088" name="Fafurion Dual Blunt Weapon" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80089" name="Fafurion Dual Swords" additionalName="Lv. 3" type="Weapon">
+		<!-- Cannot be enchanted or imbued with an attribute. The item's appearance cannot be modified. 2 common soul crystals and 1 special soul crystal can be inserted. Can be augmented. <font color=ff6666><Base effect></font>. PvP damage +50%. Max HP/ MP/ CP +100%. <font color=ff6666><Unique effect></font>. Max HP can be more than 250,000. Atk. Spd./ Casting Spd. +100%. All attack power +20%. All Critical Rate +50%. All Critical Damage +50%. Perfection trigger rate +50. Soulshot/ Spiritshot damage +40%. <font color=ff6666><Available skills></font>. Dignity. Fafurion's Rising Wave. Fafurion's Breath. <Upgrade>. Take the weapon and Dragon Claw to a blacksmith in any town to get a Fafurion weapon Lv. 4. -->
+		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
+		<set name="is_dragon_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
+		<set name="crystal_count" val="99999" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
+		<stats>
+			<stat type="pAtk">3509</stat>
+			<stat type="mAtk">1257</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+			<stat type="waterPower">999</stat>
+		</stats>
+		<skills>
+			<skill id="8890" level="1" /> <!-- Dignity -->
+			<skill id="35272" level="1" /> <!-- Fafurion Raging Waves -->
+			<skill id="35271" level="1" /> <!-- Fafurion's Breath -->
+			<skill id="36616" level="2" /> <!-- Dragon Slayer -->
+		</skills>
+	</item>
+	<item id="80090" name="Krishna Shaper" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P. Skill Critical Damage +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_dagger_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">708</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35299" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Shaper - Special Property -->
+		</skills>
+	</item>
+	<item id="80091" name="Krishna Cutter" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, Critical Rate for basic attacks +3%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="crystal_count" val="34485" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">809</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35296" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Cutter - Special Property -->
+		</skills>
+	</item>
+	<item id="80092" name="Krishna Slasher" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +5%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="crystal_count" val="34485" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">984</stat>
+			<stat type="mAtk">470</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+		<skills>
+			<skill id="35297" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Slasher - Special Property -->
+		</skills>
+	</item>
+	<item id="80093" name="Krishna Avenger" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Accuracy +4, P./ M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1740" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">809</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+		<skills>
+			<skill id="35298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Avenger - Special Property -->
+		</skills>
+	</item>
+	<item id="80094" name="Krishna Fighter" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, Critical Damage for basic attacks +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_fist_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="crystal_count" val="34485" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">984</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="35300" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Fighter - Special Property -->
+		</skills>
+	</item>
+	<item id="80095" name="Krishna Stormer" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2% -->
+		<set name="icon" val="icon.weapon_r110_spear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="2010" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">809</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm of Multiattack -->
+			<skill id="35301" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Stormer - Special Property -->
+		</skills>
+	</item>
+	<item id="80096" name="Krishna Thrower" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P./ M. Atk. +2%, Atk. Spd./ Casting Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_bow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1593</stat>
+			<stat type="mAtk">470</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
 		</stats>
+		<skills>
+			<skill id="35305" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Thrower - Special Property -->
+		</skills>
+	</item>
+	<item id="80097" name="Krishna Guardian" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1350" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1580" />
+		<set name="price" val="1616590000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<stats>
+			<stat type="pAtk">1434</stat>
+			<stat type="mAtk">352</stat>
+			<stat type="critRate">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="35306" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Guardian - Special Property -->
+		</skills>
+	</item>
+	<item id="80098" name="Krishna Buster" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<stats>
+			<stat type="pAtk">647</stat>
+			<stat type="mAtk">470</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="35307" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Buster - Special Property -->
+		</skills>
+	</item>
+	<item id="80099" name="Krishna Caster" type="Weapon">
+		<!-- 2 common soul crystals and 1 special soul crystal can be inserted. Starting from +4, Soulshot/ Spiritshot damage +30%, M. Accuracy +4, Casting Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="34485" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="1080" />
+		<set name="price" val="1616590000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulSpecialSlots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<stats>
+			<stat type="pAtk">647</stat>
+			<stat type="mAtk">470</stat>
+			<stat type="critRate">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+		<skills>
+			<skill id="35308" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Krishna Caster - Special Property -->
+		</skills>
 	</item>
 </list>

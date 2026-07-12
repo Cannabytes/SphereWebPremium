@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5700" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- A seed of Alternative Great Cobol. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 41-51 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5701" name="Seed: Alternative Red Codran" type="EtcItem">
+		<!-- A seed of Alternative Red Codran. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5702" name="Seed: Alternative Sea Codran" type="EtcItem">
+		<!-- A seed of Alternative Sea Codran. To get the fruit, plant this seed onto a monster in the Innadril area. For best results, a level 44-54 character should plant it on a monster within the same level range. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
 	<item id="5703" name="No-grade Lucky Charm" type="EtcItem">
 		<!-- No death penalty is applied when killed by a boss monster. Required level: 1-19. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -7,7 +52,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="price" val="100" />
+		<set name="price" val="4000" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -17,15 +62,41 @@
 			<skill id="2168" level="1" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
-	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
-		<!-- <font color=ff6666><Unavailable to Sylphs/ Vanguard Riders/ Assassins/ Blood Roses/ High Elves/ Wargs></font> -->
+	<item id="5704" name="Keshanberk*Keshanberk" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1485" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="2080" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="critRate">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
+		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="990" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
@@ -35,35 +106,29 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulNormalSlots" val="1" />
 		<set name="ensoulSpecialSlots" val="1" />
 		<stats>
 			<stat type="pAtk">275</stat>
-			<stat type="mAtk">127</stat>
+			<stat type="mAtk">112</stat>
 			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 		<skills>
-			<skill id="50403" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Weapon -->
-			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- Blessing Effect: +5 A-grade Weapon -->
-			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- Blessing Effect: +6 A-grade Weapon -->
-			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- Blessing Effect: +7 A-grade Weapon -->
-			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- Blessing Effect: +8 A-grade Weapon -->
-			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- Blessing Effect: +9 A-grade Weapon -->
-			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- Blessing Effect: +10 A-grade Weapon -->
+			<skill id="3013" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Health -->
 		</skills>
 	</item>
 	<item id="5706" name="Damascus*Damascus" type="Weapon">
-		<!-- <font color=ff6666><Unavailable to Sylphs/ Vanguard Riders/ Assassins/ Blood Roses/ High Elves/ Wargs></font> -->
+		<!-- When enchanting dual swords, two-handed swords/ blunt weapons and fists, the P. Atk. bonus is higher than that of one-handed weapons. 1 common soul crystal and 1 special soul crystal can be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
@@ -73,24 +138,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
-		<set name="ensoulNormalSlots" val="2" />
+		<set name="ensoulNormalSlots" val="1" />
 		<set name="ensoulSpecialSlots" val="1" />
 		<stats>
 			<stat type="pAtk">282</stat>
-			<stat type="mAtk">129</stat>
+			<stat type="mAtk">114</stat>
 			<stat type="critRate">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 		<skills>
-			<skill id="50403" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Weapon -->
-			<skill id="50406" level="1" type="ON_BLESSING" type_value="5" /> <!-- Blessing Effect: +5 A-grade Weapon -->
-			<skill id="50407" level="1" type="ON_BLESSING" type_value="6" /> <!-- Blessing Effect: +6 A-grade Weapon -->
-			<skill id="50408" level="1" type="ON_BLESSING" type_value="7" /> <!-- Blessing Effect: +7 A-grade Weapon -->
-			<skill id="50409" level="1" type="ON_BLESSING" type_value="8" /> <!-- Blessing Effect: +8 A-grade Weapon -->
-			<skill id="50410" level="1" type="ON_BLESSING" type_value="9" /> <!-- Blessing Effect: +9 A-grade Weapon -->
-			<skill id="50411" level="1" type="ON_BLESSING" type_value="10" /> <!-- Blessing Effect: +10 A-grade Weapon -->
+			<skill id="3046" level="20" type="ON_ENCHANT" type_value="4" /> <!-- Special Property: Guidance -->
 		</skills>
 	</item>
 	<item id="5707" name="Record of Seven Signs" type="EtcItem">
@@ -110,445 +169,894 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="5710" name="Zubei's Gauntlets (Heavy)" type="Armor">
+	<item id="5709" name="Sealed Zubei's Gauntlets" type="Armor">
+		<!-- Old and not very useful equipment. -->
+		<set name="icon" val="icon.armor_t64_g_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="8" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="79820" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5710" name="Zubei's Gauntlets" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Zubei's heavy armor set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5711" name="Zubei's Gauntlets (Light)" type="Armor">
+	<item id="5711" name="Zubei's Gauntlets" additionalName="Light armor" type="Armor">
+		<!-- A part of the Zubei's light armor set. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5712" name="Zubei's Gauntlets (Robe)" type="Armor">
+	<item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5714" name="Avadon Gloves (Heavy)" type="Armor">
+	<item id="5713" name="Sealed Avadon Gloves" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5715" name="Avadon Gloves (Light)" type="Armor">
+	<item id="5714" name="Avadon Gloves" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Avadon heavy armor set. -->
+		<set name="icon" val="icon.armor_t66_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="8" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="590" />
+		<set name="price" val="79820" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5715" name="Avadon Gloves" additionalName="Light armor" type="Armor">
+		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5716" name="Avadon Gloves (Robe)" type="Armor">
+	<item id="5716" name="Avadon Gloves" additionalName="Robe" type="Armor">
+		<!-- A part of the Avadon robe set. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="590" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5718" name="Blue Wolf Gloves (Heavy)" type="Armor">
+	<item id="5717" name="Sealed Blue Wolf Gloves" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5719" name="Blue Wolf Gloves (Light)" type="Armor">
+	<item id="5718" name="Blue Wolf Gloves" additionalName="Heavy armor" type="Armor">
+		<!-- Part of the heavy Blue Wolf set. -->
+		<set name="icon" val="icon.armor_t68_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="590" />
+		<set name="price" val="123760" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5719" name="Blue Wolf Gloves" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Blue Wolf set. -->
 		<set name="icon" val="icon.armor_t69_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5720" name="Blue Wolf Gloves (Robe)" type="Armor">
+	<item id="5720" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
+		<!-- A part of the Blue Wolf robe set. -->
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="590" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5722" name="Doom Gloves (Heavy)" type="Armor">
+	<item id="5721" name="Sealed Doom Gloves" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5723" name="Doom Gloves (Light)" type="Armor">
+	<item id="5722" name="Doom Gloves" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Doom heavy armor set. -->
+		<set name="icon" val="icon.armor_t71_g_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="580" />
+		<set name="price" val="123760" />
+		<set name="commissionItemType" val="GLOVES" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5723" name="Doom Gloves" additionalName="Light armor" type="Armor">
+		<!-- A piece of the light Doom set. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5724" name="Doom Gloves (Robe)" type="Armor">
+	<item id="5724" name="Doom Gloves" additionalName="Robe" type="Armor">
+		<!-- A piece of the Doom robe set. -->
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5726" name="Zubei's Boots (Heavy)" type="Armor">
+	<item id="5725" name="Sealed Zubei's Boots" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5727" name="Zubei's Boots (Light)" type="Armor">
+	<item id="5726" name="Zubei's Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Zubei's heavy armor set. -->
+		<set name="icon" val="icon.armor_t64_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="8" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="79820" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5727" name="Zubei's Boots" additionalName="Light armor" type="Armor">
+		<!-- A part of the Zubei's light armor set. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5728" name="Zubei's Boots (Robe)" type="Armor">
+	<item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5730" name="Avadon Boots (Heavy)" type="Armor">
+	<item id="5729" name="Sealed Avadon Boots" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5731" name="Avadon Boots (Light)" type="Armor">
+	<item id="5730" name="Avadon Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Avadon heavy armor set. -->
+		<set name="icon" val="icon.armor_t66_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="8" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1180" />
+		<set name="price" val="79820" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="5731" name="Avadon Boots" additionalName="Light armor" type="Armor">
+		<!-- A part of the Avadon light armor set. -->
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5732" name="Avadon Boots (Robe)" type="Armor">
+	<item id="5732" name="Avadon Boots" additionalName="Robe" type="Armor">
+		<!-- A part of the Avadon robe set. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="8" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1180" />
-		<set name="price" val="519000" />
+		<set name="price" val="79820" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5734" name="Blue Wolf Boots (Heavy)" type="Armor">
+	<item id="5733" name="Sealed Blue Wolf Boots" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5735" name="Blue Wolf Boots (Light)" type="Armor">
+	<item id="5734" name="Blue Wolf Boots" additionalName="Heavy armor" type="Armor">
+		<!-- Part of the heavy Blue Wolf set. -->
+		<set name="icon" val="icon.armor_t68_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1130" />
+		<set name="price" val="123760" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5735" name="Blue Wolf Boots" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Blue Wolf set. -->
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5736" name="Blue Wolf Boots (Robe)" type="Armor">
+	<item id="5736" name="Blue Wolf Boots" additionalName="Robe" type="Armor">
+		<!-- A part of the Blue Wolf robe set. -->
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5738" name="Doom Boots (Heavy)" type="Armor">
+	<item id="5737" name="Sealed Doom Boots" type="Armor">
+		<!-- Old and not very useful equipment. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5739" name="Doom Boots (Light)" type="Armor">
+	<item id="5738" name="Doom Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Doom heavy armor set. -->
+		<set name="icon" val="icon.armor_t71_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1130" />
+		<set name="price" val="123760" />
+		<set name="commissionItemType" val="FEET" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pDef">44</stat>
+		</stats>
+	</item>
+	<item id="5739" name="Doom Boots" additionalName="Light armor" type="Armor">
+		<!-- A piece of the light Doom set. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5740" name="Doom Boots (Robe)" type="Armor">
+	<item id="5740" name="Doom Boots" additionalName="Robe" type="Armor">
+		<!-- A piece of the Doom robe set. -->
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="11" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1130" />
-		<set name="price" val="804000" />
+		<set name="price" val="123760" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5765" name="Dark Crystal Gloves (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Atk. Spd. +8%. Received Healing +2% -->
+	<item id="5741" name="Recipe: Sealed Zubei's Gauntlets" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Zubei's Gauntlets. Requires Create Item Lv. 6. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5742" name="Recipe: Sealed Zubei's Gauntlets (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Zubei's Gauntlets. Requires Create Item Lv. 6. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5743" name="Recipe: Sealed Avadon Gloves (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Avadon Gloves. Requires Create Item Lv. 6. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5744" name="Recipe: Sealed Avadon Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Avadon Gloves. Requires Create Item Lv. 6. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5745" name="Corroded Recipe: Sealed Blue Wolf Gloves" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5746" name="Recipe: Sealed Blue Wolf Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Blue Wolf Gloves. Requires Create Item Lv. 7. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5747" name="Recipe: Sealed Doom Gloves" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Doom Gloves. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5748" name="Recipe: Sealed Doom Gloves (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Doom Gloves. Requires Create Item Lv. 7. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5749" name="Recipe: Sealed Zubei's Boots" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Zubei's Boots. Requires Create Item Lv. 6. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5750" name="Recipe: Sealed Zubei's Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Zubei's Boots. Requires Create Item Lv. 6. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5751" name="Recipe: Sealed Avadon Boots (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Avadon Boots. Requires Create Item Lv. 6. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5752" name="Recipe: Sealed Avadon Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Avadon Boots. Requires Create Item Lv. 6. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_red_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5753" name="Recipe: Sealed Blue Wolf Boots" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Blue Wolf Boots. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5754" name="Recipe: Sealed Blue Wolf Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Blue Wolf Boots. Requires Create Item Lv. 7. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5755" name="Recipe: Sealed Doom Boots (100%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Doom Boots. Requires Create Item Lv. 7. The success rate is 100%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5756" name="Recipe: Sealed Doom Boots (60%)" type="EtcItem">
+		<!-- For Dwarves only. A recipe for Sealed Doom Boots. Requires Create Item Lv. 7. The success rate is 60%. A useless recipe for crafting old equipment. -->
+		<set name="icon" val="icon.etc_recipe_violet_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17700" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5757" name="Corroded Sealed Zubei's Gauntlet Fragment" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5758" name="Sealed Avadon Glove Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Avadon Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5759" name="Sealed Blue Wolf Glove Fabric" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Blue Wolf Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_leather_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5760" name="Sealed Doom Glove Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Doom Gloves. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_plate_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5761" name="Corroded Sealed Zubei's Boot Design" type="EtcItem">
+		<!-- Not used anymore. Can be sold to any shop. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5762" name="Sealed Avadon Boots Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Avadon Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="3843" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5763" name="Sealed Blue Wolf Boot Design" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Blue Wolf Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5764" name="Sealed Doom Boot Fragment" type="EtcItem">
+		<!-- Key material for Dwarves to make Sealed Doom Boots. Not valuable material for crafting old equipment. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="price" val="4455" />
+		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy armor" type="Armor">
+		<!-- A part of the Dark Crystal heavy set. -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -556,31 +1064,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50236" level="1" /> <!-- Dark Crystal Gloves (Heavy) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5766" name="Dark Crystal Gloves (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Evasion +2 -->
+	<item id="5766" name="Dark Crystal Gloves" additionalName="Light armor" type="Armor">
+		<!-- A part of the Dark Crystal light armor set. -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -588,31 +1083,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50238" level="1" /> <!-- Dark Crystal Gloves (Light) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5767" name="Dark Crystal Gloves (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Interruption Rate -25 -->
+	<item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+		<!-- A part of the Dark Crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -620,31 +1102,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50237" level="1" /> <!-- Dark Crystal Gloves (Robe) -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Magic) -->
-			<skill id="50264" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Magic) -->
-			<skill id="50264" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Magic) -->
-			<skill id="50264" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Magic) -->
-			<skill id="50264" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Magic) -->
-			<skill id="50264" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Magic) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5768" name="Tallum Gloves (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Def. +10 -->
+	<item id="5768" name="Tallum Gloves" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Tallum heavy armor set. -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -652,31 +1121,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50245" level="1" /> <!-- Tallum Gloves (Heavy) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5769" name="Tallum Gloves (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Casting Spd. +15% -->
+	<item id="5769" name="Tallum Gloves" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Tallum set. -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -684,31 +1140,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50247" level="1" /> <!-- Tallum Gloves (Light) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5770" name="Tallum Gloves (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Casting Spd. +15% -->
+	<item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+		<!-- Part of the Tallum robe set. -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
@@ -716,31 +1159,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50246" level="1" /> <!-- Tallum Gloves (Robe) -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Magic) -->
-			<skill id="50264" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Magic) -->
-			<skill id="50264" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Magic) -->
-			<skill id="50264" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Magic) -->
-			<skill id="50264" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Magic) -->
-			<skill id="50264" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Magic) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5771" name="Gauntlets of Nightmare (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Atk. +50 -->
+	<item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy armor" type="Armor">
+		<!-- A part of the heavy armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
@@ -748,31 +1178,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50242" level="1" /> <!-- Gauntlets of Nightmare (Heavy) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5772" name="Gauntlets of Nightmare (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. With an 80% chance, absorbs 2% of inflicted damage as HP. -->
+	<item id="5772" name="Gauntlets of Nightmare" additionalName="Light armor" type="Armor">
+		<!-- A part of the light armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
@@ -780,31 +1197,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50244" level="1" /> <!-- Gauntlets of Nightmare (Light) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5773" name="Gauntlets of Nightmare (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. M. Atk. +50 -->
+	<item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+		<!-- A part of the robe set of Nightmare. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
@@ -812,31 +1216,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50243" level="1" /> <!-- Gauntlets of Nightmare (Robe) -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Magic) -->
-			<skill id="50264" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Magic) -->
-			<skill id="50264" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Magic) -->
-			<skill id="50264" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Magic) -->
-			<skill id="50264" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Magic) -->
-			<skill id="50264" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Magic) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5774" name="Majestic Gauntlets (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. Atk. Spd. +50 -->
+	<item id="5774" name="Majestic Gauntlets" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Majestic heavy armor set. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
@@ -844,31 +1235,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50239" level="1" /> <!-- Majestic Gauntlets (Heavy) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5775" name="Majestic Gauntlets (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Skill Critical Damage +50 -->
+	<item id="5775" name="Majestic Gauntlets" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Majestic set. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
@@ -876,31 +1254,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50241" level="1" /> <!-- Majestic Gauntlets (Light) -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Physical) -->
-			<skill id="50263" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Physical) -->
-			<skill id="50263" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Physical) -->
-			<skill id="50263" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Physical) -->
-			<skill id="50263" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Physical) -->
-			<skill id="50263" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Physical) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5776" name="Majestic Gauntlets (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Spd. +50 -->
+	<item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+		<!-- Part of the Majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
@@ -908,31 +1273,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50240" level="1" /> <!-- Majestic Gauntlets (Robe) -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Gloves (Magic) -->
-			<skill id="50264" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Gloves (Magic) -->
-			<skill id="50264" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Gloves (Magic) -->
-			<skill id="50264" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Gloves (Magic) -->
-			<skill id="50264" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Gloves (Magic) -->
-			<skill id="50264" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Gloves (Magic) -->
-			<skill id="83222" level="2" type="ON_BLESSING" /> <!-- Blessing Effect: Gloves -->
-			<skill id="83191" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Gloves - 6 Item Effect -->
-			<skill id="83192" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Gloves - 7 Item Effect -->
-			<skill id="83193" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Gloves - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5777" name="Dark Crystal Boots (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Speed +4. Received Healing +2% -->
+	<item id="5777" name="Dark Crystal Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of the Dark Crystal heavy set. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
@@ -940,31 +1292,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50248" level="1" /> <!-- Dark Crystal Boots (Heavy) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5778" name="Dark Crystal Boots (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Evasion +2 -->
+	<item id="5778" name="Dark Crystal Boots" additionalName="Light armor" type="Armor">
+		<!-- A part of the Dark Crystal light armor set. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
@@ -972,31 +1311,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50250" level="1" /> <!-- Dark Crystal Boots (Light) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5779" name="Dark Crystal Boots (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Casting Interruption Rate -25 -->
+	<item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+		<!-- A part of the Dark Crystal robe set. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1110" />
@@ -1004,31 +1330,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50249" level="1" /> <!-- Dark Crystal Boots (Robe) -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Magic) -->
-			<skill id="50266" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Magic) -->
-			<skill id="50266" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Magic) -->
-			<skill id="50266" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Magic) -->
-			<skill id="50266" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Magic) -->
-			<skill id="50266" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Magic) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5780" name="Tallum Boots (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Def. +10 -->
+	<item id="5780" name="Tallum Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Tallum heavy armor set. -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
@@ -1036,31 +1349,18 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FEET" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50257" level="1" /> <!-- Tallum Boots (Heavy) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5781" name="Tallum Boots (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Speed +4 -->
+	<item id="5781" name="Tallum Boots" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Tallum set. -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
@@ -1068,31 +1368,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50259" level="1" /> <!-- Tallum Boots (Light) -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Magic) -->
-			<skill id="50266" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Magic) -->
-			<skill id="50266" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Magic) -->
-			<skill id="50266" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Magic) -->
-			<skill id="50266" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Magic) -->
-			<skill id="50266" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Magic) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5782" name="Tallum Boots (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Speed +4 -->
+	<item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Tallum robe set. -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="47" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
@@ -1100,31 +1387,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
-		<skills>
-			<skill id="50258" level="1" /> <!-- Tallum Boots (Robe) -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Magic) -->
-			<skill id="50266" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Magic) -->
-			<skill id="50266" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Magic) -->
-			<skill id="50266" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Magic) -->
-			<skill id="50266" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Magic) -->
-			<skill id="50266" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Magic) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5783" name="Boots of Nightmare (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Atk. +50 -->
+	<item id="5783" name="Boots of Nightmare" additionalName="Heavy armor" type="Armor">
+		<!-- A part of the heavy armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
@@ -1132,31 +1406,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50254" level="1" /> <!-- Boots of Nightmare (Heavy) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5784" name="Boots of Nightmare (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. With an 80% chance, absorbs 2% of inflicted damage as HP. -->
+	<item id="5784" name="Boots of Nightmare" additionalName="Light armor" type="Armor">
+		<!-- A part of the light armor set of Nightmare. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
@@ -1164,31 +1425,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50256" level="1" /> <!-- Boots of Nightmare (Light) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5785" name="Boots of Nightmare (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. M. Atk. +50 -->
+	<item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+		<!-- A part of the robe set of Nightmare. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
@@ -1196,31 +1444,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50255" level="1" /> <!-- Boots of Nightmare (Robe) -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Magic) -->
-			<skill id="50266" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Magic) -->
-			<skill id="50266" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Magic) -->
-			<skill id="50266" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Magic) -->
-			<skill id="50266" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Magic) -->
-			<skill id="50266" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Magic) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5786" name="Majestic Boots (Heavy)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Atk. Spd. +50 -->
+	<item id="5786" name="Majestic Boots" additionalName="Heavy armor" type="Armor">
+		<!-- A part of Majestic heavy armor set. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
@@ -1228,31 +1463,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50251" level="1" /> <!-- Majestic Boots (Heavy) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5787" name="Majestic Boots (Light)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Skill Critical Damage +50 -->
+	<item id="5787" name="Majestic Boots" additionalName="Light armor" type="Armor">
+		<!-- Part of the light Majestic set. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
@@ -1260,31 +1482,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50253" level="1" /> <!-- Majestic Boots (Light) -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Physical) -->
-			<skill id="50265" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Physical) -->
-			<skill id="50265" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Physical) -->
-			<skill id="50265" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Physical) -->
-			<skill id="50265" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Physical) -->
-			<skill id="50265" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Physical) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5788" name="Majestic Boots (Robe)" type="Armor">
-		<!-- <font color=bbaa88><Base effect></font>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Casting Spd. +50 -->
+	<item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+		<!-- Part of the Majestic robe set. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="71" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1110" />
@@ -1292,27 +1501,13 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="true" />
-		<set name="ensoulNormalSlots" val="1" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
-		<skills>
-			<skill id="50252" level="1" /> <!-- Majestic Boots (Robe) -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: +5 A-grade Boots (Magic) -->
-			<skill id="50266" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: +6 A-grade Boots (Magic) -->
-			<skill id="50266" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: +7 A-grade Boots (Magic) -->
-			<skill id="50266" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: +8 A-grade Boots (Magic) -->
-			<skill id="50266" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: +9 A-grade Boots (Magic) -->
-			<skill id="50266" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: +10 A-grade Boots (Magic) -->
-			<skill id="83223" level="1" type="ON_BLESSING" /> <!-- Blessing Effect: Boots -->
-			<skill id="83203" level="1" type="ON_BLESSING" type_value="6" /> <!-- Common A-grade Boots - 6 Item Effect -->
-			<skill id="83204" level="1" type="ON_BLESSING" type_value="7" /> <!-- Common A-grade Boots - 7 Item Effect -->
-			<skill id="83205" level="1" type="ON_BLESSING" type_value="8" /> <!-- Common A-grade Boots - 8 Item Effect -->
-		</skills>
 	</item>
-	<item id="5789" name="No-grade Soulshot (Novice)" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. A No-grade Soulshot for new players. Take it to the Game Assistant to exchange for a new one. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5789" name="No-grade Soulshot (Novice)" type="EtcItem">
+		<!-- A No-grade Soulshot for new players. -->
+		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1322,14 +1517,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
+		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<skills>
-			<skill id="2039" level="1" /> <!-- Soulshot -->
+			<skill id="2039" level="1" /> <!-- No-grade Soulshot -->
 		</skills>
 	</item>
-	<item id="5790" name="No-grade Spiritshot (Novice)" additionalName="Not Available" type="EtcItem">
-		<!-- The item is not available. A No-grade Spiritshot for new players. Take it to the Game Assistant to exchange for a new one. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5790" name="No-grade Spiritshot(Novice)" type="EtcItem">
+		<!-- A No-grade Spiritshot for new players. -->
+		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1339,14 +1535,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SpiritShot" />
+		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<skills>
-			<skill id="2047" level="1" /> <!-- Spiritshot -->
+			<skill id="2047" level="1" /> <!-- No-grade Spiritshot -->
 		</skills>
 	</item>
-	<item id="5791" name="Tomb Guard A" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5791" name="Tomb Guard A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
@@ -1355,9 +1551,10 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2180" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="193400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1370,9 +1567,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5792" name="Tomb Guard B" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5792" name="Tomb Guard B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
@@ -1381,9 +1577,10 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2180" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="193400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1396,9 +1593,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5793" name="Tomb Savant A" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5793" name="Tomb Savant A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -1407,9 +1603,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1422,9 +1619,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5794" name="Tomb Savant B" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5794" name="Tomb Savant B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -1433,9 +1629,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1448,9 +1645,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5795" name="Tomb Guard A" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5795" name="Tomb Guard A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
@@ -1459,9 +1655,10 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2180" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="193400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1474,9 +1671,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5796" name="Tomb Guard B" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5796" name="Tomb Guard B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
@@ -1485,9 +1681,10 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2180" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="193400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1500,9 +1697,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5797" name="Tomb Savant A" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5797" name="Tomb Savant A" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -1511,9 +1707,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1526,9 +1723,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5798" name="Tomb Savant B" additionalName="Not Available" type="Weapon">
-		<!-- The item is not available. -->
-		<set name="icon" val="icon.etc_ertheia2" />
+	<item id="5798" name="Tomb Savant B" type="Weapon">
+		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -1537,9 +1733,10 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="price" val="1355000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="price" val="1226000" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -1560,7 +1757,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1320" />
-		<set name="price" val="1355000" />
+		<set name="price" val="15680" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />

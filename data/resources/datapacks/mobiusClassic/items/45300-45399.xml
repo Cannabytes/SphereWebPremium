@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="45372" name="Agathion Blessed Pisces" additionalName="30-day" type="Armor">
+		<!-- A bracelet for summoning Agathion Pisces. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enhancement: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. -->
+		<set name="icon" val="icon.agathion_magmeld_teleport" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Unsummon Agathion -->
+			<skill id="17619" level="1" /> <!-- Release Agathion's Seal - Pisces -->
+			<skill id="17631" level="1" /> <!-- Agathion's Cute Trick - Pisces -->
+			<skill id="17643" level="1" /> <!-- Agathion Pisces Teleport: Aden -->
+			<skill id="17655" level="1" /> <!-- Agathion Pisces Teleport: Rune -->
+			<skill id="17667" level="1" /> <!-- Agathion Pisces Teleport: Giran -->
+			<skill id="17679" level="1" /> <!-- Agathion Pisces Teleport: Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17552" level="1" /> <!-- Attribute Enhancement -->
+			<skill id="35069" level="1" /> <!-- Agathion's Main Slot -->
+		</skills>
+	</item>
+	<item id="45373" name="Superior Seed Bracelet" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Superior Seed Bracelet (30-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="material" val="PAPER" />
+		<capsuled_items>
+			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion Bracelet: Blessed Pisces - 30-day -->
+		</capsuled_items>
+	</item>
+	<item id="45374" name="Laser Gun" additionalName="Event" type="Weapon">
+		<!-- Required for defeating Alien Researcher. Enables the Pew Pew skill. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="18180" level="1" /> <!-- Pew Pew -->
+		</skills>
+	</item>
+	<item id="45375" name="Battle Rations" additionalName="Event" type="EtcItem">
+		<!-- For 30 min., a random basic stat +6. Cannot be stacked with Fish Stew or other Alien Nano Supplements. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.ev_invasion_buff_box" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18182" level="1" /> <!-- Battle Rations -->
+		</skills>
+	</item>
+	<item id="45376" name="Reward Capsule" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a nice reward. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.general_fuel_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18191" level="1" /> <!-- Reward Capsule -->
+		</skills>
+	</item>
+	<item id="45377" name="L2B2's Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain a nice reward. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18194" level="1" /> <!-- L2B2's Gift Box -->
+		</skills>
+	</item>
+	<item id="45378" name="Vitality Replenishing Herb - Party" additionalName="Event" type="EtcItem">
+		<!-- Restores a certain amount of Vitality for all party members. -->
+		<set name="icon" val="icon.general_fuel_i00" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="45379" name="Monster Research" additionalName="Event" type="EtcItem">
+		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
+		<!-- Looks like the energy pack is nearly drained, but it can use Confusion. 1-hour. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="60" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="18195" level="1" /> <!-- Knock Back -->
+		</skills>
+	</item>
+	<item id="45381" name="Charged Plasma Gun" additionalName="1-hour" type="Weapon">
+		<!-- Allows to use Spirit Hit. Duration: 1 h. -->
+		<set name="icon" val="icon.invasion_gun" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lrhand" />
+		<set name="time" val="60" />
+		<set name="material" val="STEEL" />
+		<stats>
+			<stat type="pAtk">1</stat>
+			<stat type="mAtk">26</stat>
+			<stat type="pAtkSpd">303</stat>
+			<stat type="critRate">10</stat>
+			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
+		</stats>
+		<skills>
+			<skill id="18196" level="1" /> <!-- Spirit Hit -->
+		</skills>
+	</item>
+	<item id="45382" name="Top Hat" additionalName="15-day" type="Armor">
+		<!-- A hat of a mysterious magician. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.accessory_magicial_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="45383" name="Maid Hairband" additionalName="15-day" type="Armor">
+		<!-- Female only. Equipped in 2 head accessory slots. -->
+		<set name="icon" val="icon.maid_hairband" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
+		<!-- A hat worn by Lei Feng. Equipped in 1 head accessory slot. -->
+		<set name="icon" val="icon.people_cap" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="45385" name="Ruthless Tribe Mask" additionalName="15-day" type="Armor">
+		<!-- A mask worn by raiders. Equipped in 1 head accessory slot. -->
+		<set name="icon" val="icon.crazy_driving_mask" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair" />
+		<set name="enchant_enabled" val="true" />
+	</item>
+	<item id="45386" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45387" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45388" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45389" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45390" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45391" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45392" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45393" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45394" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45395" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45396" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45397" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45398" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="45399" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
+		<set name="icon" val="icon.etc_bead_gold_i00" />
+		<set name="price" val="300000" />
+		<set name="is_depositable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="LIQUID" />
+	</item>
+</list>
