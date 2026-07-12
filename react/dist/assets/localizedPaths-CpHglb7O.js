@@ -1,1 +1,0 @@
-import{n as e}from"./localeStore-DD0sScOv.js";var t=(t,n)=>{let r=n.trim().startsWith(`/`)?n.trim():`/${n.trim()}`;return`/${e(t)}${r}`};export{t};
