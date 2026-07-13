@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <armor id="91553" name="Immortal Frintezza's Necklace">
+        <set name="crystal_type" value="NONE"/>
+        <set name="augmentable" value="false"/>
+        <set name="icon" value="icon.accessory_earring_of_orfen_i04"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/>
+        </equip>
+        <skills>
+            <skill id="3604" level="1"/>
+        </skills>
+        <for>
+            <add stat="mDef" order="0x10" value="125"/>
+            <add stat="maxMp" order="0x40" value="65"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+    <weapon id="91574" name="Saint Sword Excalibur">
+        <!-- [excalibur] -->
+        <set name="crystal_type" value="NONE"/>
+        <set name="crystallizable" value="true"/>
+        <set name="icon" value="icon.weapon_plenitas_i00"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="100"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="92"/>
+            <add stat="mAtk" order="0x10" value="54"/>
+            <set stat="baseCrit" order="0x08" value="80"/>
+            <set stat="atkBaseSpeed" order="0x08" value="379"/>
+            <enchant stat="pAtk" order="0x0C" value="0"/>
+            <enchant stat="mAtk" order="0x0C" value="0"/>
+        </for>
+    </weapon>
+    <etcitem id="91575" name="Scroll: Enchant Excalibur" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.yogi_scroll_of_enchant_weapon_grade_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="SCROLL"/>
+        <set name="stackable" value="true"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <cond msgId="1508">
+            <not>
+                <player olympiad="true"/>
+            </not>
+        </cond>
+    </etcitem>
+</list>
