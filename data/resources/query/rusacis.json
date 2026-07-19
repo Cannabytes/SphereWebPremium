@@ -81,7 +81,7 @@
       "targetDb": "game",
       "isPublic": false,
       "query": [
-        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, characters.base_class AS class_id, characters.`level`, clan_data.clan_name, clan_data.clan_level, null AS clan_crest, null AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id WHERE characters.account_name = ?"
+        "SELECT characters.obj_Id AS player_id, characters.char_name AS player_name, characters.pvpkills AS pvp, characters.pkkills AS pk, characters.sex, characters.`online`, characters.onlinetime AS time_in_game, characters.base_class AS class_id, characters.`level`, clan_data.clan_name, clan_data.clan_level, NULL AS clan_crest, NULL AS alliance_crest FROM characters LEFT JOIN clan_data ON characters.clanid = clan_data.clan_id WHERE characters.account_name = ? ORDER BY characters.char_name;"
       ]
     },
     "relocation": {
@@ -144,7 +144,7 @@
       "targetDb": "game",
       "isPublic": false,
       "query": [
-        "SELECT account_name, char_name FROM characters;"
+        "SELECT account_name, char_name FROM characters ORDER BY account_name, char_name;"
       ]
     },
     "character_items": {
