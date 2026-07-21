@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="88100" toLevel="2" name="Cacophony of War">
+		<!-- Inflicts overwhelming fear. -->
+		<icon>
+			<value level="1">icon.war_roar</value>
+			<value level="2">icon.war_roar_master</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<activateRate>100</activateRate>
+		<affectLimit>12-0</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>400</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-900</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<trait>FEAR</trait>
+		<pvpEffects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+			<effect name="CallSkill">
+				<skillId>45440</skillId> <!-- Cacophony of War -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</pvpEffects>
+		<pveEffects>
+			<effect name="CallSkill">
+				<skillId>45441</skillId> <!-- Cacophony of War -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</pveEffects>
+	</skill>
+	<skill id="88101" toLevel="3" name="Cacophony of War">
+		<icon>icon.war_roar</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<hitTime>0</hitTime>
+		<reuseDelay>0</reuseDelay>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-45</value>
+					<value level="3">-60</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-45</value>
+					<value level="3">-60</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88103" toLevel="1" name="Cacophony of War">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalTime>-1</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<hitTime>0</hitTime>
+		<isMagic>5</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>0</reuseDelay>
+	</skill>
+	<skill id="88104" toLevel="3" name="Cacophony of War: Master">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<hitTime>0</hitTime>
+		<reuseDelay>0</reuseDelay>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-45</value>
+					<value level="3">-60</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-45</value>
+					<value level="3">-60</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88105" toLevel="2" name="Cacophony of War: Master">
+		<icon>
+			<value level="1">icon.war_roar</value>
+			<value level="2">icon.war_roar_master</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalVisualEffect>H_R_ORC_WAR_ROAR_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88104</skillId> <!-- Cacophony of War: Master -->
+				<skillLevel>1</skillLevel>
+				<min>1</min>
+				<max>999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>
+					<value level="1">88101</value>
+					<value level="2">88104</value>
+				</skillId>
+				<skillLevel>2</skillLevel>
+				<min>1000</min>
+				<max>1999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>
+					<value level="1">88101</value>
+					<value level="2">88104</value>
+				</skillId>
+				<skillLevel>3</skillLevel>
+				<min>2000</min>
+				<max>999999</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88106" toLevel="3" name="Cacophony of War: Master">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalTime>20</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<hitTime>0</hitTime>
+		<isMagic>5</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>0</reuseDelay>
+	</skill>
+	<skill id="88108" toLevel="5" name="Jump Attack">
+		<!-- Level 1: <<font color="FF8000">Rush skill</font>>. Deals P. damage to the target and nearby enemies. Power 4500. With a certain chance, knocks back for 2 sec. Ignores Shield Defense. Ignores 15% of the target's defense. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. On using the skill, increases Rushing Retreat's range and retreat distance for 5 sec. -->
+		<!-- Level 2: <<font color="FF8000">Rush skill</font>>. Deals P. damage to the target and nearby enemies. Power 4800. With a certain chance, knocks back for 2 sec. Ignores Shield Defense. Ignores 15% of the target's defense. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. On using the skill, increases Rushing Retreat's range and retreat distance for 5 sec. -->
+		<!-- Level 3: <<font color="FF8000">Rush skill</font>>. Deals P. damage to the target and nearby enemies. Power 5100. With a certain chance, knocks back for 2 sec. Ignores Shield Defense. Ignores 15% of the target's defense. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. On using the skill, increases Rushing Retreat's range and retreat distance for 5 sec. -->
+		<!-- Level 4: <<font color="FF8000">Rush skill</font>>. Deals P. damage to the target and nearby enemies. Power 5300. With a certain chance, knocks back for 2 sec. Ignores Shield Defense. Ignores 15% of the target's defense. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. On using the skill, increases Rushing Retreat's range and retreat distance for 5 sec. -->
+		<!-- Level 5: <<font color="FF8000">Rush skill</font>>. Deals P. damage to the target and nearby enemies. Power 5500. With a certain chance, knocks back for 2 sec. Ignores Shield Defense. Ignores 15% of the target's defense. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. On using the skill, increases Rushing Retreat's range and retreat distance for 5 sec. -->
+		<icon>icon.jump_dash</icon>
+		<operateType>DA1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>5-0</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>400</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>300</coolTime>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-790</value>
+			<value level="3">-810</value>
+			<value level="4">-850</value>
+			<value level="5">-900</value>
+		</effectPoint>
+		<effectRange>700</effectRange>
+		<hitTime>700</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">65</value>
+			<value level="3">70</value>
+			<value level="4">75</value>
+			<value level="5">80</value>
+		</mpConsume>
+		<reuseDelay>5000</reuseDelay>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>88122</skillId> <!-- Jump Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>
+					<value level="1">4500</value>
+					<value level="2">4800</value>
+					<value level="3">5100</value>
+					<value level="4">5300</value>
+					<value level="5">5500</value>
+				</power>
+				<pDefMod>0.85</pDefMod>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>10</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88109</skillId> <!-- Jump Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88109" toLevel="5" name="Jump Attack">
+		<!-- Knocked down by a powerful blow. -->
+		<icon>icon.jump_dash</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>60</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-790</value>
+			<value level="3">-820</value>
+			<value level="4">-840</value>
+			<value level="5">-860</value>
+		</effectPoint>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">77</value>
+			<value level="2">78</value>
+			<value level="3">79</value>
+			<value level="4">80</value>
+			<value level="5">81</value>
+		</magicLevel>
+		<trait>KNOCKBACK</trait>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;11264;11093;1904;1912;13314;13542;30010;30018;30516;461;35016;35045</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88110" toLevel="1" name="Rushing Retreat">
+		<!-- <<font color="FF8000">Retreat skill</font>>. Teleports you backwards and pulls the target to you with a certain chance. For 1 sec., inflicts Hold on the target. -->
+		<icon>icon.back_dash</icon>
+		<operateType>DA3</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>500</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-760</effectPoint>
+		<hitTime>100</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>65</mpConsume>
+		<reuseDelay>40000</reuseDelay>
+		<reuseDelayGroup>88110</reuseDelayGroup>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>88111</skillId> <!-- Rushing Retreat -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88112</skillId> <!-- Rushing Retreat -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88111" toLevel="1" name="Rushing Retreat">
+		<icon>icon.back_dash</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>700</castRange>
+		<coolTime>1000</coolTime>
+		<effectPoint>-900</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>500</hitTime>
+		<isDebuff>true</isDebuff>
+		<trait>PULL</trait>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
+			<effect name="GetAgro" />
+		</effects>
+	</skill>
+	<skill id="88112" toLevel="1" name="Rushing Retreat">
+		<!-- Unable to move. -->
+		<icon>icon.back_dash</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-900</effectPoint>
+		<effectRange>1200</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>20</magicLevel>
+		<trait>ANOMALY</trait>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88113" toLevel="1" name="Final Secret: Grand Khavatari">
+		<!-- P. Atk. +100. P. Skill Critical Damage +1%. P. Skill Power +10%. PvE damage +1%. Bow Resistance +60%. M. Damage Resistance +60%. Atk. Spd. +5% -->
+		<!-- Level 1 - SubLevel 1001: P. Atk. <font color="C270F6">+200</font>. P. Skill Critical Damage <font color="C270F6">+3%</font>. P. Skill Power +10%. PvE damage <font color="C270F6">+2%</font>. Bow Resistance +60%. M. Damage Resistance +60%. Atk. Spd. <font color="C270F6">+6%</font>. <font color="C270F6"><Enchant effect>. Increases P. Atk./ P. Skill Critical Damage. Increases PvE damage. Increases Atk. Spd. Increases duration.</font> -->
+		<!-- Level 1 - SubLevel 1002: P. Atk. <font color="C270F6">+300</font>. P. Skill Critical Damage <font color="C270F6">+5%</font>. P. Skill Power +10%. PvE damage <font color="C270F6">+3%</font>. Bow Resistance +60%. M. Damage Resistance +60%. Atk. Spd. <font color="C270F6">+8%</font>. <font color="C270F6"><Enchant effect>. Increases P. Atk./ P. Skill Critical Damage. Increases PvE damage. Increases Atk. Spd. Increases duration. <Spirit Ore consumption added (5 pcs.)></font> -->
+		<!-- Level 1 - SubLevel 1003: P. Atk. <font color="C270F6">+500</font>. P. Skill Critical Damage <font color="C270F6">+8%</font>. P. Skill Power +10%. PvE damage <font color="C270F6">+5%</font>. Bow Resistance +60%. M. Damage Resistance +60%. Atk. Spd. <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases P. Atk./ P. Skill Critical Damage. Increases PvE damage. Increases Atk. Spd. Increases duration.</font> -->
+		<icon>icon.final_secret_khavatari</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>
+			<value level="1">30</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">120</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">600</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">1200</value>
+		</abnormalTime>
+		<abnormalType>FINAL_SECRET</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitCancelTime>0.5</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<itemConsumeCount>
+			<value level="1">10</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">10</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">15</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId>
+		<magicLevel>76</magicLevel>
+		<mpConsume>41</mpConsume>
+		<reuseDelay>150000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">100</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">200</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">300</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>60</BOW>
+			</effect>
+			<effect name="MagicalSuccessResistance">
+				<amount>60</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">6</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">8</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88114" toLevel="1" name="Burning Assault">
+		<!-- P. Def. -23%. Knockback Resistance +10% -->
+		<icon>icon.burning_assault</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalTime>5</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<effectPoint>-760</effectPoint>
+		<hitTime>0</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>0</reuseDelay>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>50</KNOCKBACK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88115" toLevel="4" name="Mastery of Haste">
+		<!-- P. Atk. +20% of Atk. Spd. exceeding 2000 -->
+		<icon>icon.artisan_of_speed</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>10</abnormalTime>
+		<abnormalVisualEffect>H_G_ARTISAN_OF_SPEED_BUFF_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="88116" toLevel="4" name="Mastery of Haste">
+		<icon>icon.artisan_of_speed</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<abnormalVisualEffect>SPEED_DOWN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectLimit>8-0</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>-1</castRange>
+		<effectPoint>-200</effectPoint>
+		<hitTime>0</hitTime>
+		<isDebuff>true</isDebuff>
+		<trait>ANOMALY</trait>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">-70</value>
+					<value level="2">-80</value>
+					<value level="3">-90</value>
+					<value level="4">-100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">-200</value>
+					<value level="2">-240</value>
+					<value level="3">-270</value>
+					<value level="4">-300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">-200</value>
+					<value level="2">-240</value>
+					<value level="3">-270</value>
+					<value level="4">-300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExceedingPhysicalAttackSpeed">
+				<percentage>20</percentage>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88117" toLevel="10" name="Burning Strike">
+		<!-- Knocked down by a powerful blow. -->
+		<icon>icon.s_new_burning_strike</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+		</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<activateRate>60</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>
+			<value level="1">-800</value>
+			<value level="2">-820</value>
+			<value level="3">-840</value>
+			<value level="4">-860</value>
+			<value level="5">-880</value>
+			<value level="6">-900</value>
+			<value level="7">-920</value>
+			<value level="8">-930</value>
+			<value level="9">-940</value>
+			<value level="10">-950</value>
+		</effectPoint>
+		<effectPoint>-500</effectPoint>
+		<effectRange>400</effectRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">81</value>
+			<value level="2">82</value>
+			<value level="3">83</value>
+			<value level="4">84</value>
+			<value level="5">85</value>
+			<value level="6">86</value>
+			<value level="7">88</value>
+			<value level="8">89</value>
+			<value level="9">90</value>
+			<value level="10">92</value>
+		</magicLevel>
+		<trait>KNOCKDOWN</trait>
+		<effects>
+			<effect name="KnockBack">
+				<distance>100</distance>
+				<speed>300</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="DefenceTrait">
+				<DERANGEMENT>100</DERANGEMENT>
+				<SLEEP>100</SLEEP>
+				<HOLD>100</HOLD>
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88118" toLevel="17" name="Khavatari's Attack Mastery">
+		<!-- Level 1: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +387. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 2: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +390. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 3: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +393. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 4: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +399. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 5: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +402. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 6: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +405. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 7: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +408. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 8: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +411. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 9: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +414. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 10: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +420. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 11: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +426. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 12: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +434. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 13: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +442. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 14: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +450. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 15: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +5%. P. Atk. +450. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 16: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +8%. P. Atk. +450. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<!-- Level 17: <font color="00FF00">When using a fist weapon:</font>. P. Atk. +10%. P. Atk. +450. Atk. Spd. +15%. Atk. Spd. +80. Knockback Atk. Rate +15%. Suppression Atk. Rate +15%. With a certain chance, triggers <font color="FF8000">Slow</font> on a physical attack. <font color="FF8000">Slow</font>. The target's Speed -20% -->
+		<icon>icon.skill10335</icon>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUAL</item>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+					<item>ANCIENTSWORD</item>
+					<item>RAPIER</item>
+				</weaponType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">387</value>
+					<value level="2">390</value>
+					<value level="3">393</value>
+					<value level="4">399</value>
+					<value level="5">402</value>
+					<value level="6">405</value>
+					<value level="7">408</value>
+					<value level="8">411</value>
+					<value level="9">414</value>
+					<value level="10">420</value>
+					<value level="11">426</value>
+					<value level="12">434</value>
+					<value level="13">442</value>
+					<value level="14">450</value>
+					<value level="15">450</value>
+					<value level="16">450</value>
+					<value level="17">450</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<KNOCKBACK>15</KNOCKBACK>
+				<SUPPRESSION>15</SUPPRESSION>
+			</effect>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<skillId>1612</skillId> <!-- Slowing Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<skillId>1612</skillId> <!-- Slowing Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value fromLevel="1" toLevel="14">0</value>
+					<value level="15">5</value>
+					<value level="16">8</value>
+					<value level="17">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88119" toLevel="17" name="Khavatari's Armor Mastery">
+		<!-- Level 1: <font color="00FF00">When using light armor:</font>. P. Def. +119. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 2: <font color="00FF00">When using light armor:</font>. P. Def. +122. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 3: <font color="00FF00">When using light armor:</font>. P. Def. +125. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 4: <font color="00FF00">When using light armor:</font>. P. Def. +131. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 5: <font color="00FF00">When using light armor:</font>. P. Def. +134. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 6: <font color="00FF00">When using light armor:</font>. P. Def. +137. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 7: <font color="00FF00">When using light armor:</font>. P. Def. +140. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 8: <font color="00FF00">When using light armor:</font>. P. Def. +143. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 9: <font color="00FF00">When using light armor:</font>. P. Def. +146. M. Def. +60. P. Evasion +12. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 10: <font color="00FF00">When using light armor:</font>. P. Def. +150. M. Def. +60. P. Evasion +13. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 11: <font color="00FF00">When using light armor:</font>. P. Def. +155. M. Def. +60. P. Evasion +13. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 12: <font color="00FF00">When using light armor:</font>. P. Def. +160. M. Def. +60. P. Evasion +14. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 13: <font color="00FF00">When using light armor:</font>. P. Def. +165. M. Def. +60. P. Evasion +14. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 14: <font color="00FF00">When using light armor:</font>. P. Def. +170. M. Def. +60. P. Evasion +15. Received P. Critical Rate -35%. MP Recovery Rate +10% -->
+		<!-- Level 15: <font color="00FF00">When using light armor:</font>. P. Atk. +1%. P. Def. +250. M. Def. +250. P. Skill Evasion +15%. MP Recovery Rate +10%. Knockback Resistance +5%. Suppression Resistance +5% -->
+		<!-- Level 16: <font color="00FF00">When using light armor:</font>. P. Atk. +3%. P. Def. +350. M. Def. +350. P. Skill Evasion +15%. MP Recovery Rate +10%. Knockback Resistance +7%. Suppression Resistance +7% -->
+		<!-- Level 17: <font color="00FF00">When using light armor:</font>. P. Atk. +5%. P. Def. +500. M. Def. +500. P. Skill Evasion +15%. MP Recovery Rate +10%. Knockback Resistance +10%. Suppression Resistance +10% -->
+		<icon>icon.zealot_3</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">119</value>
+					<value level="2">122</value>
+					<value level="3">125</value>
+					<value level="4">131</value>
+					<value level="5">134</value>
+					<value level="6">137</value>
+					<value level="7">140</value>
+					<value level="8">143</value>
+					<value level="9">146</value>
+					<value level="10">150</value>
+					<value level="11">155</value>
+					<value level="12">160</value>
+					<value level="13">165</value>
+					<value level="14">170</value>
+					<value level="15">250</value>
+					<value level="16">350</value>
+					<value level="17">500</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="14">60</value>
+					<value level="15">250</value>
+					<value level="16">350</value>
+					<value level="17">500</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value fromLevel="1" toLevel="9">12</value>
+					<value level="10">13</value>
+					<value level="11">13</value>
+					<value level="12">14</value>
+					<value level="13">14</value>
+					<value level="14">15</value>
+					<value level="15">0</value>
+					<value level="16">0</value>
+					<value level="17">0</value>
+				</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value fromLevel="1" toLevel="14">-35</value>
+					<value level="15">0</value>
+					<value level="16">0</value>
+					<value level="17">0</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value fromLevel="1" toLevel="14">0</value>
+					<value fromLevel="15" toLevel="17">15</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>
+					<value fromLevel="1" toLevel="14">0</value>
+					<value level="15">5</value>
+					<value level="16">7</value>
+					<value level="17">10</value>
+				</KNOCKBACK>
+				<SUPPRESSION>
+					<value fromLevel="1" toLevel="14">0</value>
+					<value level="15">5</value>
+					<value level="16">7</value>
+					<value level="17">10</value>
+				</SUPPRESSION>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value fromLevel="1" toLevel="14">0</value>
+					<value level="15">1</value>
+					<value level="16">3</value>
+					<value level="17">5</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88120" toLevel="1" name="Rushing Retreat">
+		<!-- <font color="FFFF00">Jump Attack</font>. Increases the skill's range and retreat distance. <<font color="FF8000">Retreat skill</font>>. Teleports you backwards and pulls the target to you with a certain chance. For 1 sec., inflicts Hold on the target. -->
+		<icon>icon.back_dash</icon>
+		<operateType>DA3</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>600</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-760</effectPoint>
+		<hitTime>100</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>65</mpConsume>
+		<reuseDelay>40000</reuseDelay>
+		<reuseDelayGroup>88110</reuseDelayGroup>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>88111</skillId> <!-- Rushing Retreat -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88112</skillId> <!-- Rushing Retreat -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88121" toLevel="5" name="Transcendent Burning Assault">
+		<!-- Level 1: Attacks the target and nearby enemies. Power 4243. For 5 sec., the target's P. Def. -23%. Knockback Resistance -10%. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 2: Attacks the target and nearby enemies. Power 4359. For 5 sec., the target's P. Def. -23%. Knockback Resistance -10%. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 3: Attacks the target and nearby enemies. Power 4531. For 5 sec., the target's P. Def. -23%. Knockback Resistance -10%. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 4: Attacks the target and nearby enemies. Power 4647. For 5 sec., the target's P. Def. -23%. Knockback Resistance -10%. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 5: Attacks the target and nearby enemies. Power 4821. For 5 sec., the target's P. Def. -23%. Knockback Resistance -10%. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<icon>icon.burning_assault</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>5-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>300</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>
+			<value level="1">-800</value>
+			<value level="2">-820</value>
+			<value level="3">-850</value>
+			<value level="4">-870</value>
+			<value level="5">-900</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isMagic>0</isMagic>
+		<mpConsume>
+			<value level="1">64</value>
+			<value level="2">66</value>
+			<value level="3">68</value>
+			<value level="4">70</value>
+			<value level="5">72</value>
+		</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>FIST</item>
+					<item>DUALFIST</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>
+					<value level="1">4243</value>
+					<value level="2">4359</value>
+					<value level="3">4531</value>
+					<value level="4">4647</value>
+					<value level="5">4821</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88114</skillId> <!-- Burning Assault -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88122" toLevel="1" name="Jump Attack">
+		<icon>icon.jump_dash</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalTime>5</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<effectPoint>-800</effectPoint>
+		<hitTime>0</hitTime>
+		<reuseDelay>0</reuseDelay>
+		<effects>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88110</existingSkillId> <!-- Rushing Retreat -->
+				<replacementSkillId>88120</replacementSkillId> <!-- Rushing Retreat -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88123" toLevel="1" name="Enhanced Hurricane">
+		<!-- Increases the hurricane's power. PvE damage +12%. <Special property>. <font color="FFBB00">Hurricane Assault</font> → <font color="FFBB00">Double Hurricane Assault</font>. - 1 attack → 2 attacks -->
+		<icon>icon.s_dethrone_fire_combat_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>284</existingSkillId> <!-- Hurricane Assault -->
+				<replacementSkillId>88124</replacementSkillId> <!-- Double Hurricane Assault -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88124" toLevel="65" name="Double Hurricane Assault">
+		<!-- Level 1: Attacks the target twice. Power 464. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 2: Attacks the target twice. Power 476. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 3: Attacks the target twice. Power 489. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 4: Attacks the target twice. Power 501. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 5: Attacks the target twice. Power 514. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 6: Attacks the target twice. Power 728. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 7: Attacks the target twice. Power 803. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 8: Attacks the target twice. Power 878. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 9: Attacks the target twice. Power 954. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 10: Attacks the target twice. Power 1030. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 11: Attacks the target twice. Power 1106. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 12: Attacks the target twice. Power 1183. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 13: Attacks the target twice. Power 1260. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 14: Attacks the target twice. Power 1336. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 15: Attacks the target twice. Power 1414. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 16: Attacks the target twice. Power 1492. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 17: Attacks the target twice. Power 1569. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 18: Attacks the target twice. Power 1648. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 19: Attacks the target twice. Power 1727. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 20: Attacks the target twice. Power 1806. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 21: Attacks the target twice. Power 1884. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 22: Attacks the target twice. Power 1964. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 23: Attacks the target twice. Power 2044. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 24: Attacks the target twice. Power 2124. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 25: Attacks the target twice. Power 2203. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 26: Attacks the target twice. Power 2284. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 27: Attacks the target twice. Power 2365. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 28: Attacks the target twice. Power 2446. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 29: Attacks the target twice. Power 2527. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 30: Attacks the target twice. Power 2608. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 31: Attacks the target twice. Power 2690. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 32: Attacks the target twice. Power 2772. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 33: Attacks the target twice. Power 2853. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 34: Attacks the target twice. Power 2935. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 35: Attacks the target twice. Power 3018. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 36: Attacks the target twice. Power 3101. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 37: Attacks the target twice. Power 3184. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 38: Attacks the target twice. Power 3267. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 39: Attacks the target twice. Power 3350. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 40: Attacks the target twice. Power 3434. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 41: Attacks the target twice. Power 3517. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 42: Attacks the target twice. Power 3601. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 43: Attacks the target twice. Power 3686. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 44: Attacks the target twice. Power 3770. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 45: Attacks the target twice. Power 3854. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 46: Attacks the target twice. Power 4684. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 47: Attacks the target twice. Power 4750. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 48: Attacks the target twice. Power 4817. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 49: Attacks the target twice. Power 4884. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 50: Attacks the target twice. Power 4950. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 51: Attacks the target twice. Power 5017. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 52: Attacks the target twice. Power 5085. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 53: Attacks the target twice. Power 5152. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 54: Attacks the target twice. Power 5219. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 55: Attacks the target twice. Power 5286. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 56: Attacks the target twice. Power 5353. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 57: Attacks the target twice. Power 5421. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 58: Attacks the target twice. Power 5488. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 59: Attacks the target twice. Power 5556. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 60: Attacks the target twice. Power 5623. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 61: Attacks the target twice. Power 5791. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 62: Attacks the target twice. Power 5964. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 63: Attacks the target twice. Power 6142. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 64: Attacks the target twice. Power 6326. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<!-- Level 65: Attacks the target twice. Power 6515. Ignores Shield Defense. Ignores 10% of the target's defense. -->
+		<icon>icon.double_hurricane_assualt</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>
+			<value fromLevel="1" toLevel="45">120</value>
+			<value fromLevel="46" toLevel="65">200</value>
+		</castRange>
+		<coolTime>400</coolTime>
+		<effectPoint>
+			<value level="1">-175</value>
+			<value level="2">-180</value>
+			<value level="3">-185</value>
+			<value level="4">-190</value>
+			<value level="5">-195</value>
+			<value level="6">-200</value>
+			<value level="7">-205</value>
+			<value level="8">-210</value>
+			<value level="9">-215</value>
+			<value level="10">-220</value>
+			<value level="11">-225</value>
+			<value level="12">-230</value>
+			<value level="13">-235</value>
+			<value level="14">-240</value>
+			<value level="15">-245</value>
+			<value level="16">-250</value>
+			<value level="17">-255</value>
+			<value level="18">-260</value>
+			<value level="19">-265</value>
+			<value level="20">-270</value>
+			<value level="21">-275</value>
+			<value level="22">-280</value>
+			<value level="23">-285</value>
+			<value level="24">-290</value>
+			<value level="25">-295</value>
+			<value level="26">-300</value>
+			<value level="27">-305</value>
+			<value level="28">-310</value>
+			<value level="29">-315</value>
+			<value level="30">-320</value>
+			<value level="31">-325</value>
+			<value level="32">-330</value>
+			<value level="33">-335</value>
+			<value level="34">-340</value>
+			<value level="35">-345</value>
+			<value level="36">-350</value>
+			<value level="37">-355</value>
+			<value level="38">-360</value>
+			<value level="39">-365</value>
+			<value level="40">-370</value>
+			<value level="41">-375</value>
+			<value level="42">-380</value>
+			<value level="43">-385</value>
+			<value level="44">-390</value>
+			<value level="45">-395</value>
+			<value level="46">-400</value>
+			<value level="47">-405</value>
+			<value level="48">-410</value>
+			<value level="49">-415</value>
+			<value level="50">-420</value>
+			<value level="51">-425</value>
+			<value level="52">-430</value>
+			<value level="53">-435</value>
+			<value level="54">-440</value>
+			<value level="55">-445</value>
+			<value level="56">-450</value>
+			<value level="57">-455</value>
+			<value level="58">-460</value>
+			<value level="59">-465</value>
+			<value level="60">-470</value>
+			<value level="61">-475</value>
+			<value level="62">-480</value>
+			<value level="63">-485</value>
+			<value level="64">-490</value>
+			<value level="65">-495</value>
+		</effectPoint>
+		<hitTime>1800</hitTime>
+		<mpConsume>
+			<value level="1">26</value>
+			<value level="2">27</value>
+			<value level="3">27</value>
+			<value level="4">28</value>
+			<value level="5">29</value>
+			<value level="6">30</value>
+			<value level="7">30</value>
+			<value level="8">31</value>
+			<value level="9">32</value>
+			<value level="10">33</value>
+			<value level="11">33</value>
+			<value level="12">34</value>
+			<value level="13">35</value>
+			<value level="14">36</value>
+			<value level="15">36</value>
+			<value level="16">37</value>
+			<value level="17">38</value>
+			<value level="18">39</value>
+			<value level="19">39</value>
+			<value level="20">40</value>
+			<value level="21">41</value>
+			<value level="22">42</value>
+			<value level="23">42</value>
+			<value level="24">43</value>
+			<value level="25">44</value>
+			<value level="26">45</value>
+			<value level="27">45</value>
+			<value level="28">46</value>
+			<value level="29">47</value>
+			<value level="30">48</value>
+			<value level="31">48</value>
+			<value level="32">49</value>
+			<value level="33">50</value>
+			<value level="34">51</value>
+			<value level="35">51</value>
+			<value level="36">52</value>
+			<value level="37">53</value>
+			<value level="38">54</value>
+			<value level="39">54</value>
+			<value level="40">55</value>
+			<value level="41">56</value>
+			<value level="42">57</value>
+			<value level="43">57</value>
+			<value level="44">58</value>
+			<value level="45">59</value>
+			<value level="46">60</value>
+			<value level="47">60</value>
+			<value level="48">61</value>
+			<value level="49">62</value>
+			<value level="50">63</value>
+			<value level="51">63</value>
+			<value level="52">64</value>
+			<value level="53">65</value>
+			<value level="54">66</value>
+			<value level="55">66</value>
+			<value level="56">67</value>
+			<value level="57">68</value>
+			<value level="58">69</value>
+			<value level="59">69</value>
+			<value level="60">70</value>
+			<value level="61">72</value>
+			<value level="62">73</value>
+			<value level="63">74</value>
+			<value level="64">75</value>
+			<value level="65">76</value>
+		</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<repeatCount>2</repeatCount>
+				<power>
+					<value level="1">464</value>
+					<value level="2">476</value>
+					<value level="3">489</value>
+					<value level="4">501</value>
+					<value level="5">514</value>
+					<value level="6">728</value>
+					<value level="7">803</value>
+					<value level="8">878</value>
+					<value level="9">954</value>
+					<value level="10">1030</value>
+					<value level="11">1106</value>
+					<value level="12">1183</value>
+					<value level="13">1260</value>
+					<value level="14">1336</value>
+					<value level="15">1414</value>
+					<value level="16">1492</value>
+					<value level="17">1569</value>
+					<value level="18">1648</value>
+					<value level="19">1727</value>
+					<value level="20">1806</value>
+					<value level="21">1884</value>
+					<value level="22">1964</value>
+					<value level="23">2044</value>
+					<value level="24">2124</value>
+					<value level="25">2203</value>
+					<value level="26">2284</value>
+					<value level="27">2365</value>
+					<value level="28">2446</value>
+					<value level="29">2527</value>
+					<value level="30">2608</value>
+					<value level="31">2690</value>
+					<value level="32">2772</value>
+					<value level="33">2853</value>
+					<value level="34">2935</value>
+					<value level="35">3018</value>
+					<value level="36">3101</value>
+					<value level="37">3184</value>
+					<value level="38">3267</value>
+					<value level="39">3350</value>
+					<value level="40">3434</value>
+					<value level="41">3517</value>
+					<value level="42">3601</value>
+					<value level="43">3686</value>
+					<value level="44">3770</value>
+					<value level="45">3854</value>
+					<value level="46">4684</value>
+					<value level="47">4750</value>
+					<value level="48">4817</value>
+					<value level="49">4884</value>
+					<value level="50">4950</value>
+					<value level="51">5017</value>
+					<value level="52">5085</value>
+					<value level="53">5152</value>
+					<value level="54">5219</value>
+					<value level="55">5286</value>
+					<value level="56">5353</value>
+					<value level="57">5421</value>
+					<value level="58">5488</value>
+					<value level="59">5556</value>
+					<value level="60">5623</value>
+					<value level="61">5791</value>
+					<value level="62">5964</value>
+					<value level="63">6142</value>
+					<value level="64">6326</value>
+					<value level="65">6515</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>10</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88125" toLevel="65" name="Transcendent Double Hurricane Assault">
+		<!-- Level 1: Attacks the target twice. Power 464. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 2: Attacks the target twice. Power 476. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 3: Attacks the target twice. Power 489. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 4: Attacks the target twice. Power 501. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 5: Attacks the target twice. Power 514. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 6: Attacks the target twice. Power 728. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 7: Attacks the target twice. Power 803. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 8: Attacks the target twice. Power 878. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 9: Attacks the target twice. Power 954. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 10: Attacks the target twice. Power 1030. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 11: Attacks the target twice. Power 1106. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 12: Attacks the target twice. Power 1183. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 13: Attacks the target twice. Power 1260. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 14: Attacks the target twice. Power 1336. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 15: Attacks the target twice. Power 1414. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 16: Attacks the target twice. Power 1492. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 17: Attacks the target twice. Power 1569. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 18: Attacks the target twice. Power 1648. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 19: Attacks the target twice. Power 1727. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 20: Attacks the target twice. Power 1806. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 21: Attacks the target twice. Power 1884. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 22: Attacks the target twice. Power 1964. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 23: Attacks the target twice. Power 2044. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 24: Attacks the target twice. Power 2124. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 25: Attacks the target twice. Power 2203. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 26: Attacks the target twice. Power 2284. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 27: Attacks the target twice. Power 2365. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 28: Attacks the target twice. Power 2446. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 29: Attacks the target twice. Power 2527. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 30: Attacks the target twice. Power 2608. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 31: Attacks the target twice. Power 2690. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 32: Attacks the target twice. Power 2772. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 33: Attacks the target twice. Power 2853. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 34: Attacks the target twice. Power 2935. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 35: Attacks the target twice. Power 3018. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 36: Attacks the target twice. Power 3101. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 37: Attacks the target twice. Power 3184. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 38: Attacks the target twice. Power 3267. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 39: Attacks the target twice. Power 3350. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 40: Attacks the target twice. Power 3434. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 41: Attacks the target twice. Power 3517. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 42: Attacks the target twice. Power 3601. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 43: Attacks the target twice. Power 3686. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 44: Attacks the target twice. Power 3770. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 45: Attacks the target twice. Power 3854. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 46: Attacks the target twice. Power 4684. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 47: Attacks the target twice. Power 4750. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 48: Attacks the target twice. Power 4817. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 49: Attacks the target twice. Power 4884. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 50: Attacks the target twice. Power 4950. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 51: Attacks the target twice. Power 5017. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 52: Attacks the target twice. Power 5085. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 53: Attacks the target twice. Power 5152. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 54: Attacks the target twice. Power 5219. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 55: Attacks the target twice. Power 5286. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 56: Attacks the target twice. Power 5353. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 57: Attacks the target twice. Power 5421. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 58: Attacks the target twice. Power 5488. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 59: Attacks the target twice. Power 5556. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 60: Attacks the target twice. Power 5623. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 61: Attacks the target twice. Power 5791. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 62: Attacks the target twice. Power 5964. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 63: Attacks the target twice. Power 6142. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 64: Attacks the target twice. Power 6326. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 65: Attacks the target twice. Power 6515. Ignores Shield Defense. Ignores 10% of the target's defense. The skill can only be used in transcendent instance zones. -->
+		<icon>icon.double_hurricane_assualt</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>5-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>300</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>
+			<value fromLevel="1" toLevel="45">120</value>
+			<value fromLevel="46" toLevel="65">200</value>
+		</castRange>
+		<coolTime>400</coolTime>
+		<effectPoint>
+			<value level="1">-175</value>
+			<value level="2">-180</value>
+			<value level="3">-185</value>
+			<value level="4">-190</value>
+			<value level="5">-195</value>
+			<value level="6">-200</value>
+			<value level="7">-205</value>
+			<value level="8">-210</value>
+			<value level="9">-215</value>
+			<value level="10">-220</value>
+			<value level="11">-225</value>
+			<value level="12">-230</value>
+			<value level="13">-235</value>
+			<value level="14">-240</value>
+			<value level="15">-245</value>
+			<value level="16">-250</value>
+			<value level="17">-255</value>
+			<value level="18">-260</value>
+			<value level="19">-265</value>
+			<value level="20">-270</value>
+			<value level="21">-275</value>
+			<value level="22">-280</value>
+			<value level="23">-285</value>
+			<value level="24">-290</value>
+			<value level="25">-295</value>
+			<value level="26">-300</value>
+			<value level="27">-305</value>
+			<value level="28">-310</value>
+			<value level="29">-315</value>
+			<value level="30">-320</value>
+			<value level="31">-325</value>
+			<value level="32">-330</value>
+			<value level="33">-335</value>
+			<value level="34">-340</value>
+			<value level="35">-345</value>
+			<value level="36">-350</value>
+			<value level="37">-355</value>
+			<value level="38">-360</value>
+			<value level="39">-365</value>
+			<value level="40">-370</value>
+			<value level="41">-375</value>
+			<value level="42">-380</value>
+			<value level="43">-385</value>
+			<value level="44">-390</value>
+			<value level="45">-395</value>
+			<value level="46">-400</value>
+			<value level="47">-405</value>
+			<value level="48">-410</value>
+			<value level="49">-415</value>
+			<value level="50">-420</value>
+			<value level="51">-425</value>
+			<value level="52">-430</value>
+			<value level="53">-435</value>
+			<value level="54">-440</value>
+			<value level="55">-445</value>
+			<value level="56">-450</value>
+			<value level="57">-455</value>
+			<value level="58">-460</value>
+			<value level="59">-465</value>
+			<value level="60">-470</value>
+			<value level="61">-475</value>
+			<value level="62">-480</value>
+			<value level="63">-485</value>
+			<value level="64">-490</value>
+			<value level="65">-495</value>
+		</effectPoint>
+		<hitTime>1800</hitTime>
+		<isMagic>0</isMagic>
+		<mpConsume>
+			<value level="1">26</value>
+			<value level="2">27</value>
+			<value level="3">27</value>
+			<value level="4">28</value>
+			<value level="5">29</value>
+			<value level="6">30</value>
+			<value level="7">30</value>
+			<value level="8">31</value>
+			<value level="9">32</value>
+			<value level="10">33</value>
+			<value level="11">33</value>
+			<value level="12">34</value>
+			<value level="13">35</value>
+			<value level="14">36</value>
+			<value level="15">36</value>
+			<value level="16">37</value>
+			<value level="17">38</value>
+			<value level="18">39</value>
+			<value level="19">39</value>
+			<value level="20">40</value>
+			<value level="21">41</value>
+			<value level="22">42</value>
+			<value level="23">42</value>
+			<value level="24">43</value>
+			<value level="25">44</value>
+			<value level="26">45</value>
+			<value level="27">45</value>
+			<value level="28">46</value>
+			<value level="29">47</value>
+			<value level="30">48</value>
+			<value level="31">48</value>
+			<value level="32">49</value>
+			<value level="33">50</value>
+			<value level="34">51</value>
+			<value level="35">51</value>
+			<value level="36">52</value>
+			<value level="37">53</value>
+			<value level="38">54</value>
+			<value level="39">54</value>
+			<value level="40">55</value>
+			<value level="41">56</value>
+			<value level="42">57</value>
+			<value level="43">57</value>
+			<value level="44">58</value>
+			<value level="45">59</value>
+			<value level="46">60</value>
+			<value level="47">60</value>
+			<value level="48">61</value>
+			<value level="49">62</value>
+			<value level="50">63</value>
+			<value level="51">63</value>
+			<value level="52">64</value>
+			<value level="53">65</value>
+			<value level="54">66</value>
+			<value level="55">66</value>
+			<value level="56">67</value>
+			<value level="57">68</value>
+			<value level="58">69</value>
+			<value level="59">69</value>
+			<value level="60">70</value>
+			<value level="61">72</value>
+			<value level="62">73</value>
+			<value level="63">74</value>
+			<value level="64">75</value>
+			<value level="65">76</value>
+		</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<repeatCount>2</repeatCount>
+				<power>
+					<value level="1">464</value>
+					<value level="2">476</value>
+					<value level="3">489</value>
+					<value level="4">501</value>
+					<value level="5">514</value>
+					<value level="6">728</value>
+					<value level="7">803</value>
+					<value level="8">878</value>
+					<value level="9">954</value>
+					<value level="10">1030</value>
+					<value level="11">1106</value>
+					<value level="12">1183</value>
+					<value level="13">1260</value>
+					<value level="14">1336</value>
+					<value level="15">1414</value>
+					<value level="16">1492</value>
+					<value level="17">1569</value>
+					<value level="18">1648</value>
+					<value level="19">1727</value>
+					<value level="20">1806</value>
+					<value level="21">1884</value>
+					<value level="22">1964</value>
+					<value level="23">2044</value>
+					<value level="24">2124</value>
+					<value level="25">2203</value>
+					<value level="26">2284</value>
+					<value level="27">2365</value>
+					<value level="28">2446</value>
+					<value level="29">2527</value>
+					<value level="30">2608</value>
+					<value level="31">2690</value>
+					<value level="32">2772</value>
+					<value level="33">2853</value>
+					<value level="34">2935</value>
+					<value level="35">3018</value>
+					<value level="36">3101</value>
+					<value level="37">3184</value>
+					<value level="38">3267</value>
+					<value level="39">3350</value>
+					<value level="40">3434</value>
+					<value level="41">3517</value>
+					<value level="42">3601</value>
+					<value level="43">3686</value>
+					<value level="44">3770</value>
+					<value level="45">3854</value>
+					<value level="46">4684</value>
+					<value level="47">4750</value>
+					<value level="48">4817</value>
+					<value level="49">4884</value>
+					<value level="50">4950</value>
+					<value level="51">5017</value>
+					<value level="52">5085</value>
+					<value level="53">5152</value>
+					<value level="54">5219</value>
+					<value level="55">5286</value>
+					<value level="56">5353</value>
+					<value level="57">5421</value>
+					<value level="58">5488</value>
+					<value level="59">5556</value>
+					<value level="60">5623</value>
+					<value level="61">5791</value>
+					<value level="62">5964</value>
+					<value level="63">6142</value>
+					<value level="64">6326</value>
+					<value level="65">6515</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+				<criticalChance>10</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88126" toLevel="1" name="Cacophony of War: Master">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalTime>20</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<hitTime>0</hitTime>
+		<isMagic>5</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>0</reuseDelay>
+	</skill>
+	<skill id="88127" toLevel="65" name="Double Hurricane Assault">
+		<icon>icon.double_hurricane_assualt</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>-1</castRange>
+		<effectPoint>-500</effectPoint>
+		<hitTime>0</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>0</reuseDelay>
+	</skill>
+	<skill id="88128" toLevel="1" name="Cacophony of War - Combat Power's Passive Check">
+		<!-- magictype = alter -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+	</skill>
+	<skill id="88129" toLevel="1" name="Cacophony of War">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalVisualEffect>H_R_ORC_WAR_ROAR_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88101</skillId> <!-- Cacophony of War -->
+				<skillLevel>1</skillLevel>
+				<min>1</min>
+				<max>999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88101</skillId> <!-- Cacophony of War -->
+				<skillLevel>2</skillLevel>
+				<min>1000</min>
+				<max>1999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88101</skillId> <!-- Cacophony of War -->
+				<skillLevel>3</skillLevel>
+				<min>2000</min>
+				<max>999999</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88130" toLevel="1" name="Cacophony of War">
+		<icon>icon.war_roar_master</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalVisualEffect>H_R_ORC_WAR_ROAR_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88104</skillId> <!-- Cacophony of War: Master -->
+				<skillLevel>1</skillLevel>
+				<min>1</min>
+				<max>999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88104</skillId> <!-- Cacophony of War: Master -->
+				<skillLevel>2</skillLevel>
+				<min>1000</min>
+				<max>1999</max>
+			</effect>
+			<effect name="TriggerSkillByCombatPower">
+				<skillId>88104</skillId> <!-- Cacophony of War: Master -->
+				<skillLevel>3</skillLevel>
+				<min>2000</min>
+				<max>999999</max>
+			</effect>
+		</effects>
+	</skill>
+</list>

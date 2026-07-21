@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="49900" toLevel="2" name="Blueberry Cake">
+		<!-- Level 1: This cake is covered in the dark blueberry syrup. CON +1. MEN +1. P. Atk. +100. M. Atk. +100. Max HP +100. Max MP +100. Acquired XP/ SP +10% -->
+		<!-- Level 2: This cake is covered in the dark blueberry syrup. STR +1. INT +1. DEX +1. WIT +1. CON +1. MEN +1. P. Atk. +300. M. Atk. +300. P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. All Critical Rate +2%. PvE damage +1%. Acquired XP/ SP +30% -->
+		<icon>icon.ev_blue_cake</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49901" toLevel="2" name="Mango Cake">
+		<!-- Level 1: A fluffy tropical cake decorated with juicy mango pieces. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. All Critical Rate +2%. Acquired XP/ SP +10% -->
+		<!-- Level 2: A fluffy tropical cake decorated with juicy mango pieces. STR +1. INT +1. DEX +1. WIT +1. CON +1. MEN +1. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. All Critical Rate +3%. PvE damage +1%. Acquired XP/ SP +30% -->
+		<icon>icon.ev_mango_cake</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49902" toLevel="2" name="Chocolate Cake">
+		<!-- Level 1: A delicious cake for those who cannot live without chocolate. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. PvE damage +1%. Acquired XP/ SP +10% -->
+		<!-- Level 2: A delicious cake for those who cannot live without chocolate. STR +1. INT +1. DEX +1. WIT +1. CON +1. MEN +1. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. All Critical Rate +2%. PvE damage +2%. Acquired XP/ SP +30% -->
+		<icon>icon.ev_choko_cake</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49903" toLevel="1" name="Lightning Field">
+		<icon>icon.skill1450</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>-1800</effectPoint>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="49904" toLevel="1" name="Lightning">
+		<!-- Paralyzed. -->
+		<icon>icon.skill1450</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1800</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>58</magicLevel>
+		<nextAction>ATTACK</nextAction>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="49905" toLevel="1" name="Burning Field">
+		<icon>icon.skill11134</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>-1800</effectPoint>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="49906" toLevel="1" name="Fiery Knockdown">
+		<!-- Knockdown Status -->
+		<icon>icon.skill11134</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>400</affectRange>
+		<affectScope>FAN</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-1800</effectPoint>
+		<effectRange>400</effectRange>
+		<fanRange>0;0;400;80</fanRange>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>KNOCKDOWN</trait>
+		<effects>
+			<effect name="KnockBack">
+				<distance>0</distance>
+				<speed>600</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="49907" toLevel="1" name="Ice Field">
+		<icon>icon.skill30009</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>-1800</effectPoint>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="49908" toLevel="1" name="Ice Crystal">
+		<!-- Freezes. -->
+		<icon>icon.skill30009</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1800</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49909" toLevel="1" name="Mysterious Fear">
+		<!-- In Fear. -->
+		<icon>icon.skill11055</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-240</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49910" toLevel="1" name="Enormous Wolf">
+		<!-- <<font color="FF8000">Fear skill</font>>. Awakens the power of a giant wolf. Deals P. damage to nearby enemies. Power 5503. For 3 sec., applies Anxiety on nearby enemies. -->
+		<icon>icon.s_gigantic_wolf</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>-1520</effectPoint>
+		<hitTime>5000</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="49911" toLevel="1" name="Enormous Wolf">
+		<!-- A state of high anxiety. -->
+		<icon>icon.s_gigantic_wolf</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<activateRate>80</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1980</effectPoint>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>3</lvlBonusRate>
+		<trait>FEAR</trait>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="49912" toLevel="1" name="Arrow Strike">
+		<icon>icon.skill0369</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-500</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49913" toLevel="2" name="Wolfman's Power Shot">
+		<icon>icon.skill0056</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<effectPoint>-200</effectPoint>
+		<hitTime>2000</hitTime>
+	</skill>
+	<skill id="49914" toLevel="1" name="Bleed">
+		<!-- Causes Bleed that constantly drains HP. -->
+		<icon>icon.skill0096</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>5</isMagic>
+	</skill>
+	<skill id="49915" toLevel="2" name="Wolfman's Stun Attack">
+		<!-- Deals damage to an enemy stunning them. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<coolTime>720</coolTime>
+		<effectPoint>-1</effectPoint>
+		<hitTime>1080</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>13000</reuseDelay>
+	</skill>
+	<skill id="49916" toLevel="1" name="Stun">
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<coolTime>720</coolTime>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>1080</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>13000</reuseDelay>
+	</skill>
+	<skill id="49917" toLevel="2" name="Wolfman's Spin Attack">
+		<!-- Deals heavy P. damage to an enemy. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>150</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-2</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>999</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49918" toLevel="2" name="Wolfman's Twister">
+		<icon>icon.s_ev_christmas_snow1</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49919" toLevel="2" name="Wolfman's Atk. Spd. Increase">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49920" toLevel="2" name="Wolfman's Atk. Spd. Increase">
+		<!-- Level 1: Atk. Spd. 20%. Casting Spd. 20% -->
+		<!-- Level 2: Atk. Spd. 50%. Casting Spd. 50% -->
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49921" toLevel="1" name="Damage of Limit">
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="49922" toLevel="1" name="Drill's Underwater Support">
+		<!-- Increases Speed while underwater. -->
+		<icon>icon.skill_i.pet_town_buff_skill</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49923" toLevel="1" name="Shield Dash">
+		<icon>icon.skill10008</icon>
+		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<effectPoint>-1000</effectPoint>
+		<isMagic>6</isMagic>
+	</skill>
+	<skill id="49924" toLevel="1" name="Fafurion's Guarding Stone Light">
+		<icon>icon.skill32724</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49925" toLevel="1" name="Cyrax's Guarding Stone Light">
+		<icon>icon.skill32724</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49926" toLevel="1" name="Dwelling of Spirits' Dispel">
+		<icon>icon.skill10278</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49927" toLevel="1" name="Dwelling of Spirits' Dispel">
+		<icon>icon.skill10278</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49928" toLevel="2" name="Christmas Gift">
+		<!-- Level 1: Happy New Year!. Max HP +100. Max MP +100. P. Atk. +50. M. Atk. +50. P. Def. +50. M. Def. +50. Speed +1. Acquired XP/ SP +5% -->
+		<!-- Level 2: Merry Christmas!. Max HP +500. Max MP +500. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. Speed +2. PvE damage +2%. MP Recovery Rate +8. Skill MP Consumption -2%. Acquired XP/ SP +15% -->
+		<icon>BranchSys.icon.br_xmas_present_fun_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="49929" toLevel="1" name="Ice Chain">
+		<icon>icon.skill53003</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49930" toLevel="1" name="Ice Pull">
+		<icon>icon.skill53003</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49931" toLevel="1" name="Ice Blizzard">
+		<icon>icon.skill6274</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49932" toLevel="1" name="Ice Blizzard">
+		<icon>icon.skill6274</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49933" toLevel="1" name="Ice Hurricane">
+		<icon>icon.skill0001</icon>
+		<operateType>A1</operateType>
+		<castRange>650</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="49934" toLevel="1" name="Ice Wound">
+		<icon>icon.skill0096</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>5000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>20000</reuseDelay>
+	</skill>
+	<skill id="49935" toLevel="1" name="Blizzard">
+		<icon>icon.skill6274</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49936" toLevel="1" name="Battlemaster's Cry">
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="49937" toLevel="1" name="Ice Stun Attack">
+		<icon>icon.skill0001</icon>
+		<operateType>A1</operateType>
+		<castRange>1100</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>3500</hitTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49938" toLevel="1" name="Ice Ball">
+		<icon>icon.skill0001</icon>
+		<operateType>A1</operateType>
+		<castRange>800</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="49939" toLevel="1" name="Checkpoint Accident">
+		<!-- If you stay at the checkpoint, you will die. -->
+		<icon>icon.s_archer_blizzard</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49940" toLevel="1" name="Checkpoint Accident">
+		<icon>icon.s_archer_blizzard</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49941" toLevel="1" name="Checkpoint Accident">
+		<icon>icon.s_archer_blizzard</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49942" toLevel="1" name="Checkpoint Accident">
+		<icon>icon.s_archer_blizzard</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49943" toLevel="1" name="Checkpoint Accident">
+		<icon>icon.s_archer_blizzard</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49944" toLevel="1" name="Ice Wound">
+		<icon>icon.skill6274</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49945" toLevel="1" name="Wolfman's Magic Spike">
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="49946" toLevel="1" name="Haste">
+		<icon>icon.skill1086</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="49947" toLevel="1" name="Stupefaction">
+		<!-- Stuns. -->
+		<icon>icon.skill4106</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49948" toLevel="3" name="Large Glacier">
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49949" toLevel="1" name="Seer's Authority">
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>3000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49950" toLevel="1" name="Seer's Recovery">
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>178000</hitTime>
+		<isMagic>6</isMagic>
+	</skill>
+	<skill id="49951" toLevel="1" name="Underwater Guard">
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="49952" toLevel="1" name="Colin's Ranged Attack">
+		<icon>icon.skill0096</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>5000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>20000</reuseDelay>
+	</skill>
+	<skill id="49953" toLevel="1" name="Colin's Ranged Attack">
+		<!-- Immobilizes for 5 sec. and 50 HP is lost per sec. -->
+		<icon>icon.skill6274</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49954" toLevel="1" name="Blue Snake's Energy">
+		<!-- The Blue Snake's energy will make the year 2025 very special for you!. Hurray!. P. Def. +202. M. Def. +202. Atk. Spd. +5. Casting Spd. +5. Acquired XP/ SP +5%. <font color="FF0000">Note!</font>. You cannot get Blue Snake's Energy if you already have Blue Snake's Magic Energy. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.s_npc_ev_newyear_dragon_buff</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49955" toLevel="1" name="Blue Snake's Magic Energy - Recovery">
+		<!-- The Blue Snake's magic energy will make the year 2025 very special for you!. Hurray!. P. Atk. +202. M. Atk. +202. P. Def. +202. M. Def. +202. Atk. Spd. +5. Casting Spd. +5. PvE damage +2%. Acquired XP/ SP +5%. <Blue Snake's Recovery>. With a 2% chance, recovers 5% HP/ 1% MP on attack. (Trigger cooldown: 25 sec.). <font color="FF0000">Note!</font>. You cannot get Blue Snake's Energy, if you already have Blue Snake's Magic Energy. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.s_npc_ev_newyear_dragon_buff</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49956" toLevel="1" name="Blue Snake's Recovery">
+		<!-- Recovers 5% HP/ 1% MP. -->
+		<icon>BranchSys3.g_premium_hena_boss_antaras</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>25000</reuseDelay>
+	</skill>
+	<skill id="49957" toLevel="1" name="Blue Snake's Magic Energy - Protection">
+		<!-- The Blue Snake's magic energy will make the year 2025 very special for you!. Hurray!. P. Atk. +202. M. Atk. +202. P. Def. +202. M. Def. +202. Atk. Spd. +5. Casting Spd. +5. PvE damage +2%. Acquired XP/ SP +5%. <Blue Snake's Protection>. With a 2% chance, received damage -5% when hit. (Trigger cooldown: 25 sec.). <font color="FF0000">Note!</font>. You cannot get Blue Snake's Energy if you already have Blue Snake's Magic Energy. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.s_npc_ev_newyear_dragon_buff</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49958" toLevel="1" name="Blue Snake's Protection">
+		<!-- Received damage -5% -->
+		<icon>BranchSys3.g_premium_hena_boss_lindvior</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>25000</reuseDelay>
+	</skill>
+	<skill id="49959" toLevel="1" name="Blue Snake's Magic Energy - Attack">
+		<!-- The Blue Snake's magic energy will make the year 2025 very special for you!. Hurray!. P. Atk. +202. M. Atk. +202. P. Def. +202. M. Def. +202. Atk. Spd. +5. Casting Spd. +5. PvE damage +2%. Acquired XP/ SP +5%. <Blue Snake's Beat>. With a 2% chance on attack:. Makes an additional hit based on your attack's type. - P. attack: Power 6000. - M. attack: Power 130. (Trigger cooldown: 25 sec.). <font color="FF0000">Note!</font>. You cannot get Blue Snake's Energy if you already have Blue Snake's Magic Energy. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.s_npc_ev_newyear_dragon_buff</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="49960" toLevel="1" name="Blue Snake's Beat">
+		<!-- Makes an additional P. attack. Power 6000. -->
+		<icon>BranchSys3.g_premium_hena_boss_valakas</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>25000</reuseDelay>
+	</skill>
+	<skill id="49961" toLevel="1" name="Blue Snake's Beat">
+		<!-- Makes an additional M. attack. Power 130. -->
+		<icon>BranchSys3.g_premium_hena_boss_valakas</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>25000</reuseDelay>
+	</skill>
+	<skill id="49962" toLevel="40" name="P./ M. Atk. Bonus">
+		<!-- Level 1: P./ M. Atk. +10% -->
+		<!-- Level 2: P./ M. Atk. +20% -->
+		<!-- Level 3: P./ M. Atk. +30% -->
+		<!-- Level 4: P./ M. Atk. +40% -->
+		<!-- Level 5: P./ M. Atk. +50% -->
+		<!-- Level 6: P./ M. Atk. +60% -->
+		<!-- Level 7: P./ M. Atk. +70% -->
+		<!-- Level 8: P./ M. Atk. +80% -->
+		<!-- Level 9: P./ M. Atk. +90% -->
+		<!-- Level 10: P./ M. Atk. +100% -->
+		<!-- Level 11: P./ M. Atk. +110% -->
+		<!-- Level 12: P./ M. Atk. +120% -->
+		<!-- Level 13: P./ M. Atk. +130% -->
+		<!-- Level 14: P./ M. Atk. +140% -->
+		<!-- Level 15: P./ M. Atk. +150% -->
+		<!-- Level 16: P./ M. Atk. +160% -->
+		<!-- Level 17: P./ M. Atk. +170% -->
+		<!-- Level 18: P./ M. Atk. +180% -->
+		<!-- Level 19: P./ M. Atk. +190% -->
+		<!-- Level 20: P./ M. Atk. +200% -->
+		<!-- Level 21: P./ M. Atk. +210% -->
+		<!-- Level 22: P./ M. Atk. +220% -->
+		<!-- Level 23: P./ M. Atk. +230% -->
+		<!-- Level 24: P./ M. Atk. +240% -->
+		<!-- Level 25: P./ M. Atk. +250% -->
+		<!-- Level 26: P./ M. Atk. +260% -->
+		<!-- Level 27: P./ M. Atk. +270% -->
+		<!-- Level 28: P./ M. Atk. +280% -->
+		<!-- Level 29: P./ M. Atk. +290% -->
+		<!-- Level 30: P./ M. Atk. +300% -->
+		<!-- Level 31: P./ M. Atk. +310% -->
+		<!-- Level 32: P./ M. Atk. +320% -->
+		<!-- Level 33: P./ M. Atk. +330% -->
+		<!-- Level 34: P./ M. Atk. +340% -->
+		<!-- Level 35: P./ M. Atk. +350% -->
+		<!-- Level 36: P./ M. Atk. +360% -->
+		<!-- Level 37: P./ M. Atk. +370% -->
+		<!-- Level 38: P./ M. Atk. +380% -->
+		<!-- Level 39: P./ M. Atk. +390% -->
+		<!-- Level 40: P./ M. Atk. +400% -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49963" toLevel="29" name="Received Damage Reduction">
+		<!-- Level 1: Received damage reduction +5% -->
+		<!-- Level 2: Received damage reduction +10% -->
+		<!-- Level 3: Received damage reduction +15% -->
+		<!-- Level 4: Received damage reduction +20% -->
+		<!-- Level 5: Received damage reduction +25% -->
+		<!-- Level 6: Received damage reduction +30% -->
+		<!-- Level 7: Received damage reduction +35% -->
+		<!-- Level 8: Received damage reduction +40% -->
+		<!-- Level 9: Received damage reduction +45% -->
+		<!-- Level 10: Received damage reduction +50% -->
+		<!-- Level 11: Received damage reduction +55% -->
+		<!-- Level 12: Received damage reduction +60% -->
+		<!-- Level 13: Received damage reduction +65% -->
+		<!-- Level 14: Received damage reduction +70% -->
+		<!-- Level 15: Received damage reduction +75% -->
+		<!-- Level 16: Received damage reduction +80% -->
+		<!-- Level 17: Received damage reduction +85% -->
+		<!-- Level 18: Received damage reduction +90% -->
+		<!-- Level 19: Received damage reduction +91% -->
+		<!-- Level 20: Received damage reduction +92% -->
+		<!-- Level 21: Received damage reduction +93% -->
+		<!-- Level 22: Received damage reduction +94% -->
+		<!-- Level 23: Received damage reduction +95% -->
+		<!-- Level 24: Received damage reduction +96% -->
+		<!-- Level 25: Received damage reduction +97% -->
+		<!-- Level 26: Received damage reduction +98% -->
+		<!-- Level 27: Received damage reduction +99% -->
+		<!-- Level 28: Received damage reduction +100% -->
+		<!-- Level 29: Received damage reduction +100% -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49964" toLevel="1" name="Orbis Temple's Mark">
+		<!-- Required for interacting with Ancient Hero's Chest. Allows you to enter the Hall of Orbis on the current floor. -->
+		<icon>icon.etc_i.ev_orbis_ticket</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="49965" toLevel="1" name="Hall of Orbis' Pass">
+		<!-- Allows you to encounter Ancient Hero and Elite Henchman. -->
+		<icon>icon.etc_i.ev_orbis_enter</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="49966" toLevel="2" name="Basic Attack">
+		<!-- P./ single/ 40-300 -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49967" toLevel="2" name="Stupefaction">
+		<!-- You are stunned and immobilized. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49968" toLevel="2" name="Vicious Strike">
+		<!-- P./ single/ 150-400 -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49969" toLevel="2" name="Power Strike">
+		<!-- P./ single/ 500-900 -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49970" toLevel="2" name="Stupefaction">
+		<!-- You are stunned and immobilized. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1500</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49971" toLevel="2" name="Common Swing">
+		<!-- A wide frontal swing. -->
+		<icon>icon.skill0003</icon>
+		<operateType>A1</operateType>
+		<castRange>200</castRange>
+		<hitTime>3000</hitTime>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49972" toLevel="2" name="Petrification">
+		<!-- Petrified and unable to move. -->
+		<icon>icon.skill4111</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>1000</castRange>
+		<hitTime>3200</hitTime>
+		<coolTime>1800</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="49973" toLevel="2" name="Goulden: Basic Attack">
+		<!-- P./ single/ 650-1100 -->
+		<operateType>A1</operateType>
+		<castRange>650</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="49974" toLevel="2" name="Goulden: Powerful Attack">
+		<!-- Deals heavy damage to surrounding enemies. -->
+		<icon>icon.skill1167</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>500</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="49975" toLevel="2" name="Reus' Attack">
+		<!-- Deals massive damage to the enemy. -->
+		<operateType>A1</operateType>
+		<castRange>150</castRange>
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-200</effectPoint>
+	</skill>
+	<skill id="49976" toLevel="2" name="Reus' Ranged Attack">
+		<!-- Level 1: A lightning bolt deals magic damage and paralyzes for 5 sec. Power 80. -->
+		<!-- Level 2: A lightning bolt deals magic damage and paralyzes for 5 sec. Power 100. -->
+		<icon>icon.skill1170</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="49977" toLevel="1" name="Fafurion's Trample">
+		<!-- A punishment for those who have made a grave error of breaking Fafurion's Guarding Stone. -->
+		<icon>icon.skill32724</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-200</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="49978" toLevel="1" name="Mafia Henchman">
+		<!-- Wanted on suspicion of the collaboration with mafia. Can be attacked by other players. -->
+		<icon>icon.bm2018_ninja_i01</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49979" toLevel="1" name="Mafia Henchman">
+		<!-- Suspected of the collaboration with mafia. Can be attacked by other players. Atk. Spd. -30%. Casting Spd. -30%. Speed -30% -->
+		<icon>icon.bm2018_ninja_i01</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<hitTime>1200</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="49980" toLevel="1" name="Guards' Protection">
+		<!-- You are under the guards' protection. Received PvP damage -10%. <font color="FF0000">Note!</font>. You cannot get the Mafia Henchman effect while this buff is active. -->
+		<icon>icon.bm2018_bluemusketeer_i01</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="49981" toLevel="1" name="Orbis' Attack of Darkness">
+		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="49982" toLevel="1" name="Troop Chief's Protection">
+		<!-- P. Atk. +150. M. Atk. +150. P. Def. +200. M. Def. +200. Atk. Spd. +15. Casting Spd. +15. Speed +2. PvP damage +1.5%. Received PvP damage -2%. Acquired XP/ SP +20% -->
+		<icon>icon.s_npc_ev_2023_odd_oman_buff</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="49983" toLevel="1" name="Valakas">
+		<!-- One of the six dragon children of Shillien. Valakas is the Fire Dragon who commands hot flames and summons fire storms. After taking severe wounds in the war against the gods, he has hidden away in the Forge of Gods. He is waiting for Shillien's call to end his long slumber. -->
+		<icon>icon.skillboss</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="49984" toLevel="1" name="Fafurion">
+		<!-- The Water Dragon, one of the six dragons birthed by Shillien. He had been slumbering in the sea depths for a very long time, his fury subdued by the Elven Witch. Later the dragon awakened, powered by his fury, and now he seeks to resurrect Shillien. -->
+		<icon>icon.skillboss</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="49985" toLevel="1" name="Lindvior">
+		<!-- One of the six dragons birthed by Shillien. He controls the power of wind, and his wings are able to summon a hurricane. Lindvior appeared in the western Aden seeking to resurrect the Black Dragon, and stays there to the present day making whirlwinds from the sky. The local villagers even named the western wind after him. -->
+		<icon>icon.skillboss</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="49986" toLevel="1" name="Antharas">
+		<!-- The Earth Dragon, one the six dragon children of Shillien. Deeply wounded in the war against the gods, he had hidden away in the Dragon Valley in Giran. Fearing his possible return, humans tried to seal him away with a pact with Dasparion, but failed. Having gained Maluk's support, Antharas fell into a deep slumber, but now Shillien's call has awakened him. -->
+		<icon>icon.skillboss</icon>
+		<operateType>A2</operateType>
+	</skill>
+</list>

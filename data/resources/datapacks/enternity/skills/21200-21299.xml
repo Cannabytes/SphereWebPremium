@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="21200" levels="1" nameRu="Дух Трех Государств" nameEn="Age of the Three Kingdoms">
+		<!-- For 20 minutes, raises moving speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, physical P. Atk., and physical P. Def. by 15%. Reuse Delay 2 hours. Consumes 1 Proof of Friendship upon skill use. -->
+		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="7200000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21201" levels="1" nameRu="Ускорение" nameEn="Haste">
+		<!-- Increases Atk. Spd. by 33% for 20 minutes. Reuse delay is 1 hours. -->
+		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21202" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Гносиан" nameEn="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1576" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21203" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Ородриэль" nameEn="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1577" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21204" levels="1" nameRu="Призвать Агатиона - Штрафной Удар" nameEn="Agathion Seal Cancel - Penalty Kick">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1578" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21205" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Гносиан" nameEn="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1579" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21206" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Ородриэль" nameEn="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1580" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21207" levels="1" nameRu="Призвать Агатиона - Штрафной Удар" nameEn="Agathion Seal Cancel - Penalty Kick">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1581" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21208" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Гносиан" nameEn="Agathion Seal Cancel - Ball Trapping Gnocian">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1582" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21209" levels="1" nameRu="Призвать Агатиона - Ловец Мячей Ородриэль" nameEn="Agathion Seal Cancel - Ball Trapping Orodriel">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1583" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21210" levels="1" nameRu="Призвать Агатиона - Штрафной Удар" nameEn="Agathion Seal Cancel - Penalty Kick">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1584" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="6042">
+			<player agathionEnergy="false" />
+		</cond>
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21211" levels="1" nameRu="Благословение Победы" nameEn="Blessing of Victory">
+		<!-- Increases moving speed by 2% through the Blessing of Victory. -->
+		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21212" levels="1" nameRu="Призвать Агатиона - Тигрица-Старушка" nameEn="Agathion Seal Cancel - Granny Tiger">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1585" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21213" levels="1" nameRu="Призвать Агатиона - Фея Цветов" nameEn="Agathion Seal Cancel - Flower Fairy Spirit">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1586" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21214" levels="1" nameRu="Призвать Агатиона - Болельщица Ородриэль" nameEn="Agathion Seal Cancel - Cheerleader Orodriel">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1587" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21215" levels="1" nameRu="Призвать Агатиона - Болельщица Лана" nameEn="Agathion Seal Cancel - Cheerleader Lana">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1588" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21216" levels="1" nameRu="Призвать Агатиона - Болельщица Наонин" nameEn="Agathion Seal Cancel - Cheerleader Naonin">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1589" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21217" levels="1" nameRu="Призвать Агатиона - Болельщица Мортия" nameEn="Agathion Seal Cancel - Cheerleader Mortia">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1590" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21218" levels="1" nameRu="Призвать Агатиона - Болельщица Каурин" nameEn="Agathion Seal Cancel - Cheerleader Kaurin">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1591" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21219" levels="1" nameRu="Призвать Агатиона - Болельщица Мерурил" nameEn="Agathion Seal Cancel - Cheerleader Meruril">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1592" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21220" levels="1" nameRu="Призвать Агатиона - Ханди" nameEn="Agathion Seal Cancel - Handy">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1593" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21221" levels="1" nameRu="Благословенное Воскрешение" nameEn="Blessed Resurrection">
+		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<set name="icon" val="BranchSys2.icon.br_flag_cap_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21222" levels="1" nameRu="Сопротивление Стихиям" nameEn="Resist Elemental">
+		<!-- "For 1 hour, increases Resistance to Fire/Water/Wind/Earth by 20. Reuse delay is 4 hours." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21223" levels="1" nameRu="Абсолютная Защита" nameEn="Ultimate Defense">
+		<!-- "For 30 seconds, increases one's own P. Def. by 3636, M. Def. by 2727, and resistance to buff canceling attacks by 80%, and becomes unable to move. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21224" levels="1" nameRu="Способность Бессмертной Души Путешественника" nameEn="Soul of an Adventurer of Immortality's Ability">
+		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21225" levels="1" nameRu="Способность Души Стойкого Воина" nameEn="Soul of a Strong Warrior's Ability">
+		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21226" levels="1" nameRu="Способность Души Мудрого Мага" nameEn="Soul of a Wise Magician's Ability">
+		<!-- "For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21227" levels="1" nameRu="Способность Души Выдающегося Путешественника" nameEn="Ability of Prominent Adventure's Soul">
+		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21228" levels="1" nameRu="Способность Души Отважного Воина" nameEn="Soul of a Brave Warrior's Ability">
+		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21229" levels="1" nameRu="Пробуждение Крови" nameEn="Blood Awakening">
+		<!-- "Combines general attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 4 hours." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21230" levels="1" nameRu="Совершенство в Магии" nameEn="Improved Magic">
+		<!-- "Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. Reuse delay is 4 hours." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21231" levels="1" nameRu="Совершенная Критическая Атака" nameEn="Improved Critical Attack">
+		<!-- "Combines critical rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases critical rate by 30% and Critical Damage by 35%. Reuse delay is 4 hours." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21232" levels="1" nameRu="Сияющая Освещенная Сцена" nameEn="Shiny Lit Platform">
+		<!-- High Five Skill -->
+		<set name="abnormalTime" val="3600" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="20004" abnormalType="TRANSFORM" abnormalLvl="9">
+				<mul order="0x30" stat="runSpd" val="1.5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21233" levels="1" nameRu="Призвать Агатиона - Певец и Танцор" nameEn="Release Seal on Agathion - Singer Dancer">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1594" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21234" levels="1" nameRu="Призвать Агатиона – Мечи Духа Закена" nameEn="Release Seal on Agathion - Zaken Spirit Sword">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1595" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21235" levels="1" nameRu="Футболка к 7-й Годовщине - Скорость" nameEn="7th Anniversary T-shirt: Speed">
+		<!-- High Five Skill -->
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
+	</skill>
+	<skill id="21236" levels="1" nameRu="Футболка к 7-й Годовщине - Сила Благословенного Возвращения" nameEn="7th Anniversary T-shirt: Blessed Escape Ability">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="72000000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21237" levels="1" nameRu="Футболка к 7-й Годовщине - Сила Благословенной Защиты" nameEn="7th Anniversary T-shirt: Blessed Protection Ability">
+		<!-- High Five Skill -->
+		<set name="abnormalTime" val="7" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="canBeDispeled" val="false" />
+		<set name="reuseDelay" val="72000000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Invincible" val="0" abnormalType="INVINCIBILITY" abnormalLvl="1" abnormalVisualEffect="invincible" />
+		</for>
+	</skill>
+	<skill id="21238" levels="1" nameRu="Реактивный Мотоцикл" nameEn="Jet Bike">
+		<!-- Mounts a jet bike. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21239" levels="1" nameRu="Призвать Агатиона - Корова" nameEn="Release Seal on Agathion - Kau">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1596" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21240" levels="1" nameRu="Призвать Агатиона - Глиняная Кукла" nameEn="Release Seal on Agathion - Tow">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1597" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21241" levels="1" nameRu="Магические Очки" nameEn="Magic Glasses">
+		<!-- Increases M. Def. by 70. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21242" levels="1" nameRu="Зов Закена" nameEn="Zaken's Call">
+		<!-- Can move to near Zaken's Headquarters. Reuse delay 30 minutes. -->
+		<set name="hitTime" val="20000" />
+		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="52195" y="218787" z="-3231" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21243" levels="1" nameRu="Зов Фреи" nameEn="Freya's Call">
+		<!-- Can move to near Freya's Headquarters. Reuse delay 30 minutes. -->
+		<set name="hitTime" val="20000" />
+		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="102728" y="-126242" z="-2840" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21244" levels="1" nameRu="Зов Фринтезы" nameEn="Frintezza's Call">
+		<!-- Can move to near Frintezza's Headquarters. Reuse delay 30 minutes. -->
+		<set name="hitTime" val="20000" />
+		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="181378" y="-80915" z="-2731" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21245" levels="1" nameRu="Призвать Агатиона - Рудольф" nameEn="Release Seal on Agathion - Rudolph">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1598" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21246" levels="1" nameRu="Энергия Рудольфа" nameEn="Rudolph's Energy">
+		<!-- "For 10 minute(s), energy is replenished when Exp. is acquired through hunting. Reuse time is 30 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21247" levels="1" nameRu="Подарок Деда Мороза" nameEn="Gift from Santa Claus">
+		<!-- "Receives a gift from Santa Claus. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21248" levels="1" nameRu="Призвать Агатиона - Тзи Йентзы" nameEn="Release Seal on Agathion - Zinenze">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1599" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21249" levels="1" nameRu="Призвать Агатиона - Йентзы" nameEn="Release Seal on Agathion - Enze">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1600" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21250" levels="1" nameRu="Диадема Академии" nameEn="Academy Circlet">
+		<!-- Confirmed CT2.5 -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;75" />
+		</cond>
+		<for>
+			<mul order="0x30" stat="reduceExpLostByPvp" val="0.5" />
+			<mul order="0x30" stat="reduceExpLostByMob" val="0.5" />
+			<mul order="0x30" stat="reduceExpLostByRaid" val="0.5" />
+		</for>
+	</skill>
+	<skill id="21251" levels="1" nameRu="Блестящий Колпак - Благословение Тела" nameEn="Shiny Party Hat - Greater Body">
+		<!-- Increases Max HP by 35% for 20 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21252" levels="1" nameRu="Власть Каладберга" nameEn="Hellblade">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23319" />
+		</for>
+	</skill>
+	<skill id="21253" levels="1" nameRu="Власть Низов" nameEn="Butcher Blades">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23320" />
+		</for>
+	</skill>
+	<skill id="21254" levels="1" nameRu="Власть Тиатенона" nameEn="Claw of Destruction">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23321" />
+		</for>
+	</skill>
+	<skill id="21255" levels="1" nameRu="Власть Астарота" nameEn="Blades of Delusion">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23322" triggeredLevel="10" />
+		</for>
+	</skill>
+	<skill id="21256" levels="1" nameRu="Власть Трибинга" nameEn="Blood Brother">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23323" triggeredLevel="10" />
+		</for>
+	</skill>
+	<skill id="21257" levels="1" nameRu="Власть Мардила" nameEn="Mardil">
+		<!-- High Five Skill -->
+		<!-- FIXME: value unconfirmed -->
+		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ChanceSkillTrigger" val="0" activationChance="3" chanceType="ON_ATTACKED" triggeredId="23324" />
+		</for>
+	</skill>
+	<skill id="21258" levels="1" nameRu="Оседлать Антикварную Лошадь" nameEn="Rocking Horse Mount">
+		<!-- High Five Skill -->
+		<!-- Mounts a rocking horse. -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="20007" abnormalType="TRANSFORM" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="21259" levels="1" nameRu="Призвать Агатиона - Агатион в Корейском Национальном Костюме" nameEn="Release Seal on Agathion - Chorong">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1604" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21260" levels="1" nameRu="Сообщение" nameEn="Notifier">
+		<!-- Description: You can use to learn the number of received gifts and the number of remaining gifts. The gift provision time is reset every morning at 6:30. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="21261" levels="1" nameRu="Ожерелье Злобного Кролика" nameEn="Bad Bunny's Necklace">
+		<!-- Updated by LordWinter -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<add order="0x40" stat="maxMp" val="250" />
+               		<add order="0x30" stat="maxHp" val="500" />
+                     	<add order="0x30" stat="maxCp" val="1035" />
+                     	<add order="0x30" stat="pAtk" val="200" />
+                     	<add order="0x30" stat="mAtk" val="500" />
+                     	<mul order="0x30" stat="mCritPower" val="1.2" />
+                     	<mul order="0x30" stat="cAtk" val="1.20" />
+                     	<add order="0x08" stat="rCrit" val="3" />
+		</for>
+	</skill>
+	<skill id="21262" levels="1" nameRu="Серьга Злобного Кролика" nameEn="Bad Bunny's Earring">
+		<!-- Updated by LordWinter -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+                     	<add order="0x40" stat="maxHp" val="250" />
+                     	<add order="0x40" stat="absorbDam" val="9" />
+                     	<add order="0x40" stat="accCombat" val="4" />
+                     	<mul order="0x30" stat="mReuse" val="0.65" />
+                     	<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+		</for>
+	</skill>
+	<skill id="21263" levels="1" nameRu="Кольцо Злобного Кролика" nameEn="Bad Bunny's Ring">
+		<!-- Updated by LordWinter -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+                     	<mul order="0x30" stat="pAtkSpd" val="1.05" />
+                     	<mul order="0x30" stat="mAtkSpd" val="1.1" />
+		</for>
+	</skill>
+	<skill id="21264" levels="1" nameRu="Призвать Друга" nameEn="Summon Friend">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="-2" />
+		<set name="effectRange" val="-2" />
+		<set name="aggroPoints" val="1000" />
+		<set name="hitTime" val="10000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="ONE" />
+		<cond>
+			<and>
+				<target myPartyExceptMe="true" />
+				<player callPc="true" />
+			</and>
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
+		<for>
+			<effect name="CallPc" noicon="1" val="0">
+				<param itemId="0" itemCount="0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21265" levels="1" nameRu="Призвать Друга" nameEn="Summon Friend">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="-2" />
+		<set name="effectRange" val="-2" />
+		<set name="aggroPoints" val="1000" />
+		<set name="hitTime" val="10000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="ONE" />
+		<cond>
+			<and>
+				<target myPartyExceptMe="true" />
+				<player callPc="true" />
+			</and>
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
+		<for>
+			<effect name="CallPc" noicon="1" val="0">
+				<param itemId="0" itemCount="0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="21266" levels="1" nameRu="Призвать Агатиона - Чучу" nameEn="Release Seal on Agathion - Juju">
+		<!-- High Five Skill -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="npcId" val="1605" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="21267" levels="1" nameRu="Сообщение" nameEn="Notifier">
+		<!-- Description: Notifies the number of received gifts and remaining gifts when used. The gift supply time is initialized at 6:30 am every day. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+</list>

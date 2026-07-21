@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10539" toLevel="1" name="Throw Dagger">
+		<!-- <Suppression skill>. Attacks the enemy. Power 396. For the affected target:. For 30 sec., Speed -60. -->
+		<icon>icon.skill10539</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-400</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<mpConsume>60</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>20000</reuseDelay>
+		<trait>SUPPRESSION</trait>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>396</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>45512</skillId> <!-- Throw Dagger -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+</list>

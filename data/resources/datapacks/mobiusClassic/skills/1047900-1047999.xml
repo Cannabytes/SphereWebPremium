@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="1047911" toLevel="4" name="Attack of Secrets">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.skill0000</value>
+			<value level="3">icon.skill19565</value>
+			<value level="4">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="1047913" toLevel="4" name="Attribute Attack">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.skill0000</value>
+			<value level="3">icon.skill10073_2</value>
+			<value level="4">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>-500</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">85</value>
+			<value level="3">88</value>
+			<value level="4">91</value>
+		</magicLevel>
+		<reuseDelay>
+			<value level="1">15000</value>
+			<value level="2">8000</value>
+			<value level="3">8000</value>
+			<value toLevel="2" fromLevel="3" toSubLevel="1001" fromSubLevel="1001">7000</value>
+			<value level="4">7000</value>
+			<value toLevel="4" fromLevel="4" toSubLevel="1001" fromSubLevel="1001">6000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">245</value>
+					<value level="2">262</value>
+					<value level="3">279</value>
+					<value level="4">304</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1047915" toLevel="4" name="Phantom Attack">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.skill0000</value>
+			<value level="3">icon.skill10079_3</value>
+			<value level="4">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="1047937" toLevel="4" name="Sword Spirit Lv. 1">
+		<!-- Level 1 - SubLevel 1001: Sword Spirit charge has reached Lv. 1. Use basic attacks and attack skills. to charge Sword Spirit to the next level. -->
+		<!-- Level 2 - SubLevel 1001: Sword Spirit charge has reached Lv. 2. Use basic attacks and attack skills. to charge Sword Spirit to the next level. -->
+		<!-- Level 3 - SubLevel 1001: Sword Spirit charge has reached Lv. 3. Use basic attacks and attack skills. to charge Sword Spirit to the next level. -->
+		<!-- Level 4 - SubLevel 1001: Sword Spirit charge has reached Lv. 4. Use basic attacks and attack skills. to charge Sword Spirit to the next level. -->
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_sword_art1</value>
+			<value level="3">icon.skill0000</value>
+			<value level="4">icon.s_sword_art2</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SWORD_SPIRIT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelay>3000</reuseDelay>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>1047969</skillId> <!-- Sword Spirit Lv. 5 -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1047938" toLevel="1" name="Sword Spirit's Attack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>5-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>150</affectRange>
+		<affectScope>RANGE</affectScope>
+		<effectPoint>-210</effectPoint>
+		<isMagic>1</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<selfEffects>
+			<effect name="DispelBySlotMyself">
+				<dispel>SWORD_SPIRIT</dispel>
+			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="AdditionalPhysicalDamage">
+				<power>4067</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1047941" toLevel="3" name="Spear Cage">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_spear_prison</value>
+			<value level="3">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>
+			<value level="1">-1000</value>
+			<value level="2">-1100</value>
+			<value level="3">-1200</value>
+		</effectPoint>
+	</skill>
+	<skill id="1047957" toLevel="1" name="Cancel Sword Spirit">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySkillId">
+				<skillId>1047937</skillId> <!-- Sword Spirit Lv. 1 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1047963" toLevel="3" name="Spear Cage">
+		<!-- Level 1 - SubLevel 1001: Imprisons into Spear Cage making the prisoner unable to move. -->
+		<!-- Level 2 - SubLevel 1001: Imprisons into Spear Cage making the prisoner unable to move. -->
+		<!-- Level 3 - SubLevel 1001: Imprisons into Spear Cage making the prisoner unable to move. -->
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_spear_prison</value>
+			<value level="3">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>
+			<value level="1">-1000</value>
+			<value level="2">-1100</value>
+			<value level="3">-1200</value>
+		</effectPoint>
+	</skill>
+	<skill id="1047967" toLevel="3" name="Spear Cage">
+		<!-- Level 1 - SubLevel 1001: P./ M. Def. -30% -->
+		<!-- Level 2 - SubLevel 1001: P./ M. Def. -30% -->
+		<!-- Level 3 - SubLevel 1001: P./ M. Def. -30% -->
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_spear_prison</value>
+			<value level="3">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-14800</effectPoint>
+	</skill>
+	<skill id="1047969" toLevel="1" name="Sword Spirit Lv. 5">
+		<!-- Level 1 - SubLevel 1001: Sword Spirit charge has reached Lv. 5. An <font color="FFBB00">additional attack</font> is triggered upon a single target hit. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>SWORD_SPIRIT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>1</attackSkillId> <!-- Rising Attack -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>45364</attackSkillId> <!-- Amazing Rising Attack -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>5</attackSkillId> <!-- Double Sonic Slash -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>190</attackSkillId> <!-- Fatal Strike -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>261</attackSkillId> <!-- Triple Slash -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillBySkillDamage">
+				<attackSkillId>47965</attackSkillId> <!-- Triple Slash - Challenger -->
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<allowWeapons>DUAL</allowWeapons>
+				<skillId>1047938</skillId> <!-- Sword Spirit's Attack -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1047990" toLevel="11" name="Lightning Squall">
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_lightning</value>
+			<value level="3">icon.skill0000</value>
+			<value level="4">icon.s_lightning</value>
+			<value level="5">icon.skill0000</value>
+			<value level="6">icon.s_lightning</value>
+			<value level="7">icon.skill0000</value>
+			<value level="8">icon.s_lightning</value>
+			<value level="9">icon.skill0000</value>
+			<value level="10">icon.s_lightning</value>
+			<value level="11">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-780</value>
+			<value level="3">-800</value>
+			<value level="4">-820</value>
+			<value level="5">-840</value>
+			<value level="6">-860</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+			<value level="11">-910</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">30</value>
+			<value level="2">35</value>
+			<value level="3">40</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+			<value level="6">55</value>
+			<value level="7">60</value>
+			<value level="8">65</value>
+			<value level="9">70</value>
+			<value level="10">75</value>
+			<value level="11">85</value>
+		</mpConsume>
+	</skill>
+	<skill id="1047991" toLevel="11" name="Lightning Squall">
+		<!-- Level 1 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 2 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 3 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 4 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 5 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 6 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 7 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 8 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 9 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 10 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<!-- Level 11 - SubLevel 1001: Makes unable to move because of the lightning strike. -->
+		<icon>
+			<value level="1">icon.skill0000</value>
+			<value level="2">icon.s_lightning</value>
+			<value level="3">icon.skill0000</value>
+			<value level="4">icon.s_lightning</value>
+			<value level="5">icon.skill0000</value>
+			<value level="6">icon.s_lightning</value>
+			<value level="7">icon.skill0000</value>
+			<value level="8">icon.s_lightning</value>
+			<value level="9">icon.skill0000</value>
+			<value level="10">icon.s_lightning</value>
+			<value level="11">icon.skill0000</value>
+		</icon>
+		<operateType>A1</operateType>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-780</value>
+			<value level="3">-800</value>
+			<value level="4">-820</value>
+			<value level="5">-840</value>
+			<value level="6">-860</value>
+			<value level="7">-870</value>
+			<value level="8">-880</value>
+			<value level="9">-890</value>
+			<value level="10">-900</value>
+			<value level="11">-910</value>
+		</effectPoint>
+	</skill>
+	<skill id="1047996" toLevel="1" name="Shock Impact">
+		<!-- Level 1 - SubLevel 1001: Stuns making unable to move. -->
+		<icon>icon.skill30526</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-900</effectPoint>
+	</skill>
+</list>

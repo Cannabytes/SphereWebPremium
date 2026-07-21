@@ -1,0 +1,1948 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="5100" levels="1" nameRu="Отменить Захват B" nameEn="Cancel Capture B">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5101" levels="1" nameRu="Отменить Захват C" nameEn="Cancel Capture C">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5102" levels="1" nameRu="Отменить Захват Всего" nameEn="Cancel All Capture">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5103" levels="1" nameRu="Производство - Клан / Передача" nameEn="Production - Clan / Transfer">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5104" levels="3" nameRu="Боевая Сила" nameEn="Battle Force">
+		<!-- Not Used Anymore -->
+		<set name="icon" val="icon.skill0426" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5105" levels="3" nameRu="Сила Заклинания" nameEn="Spell Force">
+		<!-- Not Used Anymore -->
+		<set name="icon" val="icon.skill0427" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5106" levels="4" nameRu="Захват A-Статуса" nameEn="Capture A State">
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="77" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="600" abnormalLvl="#abnormalLvls" abnormalType="SEIZURE_A">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5107" levels="4" nameRu="Захват B-Статуса" nameEn="Capture B State">
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="77" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="600" abnormalLvl="#abnormalLvls" abnormalType="SEIZURE_B">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5108" levels="4" nameRu="Захват C-Статуса" nameEn="Capture C State">
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="77" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="600" abnormalLvl="#abnormalLvls" abnormalType="SEIZURE_C">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5109" levels="1" nameRu="Производство - Врата Клана" nameEn="Production - Clan Gate">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5110" levels="1" nameRu="Пушечное Мясо" nameEn="Cannon Fodder">
+		<!-- Confirmed CT2.5 -->
+		<!-- Swoop Cannon Skill -->
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="1600" />
+		<set name="effectRange" val="1600" />
+		<set name="hitTime" val="10000" />
+		<set name="itemConsumeCount" val="4" />
+		<set name="itemConsumeId" val="8872" />
+		<set name="magicLvl" val="70" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="68" />
+		<set name="reuseDelay" val="10500" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
+		<cond msgId="113" addName="1">
+			<and>
+				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			</and>
+			<not>
+				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
+			</not>
+		</cond>
+	</skill>
+	<skill id="5111" levels="1" nameRu="Большой Бум" nameEn="Big Bang">
+		<!-- Confirmed CT2.5 -->
+		<!-- Swoop Cannon Skill -->
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="2000" />
+		<set name="effectRange" val="2000" />
+		<set name="hitTime" val="10000" />
+		<set name="itemConsumeCount" val="5" />
+		<set name="itemConsumeId" val="8872" />
+		<set name="magicLvl" val="70" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="68" />
+		<set name="reuseDelay" val="10500" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
+		<cond msgId="113" addName="1">
+			<and>
+				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			</and>
+			<not>
+				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
+			</not>
+		</cond>
+	</skill>
+	<skill id="5112" levels="12" nameRu="Оглушение" nameEn="Stun">
+		<!-- Lvl 1-12 - Temporarily Immobilized and in a state of shock. -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 80 90 95 </table>
+		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
+		<set name="abnormalTime" val="9" />
+		<set name="affectRange" val="200" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="50" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5113" levels="12" nameRu="Замок: Купол Снятия эффектов" nameEn="Castle Self AE Dispell Buff">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<set name="affectRange" val="150" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="6000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5114" levels="12" nameRu="Удержание" nameEn="Hold">
+		<!-- Lvl 1-12 - Temporarily Immobilized. -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="castRange" val="800" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill4047" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="HOLD" />
+		<for>
+			<effect name="Root" val="0" abnormalType="ROOT_MAGICALLY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5115" levels="12" nameRu="Сфера Ненависти" nameEn="Cubic Hate">
+		<!-- Summon Attractive Cubic Skill -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggroPoints">2908 3052 3175 3271 3310 3345 3376 3391 3405 3418 3431 3444</table>
+		<table name="#magicLvl"> 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="80" />
+		<set name="skillType" val="AGGDAMAGE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="TargetMe" val="0" abnormalTime="3" />
+		</for>
+	</skill>
+	<skill id="5116" levels="12" nameRu="Удержание" nameEn="Hold">
+		<!-- Summon Attractive Cubic Skill -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="icon" val="icon.skill4047" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="HOLD" />
+		<for>
+			<effect name="Root" val="0" abnormalType="ROOT_MAGICALLY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5117" levels="1" nameRu="Оглушение" nameEn="Stun">
+		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalTime" val="9" />
+		<set name="affectRange" val="300" />
+		<set name="aggroPoints" val="100" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="2500" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="90" />
+		<set name="mpConsume" val="84" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="829" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" effectPower="30" />
+		</for>
+	</skill>
+	<skill id="5118" levels="1" nameRu="Отмена Сэйлрена" nameEn="Cancel Sailren Use">
+		<!-- CT2.5 retail confirmed -->
+		<set name="affectRange" val="300" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="90" />
+		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
+		<set name="canBeReflected" val="false" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5119" levels="1" nameRu="Кровопускание" nameEn="Bleed">
+		<!-- CT2.5 retail confirmed -->
+		<set name="affectRange" val="80" />
+		<set name="aggroPoints" val="351" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0245" />
+		<set name="magicLvl" val="90" />
+		<set name="mpConsume" val="84" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="2487" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
+	</skill>
+	<skill id="5120" levels="1" nameRu="Оглушение" nameEn="Stun">
+		<set name="abnormalTime" val="3" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="800" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="5" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="703" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" effectPower="40" />
+		</for>
+	</skill>
+	<skill id="5121" levels="1" nameRu="Производство - Возрождение Трупа" nameEn="Production - Corpse Revival">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5122" levels="1" nameRu="Мощь Сэйлрен" nameEn="Sailren Use Might">
+		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="90" />
+		<set name="mpConsume" val="38" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PA_UP" abnormalLvl="99">
+				<mul order="0x30" stat="pAtk" val="1.5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5123" levels="1" nameRu="Максимальная Защита" nameEn="Maximum Defense">
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill0454" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<add order="0x40" stat="pDef" val="1000" />
+				<add order="0x40" stat="mDef" val="800" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5124" levels="1" nameRu="Антимузыка" nameEn="Anti-Music">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="CancelProbability" noicon="1" val="0">
+				<param dispel="DANCE_OF_AQUA_GUARD;DANCE_OF_CONCENTRATION;DANCE_OF_CONCENTRATION;DANCE_OF_EARTH_GUARD;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_LIGHT;DANCE_OF_MYSTIC;DANCE_OF_PROTECTION;DANCE_OF_SHADOW;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_FLAME_GUARD;SONG_OF_HUNTER;SONG_OF_INVOCATION;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_STORM_GUARD;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BLADESTORM;DANCE_OF_ALIGNMENT;SONG_OF_ELEMENTAL;SONG_OF_WINDSTORM" rate="100" />
+			</effect>
+		</for>
+
+	</skill>
+	<skill id="5125" levels="1" nameRu="Статус Максимального Сопротивления" nameEn="Maximum Resist Status">
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill0456" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<sub order="0x40" stat="debuffVuln" val="60" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5126" levels="1" nameRu="Максимальное Восстановление" nameEn="Maximum Recovery">
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill0457" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<mul order="0x30" stat="regHp" val="1.4" />
+				<mul order="0x30" stat="regCp" val="1.4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5127" levels="1" nameRu="Восстановление Сил" nameEn="Recover Force">
+		<set name="abnormalTime" val="7" />
+		<set name="affectRange" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" /> <!-- FIXME: This is not retail like -->
+		<set name="targetType" val="AURA" /> <!-- FIXME: Aura Friendly ? -->
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="1.2" />
+			</effect>
+			<effect name="FocusEnergy" noicon="1" val="7" />
+		</for>
+	</skill>
+	<skill id="5128" levels="1" nameRu="Максимальная Стрельба" nameEn="Maximize long-range weapon use">
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill0459" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="1.2">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="accCombat" val="10">
+					<using kind="Bow,Crossbow" />
+				</add>
+			</effect>
+		</for>
+	</skill>
+	<skill id="5129" levels="1" nameRu="Дымовая Завеса" nameEn="Smokescreen">
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill0460" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="CONT" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="COMBINATION" abnormalLvl="1">
+				<add order="0x40" stat="rEvas" val="15" />
+				<mul order="0x30" stat="blowRate" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5130" levels="1" nameRu="Вулкан" nameEn="Volcano">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5131" levels="1" nameRu="Цунами" nameEn="Tsunami">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5132" levels="1" nameRu="Циклон" nameEn="Cyclone">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5133" levels="1" nameRu="Геенна" nameEn="Gehenna">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5134" levels="1" nameRu="Поле Антипризыва" nameEn="Anti-Summoning Field">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="7" />
+		<set name="icon" val="icon.skill1424" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" abnormalTime="1">
+				<param slot="buff" rate="100" max="3" />
+			</effect>
+			<effect name="Debuff" val="0" abnormalType="ULTIMATE_DEBUFF" abnormalLvl="100">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7" />
+				<mul order="0x30" stat="pAtkSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5135" levels="1" nameRu="Рассечение" nameEn="Slash">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Feline King Skill -->
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="overHit" val="true" />
+		<set name="power" val="8264" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5136" levels="1" nameRu="Режущий Вихрь" nameEn="Spin Slash">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Feline King Skill -->
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="733" />
+		<set name="hitTime" val="1070" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="322" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="overHit" val="true" />
+		<set name="power" val="4132" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5137" levels="1" nameRu="Кошачья Хватка" nameEn="Hold of King">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Feline King Skill -->
+		<set name="abnormalTime" val="30" />
+		<set name="aggroPoints" val="1000" />
+		<set name="affectRange" val="200" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1201" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="258" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="20000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="HOLD" />
+		<for>
+			<effect name="Root" val="0" abnormalType="ROOT_MAGICALLY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5138" levels="1" nameRu="Кнут" nameEn="Whiplash">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Magnus the Unicorn Skill -->
+		<set name="abnormalTime" val="9" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="overHit" val="true" />
+		<set name="power" val="6198" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" effectPower="60" />
+		</for>
+	</skill>
+	<skill id="5139" levels="1" nameRu="Приливная Волна" nameEn="Tidal Wave">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Magnus the Unicorn Skill -->
+		<set name="aggroPoints" val="1000" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="258" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="overHit" val="true" />
+		<set name="power" val="228" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5140" levels="1" nameRu="Сила Проклятия" nameEn="Dark Curse">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Spectral Lord Skill -->
+		<set name="aggroPoints" val="1000" />
+		<set name="affectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill1160" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="258" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="operateType" val="A2" />
+		<set name="overHit" val="true" />
+		<set name="power" val="60" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="POISON" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="DamOverTime" ticks="30" val="109" abnormalTime="1" abnormalType="ATTACK_TIME_UP" abnormalLvl="3" abnormalVisualEffect="poison">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5141" levels="1" nameRu="Случайная Смерть" nameEn="Dicing Death">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Spectral Lord Skill -->
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="214" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="overHit" val="true" />
+		<set name="power" val="8264" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5142" levels="1" nameRu="Взрыв Трупа" nameEn="Corpse Kaboom">
+		<!-- CT2.5 retail confirmed -->
+		<!-- Summon Spectral Lord Skill -->
+		<set name="aggroPoints" val="1000" />
+		<set name="affectRange" val="150" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="258" />
+		<set name="mpInitialConsume" val="64" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="228" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA_CORPSE_MOB" />
+		<for>
+			<effect name="ConsumeBody" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="5143" levels="1" nameRu="Удар Сэйлрена" nameEn="Sailren Use Blow">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="blowChance" val="115" />
+		<set name="castRange" val="40" />
+		<set name="condition" val="16" /> <!-- Crit -->
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="89" />
+		<set name="mpConsume" val="84" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="39544" />
+		<set name="skillType" val="BLOW" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5144" levels="1" nameRu="Мираж" nameEn="Mirage">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="canBeReflected" val="false" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5145" levels="1" nameRu="Судный День" nameEn="Day of Doom">
+		<set name="abnormalTime" val="120" />
+		<set name="canBeReflected" val="false" />
+		<set name="icon" val="icon.skill1422" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" />
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="MULTI_DEBUFF" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="0.5" />
+				<mul order="0x30" stat="pDef" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="3" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="3" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="3" />
+				<sub order="0x40" stat="fireRes" val="50" />
+				<sub order="0x40" stat="windRes" val="50" />
+				<sub order="0x40" stat="waterRes" val="50" />
+				<sub order="0x40" stat="earthRes" val="50" />
+				<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
+				<mul order="0x30" stat="regHp" val="0.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5146" levels="10" nameRu="Лечение" nameEn="Heal">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#amount"> 308 337 365 393 421 448 474 498 520 552 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
+	</skill>
+	<skill id="5147" levels="10" nameRu="Благословенное Тело" nameEn="Blessed Body">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#maxHp"> 24 48 72 96 120 144 168 192 216 240 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5148" levels="10" nameRu="Молитва" nameEn="Prayer">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#healEffect"> 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5149" levels="10" nameRu="Подпитка" nameEn="Recharge">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#amount"> 33 35 38 40 43 45 48 50 52 55 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="6000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
+	</skill>
+	<skill id="5150" levels="10" nameRu="Благословенная Душа" nameEn="Blessed Soul">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#maxMp"> 16 32 48 68 80 96 112 128 144 160 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="maxMp" val="#maxMp" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5151" levels="10" nameRu="Получение Маны" nameEn="Mana Gain">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="manaCharge" val="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5152" levels="10" nameRu="Ритуал" nameEn="Ritual">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#amount"> 264 289 313 337 361 384 406 427 446 473 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
+	</skill>
+	<skill id="5153" levels="10" nameRu="Приветствие" nameEn="Cheer">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#maxCp"> 24 48 72 96 120 144 168 192 216 240 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="maxCp" val="#maxCp" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5154" levels="10" nameRu="Могущество" nameEn="Might">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pAtk"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5156" levels="10" nameRu="Воодушевление" nameEn="Empower">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mAtk"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5157" levels="10" nameRu="Мощь в Дуэли" nameEn="Duel Might">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5158" levels="10" nameRu="Щит" nameEn="Shield">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pDef"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="pDef" val="#pDef" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5159" levels="10" nameRu="Магический Барьер" nameEn="Magic Barrier">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mDef"> 37 40 44 48 52 56 61 65 70 77 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="mDef" val="#mDef" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5160" levels="10" nameRu="Слабость в Дуэли" nameEn="Duel Weakness">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="PVP_DMG_DOWN" abnormalLvl="1">
+				<mul order="0x30" stat="pvpPhysDmg" val="0.95" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="0.95" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5161" levels="10" nameRu="Проворство" nameEn="Agility">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#rEvas"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5162" levels="10" nameRu="Наведение" nameEn="Guidance">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#accCombat"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5163" levels="10" nameRu="Фокусировка" nameEn="Focus">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#rCrit"> 0.05 0.05 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5164" levels="10" nameRu="Дикая Магия" nameEn="Wild Magic">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mCritRate"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ABNORMAL_ITEM" abnormalLvl="1">
+				<add order="0x40" stat="mCritRate" val="#mCritRate" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5165" levels="10" nameRu="Очарование" nameEn="Charm">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="180000" />
+		<set name="skillType" val="AGGREDUCE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+	</skill>
+	<skill id="5166" levels="10" nameRu="Замедление" nameEn="Slow">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#aggroPoints">360 418 477 532 558 582 604 624 641 655</table>
+		<set name="abnormalTime" val="15" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="SPEED_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5167" levels="10" nameRu="Зима" nameEn="Winter">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="15" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="ATTACK_TIME_UP" abnormalLvl="3">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5168" levels="10" nameRu="Оглушение" nameEn="Stun">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">96 104 115 128 136 150 154 164 169 173</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="10" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5169" levels="10" nameRu="Удержание" nameEn="Hold">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="15" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="HOLD" />
+		<for>
+			<effect name="Root" val="0" abnormalType="ROOT_MAGICALLY" abnormalLvl="1">
+				<sub order="0x40" stat="rootVuln" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5170" levels="10" nameRu="Сон" nameEn="Sleep">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="15" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="SLEEP" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SLEEP" />
+		<for>
+			<effect name="Sleep" val="0" abnormalType="SLEEP" abnormalLvl="1">
+				<sub order="0x40" stat="sleepVuln" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5171" levels="10" nameRu="Паралич" nameEn="Paralyze">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="10" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="Paralyze" val="0" abnormalType="PARALYZE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5172" levels="10" nameRu="Медуза" nameEn="Medusa">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="10" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Petrification" val="0" abnormalType="TURN_STONE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5173" levels="10" nameRu="Страх" nameEn="Fear">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">227 285 369 438 495 549 590 624 650 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="FEAR" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Fear" val="0" ticks="20" abnormalTime="1" abnormalType="TURN_FLEE" abnormalLvl="1" effectPower="40" />
+		</for>
+	</skill>
+	<skill id="5174" levels="10" nameRu="Отравление" nameEn="Poison">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="POISON" />
+		<for>
+			<effect name="DamOverTime" ticks="30" val="#dot" abnormalTime="1" abnormalType="POISON" abnormalLvl="#abnormalLvls" abnormalVisualEffect="poison" />
+		</for>
+	</skill>
+	<skill id="5175" levels="10" nameRu="Кровопускание" nameEn="Bleed">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="BLEED" />
+		<for>
+			<effect name="DamOverTime" ticks="20" val="#dot" abnormalTime="1" abnormalType="BLEEDING" abnormalLvl="#abnormalLvls" abnormalVisualEffect="bleed" />
+		</for>
+	</skill>
+	<skill id="5176" levels="10" nameRu="Безмолвие" nameEn="Silence">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#aggroPoints">457 495 532 549 566 582 597 611 624 646 655</table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="10" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MUTE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Mute" val="0" abnormalType="SILENCE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5177" levels="10" nameRu="Злой Рок" nameEn="Doom">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalTime" val="10" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill3080" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MUTE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Mute" val="0" abnormalType="SILENCE_ALL" abnormalLvl="1" />
+			<effect name="PhysicalMute" noicon="1" val="0" abnormalType="SILENCE_PHYSICAL" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5178" levels="1" nameRu="NPC: Горение" nameEn="NPC Burn">
+		<set name="affectRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="hitCancelTime" val="2000" />
+		<set name="icon" val="icon.action102" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="38" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="116" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5179" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5180" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5181" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5182" levels="1" nameRu="Благословение Защиты" nameEn="Blessing of Protection">
+		<!-- Newbie Guide Buff -->
+		<set name="abnormalTime" val="7200" />
+		<set name="canBeDispeled" val="false" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill0194" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ProtectionBlessing" val="0" abnormalType="PK_PROTECT" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5183" levels="1" nameRu="Потустороннее Оглушение" nameEn="Production: Dimensional Stun">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="300" />
+		<set name="flyRadius" val="300" />
+		<set name="flyType" val="THROW_UP" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="5184" levels="1" nameRu="Дыхание Дракона" nameEn="Production: Valakas Dragon Breath">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1200" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="2000" />
+		<set name="effectRange" val="1100" />
+		<set name="fanRange" val="0,0,1200,35" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="75" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="FRONT_AREA" />
+	</skill>
+	<skill id="5185" levels="1" nameRu="Производство: Страж Магического Типа" nameEn="Production: Magic-type Guard">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="75" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="54" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5186" levels="2" nameRu="Ускорение Питомца" nameEn="Pet Haste">
+		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#aggro"> 418 495 </table>
+		<table name="#magicLvl"> 44 52 </table>
+		<table name="#mpConsume"> 16 19 </table>
+		<table name="#mpInitialConsume"> 4 5 </table>
+		<table name="#pAtkSpd"> 1.15 1.33 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1086" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5187" levels="4" nameRu="Ярость Вампира Питомца" nameEn="Pet Vampiric Rage">
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<table name="#absorbDam"> 6 7 8 9 </table>
+		<table name="#aggro"> 285 418 549 646 </table>
+		<table name="#magicLvl"> 30 44 58 72 </table>
+		<table name="#mpConsume"> 11 16 22 27 </table>
+		<table name="#mpInitialConsume"> 3 4 6 7 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1268" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VAMPIRIC_ATTACK" abnormalLvl="#abnormalLvls">
+				<add order="0x40" stat="absorbDam" val="#absorbDam" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5188" levels="3" nameRu="Восстановление Питомца" nameEn="Pet Regeneration">
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#aggro"> 331 457 532 </table>
+		<table name="#magicLvl"> 35 48 56 </table>
+		<table name="#mpConsume"> 12 18 21 </table>
+		<table name="#mpInitialConsume"> 3 5 6 </table>
+		<table name="#rate"> 1.1 1.15 1.2 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1044" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HP_REGEN_UP" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="regHp" val="#rate" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5189" levels="6" nameRu="Благословение Тела Питомца" nameEn="Pet Blessed Body">
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<table name="#aggro"> 418 457 495 532 597 646 </table>
+		<table name="#magicLvl"> 44 48 52 56 64 72 </table>
+		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#mpConsume"> 16 18 19 21 24 27 </table>
+		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
+		<set name="abnormalTime" val="1200" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1045" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_HP_UP" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="maxHp" val="#maxHp" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5190" levels="6" nameRu="Благословение Духа Питомца" nameEn="Pet Blessed Soul">
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<table name="#aggro"> 418 457 495 532 582 635 </table>
+		<table name="#magicLvl"> 44 48 52 56 62 70 </table>
+		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#mpConsume"> 16 18 19 21 23 26 </table>
+		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
+		<set name="abnormalTime" val="1200" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1048" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_MP_UP" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="maxMp" val="#maxMp" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5191" levels="3" nameRu="Наведение Питомца" nameEn="Pet Guidance">
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#accCombat"> 2 3 4 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
+		<table name="#mpConsume"> 14 18 21 </table>
+		<table name="#mpInitialConsume"> 4 5 6 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1240" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HIT_UP" abnormalLvl="#abnormalLvls">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5192" levels="2" nameRu="Легкая Походка Питомца" nameEn="Pet Wind Walk">
+		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#aggro"> 204 285 </table>
+		<table name="#magicLvl"> 20 30 </table>
+		<table name="#mpConsume"> 8 11 </table>
+		<table name="#mpInitialConsume"> 2 3 </table>
+		<table name="#runSpd"> 20 33 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1204" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SPEED_UP" abnormalLvl="#abnormalLvls">
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5193" levels="3" nameRu="Проницательность Питомца" nameEn="Pet Acumen">
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#aggro"> 204 331 457 </table>
+		<table name="#magicLvl"> 20 35 48 </table>
+		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
+		<table name="#mpConsume"> 8 12 18 </table>
+		<table name="#mpInitialConsume"> 2 3 5 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1085" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CASTING_TIME_DOWN" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5194" levels="3" nameRu="Воодушевление Питомца" nameEn="Pet Empower">
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#aggro"> 243 418 495 </table>
+		<table name="#magicLvl"> 25 44 52 </table>
+		<table name="#mAtk"> 1.55 1.65 1.75 </table>
+		<table name="#mpConsume"> 9 16 19 </table>
+		<table name="#mpInitialConsume"> 3 4 5 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="aggroPoints" val="#aggro" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1059" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MA_UP" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5195" levels="12" nameRu="Великое Лечение Питомца" nameEn="Pet Greater Heal">
+		<table name="#abnormalLvls"> 1 1 2 2 4 6 7 7 7 7 7 7 </table>
+		<table name="#amount"> 58 92 148 219 299 380 450 477 500 525 542 550 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 7 12 18 25 32 39 46 49 51 52 53 53  </table>
+		<table name="#mpInitialConsume"> 2 3 5 7 8 10 12 13 13 13 14 14 </table>
+		<set name="abnormalTime" val="15" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="5000" />
+		<set name="icon" val="icon.skill1217" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="reuseDelay" val="10000" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" abnormalType="LIFE_FORCE_OTHERS" abnormalLvl="#abnormalLvls" />
+		</for>
+	</skill>
+	<skill id="5196" levels="3" nameRu="Оковы Ветра Питомца" nameEn="Pet Wind Shackle">
+		<table name="#magicLvl"> 64 66 68 </table>
+		<table name="#mpConsume"> 48 49 51 </table>
+		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill1206" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="ATTACK_TIME_UP" abnormalLvl="3">
+				<mul order="0x30" stat="pAtkSpd" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5197" levels="3" nameRu="Сглаз Питомца" nameEn="Pet Hex">
+		<table name="#magicLvl"> 64 66 68 </table>
+		<table name="#mpConsume"> 24 25 26  </table>
+		<table name="#mpInitialConsume"> 6 7 7 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.skill0122" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="PD_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="pDef" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5198" levels="3" nameRu="Замедление Питомца" nameEn="Pet Slow">
+		<table name="#magicLvl"> 64 66 68 </table>
+		<table name="#mpConsume"> 48 49 51 </table>
+		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1160" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="7000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="SPEED_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="runSpd" val="0.7" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5199" levels="3" nameRu="Проклятие Питомца: Мрак" nameEn="Pet Curse Gloom">
+		<table name="#magicLvl"> 64 66 68 </table>
+		<table name="#mpConsume"> 48 49 51 </table>
+		<table name="#mpInitialConsume"> 12 13 13 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill1263" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="MD_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="mDef" val="0.77" />
+			</effect>
+		</for>
+	</skill>
+</list>

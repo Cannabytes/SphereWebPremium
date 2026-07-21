@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+    <skill id="90001" levels="1" name="Mana potion">
+        <set name="icon" val=""/>
+        <set name="displayId" val="2005"/>
+        <set name="itemConsumeId" val="728"/>
+        <set name="itemConsumeCount" val="1"/>
+        <set name="isHandler" val="true"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="MANAHEAL"/>
+        <set name="power" val="1000"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="altUse" val="true"/>
+    </skill>
+    <skill id="90002" levels="1" name="Mana drug">
+        <set name="icon" val="" />
+        <set name="displayId" val="2005" />
+        <set name="itemConsumeId" val="726" />
+        <set name="itemConsumeCount" val="1" />
+        <set name="isHandler" val="true" />
+        <set name="target" val="TARGET_SELF" />
+        <set name="skillType" val="BUFF" />
+        <set name="operateType" val="OP_ACTIVE" />
+        <set name="altUse" val="true" />
+        <for>
+            <effect count="5" name="ManaHealOverTime" time="3" val="200" displayId="2077">
+                <def name="ignoreMpEff" val="true" />
+            </effect>
+        </for>
+    </skill>
+    <skill id="90050" levels="2" name="Rune of Experience Points 30%">
+        <table name="#power">1.3 1.5</table>
+        <set name="icon" val="symbol.utx-rune-xp-1"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="ExpMultiplier" val="#power"/>
+            <mul order="0x30" stat="RaidExpMultiplier" val="#power"/>
+        </for>
+    </skill>
+    <skill id="90051" levels="2" name="Rune of SP 30%">
+        <table name="#power">1.3 1.5</table>
+        <set name="icon" val="symbol.utx-rune-sp-1"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="SpMultiplier" val="#power"/>
+            <mul order="0x30" stat="RaidSpMultiplier" val="#power"/>
+        </for>
+    </skill>
+    <skill id="90052" levels="2" name="Rune of Drop 30%">
+        <table name="#power">0.3 0.5</table>
+        <set name="icon" val="symbol.utx-rune-drop-1"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <add order="0x40" stat="ItemDropMultiplier" val="#power"/>
+            <add order="0x40" stat="AdenaDropMultiplier" val="#power"/>
+            <add order="0x40" stat="SpoilDropMultiplier" val="#power"/>
+            <add order="0x40" stat="SealStonesMultiplier" val="#power"/>
+        </for>
+    </skill>
+    <skill id="90053" levels="2" name="Rune of Crystal Form Level 3 5">
+        <!--
+              Description: One's Grade Penalty decreases by 3,5 level.
+        -->
+        <table name="#power">3 5</table>
+        <set name="icon" val="br_cashtex.skill.br_cash_rune_of_rp_buff_3"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <add order="0x40" stat="gradeExpertiseLevel" val="#power"/>
+        </for>
+    </skill>
+    <skill id="90054" levels="1" name="Rune of Enchant Boost 10%">
+        <!--
+        Description: Enchant Bonus Rune.
+        -->
+        <set name="icon" val="br_cashtex.skill.br_cash_rune_of_rp_buff_3"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+        <set name="skillType" val="BUFF"/>
+        <set name="operateType" val="OP_PASSIVE"/>
+        <for>
+            <mul order="0x30" stat="EnchantBonusMultiplier" val="1.1"/>
+        </for>
+    </skill>
+</list>

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="62000" toLevel="5" name="Test - Harmony">
+		<!-- Level 1: Max HP +100. Max MP +100 -->
+		<!-- Level 2: Max HP +200. Max MP +200 -->
+		<!-- Level 3: Max HP +300. Max MP +300 -->
+		<!-- Level 4: Max HP +400. Max MP +400 -->
+		<!-- Level 5: Max HP +500. Max MP +500. Constantly recovers MP. -->
+		<icon>icon.harmony</icon>
+		<operateType>A6</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>HARMONY</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>3</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">85</value>
+			<value level="5">90</value>
+		</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ManaHealOverTime" fromLevel="5" toLevel="5">
+				<power>
+					<value level="5">11.5</value>
+				</power>
+				<ticks>
+					<value level="5">17</value>
+				</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62001" toLevel="1" name="Light Assassin Transformation">
+		<!-- You are transformed into Light Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
+		<icon>icon.scroll_of_verification_i06</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>WHITE_ASSASSIN_SUIT</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>70</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1800</skillId> <!-- Transformation: Pirate -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62002" toLevel="1" name="Mount Griffin">
+		<!-- Allows to mount Griffin. -->
+		<icon>icon.griffin_vehicle</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1000</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>204</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>204</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62003" toLevel="4" name="Presentation">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>
+			<value level="1">2300</value>
+			<value level="2">4600</value>
+			<value level="3">6800</value>
+			<value level="4">10000</value>
+		</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="62004" toLevel="1" name="Hellfire Demonstration Scroll">
+		<!-- Transforms into the Ultimate Death Knight and summons the Hellfire. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="62005" toLevel="1" name="Test - Essential Fatal Crush - Presentation">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>400</castRange>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="62006" toLevel="1" name="Test - Shining Wave">
+		<icon>icon.s_shining_buster</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="62007" toLevel="2" name="Test - Absolute Zero">
+		<icon>icon.skill10103</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-900</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="62008" toLevel="1" name="Test - Essential Fatal Crush">
+		<icon>icon.essential_fatal_smash</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-950</effectPoint>
+		<hitTime>1000</hitTime>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62009" toLevel="1" name="Test - Essential Fatal Crush">
+		<icon>icon.essential_fatal_smash</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-950</effectPoint>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="62010" toLevel="1" name="Test - Essential Fatal Crush">
+		<icon>icon.essential_fatal_smash</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-950</effectPoint>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="62011" toLevel="1" name="Test - Shining Beam">
+		<icon>icon.s_shining_ray</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-950</effectPoint>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>80</mpConsume>
+	</skill>
+	<skill id="62012" toLevel="1" name="Test - Lightning Wipeout">
+		<icon>icon.brandish_b</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-595</effectPoint>
+		<hitTime>1500</hitTime>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62013" toLevel="1" name="Test - Shadow Attack">
+		<icon>icon.s_assassin_charge_attack</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-485</effectPoint>
+		<hitTime>2000</hitTime>
+		<mpConsume>103</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62014" toLevel="1" name="Test - Shadow Attack">
+		<icon>icon.s_assassin_charge_attack</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-485</effectPoint>
+		<hitTime>2000</hitTime>
+		<mpConsume>103</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62015" toLevel="1" name="Test - Shadow Attack">
+		<icon>icon.s_assassin_charge_attack</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<coolTime>200</coolTime>
+		<effectPoint>-485</effectPoint>
+		<hitTime>2000</hitTime>
+		<mpConsume>103</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62016" toLevel="1" name="Test - Quick Spear">
+		<icon>icon.skill1606</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-1370</effectPoint>
+		<hitTime>2500</hitTime>
+		<mpConsume>105</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62017" toLevel="1" name="Test - Quick Spear">
+		<icon>icon.skill1606</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-1370</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="62018" toLevel="1" name="Test - Flame Burst">
+		<icon>icon.flame_blast</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>-445</effectPoint>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<mpConsume>140</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62019" toLevel="1" name="Test - Flame Burst">
+		<!-- Drains HP/ MP for 10 sec. -->
+		<icon>icon.flame_blast2</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>H_R_FIRE_DEBUFF_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>-140</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<trait>INFECTION</trait>
+		<effects>
+			<effect name="ManaDamOverTime">
+				<power>
+					<value level="1">20</value>
+					<value level="2">30</value>
+				</power>
+				<ticks>2</ticks>
+			</effect>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">80</value>
+					<value level="2">100</value>
+				</power>
+				<ticks>2</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62020" toLevel="1" name="Test - Flame Burst">
+		<!-- Drains HP/ MP for 10 sec. -->
+		<icon>icon.flame_blast2</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DOT_ATTR</abnormalType>
+		<abnormalVisualEffect>H_R_FIRE_DEBUFF_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>-140</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<trait>INFECTION</trait>
+		<effects>
+			<effect name="ManaDamOverTime">
+				<power>
+					<value level="1">20</value>
+					<value level="2">30</value>
+				</power>
+				<ticks>2</ticks>
+			</effect>
+			<effect name="DamOverTime">
+				<power>
+					<value level="1">80</value>
+					<value level="2">100</value>
+				</power>
+				<ticks>2</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62023" toLevel="1" name="Test - +10 Frost Lord's Sword">
+		<icon>icon.frozen_weapon_sword</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62024" toLevel="1" name="Test - ignore_hp">
+		<!-- Test - ignore_consume_hp -->
+		<icon>icon.death_knight_transform</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>5</isMagic>
+		<reuseDelay>180000</reuseDelay>
+	</skill>
+	<skill id="62025" toLevel="1" name="Test - ignore_mp">
+		<!-- Test - ignore_consume_mp -->
+		<icon>icon.death_knight_transform</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>5</isMagic>
+		<reuseDelay>180000</reuseDelay>
+	</skill>
+	<skill id="62026" toLevel="1" name="Test - ignore_dp">
+		<!-- Test - ignore_consume_dp -->
+		<icon>icon.death_knight_transform</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>5</isMagic>
+		<reuseDelay>180000</reuseDelay>
+	</skill>
+	<skill id="62027" toLevel="2" name="Test - Absolute Zero">
+		<icon>icon.skill11128</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-900</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="62028" toLevel="1" name="Test - (End) Ultimate Death Knight">
+		<!-- Transforms into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. <Transformation effect>. P. Atk. +40%. Skill Power +10%. P. Skill Critical Rate +20%. P. Critical Damage +40%. P. Skill Critical Damage +40%. Atk. Spd. +50%. P. Def. +500. Speed +40. Resistance to All Weapons +10%. Decreases penalty of Received Healing. Increases Holy Resistance. With a 50% chance, triggers <font color="FF0000">Impending Death Whisper</font> on attack. <<font color="FF0000">Impending Death Whisper</font>>. For 30 sec. Hold/ Suppression Resistance +50%. Skills do not consume DP. (Trigger cooldown: 180 sec.) -->
+		<icon>icon.death_knight_transform</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="62032" toLevel="1" name="Test - Seal of Chaos">
+		<icon>icon.skill1096</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62033" toLevel="1" name="Test - Seal of Chaos">
+		<icon>icon.skill1096</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-663</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="62034" toLevel="1" name="Test - Seal of Winter">
+		<icon>icon.skill1104</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62035" toLevel="1" name="Test - Seal of Winter">
+		<icon>icon.skill1104</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-684</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="62036" toLevel="1" name="Test - Seal of Slow">
+		<icon>icon.skill1099</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62037" toLevel="1" name="Test - Seal of Slow">
+		<icon>icon.skill1099</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-684</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="62038" toLevel="1" name="Test - Powerful AoE Skill">
+		<!-- A skill for testing AoE damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-900</effectPoint>
+	</skill>
+	<skill id="62039" toLevel="1" name="Test - Powerful AoE Stun Skill">
+		<!-- A skill for testing AoE damage and stun. -->
+		<icon>icon.skill4106</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-900</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="62040" toLevel="1" name="Test - Born to Die">
+		<!-- On dying from attack:. Triggers Reviving After Death. <Reviving After Death>. Invincibility for 3 sec. HP/ MP recovery unavailable. When the invincibility effect expires, fully recovers HP/ CP. Recovers 5% MP. (Trigger cooldown: 400 sec.) -->
+		<icon>icon.born_to_be_death</icon>
+		<operateType>P</operateType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="CheatDeath">
+				<hp>1</hp>
+				<mp>1</mp>
+				<cp>1</cp>
+				<triggerSkill>45346;45347</triggerSkill>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62041" toLevel="1" name="Test - Reviving After Death">
+		<!-- Resurrects and instantly makes the character invincible. -->
+		<icon>icon.born_to_be_death</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>RESIST_CHEAT_DEATH</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
+		<coolTime>0</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelay>10000</reuseDelay>
+		<reuseDelayType>S</reuseDelayType>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="RemainHpPer">
+				<amount>10</amount>
+				<percentType>LESS</percentType>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="62042" toLevel="1" name="Test - Forbidden to Revive">
+		<!-- While the restriction is active, Reviving After Death cannot be triggered. even after a killing blow. -->
+		<icon>icon.skill5873</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+	</skill>
+	<skill id="62043" toLevel="1" name="Test - Forbidden to Die">
+		<!-- Has restrictions after resurrection. HP/ CP/ MP are set to 1. -->
+		<icon>icon.skill5876</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+	</skill>
+	<skill id="62044" toLevel="1" name="Test - Born to Die - Recovery">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="62045" toLevel="1" name="Test - Physical Attack 1 Time">
+		<!-- All attacks become single-targeted. Received AoE Skill Damage +10% -->
+		<icon>icon.blade_assault_debuff1</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1980</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="62046" toLevel="1" name="Test - Magic Attack 1 Time">
+		<!-- All attacks become single-targeted. Received AoE Skill Damage +10% -->
+		<icon>icon.blade_assault_debuff1</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1980</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="62047" toLevel="1" name="Test - All Attacks 1 Time">
+		<!-- All attacks become single-targeted. Received AoE Skill Damage +10% -->
+		<icon>icon.blade_assault_debuff1</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-1980</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="62048" toLevel="1" name="Test - Blade Wave">
+		<!-- Attacks the target. Power 3874. Ignores Shield Defense. Ignores 15% of the target's defense. Critical. For 10 sec., P. Def. -30%. PvP: Attacks up to 7 targets. PvE: Attacks up to 7 targets. When attacking 1 enemy in the skill range:. Attacks the target. Power <font color="FF8000">4648</font>. Ignores Shield Defense. Ignores 15% of the target's defense. Critical. -->
+		<icon>icon.blade_wave_new</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<effectPoint>-1640</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<mpConsume>91</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="62049" toLevel="1" name="Test - Blade Wave">
+		<icon>icon.blade_wave_new</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<effectPoint>-1640</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<mpConsume>91</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="62050" toLevel="1" name="Test - Blade Wave">
+		<icon>icon.blade_wave_new</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<effectPoint>-1640</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<mpConsume>91</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="62051" toLevel="1" name="Test - Blade Wave">
+		<icon>icon.blade_wave_contender_new</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-1640</effectPoint>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<mpConsume>91</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="62052" toLevel="1" name="Test - Dexterous Body: Base Value">
+		<!-- Base value -->
+		<icon>icon.s_agile</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62053" toLevel="1" name="Test - Dexterous Body: Replace">
+		<!-- Replace skill activation. -->
+		<icon>icon.s_shining_oath</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62054" toLevel="1" name="Test - Modified Dexterous Body">
+		<!-- Replace skill. -->
+		<icon>icon.s_shining_oath</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62055" toLevel="1" name="Mana Burn Resistance - Chance Decrease (25%)">
+		<!-- Mana Burn evasion rate 100%. Mana Burn value 0 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62056" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 25%. Mana Burn value -100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62057" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 50%. Mana Burn value -1000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62058" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 75%. Mana Burn value -10,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62059" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 100%. Mana Burn value -100,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62060" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 25%. Mana Burn value -25% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62061" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 50%. Mana Burn value -50% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62062" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 75%. Mana Burn value -75% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62063" toLevel="1" name="Mana Burn Resistance">
+		<!-- Mana Burn evasion rate 100%. Mana Burn value -100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62064" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 25%. Mana Burn value +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62065" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 50%. Mana Burn value +1000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62066" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 75%. Mana Burn value +10,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62067" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 100%. Mana Burn value +100,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62068" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 25%. Mana Burn value +25% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62069" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 50%. Mana Burn value +50% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62070" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 75%. Mana Burn value +75% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62071" toLevel="1" name="Mana Burn Boost">
+		<!-- Mana Burn evasion rate 100%. Mana Burn value +100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62072" toLevel="1" name="Mana Burn Resistance - Chance Decrease (50%)">
+		<!-- Mana Burn evasion rate 25%. Mana Burn value 0 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62073" toLevel="1" name="Mana Burn Resistance - Chance Decrease (75%)">
+		<!-- Mana Burn evasion rate 50%. Mana Burn value 0 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62074" toLevel="1" name="Mana Burn Resistance - Chance Decrease (100%)">
+		<!-- Mana Burn evasion rate 75%. Mana Burn value 0 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="62075" toLevel="1" name="Red Flame Gloves - Passive Skill 1 - Test">
+		<!-- Deals 70% of 10,000 fixed damage on attack. -->
+		<icon>icon.mask_of_phantom_i00</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62076" toLevel="1" name="Red Flame Gloves - Passive Skill 2 - Test">
+		<!-- Deals 40% of 25,000 fixed damage on attack. -->
+		<icon>icon.mask_of_phantom_i00</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62077" toLevel="1" name="Red Flame Gloves - Passive Skill 3 - Test">
+		<!-- When hit, P. Atk. buff 65% -->
+		<icon>icon.talisman_of_heaven_i00</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62078" toLevel="1" name="Red Flame Gloves - Passive Skill 4 - Test">
+		<!-- When hit, P. Def. buff 25% -->
+		<icon>icon.talisman_of_heaven_i00</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="62079" toLevel="1" name="Red Flame Gloves - Damage 1 - Test">
+		<!-- Deals 10,000 fixed damage. Trigger group 1 -->
+		<icon>icon.skill0352</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-900</effectPoint>
+	</skill>
+	<skill id="62080" toLevel="1" name="Red Flame Gloves - Damage 2 - Test">
+		<!-- Deals 25,000 fixed damage. Trigger group 2 -->
+		<icon>icon.skill0352</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-900</effectPoint>
+	</skill>
+	<skill id="62081" toLevel="1" name="Red Flame Gloves - Buff 1 - Test">
+		<!-- P. Atk. +10,000. Trigger group 3 -->
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="62082" toLevel="1" name="Red Flame Gloves - Buff 2 - Test">
+		<!-- P. Atk. +5000. Trigger group 4 -->
+		<icon>icon.armor_leather_helmet_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="62083" toLevel="1" name="Red Flame Gloves - Skill Configuration 1 - Test">
+		<!-- 10,000 damage on attack, trigger rate -41.5% per. When hit, P. Atk. buff trigger rate -41.5% per. 25,000 damage on attack, trigger rate +32.7% diff. When hit, P. Atk. buff trigger rate +32.7% diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62084" toLevel="1" name="Red Flame Gloves - Skill Configuration 2 - Test">
+		<!-- 10,000 damage on attack, trigger rate -41.5% per. When hit, P. Atk. buff trigger rate -16.8% per. 25,000 damage on attack, trigger rate +34.2% diff. When hit, P. Atk. buff trigger rate +50.7% diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62085" toLevel="1" name="Red Flame Gloves - Skill Configuration 3 - Test">
+		<!-- 10,000 damage on attack, trigger rate -41.5% diff. 10,000 damage on attack, trigger rate +34.2% per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62086" toLevel="1" name="Red Flame Gloves - Skill Configuration 4 - Test">
+		<!-- 25,000 damage on attack, trigger rate -23.5% diff. 25,000 damage on attack, trigger rate +48.2% per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62087" toLevel="1" name="Red Flame Gloves - Positive Number per1 - Test">
+		<!-- Trigger group 1 +1% per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62088" toLevel="1" name="Red Flame Gloves - Positive Number per2 - Test">
+		<!-- Trigger group 1 +25%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62089" toLevel="1" name="Red Flame Gloves - Positive Number per3 - Test">
+		<!-- Trigger group 1 +50%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62090" toLevel="1" name="Red Flame Gloves - Positive Number per4 - Test">
+		<!-- Trigger group 1 +75%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62091" toLevel="1" name="Red Flame Gloves - Positive Number per5 - Test">
+		<!-- Trigger group 1 +100%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62092" toLevel="1" name="Red Flame Gloves - Positive Number diff1 - Test">
+		<!-- Trigger group 1 +1% diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62093" toLevel="1" name="Red Flame Gloves - Positive Number diff2 - Test">
+		<!-- Trigger group 1 +25%diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62094" toLevel="1" name="Red Flame Gloves - Positive Number diff3 - Test">
+		<!-- Trigger group 1 +50%diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62095" toLevel="1" name="Red Flame Gloves - Positive Number diff4 - Test">
+		<!-- Trigger group 1 +75%diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62096" toLevel="1" name="Red Flame Gloves - Positive Number diff5 - Test">
+		<!-- Trigger group 1 +100%diff -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62097" toLevel="1" name="Red Flame Gloves - Negative Number per1 - Test">
+		<!-- Trigger group 1 -1% per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62098" toLevel="1" name="Red Flame Gloves - Negative Number per2 - Test">
+		<!-- Trigger group 1 -25%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="62099" toLevel="1" name="Red Flame Gloves - Negative Number per3 - Test">
+		<!-- Trigger group 1 -50%per -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>500</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+</list>

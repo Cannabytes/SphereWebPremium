@@ -1,0 +1,2022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="88300" toLevel="1" name="Chaos">
+		<!-- <font color="FED7A0">Base effect</font>. Summons darkness that attacks the target and nearby enemies. Deals M. damage. Power 380. Applies a random Chaos debuff. Enemies with debuffs/ anomalies receive more damage. <font color="FF6666">Chaos</font>. - Rust: P. Atk. -20%/ M. Atk. -20%. - Mana Parasite: Skill MP Consumption +150%. - Abyss Time: Skill cooldown +50%. Duration: 7 sec. The target with a Chaos debuff applied cannot be affected by another Chaos debuff for 12 sec. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<icon>icon.s_chaos</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>8-4</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-1000</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>30</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>330</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>380</power>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+			<effect name="CallRandomSkill">
+				<skills>88301,1;88302,1;88303,1</skills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88301" toLevel="2" name="Chaos (Rust)">
+		<!-- Level 1: Your weapon is corroded by the darkness. P. Atk. -20%. M. Atk. -20% -->
+		<!-- Level 2: Your weapon is corroded by the darkness. P. Atk. -50%. M. Atk. -50% -->
+		<icon>icon.s_chaos_debuff1</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>CHAOS_RUST</abnormalType>
+		<abnormalVisualEffect>CHAOS_DEBUFF1_A_AVE</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88345</skillId> <!-- Chaos -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88302" toLevel="2" name="Chaos (Mana Parasite)">
+		<!-- Level 1: You are infected with a demonic parasite that is draining your mana. Skill MP Consumption +150% -->
+		<!-- Level 2: You are infected with a demonic parasite that is draining your mana. Skill MP Consumption +300% -->
+		<icon>icon.s_chaos_debuff2</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>CHAOS_MANA_PARASITE</abnormalType>
+		<abnormalVisualEffect>CHAOS_DEBUFF2_A_AVE</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">150</value>
+					<value level="2">300</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">150</value>
+					<value level="2">300</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">150</value>
+					<value level="2">300</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88345</skillId> <!-- Chaos -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88303" toLevel="2" name="Chaos (Abyss Time)">
+		<!-- Level 1: The abyss is breathing slowing time for you. Skill cooldown +50% -->
+		<!-- Level 2: The abyss is breathing slowing time for you. Skill cooldown +100% -->
+		<icon>icon.s_chaos_debuff3</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>CHAOS_ABYSS_TIME</abnormalType>
+		<abnormalVisualEffect>CHAOS_DEBUFF3_A_AVE</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88345</skillId> <!-- Chaos -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88304" toLevel="1" name="Embrace of Darkness">
+		<!-- Showers the target and nearby enemies with the abyss shards decreasing their M. Def. Deals M. damage. Power 200. M. Def. -5%. Duration: 10 sec. Enemies with debuffs/ anomalies receive more damage. PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets. -->
+		<!-- Level 1 - SubLevel 1001: Showers the target and nearby enemies with the abyss shards decreasing their M. Def. Deals M. damage. Power <font color="C270F6">250</font>. M. Def. <font color="C270F6">-10%</font>. Duration: 10 sec. Enemies with debuffs/ anomalies receive more damage. <font color="C270F6">PvP: Attacks up to 5 targets. PvE: Attacks up to 5 targets.</font>. <font color="C270F6"><Enchant effect>. Increases power. Enhances the M. Def. debuff. <Spirit Ore consumption added: 1 pc.></font> -->
+		<!-- Level 1 - SubLevel 1002: Showers the target and nearby enemies with the abyss shards decreasing their M. Def. <PvP effect>. <font color="C270F6">Current HP -5%</font>. Deals M. damage. Power <font color="C270F6">285</font>. M. Def. <font color="C270F6">-15%</font>. Duration: 10 sec. <PvE effect>. Deals M. damage <font color="C270F6">twice</font>. Power <font color="C270F6">285</font>. M. Def. <font color="C270F6">-15%</font>. Duration: 10 sec. Enemies with debuffs/ anomalies receive more damage. PvP: Attacks up to 6 targets. PvE: Attacks up to 6 targets. <font color="C270F6"><Enchant effect>. Increases power. Reduces cooldown. Increases the number of targets. Enhances the M. Def. debuff. - PvP effect. Adds a debuff that decreases HP. <Spirit Ore consumption added: 1 pc.></font> -->
+		<!-- Level 1 - SubLevel 1003: Showers the target and nearby enemies with the abyss shards decreasing their M. Def. <PvP effect>. Current HP <font color="C270F6">-10%</font>. Deals M. damage. Power <font color="C270F6">330</font>. M. Def. <font color="C270F6">-20%</font>. Duration: 10 sec. <PvE effect>. Deals M. damage twice. Power <font color="C270F6">350</font>. M. Def. <font color="C270F6">-20%</font>. Duration: 10 sec. Enemies with debuffs/ anomalies receive more damage. PvP: Attacks up to 6 targets. PvE: Attacks up to 6 targets. <font color="C270F6"><Enchant effect>. Increases power. Reduces casting time. Increases attack range. Enhances the M. Def. debuff. - PvP effect. Adds a debuff that decreases HP. - PvE effect. Increases the number of attacks. <Spirit Ore consumption added: 1 pc.></font> -->
+		<icon>icon.s_darkness_fall</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">4-1</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">5-1</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">5-1</value>
+			<value fromLevel="1" toLevel="1">4-1</value>
+		</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-1900</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>
+			<value fromLevel="1" toLevel="1">5000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">5000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">5000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">3000</value>
+		</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value fromLevel="1" toLevel="1">5</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">6</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">7</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">8</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">120</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">127</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">134</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">141</value>
+		</mpConsume>
+		<reuseDelay>
+			<value fromLevel="1" toLevel="1">40000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">40000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">35000</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">35000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">200</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">235</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">285</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">330</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88305</skillId> <!-- Embrace of Darkness -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88305" toLevel="1" name="Embrace of Darkness">
+		<!-- The abyss power weakens your magic defense. M. Def. -5% -->
+		<!-- Level 1 - SubLevel 1001: The abyss power weakens your magic defense. M. Def. -10% -->
+		<!-- Level 1 - SubLevel 1002: The abyss power weakens your magic defense. M. Def. -15% -->
+		<!-- Level 1 - SubLevel 1003: The abyss power weakens your magic defense. M. Def. -20% -->
+		<icon>icon.s_darkness_fall</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">3</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">4</value>
+		</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<activateRate>80</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>3</lvlBonusRate>
+		<trait>ANOMALY</trait>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">-10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">-15</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">-20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88306" toLevel="20" name="Abyss Beam">
+		<!-- Level 1: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 88. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 2: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 92. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 3: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 95. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 4: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 99. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 5: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 103. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 6: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 107. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 7: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 111. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 8: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 116. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 9: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 120. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 10: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 125. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 11: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 131. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 12: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 136. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 13: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 141. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 14: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 147. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 15: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 153. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 16: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 159. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 17: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 166. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 18: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 172. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 19: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 179. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 20: Attacks the target with the Abyss powers corroding their soul. Deals M. damage twice. Power 186. Enemies with debuffs/ anomalies receive more damage. -->
+		<icon>icon.s_abyss_ray2</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-760</value>
+			<value level="2">-770</value>
+			<value level="3">-780</value>
+			<value level="4">-790</value>
+			<value level="5">-800</value>
+			<value level="6">-810</value>
+			<value level="7">-820</value>
+			<value level="8">-830</value>
+			<value level="9">-840</value>
+			<value level="10">-850</value>
+			<value level="11">-860</value>
+			<value level="12">-870</value>
+			<value level="13">-880</value>
+			<value level="14">-890</value>
+			<value level="15">-900</value>
+			<value level="16">-910</value>
+			<value level="17">-920</value>
+			<value level="18">-930</value>
+			<value level="19">-940</value>
+			<value level="20">-950</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">69</value>
+			<value level="2">70</value>
+			<value level="3">71</value>
+			<value level="4">72</value>
+			<value level="5">73</value>
+			<value level="6">74</value>
+			<value level="7">75</value>
+			<value level="8">76</value>
+			<value level="9">77</value>
+			<value level="10">78</value>
+			<value level="11">79</value>
+			<value level="12">80</value>
+			<value level="13">81</value>
+			<value level="14">82</value>
+			<value level="15">83</value>
+			<value level="16">84</value>
+			<value level="17">80</value>
+			<value level="18">86</value>
+			<value level="19">87</value>
+			<value level="20">88</value>
+		</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">88</value>
+					<value level="2">92</value>
+					<value level="3">95</value>
+					<value level="4">99</value>
+					<value level="5">103</value>
+					<value level="6">107</value>
+					<value level="7">111</value>
+					<value level="8">116</value>
+					<value level="9">120</value>
+					<value level="10">125</value>
+					<value level="11">131</value>
+					<value level="12">136</value>
+					<value level="13">141</value>
+					<value level="14">147</value>
+					<value level="15">153</value>
+					<value level="16">159</value>
+					<value level="17">166</value>
+					<value level="18">172</value>
+					<value level="19">179</value>
+					<value level="20">186</value>
+				</power>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">88</value>
+					<value level="2">92</value>
+					<value level="3">95</value>
+					<value level="4">99</value>
+					<value level="5">103</value>
+					<value level="6">107</value>
+					<value level="7">111</value>
+					<value level="8">116</value>
+					<value level="9">120</value>
+					<value level="10">125</value>
+					<value level="11">131</value>
+					<value level="12">136</value>
+					<value level="13">141</value>
+					<value level="14">147</value>
+					<value level="15">153</value>
+					<value level="16">159</value>
+					<value level="17">166</value>
+					<value level="18">172</value>
+					<value level="19">179</value>
+					<value level="20">186</value>
+				</power>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88307" toLevel="3" name="Shining Chain Heal">
+		<!-- Level 1: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Applied on 10 nearby allies including the target. Recovers 37% of Max HP to the most damaged ally. The rest recover less HP. -->
+		<!-- Level 2: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Applied on 10 nearby allies including the target. Recovers 38% of Max HP to the most damaged ally. The rest recover less HP. -->
+		<!-- Level 3: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Applied on 10 nearby allies including the target. Recovers 40% of Max HP to the most damaged ally. The rest recover less HP. -->
+		<icon>icon.s_shining_chain_heal2</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET</targetType>
+		<affectLimit>11-0</affectLimit>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1200</affectRange>
+		<affectScope>RANGE_SORT_BY_HP</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">760</value>
+			<value level="2">820</value>
+			<value level="3">900</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">4</value>
+			<value level="2">6</value>
+			<value level="3">8</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">205</value>
+			<value level="2">227</value>
+			<value level="3">249</value>
+		</mpConsume>
+		<reuseDelay>7000</reuseDelay>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">37</value>
+					<value level="2">38</value>
+					<value level="3">40</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88308" toLevel="3" name="Chain Explosion">
+		<!-- Level 1: Attacks the target and nearby enemies decreasing their Received Healing. Deals M. damage. Power 170. Received Healing -25%. Duration: 5 sec. PvP: Attacks up to 4 targets. PvE: Attacks up to 4 targets. -->
+		<!-- Level 2: Attacks the target and nearby enemies decreasing their Received Healing. Deals M. damage. Power 215. Received Healing -35%. Duration: 5 sec. PvP: Attacks up to 4 targets. PvE: Attacks up to 4 targets. -->
+		<!-- Level 3: Attacks the target and nearby enemies decreasing their Received Healing. Deals M. damage. Power 270. Received Healing -50%. Duration: 5 sec. PvP: Attacks up to 4 targets. PvE: Attacks up to 4 targets. -->
+		<icon>icon.s_chain_blast</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>3-1</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-1900</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>3</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">105</value>
+			<value level="2">109</value>
+			<value level="3">115</value>
+		</mpConsume>
+		<reuseDelay>18000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">170</value>
+					<value level="2">215</value>
+					<value level="3">270</value>
+				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>88309</skillId> <!-- Chain Explosion -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88309" toLevel="3" name="Chain Explosion">
+		<!-- Level 1: The abyss power disrupts healing. Received Healing -25% -->
+		<!-- Level 2: The abyss power disrupts healing. Received Healing -35% -->
+		<!-- Level 3: The abyss power disrupts healing. Received Healing -50% -->
+		<icon>icon.s_chain_blast</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalVisualEffect>CHAINBLAST_AVE</abnormalVisualEffect>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1520</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">-25</value>
+					<value level="2">-35</value>
+					<value level="3">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88310" toLevel="5" name="Destroy Life">
+		<!-- Level 1: The darkness inside the target explodes. Deals M. damage. Power 209. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 2: The darkness inside the target explodes. Deals M. damage. Power 216. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 3: The darkness inside the target explodes. Deals M. damage. Power 223. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 4: The darkness inside the target explodes. Deals M. damage. Power 230. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 5: The darkness inside the target explodes. Deals M. damage. Power 300. Makes an <font color="FFBB00">additional attack</font>. The additional attack's power is random (200-300). Enemies with debuffs/ anomalies receive more damage. -->
+		<icon>icon.s_diminish_life</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-440</value>
+			<value level="2">-480</value>
+			<value level="3">-520</value>
+			<value level="4">-560</value>
+			<value level="5">-760</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">3</value>
+		</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>
+			<value level="1">43</value>
+			<value level="2">46</value>
+			<value level="3">51</value>
+			<value level="4">54</value>
+			<value level="5">61</value>
+		</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">209</value>
+					<value level="2">216</value>
+					<value level="3">223</value>
+					<value level="4">230</value>
+					<value level="5">300</value>
+				</power>
+				<debuffModifier>1.2</debuffModifier>
+			</effect>
+			<effect name="CallSkill" fromLevel="5" toLevel="5">
+				<skillId>88338</skillId> <!-- Destroy Life -->
+				<skillLevel>1</skillLevel> <!-- needed random lvl 1-10 -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88311" toLevel="1" name="Divine Whisper">
+		<!-- <font color="00FFFF">For the caster:</font>. Recovers HP. Power 350. Removes the Provoke effect applied on the caster. <font color="FF0000">For enemies:</font>. Debuff/ Anomaly Resistance -5%. Blocks the target's Provoke skills. Duration: 7 sec. -->
+		<icon>icon.s_divine_whisper</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-850</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>20</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>100</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<selfEffects>
+			<effect name="Heal">
+				<power>350</power>
+			</effect>
+			<effect name="DispelBySlotMyself">
+				<dispel>TARGET_LOCK</dispel>
+			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>88326</skillId> <!-- Divine Whisper -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88312" toLevel="44" name="Shining Battle Heal">
+		<!-- Level 1: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 665. -->
+		<!-- Level 2: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 671. -->
+		<!-- Level 3: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 678. -->
+		<!-- Level 4: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 685. -->
+		<!-- Level 5: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 692. -->
+		<!-- Level 6: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 698. -->
+		<!-- Level 7: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 705. -->
+		<!-- Level 8: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 712. -->
+		<!-- Level 9: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 720. -->
+		<!-- Level 10: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 727. -->
+		<!-- Level 11: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 734. -->
+		<!-- Level 12: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 741. -->
+		<!-- Level 13: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 749. -->
+		<!-- Level 14: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 756. -->
+		<!-- Level 15: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 764. -->
+		<!-- Level 16: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 772. -->
+		<!-- Level 17: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 779. -->
+		<!-- Level 18: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 787. -->
+		<!-- Level 19: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 795. -->
+		<!-- Level 20: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 803. -->
+		<!-- Level 21: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 811. -->
+		<!-- Level 22: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 819. -->
+		<!-- Level 23: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 827. -->
+		<!-- Level 24: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 836. -->
+		<!-- Level 25: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 844. -->
+		<!-- Level 26: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 852. -->
+		<!-- Level 27: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 861. -->
+		<!-- Level 28: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 869. -->
+		<!-- Level 29: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 878. -->
+		<!-- Level 30: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 887. -->
+		<!-- Level 31: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 896. -->
+		<!-- Level 32: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 905. -->
+		<!-- Level 33: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 914. -->
+		<!-- Level 34: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 920. -->
+		<!-- Level 35: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 926. -->
+		<!-- Level 36: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 932. -->
+		<!-- Level 37: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 938. -->
+		<!-- Level 38: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 944. -->
+		<!-- Level 39: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 950. -->
+		<!-- Level 40: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 956. -->
+		<!-- Level 41: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 962. -->
+		<!-- Level 42: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 1000. -->
+		<!-- Level 43: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 1100. -->
+		<!-- Level 44: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Momentarily recovers HP. Power 1200. -->
+		<icon>icon.s_shining_battle_heal2</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET_OR_SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">380</value>
+			<value level="2">390</value>
+			<value level="3">400</value>
+			<value level="4">420</value>
+			<value level="5">430</value>
+			<value level="6">440</value>
+			<value level="7">460</value>
+			<value level="8">470</value>
+			<value level="9">480</value>
+			<value level="10">500</value>
+			<value level="11">510</value>
+			<value level="12">520</value>
+			<value level="13">540</value>
+			<value level="14">550</value>
+			<value level="15">560</value>
+			<value level="16">570</value>
+			<value level="17">580</value>
+			<value level="18">590</value>
+			<value level="19">600</value>
+			<value level="20">610</value>
+			<value level="21">620</value>
+			<value level="22">630</value>
+			<value level="23">640</value>
+			<value level="24">650</value>
+			<value level="25">660</value>
+			<value level="26">670</value>
+			<value level="27">680</value>
+			<value level="28">690</value>
+			<value level="29">700</value>
+			<value level="30">710</value>
+			<value level="31">720</value>
+			<value level="32">730</value>
+			<value level="33">740</value>
+			<value level="34">760</value>
+			<value level="35">770</value>
+			<value level="36">780</value>
+			<value level="37">800</value>
+			<value level="38">810</value>
+			<value level="39">820</value>
+			<value level="40">830</value>
+			<value level="41">840</value>
+			<value level="42">900</value>
+			<value level="43">930</value>
+			<value level="44">950</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">83</value>
+			<value level="3">85</value>
+			<value level="4">87</value>
+			<value level="5">90</value>
+			<value level="6">94</value>
+			<value level="7">99</value>
+			<value level="8">101</value>
+			<value level="9">105</value>
+			<value level="10">110</value>
+			<value level="11">111</value>
+			<value level="12">113</value>
+			<value level="13">118</value>
+			<value level="14">121</value>
+			<value level="15">123</value>
+			<value level="16">127</value>
+			<value level="17">130</value>
+			<value level="18">132</value>
+			<value level="19">134</value>
+			<value level="20">134</value>
+			<value level="21">137</value>
+			<value level="22">140</value>
+			<value level="23">142</value>
+			<value level="24">144</value>
+			<value level="25">146</value>
+			<value level="26">150</value>
+			<value level="27">153</value>
+			<value level="28">154</value>
+			<value level="29">155</value>
+			<value level="30">158</value>
+			<value level="31">160</value>
+			<value level="32">162</value>
+			<value level="33">163</value>
+			<value level="34">179</value>
+			<value level="35">181</value>
+			<value level="36">183</value>
+			<value level="37">193</value>
+			<value level="38">196</value>
+			<value level="39">199</value>
+			<value level="40">201</value>
+			<value level="41">203</value>
+			<value level="42">205</value>
+			<value level="43">209</value>
+			<value level="44">211</value>
+		</mpConsume>
+		<reuseDelay>1000</reuseDelay>
+		<effects>
+			<effect name="Heal">
+				<power>
+					<value level="1">665</value>
+					<value level="2">671</value>
+					<value level="3">678</value>
+					<value level="4">685</value>
+					<value level="5">692</value>
+					<value level="6">698</value>
+					<value level="7">705</value>
+					<value level="8">712</value>
+					<value level="9">720</value>
+					<value level="10">727</value>
+					<value level="11">734</value>
+					<value level="12">741</value>
+					<value level="13">749</value>
+					<value level="14">756</value>
+					<value level="15">764</value>
+					<value level="16">772</value>
+					<value level="17">779</value>
+					<value level="18">787</value>
+					<value level="19">795</value>
+					<value level="20">803</value>
+					<value level="21">811</value>
+					<value level="22">819</value>
+					<value level="23">827</value>
+					<value level="24">836</value>
+					<value level="25">844</value>
+					<value level="26">852</value>
+					<value level="27">861</value>
+					<value level="28">869</value>
+					<value level="29">878</value>
+					<value level="30">887</value>
+					<value level="31">896</value>
+					<value level="32">905</value>
+					<value level="33">914</value>
+					<value level="34">920</value>
+					<value level="35">926</value>
+					<value level="36">932</value>
+					<value level="37">938</value>
+					<value level="38">944</value>
+					<value level="39">950</value>
+					<value level="40">956</value>
+					<value level="41">962</value>
+					<value level="42">1000</value>
+					<value level="43">1100</value>
+					<value level="44">1200</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88315" toLevel="1" name="Saint's Burst: Shining Wave Lv. 1">
+		<!-- <<font color="FFFFFF">Combat power</font> 1000-1999>. Speed +5. <font color="FFBB00">Enhances Restore Life.</font>. Triggers bonus recovery. Bonus recovery amount: 10%-30% -->
+		<icon>icon.s_shining_buster</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<effects>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1258</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88340</replacementSkillId> <!-- Restore Life -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88316" toLevel="1" name="Saint's Burst: Shining Wave Lv. 2">
+		<!-- <<font color="FFFFFF">Combat power</font> 2000+>. Speed +10. <font color="FFBB00">Enhances Restore Life.</font>. Triggers bonus recovery. Bonus recovery amount: 30%-60% -->
+		<icon>icon.s_shining_buster</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<effects>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1258</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88341</replacementSkillId> <!-- Restore Life -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88317" toLevel="5" name="Eventide: Master">
+		<!-- Level 1: Perceive the balance between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. M. Skill Critical Rate +5%. Hold Atk. Rate +2%. Speed +10. <Special property>. <font color="FFBB00">Tranquility</font> → <font color="FFBB00">Tranquility: Master</font>. Buff enhancement:. - Increases M. Def. - Increases resistance to target cancelling. <font color="FFBB00">Dark Side</font> → <font color="FFBB00">Dark Side: Master</font>. Buff enhancement:. - Increases M. Atk. - Increases M. Skill Power. - Increases Speed. - Makes an additional hit on attack. -->
+		<!-- Level 2: Perceive the balance between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. M. Skill Critical Rate +6%. Hold Atk. Rate +4%. Speed +10. <Special property>. <font color="FFBB00">Tranquility</font> → <font color="FFBB00">Tranquility: Master</font>. Buff enhancement:. - Increases M. Def. - Increases resistance to target cancelling. <font color="FFBB00">Dark Side</font> → <font color="FFBB00">Dark Side: Master</font>. Buff enhancement:. - Increases M. Atk. - Increases M. Skill Power. - Increases Speed. - Makes an additional hit on attack. -->
+		<!-- Level 3: Perceive the balance between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. M. Skill Critical Rate +7%. Hold Atk. Rate +6%. Speed +10. <Special property>. <font color="FFBB00">Tranquility</font> → <font color="FFBB00">Tranquility: Master</font>. Buff enhancement:. - Increases M. Def. - Increases resistance to target cancelling. <font color="FFBB00">Dark Side</font> → <font color="FFBB00">Dark Side: Master</font>. Buff enhancement:. - Increases M. Atk. - Increases M. Skill Power. - Increases Speed. - Makes an additional hit on attack. -->
+		<!-- Level 4: Perceive the balance between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. M. Skill Critical Rate +8%. Hold Atk. Rate +8%. M. counterattack damage reduction +10%. Speed +10. <Special property>. <font color="FFBB00">Tranquility</font> → <font color="FFBB00">Tranquility: Master</font>. Buff enhancement:. - Increases M. Def. - Increases resistance to target cancelling. <font color="FFBB00">Dark Side</font> → <font color="FFBB00">Dark Side: Master</font>. Buff enhancement:. - Increases M. Atk. - Increases M. Skill Power. - Increases Speed. - Makes an additional hit on attack. -->
+		<!-- Level 5: Perceive the balance between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. M. Skill Critical Rate +10%. Hold Atk. Rate +10%. M. counterattack damage reduction +20%. Speed +10. <Special property>. <font color="FFBB00">Tranquility</font> → <font color="FFBB00">Tranquility: Master</font>. Buff enhancement:. - Increases M. Def. - Increases resistance to target cancelling. <font color="FFBB00">Dark Side</font> → <font color="FFBB00">Dark Side: Master</font>. Buff enhancement:. - Increases M. Atk. - Increases M. Skill Power. - Increases Speed. - Makes an additional hit on attack. -->
+		<icon>icon.s_twilight</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<HOLD>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+				</HOLD>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45530</existingSkillId> <!-- Tranquility -->
+				<replacementSkillId>88318</replacementSkillId> <!-- Tranquility: Master -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88320</existingSkillId> <!-- Dark Side -->
+				<replacementSkillId>88321</replacementSkillId> <!-- Dark Side: Master -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88318" toLevel="1" name="Tranquility: Master">
+		<!-- <font color="FFFF00">Eventide: Master effect</font>. <font color="FED7A0">Base effect</font>. The heavens bless the caster and their party members enhancing and restoring their powers. M. Def. +1200. Max HP +6000. With a 70% chance, triggers the Provocation Resistance effect. Recovers 100% HP every 3 sec. Duration: 12 sec. -->
+		<icon>icon.s_serenity_master2</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalTime>12</abnormalTime>
+		<affectLimit>10-0</affectLimit>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>900</affectRange>
+		<affectScope>PARTY</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>100</effectPoint>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>60</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>125</mpConsume>
+		<reuseDelay>240000</reuseDelay>
+		<effects>
+			<effect name="MaxHp">
+				<amount>6000</amount>
+				<mode>DIFF</mode>
+				<heal>true</heal>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>1200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealOverTime">
+				<power>50000</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88319" toLevel="1" name="Chaos: Master">
+		<!-- <font color="FED7A0">Base effect</font>. Summons darkness from the depths of the abyss that attacks the target and nearby enemies. With a certain chance, removes up to 3 buffs and applies a random Chaos: Master debuff. Deals M. damage twice. Power 450. Enemies with debuffs/ anomalies receive more damage. <font color="FF6666">Chaos: Master</font>. - Rust: P. Atk. -50%/ M. Atk. -50%. - Mana Parasite: Skill MP Consumption +300%. - Abyss Time: Skill cooldown +100%. Duration: 7 sec. The target with a Chaos: Master debuff applied cannot be affected by another Chaos/ Chaos: Master debuff for 12 sec. PvP: Attacks up to 15 targets. PvE: Attacks up to 15 targets. -->
+		<icon>icon.s_chaos_master</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectLimit>11-4</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>-1000</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>50</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>430</mpConsume>
+		<reuseDelay>240000</reuseDelay>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>450</power>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+			<effect name="MagicalDamage">
+				<power>450</power>
+				<debuffModifier>1.1</debuffModifier>
+			</effect>
+			<effect name="CallRandomSkill">
+				<skills>88301,2;88302,2;88303,2</skills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88320" toLevel="1" name="Dark Side">
+		<!-- Turn away from the light to find the darkness inside of you. Then you will learn how powerful it can be. <font color="FED7A0">Base effect</font>. Healing Power -90%. M. Atk. +5%. M. Skill Power +5%. Speed +5. <Special property>. <font color="FFFFFF">Restore Life</font> → <font color="FF00FF">Destroy Life</font>. - Turns into an attack skill. <font color="FFFFFF">Chain Heal</font>/ <font color="FFFFFF">Shining Chain Heal</font> → <font color="FF00FF">Chain Explosion</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases Received Healing. <font color="FFFFFF">Shining Beam</font> → <font color="FF00FF">Abyss Beam</font>. - Number of attacks +1. <font color="FFFFFF">Balanced Body</font> → <font color="FF00FF">Embrace of Darkness</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases M. Def. <font color="FFFFFF">Tranquility</font> → <font color="FF00FF">Chaos</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases P./ M. Atk. - Applies a debuff that increases Skill MP Consumption. - Applies a debuff that increases skill cooldown. -->
+		<icon>icon.s_eclipse</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>DARK_SIDE</abnormalType>
+		<abnormalVisualEffect>ECLIPSE_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<coolTime>500</coolTime>
+		<effectPoint>760</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>40</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>200</mpConsume>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotMyself">
+				<dispel>UNLEASHING;ENLIGHTENMENT;BODY_OF_AVATAR</dispel>
+			</effect>
+			<effect name="HealEffect">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1258</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88340</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88341</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1553</existingSkillId> <!-- Chain Heal -->
+				<replacementSkillId>88308</replacementSkillId> <!-- Chain Explosion -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88307</existingSkillId> <!-- Shining Chain Heal -->
+				<replacementSkillId>88308</replacementSkillId> <!-- Chain Explosion -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45566</existingSkillId> <!-- Shining Beam -->
+				<replacementSkillId>88306</replacementSkillId> <!-- Abyss Beam -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>47242</existingSkillId> <!-- Balanced Body -->
+				<replacementSkillId>88304</replacementSkillId> <!-- Embrace of Darkness -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45530</existingSkillId> <!-- Tranquility -->
+				<replacementSkillId>88300</replacementSkillId> <!-- Chaos -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88321" toLevel="1" name="Dark Side: Master">
+		<!-- <font color="FFFF00">Eventide: Master effect</font>. Creates the harmony between the divine <font color="FFFFFF">light</font> and the black <font color="FF00FF">abyss</font>. <font color="FED7A0">Base effect</font>. Healing Power -90%. M. Atk. +15%. M. Skill Power +10%. Speed +10. With a certain chance, summons Abyssal Spear on using attack skills. Trigger rate: 50%. Trigger cooldown: 3 sec. <font color="FF00FF">Abyssal Spear</font>. Summons a dark spear imbued with the abyss power, dealing M. damage. Power 150. Enemies with debuffs/ anomalies receive more damage. <Special property>. <font color="FFFFFF">Restore Life</font> → <font color="FF00FF">Destroy Life</font>. - Turns into an attack skill. <font color="FFFFFF">Chain Heal</font>/ <font color="FFFFFF">Shining Chain Heal</font> → <font color="FF00FF">Chain Explosion</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases Received Healing. <font color="FFFFFF">Shining Beam</font> → <font color="FF00FF">Abyss Beam</font>. - Number of attacks +1. <font color="FFFFFF">Balanced Body</font> → <font color="FF00FF">Embrace of Darkness</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases M. Def. <font color="FFFFFF">Tranquility: Master</font> → <font color="FF00FF">Chaos: Master</font>. - Turns into an AoE attack skill. - Applies a debuff that decreases P./ M. Atk. - Applies a debuff that increases Skill MP Consumption. - Applies a debuff that increases skill cooldown. -->
+		<icon>icon.s_eclipse_master</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>DARK_SIDE</abnormalType>
+		<abnormalVisualEffect>ECLIPSE_A_AVE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<coolTime>500</coolTime>
+		<effectPoint>760</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>40</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<mpConsume>300</mpConsume>
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="DispelBySlotMyself">
+				<dispel>UNLEASHING;ENLIGHTENMENT;BODY_OF_AVATAR</dispel>
+			</effect>
+			<effect name="HealEffect">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>false</isCritical>
+				<skillId>88323</skillId> <!-- Abyssal Spear -->
+				<skillLevel>1</skillLevel>
+				<chance>50</chance>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+			</effect>
+			<effect name="TriggerSkillByDamageDealt">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<targetType>TARGET</targetType>
+				<isCritical>true</isCritical>
+				<skillId>88323</skillId> <!-- Abyssal Spear -->
+				<skillLevel>1</skillLevel>
+				<chance>50</chance>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88336</existingSkillId> <!-- Divine Power Acquisition -->
+				<replacementSkillId>88337</replacementSkillId> <!-- Divine Power Acquisition -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1258</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88340</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88341</existingSkillId> <!-- Restore Life -->
+				<replacementSkillId>88310</replacementSkillId> <!-- Destroy Life -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>1553</existingSkillId> <!-- Chain Heal -->
+				<replacementSkillId>88308</replacementSkillId> <!-- Chain Explosion -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88307</existingSkillId> <!-- Shining Chain Heal -->
+				<replacementSkillId>88308</replacementSkillId> <!-- Chain Explosion -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45566</existingSkillId> <!-- Shining Beam -->
+				<replacementSkillId>88306</replacementSkillId> <!-- Abyss Beam -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>47242</existingSkillId> <!-- Balanced Body -->
+				<replacementSkillId>88304</replacementSkillId> <!-- Embrace of Darkness -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>45530</existingSkillId> <!-- Tranquility -->
+				<replacementSkillId>88300</replacementSkillId> <!-- Chaos -->
+			</effect>
+			<effect name="ReplaceSkillBySkill">
+				<existingSkillId>88318</existingSkillId> <!-- Tranquility: Master -->
+				<replacementSkillId>88319</replacementSkillId> <!-- Chaos: Master -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88322" toLevel="1" name="Heavenly Spear">
+		<icon>icon.s_eclipse_master</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-950</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="88323" toLevel="1" name="Abyssal Spear">
+		<icon>icon.s_eclipse_master</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-950</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="88324" toLevel="1" name="Dark Side: Master">
+		<icon>icon.s_eclipse_master</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="88326" toLevel="1" name="Divine Whisper">
+		<!-- Debuff/ Anomaly Resistance -5%. Blocks the Provoke skills. -->
+		<icon>icon.s_divine_whisper</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>7</abnormalTime>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-850</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<ANOMALY>-5</ANOMALY>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>5</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DisableSkill">
+				<disable>45244;45260;45051;979;28</disable>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88327" toLevel="1" name="Saint's Burst: Shining Wave">
+		<icon>icon.s_shining_buster</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+	</skill>
+	<skill id="88329" toLevel="1" name="Enlightenment">
+		<!-- <font color="FF0000">Note!</font>. When using Dark Side and Dark Side: Master, removes the buff and blocks using it. <Skill with fixed cooldown>. Casting Spd. +30%. M. Skill Critical Rate +15%. M. Skill MP Consumption -20%. Received Healing +20%. Speed +15 -->
+		<icon>icon.skill1532</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>ENLIGHTENMENT</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>4</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>76</magicLevel>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>88320</skillId> <!-- Dark Side -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>88321</skillId> <!-- Dark Side: Master -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="HealEffect">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88330" toLevel="1" name="Unleashing">
+		<!-- <font color="FF0000">Note!</font>. When using Dark Side and Dark Side: Master, removes the buff and blocks using it. Awakens incredible willpower. Casting Spd. +30%. M. Skill Critical Rate +20%. M. Skill MP Consumption -30%. Healing Power +500. Received Healing +30%. Speed +30 -->
+		<icon>icon.s_awaken</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>UNLEASHING</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<magicLevel>76</magicLevel>
+		<mpConsume>80</mpConsume>
+		<reuseDelay>360000</reuseDelay>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>88320</skillId> <!-- Dark Side -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>88321</skillId> <!-- Dark Side: Master -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-30</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<!-- Healing Power +500 -->
+			<effect name="HealEffect">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88331" toLevel="5" name="Celestial Power">
+		<!-- Level 1: The heavens' power makes you stronger. M. Atk. +500. M. Skill Power +1%. M. Def. +300. Speed +5 -->
+		<!-- Level 2: The heavens' power makes you stronger. M. Atk. +2%. M. Atk. +600. M. Skill Power +2%. M. Def. +300. Speed +5 -->
+		<!-- Level 3: The heavens' power makes you stronger. M. Atk. +3%. M. Atk. +700. M. Skill Power +3%. M. Def. +400. Speed +7 -->
+		<!-- Level 4: The heavens' power makes you stronger. M. Atk. +4%. M. Atk. +800. M. Skill Power +4%. M. Def. +400. Speed +7 -->
+		<!-- Level 5: The heavens' power makes you stronger. M. Atk. +5%. M. Atk. +1000. M. Skill Power +5%. M. Def. +500. Speed +10 -->
+		<icon>icon.s_buff_boost_archangel1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">600</value>
+					<value level="3">700</value>
+					<value level="4">800</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">300</value>
+					<value level="3">400</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88335" toLevel="1" name="Einhasad's Expert Blessing">
+		<!-- P. Def. +200. M. Def. +200. M. Atk. +1%. PvE damage +5% -->
+		<!-- Level 1 - SubLevel 1001: P. Def. +200. M. Def. +200. M. Atk. <font color="C270F6">+3%</font>. <font color="C270F6">M. Skill Critical Rate +7%</font>. PvE damage <font color="C270F6">+7%. Spiritshot damage +2%. <Enchant effect>. Increases M. Atk. Adds the M. Skill Critical Rate bonus. Increases PvE damage. Adds the Spiritshot damage bonus.</font> -->
+		<!-- Level 1 - SubLevel 1002: P. Def. +200. M. Def. +200. M. Atk. <font color="C270F6">+6%</font>. M. Skill Critical Rate <font color="C270F6">+14%</font>. PvE damage <font color="C270F6">+10%</font>. Spiritshot damage <font color="C270F6">+5%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases PvE damage. Increases Spiritshot damage.</font> -->
+		<!-- Level 1 - SubLevel 1003: P. Def. +200. M. Def. +200. M. Atk. <font color="C270F6">+10%</font>. M. Skill Critical Rate <font color="C270F6">+21%</font>. PvE damage <font color="C270F6">+15%</font>. Spiritshot damage <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases PvE damage. Increases Spiritshot damage.</font> -->
+		<icon>icon.s_bless_of_einhasad2</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">3</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">6</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">10</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">7</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">14</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">21</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShotsBonus">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">2</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">5</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88336" toLevel="1" name="Divine Power Acquisition">
+		<!-- <font color="FF0000">Note!</font>. Can be used when Dark Side is applied. When used, cancels the Dark Side's effect. -->
+		<icon>icon.elemental_protection</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="OpAffectedBySkill">
+				<skillId>88320</skillId> <!-- Dark Side -->
+				<skillLevel>1</skillLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlotMyself">
+				<dispel>DARK_SIDE</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88337" toLevel="1" name="Divine Power Acquisition">
+		<!-- <font color="FF0000">Note!</font>. Can be used when Dark Side: Master is applied. When used, cancels the Dark Side: Master's effect. -->
+		<icon>icon.elemental_protection</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<conditions>
+			<condition name="OpAffectedBySkill">
+				<skillId>88321</skillId> <!-- Dark Side: Master -->
+				<skillLevel>1</skillLevel>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlotMyself">
+				<dispel>DARK_SIDE</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88338" toLevel="10" name="Destroy Life">
+		<icon>icon.s_diminish_life</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-760</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>
+					<value level="1">200</value>
+					<value level="2">210</value>
+					<value level="3">220</value>
+					<value level="4">230</value>
+					<value level="5">240</value>
+					<value level="6">250</value>
+					<value level="7">260</value>
+					<value level="8">270</value>
+					<value level="9">280</value>
+					<value level="10">300</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88339" toLevel="10" name="Restore Life">
+		<icon>icon.skill1258</icon>
+		<operateType>A1</operateType>
+		<effectPoint>900</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="88340" toLevel="5" name="Restore Life">
+		<!-- Level 1: Recovers 15% of the target's HP. -->
+		<!-- Level 2: Recovers 20% of the target's HP. -->
+		<!-- Level 3: Recovers 25% of the target's HP. -->
+		<!-- Level 4: Recovers 30% of the target's HP. -->
+		<!-- Level 5: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Quickly recovers 30% of the target's HP. Triggers the effect that <font color="FFBB00">additionally recovers</font> a random percentage of HP (10%-30%). -->
+		<icon>icon.skill1258</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET_OR_SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">500</value>
+			<value level="2">666</value>
+			<value level="3">833</value>
+			<value level="4">1000</value>
+			<value level="5">1500</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>
+			<value level="1">8000</value>
+			<value level="2">8000</value>
+			<value level="3">8000</value>
+			<value level="4">8000</value>
+			<value level="5">3000</value>
+		</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">107</value>
+			<value level="3">133</value>
+			<value level="4">159</value>
+			<value level="5">177</value>
+		</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88341" toLevel="5" name="Restore Life">
+		<!-- Level 1: Recovers 15% of the target's HP. -->
+		<!-- Level 2: Recovers 20% of the target's HP. -->
+		<!-- Level 3: Recovers 25% of the target's HP. -->
+		<!-- Level 4: Recovers 30% of the target's HP. -->
+		<!-- Level 5: <font color="FFFF00">Saint's Burst: Shining Wave effect</font>. Quickly recovers 30% of the target's HP. Triggers the effect that <font color="FFBB00">additionally recovers</font> a random percentage of HP (30%-60%). -->
+		<icon>icon.skill1258</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET_OR_SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">500</value>
+			<value level="2">666</value>
+			<value level="3">833</value>
+			<value level="4">1000</value>
+			<value level="5">1500</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>
+			<value level="1">8000</value>
+			<value level="2">8000</value>
+			<value level="3">8000</value>
+			<value level="4">8000</value>
+			<value level="5">3000</value>
+		</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">107</value>
+			<value level="3">133</value>
+			<value level="4">159</value>
+			<value level="5">177</value>
+		</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88342" toLevel="3" name="Nemesis">
+		<!-- Level 1: All-consuming pain decreases Received Healing. Received Healing -70% -->
+		<!-- Level 2: All-consuming pain decreases Received Healing. Received Healing -72% -->
+		<!-- Level 3: All-consuming pain decreases Received Healing. Received Healing -75% -->
+		<icon>icon.s_nemesis</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<effectPoint>-549</effectPoint>
+	</skill>
+	<skill id="88343" toLevel="1" name="Shillien's Grail">
+		<!-- Enhances you through Shillien's unholy grail. M. Atk. +5%. M. Skill Power +5%. PvE damage +3%. P. Def. +500. M. Def. +500. When using Divine Beam/ Dark Beam:. Makes an <font color="FFBB00">additional attack</font>. The <font color="FFBB00">additional attack</font> deals increased damage to demons/ undead. -->
+		<icon>icon.s_shilen_grail</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>760</effectPoint>
+		<mpConsume>150</mpConsume>
+	</skill>
+	<skill id="88344" toLevel="1" name="Shillien's Grail">
+		<icon>icon.s_shilen_grail</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="88345" toLevel="2" name="Chaos">
+		<!-- Level 1: Immunity to the Chaos debuffs. -->
+		<!-- Level 2: Immunity to the Chaos/ Chaos: Master debuffs. -->
+		<icon>
+			<value level="1">icon.s_chaos</value>
+			<value level="2">icon.s_chaos_master</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>12</abnormalTime>
+		<activateRate>-1</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-1000</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>3</lvlBonusRate>
+		<effects>
+			<effect name="BlockAbnormalSlot">
+				<slot>CHAOS_RUST;CHAOS_MANA_PARASITE;CHAOS_ABYSS_TIME</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="88346" toLevel="1" name="Eva's Grail">
+		<!-- Enhances you through Eva's holy grail. M. Atk. +10%. M. Skill Power +10%. PvE damage +3%. Max HP +500. Speed +5. When using Divine Beam/ Sea Beam:. Makes an <font color="FFBB00">additional attack</font>. The <font color="FFBB00">additional attack</font> deals increased damage to demons/ undead. -->
+		<icon>icon.s_evas_grail</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>760</effectPoint>
+		<mpConsume>150</mpConsume>
+	</skill>
+	<skill id="88347" toLevel="1" name="Eva's Grail">
+		<icon>icon.s_evas_grail</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="88348" toLevel="1" name="Mighty Children of Eva">
+		<!-- HP Recovery Rate +5%. M. Atk. +450. M. Skill Critical Rate +5%. M. Skill Critical Damage +40. PvE damage +5% -->
+		<!-- Level 1 - SubLevel 1001: HP Recovery Rate +5%. M. Atk. <font color="C270F6">+650</font>. M. Skill Critical Rate <font color="C270F6">+12%</font>. M. Skill Critical Damage <font color="C270F6">+45</font>. PvE damage <font color="C270F6">+7%</font>. <font color="C270F6">Spiritshot damage +2%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases M. Skill Critical Damage. Increases PvE damage. Adds the Spiritshot damage bonus.</font> -->
+		<!-- Level 1 - SubLevel 1002: HP Recovery Rate +5%. M. Atk. <font color="C270F6">+850</font>. M. Skill Critical Rate <font color="C270F6">+19%</font>. M. Skill Critical Damage <font color="C270F6">+50</font>. <font color="C270F6">Knockback Atk. Rate +10%</font>. PvE damage <font color="C270F6">+10%</font>. Spiritshot damage <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases M. Skill Critical Damage. Adds Knockback Atk. Rate bonus. Increases PvE damage. Increases Spiritshot damage.</font> -->
+		<!-- Level 1 - SubLevel 1003: HP Recovery Rate +5%. M. Atk. <font color="C270F6">+1050</font>. M. Skill Critical Rate <font color="C270F6">+26%</font>. M. Skill Critical Damage <font color="C270F6">+55</font>. Knockback Atk. Rate <font color="C270F6">+20%</font>. PvE damage <font color="C270F6">+15%</font>. Spiritshot damage <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases M. Skill Critical Damage. Adds Knockback Atk. Rate bonus. Increases PvE damage. Increases Spiritshot damage.</font> -->
+		<icon>icon.s_children_of_eva2</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="88349" toLevel="1" name="Eva's Nocturne">
+		<icon>icon.s_nocturn_of_eva</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>270000</reuseDelay>
+		<effectPoint>-820</effectPoint>
+		<mpConsume>297</mpConsume>
+	</skill>
+	<skill id="88350" toLevel="1" name="Eva's Nocturne">
+		<icon>icon.s_nocturn_of_eva</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>270000</reuseDelay>
+		<effectPoint>820</effectPoint>
+		<mpConsume>297</mpConsume>
+	</skill>
+	<skill id="88351" toLevel="1" name="Eva's Nocturne">
+		<!-- Grants Eva's Protection. Debuff/ Anomaly Resistance +20% -->
+		<icon>icon.s_nocturn_of_eva</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="88352" toLevel="20" name="Vortex of Fire">
+		<!-- Level 1: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 16. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 2: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 32. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 3: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 84. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 4: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 90. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 5: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 97. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 6: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 106. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 7: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 114. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 8: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 126. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 9: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 137. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 10: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 147. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 11: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 151. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 12: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 155. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 13: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 160. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 14: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 166. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 15: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 173. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 16: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 176. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 17: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 179. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 18: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 182. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 19: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 185. With a 30% chance, recovers 200 HP. -->
+		<!-- Level 20: Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 189. With a 30% chance, recovers 200 HP. -->
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<hitTime>4000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-10</value>
+			<value level="2">-200</value>
+			<value level="3">-400</value>
+			<value level="4">-460</value>
+			<value level="5">-520</value>
+			<value level="6">-580</value>
+			<value level="7">-640</value>
+			<value level="8">-700</value>
+			<value level="9">-750</value>
+			<value level="10">-780</value>
+			<value level="11">-800</value>
+			<value level="12">-820</value>
+			<value level="13">-840</value>
+			<value level="14">-860</value>
+			<value level="15">-880</value>
+			<value level="16">-890</value>
+			<value level="17">-900</value>
+			<value level="18">-950</value>
+			<value level="19">-950</value>
+			<value level="20">-950</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">8</value>
+			<value level="2">20</value>
+			<value level="3">33</value>
+			<value level="4">37</value>
+			<value level="5">41</value>
+			<value level="6">45</value>
+			<value level="7">49</value>
+			<value level="8">53</value>
+			<value level="9">55</value>
+			<value level="10">59</value>
+			<value level="11">60</value>
+			<value level="12">62</value>
+			<value level="13">63</value>
+			<value level="14">64</value>
+			<value level="15">65</value>
+			<value level="16">68</value>
+			<value level="17">71</value>
+			<value level="18">74</value>
+			<value level="19">77</value>
+			<value level="20">80</value>
+		</mpConsume>
+	</skill>
+	<skill id="88353" toLevel="1" name="Drain Effect">
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="88354" toLevel="1" name="Crimson Flame">
+		<!-- Imbues your blood with the fire power making it boil. M. Atk. +1500. M. Skill Power +5%. <Special property>. <font color="FFBB00">Vortex of Fire enhancement</font>. - Increases number of targets. - Decreases casting time. <font color="FFBB00">Bloody Strike</font> → <font color="FFBB00">Flame Bloody Strike</font>. - Increases the skill's power. - Decreases casting time. -->
+		<icon>icon.s_crimson_flame</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>760</effectPoint>
+		<mpConsume>150</mpConsume>
+	</skill>
+	<skill id="88355" toLevel="12" name="Flame Bloody Strike">
+		<!-- Level 1: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 167. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 2: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 174. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 3: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 181. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 4: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 186. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 5: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 191. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 6: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 198. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 7: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 205. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 8: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 211. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 9: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 228. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 10: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 235. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 11: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 242. Enemies with debuffs/ anomalies receive more damage. -->
+		<!-- Level 12: <font color="FFFF00">Crimson Flame effect</font>. Decreases casting time. Changes the skill's effect and increases its power. Unleashes a black-red fireball at the enemy making it explode. Deals M. damage. Power 250. Enemies with debuffs/ anomalies receive more damage. -->
+		<icon>icon.s_bloody_strike</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-400</value>
+			<value level="2">-415</value>
+			<value level="3">-430</value>
+			<value level="4">-440</value>
+			<value level="5">-450</value>
+			<value level="6">-460</value>
+			<value level="7">-470</value>
+			<value level="8">-475</value>
+			<value level="9">-480</value>
+			<value level="10">-485</value>
+			<value level="11">-490</value>
+			<value level="12">-495</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">56</value>
+			<value level="2">58</value>
+			<value level="3">60</value>
+			<value level="4">62</value>
+			<value level="5">63</value>
+			<value level="6">64</value>
+			<value level="7">65</value>
+			<value level="8">68</value>
+			<value level="9">71</value>
+			<value level="10">74</value>
+			<value level="11">77</value>
+			<value level="12">80</value>
+		</mpConsume>
+	</skill>
+	<skill id="88356" toLevel="1" name="Flame Heart">
+		<!-- M. Atk. +300. M. Skill Critical Damage +50. PvE damage +1% -->
+		<!-- Level 1 - SubLevel 1001: M. Atk. <font color="C270F6">+500</font>. M. Skill Critical Damage <font color="C270F6">+100</font>. PvE damage <font color="C270F6">+3%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Damage. Increases PvE damage.</font> -->
+		<!-- Level 1 - SubLevel 1002: M. Atk. <font color="C270F6">+700</font>. M. Skill Critical Damage <font color="C270F6">+200</font>. PvE damage <font color="C270F6">+6%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Damage. Increases PvE damage.</font> -->
+		<!-- Level 1 - SubLevel 1003: M. Atk. <font color="C270F6">+1000</font>. M. Skill Critical Damage <font color="C270F6">+300</font>. PvE damage <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Damage. Increases PvE damage.</font> -->
+		<icon>icon.s_flame_heart</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="88357" toLevel="1" name="Flame Heart">
+		<!-- M. Atk. +300. M. Skill Critical Rate +1%. PvE damage +1% -->
+		<!-- Level 1 - SubLevel 1001: M. Atk. <font color="C270F6">+500</font>. M. Skill Critical Rate <font color="C270F6">+2%</font>. PvE damage <font color="C270F6">+3%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases PvE damage.</font> -->
+		<!-- Level 1 - SubLevel 1002: M. Atk. <font color="C270F6">+700</font>. M. Skill Critical Rate <font color="C270F6">+3%</font>. PvE damage <font color="C270F6">+6%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases PvE damage.</font> -->
+		<!-- Level 1 - SubLevel 1003: M. Atk. <font color="C270F6">+1000</font>. M. Skill Critical Rate <font color="C270F6">+5%</font>. PvE damage <font color="C270F6">+10%</font>. <font color="C270F6"><Enchant effect>. Increases M. Atk. Increases M. Skill Critical Rate. Increases PvE damage.</font> -->
+		<icon>icon.s_flame_heart2</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="88358" toLevel="1" name="Drain Effect">
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="88359" toLevel="20" name="Vortex of Fire">
+		<!-- Level 1: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 16. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 2: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 32. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 3: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 84. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 4: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 90. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 5: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 97. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 6: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 106. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 7: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 114. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 8: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 126. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 9: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 137. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 10: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 147. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 11: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 151. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 12: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 155. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 13: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 160. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 14: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 166. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 15: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 173. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 16: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 176. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 17: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 179. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 18: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 182. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 19: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 185. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<!-- Level 20: <font color="FFFF00">Crimson Flame effect</font>. Decreases the skill's duration. Increases number of targets. Attacks with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 189. With a 30% chance, recovers 200 HP. PvP: Attacks up to 12 targets. PvE: Attacks up to 12 targets. -->
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-10</value>
+			<value level="2">-200</value>
+			<value level="3">-400</value>
+			<value level="4">-460</value>
+			<value level="5">-520</value>
+			<value level="6">-580</value>
+			<value level="7">-640</value>
+			<value level="8">-700</value>
+			<value level="9">-750</value>
+			<value level="10">-780</value>
+			<value level="11">-800</value>
+			<value level="12">-820</value>
+			<value level="13">-840</value>
+			<value level="14">-860</value>
+			<value level="15">-880</value>
+			<value level="16">-890</value>
+			<value level="17">-900</value>
+			<value level="18">-950</value>
+			<value level="19">-950</value>
+			<value level="20">-950</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">8</value>
+			<value level="2">20</value>
+			<value level="3">33</value>
+			<value level="4">37</value>
+			<value level="5">41</value>
+			<value level="6">45</value>
+			<value level="7">49</value>
+			<value level="8">53</value>
+			<value level="9">55</value>
+			<value level="10">59</value>
+			<value level="11">60</value>
+			<value level="12">62</value>
+			<value level="13">63</value>
+			<value level="14">64</value>
+			<value level="15">65</value>
+			<value level="16">68</value>
+			<value level="17">71</value>
+			<value level="18">74</value>
+			<value level="19">77</value>
+			<value level="20">80</value>
+		</mpConsume>
+	</skill>
+	<skill id="88360" toLevel="10" name="Fire Brand">
+		<!-- With a certain chance when using attack skills, applies <font color="FFBB00">Fire Brand</font> on the target for 10 sec. <font color="FFBB00">Fire Brand</font>. Atk. Spd. -30%. Casting Spd. -30%. Speed -30%. Trigger rate: 100%. Trigger cooldown: 10 sec. -->
+		<icon>icon.s_flame_mark</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="88361" toLevel="10" name="Fire Brand">
+		<!-- Atk. Spd. -30%. Casting Spd. -30%. Speed -30% -->
+		<icon>icon.s_flame_mark</icon>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>
+			<value level="1">-200</value>
+			<value level="2">-400</value>
+			<value level="3">-500</value>
+			<value level="4">-600</value>
+			<value level="5">-700</value>
+			<value level="6">-750</value>
+			<value level="7">-800</value>
+			<value level="8">-850</value>
+			<value level="9">-880</value>
+			<value level="10">-900</value>
+		</effectPoint>
+	</skill>
+	<skill id="88362" toLevel="20" name="Transcendent Vortex of Fire">
+		<!-- Level 1: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 16. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 2: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 32. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 3: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 84. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 4: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 90. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 5: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 97. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 6: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 106. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 7: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 114. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 8: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 126. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 9: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 137. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 10: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 147. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 11: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 151. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 12: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 155. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 13: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 160. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 14: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 166. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 15: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 173. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 16: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 176. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 17: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 179. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 18: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 182. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 19: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 185. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<!-- Level 20: Attacks the target and nearby enemies with a huge fireball recovering HP with a certain chance. Deals M. damage. Power 189. With a 30% chance, recovers 200 HP. The skill can only be used in transcendent instance zones. -->
+		<icon>icon.skill11024</icon>
+		<operateType>A1</operateType>
+		<castRange>700</castRange>
+		<hitTime>3000</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>
+			<value level="1">-10</value>
+			<value level="2">-200</value>
+			<value level="3">-400</value>
+			<value level="4">-460</value>
+			<value level="5">-520</value>
+			<value level="6">-580</value>
+			<value level="7">-640</value>
+			<value level="8">-700</value>
+			<value level="9">-750</value>
+			<value level="10">-780</value>
+			<value level="11">-800</value>
+			<value level="12">-820</value>
+			<value level="13">-840</value>
+			<value level="14">-860</value>
+			<value level="15">-880</value>
+			<value level="16">-890</value>
+			<value level="17">-900</value>
+			<value level="18">-950</value>
+			<value level="19">-950</value>
+			<value level="20">-950</value>
+		</effectPoint>
+		<mpConsume>
+			<value level="1">8</value>
+			<value level="2">20</value>
+			<value level="3">33</value>
+			<value level="4">37</value>
+			<value level="5">41</value>
+			<value level="6">45</value>
+			<value level="7">49</value>
+			<value level="8">53</value>
+			<value level="9">55</value>
+			<value level="10">59</value>
+			<value level="11">60</value>
+			<value level="12">62</value>
+			<value level="13">63</value>
+			<value level="14">64</value>
+			<value level="15">65</value>
+			<value level="16">68</value>
+			<value level="17">71</value>
+			<value level="18">74</value>
+			<value level="19">77</value>
+			<value level="20">80</value>
+		</mpConsume>
+	</skill>
+	<skill id="88363" toLevel="1" name="Drain Effect">
+		<operateType>A1</operateType>
+		<effectPoint>-990</effectPoint>
+	</skill>
+</list>

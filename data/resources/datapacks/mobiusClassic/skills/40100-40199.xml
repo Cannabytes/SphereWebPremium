@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="40100" toLevel="1" name="Purple Lantern - 2nd Place">
+		<icon>icon.etc_holy_grail_i01</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91669</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>300000</xp>
+				<sp>8100</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40101" toLevel="1" name="Blue Lantern - 3rd Place">
+		<icon>icon.etc_holy_grail_i02</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91670</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>100000</xp>
+				<sp>2700</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40102" toLevel="1" name="Green Lantern - 4th Place">
+		<icon>icon.etc_holy_grail_i03</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91671</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>50000</xp>
+				<sp>1350</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40103" toLevel="1" name="Star Candy of Grace">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91795</itemConsumeId> <!-- Improved Star Candy -->
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>140000</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40104" toLevel="1" name="Sayha's Storm">
+		<!-- Sayha's Grace Consumption +100%. Acquired XP +200%. Acquired SP +200%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.bm_sayha_storm</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF6</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93073</itemConsumeId> <!-- Sayha's Storm Lv. 3 (Event) -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="HasVitalityPoints">
+				<amount>35000</amount>
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>51437</skillId> <!-- Sayha's Storm -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>54068</skillId> <!-- Sayha's Gust - Event -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>200</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>200</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40105" toLevel="1" name="Blue Lantern - 3rd Place">
+		<icon>icon.etc_holy_grail_i02</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40106" toLevel="1" name="Battle Scroll - Event">
+		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P. Critical Rate/ M. Skill Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. -->
+		<icon>icon.ev_charge_scroll</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91780</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>350</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40107" toLevel="1" name="Extra Pass: Transcendent Instance Zone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93145</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>86400</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpNotInstantzone" />
+			<condition name="CanAddMaxEntranceInzone">
+				<instanceId>208;209;210;211;212;213;215;215</instanceId>
+				<amount>1</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40108" toLevel="1" name="Extra Pass: Transcendent Instance Zone - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93146</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>86400</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpNotInstantzone" />
+			<condition name="CanAddMaxEntranceInzone">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+				<amount>1</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40109" toLevel="1" name="Improved Scroll: Enchant A-grade Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40110" toLevel="1" name="Improved Scroll: Enchant A-grade Armor">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40111" toLevel="1" name="Cursed Scroll: Enchant A-grade Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40112" toLevel="1" name="Cursed Scroll: Enchant A-grade Armor">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40113" toLevel="1" name="Sayha's Cookie">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93274</itemConsumeId>
+		<reuseDelay>300</reuseDelay>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40114" toLevel="1" name="Scroll: Enchant Cloak of Protection">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40115" toLevel="1" name="Scroll of Escape: Quartermaster Mathorn">
+		<!-- Teleports to Quartermaster Mathorn on the Death Knight base. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93319</itemConsumeId> <!-- Scroll of Escape: Quartermaster Mathorn -->
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>46075</x>
+				<y>152578</y>
+				<z>-2752</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40116" toLevel="1" name="Scroll: Enchant Talisman of Authority">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40117" toLevel="1" name="Summon Deton">
+		<!-- Summons NPC Deton. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40118" toLevel="1" name="Scroll of Escape: Antharas' Lair Interior">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40119" toLevel="7" name="Scroll of Escape: Antharas' Lair Interior">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40120" toLevel="1" name="Special Scroll of Escape: Orc Barracks">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93335</itemConsumeId> <!-- Special Scroll of Escape: Orc Barracks -->
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-93255</x>
+				<y>109021</y>
+				<z>-3696</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40121" toLevel="1" name="High-grade Red Lantern">
+		<icon>icon.etc_holy_grail_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93338</itemConsumeId> <!-- High-Grade Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>12000000</xp>
+				<sp>324000</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40122" toLevel="1" name="High-grade Purple Lantern">
+		<icon>icon.etc_holy_grail_i01</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93339</itemConsumeId> <!-- High-Grade Purple Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>3600000</xp>
+				<sp>97200</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40123" toLevel="1" name="High-grade Blue Lantern">
+		<icon>icon.etc_holy_grail_i02</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93340</itemConsumeId> <!-- High-Grade Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>1200000</xp>
+				<sp>32400</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40124" toLevel="1" name="High-grade Green Lantern">
+		<icon>icon.etc_holy_grail_i03</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93341</itemConsumeId> <!-- High-Grade Green Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>600000</xp>
+				<sp>16200</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40125" toLevel="1" name="High-grade Lit Red Lantern">
+		<icon>icon.etc_holy_grail_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93342</itemConsumeId> <!-- High-Grade Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>12000000</xp>
+				<sp>324000</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40126" toLevel="1" name="High-grade Lit Purple Lantern">
+		<icon>icon.etc_holy_grail_i01</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93343</itemConsumeId> <!-- High-Grade Purple Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>3600000</xp>
+				<sp>97200</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40127" toLevel="1" name="High-grade Lit Blue Lantern">
+		<icon>icon.etc_holy_grail_i02</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93344</itemConsumeId> <!-- High-Grade Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>1200000</xp>
+				<sp>32400</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40128" toLevel="1" name="High-grade Lit Green Lantern">
+		<icon>icon.etc_holy_grail_i03</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93345</itemConsumeId> <!-- High-Grade Green Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>600000</xp>
+				<sp>16200</sp>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40129" toLevel="1" name="Stone: Enchant A-grade Weapon - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40130" toLevel="1" name="Stone: Enchant A-grade Armor - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40131" toLevel="1" name="Einhasad's Blessing Scroll - Event">
+		<!-- Acquired XP +50%. Acquired SP +50%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.exp_bottle_scroll</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>GIRAN_SEAL</abnormalType>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93370</itemConsumeId>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>50</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40132" toLevel="1" name="Improved Stone: Enchant A-grade Weapon - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40133" toLevel="1" name="Improved Stone: Enchant A-grade Armor - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40134" toLevel="1" name="Test - More Adena 1">
+		<!-- Adena +100%! -->
+		<icon>icon.skill1551</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40135" toLevel="1" name="Test - More Adena 2">
+		<!-- Adena +100%! -->
+		<icon>icon.buff_inc_adena</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40136" toLevel="1" name="Scroll of Escape: Fortress">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40137" toLevel="1" name="Improved Scroll of Escape: Fortress">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40138" toLevel="1" name="Magic Lamp Charging Potion - Event">
+		<!-- For 1 h., acquired Magic Lamp XP +20%. Cooldown: 1 min. -->
+		<icon>icon.etc_recall_potion2</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>MAGIC_LAMP_RATE</abnormalType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40057</skillId> <!-- Magic Fire - Event -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>54069</skillId> <!-- Magic Fire - Event -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>54051</skillId> <!-- Magic Lamp Charging Potion (1-hour) -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MagicLampExpRate">
+				<amount>20</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40139" toLevel="1" name="Spellbook: Mount Wyvern">
+		<!-- Double-click to learn how to ride Wyvern. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93485</itemConsumeId> <!-- Spellbook: Mount Wyvern -->
+		<effects>
+			<effect name="SetSkill">
+				<skillId>40140</skillId> <!-- Mount Wyvern -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40140" toLevel="1" name="Mount Wyvern">
+		<!-- Allows to mount Wyvern. When mounting a Wyvern, your weapon and shield/ sigil are unequipped, and all summoned creatures disappear. Only several buff skills can be used while riding a Wyvern. -->
+		<icon>icon.skill0327</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<effects>
+			<effect name="Ride">
+				<npcId>15955</npcId> <!-- Wyvern -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40141" toLevel="1" name="Combat Scroll">
+		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.etc_ssq_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91975</itemConsumeId> <!-- Combat Scroll (Time-limited) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40142" toLevel="1" name="Whale">
+		<icon>icon.fish_huge_i15</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40143" toLevel="3" name="High-grade SP Scroll">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40144" toLevel="1" name="SP Scroll: 20">
+		<icon>icon.etc_sp_scroll1_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40145" toLevel="1" name="Scroll of Escape: Gludin Harbor">
+		<!-- Teleports to Gludin Harbor. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49503</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-91191</x>
+				<y>150344</y>
+				<z>-3624</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40146" toLevel="3" name="Fish Stew - Vampiric Rage">
+		<!-- Level 1: For 20 min., with a certain chance, absorbs 6% of inflicted damage as HP. -->
+		<!-- Level 2: For 20 min., with a certain chance, absorbs 7% of inflicted damage as HP. -->
+		<!-- Level 3: For 20 min., with a certain chance, absorbs 8% of inflicted damage as HP. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>26</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>1000</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49463</itemConsumeId> <!-- Fish Stew: Vampiric Rage -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<specialLevel>-1</specialLevel>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40147" toLevel="3" name="Fish Stew - Empower">
+		<!-- Level 1: For 20 min., M. Atk. +55%. -->
+		<!-- Level 2: For 20 min., M. Atk. +65%. -->
+		<!-- Level 3: For 20 min., M. Atk. +75%. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40148" toLevel="1" name="Fish Stew - Greater Might">
+		<!-- For 20 min., P. Atk. +4%. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40149" toLevel="1" name="Fish Stew - Greater Shield">
+		<!-- For 20 min., P. Def. +5%. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40150" toLevel="1" name="Fish Stew - Wild Magic">
+		<!-- For 20 min., M. Critical Rate +10. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40151" toLevel="2" name="Fish Stew - Berserker Spirit">
+		<!-- Level 1: For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<!-- Level 2: For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40152" toLevel="3" name="Fish Stew - Decrease Weight">
+		<!-- Level 1: For 20 min., overweight limit +3000. -->
+		<!-- Level 2: For 20 min., overweight limit +6000. -->
+		<!-- Level 3: For 20 min., overweight limit +9000. -->
+		<icon>icon.fish_stew_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40153" toLevel="2" name="Fish Stew - Guild's Gratitude">
+		<!-- Level 1: For 20 min., acquired XP/ SP while hunting +10%. -->
+		<!-- Level 2: For 20 min., acquired XP/ SP while hunting +30%. -->
+		<icon>icon.ev_invasion_buff_box</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40154" toLevel="25" name="Full Moon Blessing - Event">
+		<!-- Level 1: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 2: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 3: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 4: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 5: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 6: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 7: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 8: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 9: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 10: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 11: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 12: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 13: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 14: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 15: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 16: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 17: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 18: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 19: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 20: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 21: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 22: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 23: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<!-- Level 24: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The moon will rise again. Note!. Cannot be obtained if your character is dead. -->
+		<icon>BranchSys2.icon.g_illumination_yellow</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40155" toLevel="1" name="Full Moon Blessing (Reward)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40156" toLevel="1" name="Honey Rice Cakes - Event">
+		<!-- Momentarily recovers 200 HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40157" toLevel="1" name="Honey Bean Cakes - Event">
+		<!-- Sayha's Grace points +35,000. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40158" toLevel="1" name="Honey Sesame Cakes - Event">
+		<!-- For 20 min., acquired XP/ SP while hunting +20%. Note!. When used with Einhasad's Blessing Scroll, Einhasad's Protection, Dandy's Home Run Ball or Dandy's Golden Ball, the most powerful effect will be active. -->
+		<icon>icon.ev_sesame_songpyeon_00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40159" toLevel="1" name="Letter of Congratulation - Event">
+		<!-- A letter with the congratulations on the Harvest Festival. When opened, launches fireworks and a note above your head. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40160" toLevel="1" name="Scroll: Restore Equipment">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40161" toLevel="1" name="(Test) Appearance Stone: Emerald Weapon - One-handed Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="40162" toLevel="1" name="Appearance Stone: Emerald Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="40163" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="40164" toLevel="3" name="Spellbook: Glorious Warrior's Ability Lv. 3">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">94046</value> <!-- Spellbook: Glorious Warrior's Ability (Lv. 1) -->
+			<value level="2">95890</value> <!-- Spellbook: Glorious Warrior's Ability (Lv. 2) -->
+			<value level="3">95891</value> <!-- Spellbook: Glorious Warrior's Ability (Lv. 3) -->
+		</itemConsumeId>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45361</skillId> <!-- Glorious Warrior: Enhanced Abilities -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40165" toLevel="1" name="Alligator Island's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93704</itemConsumeId> <!-- Alligator Island Prolongation Stone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>60</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>11</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40166" toLevel="1" name="Mid-grade HP Recovery Potion - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40167" toLevel="1" name="Spellbook: Glorious Warrior's Ability Lv. 4">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>98834</itemConsumeId> <!-- Spellbook: Glorious Warrior's Ability (Lv. 4) -->
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45361</skillId> <!-- Glorious Warrior: Enhanced Abilities -->
+				<skillLevel>4</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40168" toLevel="1" name="Spellbook: Glorious Warrior's Ability Lv. 5">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>98835</itemConsumeId> <!-- Spellbook: Glorious Warrior's Ability (Lv. 5) -->
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45361</skillId> <!-- Glorious Warrior: Enhanced Abilities -->
+				<skillLevel>5</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40169" toLevel="1" name="Spellbook: Glorious Warrior's Ability Lv. 6">
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>98836</itemConsumeId> <!-- Spellbook: Glorious Warrior's Ability (Lv. 6) -->
+		<effects>
+			<effect name="SetSkill">
+				<skillId>45361</skillId> <!-- Glorious Warrior: Enhanced Abilities -->
+				<skillLevel>6</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40170" toLevel="1" name="Reanimated Corpse Mask">
+		<!-- For 20 min., acquired XP/ SP +30%. -->
+		<icon>BranchSys.icon.br_frankenstein_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93747</itemConsumeId> <!-- Reanimated Corpse Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40171" toLevel="1" name="Shriek Mask">
+		<!-- For 20 min., acquired XP/ SP +30%. -->
+		<icon>icon.ev_scream_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93748</itemConsumeId> <!-- Shriek Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40172" toLevel="1" name="Red Devil Mask">
+		<!-- For 20 min., acquired XP/ SP +30%. -->
+		<icon>icon.ev_doccabi_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93749</itemConsumeId> <!-- Red Devil Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40173" toLevel="1" name="Mummy Mask">
+		<!-- For 20 min., acquired XP/ SP +30%. -->
+		<icon>icon.ev_mummy_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93750</itemConsumeId> <!-- Mummy Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40174" toLevel="1" name="Alien Mask">
+		<!-- For 20 min., acquired XP/ SP +30%. -->
+		<icon>icon.ev_alien_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93751</itemConsumeId> <!-- Alien Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40175" toLevel="1" name="Jack O'Lantern's Golden Mask">
+		<!-- For 20 min., acquired XP/ SP +50%. -->
+		<icon>icon.ev_golden_jack0_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93752</itemConsumeId> <!-- Jack O'Lantern's Golden Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40176" toLevel="25" name="Pumpkin Ghost's Royal Candy - Event">
+		<!-- For 1 h., STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. Renewed every hour. Halloween Candy Box is given after every renewal. Note!. Cannot be obtained if your character is dead. -->
+		<icon>icon.ev_jack_ghost_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40177" toLevel="1" name="Pumpkin Ghost's Royal Candy - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40178" toLevel="1" name="Halloween Mask">
+		<!-- Changes the appearance upon use. -->
+		<icon>icon.ev_golden_jack0_mask_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93849</itemConsumeId> <!-- Halloween Mask -->
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="TriggerSkill">
+				<skillId>55000</skillId> <!-- Acquired XP/ SP -->
+				<skillLevel>1</skillLevel>
+				<targetType>SELF</targetType>
+				<chance>80</chance>
+			</effect>
+			<effect name="TriggerSkill">
+				<skillId>55000</skillId> <!-- Acquired XP/ SP -->
+				<skillLevel>3</skillLevel>
+				<targetType>SELF</targetType>
+				<chance>20</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40179" toLevel="1" name="Halloween Candy - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93755</itemConsumeId> <!-- Halloween Candy - Event -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>500</reuseDelay>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.5">
+						<item id="93756" count="1000" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="500" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="300" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="100" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="50" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="30" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93756" count="10" /> <!-- Halloween Candy - Sealed -->
+					</item>
+					<item chance="12.5">
+						<item id="93849" count="3" /> <!-- Halloween Mask - Sealed -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40180" toLevel="1" name="Sayha's Cookie - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93848</itemConsumeId>
+		<reuseDelay>300</reuseDelay>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40181" toLevel="1" name="Antharas' Lair's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93903</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>80</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>12</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40182" toLevel="1" name="Lucky Energy Card">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40183" toLevel="1" name="Lucky Energy Card - STR/ INT +1">
+		<!-- For 20 min., STR/ INT +1. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_devil_black</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40184" toLevel="1" name="Lucky Energy Card - DEX/ WIT +1">
+		<!-- For 20 min., DEX/ WIT +1. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_devil_black</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40185" toLevel="1" name="Lucky Energy Card - CON/ MEN +1">
+		<!-- For 20 min., CON/ MEN +1. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_devil_black</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40186" toLevel="1" name="Lucky Energy Card - XP">
+		<!-- For 20 min., acquired XP/ SP +20%. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_devil_black</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40187" toLevel="1" name="Lucky Energy Card - All Stats +1">
+		<!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +1. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_dragon_gold</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40188" toLevel="1" name="Lucky Energy Card - XP/ All Stats +1">
+		<!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +1, acquired XP/ SP +20%. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_hero_red</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40189" toLevel="1" name="Lucky Energy Card - XP/ All Stats +2">
+		<!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +2, acquired XP/ SP +30%. The effect remains after death. The effect cannot be cancelled by yourself. -->
+		<icon>icon.card_hidden</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40190" toLevel="1" name="Antharas' Lair's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93904</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>80</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>12</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40191" toLevel="6" name="Harvesting Basics Lv. 1">
+		<!-- Level 1: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +30, Max HP/ MP +40. The effect is renewed every hour. After each renewal, the buff level is increased. Note!. You cannot get a next-level buff if you are dead. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<!-- Level 2: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +60, Max HP/ MP +80. The effect is renewed every hour. After each renewal, the buff level is increased. Note!. You cannot get a next-level buff if you are dead. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<!-- Level 3: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +90, Max HP/ MP +120. The effect is renewed every hour. After each renewal, the buff level is increased. Note!. You cannot get a next-level buff if you are dead. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<!-- Level 4: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +120, Max HP/ MP +160. The effect is renewed every hour. After each renewal, the buff level is increased. Note!. You cannot get a next-level buff if you are dead. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<!-- Level 5: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +150, Max HP/ MP +180. The effect is renewed every hour. After each renewal, the buff level is increased. Note!. You cannot get a next-level buff if you are dead. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<!-- Level 6: For 1 h., P. Atk./ M. Atk./ P. Def./ M. Def. +180, Max HP/ MP +240. The effect remains after death. You cannot cancel the effect by yourself. -->
+		<icon>icon.etc_ssq_scroll_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40192" toLevel="1" name="Scroll: Enchant Special Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40193" toLevel="1" name="Scroll: Enchant Death Knight's Flame Sword - Not Used">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+	</skill>
+	<skill id="40194" toLevel="1" name="Extra Pass: Transcendent Instance Zone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93948</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>86400</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpNotInstantzone" />
+			<condition name="CanAddMaxEntranceInzone">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+				<amount>1</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40195" toLevel="1" name="Extra Pass: Transcendent Instance Zone - Event">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93949</itemConsumeId> <!-- Extra Pass: Transcendent Instance Zone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>86400</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<conditions>
+			<condition name="OpNotInstantzone" />
+			<condition name="CanAddMaxEntranceInzone">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+				<amount>1</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208;209;210;211;212;213;215</instanceId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40196" toLevel="1" name="Scroll of Escape: Ancient Ruins">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40197" toLevel="5" name="Mark of Examinee">
+		<!-- Level 1: Stars collected: 1. You can get to the next level after obtaining 5 stars on Mark of Examinee. -->
+		<!-- Level 2: Stars collected: 2. You can get to the next level after obtaining 5 stars on Mark of Examinee. -->
+		<!-- Level 3: Stars collected: 3. You can get to the next level after obtaining 5 stars on Mark of Examinee. -->
+		<!-- Level 4: Stars collected: 4. You can get to the next level after obtaining 5 stars on Mark of Examinee. -->
+		<!-- Level 5: You have collected all the 5 stars. You can get to the next level after obtaining 5 stars on Mark of Examinee. -->
+		<icon>icon.skill30530</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40198" toLevel="1" name="Star Energy">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40199" toLevel="1" name="">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<operateType>A1</operateType>
+	</skill>
+</list>

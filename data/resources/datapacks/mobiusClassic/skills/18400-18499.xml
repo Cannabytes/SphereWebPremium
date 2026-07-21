@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="18448" toLevel="1" name="Scroll: Summon Piero">
+		<!-- Summon NPC Piero -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46219</itemConsumeId> <!-- Summon Scroll: Piero -->
+		<reuseDelay>10000</reuseDelay>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>34084</npcId> <!-- Piero -->
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18449" toLevel="1" name="Magic Number Cube">
+		<!-- Group gift distribution -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>1500</castRange>
+		<hitTime>1500</hitTime>
+		<reuseDelay>6000</reuseDelay>
+	</skill>
+	<skill id="18450" toLevel="6" name="Confirm Number">
+		<!-- Level 1: Shows number 1. -->
+		<!-- Level 2: Shows number 2. -->
+		<!-- Level 3: Shows number 3. -->
+		<!-- Level 4: Shows number 4. -->
+		<!-- Level 5: Shows number 5. -->
+		<!-- Level 6: Shows number 6. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>204</effectPoint>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic>
+		<mpConsume>60</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+	</skill>
+	<skill id="18451" toLevel="2" name="Anniversary Effect">
+		<!-- Level 1: Acquired XP/ SP while hunting +11%. With a certain chance, grants 11th Anniversary Coin once the buff expires. Note!. The coins cannot be obtained if you are dead or have no free space in the inventory. -->
+		<!-- Level 2: When the buff effect is over you can get 11 Anniversary Coin. -->
+		<icon>icon.ev_buff_11th</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">7200</value>
+		</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">11</value>
+					<value level="2">30</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18472" toLevel="6" name="Lucky number 6">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18475" toLevel="1" name="Anniversary Coin">
+		<icon>icon.ev_buff_11th</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+</list>

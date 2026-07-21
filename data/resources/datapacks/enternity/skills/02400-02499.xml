@@ -1,0 +1,1985 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="2400" levels="1" nameRu="Красный Коралловый Ключ от Сундука с Сокровищами" nameEn="Red Coral Treasure Chest Key">
+		<!-- Confirmed CT2.5 -->
+		<!-- set name="giveContribution" val="10" / -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10017" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="targetType" val="UNLOCKABLE" />
+		<cond msgId="113" addName="1">
+			<target npcId="18477" />
+		</cond>
+	</skill>
+	<skill id="2401" levels="1" nameRu="Боевое Зелье Маны" nameEn="Lesser Battlefield Mana Potion">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player level="52" />
+		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="360" />
+		</for>
+	</skill>
+	<skill id="2402" levels="1" nameRu="Боевое Зелье CP" nameEn="Lesser Battlefield CP Potion">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player level="52" />
+		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
+	</skill>
+	<skill id="2403" levels="1" nameRu="Зелье Восстановления CP" nameEn="Spring CP Potion">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="1000" />
+		</for>
+	</skill>
+	<skill id="2404" levels="1" nameRu="Могущества" nameEn="Might">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PA_UP" abnormalLvl="2">
+				<mul order="0x30" stat="pAtk" val="1.12" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2405" levels="1" nameRu="Щит" nameEn="Shield">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="25" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PD_UP" abnormalLvl="2">
+				<mul order="0x30" stat="pDef" val="1.12" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2406" levels="1" nameRu="Легкая Походка" nameEn="Wind Walk">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SPEED_UP" abnormalLvl="2">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2407" levels="1" nameRu="Фокусировка" nameEn="Focus">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_PROB_UP" abnormalLvl="2">
+				<basemul order="0x30" stat="rCrit" val="0.25" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2408" levels="1" nameRu="Смертельный Шепот" nameEn="Death Whisper">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_DMG_UP" abnormalLvl="2">
+				<mul order="0x30" stat="cAtk" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2409" levels="1" nameRu="Наведение" nameEn="Guidance">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HIT_UP" abnormalLvl="2">
+				<add order="0x40" stat="accCombat" val="3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2410" levels="1" nameRu="Щит Благословения" nameEn="Bless Shield">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SHIELD_PROB_UP" abnormalLvl="2">
+				<mul order="0x30" stat="rShld" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2411" levels="1" nameRu="Благословение Тела" nameEn="Blessed Body">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_HP_UP" abnormalLvl="3">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2412" levels="1" nameRu="Скорость" nameEn="Haste">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="1">
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2413" levels="1" nameRu="Ярость Вампира" nameEn="Vampiric Rage">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VAMPIRIC_ATTACK" abnormalLvl="2">
+				<add order="0x40" stat="absorbDam" val="7" /> <!-- absorb 7% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="2414" levels="1" nameRu="Дух Берсерка" nameEn="Berserker Spirit">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BERSERKER" abnormalLvl="1">
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="mDef" val="0.9" />
+				<mul order="0x30" stat="pDef" val="0.95" />
+				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+				<add order="0x40" stat="runSpd" val="5" />
+				<sub order="0x40" stat="rEvas" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2415" levels="1" nameRu="Магический Барьер" nameEn="Magic Barrier">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MD_UP" abnormalLvl="2">
+				<mul order="0x30" stat="mDef" val="1.23" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2416" levels="1" nameRu="Благословение Души" nameEn="Blessed Soul">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_MP_UP" abnormalLvl="3">
+				<mul order="0x30" stat="maxMp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2417" levels="1" nameRu="Воодушевление" nameEn="Empower">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MA_UP" abnormalLvl="2">
+				<mul order="0x30" stat="mAtk" val="1.65" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2418" levels="1" nameRu="Проницательность" nameEn="Acumen">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CASTING_TIME_DOWN" abnormalLvl="2">
+				<mul order="0x30" stat="mAtkSpd" val="1.23" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2419" levels="1" nameRu="Чистота" nameEn="Clarity">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="58" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CHEAP_MAGIC" abnormalLvl="1">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2420" levels="1" nameRu="Белое Семя Великого Зла" nameEn="White Seed of Evil Lump">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="9597" itemCount="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2421" levels="1" nameRu="Черное семя Великого Зла" nameEn="Black Seed of Evil Lump">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="9598" itemCount="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2422" levels="1" nameRu="Приз за 1 место" nameEn="1st Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6373,1,1.19;6374,1,1.84;6375,1,4.47;6376,1,4.47;6377,1,4.25;6378,1,3.01;6379,1,0.19;6380,1,4.47;6381,1,4.47;6382,1,3.01;6383,1,0.19;6384,1,4.47;6385,1,4.47;6386,1,3.01;9570,1,3.16;9571,1,3.16;9572,1,3.16;5908,1,15.67;5911,1,15.67;5914,1,15.67
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2423" levels="1" nameRu="Приз 2-го класса" nameEn="2nd Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 2. -->
+		<table name="#extractableItems">
+			9625,1,2.20;9626,1,1.42;9627,1,0.67;9546,1,15.30;9547,1,15.30;9548,1,15.30;9549,1,15.30;9550,1,15.30;9551,1,15.30;959,1,0.28;960,1,3.73
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2424" levels="1" nameRu="Приз 3-го Класса" nameEn="3rd Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 3. -->
+		<table name="#extractableItems">
+			729,1,0.51;730,1,3.86;947,1,1.85;948,1,11.57;8736,1,32.15;8738,1,23.15;8741,1,12.86;8742,1,11.57;3936,1,2.48
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2425" levels="1" nameRu="Приз 4-го Класса" nameEn="4th Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 4. -->
+		<table name="#extractableItems">
+			951,1,3.01;952,1,21.30;955,1,6.41;956,1,52.72;1538,1,2.56;9909,1,7.00;10139,1,7.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2426" levels="1" nameRu="Приз 5-го Класса" nameEn="5th Place Treasure sack">
+		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 5. -->
+		<table name="#extractableItems">
+			10178,5,10179,5,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2427" levels="1" nameRu="Приз 6-го Класса" nameEn="6th Place Treasure Sack">
+		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 6. -->
+		<table name="#extractableItems">
+			10260,3,9.00;10261,3,9.00;10262,3,9.00;10263,3,9.00;10264,3,9.00;10265,3,9.00;10266,3,9.00;10267,3,9.00;10268,3,9.00;10269,3,9.00;10270,3,10.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2428" levels="1" nameRu="Свиток Превращения - Кролик" nameEn="Scroll of Transformation - Rabbit">
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skill0298" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="105" abnormalType="TRANSFORM" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="2429" levels="1" nameRu="Напиток Скор. Атк." nameEn="Haste Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2430" levels="1" nameRu="Напиток Точности" nameEn="Accuracy Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HIT_UP" abnormalLvl="4">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2431" levels="1" nameRu="Напиток Силы Крит. Атк." nameEn="Critical Power Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_DMG_UP" abnormalLvl="4">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2432" levels="1" nameRu="Напиток Шанса Крит. Атк." nameEn="Critical Attack Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_PROB_UP" abnormalLvl="4">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2433" levels="1" nameRu="Напиток Скор. Маг." nameEn="Casting Speed Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CASTING_TIME_DOWN" abnormalLvl="4">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2434" levels="1" nameRu="Напиток Уклонения" nameEn="Evasion Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="AVOID_UP" abnormalLvl="4">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2435" levels="1" nameRu="Напиток Маг. Атк." nameEn="Magic Power Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MA_UP" abnormalLvl="4">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2436" levels="1" nameRu="Напиток Физ. Атк." nameEn="Power Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PA_UP" abnormalLvl="4">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2437" levels="1" nameRu="Напиток Ускорения" nameEn="Speed Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SPEED_UP" abnormalLvl="3">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2438" levels="1" nameRu="Напиток Защиты" nameEn="Defense Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PD_UP" abnormalLvl="4">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2439" levels="1" nameRu="Напиток Расхода MP" nameEn="MP Consumption Juice">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CHEAP_MAGIC" abnormalLvl="1">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2440" levels="1" nameRu="Древний Том Демона" nameEn="Ancient Tome of the Demon">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			9600,1,40;9601,2,50;9602,1,10
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2441" levels="1" nameRu="Защита Рун" nameEn="Protection of Rune">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10549" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="755" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="755" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2442" levels="1" nameRu="Защита Стихий" nameEn="Protection of Elemental">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10550" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="756" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="756" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2443" levels="1" nameRu="Защита Равновесия" nameEn="Protection of Alignment">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10551" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="757" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="757" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2444" levels="1" nameRu="Воля Бойца" nameEn="Fighter's Will">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10552" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="758" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 99, 100, 101, 102, 106, 107, 108, 109, 113, 114, 117, 118, 131, 132, 133, 134 " />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="758" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2445" levels="1" nameRu="Воля Стрелка" nameEn="Archer's Will">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10553" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="759" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 99, 100, 101, 102, 106, 107, 108, 109, 113, 114, 117, 118, 131, 132, 133, 134 " />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="759" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2446" levels="1" nameRu="Броня Антимагии" nameEn="Anti-magic Armor">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10554" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="760" />
+				</not>
+				<player class_id_restriction="90, 91, 99, 106" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="760" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2447" levels="1" nameRu="Семя Возмездия" nameEn="Seed of Revenge">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10555" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="761" />
+				</not>
+				<player class_id_restriction="91" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="761" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="762" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2448" levels="1" nameRu="Крик Ада" nameEn="Hell Scream">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10556" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="763" />
+				</not>
+				<player class_id_restriction="91" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="763" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2449" levels="1" nameRu="Песня Шторма" nameEn="Song of Wind Storm">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10557" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="764" />
+				</not>
+				<player class_id_restriction="100" />
+				<player level="76" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="764" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2450" levels="1" nameRu="Танец Шторма Клинков" nameEn="Dance of Blade Storm">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10558" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="765" />
+				</not>
+				<player class_id_restriction="107" />
+				<player level="76" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="765" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2451" levels="1" nameRu="Шестое Чувство" nameEn="Sixth Sense">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10559" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="766" />
+				</not>
+				<player class_id_restriction="90, 91, 93, 99, 100, 101, 106, 107, 108, 132, 133, 134" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="766" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2452" levels="1" nameRu="Найти Слабое Место" nameEn="Expose Weak Point">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10560" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="767" />
+				</not>
+				<player class_id_restriction="88, 89, 93, 101, 108, 113, 114, 117, 118, 131, 132, 133" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="767" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2453" levels="1" nameRu="Увлекательное Приключение" nameEn="Exciting Adventure">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10561" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="768" />
+				</not>
+				<player class_id_restriction="93" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="768" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2454" levels="1" nameRu="Оседлать Ветер" nameEn="Wind Riding">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10562" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="769" />
+				</not>
+				<player class_id_restriction="101" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="769" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2455" levels="1" nameRu="Походка Призрака" nameEn="Ghost Walking">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10563" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="770" />
+				</not>
+				<player class_id_restriction="108" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="770" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2456" levels="1" nameRu="Огненный Ястреб" nameEn="Flame Hawk">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10564" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="771" />
+				</not>
+				<player class_id_restriction="92" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="771" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2457" levels="1" nameRu="Дождь из Стрел" nameEn="Arrow Rain">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10565" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="772" />
+				</not>
+				<player class_id_restriction="102" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="772" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2458" levels="1" nameRu="Призрачное Пробивание" nameEn="Ghost Piercing">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10566" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="773" />
+				</not>
+				<player class_id_restriction="109" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="773" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2459" levels="1" nameRu="Прилив Ужаса" nameEn="Dread Pool">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10567" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="774" />
+				</not>
+				<player class_id_restriction="89" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="774" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2460" levels="1" nameRu="Блокировка Оружия" nameEn="Weapon Blockade">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10568" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="775" />
+				</not>
+				<player class_id_restriction="88" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="775" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2461" levels="1" nameRu="Сила Разрушения" nameEn="Force of Destruction">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10569" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="776" />
+				</not>
+				<player class_id_restriction="114" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="776" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2462" levels="1" nameRu="Удар Низвержения" nameEn="Demolition Impact">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10570" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="777" />
+				</not>
+				<player class_id_restriction="113" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="777" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2463" levels="1" nameRu="Броня Голема" nameEn="Golem Armor">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10571" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="778" />
+				</not>
+				<player class_id_restriction="118" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="778" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2464" levels="1" nameRu="Огненная Броня" nameEn="Flame Armor">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10572" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1492" />
+				</not>
+				<player class_id_restriction="94" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1492" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2465" levels="1" nameRu="Броня Мороза" nameEn="Frost Armor">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10573" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1493" />
+				</not>
+				<player class_id_restriction="103" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1493" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2466" levels="1" nameRu="Броня Урагана" nameEn="Hurricane Armor">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10574" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1494" />
+				</not>
+				<player class_id_restriction="110" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1494" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2467" levels="1" nameRu="Вампирический Туман" nameEn="Vampiric Mist">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10575" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1495" />
+				</not>
+				<player class_id_restriction="95" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1495" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2468" levels="1" nameRu="Барьер Слуги" nameEn="Servitor Barrier">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10576" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1496" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1496" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2469" levels="1" nameRu="Избыточная Расплата" nameEn="Excessive Loyalty">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10577" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1497" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1497" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2470" levels="1" nameRu="Обратная Связь" nameEn="Mutual Response">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10578" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1498" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1498" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2471" levels="1" nameRu="Совершенство в Бою" nameEn="Improve Combat">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10579" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1499" />
+				</not>
+				<player class_id_restriction="17, 98" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1499" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2472" levels="1" nameRu="Совершенство в Магии" nameEn="Improve Magic">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10580" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1500" />
+				</not>
+				<player class_id_restriction="43, 112" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1500" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2473" levels="1" nameRu="Совершенство Состояния" nameEn="Improve Condition">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10581" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1501" />
+				</not>
+				<player class_id_restriction="17, 98" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1501" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2474" levels="1" nameRu="Совершенная Критическая Атака" nameEn="Improve Critical">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10582" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1502" />
+				</not>
+				<player class_id_restriction="43, 112" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1502" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2475" levels="1" nameRu="Совершенное Владение Щитом" nameEn="Improve Shield Defense">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10583" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1503" />
+				</not>
+				<player class_id_restriction="30, 105" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1503" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2476" levels="1" nameRu="Совершенство Движений" nameEn="Improve Movement">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10584" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1504" />
+				</not>
+				<player class_id_restriction="30, 105" />
+				<player level="70" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1504" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2477" levels="1" nameRu="Великая жертва" nameEn="Sublime Self-sacrifice">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10585" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1505" />
+				</not>
+				<player class_id_restriction="97" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1505" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2478" levels="1" nameRu="Благословение Евы" nameEn="Blessing of Eva">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10586" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1506" />
+				</not>
+				<player class_id_restriction="105" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1506" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2479" levels="1" nameRu="Повелитель Вампиров" nameEn="Lord of Vampire">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10587" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1507" />
+				</not>
+				<player class_id_restriction="112" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1507" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2480" levels="1" nameRu="Корни Престола" nameEn="Throne Root">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10588" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1508" />
+				</not>
+				<player class_id_restriction="112" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1508" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2481" levels="1" nameRu="Печать Предела" nameEn="Seal of Limit">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10589" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1509" />
+				</not>
+				<player class_id_restriction="115" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1509" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2482" levels="1" nameRu="Дух Феникса" nameEn="Spirit of Phoenix">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10591" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="784" />
+				</not>
+				<player class_id_restriction="90" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="784" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="785" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2483" levels="1" nameRu="Воля Евы" nameEn="Eva's Will">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10592" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="786" />
+				</not>
+				<player class_id_restriction="99" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="786" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="787" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2484" levels="1" nameRu="Боль Шилен" nameEn="Pain of Shilen">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10593" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="788" />
+				</not>
+				<player class_id_restriction="106" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="788" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="789" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2485" levels="1" nameRu="Настойка Жизни" nameEn="Herb of Life">
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="15" />
+		</for>
+	</skill>
+	<skill id="2486" levels="1" nameRu="Настойка Маны" nameEn="Herb of Mana">
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="12" />
+		</for>
+	</skill>
+	<skill id="2487" levels="1" nameRu="Предмет - Особый Звонкий Кристалл" nameEn="Item - Special Sound Crystal">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="2488" levels="1" nameRu="Дикий Выстрел" nameEn="Wild Shot">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10594" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="790" />
+				</not>
+				<player class_id_restriction="134" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="790" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2489" levels="1" nameRu="Световое Оглушение" nameEn="Lightning Shock">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="10595" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="791" />
+				</not>
+				<player class_id_restriction="132, 133" />
+				<player level="81" />
+			</and>
+		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="791" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2490" levels="1" nameRu="Комплект Магической Защиты для Новичков" nameEn="Magic Defense Toolkit for beginners">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10470,2,10471,2,10472,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="2491" levels="1" nameRu="Превращение в Закена" nameEn="Transform Zaken">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="663" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2492" levels="1" nameRu="Превращение в Анакима" nameEn="Transform Anakim">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="664" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2493" levels="1" nameRu="Превращение в Венома" nameEn="Transform Venom">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="665" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2494" levels="1" nameRu="Превращение в Гордона" nameEn="Transform Gordon">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="666" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2495" levels="1" nameRu="Превращение в Ранку" nameEn="Transform Ranku">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="667" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2496" levels="1" nameRu="Превращение в Кетча" nameEn="Transform Kietch">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="668" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2497" levels="1" nameRu="Превращение в Принца Демонов" nameEn="Transform Demon Prince">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="669" skillLvl="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2498" levels="1" nameRu="Бутыль Пустого Духа" nameEn="Bottle of Empty Soul">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="soulMaxConsumeCount" val="5" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2195">
+			<player souls="5" />
+		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="10410" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2499" levels="2" nameRu="Бутыль Полного Духа" nameEn="Bottle of Full Soul">
+		<!-- Confirmed CT2.5 -->
+		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#soulmax"> 5 10 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="FocusSouls" noicon="1" val="#soulmax" />
+		</for>
+	</skill>
+</list>

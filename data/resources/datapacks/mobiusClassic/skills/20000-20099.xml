@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="20001" toLevel="1" name="Block Checker Hammer Punch">
+		<!-- Slams the treasure chest down with a hammer to break it open. -->
+		<operateType>A1</operateType>
+		<targetType>DOOR_TREASURE</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>40</castRange>
+		<effectPoint>-1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<conditions>
+			<condition name="OpUnlock" />
+		</conditions>
+	</skill>
+	<skill id="20002" toLevel="1" name="Dragon Kick">
+		<!-- Powerful blow containing the power of a dragon. Attack targets with 3420 Power added to P. Atk. Critical. Over-hit. -->
+		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>20</castRange>
+		<coolTime>167</coolTime>
+		<effectPoint>-347</effectPoint>
+		<effectRange>400</effectRange> <!-- FIXME: value unconfirmed -->
+		<hitTime>2000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel> <!-- FIXME: value unconfirmed -->
+		<mpConsume>55</mpConsume>
+		<reuseDelay>7000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="FatalBlow">
+				<power>3420</power>
+				<overHit>true</overHit>
+				<chanceBoost>200</chanceBoost>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="20003" toLevel="1" name="Dragon Slash">
+		<!-- Powerful blow containing the power of a dragon. Attack targets with 3420 Power added to P. Atk. Critical. Over-hit. -->
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>20</castRange>
+		<coolTime>167</coolTime>
+		<effectPoint>-348</effectPoint>
+		<effectRange>400</effectRange> <!-- FIXME: value unconfirmed -->
+		<hitTime>2000</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel> <!-- FIXME: value unconfirmed -->
+		<mpConsume>55</mpConsume>
+		<reuseDelay>7000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>3420</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="20004" toLevel="1" name="Dragon Dash">
+		<!-- Increases Speed by 100% for 5 sec. with a dragon's strength. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>689</effectPoint>
+		<isMagic>1</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>85</magicLevel>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>25000</reuseDelay>
+		<effects>
+			<effect name="Speed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="20005" toLevel="1" name="Dragon Aura">
+		<!-- For 20 min., P. Critical Rate +30%, P. Critical Damage +35%. -->
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>3</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<castRange>400</castRange>
+		<effectPoint>635</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>70</magicLevel>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>1800000</reuseDelay>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="20006" toLevel="1" name="Soul Roar">
+		<!-- Instantly recovers Max HP/ CP by 15% and for 10 min., and your Max HP/ CP +15%. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>MAX_HP_UP_K</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>635</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>62</magicLevel>
+		<mpConsume>58</mpConsume>
+		<reuseDelay>240000</reuseDelay>
+		<effects>
+			<effect name="CpHealPercent">
+				<power>15</power>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+				<heal>true</heal>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="13339" toLevel="5" name="Enchanted Set Effect: +6 Heavy Armor">
+		<!-- Level 1: <<font color="00FF00">Enchant effect</font>>. Max HP +360. M. Def. +30. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate (standing/ sitting) +4 -->
+		<!-- Level 2: <<font color="00FF00">Enchant effect</font>>. Max HP +360. P. Def. +47. M. Def. +58. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate (standing/ sitting) +4 -->
+		<!-- Level 3: <<font color="00FF00">Enchant effect</font>>. Max HP +560. P. Def. +47. M. Def. +58. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate (standing/ sitting) +4. With an 80% chance, absorbs 2% of inflicted damage as HP. P. Skill Cooldown -4% -->
+		<!-- Level 4: <<font color="00FF00">Enchant effect</font>>. Max HP +560. P. Def. +47. M. Def. +58. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate (standing/ sitting) +4. With an 80% chance, absorbs 2% of inflicted damage as HP. P. Skill Cooldown -4%. Shock Resistance +10% -->
+		<!-- Level 5: <<font color="00FF00">Enchant effect</font>>. Max HP +560. P. Def. +6%. P. Def. +47. M. Def. +58. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate (standing/ sitting) +4. With an 80% chance, absorbs 2% of inflicted damage as HP. P. Skill Cooldown -4%. Shock Resistance +10%. Bow Resistance +10% -->
+		<icon>icon.skill0231</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">360</value>
+					<value level="2">360</value>
+					<value level="3">360</value>
+					<value level="4">360</value>
+					<value level="5">360</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+				</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-4</value>
+					<value level="4">-4</value>
+					<value level="5">-4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-4</value>
+					<value level="4">-4</value>
+					<value level="5">-4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<SHOCK>10</SHOCK>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13340" toLevel="5" name="Enchanted Set Effect: +6 Light Armor">
+		<!-- Level 1: <<font color="00FF00">Enchant effect</font>>. Max HP +200. Max MP +80. M. Def. +30. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate +4 -->
+		<!-- Level 2: <<font color="00FF00">Enchant effect</font>>. Max HP +200. Max MP +80. P. Def. +47. M. Def. +58. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate +4 -->
+		<!-- Level 3: <<font color="00FF00">Enchant effect</font>>. Max HP +200. Max MP +80. P. Def. +47. M. Def. +58. Speed +4. Skill Power +7%. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate +4 -->
+		<!-- Level 4: <<font color="00FF00">Enchant effect</font>>. Max HP +200. Max MP +80. P. Def. +47. M. Def. +58. Speed +4. Skill Power +7%. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate +4. Silence Resistance +5%. Fear Resistance +5%. Shock Resistance +5%. Paralysis Resistance +5% -->
+		<!-- Level 5: <<font color="00FF00">Enchant effect</font>>. Max HP +200. Max MP +80. P. Def. +47. M. Def. +7%. M. Def. +58. Speed +4. Skill Power +7%. HP Recovery Rate (standing/ sitting) +10. MP Recovery Rate +4. Silence Resistance +5%. Fear Resistance +5%. Shock Resistance +5%. Paralysis Resistance +5%. M. Damage Resistance +15% -->
+		<icon>icon.skill0233</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">200</value>
+					<value level="3">200</value>
+					<value level="4">200</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">80</value>
+					<value level="2">80</value>
+					<value level="3">80</value>
+					<value level="4">80</value>
+					<value level="5">80</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<FEAR>5</FEAR>
+				<PARALYZE>5</PARALYZE>
+				<SHOCK>5</SHOCK>
+			</effect>
+			<effect name="MagicalSuccessResistance">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13341" toLevel="5" name="Enchanted Set Effect: +6 Robe">
+		<!-- Level 1: <<font color="00FF00">Enchant effect</font>>. Max MP +140. HP Recovery Rate (standing/ sitting) +4. MP Recovery Rate +6 -->
+		<!-- Level 2: <<font color="00FF00">Enchant effect</font>>. Max MP +28. P. Def. +47. M. Def. +28. HP Recovery Rate (standing/ sitting) +4. MP Recovery Rate +6 -->
+		<!-- Level 3: <<font color="00FF00">Enchant effect</font>>. Max MP +28. P. Def. +47. M. Def. +28. HP Recovery Rate (standing/ sitting) +4. MP Recovery Rate +6. Healing Power +52. M. Skill MP Consumption -4% -->
+		<!-- Level 4: <<font color="00FF00">Enchant effect</font>>. Max MP +28. P. Def. +47. M. Def. +28. HP Recovery Rate (standing/ sitting) +4. MP Recovery Rate +6. Healing Power +52. M. Skill MP Consumption -4%. Paralysis Resistance +10%. Shock Resistance +5% -->
+		<!-- Level 5: <<font color="00FF00">Enchant effect</font>>. Max MP +28. P. Def. +47. M. Def. +28. HP Recovery Rate (standing/ sitting) +4. MP Recovery Rate +6. Healing Power +52. M. Skill MP Consumption -4%. Paralysis Resistance +10%. Shock Resistance +5%. Debuff Resistance +7%. Received P. Critical Rate -20% -->
+		<icon>icon.skill0234</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">140</value>
+					<value level="2">140</value>
+					<value level="3">140</value>
+					<value level="4">140</value>
+					<value level="5">140</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_HP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">6</value>
+				</value>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">47</value>
+					<value level="3">47</value>
+					<value level="4">47</value>
+					<value level="5">47</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">28</value>
+					<value level="3">28</value>
+					<value level="4">28</value>
+					<value level="5">28</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">52</value>
+					<value level="4">52</value>
+					<value level="5">52</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-4</value>
+					<value level="4">-4</value>
+					<value level="5">-4</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="4" toLevel="5">
+				<PARALYZE>10</PARALYZE>
+				<SHOCK>5</SHOCK>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">7</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

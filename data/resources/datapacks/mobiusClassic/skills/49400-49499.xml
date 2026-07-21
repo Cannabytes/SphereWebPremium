@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="49400" toLevel="1" name="Guardian's XP Transfer">
+		<icon>icon.bm_freya_potion</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49401" toLevel="2" name="Pet's Protection - Master Recharge">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Recovers MP over time. Recovers 30 MP every 9.9 sec. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Recovers MP over time. Recovers 50 MP every 9.9 sec. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49402" toLevel="2" name="Pet's Protection - Master Evasion">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Skill Evasion +2%. P. Evasion +5. M. Evasion +5. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Skill Evasion +5%. P. Evasion +10. M. Evasion +10. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+				</amount>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>1</magicType>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49403" toLevel="2" name="Pet's Protection - Master Power">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Skill Power +1%. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Skill Power +2%. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49404" toLevel="2" name="Pet's Protection - Master Health">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Max HP +700. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Max HP +1500. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49405" toLevel="2" name="Pet's Protection - Master Speed">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Speed +2. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. Speed +5. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49406" toLevel="2" name="Pet's Protection - Master Chance">
+		<!-- Level 1: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. All Critical Rate +1%. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<!-- Level 2: <Pet's Protection>. Increases the owner's stats. <font color="FFFF00">Buff</font>. All Critical Rate +3%. Note!. Does not stack with other Pet's Protection effects. While one Pet's Protection is active, you cannot get another. -->
+		<icon>icon.skill11272</icon>
+		<operateType>A2</operateType>
+		<targetType>OWNER_PET</targetType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLevel>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">180</value>
+		</abnormalTime>
+		<abnormalType>PET_PROTECTION</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isMagic>5</isMagic>
+		<mpConsume>100</mpConsume>
+		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49407" toLevel="1" name="While a Master's effect is active">
+		<!-- To test the effect -->
+		<icon>icon.skill11272</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="49451" toLevel="1" name="Guardian's Special HP Recovery Potion">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>PET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Hp">
+				<amount>240</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49452" toLevel="1" name="Scroll: Boost Guardian's Attack">
+		<!-- Guardian's P. Atk. +500. Guardian's M. Atk. +500. Guardian's Skill Power +5%. Guardian's satiety recovery +50%. Guardian's acquired XP +35% -->
+		<icon>icon.dependant_atk_scrl</icon>
+		<operateType>A2</operateType>
+		<targetType>PET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_ATTACK_PET</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>97432</itemConsumeId> <!-- Scroll: Pet Boost Attack -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>200</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="49453" toLevel="1" name="Scroll: Boost Guardian's Defense">
+		<!-- Guardian's P. Def. +800. Guardian's M. Def. +400. Guardian's Max HP +500. Guardian's HP Recovery Potions' Effect +50%. Guardian's acquired XP +35%. Guardian's Skill MP Consumption -20% -->
+		<icon>icon.dependant_def_scrl</icon>
+		<operateType>A2</operateType>
+		<targetType>PET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_DEFENCE_PET</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>97433</itemConsumeId> <!-- Scroll: Boost Pet's Defense -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>400</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>400</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

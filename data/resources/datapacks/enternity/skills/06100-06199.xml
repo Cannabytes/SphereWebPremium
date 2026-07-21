@@ -1,0 +1,1108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="6100" levels="3" nameRu="NPC - Ножницы" nameEn="Turkey's Choice - Scissors">
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6103" levels="5" nameRu="NPC - Победа 1" nameEn="Showdown with the Turkey - 1 Win">
+		<!-- Update by LordWinter -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_WIN" abnormalLvl="#abnormalLvls" />
+		</for>
+	</skill>
+	<skill id="6104" levels="1" nameRu="Отмена Ивента" nameEn="Event Cancel">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6105" levels="1" nameRu="NPC - Проигрыш" nameEn="Turkey's Mistake">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<set name="skillType" val="BUFF" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_SANTA_REWARD" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="maxCp" val="1.1" />
+				<mul order="0x30" stat="runSpd" val="1.15" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.15" />
+				<add order="0x40" stat="rCrit" val="5" />
+				<mul order="0x30" stat="cAtk" val="1.15" />
+				<basemul order="0x30" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6106" levels="1" nameRu="Новогодний Праздник" nameEn="Winter Holiday Festival">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_SANTA_REWARD" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.05" />
+				<mul order="0x30" stat="maxMp" val="1.05" />
+				<mul order="0x30" stat="maxCp" val="1.05" />
+				<add order="0x40" stat="runSpd" val="10" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mAtk" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6107" levels="1" nameRu="Новогоднее Благословение - Глудио" nameEn="Winter Holiday Blessing - Gludio">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6108" levels="1" nameRu="Новогоднее Благословение - Дион" nameEn="Winter Holiday Blessing - Dion">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6109" levels="1" nameRu="Новогоднее Благословение - Гиран" nameEn="Winter Holiday Blessing - Giran">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="T" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6110" levels="1" nameRu="Новогоднее Благословение - Орен" nameEn="Winter Holiday Blessing - Oren">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6111" levels="1" nameRu="Новогоднее Благословение - Аден" nameEn="Winter Holiday Blessing - Aden">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="T" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6112" levels="1" nameRu="Новогоднее Благословение - Иннадрил" nameEn="Winter Holiday Blessing - Innadril">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6113" levels="1" nameRu="Новогоднее Благословение - Годдард" nameEn="Winter Holiday Blessing - Goddard">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6114" levels="1" nameRu="Новогоднее Благословение - Рун" nameEn="Winter Holiday Blessing - Rune">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6115" levels="1" nameRu="Новогоднее Благословение - Шутгарт" nameEn="Winter Holiday Blessing - Schuttgart">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="CONT" />
+		<set name="operateType" val="A2" />
+		<set name="stayAfterDeath" val="true" />
+		<for>
+			<effect ticks="1" name="Buff" val="0" abnormalType="EVENT_TERRITORY" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6116" levels="1" nameRu="Начало Атаки Бешеного Индюка" nameEn="Attack Turkey">
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6117" levels="3" nameRu="Выбор - Ножницы" nameEn="Choice - Scissors">
+		<table name="#icons"> icon.xmas_gawi_i00 icon.xmas_bawi_i00 icon.xmas_bo_i00 </table>
+		<set name="icon" val="#icons" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6120" levels="1" nameRu="Новогодний Подарок" nameEn="Santa Claus' Reward">
+		<set name="abnormalTime" val="3600" />
+		<set name="aggroPoints" val="1" />
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="EVENT_SANTA_REWARD" abnormalLvl="2">
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="maxMp" val="1.1" />
+				<mul order="0x30" stat="maxCp" val="1.1" />
+				<add order="0x40" stat="runSpd" val="15" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="mAtk" val="1.15" />
+				<add order="0x40" stat="rCrit" val="50" />
+				<mul order="0x30" stat="cAtk" val="1.15" />
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6121" levels="1" nameRu="Новогодний Подарок 1 - Агатион" nameEn="Agathion's New Year's Gift 1">
+		<!-- Confirmed CT2.5 -->
+		<set name="coolTime" val="1000" />
+		<set name="hitTime" val="2700" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="14676" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6122" levels="1" nameRu="Новогодний Подарок 2 - Агатион" nameEn="Agathion's New Year's Gift 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="coolTime" val="1000" />
+		<set name="hitTime" val="2700" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="14677" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6123" levels="1" nameRu="Новогодний Подарок 3 - Агатион" nameEn="Agathion's New Year's Wish">
+		<set name="coolTime" val="1000" />
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6124" levels="1" nameRu="Милый Трюк Агатиона" nameEn="Agathion Cute Trick - Saerom">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="16063" />
+		</cond>
+	</skill>
+	<skill id="6125" levels="1" nameRu="Паралич" nameEn="Paralysis">
+		<!-- Summon Binding Cubic Skill Effect -->
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="10" />
+		<set name="icon" val="icon.skill1170" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="Paralyze" val="0" abnormalType="PARALYZE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6126" levels="1" nameRu="Паралич" nameEn="Paralysis">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="10" />
+		<set name="icon" val="icon.skill1170" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="PARALYZE" />
+		<for>
+			<effect name="Paralyze" val="0" abnormalType="PARALYZE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6127" levels="1" nameRu="Бесконечность" nameEn="Anti-limit">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="-1" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="BlockBuffSlot" noicon="1" val="0" abnormalType="BLOCK_ANTI_LIMIT">
+				<param slot="LIMIT" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6128" levels="1" nameRu="Гнев Коровы" nameEn="Presentation - Cow Rage">
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6129" levels="1" nameRu="Оглушение" nameEn="Shock">
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0092" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="6130" levels="1" nameRu="Оглушение Мутировавшего Животного" nameEn="Curse of the Mutant Animal">
+		<set name="affectLimit" val="10-10" />
+		<set name="coolTime" val="2000" />
+		<set name="hitTime" val="6000" />
+		<set name="icon" val="icon.skill0092" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="6131" levels="1" nameRu="Понижение Скорости" nameEn="Decrease Spd">
+		<set name="hitTime" val="2000" />
+    		<set name="hitCancelTime" val="1500" />
+		<set name="icon" val="icon.skill1160" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6132" levels="1" nameRu="Понижение Скор. Атаки" nameEn="Decrease Atk. Spd">
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill4038" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6133" levels="1" nameRu="Таинственный Эффект" nameEn="Effect of Doubt">
+		<set name="icon" val="icon.skill2513" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="ETC" />
+	</skill>
+	<skill id="6134" levels="1" nameRu="Оглушение Мутировавшего Животного" nameEn="Curse of the Mutant Animal">
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill4038" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6135" levels="1" nameRu="Проклятие Мутанта" nameEn="Cow Basic Attack">
+		<set name="coolTime" val="2000" />
+		<set name="hitTime" val="6000" />
+		<set name="icon" val="icon.skill0092" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="staticDamage" val="true" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="6136" levels="1" nameRu="Представление Агатиона - Чучу" nameEn="Agathion Cute Trick - Juju">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="10000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="16064" />
+		</cond>
+	</skill>
+	<skill id="6137" levels="1" nameRu="Агатион Чучу - Любопытство" nameEn="Agathion Juju - Effect of Doubt">
+		<set name="abnormalTime" val="1200" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill2513" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="10000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="16064"/>
+		</cond>
+		<for>
+			<effect name="BigHead" val="0" abnormalType="BIG_HEAD" abnormalLvl="0" abnormalVisualEffect="bighead" />
+		</for>
+	</skill>
+	<skill id="6138" levels="1" nameRu="Агатион Чучу - Фейерверк" nameEn="Agathion Juju - Large Firework">
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="20000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="16064"/>
+		</cond>
+	</skill>
+	<skill id="6139" levels="1" nameRu="Лживые Слезы" nameEn="Fake Tears">
+		<set name="hitTime" val="100" />
+		<set name="icon" val="icon.etc_water_of_silen_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6140" levels="3" nameRu="Популярность" nameEn="Bog Stride">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6141" levels="1" nameRu="Сила Болот" nameEn="Swamp's Wish">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6142" levels="3" nameRu="Горящая Смола" nameEn="Tar Spite">
+		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
+		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
+		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#pDef"> 0.9 0.8 0.7 </table>
+		<table name="#speed"> 0.7 0.4 0.1 </table>
+		<set name="abnormalTime" val="300" />
+		<set name="canBeDispeled" val="false" />
+		<set name="castRange" val="300" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0770" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="-1" />
+		<set name="mpConsume" val="57" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> 
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="SPEED_DOWN" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="runSpd" val="#speed" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
+				<mul order="0x30" stat="rEvas" val="#pDef" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6143" levels="1" nameRu="Древнее Бревно" nameEn="Ancient Beam">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="82" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6144" levels="1" nameRu="Древнее Бревно" nameEn="Ancient Beam">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="82" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6145" levels="1" nameRu="Злой Дух Земляного Змея" nameEn="Earthworm's Evil Aura">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6146" levels="1" nameRu="Жадность" nameEn="Forfeiture of Will">
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6147" levels="1" nameRu="Защита Кхаши" nameEn="Kasha's Divine Protection">
+		<set name="abnormalTime" val="10" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="DMG_SHIELD" abnormalLvl="3">
+				<add order="0x40" stat="vengeancePdam" val="70" />
+				<add order="0x40" stat="reflectSkillPhysic" val="70" />
+				<add order="0x40" stat="reflectDam" val="70" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6148" levels="1" nameRu="Проклятие Алтаря" nameEn="Altar's Curse">
+		<!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
+		<set name="abnormalTime" val="120" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1500" />
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill1064" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="mpConsume" val="59" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="MUTE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Mute" val="0" abnormalType="SILENCE" abnormalLvl="1">
+				<sub order="0x40" stat="accCombat" val="99" />
+				<mul order="0x30" stat="pAtkSpd" val="0.5" />
+				<mul order="0x30" stat="pAtk" val="0.01" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6149" levels="1" nameRu="Клеймо Кхаши" nameEn="Kasha's Betrayal">
+		<!-- Kasha's Betrayal. For 15 minutes, decreases P. Atk./P. Def./moving speed by 50%. -->
+		<!-- Only when a eye explode -->
+		<set name="abnormalTime" val="900" />
+		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="icon.skill0122" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="MULTI_DEBUFF" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="0.5" />
+				<mul order="0x30" stat="pDef" val="0.5" />
+				<mul order="0x30" stat="runSpd" val="0.5" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6150" levels="4" nameRu="Проклятие Кхаши" nameEn="Kasha's Curse">
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 red eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 red eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 red eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 red eyes are present inside the zone -->
+		<table name="#icons"> icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4 </table>
+		<table name="#pAtkSpd"> 1.02 1.04 1.06 1.08 </table>
+		<set name="abnormalTime" val="11" />
+		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="PD_DOWN" abnormalLvl="3">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6151" levels="4" nameRu="Проклятие Кхаши" nameEn="Kasha's Curse">
+		<table name="#icons"> icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6152" levels="4" nameRu="Страсть Кхаши" nameEn="Kasha's Yearning">
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 green eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 green eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 green eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 green eyes are present inside the zone -->
+		<table name="#icons"> icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4 </table>
+		<table name="#pAtk"> 1.02 1.04 1.06 1.08 </table>
+		<set name="abnormalTime" val="11" />
+		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="SIGNAL_A" abnormalLvl="2">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6153" levels="4" nameRu="Страсть Кхаши" nameEn="Kasha's Yearning">
+		<table name="#icons"> icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6154" levels="4" nameRu="Отчаяние Кхаши" nameEn="Kasha's Despair">
+		<!-- Zone Skill -->
+		<!-- Lvl 1 Only if 1 blue eye is present inside the zone -->
+		<!-- Lvl 2 Only if 2 blue eyes are present inside the zone -->
+		<!-- Lvl 3 Only if 3 blue eyes are present inside the zone -->
+		<!-- Lvl 4 Only if 4 blue eyes are present inside the zone -->
+		<table name="#icons"> icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4 </table>
+		<table name="#rCrit"> 150 200 520 750 </table>
+		<set name="abnormalTime" val="11" />
+		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="#icons" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="BLEED" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="MAX_HP_DOWN" abnormalLvl="4" abnormalVisualEffect="bleed">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6155" levels="4" nameRu="Отчаяние Кхаши" nameEn="Kasha's Despair">
+		<table name="#icons"> icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="BLEED" />
+	</skill>
+	<skill id="6166" levels="1" nameRu="Обездвиживание" nameEn="Hold">
+		<set name="affectLimit" val="10-10" />
+		<set name="icon" val="icon.skill4047" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="81" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="HOLD" />
+	</skill>
+	<skill id="6167" levels="12" nameRu="Оглушение" nameEn="Shock">
+		<set name="coolTime" val="800" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="10" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="6168" levels="12" nameRu="Оглушение" nameEn="Shock">
+		<set name="coolTime" val="800" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="10" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="SHOCK" />
+	</skill>
+	<skill id="6169" levels="1" nameRu="Гнев Шиид" nameEn="Shyeed's Fury">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zone Skill -->
+		<set name="abnormalTime" val="60" />
+		<set name="icon" val="icon.skill6169" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff" val="0" abnormalType="PUBLIC_SLOT" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="6170" levels="1" nameRu="Гнев Шиид" nameEn="Shyeed's Fury">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zone Skill -->
+		<set name="abnormalTime" val="60" />
+		<set name="aggroPoints" val="100" />
+		<set name="icon" val="icon.skill6169" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MULTI_BUFF" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="mAtk" val="1.05" />
+				<mul order="0x30" stat="mCritPower" val="1.05" />
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6171" levels="1" nameRu="Непоколебимая Воля" nameEn="Full Authority">
+		<!-- Confirmed CT2.5 -->
+		<!-- Zone Skill -->
+		<set name="abnormalTime" val="60" />
+		<set name="aggroPoints" val="100" />
+		<set name="icon" val="icon.skill6171" />
+		<set name="magicLvl" val="83" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ULTIMATE_BUFF" abnormalLvl="1">
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="mAtk" val="1.05" />
+				<mul order="0x30" stat="mCritPower" val="1.05" />
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="6172" levels="1" nameRu="Демонстрация - Тиран" nameEn="Presentation - Tyranno">
+		<set name="abnormalTime" val="10" />
+		<set name="castRange" val="40" />
+		<set name="aggroPoints" val="-1000" />
+		<set name="effectRange" val="400" />
+		<set name="magicLvl" val="80" />
+		<set name="power" val="2320" />
+		<set name="hitTime" val="2500" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6173" levels="1" nameRu="Демонстрация - Отдых" nameEn="Presentation - Memorial Service for Repose">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="20000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6174" levels="1" nameRu="Демонстрация - Дух Сокровища" nameEn="Presentation - Incense for Relic">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6175" levels="1" nameRu="Демонстрация - Молитва Рассвета" nameEn="Presentation - High Ranking Dawn Priest's Prayer">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="15000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6176" levels="1" nameRu="Демонстрация - Камень Печати Рассвета" nameEn="Presentation - Dawn's Seal Stone">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6177" levels="1" nameRu="Демонстрация - Сообщение Анакима" nameEn="Presentation - Anakim's Message">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="6000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6178" levels="1" nameRu="Демонстрация - Использование последней печати 1" nameEn="Presentation - Ultimate Seal Motion1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6179" levels="1" nameRu="Демонстрация - Использование последней печати 2" nameEn="Presentation - Ultimate Seal Motion2">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="6180" levels="1" nameRu="Демонстрация - Лилит 1" nameEn="Presentation - Lilith Presentation1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="12000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6181" levels="1" nameRu="Демонстрация - Лилит 2" nameEn="Presentation - Lilith Presentation2">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6182" levels="1" nameRu="Демонстрация - Лилит 3" nameEn="Presentation - Lilith Presentation3">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6183" levels="1" nameRu="Демонстрация - Лилит 4" nameEn="Presentation - Lilith Presentation4">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6184" levels="1" nameRu="Демонстрация - Демонстрация Анакима 1" nameEn="Presentation - Anakim's Presentation1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6185" levels="1" nameRu="Демонстрация - Демонстрация Анакима 2" nameEn="Presentation - Anakim's Presentation2">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6186" levels="1" nameRu="Демонстрация - Демонстрация Анакима 3" nameEn="Presentation - Anakim's Presentation3">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6187" levels="1" nameRu="Демонстрация - Битва Лилит" nameEn="Presentation - Lilith Battle">
+		<!-- Update by LordWinter -->
+		<set name="isMagic" val="2" />
+		<set name="power" val="1000" />
+		<set name="magicLvl" val="80" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="2500" />
+		<set name="targetType" val="ONE" />
+		<set name="skillType" val="MDAM" />
+		<set name="operateType" val="A1" />
+	</skill>
+	<skill id="6188" levels="1" nameRu="Демонстрация - Битва доверенного Лилит 1" nameEn="Presentation - Lilith's Steward Battle1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6189" levels="1" nameRu="Демонстрация - Битва доверенного Лилит 2" nameEn="Presentation - Lilith's Steward Battle2">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="POISON" />
+	</skill>
+	<skill id="6190" levels="1" nameRu="Демонстрация - Битва Хранителей Лилит" nameEn="Presentation - Lilith's Bodyguards Battle1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="830" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="HOLD" />
+	</skill>
+	<skill id="6191" levels="1" nameRu="Демонстрация - Битва Анакима" nameEn="Presentation - Anakim Battle">
+		<!-- Update by LordWinter -->
+		<set name="isMagic" val="2" />
+		<set name="power" val="1000" />
+		<set name="magicLvl" val="84" />
+		<set name="castRange" val="700" />
+		<set name="hitTime" val="2000" />
+		<set name="targetType" val="ONE" />
+		<set name="skillType" val="MDAM" />
+		<set name="operateType" val="A1" />
+	</skill>
+	<skill id="6192" levels="1" nameRu="Демонстрация - Битва Хранителя Анакима 1" nameEn="Presentation - Anakim's Guardian Battle1">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6193" levels="1" nameRu="Демонстрация - Битва Хранителя Анакима 2" nameEn="Presentation - Anakim's Guardian Battle2">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6194" levels="1" nameRu="Демонстрация - Битва Стражника Анакима" nameEn="Presentation - Anakim's Guard Battle">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6195" levels="1" nameRu="Демонстрация - Битва Палача Анакима" nameEn="Presentation - Anakim's Executor Battle">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="aggroPoints" val="-100" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="79" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="6196" levels="1" nameRu="Сила Агатиона Ккуль-Ккуль" nameEn="Agathion Oink Oink's Ability">
+		<set name="coolTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="72000000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6197" levels="1" nameRu="Показ Агатиона – Ккуль-Ккуль" nameEn="Agathion Cute Trick - Oink Oink">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="16065" />
+		</cond>
+	</skill>
+	<skill id="6198" levels="1" nameRu="Показ Агатиона – Свет Рассвета" nameEn="Agathion Cute Trick - Light of the Dawn">
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="6199" levels="7" nameRu="Хвост" nameEn="Tail Strike">
+		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
+		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
+		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="500" />
+		<set name="fanRange" val="0,0,150,60" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
+	</skill>
+</list>

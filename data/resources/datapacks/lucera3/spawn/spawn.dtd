@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (spawn|vertex)*>
+<!ELEMENT spawn (mesh|npc)*>
+<!ATTLIST spawn
+        name CDATA #REQUIRED
+        event_name CDATA #IMPLIED>
+<!ELEMENT mesh (vertex)*>
+<!ELEMENT vertex (#PCDATA)>
+<!ATTLIST vertex
+        maxz CDATA #REQUIRED
+        minz CDATA #REQUIRED
+        x CDATA #REQUIRED
+        y CDATA #REQUIRED>
+<!ELEMENT npc (ai_params)*>
+<!ATTLIST npc
+        count CDATA #REQUIRED
+        id CDATA #REQUIRED
+        respawn CDATA #IMPLIED
+        respawn_rand CDATA #IMPLIED
+        respawn_cron CDATA #IMPLIED
+        period_of_day CDATA #IMPLIED
+        pos CDATA #IMPLIED>
+<!ELEMENT ai_params (set)*>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+        name CDATA #REQUIRED
+        val CDATA #REQUIRED>

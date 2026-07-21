@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="17107" toLevel="1" name="Snowman's Buff">
+		<!-- Snowman's present. Once debuffed, no more debuffs can be applied. -->
+		<icon>icon.weapon_snowman_stick_i00</icon>
+		<operateType>A2</operateType>
+		<effectPoint>-2</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="17108" toLevel="1" name="Holiday Blessing">
+		<!-- Restores Vitality when in a peaceful zone. -->
+		<icon>icon.weapon_snowman_stick_i00</icon>
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="17109" toLevel="1" name="-">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17110" toLevel="1" name="Snow Pumpkin Nectar">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>200</castRange>
+		<effectPoint>-150</effectPoint>
+		<effectRange>300</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37543</itemConsumeId> <!-- Snowy Squash Nectar -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>2000</reuseDelay>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13399</item>
+					<item>13400</item>
+					<item>13401</item>
+					<item>13402</item>
+					<item>13403</item>
+					<item>13404</item>
+					<item>13405</item>
+					<item>13406</item>
+				</npcIds>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="17111" toLevel="1" name="Snow Pumpkin Seed">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>1.5</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38923</itemConsumeId> <!-- Snowy Squash Seed -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13399</npcId> <!-- Young Snow Pumpkin -->
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17112" toLevel="1" name="Large Snowy Squash Seed">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>1.5</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38924</itemConsumeId> <!-- Snowy Large Squash Seed -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13403</npcId> <!-- Young Large Snow Pumpkin -->
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17113" toLevel="1" name="Christmas Buff Set 2015">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="17154" toLevel="1" name="Love Potion">
+		<!-- Your body is filled with mysterious sweet energy. Your soul stands still, but your heart is beating like a hammer. For 2 min., P. Atk./ M. Atk. +15%, P. Def./ M. Def. +15%. Equipped weapon changes shape. The effect disappears upon logout. -->
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>2</abnormalLevel>
+		<abnormalLevel>5</abnormalLevel>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>RHAPSODY</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="17192" toLevel="1" name="Head Accessory Display">
+		<!-- Shows/ hides head accessories. -->
+		<icon>icon.skill0810</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<effects>
+			<effect name="HairAccessorySet" />
+		</effects>
+	</skill>
+</list>

@@ -1,0 +1,1378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="5000" levels="1" nameRu="Альфред - Супер Удар" nameEn="Alfred - Super Strike">
+		<!-- CT2.5 retail confirmed -->
+		<set name="castRange" val="1000" />
+		<set name="effectRange" val="2000" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="108" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="10000000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5001" levels="1" nameRu="Альфред - Кража Жизни" nameEn="Alfred - Life Drain">
+		<!-- CT2.5 retail confirmed -->
+		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
+		<set name="castRange" val="750" />
+		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="181" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="111" />
+		<set name="skillType" val="DRAIN" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5002" levels="1" nameRu="Гизель - Ярость Вампира" nameEn="Giselle - Vampiric Rage">
+		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalTime" val="300" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="49" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VAMPIRIC_ATTACK" abnormalLvl="4">
+				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="5003" levels="1" nameRu="Гизель - Буря" nameEn="Giselle - Tempest">
+		<!-- CT2.5 retail confirmed -->
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="5000" />
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="103" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="111" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5004" levels="1" nameRu="Пространственное Оглушение" nameEn="Dimensional Stun">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="abnormalTime" val="2" />
+		<set name="affectRange" val="300" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="flyRadius" val="500" />
+		<set name="flyType" val="THROW_HORIZONTAL" />
+		<set name="hitTime" val="5800" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="5964" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="FLY_AWAY" abnormalLvl="1" effectPower="100" />
+		</for>
+	</skill>
+	<skill id="5005" levels="1" nameRu="Фринтеза: Призыв Призрака" nameEn="Frintezza's Ghost Summoning">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="abnormalTime" val="1" />
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Paralyze" val="0" abnormalType="PARALYZE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5006" levels="1" nameRu="Фринтеза: Мелодия" nameEn="Frintezza's Melody">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="34000" />
+		<set name="hitCancelTime" val="34000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5007" levels="5" nameRu="Фринтеза: Целительная Рапсодия" nameEn="Frintezza's Songs">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<table name="#hitTime"> 32000 32000 32000 31000 35000 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="#hitTime" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5008" levels="5" nameRu="Фринтеза: Мелодия Концертного Зала" nameEn="Frintezza's Songs">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<table name="#healEffect"> 1 1 1 0.5 1 </table>
+		<table name="#attack"> 1 1 1.2 1 1 </table>
+		<table name="#speed"> 1 1.2 1 1 1 </table>
+		<table name="#healPercent"> 3 0 0 0 0 </table>
+		<table name="#skillType"> BUFF BUFF BUFF DEBUFF STUN </table>
+		<table name="#save">NULL NULL NULL MEN MEN</table>
+		<table name="#traits"> NONE NONE NONE DERANGEMENT DERANGEMENT </table>
+		<table name="#isDebuff"> false false false true true </table>
+		<table name="#power"> 100 100 100 100 100 </table>
+		<table name="#abnormalTypes"> NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN </table>
+		<table name="#abnormalTime"> 1 120 120 60 15 </table>
+		<table name="#effectname"> Buff Buff Buff Debuff Stun </table>
+		<table name="#target"> SELF SELF SELF AURA AURA </table>
+		<table name="#skillRadius"> 3000 3000 3000 1000 1500 </table>
+		<set name="power" val="#power" />
+		<set name="affectRange" val="#skillRadius" />
+		<set name="isMagic" val="1" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="isDebuff" val="#isDebuff" />
+		<set name="targetType" val="#target" />
+		<set name="skillType" val="#skillType" />
+		<set name="operateType" val="A1" />
+		<set name="trait" val="#traits" />
+		<set name="saveVs" val="#save" />
+		<for>
+			<effect name="#effectname" val="0" abnormalLvl="1" abnormalTime="#abnormalTime" abnormalType="#abnormalTypes">
+				<mul order="0x30" stat="pAtk" val="#attack" />
+				<mul order="0x30" stat="mAtk" val="#attack" />
+				<mul order="0x30" stat="pAtkSpd" val="#attack" />
+				<mul order="0x30" stat="mAtkSpd" val="#attack" />
+				<add order="0x40" stat="runSpd" val="#speed" />
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
+			</effect>
+			<effect name="HealPercent" noicon="1" val="#healPercent" abnormalTime="1" />
+		</for>
+	</skill>
+	<skill id="5009" levels="1" nameRu="Фринтеза: Призрачный Воин" nameEn="Frintezza's Ghostly Fighter">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="affectRange" val="150" />
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="650" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="6400" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5010" levels="1" nameRu="Фринтеза: Призрачный Маг" nameEn="Frintezza's Ghostly Mage">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="affectRange" val="150" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="106" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5011" levels="1" nameRu="Фринтеза: Призрак Самоубийца" nameEn="Frintezza's Bomber Ghost">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="affectRange" val="150" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="1000" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="364" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5012" levels="1" nameRu="Алое Дыхание" nameEn="Breath of Scarlet">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="abnormalTime" val="9" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill5012" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" abnormalVisualEffect="dancestun" />
+		</for>
+	</skill>
+	<skill id="5013" levels="1" nameRu="Фринтеза: Поглощающий Призрак" nameEn="Frintezza Ghost Drain">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="absorbPart" val="0.8" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="61" />
+		<set name="skillType" val="DRAIN" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5014" levels="3" nameRu="Фринтеза: Атака Демона" nameEn="Frintezza's Daemon Attack">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<table name="#baseCritRate"> 6 8 10 </table>
+		<table name="#magicLvl"> 85 85 90 </table>
+		<table name="#power"> 15835 19096 16176 </table>
+		<set name="affectRange" val="150" />
+		<set name="baseCritRate" val="#baseCritRate" />
+		<set name="castRange" val="150" />
+		<set name="coolTime" val="1200" />
+		<set name="effectRange" val="650" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,150,150" />
+		<set name="hitTime" val="1300" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
+	</skill>
+	<skill id="5015" levels="6" nameRu="Фринтеза: Заряд Демона" nameEn="Frintezza's Daemon Charge">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<table name="#coolTime"> 0 0 0 1500 1500 1500 </table>
+		<table name="#fanRange"> 0,0,400,150 0,0,500,170 0,0,700,200 0,0,400,150 0,0,500,170 0,0,700,200 </table>
+		<table name="#power"> 48761 52970 68074 48761 52970 68074 </table>
+		<table name="#radius"> 400 500 700 400 500 700 </table>
+		<set name="affectRange" val="#radius" />
+		<set name="castRange" val="150" />
+		<set name="coolTime" val="#coolTime" />
+		<set name="effectRange" val="650" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="fanRange" val="#fanRange" />
+		<set name="flyRadius" val="#radius" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="5015" />
+		</cond>
+	</skill>
+	<skill id="5016" levels="1" nameRu="Алый Хомут" nameEn="Yoke of Scarlet">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="abnormalTime" val="20" />
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="500" />
+		<set name="coolTime" val="1000" />
+		<set name="effectRange" val="1000" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill5016" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Paralyze" val="0" abnormalType="PARALYZE" abnormalLvl="1" abnormalVisualEffect="floatroot" />
+		</for>
+	</skill>
+	<skill id="5017" levels="1" nameRu="Фринтеза: Форма Демона" nameEn="Frintezza's Daemon Morph">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="abnormalTime" val="7200" />
+		<set name="aggroPoints" val="100" />
+		<set name="coolTime" val="1000" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Grow" val="0" abnormalType="BIG_BODY" abnormalLvl="1">
+				<mul order="0x30" stat="runSpd" val="1.22" />
+			</effect>
+			<effect name="HealPercent" noicon="1" val="20" abnormalTime="1" />
+		</for>
+	</skill>
+	<skill id="5018" levels="2" nameRu="Фринтеза: Поле Демона" nameEn="Frintezza's Daemon Field">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<table name="#power"> 607 754 </table>
+		<table name="#skillRadius"> 700 1000 </table>
+		<set name="affectRange" val="#skillRadius" />
+		<set name="coolTime" val="1000" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="7000" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5019" levels="1" nameRu="Фринтеза: Поглощение Демона" nameEn="Frintezza's Daemon Drain">
+		<!-- Confirmed CT2.5 -->
+		<!-- Frintezza Skills -->
+		<set name="absorbPart" val="0.8" />
+		<set name="affectRange" val="1000" />
+		<set name="coolTime" val="4000" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="6000" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="314" />
+		<set name="skillType" val="DRAIN" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5020" levels="1" nameRu="Принуждение" nameEn="Forced Action">
+		<!-- Crumples to the ground because of unknown power. -->
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="5000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="HOLD" />
+	</skill>
+	<skill id="5021" levels="12" nameRu="Дыхание Эйнхасад" nameEn="Inspiration of Einhasad">
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="icon" val="icon.skill1043" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="25000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5022" levels="12" nameRu="Понизить Скорость" nameEn="Decrease Speed">
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="icon" val="icon.skill1160" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5023" levels="12" nameRu="Удержание" nameEn="Hold">
+		<set name="icon" val="icon.skill4047" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="10" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="HOLD" />
+	</skill>
+	<skill id="5024" levels="12" nameRu="Понизить Скор. Атк." nameEn="Decrease Atk. Spd.">
+		<!-- Update by LordWinter -->
+		<table name="#Tab-pAtkSpd">0.9 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#power">1 3 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="operateType" val="A1" />
+		<set name="saveVs" val="MEN" />
+		<set name="targetType" val="ONE" />
+		<set name="skillType" val="DEBUFF" />
+		<for>
+			<effect name="Buff" val="1" abnormalType="ATTACK_TIME_UP" abnormalLvl="#abnormalLvls">
+				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5025" levels="1" nameRu="Рейдовый Босс - Уровень 30" nameEn="Raid Boss - Level 30">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5026" levels="1" nameRu="Рейдовый Босс - Уровень 39" nameEn="Raid Boss - Level 39">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5027" levels="1" nameRu="Рейдовый Босс - Уровень 37" nameEn="Raid Boss - Level 37">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5028" levels="1" nameRu="Рейдовый Босс - Уровень 53" nameEn="Raid Boss - Level 53">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5029" levels="1" nameRu="Рейдовый Босс - Уровень 52" nameEn="Raid Boss - Level 52">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5030" levels="1" nameRu="Рейдовый Босс - Уровень 59" nameEn="Raid Boss - Level 59">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5031" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5032" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5033" levels="1" nameRu="Рейдовый Босс - Уровень 80" nameEn="Raid Boss - Level 80">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5034" levels="1" nameRu="Рейдовый Босс - Уровень 73" nameEn="Raid Boss - Level 73">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5035" levels="1" nameRu="Рейдовый Босс - Уровень 76" nameEn="Raid Boss - Level 76">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5036" levels="1" nameRu="Рейдовый Босс - Уровень 60" nameEn="Raid Boss - Level 60">
+		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skillraid" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5037" levels="3" nameRu="Понизить Скор. Маг." nameEn="Decrease Casting Spd">
+		<set name="icon" val="icon.skill1206" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5038" levels="16" nameRu="Призвать штраф PVP" nameEn="Summon PVP Penalty">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#pvpDmg"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5 </table>
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpDmg" />
+			<mul order="0x30" stat="pvpPhysDmg" val="#pvpDmg" />
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpDmg" />
+		</for>
+	</skill>
+	<skill id="5039" levels="1" nameRu="NPC: Сверхмощная Бомба" nameEn="NPC - Ultra Bomb">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5040" levels="12" nameRu="NPC: Целительное Зелье" nameEn="NPC - Healing Potion">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#hot"> 7 12 18 27 37 46 55 58 61 64 66 67 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 1 1 1 1 1 1 1 193 201 207 209 209 </table>
+		<table name="#mpInitialConsume"> 1 1 1 1 1 1 1 49 51 52 53 53 </table>
+		<set name="affectRange" val="1000" />
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealOverTime" ticks="15" val="#hot" abnormalTime="1" abnormalType="LIFE_FORCE_OTHERS" abnormalLvl="#abnormalLvls" />
+		</for>
+	</skill>
+	<skill id="5041" levels="6" nameRu="Чары Храбрости" nameEn="Charm of Courage">
+		<table name="#itemConsumeId">8515 8516 8517 8518 8519 8520</table>
+		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
+		<set name="icon" val="icon.skill5041" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeId" val="#itemConsumeId" />
+        	<set name="itemConsumeCount" val="1" />
+        	<set name="operateType" val="A2" />
+        	<set name="skillType" val="BUFF" />
+        	<set name="targetType" val="SELF" />
+        	<set name="stayAfterDeath" val="true" />
+        	<set name="reuseDelay" val="1200000" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player siegeZone="true" />
+			</and>
+		</cond>
+		<cond msgId="1902">
+			<player levelRange="#levelRange" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="CharmOfCourage" val="0" noicon="1" abnormalTime="1200" />
+		</for>
+	</skill>
+	<skill id="5042" levels="12" nameRu="NPC: Бомба Отмены Колдовства" nameEn="NPC Dispel Bomb">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
+		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 378 </table>
+		<set name="affectRange" val="150" />
+		<set name="aggroPoints" val="100" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0">
+				<param slot="buff" rate="25" max="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5043" levels="12" nameRu="NPC: Звуковой Супервзрыв" nameEn="NPC Super Sonic Blaster">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
+		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="1200" />
+		<set name="effectRange" val="1700" />
+		<set name="hitTime" val="1900" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="7000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5044" levels="3" nameRu="NPC: Предельная Защита" nameEn="NPC Ultimate Defense">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#abnormalLvls"> 1 2 2 </table>
+		<table name="#abnormalTimes"> 30 30 5 </table>
+		<table name="#magicLvl"> 20 46 1 </table>
+		<table name="#mDef"> 1350 2700 9000 </table>
+		<table name="#mpConsume"> 10 21 0 </table>
+		<table name="#pDef"> 1800 3600 9000 </table>
+		<table name="#reuseDelay"> 1800000 1800000 5000 </table>
+		<table name="#time"> 30 30 5 </table>
+		<set name="abnormalTime" val="#abnormalTimes" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="#reuseDelay" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="ImmobileBuff" val="0" abnormalType="PD_UP_SPECIAL" abnormalLvl="#abnormalLvls" abnormalVisualEffect="invulnerable">
+				<add order="0x40" stat="pDef" val="#pDef" />
+				<add order="0x40" stat="mDef" val="#mDef" />
+				<sub order="0x40" stat="cancelVuln" val="80" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5045" levels="12" nameRu="Замок: Мощный Удар" nameEn="Castle Power Strike">
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
+		<table name="#power"> 65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351 </table>
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5046" levels="12" nameRu="Замок: Мощный Выстрел" nameEn="Castle Power Shot">
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
+		<table name="#power"> 65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351 </table>
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2100" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5047" levels="12" nameRu="Замок: Вихрь" nameEn="Castle Spinning Slash">
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="15000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5048" levels="12" nameRu="Замок: Взрывной Выстрел" nameEn="Castle Burst Shot">
+		<set name="affectLimit" val="5-12" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="25000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5049" levels="12" nameRu="Замок: Импульс" nameEn="Castle Blow">
+		<set name="blowChance" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5050" levels="12" nameRu="Замок: Направл. Огонь" nameEn="Castle DD Fire">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5051" levels="12" nameRu="Замок: Внутренний Купол Огня" nameEn="Castle Self AE Fire">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
+		<table name="#power"> 31 36 41 46 51 57 61 66 70 73 76 78 </table>
+		<set name="affectRange" val="200" />
+		<set name="aggroPoints" val="100" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5052" levels="12" nameRu="Замок: Большой Купол Огня" nameEn="Castle Long AE Fire">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
+		<table name="#power"> 26 30 34 39 43 47 51 55 58 61 63 65 </table>
+		<set name="affectRange" val="200" />
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2000" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5053" levels="12" nameRu="Замок: Направл. Вода" nameEn="Castle DD Water">
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2100" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5054" levels="12" nameRu="Замок: Внутренний Купол Воды" nameEn="Castle Self AE Water">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5055" levels="12" nameRu="Замок: Большой Купол Воды" nameEn="Castle Long AE Water">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5056" levels="12" nameRu="Замок: Направл. Ветер" nameEn="Castle DD Wind">
+		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
+		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
+		<table name="#power"> 52 60 68 77 85 94 102 110 116 122 126 129 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2000" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5057" levels="12" nameRu="Замок: Внутренний Купол Ветра" nameEn="Castle Self AE Wind">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5058" levels="12" nameRu="Замок: Большой Купол Ветра" nameEn="Castle Long AE Wind">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5059" levels="12" nameRu="Замок: Направл. Земля" nameEn="Castle DD Earth">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5060" levels="12" nameRu="Замок: Внутренний Купол Земли" nameEn="Castle Self AE Earth">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5061" levels="12" nameRu="Замок: Большой Купол Земли" nameEn="Castle Long AE Earth">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5062" levels="12" nameRu="Замок: Направл. Святость" nameEn="Castle DD Holy">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5063" levels="12" nameRu="Замок: Внутренний Купол Святости" nameEn="Castle Self AE Holy">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5064" levels="12" nameRu="Замок: Большой Купол Святости" nameEn="Castle Long AE Holy">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5065" levels="12" nameRu="Замок: Направл. Порок" nameEn="Castle DD Unholy">
+		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
+		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2100" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5066" levels="12" nameRu="Замок: Внутренний Купол Порока" nameEn="Castle Self AE Unholy">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5067" levels="12" nameRu="Замок: Большой Купол Порока" nameEn="Castle Long AE Unholy">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5068" levels="12" nameRu="Понижение Скорости" nameEn="Decrease Speed">
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1160" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="7000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5069" levels="12" nameRu="Понижение Скор. Атк." nameEn="Decrease Atk. Spd.">
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill4038" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5070" levels="12" nameRu="Понижение Скор. Маг." nameEn="Decrease Casting Spd">
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill1206" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5071" levels="12" nameRu="Понижение Физ. Атк." nameEn="Decrease P. Atk.">
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill4037" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5072" levels="12" nameRu="Понижение Маг. Атк." nameEn="Decrease M. Atk.">
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5073" levels="12" nameRu="Квест. Ловушка - Мощный Выстрел" nameEn="Quest Trap - Power Shot">
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="1500" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5074" levels="1" nameRu="Победитель" nameEn="The Victor of War">
+		<set name="icon" val="icon.skill5074" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<mul order="0x30" stat="maxCp" val="1.1" />
+		</for>
+	</skill>
+	<skill id="5075" levels="1" nameRu="Проигравший" nameEn="The Vanquished of War">
+		<set name="icon" val="icon.skill5075" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<mul order="0x30" stat="maxCp" val="0.9" />
+		</for>
+	</skill>
+	<skill id="5076" levels="15" nameRu="Штраф Смерти" nameEn="Death Penalty">
+		<table name="#accCombatrEvas"> 5 9 13 17 21 25 29 33 37 40 42 44 46 48 50 </table>
+		<table name="#icons"> icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c </table>
+		<table name="#pAtkpAtkSpdmAtkmAtkSpd"> 0.9 0.81 0.73 0.66 0.6 0.55 0.51 0.47 0.44 0.41 0.38 0.35 0.32 0.28 0.25 </table>
+		<table name="#pDefmDef"> 0.91 0.83 0.77 0.72 0.68 0.65 0.62 0.59 0.56 0.53 0.5 0.47 0.44 0.42 0.4 </table>
+		<table name="#runSpd"> 0.95 0.9 0.87 0.83 0.8 0.77 0.74 0.71 0.68 0.66 0.64 0.63 0.62 0.61 0.6 </table>
+		<set name="icon" val="#icons" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<mul order="0x30" stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+			<sub order="0x40" stat="accCombat" val="#accCombatrEvas" />
+			<sub order="0x40" stat="rEvas" val="#accCombatrEvas" />
+			<mul order="0x30" stat="pDef" val="#pDefmDef" />
+			<mul order="0x30" stat="mDef" val="#pDefmDef" />
+			<mul order="0x30" stat="runSpd" val="#runSpd" />
+		</for>
+	</skill>
+	<skill id="5077" levels="1" nameRu="NPC: Снять Штраф Смерти" nameEn="NPC Remove Death Penalty">
+		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5078" levels="1" nameRu="Фринтеза: Критическая Мощь" nameEn="Frintezza Critical Power">
+		<!-- CT2.5 retail confirmed -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<mul order="0x30" stat="cAtk" val="1.5" />
+		</for>
+	</skill>
+	<skill id="5079" levels="1" nameRu="NPC: Сфокусированное Ускорение" nameEn="NPC Focused Haste">
+		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalTime" val="120" />
+		<set name="affectRange" val="900" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="2">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5080" levels="1" nameRu="NPC: Мощное Ускорение" nameEn="NPC Mighty Haste">
+		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalTime" val="120" />
+		<set name="affectRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0100" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="2">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5081" levels="4" nameRu="Безмолвие" nameEn="Silence">
+		<table name="#mpConsume"> 75 75 75 20 </table>
+		<table name="#power"> 1715 3540 7306 8602 </table>
+		<set name="abnormalTime" val="15" />
+		<set name="blowChance" val="20" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="800" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill5081" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="BLOW" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalMute" val="0" abnormalType="SILENCE_PHYSICAL" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5082" levels="4" nameRu="NPC: Трюк Кручения и Рассекания" nameEn="NPC Spinning, Slashing Trick">
+		<table name="#mpConsume"> 60 60 60 5 </table>
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="2112" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5083" levels="4" nameRu="Оглушение" nameEn="Stun">
+		<table name="#mpConsume"> 93 93 93 5 </table>
+		<table name="#power"> 1715 3540 7305 8602 </table>
+		<set name="abnormalTime" val="9" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="800" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill5083" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" val="0" abnormalType="STUN" abnormalLvl="1" effectPower="50" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5084" levels="4" nameRu="NPC: Ослепляющий Порыв" nameEn="NPC Blinding Blow">
+		<set name="abnormalTime" val="15" />
+		<set name="blowChance" val="15" />
+		<set name="castRange" val="40" />
+		<set name="condition" val="16" /> <!-- Crit -->
+		<set name="coolTime" val="720" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A3" />
+		<set name="power" val="6335" />
+		<set name="skillType" val="BLOW" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect self="1" name="Buff" val="0" abnormalType="SPEED_UP_SPECIAL" abnormalLvl="1">
+				<add order="0x40" stat="runSpd" val="40" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5085" levels="1" nameRu="Анестезия" nameEn="Anesthesia">
+		<!-- Temporarily stunned and Immobilized. -->
+		<set name="hitTime" val="3300" />
+		<set name="icon" val="icon.skill5085" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5086" levels="1" nameRu="Смертельное Отравление" nameEn="Deadly Poison">
+		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
+		<set name="hitTime" val="3300" />
+		<set name="icon" val="icon.skill5086" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="POISON" />
+	</skill>
+	<skill id="5087" levels="2" nameRu="Берсерк" nameEn="Berserk">
+		<!-- Confirmed CT2.5 -->
+		<table name="#pAtk"> 1.9 2.8 </table>
+		<table name="#pAtkSpd"> 1.15 1.33 </table>
+		<table name="#pDef"> 1 2.8 </table>
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="pDef" val="#pDef" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5088" levels="1" nameRu="Сигнал" nameEn="Signal">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="300" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5089" levels="1" nameRu="Изображение - Вход в Логово Сэйлрена" nameEn="Representation - Enter the Sailren Nest Quest">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5090" levels="1" nameRu="Производство Сэйлрена" nameEn="Sailren Production">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5091" levels="1" nameRu="Производство Сэйлрена 2" nameEn="Sailren Production 2">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5092" levels="1" nameRu="Ужас Антараса" nameEn="Antharas Terror">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Antharas Skills -->
+		<set name="affectRange" val="400" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="2700" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill4108" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="FEAR" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Fear" val="0" ticks="20" abnormalTime="1" abnormalType="TURN_FLEE" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="5093" levels="1" nameRu="Метеор Антараса" nameEn="Antharas Meteor">
+		<!-- Confirmed CT2.5 -->
+		<!-- Antharas Skills -->
+		<set name="affectRange" val="150" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="8000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="1084" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
+	</skill>
+	<skill id="5094" levels="1" nameRu="Самоубийство Слуги Антараса" nameEn="Antharas Subordinate Suicide ">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="250" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="180" />
+		<set name="hitTime" val="100" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="473" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5095" levels="1" nameRu="Ближняя Атака Слуги Антараса" nameEn="Antharas Subordinate Melee Attack">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="30215" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5096" levels="1" nameRu="Дистанционная Атака Слуги Антараса" nameEn="Antharas Subordinate Remote Attack">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="83" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="88254" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5097" levels="1" nameRu="Самоубийство Слуги Антараса (Узкий Сектор)" nameEn="Antharas Subordinate Suicide (Narrow Range)">
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="150" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="100" />
+		<set name="isSuicideAttack" val="true" />
+		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="473" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="5098" levels="2" nameRu="Штраф Захвата" nameEn="Capture Penalty">
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="5099" levels="1" nameRu="Отменить Захват A" nameEn="Cancel Capture A">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+</list>

@@ -1,1 +1,0 @@
-import{t as e}from"./axios-BGnIaeuU.js";var t={getVersion:async()=>(await e.get(`/version`)).data};export{t};

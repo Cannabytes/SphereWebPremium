@@ -1,0 +1,1807 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="22000" levels="1" nameRu="Острое Кимчхи" nameEn="Spicy Kimchee">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="1200" />
+		<set name="itemConsumeId" val="20000" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1">
+				<mul order="0x30" stat="regHp" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22001" levels="1" nameRu="Острое Кимчхи" nameEn="Spicy Kimchee">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="1200" />
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="20001" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1">
+				<mul order="0x30" stat="regHp" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22002" levels="1" nameRu="Острое Кимчхи" nameEn="Spicy Kimchee">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="1200" />
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="20002" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1">
+				<mul order="0x30" stat="regHp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22003" levels="1" nameRu="Свежее Кимчхи" nameEn="Sweet-and-Sour White Kimchee">
+		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22004" levels="1" nameRu="Женьшень" nameEn="Energy Ginseng">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalInstant" val="true" />
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF2" abnormalLvl="1" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22005" levels="1" nameRu="Красный Женьшень" nameEn="Energy Red Ginseng">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="600" />
+		</for>
+	</skill>
+	<skill id="22006" levels="1" nameRu="Конфета на Хэллоуин" nameEn="Halloween Candy">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+              	<set name="reuseDelay" val="600000" />
+		<set name="itemConsumeId" val="20034" />
+              	<set name="itemConsumeCount" val="1" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
+	</skill>
+	<skill id="22007" levels="1" nameRu="Мешок Удачи" nameEn="Good Luck Lucky Bag">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22008" levels="1" nameRu="Четырехлистный Клевер" nameEn="Lucky Four-leaf Clover">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22009" levels="1" nameRu="Новогоднее Чудо" nameEn="Holiday Miracle">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20094,1,20;20095,1,80
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22010" levels="1" nameRu="Удивительные Одеяния" nameEn="Mysterious Formal Dress">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20098,1,20;20099,1,80
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22011" levels="1" nameRu="Подарок Деда Мороза - Радость" nameEn="Santa Claus' Gift - Joy">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20103,1,20104,1,20105,1,20106,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22012" levels="1" nameRu="Подарок Деда Мороза - Интерес" nameEn="Santa Claus' Gift - Enjoyment">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10606,1,10;5561,1,90
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22013" levels="1" nameRu="Новогодний Фестиваль" nameEn="Holiday Festival">
+		<set name="abnormalTime" val="1800" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player class_id_restriction="0,1,2,3,4,5,6,18,19,20,21,31,32,33,34,44,45,46,53,54,55,56,57,88,89,90,91,99,100,106,107,113,117,118" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="3">
+				<mul order="0x30" stat="maxHp" val="1.6" />
+				<mul order="0x30" stat="maxMp" val="1.6" />
+				<mul order="0x30" stat="maxCp" val="1.6" />
+				<mul order="0x30" stat="pAtk" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<add order="0x40" stat="runSpd" val="30" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22014" levels="1" nameRu="Новогодний Фестиваль" nameEn="Holiday Festival">
+		<set name="abnormalTime" val="1800" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player class_id_restriction="7,8,9,22,23,24,35,36,37,47,48,92,93,101,102,108,109,114,123,124,125,126,127,128,129,130,131,132,133,134,135,136" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="3">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="pAtk" val="1.3" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.85" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22015" levels="1" nameRu="Новогодний Фестиваль" nameEn="Holiday Festival">
+		<set name="abnormalTime" val="1800" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="113" addName="1">
+			<player class_id_restriction="15,16,17,29,30,42,43,97,98,105,112" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="3">
+				<mul order="0x30" stat="maxHp" val="1.6" />
+				<mul order="0x30" stat="maxMp" val="1.6" />
+				<mul order="0x30" stat="maxCp" val="1.6" />
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.7" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22016" levels="1" nameRu="Новогодний Фестиваль" nameEn="Holiday Festival">
+		<set name="abnormalTime" val="1800" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<cond msgId="113" addName="1">
+			<player class_id_restriction="10,11,12,13,14,25,26,27,28,38,39,40,41,49,50,51,52,94,95,96,103,104,110,111,115,116" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="3">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="mAtk" val="1.45" />
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.85" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22017" levels="1" nameRu="Подарок Деда Мороза - Удача" nameEn="Santa Claus' Gift - Luck">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20107,1,99.99948;20108,1,0.00051
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22018" levels="1" nameRu="Подарок Деда Мороза - Удача" nameEn="Santa Claus' Gift - Luck">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20108,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22019" levels="1" nameRu="Билет в Зал Камалоки" nameEn="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+		<!-- Updated by LordWinter -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeId" val="20026" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+              	<cond msgId="113" addName="1">
+                	<player reflectionEntry="1:1" />
+              	</cond>
+		<for>
+			<effect name="ResetReflectionEntry" noicon="1" val="0">
+				<param sharedReuseGroup="1" attempts="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22020" levels="1" nameRu="Билет в Окрестности Камалоки" nameEn="Extra Entrance Pass - Near Kamaloka">
+		<!-- Updated by LordWinter -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeId" val="20027" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+              	<cond msgId="113" addName="1">
+                	<player reflectionEntry="2:1" />
+              	</cond>
+		<for>
+			<effect name="ResetReflectionEntry" noicon="1" val="0">
+				<param sharedReuseGroup="2" attempts="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22021" levels="1" nameRu="Билет в Дворец Камалоки" nameEn="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
+		<!-- Updated by LordWinter -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="itemConsumeId" val="20028" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+              	<cond msgId="113" addName="1">
+                	<player reflectionEntry="4:1" />
+              	</cond>
+		<for>
+			<effect name="ResetReflectionEntry" noicon="1" val="0">
+				<param sharedReuseGroup="4" attempts="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22022" levels="1" nameRu="Декорации Валентина - Премиум" nameEn="Premium Valentine Decoration">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20107,1,99.99948;20108,1,0.00051
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22023" levels="1" nameRu="Невзрачный Торт Валентина" nameEn="Simple Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			10134,1,9;10138,1,9;1539,4,41;1540,3,16;20196,1,25
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22024" levels="1" nameRu="Простой Торт Валентина" nameEn="Velvety Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			948,2,14;952,3,19;1538,1,11;3936,1,6;20200,1,20;20197,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22025" levels="1" nameRu="Вкусный Торт Валентина" nameEn="Delectable Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			947,2,14;951,3,39;20201,1,17;20198,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22026" levels="1" nameRu="Совершенный Торт Валентина" nameEn="Decadent Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			959,1,14;729,2,26;20202,1,35;20203,1,25
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22027" levels="1" nameRu="Фантастический Торт Валентина" nameEn="Heavenly Valentine Cake">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			6659,1,0.00661;6660,1,0.1;20208,1,8;20206,1,11;20207,1,18;20204,1,62.893
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22028" levels="1" nameRu="Шоколадное Печенье" nameEn="Chocolate Cookie">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+                <set name="reuseDelay" val="60000" />
+		<set name="itemConsumeId" val="20214" />
+               	<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
+	</skill>
+	<skill id="22029" levels="1" nameRu="Настойка - Багет" nameEn="Baguette Herb">
+		<set name="abnormalInstant" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="Buff" abnormalVisualEffect="afrobaguette1" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1">
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22030" levels="1" nameRu="Настойка - Эклер" nameEn="Cream Puff Herb">
+		<set name="abnormalInstant" val="true" />
+		<set name="abnormalTime" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="BranchSys.icon.br_herb_of_cream_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1" abnormalVisualEffect="vitality,afrobaguette2">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22031" levels="1" nameRu="Настойка - Сырный Пирог" nameEn="Cheesecake Herb">
+		<set name="abnormalInstant" val="true" />
+		<set name="abnormalTime" val="600" />
+		<set name="hitTime" val="100" />
+		<set name="icon" val="BranchSys.icon.br_herb_of_cheesecake_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1" abnormalVisualEffect="afrobaguette3">
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22032" levels="1" nameRu="Наследие Багета" nameEn="Baguette Legacy">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20255,1,8.34;20256,1,8.34;20257,1,8.34;20258,1,8.34;20259,1,8.34;20260,1,8.34;20261,1,8.34;20262,1,8.34;20263,1,8.34;20264,1,8.34;20265,1,8.34;20270,1,8.26
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22033" levels="1" nameRu="Наследие Багета - Для Камаэлей" nameEn="Baguette Legacy - Kamael">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20268,1,33;20269,1,33;20267,1,34
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22034" levels="1" nameRu="Праздничный Торт" nameEn="Birthday Cake">
+		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="106" npcCount="1" despawnDelay="1200000" isSummonSpawn="true" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22035" levels="1" nameRu="Эффект Праздничного Торта" nameEn="Birthday Cake Effect">
+		<!-- Confirmed CT2.5 -->
+		<!-- Birthday Skill -->
+		<set name="abnormalTime" val="120" />
+		<set name="affectRange" val="200" />
+		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="1">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22036" levels="1" nameRu="Заряд Души Зверя" nameEn="Beast Soulshot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="SOULSHOT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22037" levels="1" nameRu="Заряд Духа Зверя" nameEn="Beast Spiritshot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPIRITSHOT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22038" levels="1" nameRu="Благословенный Заряд Духа Зверя" nameEn="Blessed Beast Spiritshot">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPIRITSHOT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22039" levels="2" nameRu="Руна Опыта 30%" nameEn="Rune of Experience Points">
+		<!-- Update by LordWinter -->
+		<table name="#rRExp"> 1.3 1.5</table> 
+		<set name="targetType" val="SELF" /> 
+		<set name="skillType" val="BUFF" /> 
+		<set name="operateType" val="P" /> 
+		<for> 
+			<mul order="0x30" stat="rRExp" val="#rRExp" /> 
+		</for>
+	</skill>
+	<skill id="22040" levels="2" nameRu="Руна SP 30%" nameEn="Rune of SP">
+		<!-- Update by LordWinter -->
+		<table name="#rRSp"> 1.3 1.5</table>  
+		<set name="targetType" val="SELF" />  
+		<set name="skillType" val="BUFF" />  
+		<set name="operateType" val="P" />  
+		<for>  
+			<mul order="0x30" stat="rRSp" val="#rRSp" />  
+		</for>
+	</skill>
+	<skill id="22041" levels="2" nameRu="Руна Кристалла 3 ур." nameEn="Rune of Crystal Form Level">
+		<!-- Update by LordWinter -->
+		<table name="#power">3 5</table>
+		<set name="magicLvl" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<add order="0x40" stat="gradeExpertiseLevel" val="#power" />
+		</for>
+	</skill>
+	<skill id="22042" levels="1" nameRu="Большое Зелье CP" nameEn="High Grade Potion of Will">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="200" />
+		</for>
+	</skill>
+	<skill id="22043" levels="6" nameRu="Боевой Эликсир CP" nameEn="Secret medicine of Will">
+		<!-- Confirmed CT2.5 -->
+		<!-- Level 1 doesn't exist in client. -->
+		<table name="#amount"> 0 800 1500 2000 2500 3000 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="#levelRange" />
+		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="#amount" />
+		</for>
+	</skill>
+	<skill id="22044" levels="6" nameRu="Боевой Эликсир Жизни" nameEn="Secret medicine of Life">
+		<!-- Confirmed CT2.5 -->
+		<!-- Level 1 doesn't exist in client. -->
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="#levelRange" />
+		</cond>
+		<for>
+			<effect name="HealPercent" noicon="1" val="50" />
+		</for>
+	</skill>
+	<skill id="22045" levels="1" nameRu="Трансформация: Зверь Знамения" nameEn="Omen Beast Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="1" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22046" levels="1" nameRu="Трансформация: Роковое Видение" nameEn="Death Blader Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="2" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22047" levels="1" nameRu="Трансформация: Апостол Грааля" nameEn="Grail Apostle Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="203" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22048" levels="1" nameRu="Трансформация: Единорог" nameEn="Unicorn Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="206" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22049" levels="1" nameRu="Трансформация: Рыцарь Лилим" nameEn="Lilim Knight Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="209" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22050" levels="1" nameRu="Трансформация: Голем Стражник" nameEn="Golem Guardian Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="212" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22051" levels="1" nameRu="Трансформация: Инфернальный Дрейк" nameEn="Inferno Drake Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="215" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22052" levels="1" nameRu="Трансформация: Панцирный Дракон" nameEn="Dragon Bomber Transformation Scroll">
+		<set name="abnormalTime" val="1800" />
+		<set name="icon" val="icon.skilltransform2" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" val="218" abnormalType="TRANSFORM" abnormalLvl="9" />
+		</for>
+	</skill>
+	<skill id="22053" levels="19" nameRu="Телепорт: Говорящий Остров" nameEn="Escape">
+		<!-- Confirmed CT2.5 -->
+		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
+		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
+		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 </table>
+		<set name="hitTime" val="20000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22054" levels="1" nameRu="Зелье Поддержания Энергии" nameEn="Potion of Energy Maintenance">
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skilltransform4" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="1" abnormalVisualEffect="vitality">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22055" levels="1" nameRu="Зелье Всплеска Энергии" nameEn="Potion of Energy Replenishing">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="5000" />
+		</for>
+	</skill>
+	<skill id="22056" levels="1" nameRu="Легкая Походка" nameEn="Wind Walk">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SPEED_UP" abnormalLvl="9">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22057" levels="1" nameRu="Ускорение" nameEn="Haste">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ATTACK_TIME_DOWN" abnormalLvl="9">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22058" levels="1" nameRu="Могущество" nameEn="Might">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PA_UP" abnormalLvl="9">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22059" levels="1" nameRu="Щит" nameEn="Shield">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="PD_UP" abnormalLvl="9">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22060" levels="1" nameRu="Смертельный Шепот" nameEn="Death Whisper">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_DMG_UP" abnormalLvl="9">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22061" levels="1" nameRu="Наведение" nameEn="Guidance">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HIT_UP" abnormalLvl="9">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22062" levels="1" nameRu="Воодушевление" nameEn="Empower">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MA_UP" abnormalLvl="9">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22063" levels="1" nameRu="Великая Проницательность" nameEn="Greater Acumen">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CASTING_TIME_DOWN" abnormalLvl="9">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22064" levels="1" nameRu="Ярость Вампира" nameEn="Vampiric Rage">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="VAMPIRIC_ATTACK" abnormalLvl="9">
+				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="22065" levels="1" nameRu="Благословение Тела" nameEn="Bless the Body">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_HP_UP" abnormalLvl="9">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22066" levels="1" nameRu="Дух Берсерка" nameEn="Berserker Spirit">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BERSERKER" abnormalLvl="9">
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<sub order="0x40" stat="rEvas" val="4" />
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22067" levels="1" nameRu="Магический Барьер" nameEn="Magic Barrier">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MD_UP" abnormalLvl="9">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22068" levels="1" nameRu="Благословение Души" nameEn="Bless the Soul">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAX_MP_UP" abnormalLvl="9">
+				<mul order="0x30" stat="maxMp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22069" levels="1" nameRu="Чистота" nameEn="Clarity">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CHEAP_MAGIC" abnormalLvl="9">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22070" levels="1" nameRu="Дикая Магия" nameEn="Wild Magic">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAGIC_CRITICAL_UP" abnormalLvl="9">
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22071" levels="1" nameRu="Большой Сундук Удачи" nameEn="Huge Fortuna Box">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			22009,2,27;20517,1,15;22015,1,0.78299;20519,1,0.27056;22019,1,0.00775;20521,1,0.0027;20545,8,3.75;20546,10,7.5;20547,10,4.5;8751,1,9.75;8752,1,8.125;9575,1,6.77083;8761,1,1.95;8762,1,1.625;9576,1,1.35416;22024,15,12.5
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22072" levels="1" nameRu="Большой Куб Удачи" nameEn="Huge Fortuna Cube">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			22013,2,26.25;20518,1,14.58333;22017,1,0.69599;20520,1,0.24049;22021,1,0.00638;20522,1,0.0022;20545,8,3.95833;20546,10,7.91666;20547,10,4.75;8751,1,9.58333;8752,1,7.98611;9575,1,6.65509;8761,1,1.91666;8762,1,1.59722;9576,1,1.33101;22024,15,13.19444
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22073" levels="1" nameRu="Свиток: Зачаровать Оружие (S)" nameEn="Weapon Enchant Scroll - S Grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22074" levels="1" nameRu="Свиток: Зачаровать Доспех (S)" nameEn="Armor Enchant Scroll - S Grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22075" levels="1" nameRu="Кристалл: Зачаровать Доспех (S)" nameEn="Ancient Weapon Enchant Crystal - S grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22076" levels="1" nameRu="Кристалл: Зачаровать Доспех (S)" nameEn="Ancient Armor Enchant Crystal - S grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22077" levels="1" nameRu="Алмазный Свиток: Зачаровать Оружие (S)" nameEn="Divine Weapon Enchant Crystal - S grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22078" levels="1" nameRu="Алмазный Свиток: Зачаровать Доспех (S)" nameEn="Divine Armor Enchant Crystal - S grade">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22079" levels="1" nameRu="Сопротивление Воде" nameEn="Resist Aqua">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#vuln"> 20 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="skillType" val="BUFF" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_WATER" abnormalLvl="1">
+				<add order="0x40" stat="waterRes" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22080" levels="1" nameRu="Сопротивление Ветру" nameEn="Resist Wind">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#vuln"> 20 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_WIND" abnormalLvl="1">
+				<add order="0x40" stat="waterRes" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22081" levels="1" nameRu="Сопротивление Огню" nameEn="Resist Fire">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#vuln"> 20 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_FIRE" abnormalLvl="1">
+				<add order="0x40" stat="waterRes" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22082" levels="1" nameRu="Устойчивость к Святости" nameEn="Resist Holy">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#vuln"> 20 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_HOLY" abnormalLvl="1">
+				<add order="0x40" stat="waterRes" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22083" levels="1" nameRu="Устойчивость к Тьме" nameEn="Resist Unholy">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#vuln"> 20 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_UNHOLY" abnormalLvl="1">
+				<add order="0x40" stat="waterRes" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22084" levels="1" nameRu="Ментальный Щит" nameEn="Mental Shield">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 8 </table>
+		<table name="#mpConsume"> 35 </table>
+		<table name="#stack"> 40 </table>
+		<table name="#aggroPoints"> 457 </table>
+		<table name="#vuln"> 0.6 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="RESIST_DERANGEMENT" abnormalLvl="1">
+				<mul order="0x30" stat="rootVuln" val="#vuln" />
+				<mul order="0x30" stat="sleepVuln" val="#vuln" />
+				<mul order="0x30" stat="derangementVuln" val="#vuln" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22085" levels="1" nameRu="Фокусировка" nameEn="Focus">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 9 </table>
+		<table name="#mpConsume"> 38 </table>
+		<table name="#rCrit"> 0.3 </table>
+		<table name="#aggroPoints"> 495 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_PROB_UP" abnormalLvl="1">
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22086" levels="1" nameRu="Концентрация" nameEn="Concentration">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 7 </table>
+		<table name="#mpConsume"> 31 </table>
+		<table name="#cancel"> 36 </table>
+		<table name="#aggroPoints"> 418 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="CANCEL_PROB_DOWN" abnormalLvl="1">
+				<sub order="0x40" stat="cancel" val="#cancel" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22087" levels="1" nameRu="Благословленный Щит" nameEn="Blessing Shield">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 10 </table>
+		<table name="#mpConsume"> 41 </table>
+		<table name="#rShld"> 1.15 </table>
+		<table name="#aggroPoints"> 532 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SHIELD_PROB_UP" abnormalLvl="1">
+				<mul order="0x30" stat="rShld" val="#rShld" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22088" levels="1" nameRu="Проворство" nameEn="Agility">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 4 </table>
+		<table name="#mpConsume"> 18 </table>
+		<table name="#rEvas"> 2 </table>
+		<table name="#aggroPoints"> 243 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="AVOID_UP" abnormalLvl="1">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22089" levels="1" nameRu="Регенерация" nameEn="Regeneration">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 10 </table>
+		<table name="#mpConsume"> 41 </table>
+		<table name="#rate"> 1.2 </table>
+		<table name="#aggroPoints"> 532 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="HP_REGEN_UP" abnormalLvl="1">
+				<mul order="0x30" stat="regHp" val="#rate" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22090" levels="1" nameRu="Усиленная Блокировка" nameEn="Advanced Block">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="3600" />
+		<table name="#mpInitialConsume"> 13 </table>
+		<table name="#mpConsume"> 49 </table>
+		<table name="#sDef"> 1.4 </table>
+		<table name="#aggroPoints"> 611 </table>
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="A2" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="SHIELD_DEFENCE_UP" abnormalLvl="1">
+				<mul order="0x30" stat="sDef" val="#sDef" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22091" levels="1" nameRu="Руна Евы" nameEn="Eva's Rune">
+		<!-- Update by LordWinter -->
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="P" />
+		<for>
+			<mul order="0x30" stat="maxHp" val="1.1" />
+			<mul order="0x30" stat="mReuse" val="0.8" />
+			<mul order="0x30" stat="pReuse" val="0.8" />
+			<mul order="0x30" stat="reflectDam" val="1.05" />
+		</for>
+	</skill>
+	<skill id="22092" levels="1" nameRu="Свиток Мастера 1" nameEn="Scroll Master 1">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20365,1,20;20364,1,20;20366,1,20;20367,1,20;20368,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22093" levels="1" nameRu="Свиток Мастера 2" nameEn="Scroll Master 2">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20554,1,15;20392,1,15;20393,1,35;20394,1,35
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22094" levels="1" nameRu="Очки Опыта Мастера" nameEn="Exp. Master">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			20581,1,70;20548,1,30
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22095" levels="1" nameRu="Призвать Огненного Духа" nameEn="Summon Spirit of Fire">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20586" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="8" npcCount="1" despawnDelay="60000" isSummonSpawn="true" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22096" levels="1" nameRu="Призвать Духа Пламени" nameEn="Summon Reckless Spirit of Fire">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="20586" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="9" npcCount="1" despawnDelay="60000" isSummonSpawn="true" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22097" levels="1" nameRu="Подарок Девочки" nameEn="Girl's Gift of Gratitude">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="120" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="20602" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A3" />
+		<set name="hitTime" val="1500" />
+		<set name="castRange" val="20" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="120000" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF5" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.60" />
+				<mul order="0x30" stat="maxMp" val="1.60" />
+				<mul order="0x30" stat="maxCp" val="1.60" />
+				<mul order="0x30" stat="pDef" val="1.30" />
+				<mul order="0x30" stat="mDef" val="1.30" />
+				<add order="0x40" stat="runSpd" val="30" />
+				<mul order="0x30" stat="pAtk" val="1.20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22098" levels="1" nameRu="Подарок Девочки" nameEn="Boy's Gift of Gratitude">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="120" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="20602" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A3" />
+		<set name="hitTime" val="1500" />
+		<set name="castRange" val="20" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="120000" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF5" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.40" />
+				<mul order="0x30" stat="maxMp" val="1.40" />
+				<mul order="0x30" stat="maxCp" val="1.40" />
+				<mul order="0x30" stat="pDef" val="1.30" />
+				<mul order="0x30" stat="mDef" val="1.30" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="mAtk" val="1.45" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22099" levels="1" nameRu="Благодать" nameEn="Soul Silver Foil">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="120" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeId" val="20602" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="A3" />
+		<set name="hitTime" val="1500" />
+		<set name="castRange" val="20" />
+		<set name="effectRange" val="400" />
+		<set name="reuseDelay" val="120000" />
+		<set name="staticReuse" val="true" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF6" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.60" />
+				<mul order="0x30" stat="maxMp" val="1.60" />
+				<mul order="0x30" stat="maxCp" val="1.60" />
+				<mul order="0x30" stat="pDef" val="1.30" />
+				<mul order="0x30" stat="mDef" val="1.30" />
+				<add order="0x40" stat="runSpd" val="30" />
+				<mul order="0x30" stat="pAtk" val="1.20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+</list>

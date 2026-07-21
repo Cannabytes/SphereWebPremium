@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="22300" levels="1" nameRu="Магия Острова Грез" nameEn="Fantasy Isle Magic">
+		<!-- Update by LordWinter -->
+		<set name="abnormalTime" val="120" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="ULTIMATE_BUFF" abnormalLvl="1">
+				<mul order="0x30" stat="runSpd" val="1.30" />
+				<sub order="0x30" stat="fall" val="0.6" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22301" levels="1" nameRu="Праздничный Кремовый Торт" nameEn="Party Cake">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22302" levels="1" nameRu="Сладкий Шоколад - 4 ч." nameEn="Sweet Chocolate - 4 hour">
+		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22303" levels="1" nameRu="Праздничный Кремовый Торт" nameEn="Party Cake">
+		<!-- Party Cake's energy effect. Maintains vitality for 20 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22304" levels="1" nameRu="Тепло Костра" nameEn="Campfire's Warmth">
+		<!-- "The campfire's warmth can be felt. Increases HP regeneration by 80%, CP regeneration by 60%, and MP regeneration by 40%." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22305" levels="1" nameRu="Призыв Костра" nameEn="Campfire Summon">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22306" levels="1" nameRu="Ивент - Свиток Призыва Крольчонка" nameEn="Event - Baby Bunny Scroll of Summon">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22307" levels="1" nameRu="Ивент - Свиток Призыва Крольчонка-Вожака" nameEn="Event - Baby Bunny Captain Scroll of Summon">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22308" levels="1" nameRu="Ивент - Свиток Призыва Грустного Крольчонка" nameEn="Event - Sad Baby Bunny Scroll of Summon">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22309" levels="1" nameRu="Ивент - Свиток Призыва Грустного Крольчонка-Вожака" nameEn="Event - Sad Baby Bunny Captain Scroll of Summon">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22310" levels="1" nameRu="Лекарство Купидона" nameEn="Cupid's Cure">
+		<!-- Sends mutated animals a heart filled with love. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22311" levels="1" nameRu="Сильнодействующее Лекарство Купидона" nameEn="Cupid's Enhanced Cure">
+		<!-- Sends mutated animals a powerful heart filled with love. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22312" levels="1" nameRu="Радость Дня Рождения" nameEn="Birthday Joy">
+		<!-- "Birthday gift received once a year. For 4 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
+		<!-- Birthday Skill -->
+		<set name="canBeDispeled" val="false" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="stayOnSubclassChange" val="false" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="14400" abnormalLvl="1" abnormalType="VP_UP">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="22313" levels="1" nameRu="Теплый Ветер Паагрио - 4 ч." nameEn="Pa'agrio's Warm Breeze - 4 hour">
+		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22314" levels="1" nameRu="Приз за 1 место" nameEn="Treasure Sack 1st Place">
+		<!-- none -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22315" levels="2" nameRu="Приз за 2 место" nameEn="Treasure Sack 2nd Place">
+		<!-- This skill only has one level, 2. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22316" levels="3" nameRu="Приз за 3 место" nameEn="Treasure Sack 3rd Place">
+		<!-- This skill only has one level, 3. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22317" levels="4" nameRu="Приз за 4 место" nameEn="Treasure Sack 4th Place">
+		<!-- This skill only has one level, 4. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22318" levels="5" nameRu="Приз за 5 место" nameEn="Treasure Sack 5th Place">
+		<!-- This skill only has one level, 5. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22319" levels="6" nameRu="Приз за 6 место" nameEn="Treasure Sack 6th Place">
+		<!-- This skill only has one level, 6. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22320" levels="1" nameRu="Дух Берсерка" nameEn="Berserker Spirit">
+		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22321" levels="1" nameRu="Проницательность" nameEn="Acumen">
+		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22322" levels="1" nameRu="Магический Барьер" nameEn="Magic Barrier">
+		<!-- Increases M. Def. by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22323" levels="1" nameRu="Чистота" nameEn="Clarity">
+		<!-- "Decreases MP Consumption by 20% for physical skills, by 10% for magical skills, and by 20% for song/dance skills for 60 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22324" levels="1" nameRu="Благословение Души" nameEn="Blessed Soul">
+		<!-- Increases Max MP by 35% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22325" levels="1" nameRu="Благословение Тела" nameEn="Blessed Body">
+		<!-- Increases Max HP by 35% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22326" levels="1" nameRu="Воодушевление" nameEn="Empower">
+		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22327" levels="1" nameRu="Легкая Походка" nameEn="Wind Walk">
+		<!-- Increases Speed by 33 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22328" levels="1" nameRu="Щит" nameEn="Shield">
+		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22329" levels="1" nameRu="Легкая Походка" nameEn="Wind Walk">
+		<!-- Increases Speed by 33 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22330" levels="1" nameRu="Щит" nameEn="Shield">
+		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22331" levels="1" nameRu="Ускорение" nameEn="Haste">
+		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22332" levels="1" nameRu="Смертельный Шепот" nameEn="Death Whisper">
+		<!-- Increases Critical Attack by 35% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22333" levels="1" nameRu="Ярость Вампира" nameEn="Vampiric Rage">
+		<!-- Absorbs 9% of standard melee damage inflicted upon an enemy as HP for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22334" levels="1" nameRu="Наведение" nameEn="Guidance">
+		<!-- Increases Accuracy by 4 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22335" levels="1" nameRu="Сила" nameEn="Might">
+		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22336" levels="1" nameRu="Благословение Тела" nameEn="Blessed Body">
+		<!-- Increases Max HP by 35% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22337" levels="1" nameRu="Фокусировка" nameEn="Focus">
+		<!-- Increases Critical Rate by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22338" levels="1" nameRu="Благословенный Щит" nameEn="Bless Shield">
+		<!-- Increases Shield Defense Rate by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22339" levels="1" nameRu="Дух Берсерка" nameEn="Berserker Spirit">
+		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22340" levels="1" nameRu="Сила" nameEn="Might">
+		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22341" levels="1" nameRu="Легкая Походка" nameEn="Wind Walk">
+		<!-- Increases Speed by 33 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22342" levels="1" nameRu="Ускорение" nameEn="Haste">
+		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22343" levels="1" nameRu="Ярость Вампира" nameEn="Vampiric Rage">
+		<!-- Absorbs 9% of standard melee damage inflicted upon an enemy as HP for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22344" levels="1" nameRu="Дух Берсерка" nameEn="Berserker Spirit">
+		<!-- "Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22345" levels="1" nameRu="Воодушевление" nameEn="Empower">
+		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22346" levels="1" nameRu="Проницательность" nameEn="Acumen">
+		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22347" levels="1" nameRu="Щит" nameEn="Shield">
+		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22348" levels="1" nameRu="Фокусировка" nameEn="Focus">
+		<!-- Increases Critical Rate by 30% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22349" levels="1" nameRu="Смертельный Шепот" nameEn="Death Whisper">
+		<!-- Increases Critical Attack by 35% for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22350" levels="1" nameRu="Наведение" nameEn="Guidance">
+		<!-- Increases Accuracy by 4 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22351" levels="1" nameRu="Чистота" nameEn="Clarity">
+		<!-- "Decreases MP Consumption by 20% for physical skills, by 10% for magical skills, and by 20% for song/dance skills for 60 minutes." -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22352" levels="1" nameRu="Дикая Магия" nameEn="Wild Magic">
+		<!-- Increases the chance of prominent magic damage by 2 for 60 minutes. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22353" levels="6" nameRu="Концентрация" nameEn="Concentration">
+		<!-- Decreases magic cancel damage by 53 for 60 minutes. -->
+		<!-- This skill only has one level, 6. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22354" levels="1" nameRu="Подарок Агатиона Фонарика" nameEn="Lantern Agathion's Gift">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22355" levels="1" nameRu="Ящик Кристаллов Душ - Уровень 17" nameEn="Soul Crystal Box - Level 17">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22356" levels="1" nameRu="Ящик Кристаллов Душ - Уровень 18" nameEn="Soul Crystal Box - Level 18">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22357" levels="1" nameRu="Сундук Оружия Высокого Качества S84" nameEn="S84 High-Grade Weapon Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22358" levels="1" nameRu="Сундук Доспехов Верпеса" nameEn="Vorpal Armor Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22359" levels="1" nameRu="Свиток Разрушения: Модифицировать Оружие (S)" nameEn="Scroll: Enchant Weapon of Destruction (S-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22360" levels="1" nameRu="Свиток Разрушения: Модифицировать Доспех (S)" nameEn="Scroll: Enchant Armor of Destruction (S-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22361" levels="1" nameRu="Свиток Разрушения: Модифицировать Оружие (A)" nameEn="Scroll: Enchant Weapon of Destruction (A-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22362" levels="1" nameRu="Свиток Разрушения: Модифицировать Доспех (A)" nameEn="Scroll: Enchant Armor of Destruction (A-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22363" levels="1" nameRu="Свиток Разрушения: Модифицировать Оружие (B)" nameEn="Scroll: Enchant Weapon of Destruction (B-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22364" levels="1" nameRu="Свиток Разрушения: Модифицировать Доспех (B)" nameEn="Scroll: Enchant Armor of Destruction (B-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22365" levels="1" nameRu="Свиток Разрушения: Модифицировать Оружие (C)" nameEn="Scroll: Enchant Weapon of Destruction (C-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22366" levels="1" nameRu="Свиток Разрушения: Модифицировать Доспех (C)" nameEn="Scroll: Enchant Armor of Destruction (C-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22367" levels="1" nameRu="Свиток Разрушения: Модифицировать Оружие (D)" nameEn="Scroll: Enchant Weapon of Destruction (D-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22368" levels="1" nameRu="Свиток Разрушения: Модифицировать Доспех (D)" nameEn="Scroll: Enchant Armor of Destruction (D-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="22369" levels="1" nameRu="Благословенный Заряд Духа (Ранг S)" nameEn="Blessed Spiritshot - S grade">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22370" levels="1" nameRu="Упаковка: Чудесные Заряды Души (S)" nameEn="Mysterious Soulshot Pack (S-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22371" levels="1" nameRu="Упаковка: Чудесные Благословенные Заряды Духа (S)" nameEn="Mysterious Blessed Spiritshot Pack (S-Grade)">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22372" levels="1" nameRu="Метеор" nameEn="Meteor">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22373" levels="1" nameRu="Падение Звезды" nameEn="Starfall">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22374" levels="1" nameRu="Сладкий Шоколад" nameEn="Sweet Chocolate">
+		<!-- Desciption: For 30 minutes, Vitality is replenished when Exp. is acquired through hunting. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22375" levels="1" nameRu="Мешочек с Любовью Дня Св. Валентина" nameEn="Valentine's Day Love Pouch">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22376" levels="1" nameRu="Сладкий Шоколад" nameEn="Sweet Chocolate">
+		<!-- Desciption: For 30 minutes, Vitality is replenished when Exp. is acquired through hunting. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22377" levels="1" nameRu="Сундук с Ожерельем Злобного Кролика" nameEn="Bad Bunny's Necklace Box">
+		<!-- Updated by LordWinter -->
+		<table name="#extractableItems">
+			22211,1,80;22214,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="22208" />
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="398" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22378" levels="1" nameRu="Сундук с Серьгой Злобного Кролика" nameEn="Bad Bunny's Earring Box">
+		<!-- Updated by LordWinter -->
+		<table name="#extractableItems">
+			22212,1,80;22215,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="22209" />
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="398" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22379" levels="1" nameRu="Сундук с Кольцом Злобного Кролика" nameEn="Bad Bunny's Ring Box">
+		<!-- Updated by LordWinter -->
+		<table name="#extractableItems">
+			22213,1,80;22216,1,20
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="22210" />
+		<set name="magicLvl" val="72" />
+		<set name="mpConsume" val="398" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="22380" levels="1" nameRu="Подарочный Комплект Агатиона Фонарика" nameEn="Lantern Agathion's Gift Set">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22381" levels="1" nameRu="Сундук Руды Стихий" nameEn="Attribute Ore Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22382" levels="1" nameRu="Сундук Кристаллов Стихий" nameEn="Attribute Crystal Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22383" levels="1" nameRu="Снаряжение Следопыта" nameEn="Pathfinder Supplies">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22384" levels="1" nameRu="Снаряжение Следопыта" nameEn="Pathfinder Supplies">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22385" levels="1" nameRu="Снаряжение Следопыта" nameEn="Pathfinder Supplies">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22386" levels="1" nameRu="Коробка: Свиток Трансформации PC" nameEn="PC Cafe Transformation Scroll Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22387" levels="1" nameRu="Подарочный Комплект PC" nameEn="PC Cafe Gift Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22388" levels="1" nameRu="Коробка: Жезл Трансформации PC" nameEn="PC Cafe Transformation Stick Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22389" levels="1" nameRu="Коробка с Головным убором PC" nameEn="PC Cafe Hair Accessory Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22390" levels="1" nameRu="Подарочная Коробка PC" nameEn="PC Cafe Luxury Gift Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22391" levels="1" nameRu="Ларец - Талисман" nameEn="Jewelry Box - Talisman">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22392" levels="1" nameRu="Пирог Счастья - Низкое качество" nameEn="Happiness Cake - Low Grade">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22393" levels="1" nameRu="Пирог Счастья - Среднее качество" nameEn="Happiness Cake - Medium Grade">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22394" levels="1" nameRu="Пирог Счастья - Высокое качество" nameEn="Happiness Cake - High Grade">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22395" levels="1" nameRu="Пирог Счастья - Высшее качество" nameEn="Happiness Cake - Top Grade">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22396" levels="1" nameRu="Свежий Торт Счастья" nameEn="Holy Happiness Cake">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22397" levels="1" nameRu="Сладкое Шоколадное Печенье" nameEn="Sweet Chocolate Cookie">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22398" levels="1" nameRu="Сундук Аллегры" nameEn="Allegra Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="22399" levels="1" nameRu="Сундук Латуса" nameEn="Latus Box">
+		<!-- Desciption: There is no available description. -->
+		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+</list>

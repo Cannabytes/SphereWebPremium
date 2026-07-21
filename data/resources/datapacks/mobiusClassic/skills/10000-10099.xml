@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="10015" toLevel="6" name="Chain Strike">
+		<!-- <Pull skill>. Pulls the target to you. -->
+		<icon>icon.skill10015</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>190</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>700</castRange>
+		<coolTime>1000</coolTime>
+		<effectPoint>
+			<value level="1">-4132</value>
+			<value level="2">-4198</value>
+			<value level="3">-4265</value>
+			<value level="4">-4333</value>
+			<value level="5">-4402</value>
+			<value level="6">-4472</value>
+		</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>0</isMagic>
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">82</value>
+			<value level="3">84</value>
+			<value level="4">86</value>
+			<value level="5">88</value>
+			<value level="6">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">55</value>
+			<value level="2">58</value>
+			<value level="3">62</value>
+			<value level="4">65</value>
+			<value level="5">68</value>
+			<value level="6">71</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">14</value>
+			<value level="2">15</value>
+			<value level="3">15</value>
+			<value level="4">16</value>
+			<value level="5">17</value>
+			<value level="6">18</value>
+		</mpInitialConsume>
+		<reuseDelay>15000</reuseDelay>
+		<reuseDelayGroup>10015</reuseDelayGroup>
+		<trait>PULL</trait>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
+			<effect name="GetAgro" />
+			<effect name="CallSkill">
+				<skillId>47278</skillId> <!-- Chain Strike (Shock) -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
+				<chance>30</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10094" toLevel="9" name="Mass Lightning Strike">
+		<!-- Level 1: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2311. Paralyzes for 3 sec. -->
+		<!-- Level 2: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2400. Paralyzes for 3 sec. -->
+		<!-- Level 3: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2501. Paralyzes for 3 sec. -->
+		<!-- Level 4: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2615. Paralyzes for 3 sec. -->
+		<!-- Level 5: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2733. Paralyzes for 3 sec. -->
+		<!-- Level 6: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 2952. Paralyzes for 3 sec. -->
+		<!-- Level 7: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 3070. Paralyzes for 3 sec. -->
+		<!-- Level 8: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 3192. Paralyzes for 3 sec. -->
+		<!-- Level 9: <Paralysis skill>. A powerful lightning strike. Attacks the target and nearby enemies. Power 3320. Paralyzes for 3 sec. -->
+		<icon>icon.skll10094</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectLimit>5-12</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>200</affectRange>
+		<affectScope>RANGE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>400</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>
+			<value level="1">-6100</value>
+			<value level="2">-6175</value>
+			<value level="3">-6325</value>
+			<value level="4">-6400</value>
+			<value level="5">-6500</value>
+			<value level="6">-6600</value>
+			<value level="7">-6650</value>
+			<value level="8">-6700</value>
+			<value level="9">-6750</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>1500</hitTime>
+		<isMagic>0</isMagic>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">84</value>
+			<value level="3">88</value>
+			<value level="4">90</value>
+			<value level="5">91</value>
+			<value level="6">92</value>
+			<value level="7">93</value>
+			<value level="8">94</value>
+			<value level="9">95</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">94</value>
+			<value level="2">95</value>
+			<value level="3">97</value>
+			<value level="4">99</value>
+			<value level="5">103</value>
+			<value level="6">107</value>
+			<value level="7">113</value>
+			<value level="8">115</value>
+			<value level="9">117</value>
+		</mpConsume>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>
+					<value level="1">2311</value>
+					<value level="2">2400</value>
+					<value level="3">2501</value>
+					<value level="4">2615</value>
+					<value level="5">2733</value>
+					<value level="6">2952</value>
+					<value level="7">3070</value>
+					<value level="8">3192</value>
+					<value level="9">3320</value>
+				</power>
+				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>45481</skillId> <!-- Mass Lightning Strike -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+				</skillLevel>
+			</effect>
+		</effects>
+	</skill>
+</list>

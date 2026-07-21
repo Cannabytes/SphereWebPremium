@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="59817" toLevel="1" name="Returning Hero's Symbol">
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59819" toLevel="1" name="Sayha's Grace Sustain Rune">
+		<!-- Sayha's Grace Sustention -->
+		<icon>icon.ev_charge_run</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>-2</magicLevel>
+		<specialLevel>-2</specialLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59820" toLevel="1" name="Anniversary Firecracker NCJ 20">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59821" toLevel="1" name="Blue Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59822" toLevel="1" name="Red Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59823" toLevel="1" name="Green Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59824" toLevel="1" name="NCJ 20 Anniversary Gift">
+		<!-- A gift for the NCJ 20 Anniversary. P. Atk. +250. M. Atk. +250. P. Def. +150. M. Def. +150. Max HP +300. Max MP +250. Acquired XP +10%. Acquired SP +10%. The effect remains after death. -->
+		<icon>BranchIcon.icon.ev_ncjapan_20th_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>CHANGESHAPE_TRANSFORM_5</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>500</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<isSharedWithSummon>false</isSharedWithSummon>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>20</magicLevel>
+		<reuseDelay>7200000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1800</skillId> <!-- Transformation: Pirate -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1801</skillId> <!-- Dark Assassin Transformation -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>1802</skillId> <!-- Light Assassin Transformation -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>54102</skillId> <!-- White Guardian Transformation -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>250</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>250</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>250</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59825" toLevel="6" name="L2M Blessing - Lv. 1">
+		<!-- A buff for commemorating the L2M launch. A reward is given once per hour. For 1 h., Atk. Spd./ Casting Spd. 100, Speed 10, all stats +1. Note!. You cannot get a reward if your character is dead. -->
+		<icon>BranchIcon.icon.g_ev_l2m_blessing_ncw_00</icon>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalVisualEffect>THIRTEENTH_BUFF</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59826" toLevel="1" name="L2M Blessing Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59827" toLevel="1" name="Happy New Year!">
+		<!-- We wish you luck in all your endeavors!. P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. Acquired XP +10%. Acquired SP +10% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59828" toLevel="1" name="Red Lantern">
+		<icon>icon.etc_holy_grail_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59829" toLevel="1" name="Transcendent Prophecy">
+		<!-- PvE damage +5%. Acquired XP/ SP +50%. Sustains Sayha's Grace. Note!. Available only in transcendent instance zones. -->
+		<icon>icon.skill10318</icon>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>630</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<magicLevel>20</magicLevel>
+		<effects>
+			<effect name="ExpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>50</amount>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59830" toLevel="1" name="$s2's Reward for Rank $s1">
+		<!-- A buff for all characters of name's server to celebrate their ranking rank in the World Festival Ranking. Acquired XP/ SP +7%. P. Atk. +100. M. Atk. +100. P. Def. +100. M. Def. +100. Max HP +200 -->
+		<icon>BranchIcon.Icon.bm_wrf_reward_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59831" toLevel="1" name="$s2's Reward for Rank $s1">
+		<!-- A buff for all characters of name's server to celebrate their ranking rank in the World Festival Ranking. Acquired XP/ SP +5%. P. Atk. +50. M. Atk. +50. P. Def. +50. M. Def. +50. Max HP +100 -->
+		<icon>BranchIcon.Icon.bm_wrf_reward_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59832" toLevel="1" name="$s2's Reward for Rank $s1">
+		<!-- A buff for all characters of name's server to celebrate their ranking rank in the World Festival Ranking. Acquired XP/ SP +3%. P. Atk. +30. M. Atk. +30 -->
+		<icon>BranchIcon.Icon.bm_wrf_reward_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59833" toLevel="1" name="$s2's Reward for Rank $s1">
+		<!-- A buff for all characters of name's server to celebrate their ranking rank in the World Festival Ranking. P. Atk. +20. M. Atk. +20 -->
+		<icon>BranchIcon.Icon.bm_wrf_reward_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59834" toLevel="1" name="$s2's Reward for Rank $s1">
+		<!-- A buff for all characters of name's server to celebrate their ranking rank in the World Festival Ranking. P. Atk. +10. M. Atk. +10 -->
+		<icon>BranchIcon.Icon.bm_wrf_reward_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59835" toLevel="1" name="Dragon Berserker Evolver">
+		<!-- P. Atk. +500. M. Atk. +500. Atk. Spd. +100. Casting Spd. +100. P. Critical Rate +30. Skill Critical Rate +30%. Acquired XP/ SP +30%. Sayha's Grace Consumption -15%. XP recovery fee -20% -->
+		<icon>icon.bm2018_dragon_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59836" toLevel="1" name="Wild Wolf Transformation">
+		<!-- P. Atk. +300. M. Atk. +300. Atk. Spd. +50. Casting Spd. +50. P. Critical Rate +15. Skill Critical Rate +15%. Acquired XP/ SP +30%. Sayha's Grace Consumption -10%. XP recovery fee -20% -->
+		<icon>icon.bm2018_barbarian_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59837" toLevel="1" name="High Priest Transformation">
+		<!-- P. Atk. +300. M. Atk. +300. Atk. Spd. +50. Casting Spd. +50. P. Critical Rate +15. Skill Critical Rate +15%. Acquired XP/ SP +30%. Sayha's Grace Consumption -10%. XP recovery fee -20% -->
+		<icon>icon.bm2018_healer_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59838" toLevel="1" name="Panda Transformation">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.sayha2017_panda</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59839" toLevel="1" name="Cat Transformation">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.sayha2017_cat</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59840" toLevel="1" name="Transform: Kat the Cat">
+		<!-- P. Atk. +200. M. Atk. +200. Atk. Spd. +20. Casting Spd. +20. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.cat_the_cat_change_0</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59841" toLevel="1" name="Cool Summer Slushie">
+		<!-- Acquired XP/ SP +10%. P. Atk./ M. Atk./ P. Def./ M. Def. +100. Duration: 20 min. Cooldown: 1 min. The effect remains after death. Can be removed by yourself. -->
+		<icon>BranchSys3.icon1.g_ev_sweet_icewater</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59842" toLevel="1" name="Aden Transformation Scroll">
+		<icon>icon.random_transform_00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59843" toLevel="1" name="Einhasad Hero's Support">
+		<!-- Acquired XP/ SP +10%. Share Location fee -50%. My Teleport's Share Location fee -50%. XP recovery fee -20%. Common monsters' item drop rate +5%. Acquired adena +2% -->
+		<icon>icon.skill5662</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59844" toLevel="1" name="Transformation Scroll: Alluring Swimsuit">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. XP recovery fee -20% -->
+		<icon>BranchSys3.icon1.g_co_swimsuit_event_02</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>S_TRANS_DECO</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResurrectionFeeModifier">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>176</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59845" toLevel="1" name="Transformation Scroll: Seductive Swimsuit">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. XP recovery fee -20% -->
+		<icon>BranchSys3.icon1.g_co_swimsuit_event_03</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>S_TRANS_DECO</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResurrectionFeeModifier">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>176</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59846" toLevel="1" name="Transformation Scroll: Beach Swimsuit">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. XP recovery fee -20% -->
+		<icon>BranchSys3.icon1.g_co_swimsuit_event_01</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>S_TRANS_DECO</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>0</hitTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<reuseDelay>10000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResurrectionFeeModifier">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>176</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59847" toLevel="1" name="Season Pass Bonus (Time-limited)">
+		<!-- All stats +1. P. Atk./ M. Atk./ P. Def./ M. Def. +50. Max HP/ MP/ CP +100. Acquired XP/ SP +5%. Duration: 30 min. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.super_elixir_potion</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59848" toLevel="1" name="Shining Season Pass Bonus">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59849" toLevel="1" name="Gorezones' Luck Rune">
+		<!-- A personal rune gifted on occasion of the first A-grade weapon enchantment up to +10. Enchant success rate +1% when enchanting any item with weapon enchant scrolls. Enchant success rate +1% when enchanting any item with armor enchant scrolls -->
+		<icon>BranchSys3.icon1.g_rune_of_half_power</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59850" toLevel="1" name="Sayha's Rune">
+		<!-- A rune imbued with Sayha's power. Acquired XP/ SP +30%. STR +1. INT +1. DEX +1. WIT +1. CON +1. MEN +1. Max HP +300. P. Def. +100. M. Def. +100. Sayha's Grace Sustention. Does not work on servitors. -->
+		<icon>Branchsys2.icon.br_spirit_rune_i00</icon>
+		<operateType>P</operateType>
+		<isMagic>4</isMagic>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59851" toLevel="1" name="Transformation Scroll">
+		<icon>icon.random_transform_00</icon>
+		<operateType>A1</operateType>
+		<isMagic>5</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59852" toLevel="1" name="Sayha's Grace Sustain Potion">
+		<!-- For 20 min., activates the Sayha's Grace effect. Cooldown: 1 min. The effect remains after death. -->
+		<icon>icon.bm_freya_potion</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59853" toLevel="1" name="Verlin's Protection">
+		<!-- A buff from Verlin, a great bug hunter. Acquired XP/ SP +10%. Enchant success rate +1%. Skill MP Consumption -1%. HP Recovery Potions' Effect +5. P./ M. Atk. +50. P./ M. Def. +50 -->
+		<icon>icon.ev_211215_gold_trophy</icon>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>14400</abnormalTime>
+		<abnormalType>EVENT_BUFF</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="EnchantRate">
+				<amount>1</amount>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-1</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59854" toLevel="3" name="Nana's Colorful Healing Heart Lv. 1">
+		<!-- Level 1: Max HP +200. Max MP +200. Acquired XP/ SP +10% -->
+		<!-- Level 2: P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. Acquired XP/ SP +10% -->
+		<!-- Level 3: P. Atk. +200. M. Atk. +200. P. Def. +200. M. Def. +200. Max HP +200. Max MP +200. Atk. Spd. +2. Casting Spd. +2. Speed +2. All received Critical Rate -2%. All received Critical Damage -2%. Acquired XP/ SP +10% -->
+		<icon>icon.ev_2018_xmas_heart</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59855" toLevel="25" name="Nana's Buff Lv. 1">
+		<!-- When used, applies the following buff. <font color=EEAA22><Buff effect></font>. P. Atk. +50. M. Atk. +50. P. Def. +50. M. Def. +50. Adena drop rate +1%. The buff is leveling up every hour (max level: 24). With each buff renewal you will get Colorful Yarn (Time-limited). 1-12 h.: Colorful Yarn (Time-limited) - 1 pc. 13-24 h.: Colorful Yarn (Time-limited) - 2 pcs. <font color=ff6666>Note!</font>. You cannot get the buff and the gift if you are dead. You cannot get the buff and the gift while teleporting. You cannot get the gift if your inventory is full. -->
+		<icon>icon.event_altair_enchant_scroll_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59856" toLevel="2" name="Nana's Reward Buff">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59857" toLevel="6" name="Nana's Doll">
+		<!-- Level 1: Acquired XP/ SP +2%. With a certain chance, absorbs 1% of inflicted damage as HP. With a certain chance, absorbs 1% of inflicted damage as MP. -->
+		<!-- Level 2: Acquired XP/ SP +4%. With a certain chance, absorbs 2% of inflicted damage as HP. With a certain chance, absorbs 1% of inflicted damage as MP. -->
+		<!-- Level 3: Acquired XP/ SP +6%. With a certain chance, absorbs 3% of inflicted damage as HP. With a certain chance, absorbs 1% of inflicted damage as MP. -->
+		<!-- Level 4: Acquired XP/ SP +8%. With a certain chance, absorbs 4% of inflicted damage as HP. With a certain chance, absorbs 3% of inflicted damage as MP. -->
+		<!-- Level 5: Acquired XP/ SP +10%. With a certain chance, absorbs 5% of inflicted damage as HP. With a certain chance, absorbs 3% of inflicted damage as MP. -->
+		<!-- Level 6: P. Atk. +1%. M. Atk. +1%. All Critical Damage +1%. Received damage -1%. Acquired XP/ SP +20%. With a certain chance, absorbs 5% of inflicted damage as HP. With a certain chance, absorbs 3% of inflicted damage as MP. -->
+		<icon>
+			<value level="1">BranchIcon.icon.ev_nana_collection_i00</value>
+			<value level="2">BranchIcon.icon.ev_nana_collection_i00</value>
+			<value level="3">BranchIcon.icon.ev_nana_collection_i00</value>
+			<value level="4">BranchIcon.icon.ev_nana_collection_i00</value>
+			<value level="5">BranchIcon.icon.ev_nana_collection_i00</value>
+			<value level="6">BranchIcon.icon.ev_nana_collection_i02</value>
+		</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">10</value>
+					<value level="6">20</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">10</value>
+					<value level="6">20</value>
+				</amount>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
+				<chance>10</chance>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+					<value level="6">3</value>
+				</amount>
+				<chance>10</chance>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveRaidMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">1</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59858" toLevel="1" name="Transformation Scroll: Rudolph">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.rudolph_buff</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59859" toLevel="1" name="Nana's Crafted Doll - Collection">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59860" toLevel="1" name="LINEAGE2+INNOVA Anniversary Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="59861" toLevel="1" name="Ultimate Death Knight: Master">
+		<icon>icon.s_death_knight_transform_new</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59862" toLevel="1" name="Ripe Watermelon Coupon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59863" toLevel="1" name="Lineage 2 Reward - Winner's Gift">
+		<!-- Lineage 2 Reward - Winner's Gift for 2023. P. Atk. +50. M. Atk. +50. P. Def. +50. M. Def. +50. acquired XP/ SP +10%. HP Recovery Potions' Effect +5. <font color=ff6666>Note!</font>. If there is an enemy in the effect's area, your nickname becomes purple. -->
+		<icon>ev_211215_gold_trophy</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59864" toLevel="1" name="Buff Stew">
+		<!-- P./ M. Atk. +100. P./ M. Def. +100. PvE damage +3%. Received PvE damage -3%. All received Critical Rate -5%. All received Critical Damage -5%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.fish_stew_residence_luc</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59865" toLevel="1" name="Veruti's Game Craft Coupon">
+		<!-- For 20 min., acquired XP/ SP +20%. Cooldown: 1 min. The effect remains after death. Note! The effect does not stack with Einhasad's Protection. -->
+		<icon>icon.ench_challnege_point_tallisman_ticket</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>DANDY_CHANGE</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>1</effectPoint>
+		<hitTime>0</hitTime>
+		<irreplaceableBuff>true</irreplaceableBuff>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>92314</itemConsumeId> <!-- Giran Seal -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40388</skillId> <!-- Einhasad's Protection -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40087</skillId> <!-- Einhasad's Blessing Scroll -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59866" toLevel="1" name="Uplifting Feeling">
+		<!-- Sends a loving heart. <font color=ff6666>Note!</font>. Keep in mind that the target must have Shiny Couple Ring equipped for the effect to activate. -->
+		<icon>icon.love_potion_party</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>6</isMagic>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59867" toLevel="1" name="Reciprocal Feeling">
+		<!-- Sends a heart full of love. <font color=ff6666>Note!</font>. Sending too many hearts is prohibited. -->
+		<icon>icon.love_potion_party</icon>
+		<operateType>A1</operateType>
+		<castRange>500</castRange>
+		<coolTime>800</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>6</isMagic>
+		<mpConsume>1</mpConsume>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59868" toLevel="1" name="Transformation Scroll: Formal Wear">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59869" toLevel="1" name="Blessing of Abundance">
+		<!-- A buff for owners of Rune of Abundance. Acquired XP/ SP +50%. Adena drop rate +10%. STR +1. INT +1. DEX +1. WIT +1. CON +1. MEN +1. PvE damage +2%. Max HP +300. P. Def. +100. M. Def. +100. Does not work on servitors. -->
+		<icon>BranchIcon.icon.bm_eva_pc_i00</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59870" toLevel="1" name="Transformation Scroll: Eritros Saber">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +10. Casting Spd. +10. P. Critical Rate +5. Skill Critical Rate +5%. Acquired XP/ SP +20%. Sayha's Grace Consumption -3%. XP recovery fee -20% -->
+		<icon>icon.armor_t2000_b_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59871" toLevel="1" name="Anniversary Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59872" toLevel="1" name="tabletfarmer's aura">
+		<icon>icon.s_death_knight_transform_new</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>1000</hitTime>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="59873" toLevel="1" name="tabletfarmer's aura">
+		<icon>icon.s_death_knight_transform_new</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59874" toLevel="1" name="'Bartz: Fight for Freedom' Comic Book's Empower">
+		<!-- A buff to commemorate the release of the comic book <font color=ff6666>'Bartz: Fight for Freedom'</font>. <font color=ff6666><Bartz: Fight for Freedom></font> tells us a story of Lineage 2's brave heroes and their confrontation with the forces of evil. It can be read in <font color=ff6666><Piccoma></font> app. <Buff effect>. P./ M. Atk. +50, P./ M. Def. +50. Adena drop rate +1% -->
+		<icon>BranchIcon.icon.piccomacollabo_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>5</isMagic>
+	</skill>
+	<skill id="59875" toLevel="1" name="Victor's Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="59876" toLevel="1" name="Victor's Firecracker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="59877" toLevel="1" name="Kill Effect - Eerie Ghost">
+		<!-- <font color=eeaa22>An eerie ghost appears on killing a monster!</font>. P. Atk./ M. Atk./ P. Def./ M. Def. +50. Max HP/ MP/ CP +100. Acquired XP/ SP +10%. Duration: 20 min. Cooldown: 10 sec. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>BranchIcon.Icon.g_ev_halloween_buff_scroll_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59878" toLevel="1" name="Eerie Ghost">
+		<icon>BranchIcon.Icon.g_ev_halloween_buff_scroll_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59881" toLevel="3" name="Halloween Girl's Blessing">
+		<!-- Level 1: MEN +1. P. Atk. +30. M. Atk. +30. P. Def. +40. M. Def. +40. PvE damage +0.3%. HP Recovery Potions' Effect +5. MP Recovery Rate +4 -->
+		<!-- Level 2: WIT +1. CON +1. MEN +1. P. Atk. +90. M. Atk. +90. P. Def. +120. M. Def. +120. PvE damage +0.9%. HP Recovery Potions' Effect +15. MP Recovery Rate +8 -->
+		<!-- Level 3: INT +1. DEX +1. WIT +1. CON +1. MEN +1. P. Atk. +150. M. Atk. +150. P. Def. +200. M. Def. +200. PvE damage +1.5%. HP Recovery Potions' Effect +25. MP Recovery Rate +12 -->
+		<icon>BranchIcon.Icon.g_ev_halloween_girl_buff_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59882" toLevel="1" name="Ghost Detector (Time-limited)">
+		<!-- Detects Halloween ghosts (1 of 3 types). If you are lucky, you will find a witch's ghost. Duration: 20 min. Cooldown: 10 sec. The effect remains after death. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>1200000</reuseDelay>
+	</skill>
+	<skill id="59883" toLevel="3" name="Summon Halloween Witch Ghost">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59884" toLevel="1" name="Halloween Transformation Scroll">
+		<icon>icon.random_transform_00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="59885" toLevel="1" name="Halloween Transformation">
+		<!-- P. Atk. +100. M. Atk. +100. Atk. Spd. +20. Casting Spd. +20. All Critical Rate +6%. Acquired XP/ SP +30%. XP recovery fee -10% -->
+		<icon>BranchIcon.Icon.g_bm_costume_holloween</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>RANDOM_TRANSFORMATION_SCROLL</abnormalType>
+		<abnormalVisualEffect>TRANS_DECO_R</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillCriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="59886" toLevel="1" name="Aden Warrior's Support">
+		<!-- All stats +1. Acquired XP/ SP +10%. Share Location fee -25%. My Teleport's Share Location fee -25%. XP recovery fee -50%. PvE damage +2% -->
+		<icon>icon.skill18577</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59887" toLevel="1" name="Damage of Limit">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="59888" toLevel="1" name="Game Manager's Large Firecracker">
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+	</skill>
+	<skill id="59889" toLevel="1" name="CM Power Kit">
+		<!-- A buff that can be obtained for participating in Lineage 2 CM's events. Max HP +5%. Max MP +5%. Acquired XP/ SP +30%. PvE damage +5%. Received PvE damage -10%. <font color=eeaa22><CM's events></font>. To learn more, check our Knowledge Base (l2wiki.com). -->
+		<icon>BranchSys.Icon.Br_santa_gift_click_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>1000</hitTime>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59890" toLevel="1" name="Summon Agathion Shadow">
+		<!-- Summons Agathion Shadow. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59891" toLevel="1" name="Summon Agathion Alpha">
+		<!-- Summons Agathion Alpha. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59892" toLevel="1" name="Summon Agathion Zeta">
+		<!-- Summons Agathion Zeta. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59893" toLevel="1" name="Summon Agathion Delta">
+		<!-- Summons Agathion Delta. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59894" toLevel="1" name="Summon Agathion Beta">
+		<!-- Summons Agathion Beta. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59895" toLevel="1" name="Summon Agathion Eta">
+		<!-- Summons Agathion Eta. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59896" toLevel="1" name="Summon Agathion Epsilon">
+		<!-- Summons Agathion Epsilon. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59897" toLevel="1" name="Summon Agathion Gamma">
+		<!-- Summons Agathion Gamma. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="59898" toLevel="1" name="Book of Growth: Agathion 'I want to be a Ruler of Darkness!'">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="59899" toLevel="1" name="Agathion's Cute Trick">
+		<!-- See the summoned agathion perform cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+</list>

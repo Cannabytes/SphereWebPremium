@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="40500" toLevel="1" name="Hellfire">
+		<icon>icon.hell_fire</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-999</effectPoint>
+	</skill>
+	<skill id="40501" toLevel="1" name="Hellfire - Demonstration">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-500</effectPoint>
+	</skill>
+	<skill id="40502" toLevel="1" name="Hellfire">
+		<icon>icon.hell_fire</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-999</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="40503" toLevel="1" name="Hellfire Scheme">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-999</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="40504" toLevel="1" name="Hellfire">
+		<icon>icon.hell_fire</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-999</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+	</skill>
+	<skill id="40505" toLevel="1" name="Throw Capture Rope">
+		<!-- A great way of capturing a mole. -->
+		<icon>icon.etc_braided_hemp_i00</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<coolTime>500</coolTime>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40506" toLevel="1" name="Manager's Key Card">
+		<!-- Sustains Sayha's Grace. Acquired XP +10%. Acquired SP +10%. Adena drop rate +3% -->
+		<icon>icon.cardkey_man_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>7200</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>100100</itemConsumeId> <!-- Scroll: Boost Attack -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40506</skillId> <!-- Manager's Key Card -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BonusDropAdena">
+				<amount>3</amount>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40507" toLevel="4" name="Graveyard Keeper's Attention">
+		<!-- Grave Keeper turns his attention to his victim. -->
+		<icon>icon.skill0103</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="40508" toLevel="1" name="Death Presentation">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40509" toLevel="1" name="Appearance Stone: Bloodthirsty Blood Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40510" toLevel="1" name="Renewed Weapon Buff Stew">
+		<!-- P./ M. Atk. +100. P./ M. Def. +100. PvE damage +3%. Received PvE damage -3%. All received Critical Rate -5%. All received Critical Damage -5%. Sustains Sayha's Grace. <Weapon/ shield/ sigil appearance change>. One-handed sword: Blue Mackerel. Rapier: Blue Mackerel. One-handed blunt weapon: Blue Mackerel. One-handed magic blunt weapon: Blue Mackerel. Dual swords: Blue Mackerel. Two-handed sword: Shark. Ancient sword: Shark. Dagger: Trumpetfish. Spear: Squid. Bow: Giant Crab. Fist weapon: Lobster. Two-handed magic blunt weapon: Sea Horse. Firearms: Crayfish. Shield: Turtle. Sigil: Starfish. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.fish_stew_residence_luc</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<abnormalVisualEffect>BLUE_DYNASTY</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<effectPoint>0</effectPoint>
+		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefencePhysicalSkillCriticalRate">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40511" toLevel="1" name="Watermelon Burst">
+		<!-- Refreshing Honey Watermelon have exploded!. Can be deleted. -->
+		<icon>icon.s_trigger_kill_effect_watermelon</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="40512" toLevel="1" name="Watermelon Burst">
+		<icon>icon.s_trigger_kill_effect_watermelon</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40513" toLevel="1" name="Appearance Stone: Blood Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40514" toLevel="1" name="Celestial Tower's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>100542</itemConsumeId> <!-- Celestial Tower's Time Stone Stone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>90</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>29</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40515" toLevel="1" name="Celestial Tower's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<coolTime>500</coolTime>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>100543</itemConsumeId> <!-- Celestial Tower's Time Stone -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>90</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>29</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40516" toLevel="1" name="Celestial Tower's Time Stone (Time-limited)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40517" toLevel="1" name="Perfect Name Background: Golden">
+		<!-- Double-click to make your name background golden in the chat window. <font color="FF8000">Note!</font>. The applied name background is permanent. It can be turned on/ off in the 'Settings - Ornaments' section. -->
+		<icon>icon.special_chat_background_v2</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="40518" toLevel="1" name="Perfect Name Background: Blue">
+		<!-- <<font color="FFBB00">A reward for the first adventurer to reach Lv. 94.</font>>. Double-click to make your name background blue in the chat window. <font color="FF8000">Note!</font>. The applied name background is permanent. It can be turned on/ off in the 'Settings - Ornaments' section. -->
+		<icon>icon.special_chat_background</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="40519" toLevel="1" name="Stable Scroll: Enchant A-grade Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40520" toLevel="1" name="Stable Scroll: Enchant A-grade Armor">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40521" toLevel="6" name="Kill Effect - Watermelon Burst">
+		<!-- Level 1: The cool and sweet watermelon is exploding! -->
+		<!-- Level 2: White snow is whirling and falling. -->
+		<!-- Level 3: Petals gracefully fly through the air. -->
+		<!-- Level 4: Lets you feel a fresh sea breeze. -->
+		<!-- Level 5: Yellowed leaves are drifting in the wind. -->
+		<!-- Level 6: Your weapon is filled with the power of immortality. -->
+		<icon>
+			<value level="1">icon.s_trigger_kill_effect_watermelon</value>
+			<value level="2">icon.s_trigger_kill_effect_snow</value>
+			<value level="3">icon.cursed_prison_petal</value>
+			<value level="4">icon.wp_fishing9</value>
+			<value level="5">icon.maple_leaf_i00</value>
+			<value level="6">icon.trigger_kill_effect_immortal</value>
+		</icon>
+		<operateType>A2</operateType>
+	</skill>
+	<skill id="40522" toLevel="1" name="Appearance Stone: Bloodstained Demonic Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40523" toLevel="1" name="Appearance Stone: Demonic Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40524" toLevel="1" name="Appearance Stone: Forgotten Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40525" toLevel="1" name="Watermelon Burst">
+		<icon>icon.s_trigger_kill_effect_watermelon</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40526" toLevel="2" name="Golden Wheel's Support Buff">
+		<!-- STR <font color="FFBB00">+1</font>. INT <font color="FFBB00">+1</font>. MP Recovery Rate <font color="FFBB00">+20</font>. Acquired XP <font color="FFBB00">+10%</font>. Acquired SP <font color="FFBB00">+10%</font>. Sayha's Grace Consumption <font color="FFBB00">-20%</font>. <<font color="00FF00">When the buff is cancelled, you can obtain</font>>. <font color="FFBB00">Golden Wheel's Coin (Time-limited) 1 pc.</font>. <font color="FF6666">Note!</font>. Items cannot be obtained if you are dead. Items cannot be obtained while teleporting. Items cannot be obtained if your inventory is full. -->
+		<icon>icon.ev_golden_wheel_scroll_special</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40527" toLevel="1" name="Golden Wheel's Support Buff">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="40528" toLevel="1" name="Archangel's Handmade Chocolate (Time-limited)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40529" toLevel="1" name="Scroll: Enchant Truth-seeker's Ornaments">
+		<icon>icon.bm_shilen_scrl_of_ench_acc</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40530" toLevel="1" name="Snow Turmoil">
+		<icon>icon.s_trigger_kill_effect_snow</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40531" toLevel="2" name="Kill Effect - Snow Turmoil">
+		<!-- White snow is whirling and falling. You can cancel the effect by yourself. -->
+		<icon>icon.s_trigger_kill_effect_snow</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40532" toLevel="1" name="Snow Turmoil">
+		<icon>icon.s_trigger_kill_effect_snow</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40533" toLevel="1" name="Valakas' Cave's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40534" toLevel="1" name="Valakas' Cave's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40535" toLevel="1" name="Valakas' Cave's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40536" toLevel="1" name="Extra Pass: Dream Dungeon (Time-limited)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40537" toLevel="1" name="Energizing HP Recovery Potion">
+		<icon>icon.energy_charge_potion</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40538" toLevel="1" name="Ancient Ruins' Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40539" toLevel="1" name="Ancient Ruins' Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40540" toLevel="1" name="Ancient Ruins' Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40541" toLevel="1" name="Greater Upgrade Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40542" toLevel="1" name="Stable Scroll: Enchant A-grade Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40543" toLevel="1" name="Stable Scroll: Enchant A-grade Armor">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40544" toLevel="1" name="Aden Travel Scroll">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>8000</hitTime>
+	</skill>
+	<skill id="40545" toLevel="15" name="Aden Travel Scroll - Cruma Tower's Top">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40546" toLevel="1" name="Blue Dragon's Protection">
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40547" toLevel="2" name="Blue Dragon's Protection">
+		<!-- You feel Blue Dragon's protection. Acquired XP/ SP +30%. P. Def. +1000. <<font color="00FF00">Given when the buff expires</font>>. <font color="FFBB00">Blue Dragon's Coin (Time-limited) (1 pc.)</font>. <<font color="FF6666">Note!</font>>. You cannot receive items if you are dead. You cannot receive items while teleporting. You cannot receive items if you have no free space in your inventory. You cannot receive another Blue Dragon's Protection while the previous one is active. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40548" toLevel="2" name="Blue Dragon's Protection">
+		<!-- You feel Blue Dragon's protection. Acquired XP/ SP +300%. <<font color="00FF00">Given when the buff expires</font>>. <font color="FFBB00">Blue Dragon's Coin (Time-limited) (1 pc.)</font>. <<font color="FF6666">Note!</font>>. You cannot receive items if you are dead. You cannot receive items while teleporting. You cannot receive items if you have no free space in your inventory. You cannot receive another Blue Dragon's Protection while the previous one is active. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40549" toLevel="1" name="Blue Dragon's Protection">
+		<!-- A summoning skill. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40550" toLevel="2" name="Blue Dragon's Protection">
+		<!-- You feel Blue Dragon's protection. Acquired XP/ SP +30%. P. Def. +1000. <<font color="00FF00">Given when the buff expires</font>>. <font color="FFBB00">Blue Dragon's Coin (Time-limited) (1 pc.)</font>. <<font color="FF6666">Note!</font>>. You cannot receive items if you are dead. You cannot receive items while teleporting. You cannot receive items if you have no free space in your inventory. You cannot receive another Blue Dragon's Protection while the previous one is active. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40551" toLevel="2" name="Blue Dragon's Protection">
+		<!-- You feel Blue Dragon's protection. Acquired XP/ SP +300%. <<font color="00FF00">Given when the buff expires</font>>. <font color="FFBB00">Blue Dragon's Coin (Time-limited) (1 pc.)</font>. <<font color="FF6666">Note!</font>>. You cannot receive items if you are dead. You cannot receive items while teleporting. You cannot receive items if you have no free space in your inventory. You cannot receive another Blue Dragon's Protection while the previous one is active. -->
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40552" toLevel="1" name="Blue Dragon's Coin Craft">
+		<icon>icon.bm_dragon_posion_special</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="40553" toLevel="1" name="Whispering Woods' Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40554" toLevel="1" name="Throw Capture Rope">
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="40555" toLevel="1" name="Flying Petals">
+		<icon>icon.cursed_prison_petal</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40556" toLevel="2" name="Kill Effect - Flying Petals">
+		<!-- Beautiful flowers are swinging shedding their petals. <font color="FF0000">Note!</font>. The effect does not stack with Honey Watermelon and Shining Snowball. You can cancel the effect by yourself. -->
+		<icon>icon.cursed_prison_petal</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40557" toLevel="1" name="Flying Petals">
+		<icon>icon.cursed_prison_petal</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40558" toLevel="1" name="Flower of Spring Arrival">
+		<icon>icon.ev_garden_buff</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>1500</hitTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="40559" toLevel="1" name="Whispering Woods' Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40560" toLevel="1" name="Hairstyle Change Potion I">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="40561" toLevel="1" name="Growth Support Scroll">
+		<!-- <font color="FF8000"><Lv. 93+></font>. Acquired XP/ SP: 30%. <font color="FF8000"><Lv. 1-92></font>. Acquired XP/ SP: 200%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="40562" toLevel="1" name="Growth Support Scroll">
+		<!-- <font color="FF8000"><Lv. 91+></font>. Acquired XP/ SP: 30%. <font color="FF8000"><Lv. 1-90></font>. Acquired XP/ SP: 200%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+	</skill>
+	<skill id="40563" toLevel="1" name="Appearance Stone: Bloodstained Demonic Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40564" toLevel="1" name="Appearance Stone: Demonic Sword">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40565" toLevel="1" name="Appearance Stone: Forgotten Weapon">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40566" toLevel="1" name="Power of Immortality">
+		<icon>icon.trigger_kill_effect_immortal</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40567" toLevel="1" name="Life Control Tower's Scroll of Blessing">
+		<!-- Max HP/ MP +5%. Acquired XP/ SP +30%. Paralysis/ Silence/ Fear Resistance +15%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount> <!-- Life Control Tower's Scroll of Blessing (Exchangeable) -->
+		<itemConsumeId>49765</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>5</PARALYZE>
+				<FEAR>5</FEAR>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40568" toLevel="1" name="Lucky XP Herb Drink">
+		<!-- A brand-new XP herb drink filled with luck!. Acquired XP/ SP +50%. Skill Power -1% -->
+		<icon>icon.four_leaf_clover_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40569" toLevel="1" name="Lucky HP Herb Drink">
+		<icon>icon.four_leaf_clover_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40570" toLevel="1" name="Lucky MP Herb Drink">
+		<icon>icon.four_leaf_clover_i00</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="40571" toLevel="1" name="Guardian's Essence (High-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40572" toLevel="1" name="Guardian's Essence (Mid-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40573" toLevel="1" name="Guardian's Essence (Low-grade)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40574" toLevel="1" name="Guardian's Essence (High-grade) - Pet">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40575" toLevel="1" name="Guardian's Essence (Mid-grade) - Pet">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40576" toLevel="1" name="Guardian's Essence (Low-grade) - Pet">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40577" toLevel="1" name="Guardian's Essence (High-grade) - Mercenary">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40578" toLevel="1" name="Guardian's Essence (Mid-grade) - Mercenary">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40579" toLevel="1" name="Guardian's Essence (Low-grade) - Mercenary">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="40580" toLevel="1" name="Prime Stable Circlet Upgrade Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40581" toLevel="1" name="Eva's Gift">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40582" toLevel="1" name="Eva's Offering">
+		<!-- Breath gauge +400% -->
+		<icon>icon.skill1510</icon>
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+	</skill>
+	<skill id="40583" toLevel="1" name="Sea Flavor">
+		<icon>icon.wp_fishing9</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40584" toLevel="1" name="Heavy Hammer Strike">
+		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+	</skill>
+	<skill id="40585" toLevel="1" name="Leaf Fall">
+		<icon>icon.maple_leaf_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40586" toLevel="1" name="Kill Effect - Leaf Fall">
+		<!-- Yellowed leaves are drifting in the wind. Can be deleted. -->
+		<icon>icon.maple_leaf_i00</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="40587" toLevel="1" name="Leaf Fall">
+		<icon>icon.maple_leaf_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40588" toLevel="1" name="Water Dragon's Canyon's Time Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40589" toLevel="1" name="Water Dragon's Canyon's Time Stone (Sealed)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40590" toLevel="1" name="Water Dragon's Canyon's Time Stone (Time-limited) (Sealed)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40591" toLevel="1" name="Underwater Haste">
+		<!-- Speed underwater +250 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>10000</reuseDelay>
+	</skill>
+	<skill id="40592" toLevel="1" name="Scroll: Boost Attack (Time-limited)">
+		<!-- P. Atk. +100. M. Atk. +100. Max MP +100. Skill MP Consumption -3%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.scrl_of_ladies_silver_knife_01</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_ATTACK</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94268</itemConsumeId> <!-- Scroll: Boost Attack (Exchangeable) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40220</skillId> <!-- Scroll: Boost Attack -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40229</skillId> <!-- Scroll: Boost Attack - Event -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>1000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40593" toLevel="1" name="Scroll: Boost Defense (Time-limited)">
+		<!-- P. Def. +200. M. Def. +200. All received Critical Damage -50. Acquired XP/ SP +10%. The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.scrl_of_ench_bracelet_lucien_01</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>4</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>BOOST_DEFENCE</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94270</itemConsumeId> <!-- Scroll: Boost Defense (Exchangeable) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40222</skillId> <!-- Scroll: Boost Defense -->
+			</condition>
+			<condition name="OpNotAffectedBySkill">
+				<skillId>40230</skillId> <!-- Scroll: Boost Defense - Event -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40594" toLevel="1" name="Pet's Green Lantern (Time-limited)">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40595" toLevel="1" name="Berserker's Scroll (Time-limited)">
+		<!-- STR +1. INT +1. Atk. Spd. +100. Casting Spd. +100. Speed +5. P. Skill Power +5%. M. Skill Power +5% -->
+		<icon>icon.bereserker_scroll_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>SPECIAL_BERSERKER</abnormalType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>94776</itemConsumeId> <!-- Berserker's Scroll (Exchangeable) -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>1</magicLevel>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="40596" toLevel="1" name="Ironheart Fortress' Time Stone">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40597" toLevel="1" name="Ironheart Fortress' Time Stone">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40598" toLevel="1" name="Ironheart Fortress' Time Stone">
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="40599" toLevel="1" name="Heavy Hammer Strike">
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+</list>

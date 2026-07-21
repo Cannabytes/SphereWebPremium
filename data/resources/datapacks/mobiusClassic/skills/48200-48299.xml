@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="48200" toLevel="1" name="Ant Prophecy">
+		<!-- PvE damage +5%. All Critical Rate +50. All Critical Damage +100. Sayha's Grace Consumption -10% -->
+		<icon>icon.skill3630</icon>
+		<operateType>A2</operateType>
+		<targetType>TARGET</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>11700</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<canBeDispelled>false</canBeDispelled>
+		<castRange>300</castRange>
+		<effectRange>1500</effectRange>
+		<hitTime>0</hitTime>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>76</magicLevel>
+		<reuseDelay>100</reuseDelay>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48201" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- A rift that appeared after an earthquake had weakened Maphr's Seal. It shifted to the material world and brought chaos and pain with it. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48202" toLevel="1" name="Katuba's Strike">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48203" toLevel="1" name="Katuba's Stun">
+		<!-- Immobilizes and stuns target. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>10</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48204" toLevel="1" name="Katuba's Knock Down">
+		<!-- Temporarily knocked down and immobilized. -->
+		<icon>icon.skill1896</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48205" toLevel="10" name="Blood Spear">
+		<!-- Attacks the target with an arrow of darkness. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>150</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>460</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>90</magicLevel>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>999</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48206" toLevel="10" name="Dark Bomb">
+		<!-- Attacks the enemy with Darkness Bombs. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48207" toLevel="10" name="Dark Strike">
+		<!-- Powerful P. Atk. on enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48208" toLevel="10" name="Drain">
+		<!-- Decreases HP/ MP of the target and restores player's HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>700</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>73</magicLevel>
+		<effects>
+			<effect name="HpDrain">
+				<power>100</power>
+				<percentage>80</percentage>
+			</effect>
+			<effect name="MagicalDamageMp">
+				<power>246</power>
+				<critical>true</critical>
+				<criticalLimit>1450</criticalLimit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48209" toLevel="10" name="Spirit Wind">
+		<!-- The power of mighty spirit increases Atk. Spd. and Casting Spd. -->
+		<icon>icon.skill1062</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="48210" toLevel="3" name="See Creature">
+		<!-- Level 1: Attacks target and increases Speed. -->
+		<!-- Level 2: Attacks target and significantly increases Speed. -->
+		<!-- Level 3: Attacks target, increases Speed and Atk. Spd., significantly increaes Casting Spd. -->
+		<icon>icon.skill1204</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="48211" toLevel="10" name="Red Sphere">
+		<!-- Attacks the enemy with an exploding fire sphere. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48212" toLevel="10" name="Rush">
+		<!-- Rushes to the target, inflicts damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48213" toLevel="12" name="Fear">
+		<!-- Enemy is afflicted with Fear and moving against own will. -->
+		<icon>icon.skill1092</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>90</magicLevel>
+		<mpConsume>
+			<value level="1">15</value>
+			<value level="2">20</value>
+			<value level="3">23</value>
+			<value level="4">27</value>
+			<value level="5">30</value>
+			<value level="6">35</value>
+			<value level="7">39</value>
+			<value level="8">44</value>
+			<value level="9">48</value>
+			<value level="10">52</value>
+			<value level="11">54</value>
+			<value level="12">55</value>
+		</mpConsume>
+		<reuseDelay>3000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="48214" toLevel="12" name="Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1613</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>40</castRange>
+		<effectPoint>-230</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>50</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48215" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- Deiman has always been a Beleth's henchman and he came to Hellbound with him. When Beleth made the deal with demons, Deiman gained their power, too. Now he's a half-demon and, while waiting for his master to restore his powers, he sends him pure magic energy using Beleth's Magic Circles. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48216" toLevel="1" name="Deiman's Attack">
+		<!-- Inflicts great damage on the enemies near the target. -->
+		<icon>icon.skill0036</icon>
+		<operateType>A1</operateType>
+		<targetType>TARGET</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>100</affectRange>
+		<affectScope>RANGE</affectScope>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>270</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>1000</hitTime>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>94</magicLevel>
+		<reuseDelay>0</reuseDelay>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>999</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48217" toLevel="1" name="Deiman's Long Range Knockback">
+		<!-- Decreases HP/ MP of the target and restores player's HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>700</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<effectPoint>-700</effectPoint>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>73</magicLevel>
+		<effects>
+			<effect name="HpDrain">
+				<power>100</power>
+				<percentage>80</percentage>
+			</effect>
+			<effect name="MagicalDamageMp">
+				<power>246</power>
+				<critical>true</critical>
+				<criticalLimit>1450</criticalLimit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48218" toLevel="1" name="Boss' Mass Blood Siphon">
+		<!-- Decreases HP/ MP of the target and restores player's HP. -->
+		<icon>icon.skill0289</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>700</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<effectPoint>-700</effectPoint>
+		<hitTime>5000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>73</magicLevel>
+		<effects>
+			<effect name="HpDrain">
+				<power>100</power>
+				<percentage>80</percentage>
+			</effect>
+			<effect name="MagicalDamageMp">
+				<power>246</power>
+				<critical>true</critical>
+				<criticalLimit>1450</criticalLimit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48219" toLevel="1" name="Stun">
+		<!-- Immobilizes and stuns target. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-700</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>10</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48220" toLevel="1" name="Hold">
+		<!-- Holds the target. -->
+		<icon>icon.skill4047</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>1500</effectRange>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>10</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<trait>HOLD</trait>
+		<effects>
+			<effect name="Root" />
+		</effects>
+	</skill>
+	<skill id="48221" toLevel="1" name="Fear">
+		<!-- Enemy is afflicted with Fear and moving against own will. -->
+		<icon>icon.skill1092</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>90</magicLevel>
+		<reuseDelay>0</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="48222" toLevel="1" name="Raid Boss (Lv. 85)">
+		<!-- Vampire Queen Satina came to Hellbound after forming an alliance with Beleth. She conducts experiments with the magic that permeates this place in order to help the fallen wizard restore his powers quicker. At the same time, however, the queen is planning to secretely bestow new powers onto her subjects. The experiments take place in Satina's Laboratory where Beleth's followers are imbued with demonic power and Hellbound magic is being transfered to vampires. -->
+		<icon>icon.skillraid</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48223" toLevel="1" name="Satina's Attack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-700</effectPoint>
+	</skill>
+	<skill id="48224" toLevel="1" name="Satina's Ranged Attack">
+		<icon>icon.skill0289</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-700</effectPoint>
+	</skill>
+	<skill id="48225" toLevel="1" name="Sleep">
+		<!-- Immobilizes the target putting them to sleep. -->
+		<icon>icon.skill4046</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitCancelTime>2</hitCancelTime>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<removedOnDamage>true</removedOnDamage>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48226" toLevel="1" name="Silence">
+		<!-- Physical and magic skills are all blocked. -->
+		<icon>icon.skill1064</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-700</effectPoint>
+	</skill>
+	<skill id="48227" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-700</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>50</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48228" toLevel="10" name="Blood Siphon Resistance">
+		<!-- Resistance to HP absorption effects from attacks. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48229" toLevel="10" name="Drain Resistance">
+		<!-- Resistant to HP Drain. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48230" toLevel="10" name="Critical Damage Resistance">
+		<!-- Resistant to Critical Damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48231" toLevel="1" name="Beleth's Curse">
+		<!-- A powerful curse cast by Beleth. Time-limited effect. Atk. Spd. -50%. Casting Spd. -50%. Drains HP over time. Basic attacks cannot be used. Skills cannot be used. -->
+		<icon>icon.skill0046</icon>
+		<operateType>A2</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>-1</abnormalTime>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
+		<effectPoint>0</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>0</isMagic>
+		<trait>INFECTION</trait>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamOverTime">
+				<power>123</power>
+				<ticks>3</ticks>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>1;2;3;4;5;22</magicTypes>
+			</effect>
+			<effect name="PhysicalDamageMute">
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48232" toLevel="1" name="Orfen's Rage">
+		<!-- Orfen's rage makes the enemy's soul leave their body. -->
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48233" toLevel="1" name="Orfen's Prophecy">
+		<!-- PvE damage +5%. Skill MP Consumption -5%. P. Def. +300. M. Def. +300. Sayha's Grace Consumption -10% -->
+		<icon>icon.skill6435</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48234" toLevel="1" name="Core Plasma">
+		<!-- Core plasma makes the enemy's soul leave their body. -->
+		<icon>icon.skill10324</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48235" toLevel="1" name="Core Prophecy">
+		<!-- PvE damage +5%. Received PvE damage -5%. P. Def. +300. M. Def. +300. HP Recovery Potions' Effect +20. Sayha's Grace Consumption -10% -->
+		<icon>icon.skill32633</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48236" toLevel="1" name="Baium's Prophecy">
+		<!-- PvE damage +5%. P. Skill Power +5%. M. Skill Power +5%. Atk. Spd. +50. Casting Spd. +50. Sayha's Grace Consumption -10% -->
+		<icon>icon.skill10318</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48237" toLevel="1" name="Core Plasma">
+		<!-- Core plasma makes the enemy's soul leave their body. -->
+		<icon>icon.skill10324</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48238" toLevel="1" name="Baium Attack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48239" toLevel="1" name="Baium's Wind Of Force">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48240" toLevel="1" name="Baium's Gift">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48241" toLevel="1" name="Baium's Earth Shaker">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48242" toLevel="1" name="Baium's Lightning">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48243" toLevel="1" name="Baium's Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>3600</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>50</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>999</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48244" toLevel="1" name="Knock Down">
+		<!-- Temporarily knocked down and immobilized. -->
+		<icon>icon.skill0518</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-700</effectPoint>
+	</skill>
+	<skill id="48245" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill0523</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-700</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>50</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="PhysicalDamage">
+				<power>999</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48246" toLevel="1" name="Fear">
+		<!-- Afflicted with Fear and moving against own will. -->
+		<icon>icon.skill1092</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>140</activateRate>
+		<affectLimit>70-80</affectLimit>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>900</affectRange>
+		<affectScope>POINT_BLANK</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<coolTime>0</coolTime>
+		<effectPoint>-700</effectPoint>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>90</magicLevel>
+		<reuseDelay>8000</reuseDelay>
+		<trait>DERANGEMENT</trait>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+			<effect name="Speed">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48247" toLevel="1" name="Trix' Random Transformation Effect">
+		<icon>icon.random_transform_00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48248" toLevel="1" name="Freezing Paralysis">
+		<!-- Freezes the target and immobilizes it. -->
+		<icon>icon.skill6274</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>FREEZING</abnormalType>
+		<abnormalVisualEffect>FREEZING</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-500</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>1000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48249" toLevel="1" name="Electric Shock">
+		<!-- Hits the target with electricity and immobilizes it. -->
+		<icon>icon.skill1095</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-500</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>1000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48250" toLevel="1" name="Flame Bind">
+		<!-- Surrounds the target with flames and immobilizes it. -->
+		<icon>icon.skill0834</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>DOT_FIRE</abnormalVisualEffect>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>NONE</basicProperty>
+		<effectPoint>-500</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>1000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="DamOverTime">
+				<canKill>true</canKill>
+				<power>60</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48251" toLevel="1" name="Swift Fist">
+		<!-- Stuns for 2 sec. -->
+		<icon>icon.armor_t96_g_i03</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-300</effectPoint>
+	</skill>
+	<skill id="48252" toLevel="1" name="Force of Silence">
+		<!-- Skills are unusable for 2 sec. -->
+		<icon>icon.armor_t94_g_i01</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-300</effectPoint>
+	</skill>
+	<skill id="48253" toLevel="1" name="Hell Lightning">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.hellbound_talisman_i00</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>1500</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48254" toLevel="1" name="Queen Ant's Rain of Stones">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.skill4282_new</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>1800</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>2000</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48255" toLevel="1" name="Baium's Thunder Bolt">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.skill1469</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>1500</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48256" toLevel="1" name="Zaken's Blood Prison">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.skill32100</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>1500</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48257" toLevel="1" name="Orfen's Poison Storm">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.skill6435</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>1500</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48258" toLevel="1" name="Core's Plasmic Shock">
+		<!-- Deals 1500 fixed damage. -->
+		<icon>icon.skill32633</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>0</hitTime>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalDamage">
+				<power>1500</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48259" toLevel="1" name="Dragon's Protection">
+		<!-- The barrier's HP: 20,000. Protects from 3 attack(s). Disappears upon reaching 0 HP or triggering the specified number of times. -->
+		<icon>icon.dragon_belt_grace</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="48260" toLevel="40" name="Received P. Skill Critical Damage Reduction">
+		<!-- Level 1: Received P. Skill Critical Damage -500 -->
+		<!-- Level 2: Received P. Skill Critical Damage -1000 -->
+		<!-- Level 3: Received P. Skill Critical Damage -1500 -->
+		<!-- Level 4: Received P. Skill Critical Damage -2000 -->
+		<!-- Level 5: Received P. Skill Critical Damage -2500 -->
+		<!-- Level 6: Received P. Skill Critical Damage -3000 -->
+		<!-- Level 7: Received P. Skill Critical Damage -3500 -->
+		<!-- Level 8: Received P. Skill Critical Damage -4000 -->
+		<!-- Level 9: Received P. Skill Critical Damage -4500 -->
+		<!-- Level 10: Received P. Skill Critical Damage -5000 -->
+		<!-- Level 11: Received P. Skill Critical Damage -5500 -->
+		<!-- Level 12: Received P. Skill Critical Damage -6000 -->
+		<!-- Level 13: Received P. Skill Critical Damage -6500 -->
+		<!-- Level 14: Received P. Skill Critical Damage -7000 -->
+		<!-- Level 15: Received P. Skill Critical Damage -7500 -->
+		<!-- Level 16: Received P. Skill Critical Damage -8000 -->
+		<!-- Level 17: Received P. Skill Critical Damage -8500 -->
+		<!-- Level 18: Received P. Skill Critical Damage -9000 -->
+		<!-- Level 19: Received P. Skill Critical Damage -9500 -->
+		<!-- Level 20: Received P. Skill Critical Damage -10,000 -->
+		<!-- Level 21: Received P. Skill Critical Damage -10,500 -->
+		<!-- Level 22: Received P. Skill Critical Damage -11,000 -->
+		<!-- Level 23: Received P. Skill Critical Damage -11,500 -->
+		<!-- Level 24: Received P. Skill Critical Damage -12,000 -->
+		<!-- Level 25: Received P. Skill Critical Damage -12,500 -->
+		<!-- Level 26: Received P. Skill Critical Damage -13,000 -->
+		<!-- Level 27: Received P. Skill Critical Damage -13,500 -->
+		<!-- Level 28: Received P. Skill Critical Damage -14,000 -->
+		<!-- Level 29: Received P. Skill Critical Damage -14,500 -->
+		<!-- Level 30: Received P. Skill Critical Damage -15,000 -->
+		<!-- Level 31: Received P. Skill Critical Damage -15,500 -->
+		<!-- Level 32: Received P. Skill Critical Damage -16,000 -->
+		<!-- Level 33: Received P. Skill Critical Damage -16,500 -->
+		<!-- Level 34: Received P. Skill Critical Damage -17,000 -->
+		<!-- Level 35: Received P. Skill Critical Damage -17,500 -->
+		<!-- Level 36: Received P. Skill Critical Damage -18,000 -->
+		<!-- Level 37: Received P. Skill Critical Damage -18,500 -->
+		<!-- Level 38: Received P. Skill Critical Damage -19,000 -->
+		<!-- Level 39: Received P. Skill Critical Damage -19,500 -->
+		<!-- Level 40: Received P. Skill Critical Damage -20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48261" toLevel="40" name="Received M. Skill Critical Damage Reduction">
+		<!-- Level 1: Received M. Skill Critical Damage -500 -->
+		<!-- Level 2: Received M. Skill Critical Damage -1000 -->
+		<!-- Level 3: Received M. Skill Critical Damage -1500 -->
+		<!-- Level 4: Received M. Skill Critical Damage -2000 -->
+		<!-- Level 5: Received M. Skill Critical Damage -2500 -->
+		<!-- Level 6: Received M. Skill Critical Damage -3000 -->
+		<!-- Level 7: Received M. Skill Critical Damage -3500 -->
+		<!-- Level 8: Received M. Skill Critical Damage -4000 -->
+		<!-- Level 9: Received M. Skill Critical Damage -4500 -->
+		<!-- Level 10: Received M. Skill Critical Damage -5000 -->
+		<!-- Level 11: Received M. Skill Critical Damage -5500 -->
+		<!-- Level 12: Received M. Skill Critical Damage -6000 -->
+		<!-- Level 13: Received M. Skill Critical Damage -6500 -->
+		<!-- Level 14: Received M. Skill Critical Damage -7000 -->
+		<!-- Level 15: Received M. Skill Critical Damage -7500 -->
+		<!-- Level 16: Received M. Skill Critical Damage -8000 -->
+		<!-- Level 17: Received M. Skill Critical Damage -8500 -->
+		<!-- Level 18: Received M. Skill Critical Damage -9000 -->
+		<!-- Level 19: Received M. Skill Critical Damage -9500 -->
+		<!-- Level 20: Received M. Skill Critical Damage -10,000 -->
+		<!-- Level 21: Received M. Skill Critical Damage -10,500 -->
+		<!-- Level 22: Received M. Skill Critical Damage -11,000 -->
+		<!-- Level 23: Received M. Skill Critical Damage -11,500 -->
+		<!-- Level 24: Received M. Skill Critical Damage -12,000 -->
+		<!-- Level 25: Received M. Skill Critical Damage -12,500 -->
+		<!-- Level 26: Received M. Skill Critical Damage -13,000 -->
+		<!-- Level 27: Received M. Skill Critical Damage -13,500 -->
+		<!-- Level 28: Received M. Skill Critical Damage -14,000 -->
+		<!-- Level 29: Received M. Skill Critical Damage -14,500 -->
+		<!-- Level 30: Received M. Skill Critical Damage -15,000 -->
+		<!-- Level 31: Received M. Skill Critical Damage -15,500 -->
+		<!-- Level 32: Received M. Skill Critical Damage -16,000 -->
+		<!-- Level 33: Received M. Skill Critical Damage -16,500 -->
+		<!-- Level 34: Received M. Skill Critical Damage -17,000 -->
+		<!-- Level 35: Received M. Skill Critical Damage -17,500 -->
+		<!-- Level 36: Received M. Skill Critical Damage -18,000 -->
+		<!-- Level 37: Received M. Skill Critical Damage -18,500 -->
+		<!-- Level 38: Received M. Skill Critical Damage -19,000 -->
+		<!-- Level 39: Received M. Skill Critical Damage -19,500 -->
+		<!-- Level 40: Received M. Skill Critical Damage -20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48262" toLevel="40" name="All Received Critical Damage Decrease">
+		<!-- Level 1: All Received Critical Damage -500 -->
+		<!-- Level 2: All Received Critical Damage -1000 -->
+		<!-- Level 3: All Received Critical Damage -1500 -->
+		<!-- Level 4: All Received Critical Damage -2000 -->
+		<!-- Level 5: All Received Critical Damage -2500 -->
+		<!-- Level 6: All Received Critical Damage -3000 -->
+		<!-- Level 7: All Received Critical Damage -3500 -->
+		<!-- Level 8: All Received Critical Damage -4000 -->
+		<!-- Level 9: All Received Critical Damage -4500 -->
+		<!-- Level 10: All Received Critical Damage -5000 -->
+		<!-- Level 11: All Received Critical Damage -5500 -->
+		<!-- Level 12: All Received Critical Damage -6000 -->
+		<!-- Level 13: All Received Critical Damage -6500 -->
+		<!-- Level 14: All Received Critical Damage -7000 -->
+		<!-- Level 15: All Received Critical Damage -7500 -->
+		<!-- Level 16: All Received Critical Damage -8000 -->
+		<!-- Level 17: All Received Critical Damage -8500 -->
+		<!-- Level 18: All Received Critical Damage -9000 -->
+		<!-- Level 19: All Received Critical Damage -9500 -->
+		<!-- Level 20: All Received Critical Damage -10,000 -->
+		<!-- Level 21: All Received Critical Damage -10,500 -->
+		<!-- Level 22: All Received Critical Damage -11,000 -->
+		<!-- Level 23: All Received Critical Damage -11,500 -->
+		<!-- Level 24: All Received Critical Damage -12,000 -->
+		<!-- Level 25: All Received Critical Damage -12,500 -->
+		<!-- Level 26: All Received Critical Damage -13,000 -->
+		<!-- Level 27: All Received Critical Damage -13,500 -->
+		<!-- Level 28: All Received Critical Damage -14,000 -->
+		<!-- Level 29: All Received Critical Damage -14,500 -->
+		<!-- Level 30: All Received Critical Damage -15,000 -->
+		<!-- Level 31: All Received Critical Damage -15,500 -->
+		<!-- Level 32: All Received Critical Damage -16,000 -->
+		<!-- Level 33: All Received Critical Damage -16,500 -->
+		<!-- Level 34: All Received Critical Damage -17,000 -->
+		<!-- Level 35: All Received Critical Damage -17,500 -->
+		<!-- Level 36: All Received Critical Damage -18,000 -->
+		<!-- Level 37: All Received Critical Damage -18,500 -->
+		<!-- Level 38: All Received Critical Damage -19,000 -->
+		<!-- Level 39: All Received Critical Damage -19,500 -->
+		<!-- Level 40: All Received Critical Damage -20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48263" toLevel="10" name="Basic Critical Rate Increase">
+		<!-- Level 1: Basic Critical Rate +10% -->
+		<!-- Level 2: Basic Critical Rate +20% -->
+		<!-- Level 3: Basic Critical Rate +30% -->
+		<!-- Level 4: Basic Critical Rate +40% -->
+		<!-- Level 5: Basic Critical Rate +50% -->
+		<!-- Level 6: Basic Critical Rate +60% -->
+		<!-- Level 7: Basic Critical Rate +70% -->
+		<!-- Level 8: Basic Critical Rate +80% -->
+		<!-- Level 9: Basic Critical Rate +90% -->
+		<!-- Level 10: Basic Critical Rate +100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48264" toLevel="10" name="P. Skill Critical Rate Increase">
+		<!-- Level 1: P. Skill Critical Rate +10% -->
+		<!-- Level 2: P. Skill Critical Rate +20% -->
+		<!-- Level 3: P. Skill Critical Rate +30% -->
+		<!-- Level 4: P. Skill Critical Rate +40% -->
+		<!-- Level 5: P. Skill Critical Rate +50% -->
+		<!-- Level 6: P. Skill Critical Rate +60% -->
+		<!-- Level 7: P. Skill Critical Rate +70% -->
+		<!-- Level 8: P. Skill Critical Rate +80% -->
+		<!-- Level 9: P. Skill Critical Rate +90% -->
+		<!-- Level 10: P. Skill Critical Rate +100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48265" toLevel="10" name="M. Skill Critical Rate Increase">
+		<!-- Level 1: M. Skill Critical Rate +10% -->
+		<!-- Level 2: M. Skill Critical Rate +20% -->
+		<!-- Level 3: M. Skill Critical Rate +30% -->
+		<!-- Level 4: M. Skill Critical Rate +40% -->
+		<!-- Level 5: M. Skill Critical Rate +50% -->
+		<!-- Level 6: M. Skill Critical Rate +60% -->
+		<!-- Level 7: M. Skill Critical Rate +70% -->
+		<!-- Level 8: M. Skill Critical Rate +80% -->
+		<!-- Level 9: M. Skill Critical Rate +90% -->
+		<!-- Level 10: M. Skill Critical Rate +100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48266" toLevel="10" name="All Critical Rate Increase">
+		<!-- Level 1: All Critical Rate +10% -->
+		<!-- Level 2: All Critical Rate +20% -->
+		<!-- Level 3: All Critical Rate +30% -->
+		<!-- Level 4: All Critical Rate +40% -->
+		<!-- Level 5: All Critical Rate +50% -->
+		<!-- Level 6: All Critical Rate +60% -->
+		<!-- Level 7: All Critical Rate +70% -->
+		<!-- Level 8: All Critical Rate +80% -->
+		<!-- Level 9: All Critical Rate +90% -->
+		<!-- Level 10: All Critical Rate +100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48267" toLevel="10" name="Received Basic Critical Rate Decrease">
+		<!-- Level 1: Received basic Critical Damage -10% -->
+		<!-- Level 2: Received basic Critical Damage -20% -->
+		<!-- Level 3: Received basic Critical Damage -30% -->
+		<!-- Level 4: Received basic Critical Damage -40% -->
+		<!-- Level 5: Received basic Critical Damage -50% -->
+		<!-- Level 6: Received basic Critical Damage -60% -->
+		<!-- Level 7: Received basic Critical Damage -70% -->
+		<!-- Level 8: Received basic Critical Damage -80% -->
+		<!-- Level 9: Received basic Critical Damage -90% -->
+		<!-- Level 10: Received basic Critical Damage -100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48268" toLevel="10" name="Received P. Skill Critical Rate Decrease">
+		<!-- Level 1: Received P. Skill Critical Damage -10% -->
+		<!-- Level 2: Received P. Skill Critical Damage -20% -->
+		<!-- Level 3: Received P. Skill Critical Damage -30% -->
+		<!-- Level 4: Received P. Skill Critical Damage -40% -->
+		<!-- Level 5: Received P. Skill Critical Damage -50% -->
+		<!-- Level 6: Received P. Skill Critical Damage -60% -->
+		<!-- Level 7: Received P. Skill Critical Damage -70% -->
+		<!-- Level 8: Received P. Skill Critical Damage -80% -->
+		<!-- Level 9: Received P. Skill Critical Damage -90% -->
+		<!-- Level 10: Received P. Skill Critical Damage -100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48269" toLevel="10" name="Received M. Skill Critical Rate Decrease">
+		<!-- Level 1: Received M. Skill Critical Damage -10% -->
+		<!-- Level 2: Received M. Skill Critical Damage -20% -->
+		<!-- Level 3: Received M. Skill Critical Damage -30% -->
+		<!-- Level 4: Received M. Skill Critical Damage -40% -->
+		<!-- Level 5: Received M. Skill Critical Damage -50% -->
+		<!-- Level 6: Received M. Skill Critical Damage -60% -->
+		<!-- Level 7: Received M. Skill Critical Damage -70% -->
+		<!-- Level 8: Received M. Skill Critical Damage -80% -->
+		<!-- Level 9: Received M. Skill Critical Damage -90% -->
+		<!-- Level 10: Received M. Skill Critical Damage -100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48270" toLevel="10" name="All Received Critical Rate Decrease">
+		<!-- Level 1: All Received Critical Damage -10% -->
+		<!-- Level 2: All Received Critical Damage -20% -->
+		<!-- Level 3: All Received Critical Damage -30% -->
+		<!-- Level 4: All Received Critical Damage -40% -->
+		<!-- Level 5: All Received Critical Damage -50% -->
+		<!-- Level 6: All Received Critical Damage -60% -->
+		<!-- Level 7: All Received Critical Damage -70% -->
+		<!-- Level 8: All Received Critical Damage -80% -->
+		<!-- Level 9: All Received Critical Damage -90% -->
+		<!-- Level 10: All Received Critical Damage -100% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48271" toLevel="18" name="Neutralization Resistance Increase">
+		<!-- Level 1: Neutralization Resistance +5% -->
+		<!-- Level 2: Neutralization Resistance +10% -->
+		<!-- Level 3: Neutralization Resistance +15% -->
+		<!-- Level 4: Neutralization Resistance +20% -->
+		<!-- Level 5: Neutralization Resistance +25% -->
+		<!-- Level 6: Neutralization Resistance +30% -->
+		<!-- Level 7: Neutralization Resistance +35% -->
+		<!-- Level 8: Neutralization Resistance +40% -->
+		<!-- Level 9: Neutralization Resistance +45% -->
+		<!-- Level 10: Neutralization Resistance +50% -->
+		<!-- Level 11: Neutralization Resistance +55% -->
+		<!-- Level 12: Neutralization Resistance +60% -->
+		<!-- Level 13: Neutralization Resistance +65% -->
+		<!-- Level 14: Neutralization Resistance +70% -->
+		<!-- Level 15: Neutralization Resistance +75% -->
+		<!-- Level 16: Neutralization Resistance +80% -->
+		<!-- Level 17: Neutralization Resistance +85% -->
+		<!-- Level 18: Neutralization Resistance +90% -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48272" toLevel="40" name="P. Def. Increase">
+		<!-- Level 1: P. Def. +500 -->
+		<!-- Level 2: P. Def. +1000 -->
+		<!-- Level 3: P. Def. +1500 -->
+		<!-- Level 4: P. Def. +2000 -->
+		<!-- Level 5: P. Def. +2500 -->
+		<!-- Level 6: P. Def. +3000 -->
+		<!-- Level 7: P. Def. +3500 -->
+		<!-- Level 8: P. Def. +4000 -->
+		<!-- Level 9: P. Def. +4500 -->
+		<!-- Level 10: P. Def. +5000 -->
+		<!-- Level 11: P. Def. +5500 -->
+		<!-- Level 12: P. Def. +6000 -->
+		<!-- Level 13: P. Def. +6500 -->
+		<!-- Level 14: P. Def. +7000 -->
+		<!-- Level 15: P. Def. +7500 -->
+		<!-- Level 16: P. Def. +8000 -->
+		<!-- Level 17: P. Def. +8500 -->
+		<!-- Level 18: P. Def. +9000 -->
+		<!-- Level 19: P. Def. +9500 -->
+		<!-- Level 20: P. Def. +10,000 -->
+		<!-- Level 21: P. Def. +10,500 -->
+		<!-- Level 22: P. Def. +11,000 -->
+		<!-- Level 23: P. Def. +11,500 -->
+		<!-- Level 24: P. Def. +12,000 -->
+		<!-- Level 25: P. Def. +12,500 -->
+		<!-- Level 26: P. Def. +13,000 -->
+		<!-- Level 27: P. Def. +13,500 -->
+		<!-- Level 28: P. Def. +14,000 -->
+		<!-- Level 29: P. Def. +14,500 -->
+		<!-- Level 30: P. Def. +15,000 -->
+		<!-- Level 31: P. Def. +15,500 -->
+		<!-- Level 32: P. Def. +16,000 -->
+		<!-- Level 33: P. Def. +16,500 -->
+		<!-- Level 34: P. Def. +17,000 -->
+		<!-- Level 35: P. Def. +17,500 -->
+		<!-- Level 36: P. Def. +18,000 -->
+		<!-- Level 37: P. Def. +18,500 -->
+		<!-- Level 38: P. Def. +19,000 -->
+		<!-- Level 39: P. Def. +19,500 -->
+		<!-- Level 40: P. Def. +20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+					<value level="3">1500</value>
+					<value level="4">2000</value>
+					<value level="5">2500</value>
+					<value level="6">3000</value>
+					<value level="7">3500</value>
+					<value level="8">4000</value>
+					<value level="9">4500</value>
+					<value level="10">5000</value>
+					<value level="11">5500</value>
+					<value level="12">6000</value>
+					<value level="13">6500</value>
+					<value level="14">7000</value>
+					<value level="15">7500</value>
+					<value level="16">8000</value>
+					<value level="17">8500</value>
+					<value level="18">9000</value>
+					<value level="19">9500</value>
+					<value level="20">10000</value>
+					<value level="21">10500</value>
+					<value level="22">11000</value>
+					<value level="23">11500</value>
+					<value level="24">12000</value>
+					<value level="25">12500</value>
+					<value level="26">13000</value>
+					<value level="27">13500</value>
+					<value level="28">14000</value>
+					<value level="29">14500</value>
+					<value level="30">15000</value>
+					<value level="31">15500</value>
+					<value level="32">16000</value>
+					<value level="33">16500</value>
+					<value level="34">17000</value>
+					<value level="35">17500</value>
+					<value level="36">18000</value>
+					<value level="37">18500</value>
+					<value level="38">19000</value>
+					<value level="39">19500</value>
+					<value level="40">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48273" toLevel="40" name="Magic Defense Bonus">
+		<!-- Level 1: M. Def. +500 -->
+		<!-- Level 2: M. Def. +1000 -->
+		<!-- Level 3: M. Def. +1500 -->
+		<!-- Level 4: M. Def. +2000 -->
+		<!-- Level 5: M. Def. +2500 -->
+		<!-- Level 6: M. Def. +3000 -->
+		<!-- Level 7: M. Def. +3500 -->
+		<!-- Level 8: M. Def. +4000 -->
+		<!-- Level 9: M. Def. +4500 -->
+		<!-- Level 10: M. Def. +5000 -->
+		<!-- Level 11: M. Def. +5500 -->
+		<!-- Level 12: M. Def. +6000 -->
+		<!-- Level 13: M. Def. +6500 -->
+		<!-- Level 14: M. Def. +7000 -->
+		<!-- Level 15: M. Def. +7500 -->
+		<!-- Level 16: M. Def. +8000 -->
+		<!-- Level 17: M. Def. +8500 -->
+		<!-- Level 18: M. Def. +9000 -->
+		<!-- Level 19: M. Def. +9500 -->
+		<!-- Level 20: M. Def. +10,000 -->
+		<!-- Level 21: M. Def. +10,500 -->
+		<!-- Level 22: M. Def. +11,000 -->
+		<!-- Level 23: M. Def. +11,500 -->
+		<!-- Level 24: M. Def. +12,000 -->
+		<!-- Level 25: M. Def. +12,500 -->
+		<!-- Level 26: M. Def. +13,000 -->
+		<!-- Level 27: M. Def. +13,500 -->
+		<!-- Level 28: M. Def. +14,000 -->
+		<!-- Level 29: M. Def. +14,500 -->
+		<!-- Level 30: M. Def. +15,000 -->
+		<!-- Level 31: M. Def. +15,500 -->
+		<!-- Level 32: M. Def. +16,000 -->
+		<!-- Level 33: M. Def. +16,500 -->
+		<!-- Level 34: M. Def. +17,000 -->
+		<!-- Level 35: M. Def. +17,500 -->
+		<!-- Level 36: M. Def. +18,000 -->
+		<!-- Level 37: M. Def. +18,500 -->
+		<!-- Level 38: M. Def. +19,000 -->
+		<!-- Level 39: M. Def. +19,500 -->
+		<!-- Level 40: M. Def. +20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+					<value level="3">1500</value>
+					<value level="4">2000</value>
+					<value level="5">2500</value>
+					<value level="6">3000</value>
+					<value level="7">3500</value>
+					<value level="8">4000</value>
+					<value level="9">4500</value>
+					<value level="10">5000</value>
+					<value level="11">5500</value>
+					<value level="12">6000</value>
+					<value level="13">6500</value>
+					<value level="14">7000</value>
+					<value level="15">7500</value>
+					<value level="16">8000</value>
+					<value level="17">8500</value>
+					<value level="18">9000</value>
+					<value level="19">9500</value>
+					<value level="20">10000</value>
+					<value level="21">10500</value>
+					<value level="22">11000</value>
+					<value level="23">11500</value>
+					<value level="24">12000</value>
+					<value level="25">12500</value>
+					<value level="26">13000</value>
+					<value level="27">13500</value>
+					<value level="28">14000</value>
+					<value level="29">14500</value>
+					<value level="30">15000</value>
+					<value level="31">15500</value>
+					<value level="32">16000</value>
+					<value level="33">16500</value>
+					<value level="34">17000</value>
+					<value level="35">17500</value>
+					<value level="36">18000</value>
+					<value level="37">18500</value>
+					<value level="38">19000</value>
+					<value level="39">19500</value>
+					<value level="40">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48274" toLevel="40" name="P./ M. Def. Increase">
+		<!-- Level 1: P./ M. Def. +500 -->
+		<!-- Level 2: P./ M. Def. +1000 -->
+		<!-- Level 3: P./ M. Def. +1500 -->
+		<!-- Level 4: P./ M. Def. +2000 -->
+		<!-- Level 5: P./ M. Def. +2500 -->
+		<!-- Level 6: P./ M. Def. +3000 -->
+		<!-- Level 7: P./ M. Def. +3500 -->
+		<!-- Level 8: P./ M. Def. +4000 -->
+		<!-- Level 9: P./ M. Def. +4500 -->
+		<!-- Level 10: P./ M. Def. +5000 -->
+		<!-- Level 11: P./ M. Def. +5500 -->
+		<!-- Level 12: P./ M. Def. +6000 -->
+		<!-- Level 13: P./ M. Def. +6500 -->
+		<!-- Level 14: P./ M. Def. +7000 -->
+		<!-- Level 15: P./ M. Def. +7500 -->
+		<!-- Level 16: P./ M. Def. +8000 -->
+		<!-- Level 17: P./ M. Def. +8500 -->
+		<!-- Level 18: P./ M. Def. +9000 -->
+		<!-- Level 19: P./ M. Def. +9500 -->
+		<!-- Level 20: P./ M. Def. +10,000 -->
+		<!-- Level 21: P./ M. Def. +10,500 -->
+		<!-- Level 22: P./ M. Def. +11,000 -->
+		<!-- Level 23: P./ M. Def. +11,500 -->
+		<!-- Level 24: P./ M. Def. +12,000 -->
+		<!-- Level 25: P./ M. Def. +12,500 -->
+		<!-- Level 26: P./ M. Def. +13,000 -->
+		<!-- Level 27: P./ M. Def. +13,500 -->
+		<!-- Level 28: P./ M. Def. +14,000 -->
+		<!-- Level 29: P./ M. Def. +14,500 -->
+		<!-- Level 30: P./ M. Def. +15,000 -->
+		<!-- Level 31: P./ M. Def. +15,500 -->
+		<!-- Level 32: P./ M. Def. +16,000 -->
+		<!-- Level 33: P./ M. Def. +16,500 -->
+		<!-- Level 34: P./ M. Def. +17,000 -->
+		<!-- Level 35: P./ M. Def. +17,500 -->
+		<!-- Level 36: P./ M. Def. +18,000 -->
+		<!-- Level 37: P./ M. Def. +18,500 -->
+		<!-- Level 38: P./ M. Def. +19,000 -->
+		<!-- Level 39: P./ M. Def. +19,500 -->
+		<!-- Level 40: P./ M. Def. +20,000 -->
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+					<value level="3">1500</value>
+					<value level="4">2000</value>
+					<value level="5">2500</value>
+					<value level="6">3000</value>
+					<value level="7">3500</value>
+					<value level="8">4000</value>
+					<value level="9">4500</value>
+					<value level="10">5000</value>
+					<value level="11">5500</value>
+					<value level="12">6000</value>
+					<value level="13">6500</value>
+					<value level="14">7000</value>
+					<value level="15">7500</value>
+					<value level="16">8000</value>
+					<value level="17">8500</value>
+					<value level="18">9000</value>
+					<value level="19">9500</value>
+					<value level="20">10000</value>
+					<value level="21">10500</value>
+					<value level="22">11000</value>
+					<value level="23">11500</value>
+					<value level="24">12000</value>
+					<value level="25">12500</value>
+					<value level="26">13000</value>
+					<value level="27">13500</value>
+					<value level="28">14000</value>
+					<value level="29">14500</value>
+					<value level="30">15000</value>
+					<value level="31">15500</value>
+					<value level="32">16000</value>
+					<value level="33">16500</value>
+					<value level="34">17000</value>
+					<value level="35">17500</value>
+					<value level="36">18000</value>
+					<value level="37">18500</value>
+					<value level="38">19000</value>
+					<value level="39">19500</value>
+					<value level="40">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+					<value level="3">1500</value>
+					<value level="4">2000</value>
+					<value level="5">2500</value>
+					<value level="6">3000</value>
+					<value level="7">3500</value>
+					<value level="8">4000</value>
+					<value level="9">4500</value>
+					<value level="10">5000</value>
+					<value level="11">5500</value>
+					<value level="12">6000</value>
+					<value level="13">6500</value>
+					<value level="14">7000</value>
+					<value level="15">7500</value>
+					<value level="16">8000</value>
+					<value level="17">8500</value>
+					<value level="18">9000</value>
+					<value level="19">9500</value>
+					<value level="20">10000</value>
+					<value level="21">10500</value>
+					<value level="22">11000</value>
+					<value level="23">11500</value>
+					<value level="24">12000</value>
+					<value level="25">12500</value>
+					<value level="26">13000</value>
+					<value level="27">13500</value>
+					<value level="28">14000</value>
+					<value level="29">14500</value>
+					<value level="30">15000</value>
+					<value level="31">15500</value>
+					<value level="32">16000</value>
+					<value level="33">16500</value>
+					<value level="34">17000</value>
+					<value level="35">17500</value>
+					<value level="36">18000</value>
+					<value level="37">18500</value>
+					<value level="38">19000</value>
+					<value level="39">19500</value>
+					<value level="40">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="48275" toLevel="6" name="Number Lottery 6">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>692</effectPoint>
+	</skill>
+	<skill id="48276" toLevel="6" name="5 Wins">
+		<!-- Level 1: I've played with Solasol 5 times in a row. -->
+		<!-- Level 2: I've played with Solasol 6 times in a row. -->
+		<!-- Level 3: I've played with Solasol 7 times in a row. -->
+		<!-- Level 4: I've played with Solasol 8 times in a row. -->
+		<!-- Level 5: I've played with Solasol 9 times in a row. -->
+		<!-- Level 6: I've played with Solasol 10 times in a row. -->
+		<icon>
+			<value level="1">icon.ev_sb_5_18th_lucky_win</value>
+			<value level="2">icon.ev_sb_6_18th_lucky_win</value>
+			<value level="3">icon.ev_sb_7_18th_lucky_win</value>
+			<value level="4">icon.ev_sb_8_18th_lucky_win</value>
+			<value level="5">icon.ev_sb_9_18th_lucky_win</value>
+			<value level="6">icon.ev_sb_10_18th_lucky_win</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48277" toLevel="1" name="Presentation Effect - Raid">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48278" toLevel="20" name="Basic Critical Rate Increase">
+		<!-- Level 1: Basic Critical Rate +5 -->
+		<!-- Level 2: Basic Critical Rate +10 -->
+		<!-- Level 3: Basic Critical Rate +15 -->
+		<!-- Level 4: Basic Critical Rate +20 -->
+		<!-- Level 5: Basic Critical Rate +25 -->
+		<!-- Level 6: Basic Critical Rate +30 -->
+		<!-- Level 7: Basic Critical Rate +35 -->
+		<!-- Level 8: Basic Critical Rate +40 -->
+		<!-- Level 9: Basic Critical Rate +45 -->
+		<!-- Level 10: Basic Critical Rate +50 -->
+		<!-- Level 11: Basic Critical Rate +55 -->
+		<!-- Level 12: Basic Critical Rate +60 -->
+		<!-- Level 13: Basic Critical Rate +65 -->
+		<!-- Level 14: Basic Critical Rate +70 -->
+		<!-- Level 15: Basic Critical Rate +75 -->
+		<!-- Level 16: Basic Critical Rate +80 -->
+		<!-- Level 17: Basic Critical Rate +85 -->
+		<!-- Level 18: Basic Critical Rate +90 -->
+		<!-- Level 19: Basic Critical Rate +95 -->
+		<!-- Level 20: Basic Critical Rate +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48279" toLevel="20" name="P. Skill Critical Rate Increase">
+		<!-- Level 1: P. Skill Critical Rate +5 -->
+		<!-- Level 2: P. Skill Critical Rate +10 -->
+		<!-- Level 3: P. Skill Critical Rate +15 -->
+		<!-- Level 4: P. Skill Critical Rate +20 -->
+		<!-- Level 5: P. Skill Critical Rate +25 -->
+		<!-- Level 6: P. Skill Critical Rate +30 -->
+		<!-- Level 7: P. Skill Critical Rate +35 -->
+		<!-- Level 8: P. Skill Critical Rate +40 -->
+		<!-- Level 9: P. Skill Critical Rate +45 -->
+		<!-- Level 10: P. Skill Critical Rate +50 -->
+		<!-- Level 11: P. Skill Critical Rate +55 -->
+		<!-- Level 12: P. Skill Critical Rate +60 -->
+		<!-- Level 13: P. Skill Critical Rate +65 -->
+		<!-- Level 14: P. Skill Critical Rate +70 -->
+		<!-- Level 15: P. Skill Critical Rate +75 -->
+		<!-- Level 16: P. Skill Critical Rate +80 -->
+		<!-- Level 17: P. Skill Critical Rate +85 -->
+		<!-- Level 18: P. Skill Critical Rate +90 -->
+		<!-- Level 19: P. Skill Critical Rate +95 -->
+		<!-- Level 20: P. Skill Critical Rate +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48280" toLevel="20" name="M. Skill Critical Rate Increase">
+		<!-- Level 1: M. Skill Critical Rate +5 -->
+		<!-- Level 2: M. Skill Critical Rate +10 -->
+		<!-- Level 3: M. Skill Critical Rate +15 -->
+		<!-- Level 4: M. Skill Critical Rate +20 -->
+		<!-- Level 5: M. Skill Critical Rate +25 -->
+		<!-- Level 6: M. Skill Critical Rate +30 -->
+		<!-- Level 7: M. Skill Critical Rate +35 -->
+		<!-- Level 8: M. Skill Critical Rate +40 -->
+		<!-- Level 9: M. Skill Critical Rate +45 -->
+		<!-- Level 10: M. Skill Critical Rate +50 -->
+		<!-- Level 11: M. Skill Critical Rate +55 -->
+		<!-- Level 12: M. Skill Critical Rate +60 -->
+		<!-- Level 13: M. Skill Critical Rate +65 -->
+		<!-- Level 14: M. Skill Critical Rate +70 -->
+		<!-- Level 15: M. Skill Critical Rate +75 -->
+		<!-- Level 16: M. Skill Critical Rate +80 -->
+		<!-- Level 17: M. Skill Critical Rate +85 -->
+		<!-- Level 18: M. Skill Critical Rate +90 -->
+		<!-- Level 19: M. Skill Critical Rate +95 -->
+		<!-- Level 20: M. Skill Critical Rate +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48281" toLevel="20" name="All Critical Rate Increase">
+		<!-- Level 1: All Critical Rate +5 -->
+		<!-- Level 2: All Critical Rate +10 -->
+		<!-- Level 3: All Critical Rate +15 -->
+		<!-- Level 4: All Critical Rate +20 -->
+		<!-- Level 5: All Critical Rate +25 -->
+		<!-- Level 6: All Critical Rate +30 -->
+		<!-- Level 7: All Critical Rate +35 -->
+		<!-- Level 8: All Critical Rate +40 -->
+		<!-- Level 9: All Critical Rate +45 -->
+		<!-- Level 10: All Critical Rate +50 -->
+		<!-- Level 11: All Critical Rate +55 -->
+		<!-- Level 12: All Critical Rate +60 -->
+		<!-- Level 13: All Critical Rate +65 -->
+		<!-- Level 14: All Critical Rate +70 -->
+		<!-- Level 15: All Critical Rate +75 -->
+		<!-- Level 16: All Critical Rate +80 -->
+		<!-- Level 17: All Critical Rate +85 -->
+		<!-- Level 18: All Critical Rate +90 -->
+		<!-- Level 19: All Critical Rate +95 -->
+		<!-- Level 20: All Critical Rate +100 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="48282" toLevel="5" name="Fire Shot">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-900</effectPoint>
+	</skill>
+	<skill id="48283" toLevel="5" name="Vicious Strike">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48284" toLevel="5" name="Power Strike">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48285" toLevel="18" name="Blow">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-2</effectPoint>
+	</skill>
+	<skill id="48286" toLevel="5" name="Stun Attack">
+		<icon>icon.skill0100</icon>
+		<operateType>A1</operateType>
+		<effectPoint>
+			<value level="1">-1</value>
+			<value level="2">-100</value>
+			<value level="3">-100</value>
+			<value level="4">-100</value>
+			<value level="5">-100</value>
+		</effectPoint>
+	</skill>
+	<skill id="48287" toLevel="5" name="Paralysis">
+		<icon>icon.skill1170</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48288" toLevel="5" name="Fear">
+		<icon>icon.skill1092</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48289" toLevel="8" name="Prominence">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48290" toLevel="8" name="Twister">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48291" toLevel="8" name="Burning">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48292" toLevel="8" name="Aura Burn">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48293" toLevel="8" name="Blaze">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48294" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>200</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLevel>50</magicLevel>
+		<trait>PARALYZE</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48295" toLevel="1" name="Fear">
+		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
+		<icon>icon.skill1169</icon>
+		<operateType>A1</operateType>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="48296" toLevel="1" name="Blow">
+		<!-- Immobilizes and stuns target. -->
+		<icon>icon.skill1167</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>10</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLevel>99</magicLevel>
+		<trait>SHOCK</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="48297" toLevel="1" name="Increases Atk. Spd.">
+		<!-- Atk. Spd. +30%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="48298" toLevel="1" name="Increase P. Atk.">
+		<!-- P. Atk. +30%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="48299" toLevel="1" name="Increases P. Def.">
+		<!-- P. Def. +30%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<effectPoint>100</effectPoint>
+	</skill>
+</list>

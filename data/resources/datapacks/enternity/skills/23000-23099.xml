@@ -1,0 +1,1421 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
+	<skill id="23000" levels="1" nameRu="Умение Агатиона Майо" nameEn="Majo Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1501" />
+		</cond>
+	</skill>
+	<skill id="23001" levels="1" nameRu="Умение Золотого Агатиона" nameEn="Gold Majo Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1502" />
+		</cond>
+	</skill>
+	<skill id="23002" levels="1" nameRu="Умение Черного Агатиона" nameEn="Black Majo Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1503" />
+		</cond>
+	</skill>
+	<skill id="23003" levels="1" nameRu="Умение Агатиона Питак" nameEn="Plaipitak Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1504" />
+		</cond>
+	</skill>
+	<skill id="23004" levels="1" nameRu="Особое Умение Агатиона Майо - Загадочная Сила" nameEn="Majo Agathion Special Skill - Mysterious Power">
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1501" />
+		</cond>
+		<for>
+			<effect name="BigHead" val="0" abnormalType="BIG_HEAD" abnormalLvl="0" abnormalVisualEffect="bighead" />
+		</for>
+	</skill>
+	<skill id="23005" levels="1" nameRu="Особое Умение Золотого Агатиона - Благословленное Воскрешение" nameEn="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
+		<cond msgId="2292">
+			<player agathionId="1502" />
+		</cond>
+	</skill>
+	<skill id="23006" levels="1" nameRu="Особое Умение Черного Агатиона - Благословленный Возврат" nameEn="Black Majo Agathion Special Skill - Power of Blessed Return">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1503" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23007" levels="1" nameRu="Особое Умение Агатиона Питак - Загадочная Сила" nameEn="Plaipitak Agathion Special Skill - Mysterious Power">
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1504" />
+		</cond>
+		<for>
+			<effect name="BigHead" val="0" abnormalType="BIG_HEAD" abnormalLvl="0" abnormalVisualEffect="bighead" />
+		</for>
+	</skill>
+	<skill id="23008" levels="1" nameRu="Особое Умение Агатиона Питак - Благословленный Возврат" nameEn="Plaipitak Agathion Special Skill - Power of Blessed Return">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1504" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23009" levels="1" nameRu="Особое Умение Агатиона Питак - Благословленное Воскрешение" nameEn="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
+		<cond msgId="2292">
+			<player agathionId="1504" />
+		</cond>
+	</skill>
+	<skill id="23010" levels="1" nameRu="Умение Агатиона - Детеныш Панды" nameEn="Baby Panda Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1505" />
+		</cond>
+	</skill>
+	<skill id="23011" levels="1" nameRu="Умение Агатиона - Панда Папа" nameEn="Bamboo Panda Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1506" />
+		</cond>
+	</skill>
+	<skill id="23012" levels="1" nameRu="Умение Агатиона - Панда Мама" nameEn="Sexy Panda Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1507" />
+		</cond>
+	</skill>
+	<skill id="23013" levels="1" nameRu="Особое Умение Агатиона: Детеныш Панды - Загадочная Сила" nameEn="Baby Panda Agathion Special Skill - Mysterious Power">
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1505" />
+		</cond>
+		<for>
+			<effect name="BigHead" val="0" abnormalType="BIG_HEAD" abnormalLvl="0" abnormalVisualEffect="bighead" />
+		</for>
+	</skill>
+	<skill id="23014" levels="1" nameRu="Особое Умение Агатиона: Панда Папа - Благословленное Воскрешение" nameEn="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
+		<cond msgId="2292">
+			<player agathionId="1506" />
+		</cond>
+	</skill>
+	<skill id="23015" levels="1" nameRu="Особое Умение Агатиона: Панда Мама - Благословленный Возврат" nameEn="Sexy Panda Agathion Special Skill - Power of Blessed Return">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1507" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23016" levels="1" nameRu="Особое Умение Агатиона Рудольфа - Энергия" nameEn="Rudolph Agathion Special Skill - Ability of Energy">
+		<set name="abnormalTime" val="1200" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="16033" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="3" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23017" levels="1" nameRu="Новогодний Фестиваль" nameEn="Holiday Festival">
+		<set name="abnormalTime" val="3600" />
+		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="1">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.15" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23018" levels="1" nameRu="Ошибка Бешеного Индюка" nameEn="Thomas D. Turkey's Mistake">
+		<set name="abnormalTime" val="3600" />
+		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_turkey_buff_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF1" abnormalLvl="2">
+				<mul order="0x30" stat="maxHp" val="1.4" />
+				<mul order="0x30" stat="maxMp" val="1.4" />
+				<mul order="0x30" stat="maxCp" val="1.4" />
+				<mul order="0x30" stat="pAtk" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.3" />
+				<add order="0x40" stat="runSpd" val="20" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23019" levels="3" nameRu="Ножницы" nameEn="Scissors">
+		<table name="#icons"> BranchSys.icon.br_xmas_gawi_i00 BranchSys.icon.br_xmas_bawi_i00 BranchSys.icon.br_xmas_bo_i00 </table>
+		<table name="#magicLvl"> 1 2 3 </table>
+		<set name="abnormalTime" val="30" />
+		<set name="canBeDispeled" val="false" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="550" />
+		<set name="icon" val="#icons" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ImmobileBuff" val="0" abnormalType="BR_EVENT_BUF2" abnormalLvl="1" />
+		</for>
+	</skill>
+	<skill id="23020" levels="1" nameRu="Атака Индюка" nameEn="Challenge the Turkey">
+		<set name="affectRange" val="500" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="8000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="AURA" />
+	</skill>
+	<skill id="23021" levels="3" nameRu="Индюк показывает Ножницы" nameEn="Turkey's Attack Scissors">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="23022" levels="10" nameRu="1 Победа" nameEn="First Win">
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#icons"> BranchSys.icon.br_xmas_pcwin1_i00 BranchSys.icon.br_xmas_pcwin2_i00 BranchSys.icon.br_xmas_pcwin3_i00 BranchSys.icon.br_xmas_pcwin4_i00 BranchSys.icon.br_xmas_pcwin5_i00 BranchSys.icon.br_xmas_pcwin6_i00 BranchSys.icon.br_xmas_pcwin7_i00 BranchSys.icon.br_xmas_pcwin8_i00 BranchSys.icon.br_xmas_pcwin9_i00 BranchSys.icon.br_xmas_pcwin10_i00 </table>
+		<set name="abnormalTime" val="120" />
+		<set name="canBeDispeled" val="false" />
+		<set name="icon" val="#icons" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff" val="0" abnormalType="BR_EVENT_BUF3" abnormalLvl="#abnormalLvls" />
+		</for>
+	</skill>
+	<skill id="23023" levels="1" nameRu="Сбросить Результат" nameEn="Reset Consecutive Wins">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23024" levels="1" nameRu="Особое Умение Агатиона Любви - Восстановление Энергии" nameEn="Agathion of Love Special Skill - Energy Recovery Ability">
+		<!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours -->
+		<set name="abnormalTime" val="1200" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="16049" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="9" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23025" levels="1" nameRu="Умение Агатиона - Светлый Купидон" nameEn="Charming Cupid Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1508" />
+		</cond>
+	</skill>
+	<skill id="23026" levels="1" nameRu="Умение Агатиона - Темный Купидон" nameEn="Naughty Cupid Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1509" />
+		</cond>
+	</skill>
+	<skill id="23027" levels="1" nameRu="Умение Агатиона - Белый Агатион Удачи" nameEn="White Maneki Neko Agathion Cute Trick I">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1510" />
+		</cond>
+	</skill>
+	<skill id="23028" levels="1" nameRu="Умение Агатиона - Черный Агатион Удачи" nameEn="Black Maneki Neko Agathion Cute Trick I">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1511" />
+		</cond>
+	</skill>
+	<skill id="23029" levels="1" nameRu="Умение Агатиона - Коричневый Агатион Удачи" nameEn="Brown Maneki Neko Agathion Cute Trick I">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1512" />
+		</cond>
+	</skill>
+	<skill id="23030" levels="1" nameRu="Умение Белого Агатиона Удачи - Благословленное Воскрешение" nameEn="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
+		<cond msgId="2292">
+			<player agathionId="1510" />
+		</cond>
+	</skill>
+	<skill id="23031" levels="1" nameRu="Умение Черного Агатиона Удачи - Благословленный Возврат" nameEn="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1511" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23032" levels="1" nameRu="Умение Коричневого Агатиона Удачи - Восстановление Энергии" nameEn="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1512" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="9" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23033" levels="1" nameRu="Умение Агатиона - Одноглазая Летучая Мышь" nameEn="One-Eyed Bat Drove Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1513" />
+		</cond>
+	</skill>
+	<skill id="23034" levels="1" nameRu="Умение Агатиона Одноглазая Летучая Мышь - Сопротивление Тьме" nameEn="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
+		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1513" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="ARMOR_UNHOLY" abnormalLvl="9">
+				<add order="0x40" stat="darkRes" val="30" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23035" levels="1" nameRu="Умение Агатиона Одноглазая Летучая Мышь - Восстановление Энергии" nameEn="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1513" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="9" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23036" levels="1" nameRu="Умение Агатиона - Пегас" nameEn="Pegasus Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1514" />
+		</cond>
+	</skill>
+	<skill id="23037" levels="1" nameRu="Умение Агатиона Пегас - Легкая Походка" nameEn="Pegasus Agathion Special Skill - Ability of Wind Walk">
+		<!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1514" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="SPEED_UP" abnormalLvl="9">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23038" levels="1" nameRu="Умение Агатиона Пегас - Благословленный Возврат" nameEn="Pegasus Agathion Special Skill - Blessed Return Ability">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1514" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23039" levels="1" nameRu="Умение Агатиона - Желтый Агатион" nameEn="Yellow-Robed Tojigong Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1515" />
+		</cond>
+	</skill>
+	<skill id="23040" levels="1" nameRu="Умение Агатиона - Синий Агатион" nameEn="Blue-Robed Tojigong Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1516" />
+		</cond>
+	</skill>
+	<skill id="23041" levels="1" nameRu="Умение Агатиона - Зеленый Агатион" nameEn="Green-Robed Tojigong Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1517" />
+		</cond>
+	</skill>
+	<skill id="23042" levels="1" nameRu="Умение Желтого Агатиона - Исцеление" nameEn="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
+		<set name="abnormalTime" val="15" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1515" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="LIFE_FORCE_OTHERS" abnormalLvl="9">
+				<mul order="0x30" stat="regHp" val="1.3" />
+			</effect>
+			<effect name="Heal" noicon="1" val="444" />
+		</for>
+	</skill>
+	<skill id="23043" levels="1" nameRu="Умение Синего Агатиона - Отражение" nameEn="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1516" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="DMG_SHIELD" abnormalLvl="9">
+				<add order="0x40" stat="reflectDam" val="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23044" levels="1" nameRu="Умение Зеленого Агатиона - Восстановление маны" nameEn="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1517" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="MP_REGEN_UP" abnormalLvl="9">
+				<mul order="0x30" stat="regMp" val="1.03" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23045" levels="1" nameRu="Умение Агатиона - Людоед" nameEn="Bugbear Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1518" />
+		</cond>
+	</skill>
+	<skill id="23046" levels="1" nameRu="Умение Агатиона - Белый Агатион Удачи 2" nameEn="White Maneki Neko Agathion Cute Trick II">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1510" />
+		</cond>
+	</skill>
+	<skill id="23047" levels="1" nameRu="Умение Агатиона - Черный Агатион Удачи 2" nameEn="Black Maneki Neko Agathion Cute Trick II">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1511" />
+		</cond>
+	</skill>
+	<skill id="23048" levels="1" nameRu="Умение Агатиона - Коричневый Агатион Удачи 2" nameEn="Brown Maneki Neko Agathion Cute Trick II">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1512" />
+		</cond>
+	</skill>
+	<skill id="23049" levels="1" nameRu="Забавные трюки Агатиона - Красный Сумоист" nameEn="Red Sumo Wrestler Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1519" />
+		</cond>
+	</skill>
+	<skill id="23050" levels="1" nameRu="Забавные трюки Агатиона - Синий Сумоист" nameEn="Blue Sumo Wrestler Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1520" />
+		</cond>
+	</skill>
+	<skill id="23051" levels="1" nameRu="Забавные трюки Агатиона - Сумоист Чемпион" nameEn="Great Sumo Match Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1521" />
+		</cond>
+	</skill>
+	<skill id="23052" levels="1" nameRu="Забавные трюки Агатиона - Плюшевый Медведь" nameEn="Button-Eyed Bear Doll Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1522" />
+		</cond>
+	</skill>
+	<skill id="23053" levels="1" nameRu="Забавные трюки Агатиона - Бог Богатств" nameEn="God of Fortune Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1523" />
+		</cond>
+	</skill>
+	<skill id="23054" levels="1" nameRu="Забавные трюки Агатиона - Дриада" nameEn="Dryad Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1524" />
+		</cond>
+	</skill>
+	<skill id="23055" levels="1" nameRu="Забавные трюки Агатиона - Священная Корова" nameEn="Wonboso Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1525" />
+		</cond>
+	</skill>
+	<skill id="23056" levels="1" nameRu="Забавные трюки Агатиона - Счастливая Корова" nameEn="Daewoonso Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1526" />
+		</cond>
+	</skill>
+	<skill id="23057" levels="1" nameRu="Особое умение Агатиона Красного Сумоиста - Шепот Смерти" nameEn="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
+		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1519" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="CRITICAL_DMG_UP" abnormalLvl="9">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23058" levels="1" nameRu="Особое умение Агатиона Синего Сумоиста - Дикая Магия" nameEn="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
+		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1520" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="MAGIC_CRITICAL_UP" abnormalLvl="9">
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23059" levels="1" nameRu="Особое умение Агатиона Сумоиста Чемпиона - Загадочная Сила" nameEn="Great Sumo Match Agathion Special Skill - Mysterious Power">
+		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour -->
+		<set name="abnormalTime" val="600" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1521" />
+		</cond>
+		<for>
+			<effect name="BigHead" val="0" abnormalType="BIG_HEAD" abnormalLvl="0" abnormalVisualEffect="bighead" />
+		</for>
+	</skill>
+	<skill id="23060" levels="1" nameRu="Особое умение Агатиона Сумоиста Чемпиона - Фейерверк" nameEn="Great Sumo Match Agathion Special Skill - Ability of Firework">
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1521" />
+		</cond>
+	</skill>
+	<skill id="23061" levels="1" nameRu="Особое умение Агатиона Плюшевого Медведя - Благословенный Телепорт" nameEn="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
+		<set name="hitTime" val="200" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1522" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="TOWN" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23062" levels="1" nameRu="Особое умение Агатиона Плюшевого Медведя - Благословенное Воскрешение" nameEn="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
+		<cond msgId="2292">
+			<player agathionId="1522" />
+		</cond>
+	</skill>
+	<skill id="23063" levels="1" nameRu="Особое умение Агатиона Плюшевого Медведя - Восстановление Энергии" nameEn="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1522" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="9" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23064" levels="1" nameRu="Особое умение Агатиона Бога Богатства - Бог Богатства" nameEn="God of Fortune Agathion Special Skill - Energy Recovery Ability">
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1523" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="VP_UP" abnormalLvl="9" abnormalVisualEffect="vitality">
+				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23065" levels="1" nameRu="Особое умение Агатиона Священной Коровы - Священная Корова" nameEn="Wonboso Agathion Special Skill - Wind Walk Ability">
+		<!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours -->
+		<set name="abnormalTime" val="300" />
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1525" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="BIG_HEAD" abnormalLvl="9">
+				<add order="0x40" stat="runSpd" val="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23066" levels="1" nameRu="Особое умение Агатиона Счастливой Коровы - Счастливая Корова" nameEn="Daewoonso Agathion Special Skill - New Year's Gift Ability">
+		<!-- Confirmed CT2.5 -->
+		<table name="#extractableItems">
+			57,2009,99;57,20090,0.99;57,200900,0.099;57,2009000,0.0099
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<cond msgId="2292">
+			<player agathionId="1526" />
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
+	</skill>
+	<skill id="23067" levels="1" nameRu="Забавные трюки Агатиона - Фомона" nameEn="Pomona Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1527" />
+		</cond>
+	</skill>
+	<skill id="23068" levels="1" nameRu="Специальное умение Агатиона Фомона - Способность ментального щита" nameEn="Pomona Agathion Special Skill - Mental Shield Ability">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="600" />
+		<set name="hitTime" val="6000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1527" />
+		</cond>
+		<for>
+			<effect name="Buff" val="0" abnormalType="RESIST_DERANGEMENT" abnormalLvl="9">
+				<sub order="0x40" stat="rootVuln" val="50" />
+				<sub order="0x40" stat="sleepVuln" val="50" />
+				<sub order="0x40" stat="derangementVuln" val="50" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23069" levels="1" nameRu="Крик Отчаяния" nameEn="Threatening Roar">
+		<!-- Confirmed CT2.5 -->
+		<set name="abnormalTime" val="10" />
+		<set name="aggroPoints" val="507" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="7000" />
+		<set name="icon" val="icon.skill1289" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<!-- TODO: Add new operate condition check_abnormal -->
+		<for>
+			<effect name="Debuff" val="0" abnormalType="SPEED_DOWN" abnormalLvl="1">
+				<mul order="0x30" stat="pAtkSpd" val="0.2" />
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="23070" levels="1" nameRu="Красное Пламя" nameEn="Red Flame">
+		<!-- Cannot damage the spirit for 10 seconds. Exclusive use for the Reckless Spirit of Fire. -->
+		<set name="icon" val="icon.skill0211" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23071" levels="1" nameRu="Синее Пламя" nameEn="Blue Flame">
+		<!-- Cannot damage the spirit for 8 seconds. Exclusive use for the Spirit of Fire. -->
+		<set name="icon" val="icon.skill0213" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23072" levels="1" nameRu="Воля Евы" nameEn="Eva's Wrath">
+		<!-- You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire. -->
+		<set name="affectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_power_of_eva_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="Buff" val="0" abnormalVisualEffect="evaswrath" />
+		</for>
+	</skill>
+	<skill id="23073" levels="1" nameRu="Заряд Холодом" nameEn="Switch Mode">
+		<!-- State to switch the spirit's mode. Switches to counter-attack mode or deadly mode. -->
+		<set name="icon" val="icon.skill1528" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23074" levels="1" nameRu="Ледяной Взрыв" nameEn="Icy Air Explosion">
+		<!-- For 4 seconds, damage inflicted on the spirit doubles. -->
+		<set name="icon" val="icon.skill0279" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23075" levels="1" nameRu="Огненный Удар" nameEn="Flame Shock">
+		<!-- Loses the target. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23076" levels="1" nameRu="Забавные трюки Агатиона - Вега" nameEn="Weaver Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1528" />
+		</cond>
+	</skill>
+	<skill id="23077" levels="1" nameRu="Особое умение Агатиона Вега - Ужасающая Мощь" nameEn="Weaver Agathion Special Skill - Power of the Golden Calf">
+		<!-- For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1528" />
+		</cond>
+	</skill>
+	<skill id="23078" levels="1" nameRu="Особое умение Агатиона Вега - Звук Свистка" nameEn="Weaver Agathion Special Skill - Flute Sound">
+		<!-- For 20 minutes, through the magic of the mysterious flute sound, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="ETC" />
+		<cond msgId="2292">
+			<player agathionId="1528" />
+		</cond>
+	</skill>
+	<skill id="23079" levels="1" nameRu="Умение Агатиона Чончон" nameEn="Chon-chon Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1529" />
+		</cond>
+	</skill>
+	<skill id="23080" levels="1" nameRu="Особое умение Агатиона Чончон - Сила души отважного Воина" nameEn="Chon-chon Agathion Special Skill - Great Warrior Soul Power">
+		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and moving speed by 20%. Decreases the MP consumption of skills by 5%. -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1529" />
+		</cond>
+	</skill>
+	<skill id="23081" levels="1" nameRu="Умение Агатиона Бум" nameEn="Tang-tang Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1530" />
+		</cond>
+	</skill>
+	<skill id="23082" levels="1" nameRu="Особое умение Агатиона Бум - Сила души великого Мистика" nameEn="Tang-tang Agathion Special Skill - Great Wizard Soul Power">
+		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical hits with magic attacks by 2% -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1530" />
+		</cond>
+	</skill>
+	<skill id="23083" levels="1" nameRu="Умение Агатиона Танцующий ребенок" nameEn="Dancing Kid Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1531" />
+		</cond>
+	</skill>
+	<skill id="23084" levels="1" nameRu="Особое умение Агатиона Танцующий ребенок - Сила души выдающегося Путешественника" nameEn="Dancing Kid Agathion Special Skill - Great Adventurer Soul Power">
+		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1531" />
+		</cond>
+	</skill>
+	<skill id="23085" levels="1" nameRu="Умение Агатиона Древнего Героя" nameEn="Monkey King Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1532" />
+		</cond>
+	</skill>
+	<skill id="23086" levels="1" nameRu="Особое умение Агатиона Древнего Героя - Сила души великого Мистика" nameEn="Monkey King Agathion Special Skill - Great Wizard Soul Power">
+		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical magic attacks by 2% -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1532" />
+		</cond>
+	</skill>
+	<skill id="23087" levels="1" nameRu="Умение Агатиона Утанка" nameEn="Utanka Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1533" />
+		</cond>
+	</skill>
+	<skill id="23088" levels="1" nameRu="Особое умение Агатиона Утанка - Сила души отважного Воина" nameEn="Utanka Agathion Special Skill - Great Warrior Soul Power">
+		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and P.Def. by 20%. Bestows the ability to recover HP equal to 5% of the melee damage -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1533" />
+		</cond>
+	</skill>
+	<skill id="23089" levels="1" nameRu="Умение Агатиона Бонус В" nameEn="Bonus B Agathion Cute Trick">
+		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill_agathion_cute" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="2292">
+			<player agathionId="1534" />
+		</cond>
+	</skill>
+	<skill id="23090" levels="1" nameRu="Особое умение Агатиона Бонус В - Сила души выдающегося Путешественника" nameEn="Bonus B Agathion Special Skill - Great Adventurer Soul Power">
+		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
+		<set name="icon" val="icon.skill_agathion_special" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<cond msgId="2292">
+			<player agathionId="1534" />
+		</cond>
+	</skill>
+	<skill id="23091" levels="1" nameRu="Шутка Семьи Хэллоуина" nameEn="Trick of Halloween Children">
+		<!-- By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds. -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+		<set name="trait" val="ETC" />
+	</skill>
+	<skill id="23092" levels="1" nameRu="Карта Джека О'Рентона" nameEn="Jack O'Lantern Card">
+		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23093" levels="1" nameRu="Гнилая Карта Джека О'Рентона" nameEn="Rotten Jack O'Lantern Card">
+		<set name="coolTime" val="500" />
+		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23094" levels="1" nameRu="Карта Джека О'Рентона - Умение Поддержки" nameEn="Jack O'Lantern Card - Confirm Skill">
+		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23095" levels="1" nameRu="Гнилая Карта Джека О'Рентона - Умение Поддержки" nameEn="Rotten Jack O'Lantern Card - Confirm Skill">
+		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23096" levels="1" nameRu="Поражение на Хэллоуине" nameEn="Halloween Defeat">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23097" levels="1" nameRu="1-я Победа" nameEn="First Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23098" levels="1" nameRu="2-я Победа" nameEn="2nd Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="23099" levels="1" nameRu="3-я Победа" nameEn="Third Consecutive Win">
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
+	</skill>
+</list>

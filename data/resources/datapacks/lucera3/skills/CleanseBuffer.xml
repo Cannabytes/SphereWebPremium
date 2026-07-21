@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list> 
+ <skill id="9080" levels="1" name="Cleanse"> 
+    <!--
+			Description:
+			Cancels your target's debuffs. Consumes 1 Einhasad Holy Water.
+		-->  
+    <set name="magicType" val="MAGIC"/>  
+    <set name="icon" val="icon.skill1409"/>  
+    <set name="reuseDelay" val="15000"/>  
+    <set name="magicLevel" val="78"/>  
+    <set name="castRange" val="600"/>  
+    <set name="hitTime" val="4000"/>  
+    <set name="hitCancelTime" val="500"/>  
+    <set name="mpConsume1" val="0"/>  
+    <set name="mpConsume2" val="58"/>  
+    <set name="target" val="TARGET_ONE"/>  
+    <set name="skillType" val="BUFF"/>  
+    <set name="operateType" val="OP_ACTIVE"/>  
+    <for> 
+      <effect count="1" name="DispelEffects" time="0" val="0"> 
+        <def name="dispelType" val="cleanse"/>  
+        <def name="cancelRate" val="100"/>  
+        <def name="negateCount" val="100"/> 
+      </effect> 
+    </for> 
+  </skill>  
+</list>
