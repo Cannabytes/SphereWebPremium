@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'sphereweb3-shell-v7'
+const CACHE_VERSION = 'sphereweb3-shell-v8'
 const STATIC_CACHE = `${CACHE_VERSION}:static`
 const API_CACHE = `${CACHE_VERSION}:api`
 const STATIC_ASSETS = [
