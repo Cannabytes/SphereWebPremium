@@ -1,1 +1,0 @@
-import{o as e}from"./localeStore-CG8uyvcC.js";var t=e(e=>({unread:0,setUnread:t=>e({unread:t})}));export{t};
