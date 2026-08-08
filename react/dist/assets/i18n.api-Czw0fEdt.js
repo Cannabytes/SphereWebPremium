@@ -1,0 +1,1 @@
+import{t as e}from"./axios-DdT-7L70.js";var t={getCatalog:async()=>(await e.get(`/i18n`)).data};export{t};
