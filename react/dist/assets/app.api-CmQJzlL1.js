@@ -1,0 +1,1 @@
+import{t as e}from"./axios-4r_yyXT3.js";var t={getVersion:async()=>(await e.get(`/version`)).data};export{t};

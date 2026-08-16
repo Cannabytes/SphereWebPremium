@@ -1,1 +1,0 @@
-import{t as e}from"./axios-DdT-7L70.js";var t={getVersion:async()=>(await e.get(`/version`)).data};export{t};

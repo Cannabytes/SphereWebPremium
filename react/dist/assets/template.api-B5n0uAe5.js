@@ -1,1 +1,0 @@
-import{t as e}from"./axios-DdT-7L70.js";var t={getCabinetTemplate:async()=>(await e.get(`/template`)).data,getCabinetMenu:async()=>(await e.get(`/cabinet/menu`)).data};export{t};
