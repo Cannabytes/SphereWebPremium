@@ -4,7 +4,7 @@ function meta()
   return {
     name = "monobank",
     description = "Оплата через банки monobank с автоматическим зачислением по комментарию к переводу.",
-    version = "1.0.0",
+    version = "1.0.1",
     author = "SphereWeb3",
     icon = "Landmark",
     currencies = { "UAH" },
@@ -98,9 +98,9 @@ function webhook(ctx)
   if value(body.type, "") ~= "StatementItem" or account == "" then
     return { status = "ignored", response_status = 200, response_body = "ignored" }
   end
-  if not configured_jar(ctx.settings.jars, account) then
-    return { status = "ignored", response_status = 200, response_body = "unknown jar" }
-  end
+  -- data.account is jars[].id, while a public jar URL contains jars[].sendId.
+  -- The secret path protects this unsigned webhook; Go binds the code to this provider
+  -- and credits the actual validated UAH amount transactionally at most once.
   if amount <= 0 or tonumber(item.currencyCode) ~= UAH_CURRENCY_CODE then
     return { status = "ignored", response_status = 200, response_body = "not incoming UAH payment" }
   end
@@ -118,13 +118,6 @@ function webhook(ctx)
     response_body = "OK",
     payload = body,
   }
-end
-
-function configured_jar(jars, account)
-  for _, jar in ipairs(rows(jars)) do
-    if jar_id(jar.jar_url) == account then return true end
-  end
-  return false
 end
 
 function webhook_path_matches(path, secret)
