@@ -24,6 +24,7 @@ data/donate/<code>/provider.lua
 - `palych`
 - `stripe`
 - `unitpay`
+- `freekassa`
 
 ## Обязательные функции
 
