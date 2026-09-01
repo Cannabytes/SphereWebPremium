@@ -1,0 +1,1 @@
+var e=(e,t)=>{if(!e)return!1;if(e.superAdmin)return!0;if((!e.permissions||e.permissions.length===0)&&e.role===`admin`)return t===`admin.panel`;let n=new Set(e.permissions??[]);if(n.has(t)||n.has(`*`))return!0;let r=t.split(`.`);for(;r.length>1;)if(r.pop(),n.has(`${r.join(`.`)}.*`))return!0;return!1};export{e as t};
