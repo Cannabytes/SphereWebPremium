@@ -4,7 +4,7 @@ function meta()
   return {
     name = "monobank",
     description = "Оплата через банки monobank с автоматическим зачислением по комментарию к переводу.",
-    version = "1.0.1",
+    version = "1.0.2",
     author = "SphereWeb3",
     icon = "Landmark",
     currencies = { "UAH" },
@@ -105,7 +105,15 @@ function webhook(ctx)
     return { status = "ignored", response_status = 200, response_body = "not incoming UAH payment" }
   end
   if not string.match(order_id, "^dn_[a-f0-9]+$") then
-    return { status = "ignored", response_status = 200, response_body = "missing donation comment" }
+    return {
+      status = "ignored",
+      external_id = value(item.id, ""),
+      amount = amount / 100,
+      currency = "UAH",
+      reason = "missing donation comment",
+      response_status = 200,
+      response_body = "missing donation comment",
+    }
   end
 
   return {
