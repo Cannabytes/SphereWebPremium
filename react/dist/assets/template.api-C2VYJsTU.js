@@ -1,0 +1,1 @@
+import{t as e}from"./axios-BxrLffyM.js";var t={getCabinetTemplate:async()=>(await e.get(`/template`)).data,getCabinetMenu:async()=>(await e.get(`/cabinet/menu`)).data};export{t};

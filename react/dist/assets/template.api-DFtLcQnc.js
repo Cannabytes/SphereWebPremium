@@ -1,1 +1,0 @@
-import{t as e}from"./axios-4r_yyXT3.js";var t={getCabinetTemplate:async()=>(await e.get(`/template`)).data,getCabinetMenu:async()=>(await e.get(`/cabinet/menu`)).data};export{t};
