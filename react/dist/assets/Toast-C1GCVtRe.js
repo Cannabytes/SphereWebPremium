@@ -1,0 +1,1 @@
+import{v as e}from"./index-CsRtW7e1.js";var t=t=>e.success(t),n=t=>e.error(t);export{t as n,n as t};

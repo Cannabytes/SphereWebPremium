@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-OQpaS_Dv.js";import{t}from"./avatar-C88cnRUk.js";var n=e(),r=({src:e,alt:r,className:i,onError:a})=>t(e)?(0,n.jsx)(`video`,{className:i,src:e,title:r,muted:!0,loop:!0,autoPlay:!0,playsInline:!0,preload:`metadata`,onError:a}):(0,n.jsx)(`img`,{className:i,src:e,alt:r,onError:a});export{r as t};

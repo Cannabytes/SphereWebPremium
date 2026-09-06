@@ -1,1 +1,0 @@
-import{t as e}from"./axios-BxrLffyM.js";var t={getCatalog:async()=>(await e.get(`/i18n`)).data};export{t};

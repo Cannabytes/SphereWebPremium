@@ -1,1 +1,0 @@
-import{a as e,o as t}from"./localeStore-DQZ0rjfH.js";var n=t()(e(e=>({selectedServerId:0,setSelectedServerId:t=>e({selectedServerId:t})}),{name:`l2cabinet-guest-server`}));export{n as t};
