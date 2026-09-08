@@ -1,0 +1,3064 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="patchCreation">Создание патча</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/wails/ipc.js" defer></script>
+    <script src="/wails/runtime.js" defer></script>
+    <script src="./wailsjs/go/main/App.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #0a0a1a;
+            --secondary-bg: rgba(15, 15, 30, 0.8);
+            --accent-blue: #00ffff;
+            --accent-purple: #8a2be2;
+            --accent-pink: #ff1493;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: #b8c6db;
+            --text-accent: #00ffff;
+            --success-color: #00ff88;
+            --error-color: #ff4444;
+            --warning-color: #ffaa00;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* sans-serif — это резервный шрифт, если Montserrat не загрузится */
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Main Container */
+        .launcher-container {
+            width: 100vw;
+            height: 100vh;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: container-appear 1s ease-out both;
+        }
+
+        @keyframes container-appear {
+            from {
+                opacity: 0;
+                transform: scale(0.98) rotateX(5deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) rotateX(0deg);
+            }
+        }
+
+        /* Header */
+        .top-bar {
+            height: 60px;
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .top-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-pink));
+            animation: energy-flow 3s infinite linear;
+        }
+
+        @keyframes energy-flow {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: logo-glow 3s infinite ease-in-out;
+        }
+
+        @keyframes logo-glow {
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 5px var(--accent-blue));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 15px var(--accent-blue));
+            }
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+            border-color: var(--accent-blue);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--success-color), #00cc66);
+            border-color: var(--success-color);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(45deg, var(--error-color), #cc2222);
+            border-color: var(--error-color);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 10px 25px rgba(255, 68, 68, 0.4);
+        }
+
+        .btn-back {
+            background: var(--glass-bg);
+        }
+
+        .btn-browse,
+        .btn-toggle,
+        .btn-clear {
+            padding: 8px;
+            min-width: 40px;
+            justify-content: center;
+        }
+
+        /* Main Content */
+        .create-content {
+            display: grid;
+            grid-template-columns: 600px 1fr;
+            gap: 1px;
+            flex: 1;
+            overflow: hidden;
+            background: var(--glass-border);
+        }
+
+        /* Settings Panel */
+        .settings-panel {
+            background: rgba(10, 10, 25, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            overflow-y: hidden;
+            /* Changed from auto */
+            animation: slide-in-left 0.8s ease-out 0.7s both;
+        }
+
+        @keyframes slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .panel-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--glass-border);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .panel-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .panel-header i {
+            font-size: 1.3rem;
+            animation: pulse-icon 2s infinite;
+        }
+
+        @keyframes pulse-icon {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .settings-scroll {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+            /* Added for spacing */
+        }
+
+        .settings-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .settings-scroll::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .settings-scroll::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 4px;
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        /* Setting Groups */
+        .setting-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            /* Prevents shrinking */
+        }
+
+        .setting-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .setting-group:hover::before {
+            left: 100%;
+        }
+
+        .setting-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+            border-color: var(--accent-blue);
+        }
+
+        .setting-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .setting-label i {
+            color: var(--accent-blue);
+            width: 16px;
+        }
+
+        .help-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-top: 5px;
+        }
+
+        /* Form Inputs */
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Exo 2', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-group .form-input {
+            flex: 1;
+        }
+
+        /* НОВОЕ: Стили для контейнера игнорируемых файлов */
+        .ignored-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            min-height: 40px;
+            margin-bottom: 8px;
+        }
+
+        .ignored-item-tag {
+            background-color: var(--accent-blue);
+            color: var(--primary-bg);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: tag-appear 0.3s ease;
+        }
+
+        @keyframes tag-appear {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .remove-tag-btn {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .remove-tag-btn:hover {
+            transform: scale(1.2);
+        }
+
+
+        /* Custom Checkboxes */
+        .setting-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+
+        .toggle-switch {
+            display: none;
+        }
+
+        .checkbox-custom {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--glass-border);
+            border-radius: 4px;
+            background: var(--glass-bg);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .checkbox-custom::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .toggle-switch:checked+.checkbox-custom {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .toggle-switch:checked+.checkbox-custom::after {
+            opacity: 1;
+        }
+
+        .checkbox-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .checkbox-text i {
+            color: var(--accent-blue);
+        }
+
+        /* FTP Section */
+        .ftp-section {
+            border: 1px solid var(--accent-blue);
+            border-radius: 15px;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ftp-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--accent-blue), transparent);
+            animation: rotate-bg 10s linear infinite;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        @keyframes rotate-bg {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .ftp-toggle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .ftp-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .ftp-servers-container {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ftp-servers-container.hidden {
+            display: none;
+        }
+
+        /* FTP Server Cards */
+        .ftp-server-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: ftpServerSlideIn 0.5s ease-out;
+        }
+
+        @keyframes ftpServerSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .ftp-server-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .ftp-server-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(0, 255, 255, 0.05);
+            border-bottom: 1px solid var(--glass-border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ftp-server-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .ftp-server-name {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            width: 100%;
+        }
+
+        .ftp-server-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .ftp-server-settings {
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .ftp-server-settings.hidden {
+            display: none;
+        }
+
+        .ftp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Progress Panel */
+        .progress-panel {
+            background: rgba(5, 5, 15, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: slide-in-right 0.8s ease-out 0.9s both;
+        }
+
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Connection Status */
+        .connection-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(15, 15, 30, 0.9);
+            border-bottom: 1px solid var(--glass-border);
+            min-height: 60px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--text-secondary);
+            animation: pulse-dot 2s infinite;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.2);
+            }
+        }
+
+        .status-text {
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-connected .status-dot {
+            background: var(--success-color);
+        }
+
+        .status-disconnected .status-dot {
+            background: var(--error-color);
+        }
+
+        .status-connecting .status-dot {
+            background: var(--warning-color);
+        }
+
+        .status-connected {
+            color: var(--success-color);
+        }
+
+        .status-disconnected {
+            color: var(--error-color);
+        }
+
+        .status-connecting {
+            color: var(--warning-color);
+        }
+
+        /* Progress Section */
+        .overall-progress-section {
+            padding: 20px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .progress-header h3 i {
+            font-size: 1.3rem;
+            animation: pulse-icon 2s infinite;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+            border-color: var(--accent-blue);
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg);
+            color: var(--text-secondary);
+            font-size: 16px;
+            border: 1px solid var(--glass-border);
+            flex-shrink: 0;
+        }
+
+        .stat-icon.processing {
+            background: linear-gradient(135deg, var(--warning-color), #f97316);
+            color: white;
+            box-shadow: 0 0 15px var(--warning-color);
+        }
+
+        .stat-icon.success {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            color: white;
+            box-shadow: 0 0 15px var(--success-color);
+        }
+
+        .stat-icon.error {
+            background: linear-gradient(135deg, var(--error-color), #dc2626);
+            color: white;
+            box-shadow: 0 0 15px var(--error-color);
+        }
+
+        .stat-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .stat-value.error {
+            color: var(--error-color);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .progress-container {
+            flex: 1;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--glass-border);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+            border-radius: inherit;
+            position: relative;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 0 20px var(--accent-blue);
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progress-shine 2s infinite linear;
+        }
+
+        @keyframes progress-shine {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .progress-percentage {
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            min-width: 40px;
+            text-align: right;
+        }
+
+        /* Log Section */
+        .log-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .log-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .log-header h3 i {
+            font-size: 1.3rem;
+            animation: pulse-icon 2s infinite;
+        }
+
+        .operation-log {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 15px;
+            overflow-y: auto;
+            font-family: 'Orbitron', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            backdrop-filter: blur(5px);
+        }
+
+        .operation-log::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .operation-log::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .operation-log::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 4px;
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .log-entry {
+            display: flex;
+            gap: 15px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            animation: log-fadeIn 0.3s ease-out;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes log-fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+            font-size: 11px;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+
+        .log-message {
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .log-entry.info .log-message {
+            color: var(--accent-blue);
+        }
+
+        .log-entry.success .log-message {
+            color: var(--success-color);
+        }
+
+        .log-entry.warning .log-message {
+            color: var(--warning-color);
+        }
+
+        .log-entry.error .log-message {
+            color: var(--error-color);
+        }
+
+        .log-entry.detail .log-message {
+            color: var(--text-secondary);
+        }
+
+        /* Tabs + Upload Log (FTP speeds) */
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            gap: 12px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tab-button {
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            font-size: 13px;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.08);
+            color: #000;
+            border-color: transparent;
+        }
+
+        .tab-contents {
+            flex: 1;
+            display: flex;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .tab-pane {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .tab-pane.active {
+            display: flex;
+        }
+
+        .upload-log-panel {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .upload-stats {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .upload-stat {
+            background: var(--glass-bg);
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+            font-family: 'Orbitron', monospace;
+            color: var(--text-primary);
+            min-width: 110px;
+            text-align: center;
+        }
+
+        .upload-chart-wrap {
+            flex: 1;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Small table/list of recent speeds */
+        .recent-speeds {
+            max-height: 120px;
+            overflow: auto;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            padding: 8px;
+            font-family: 'Orbitron', monospace;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        .bottom-bar {
+            height: 60px;
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .bottom-bar::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple), var(--accent-blue));
+            animation: energy-flow-reverse 3s infinite linear;
+        }
+
+        @keyframes energy-flow-reverse {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .info-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .info-text i {
+            color: var(--accent-blue);
+        }
+
+        .version {
+            font-family: 'Orbitron', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 80vh;
+            overflow: hidden;
+            animation: modal-appear 0.5s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes modal-appear {
+            from {
+                opacity: 0;
+                transform: scale(0.9) rotateX(10deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) rotateX(0deg);
+            }
+        }
+
+        .modal-header {
+            background: rgba(15, 15, 30, 0.9);
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-family: 'Orbitron', monospace;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal-btn:hover {
+            color: var(--error-color);
+            text-shadow: 0 0 10px var(--error-color);
+        }
+
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal-footer {
+            padding: 20px 30px;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+
+        /* FTP Modal Specific */
+        .ftp-path-bar {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ftp-dir-list {
+            min-height: 200px;
+            max-height: 40vh;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .ftp-dir-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        /* НОВЫЕ СТИЛИ для браузера файлов */
+        .file-browser-list .ftp-dir-item.selected {
+            background: var(--accent-blue);
+            color: var(--primary-bg);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .file-browser-list .ftp-dir-item.selected i {
+            color: var(--primary-bg);
+        }
+
+        .ftp-dir-item:hover {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            transform: translateX(5px);
+        }
+
+        .ftp-dir-item i {
+            color: var(--accent-blue);
+            width: 16px;
+        }
+
+        /* === НОВЫЕ СТИЛИ ДЛЯ СПОЙЛЕРОВ === */
+        .setting-group.collapsible {
+            /* Убираем gap, так как контент будет скрыт */
+            gap: 0;
+        }
+
+        .collapsible-trigger {
+            cursor: pointer;
+            width: 100%;
+            /* Используем space-between для расталкивания контента и иконки */
+            justify-content: space-between;
+            margin-bottom: 0;
+            /* Убираем отступ, когда спойлер закрыт */
+        }
+
+        .label-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* Сохраняем отступ между иконкой и текстом */
+        }
+
+        .collapsible-icon {
+            transition: transform 0.3s ease;
+            margin-left: auto;
+            /* Дополнительно прижимаем иконку вправо */
+            padding-left: 10px;
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding-top: 0;
+        }
+
+        /* Состояние, когда спойлер открыт */
+        .collapsible.active .collapsible-content {
+            max-height: 500px;
+            /* Достаточная высота для контента */
+            padding-top: 15px;
+            /* Отступ сверху для контента */
+        }
+
+        .collapsible.active .collapsible-icon {
+            transform: rotate(180deg);
+        }
+
+        .collapsible.active .collapsible-trigger {
+            margin-bottom: 5px;
+            /* Возвращаем отступ, когда спойлер открыт */
+        }
+
+        /* === КОНЕЦ СТИЛЕЙ ДЛЯ СПОЙЛЕРОВ === */
+
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .create-content {
+                grid-template-columns: 450px 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .create-content {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+                height: auto;
+            }
+
+            .settings-panel {
+                overflow-y: visible;
+            }
+
+            .settings-scroll {
+                overflow-y: visible;
+            }
+
+            .progress-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ftp-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .progress-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .top-bar,
+            .bottom-bar {
+                padding: 0 15px;
+            }
+        }
+
+        .no-drag {
+            --wails-draggable: no-drag !important;
+        }
+    </style>
+</head>
+
+<body style="--wails-draggable:drag">
+    <div class="launcher-container">
+        <header class="top-bar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="patchCreation">Создание патча</span>
+                    <span class="logo-subtitle" data-i18n="archiveBuilder">Archive Builder</span>
+                </div>
+            </div>
+            <button class="btn btn-back no-drag" onclick="window.location.href='/index.html'">
+                <i class="fas fa-arrow-left"></i>
+                <span data-i18n="back">Назад</span>
+            </button>
+        </header>
+
+        <main class="create-content">
+            <aside class="settings-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-cogs"></i><span data-i18n="archiveSettings">Настройки архивации</span></h2>
+                </div>
+
+                <div class="settings-scroll">
+                    <section class="setting-group">
+                        <label class="setting-label">
+                            <i class="fas fa-folder"></i>
+                            <span data-i18n="gameDirectory">Директория игры</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="text" id="game-directory" placeholder="C:\Games\Lineage2"
+                                class="form-input no-drag">
+                            <button class="btn btn-browse no-drag" id="browse-btn">
+                                <i class="fas fa-folder-open"></i>
+                            </button>
+                        </div>
+                        <p class="help-text" data-i18n="gameDirectoryHelp">Укажите путь к папке с игрой для создания
+                            архивов</p>
+                    </section>
+
+                    <!-- === ИЗМЕНЕННЫЙ БЛОК 1 === -->
+                    <section class="setting-group collapsible">
+                        <label class="setting-label collapsible-trigger">
+                            <span class="label-content-wrapper">
+                                <i class="fas fa-filter"></i>
+                                <span data-i18n="ignoredExtensions">Игнорируемые расширения</span>
+                            </span>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </label>
+                        <div class="collapsible-content">
+                            <input type="text" value=".log, .tmp, .bak, .jpg" id="ignored-extensions"
+                                placeholder=".log, .tmp, .bak" class="form-input no-drag">
+                            <p class="help-text" data-i18n="ignoredExtensionsHelp">Перечислите через запятую расширения
+                                файлов, которые нужно пропустить</p>
+                        </div>
+                    </section>
+
+                    <!-- === ИЗМЕНЕННЫЙ БЛОК 2 === -->
+                    <section class="setting-group collapsible">
+                        <label class="setting-label collapsible-trigger">
+                            <span class="label-content-wrapper">
+                                <i class="fas fa-file-excel"></i>
+                                <span data-i18n="ignoredFiles">Игнорируемые файлы</span>
+                            </span>
+                            <i class="fas fa-chevron-down collapsible-icon"></i>
+                        </label>
+                        <div class="collapsible-content">
+                            <div id="ignored-files-list" class="ignored-items-container">
+                            </div>
+                            <button class="btn no-drag" id="add-ignored-file-btn">
+                                <i class="fas fa-plus"></i>
+                                <span data-i18n="addFiles">Добавить файлы</span>
+                            </button>
+                            <p class="help-text" data-i18n="ignoredFilesHelp">Добавьте файлы, которые будут полностью
+                                проигнорированы при архивации.</p>
+                        </div>
+                    </section>
+
+                    <section class="setting-group">
+                        <label class="setting-checkbox">
+                            <input type="checkbox" id="skip-existing" class="toggle-switch no-drag" checked>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text no-drag">
+                                <i class="fas fa-forward"></i>
+                                <span data-i18n="skipExistingArchives">Пропускать существующие архивы</span>
+                            </span>
+                        </label>
+                        <p class="help-text" data-i18n="skipExistingArchivesHelp">Не пересоздавать архивы для
+                            неизмененных файлов</p>
+                    </section>
+
+                    <section class="setting-group ftp-section">
+                        <div class="ftp-toggle-header">
+                            <label class="setting-checkbox">
+                                <input type="checkbox" id="upload-ftp" class="toggle-switch">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span data-i18n="uploadToFTP">Загрузить на FTP</span>
+                                </span>
+                            </label>
+                            <div class="ftp-controls" id="ftp-controls" style="display: none;">
+                                <button class="btn btn-primary" id="add-ftp-btn">
+                                    <i class="fas fa-plus"></i>
+                                    <span data-i18n="ftpAddServer">Добавить сервер</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="ftp-servers-container" class="ftp-servers-container hidden no-drag">
+                        </div>
+                    </section>
+                </div>
+            </aside>
+
+            <section class="progress-panel">
+                <div class="connection-status">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span data-i18n="status">Статус:</span>
+                    </div>
+                    <span id="connection-status" class="status-text status-disconnected" data-i18n="statusReady">Готов к
+                        работе</span>
+                </div>
+
+                <div class="overall-progress-section">
+                    <div class="progress-header">
+                        <h3><i class="fas fa-chart-line"></i><span data-i18n="archiveProgress">Прогресс архивации</span>
+                        </h3>
+                        <div class="action-buttons">
+                            <button id="start-archive-btn" class="btn btn-primary no-drag">
+                                <i class="fas fa-play"></i>
+                                <span data-i18n="startArchiving">Начать архивацию</span>
+                            </button>
+                            <button id="stop-archive-btn" class="btn btn-danger" style="display: none;" disabled>
+                                <i class="fas fa-stop"></i>
+                                <span data-i18n="stopArchiving">Остановить</span>
+                            </button>
+                            <button id="open-csv-btn" class="btn no-drag" style="display: none;">
+                                <i class="fas fa-table"></i>
+                                <span data-i18n="csvOpenEditor">Открыть CSV</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="progress-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-file"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-value" id="total-files">0</span>
+                                <span class="stat-label" data-i18n="totalFiles">Файлов</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon processing"><i class="fas fa-tasks"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-value" id="processed-files">0</span>
+                                <span class="stat-label" data-i18n="processed">Обработано</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon success"><i class="fas fa-archive"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-value" id="archived-files">0</span>
+                                <span class="stat-label" data-i18n="archived">Заархивировано</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon error"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-value error" id="error-count">0</span>
+                                <span class="stat-label" data-i18n="errors">Ошибок</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-container">
+                            <div id="archive-progress" class="progress-bar"></div>
+                        </div>
+                        <div class="progress-percentage" id="progress-percentage">0%</div>
+                    </div>
+                </div>
+
+                <div class="log-section">
+                    <div class="tabs">
+                        <div class="log-header">
+                            <div style="display:flex;flex-direction:column;gap:6px;">
+                                <h3 style="margin:0;display:flex;align-items:center;gap:10px;"><i
+                                        class="fas fa-terminal no-drag"></i><span data-i18n="operationLog">Журнал
+                                        операций</span></h3>
+                                <div class="tab-buttons" role="tablist">
+                                    <button class="tab-button active" data-tab="operations" role="tab">Журнал
+                                        операций</button>
+                                    <button class="tab-button no-drag" data-tab="upload" role="tab">Журнал
+                                        загрузки</button>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:8px;align-items:center;">
+                                <button class="btn btn-clear no-drag" id="clear-log-btn">
+                                    <i class="fas fa-trash"></i>
+                                    <span data-i18n="clear">Очистить</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tab-contents">
+                            <div id="tab-operations" class="tab-pane active">
+                                <div id="operation-log" class="operation-log">
+                                    <div class="log-entry info">
+                                        <span class="log-time">--:--:--</span>
+                                        <span class="log-message" data-i18n="logWaiting">Ожидание начала
+                                            архивации...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-upload" class="tab-pane">
+                                <div class="upload-log-panel">
+                                    <div class="upload-stats">
+                                        <div class="upload-stat">
+                                            <div style="font-size:11px;color:var(--text-secondary)">Текущая</div>
+                                            <div id="ftp-current-speed" style="font-size:16px;font-weight:700">0 KB/s
+                                            </div>
+                                        </div>
+                                        <div class="upload-stat">
+                                            <div style="font-size:11px;color:var(--text-secondary)">Макс</div>
+                                            <div id="ftp-max-speed" style="font-size:16px;font-weight:700">0 KB/s</div>
+                                        </div>
+                                        <div class="upload-stat">
+                                            <div style="font-size:11px;color:var(--text-secondary)">Средняя</div>
+                                            <div id="ftp-avg-speed" style="font-size:16px;font-weight:700">0 KB/s</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="upload-chart-wrap">
+                                        <!-- Chart controls: timeframe buttons and pause/resume -->
+                                        <div class="chart-controls"
+                                            style="display:flex;gap:8px;align-items:center;margin-bottom:8px;">
+                                            <div style="display:flex;gap:6px;align-items:center;">
+                                                <button class="btn btn-small chart-time-btn" data-min="1">1m</button>
+                                                <button class="btn btn-small chart-time-btn" data-min="3">3m</button>
+                                                <button class="btn btn-small chart-time-btn" data-min="5">5m</button>
+                                                <button class="btn btn-small chart-time-btn" data-min="10">10m</button>
+                                            </div>
+                                            <div style="margin-left:8px">
+                                                <button id="chart-pause-resume" class="btn btn-small">Pause</button>
+                                            </div>
+                                        </div>
+                                        <canvas id="ftp-speed-chart" aria-label="FTP speed chart" role="img"></canvas>
+                                        <div class="recent-speeds" id="recent-speeds">
+                                            <!-- recent speeds lines appended here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bottom-bar">
+            <div class="info-text">
+                <i class="fas fa-info-circle"></i>
+                <span data-i18n="footerInfo">Создание архивов необходимо только администраторам сервера</span>
+            </div>
+            <div class="version">v1.0.1 Sphere Launcher</div>
+        </footer>
+    </div>
+
+    <div id="file-browser-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-i18n="ignoreFileBrowserTitle">Выбор файлов для игнорирования</h2>
+                <button id="close-file-modal-btn" class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="ftp-path-bar">
+                    <input type="text" id="file-modal-current-path" class="form-input" readonly>
+                </div>
+                <div id="file-list" class="ftp-dir-list file-browser-list">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="add-selected-files-btn" class="btn btn-primary">
+                    <i class="fas fa-check"></i>
+                    <span data-i18n="addSelected">Добавить выбранные</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ftp-browser-modal" class="modal">
+        <div class="modal-content ftp-modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-network-wired"></i><span data-i18n="ftpSelectFolder">Выбор папки на FTP</span></h2>
+                <button id="close-ftp-modal-btn" class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="ftp-path-bar">
+                    <input type="text" id="ftp-modal-current-path" class="form-input" readonly>
+                </div>
+                <div id="ftp-dir-list" class="ftp-dir-list"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="select-ftp-path-btn" class="btn btn-primary">
+                    <i class="fas fa-check"></i>
+                    <span data-i18n="ftpSelectThisFolder">Выбрать эту папку</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <template id="ftp-server-template">
+        <div class="ftp-server-card" data-server-index="">
+            <div class="ftp-server-header">
+                <div class="ftp-server-title">
+                    <i class="fas fa-server"></i>
+                    <input type="text" class="ftp-server-name form-input" placeholder="Название сервера"
+                        data-i18n-placeholder="ftpServerName">
+                </div>
+                <div class="ftp-server-controls">
+                    <button class="btn btn-toggle ftp-toggle-btn">
+                        <i class="fas fa-eye-slash"></i>
+                        <span data-i18n="ftpHide">Скрыть</span>
+                    </button>
+                    <button class="btn btn-danger ftp-remove-btn">
+                        <i class="fas fa-trash"></i>
+                        <span data-i18n="ftpRemove">Удалить</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ftp-server-settings">
+                <div class="ftp-grid">
+                    <div class="setting-group">
+                        <label class="setting-label" data-i18n="protocol">Протокол</label>
+                        <select class="ftp-protocol form-input">
+                            <option value="sftp" selected>SFTP (рекомендуется)</option>
+                            <option value="ftp">FTP</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" data-i18n="ftpHost">Хост</label>
+                        <input type="text" class="ftp-host form-input" placeholder="sftp.example.com">
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" data-i18n="ftpPort">Порт</label>
+                        <input type="text" class="ftp-port form-input" placeholder="22">
+                    </div>
+
+                    <div class="setting-group">
+                        <label class="setting-label" data-i18n="ftpUser">Пользователь</label>
+                        <input type="text" class="ftp-user form-input" placeholder="user">
+                    </div>
+
+                    <div class="setting-group" style="grid-column: 1 / -1;">
+                        <label class="setting-label" data-i18n="ftpPassword">Пароль</label>
+                        <input type="password" class="ftp-pass form-input">
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="ftpPath">Путь на сервере</label>
+                    <div class="input-group">
+                        <input type="text" class="ftp-path form-input" value="/">
+                        <button class="btn btn-browse ftp-browse-btn">
+                            <i class="fas fa-network-wired"></i>
+                        </button>
+                    </div>
+                    <p class="help-text" data-i18n="ftpPathHelp">Путь для загрузки архивов. Нажмите кнопку для выбора
+                        папки</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Добавьте это в create.html после существующих модальных окон, перед закрывающим тегом body -->
+
+    <div id="csv-editor-modal" class="modal">
+        <div class="modal-content csv-modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-table"></i><span data-i18n="csvEditorTitle">Редактор archive.csv</span></h2>
+                <button id="close-csv-modal-btn" class="close-modal-btn no-drag">&times;</button>
+            </div>
+            <div class="modal-body csv-modal-body">
+                <div class="csv-toolbar">
+                    <div class="csv-toolbar-left">
+                        <span class="csv-file-path" id="csv-file-path"></span>
+                        <span class="csv-rows-count" id="csv-rows-count">0 строк</span>
+                    </div>
+                    <div class="csv-toolbar-right">
+                        <label class="setting-checkbox" style="margin: 0; display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" id="csv-upload-to-ftp-checkbox" class="toggle-switch" />
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text" data-i18n="csvUploadToFtp" style="margin: 0; font-size: 13px;">Обновлять на FTP</span>
+                        </label>
+                        <button class="btn btn-primary no-drag" id="save-csv-btn" style="margin-left: 12px;">
+                            <i class="fas fa-save"></i>
+                            <span data-i18n="csvSave">Сохранить</span>
+                        </button>
+                        <button class="btn no-drag" id="reload-csv-btn">
+                            <i class="fas fa-refresh"></i>
+                            <span data-i18n="csvReload">Перезагрузить</span>
+                        </button>
+                        <div class="csv-search no-drag"
+                            style="display:flex;gap:8px;align-items:center;margin-left:12px;">
+                            <input id="csv-search-input" class="form-input " type="search"
+                                placeholder="Поиск в файле..." style="width:220px;padding:8px 10px;" />
+                            <button id="csv-search-btn" class="btn ">Найти</button>
+                            <button id="csv-clear-search-btn" class="btn ">Сброс</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="csv-table-container">
+                    <table class="csv-table" id="csv-table">
+                        <thead>
+                            <tr id="csv-header-row">
+                                <!-- Заголовки будут добавлены динамически -->
+                            </tr>
+                        </thead>
+                        <tbody id="csv-table-body">
+                            <!-- Данные будут добавлены динамически -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="csv-loading" id="csv-loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span data-i18n="csvLoading">Загрузка данных...</span>
+                </div>
+
+                <div class="csv-empty" id="csv-empty" style="display: none;">
+                    <i class="fas fa-table"></i>
+                    <span data-i18n="csvEmpty">CSV файл пуст или не найден</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="csv-footer-info">
+                    <span data-i18n="csvEditHint">Кликните по ячейке для редактирования. Изменения сохраняются при
+                        нажатии Enter или потере фокуса.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Дополнительные стили для CSV Editor -->
+    <style>
+        .csv-modal-content {
+            max-width: 95vw;
+            width: 95vw;
+            max-height: 90vh;
+            height: 90vh;
+        }
+
+        .csv-modal-body {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .csv-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(15, 15, 30, 0.9);
+            border-bottom: 1px solid var(--glass-border);
+            flex-shrink: 0;
+        }
+
+        .csv-toolbar-left {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .csv-toolbar-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .csv-file-path {
+            font-family: 'Orbitron', monospace;
+            font-size: 12px;
+            color: var(--accent-blue);
+            word-break: break-all;
+        }
+
+        .csv-rows-count {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .csv-table-container {
+            flex: 1;
+            overflow: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            margin: 0 20px 20px 20px;
+            border-radius: 10px;
+        }
+
+        .csv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+        }
+
+        .csv-cell-highlight mark {
+            background: rgba(255, 215, 0, 0.35);
+            color: #000;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+
+        .csv-table th {
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 8px;
+            border-bottom: 2px solid var(--accent-blue);
+            border-right: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            white-space: nowrap;
+        }
+
+        .csv-table th:last-child {
+            border-right: none;
+        }
+
+        .csv-table td {
+            padding: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            word-break: break-word;
+            max-width: 200px;
+            position: relative;
+        }
+
+        .csv-table td:last-child {
+            border-right: none;
+        }
+
+        .csv-table tbody tr:hover {
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .csv-table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .csv-table tbody tr:nth-child(even):hover {
+            background: rgba(0, 255, 255, 0.07);
+        }
+
+        /* Стили для редактируемых ячеек */
+        .csv-cell-editable {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .csv-cell-editable:hover {
+            background: rgba(0, 255, 255, 0.1);
+            outline: 1px solid var(--accent-blue);
+        }
+
+        .csv-cell-editing {
+            background: rgba(0, 255, 255, 0.2) !important;
+            outline: 2px solid var(--accent-blue) !important;
+        }
+
+        .csv-cell-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: inherit;
+            padding: 4px;
+            outline: none;
+            resize: none;
+            min-height: 20px;
+        }
+
+        .csv-cell-readonly {
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--text-secondary);
+        }
+
+        /* Стили для force ячеек */
+        .csv-cell-force {
+            background: rgba(0, 255, 255, 0.05) !important;
+            border: 1px solid rgba(0, 255, 255, 0.2) !important;
+            cursor: pointer !important;
+            position: relative;
+            user-select: none;
+            transition: all 0.15s ease;
+        }
+
+        .csv-cell-force:hover {
+            background: rgba(0, 255, 255, 0.15) !important;
+            border-color: var(--accent-blue) !important;
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .csv-cell-force:active {
+            transform: scale(0.95);
+        }
+
+        .csv-cell-force::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .csv-cell-force:hover::before {
+            opacity: 0.6;
+        }
+
+        .csv-loading,
+        .csv-empty {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .csv-loading i {
+            font-size: 24px;
+            color: var(--accent-blue);
+        }
+
+        .csv-empty i {
+            font-size: 48px;
+            color: var(--text-secondary);
+        }
+
+        .csv-footer-info {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* Скроллбары для таблицы */
+        .csv-table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .csv-table-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .csv-table-container::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 4px;
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .csv-table-container::-webkit-scrollbar-corner {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1200px) {
+            .csv-modal-content {
+                max-width: 98vw;
+                width: 98vw;
+                max-height: 95vh;
+                height: 95vh;
+            }
+
+            .csv-table {
+                font-size: 11px;
+            }
+
+            .csv-table th,
+            .csv-table td {
+                padding: 6px 4px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .csv-toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .csv-toolbar-right {
+                align-self: stretch;
+                justify-content: flex-end;
+            }
+
+            .csv-table {
+                font-size: 10px;
+            }
+
+            .csv-table td {
+                max-width: 150px;
+            }
+        }
+    </style>
+
+    <!-- Модал редактора множественных хешей -->
+    <div id="hash-editor-modal" class="modal" style="display:none;">
+        <div class="modal-content"
+            style="max-width:680px;width:680px;max-height:80vh;display:flex;flex-direction:column;">
+            <div class="modal-header" style="display:flex;align-items:center;justify-content:space-between;">
+                <h2 style="font-size:18px;display:flex;gap:8px;align-items:center;margin:0;">
+                    <i class="fas fa-fingerprint"></i>
+                    <span data-i18n="hashEditorTitle">Хеши файла</span>
+                    <span id="hash-editor-file"
+                        style="font-size:11px;color:var(--text-secondary);max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
+                </h2>
+                <button id="close-hash-editor-btn" class="close-modal-btn no-drag"
+                    style="font-size:26px;line-height:1;">&times;</button>
+            </div>
+            <div class="modal-body"
+                style="flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:16px;">
+                <div id="hash-drop-zone" class="no-drag"
+                    style="border:2px dashed var(--accent-blue);border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:all .25s;background:rgba(0,255,255,0.04);">
+                    <i class="fas fa-cloud-upload-alt" style="font-size:40px;color:var(--accent-blue);"></i>
+                    <p style="margin:12px 0 4px;font-weight:600;" data-i18n="hashDropTitle">Перетащите файл сюда</p>
+                    <p style="margin:0;font-size:12px;color:var(--text-secondary);" data-i18n="hashDropHint">или
+                        кликните для выбора — его хеш будет вычислен</p>
+                    <input type="file" id="hash-file-input" style="display:none;" />
+                </div>
+                <!-- manual-add removed per user request -->
+                <div style="flex:1;overflow:auto;">
+                    <table id="hash-list-table" style="width:100%;border-collapse:collapse;font-size:13px;">
+                        <thead>
+                            <tr style="background:rgba(0,255,255,0.08);">
+                                <th style="text-align:left;padding:6px 8px;">Hash</th>
+                                <th style="width:40px;padding:6px 8px;text-align:center;">#</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer" style="display:flex;justify-content:space-between;gap:12px;padding:12px 16px;">
+                <div style="font-size:11px;color:var(--text-secondary);">
+                    <span data-i18n="hashEditorHint">Список будет сохранён в ячейке как [h1,h2,...]</span>
+                </div>
+                <div style="display:flex;gap:8px;">
+                    <button id="save-hash-list-btn" class="btn btn-primary no-drag"><i class="fas fa-save"></i> <span
+                            data-i18n="save">Сохранить</span></button>
+                    <button id="cancel-hash-list-btn" class="btn no-drag"><i class="fas fa-times"></i> <span
+                            data-i18n="cancel">Отмена</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #hash-list-table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        #hash-list-table tbody tr:hover {
+            background: rgba(0, 255, 255, 0.10);
+        }
+
+        #hash-list-table td {
+            padding: 6px 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .hash-remove-btn {
+            background: linear-gradient(135deg, #a10000, #470303);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .hash-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(0, 255, 255, 0.12);
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            margin: 2px 4px 2px 0;
+            cursor: move;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        
+        .hash-pill:hover {
+            background: rgba(0, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+        }
+        
+        .hash-pill:active {
+            transform: scale(0.95);
+        }
+
+        .hash-pill code {
+            font-family: monospace;
+            font-size: 11px;
+        }
+
+        /* removed .hash-inline-add styles to prevent duplicate add buttons */
+
+        .hash-edit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            border: none;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .95;
+            transition: all .15s;
+            margin-right: 8px;
+        }
+
+        .hash-edit-btn:hover {
+            opacity: 1;
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        td[data-hash-cell] {
+            /* make cell use normal flow so button sits at start */
+            position: relative;
+            padding-top: 6px !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        td[data-hash-cell].drag-over {
+            background-color: rgba(0, 255, 255, 0.15);
+            border: 2px dashed var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+
+        td[data-hash-cell] .hash-pills-wrap {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+        }
+
+        #hash-drop-zone.dragover {
+            background: rgba(0, 255, 255, 0.12);
+            border-color: #00ffff;
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+        }
+    </style>
+
+    <!-- Chart.js (for FTP speed chart) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+    <script>
+        // FTP speed chart manager
+        window.__ftpSpeedManager = (function () {
+            let chart = null;
+            // default to 60 points (seconds) representing 1 minute
+            let MAX_POINTS = 60; // dynamic based on timeframeMinutes
+            let timeframeMinutes = 1;
+            let paused = false; // when true, chart refresh still keeps data but stops updating chart
+            // bucket samples per epoch second
+            const samplesBySec = {}; // { sec: {sum: number, count: number} }
+
+            function formatSpeed(v) {
+                if (!v) return '0 KB/s';
+                if (v < 1024) return Math.round(v) + ' B/s';
+                if (v < 1024 * 1024) return (v / 1024).toFixed(1) + ' KB/s';
+                return (v / 1024 / 1024).toFixed(2) + ' MB/s';
+            }
+
+            function createChart() {
+                const canvas = document.getElementById('ftp-speed-chart');
+                if (!canvas) return null;
+                const ctx = canvas.getContext('2d');
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Upload speed',
+                            data: [],
+                            borderColor: 'rgba(0,255,255,0.95)',
+                            backgroundColor: 'rgba(0,255,255,0.06)',
+                            tension: 0.25,
+                            fill: true,
+                            pointRadius: 0,
+                        }]
+                    },
+                    options: {
+                        animation: false,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                display: true,
+                                ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 12 }
+                            },
+                            y: {
+                                display: true,
+                                ticks: {
+                                    callback: function (value) { return formatSpeed(value); }
+                                }
+                            }
+                        },
+                        plugins: { legend: { display: false } },
+                    }
+                });
+                return chart;
+            }
+
+            function refreshChart() {
+                if (!chart) createChart();
+                if (!chart) return;
+                if (paused) return; // do not update visual chart when paused
+
+                const nowSec = Math.floor(Date.now() / 1000);
+                const labels = [];
+                const data = [];
+                for (let i = nowSec - (MAX_POINTS - 1); i <= nowSec; i++) {
+                    const s = samplesBySec[i];
+                    const val = s && s.count ? (s.sum / s.count) : 0;
+                    labels.push(new Date(i * 1000).toLocaleTimeString());
+                    data.push(Math.round(val));
+                }
+                chart.data.labels = labels;
+                chart.data.datasets[0].data = data;
+                chart.update();
+            }
+
+            // call refresh every second to keep timeline moving
+            setInterval(refreshChart, 1000);
+
+            function pushSpeed(bytesPerSecond) {
+                const v = Number(bytesPerSecond) || 0;
+                const sec = Math.floor(Date.now() / 1000);
+                if (!samplesBySec[sec]) samplesBySec[sec] = { sum: 0, count: 0 };
+                samplesBySec[sec].sum += v;
+                samplesBySec[sec].count += 1;
+
+                // cleanup old keys
+                const cutoff = sec - MAX_POINTS - 5;
+                Object.keys(samplesBySec).forEach(k => {
+                    if (Number(k) < cutoff) delete samplesBySec[k];
+                });
+
+                // update stats quickly (current = last second avg)
+                try {
+                    const curEl = document.getElementById('ftp-current-speed');
+                    const maxEl = document.getElementById('ftp-max-speed');
+                    const avgEl = document.getElementById('ftp-avg-speed');
+
+                    // compute aggregate across visible window
+                    const now = Math.floor(Date.now() / 1000);
+                    const vals = [];
+                    for (let i = now - (MAX_POINTS - 1); i <= now; i++) {
+                        const s = samplesBySec[i];
+                        if (s && s.count) vals.push(s.sum / s.count);
+                    }
+                    const current = samplesBySec[now] && samplesBySec[now].count ? (samplesBySec[now].sum / samplesBySec[now].count) : 0;
+                    const max = vals.length ? Math.max(...vals) : 0;
+                    const avg = vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length) : 0;
+
+                    if (curEl) curEl.textContent = formatSpeed(current);
+                    if (maxEl) maxEl.textContent = formatSpeed(max);
+                    if (avgEl) avgEl.textContent = formatSpeed(avg);
+
+                    const recent = document.getElementById('recent-speeds');
+                    if (recent) {
+                        const ts = new Date().toLocaleTimeString();
+                        const line = document.createElement('div');
+                        line.textContent = `${ts} — ${formatSpeed(v)}`;
+                        recent.prepend(line);
+                        while (recent.children.length > 200) recent.removeChild(recent.lastChild);
+                    }
+                } catch (e) { console.warn(e); }
+
+                // refresh chart data immediately for responsiveness (unless paused)
+                if (!paused) refreshChart();
+            }
+
+            // API: set timeframe in minutes (1,3,5,10)
+            function setTimeframe(minutes) {
+                timeframeMinutes = Math.max(1, Math.min(60, Number(minutes) || 1));
+                MAX_POINTS = timeframeMinutes * 60; // seconds
+                // trim old keys beyond new window
+                const now = Math.floor(Date.now() / 1000);
+                const cutoff = now - MAX_POINTS - 5;
+                Object.keys(samplesBySec).forEach(k => { if (Number(k) < cutoff) delete samplesBySec[k]; });
+                refreshChart();
+            }
+
+            function setPaused(p) {
+                paused = !!p;
+                const btn = document.getElementById('chart-pause-resume');
+                if (btn) btn.textContent = paused ? 'Resume' : 'Pause';
+                // if unpausing, immediately refresh to show backlog
+                if (!paused) refreshChart();
+            }
+
+            // expose some state for external control
+            return { pushSpeed, setTimeframe, setPaused, getState: () => ({ timeframeMinutes, paused, MAX_POINTS }) };
+        })();
+    </script>
+
+    <script>
+        // Tab switching + FTP push API wiring
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tabs
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const tab = this.dataset.tab;
+                    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+                    const pane = document.getElementById('tab-' + tab);
+                    if (pane) pane.classList.add('active');
+                });
+            });
+
+            // ensure chart created when upload tab shows
+            const uploadBtn = document.querySelector('.tab-button[data-tab="upload"]');
+            if (uploadBtn) uploadBtn.addEventListener('click', () => {
+                // create chart if not yet created
+                try { window.__ftpSpeedManager.pushSpeed(window.__ftpSpeedManager._last || 0); } catch (e) { }
+            });
+
+            // Chart controls wiring (timeframe buttons + pause/resume)
+            try {
+                document.querySelectorAll('.chart-time-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const m = Number(btn.dataset.min) || 1;
+                        if (window.__ftpSpeedManager && typeof window.__ftpSpeedManager.setTimeframe === 'function') {
+                            window.__ftpSpeedManager.setTimeframe(m);
+                            // visual active state
+                            document.querySelectorAll('.chart-time-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                        }
+                    });
+                });
+
+                const pauseBtn = document.getElementById('chart-pause-resume');
+                if (pauseBtn) {
+                    pauseBtn.addEventListener('click', () => {
+                        if (!window.__ftpSpeedManager || typeof window.__ftpSpeedManager.getState !== 'function') return;
+                        const state = window.__ftpSpeedManager.getState();
+                        window.__ftpSpeedManager.setPaused(!state.paused);
+                    });
+                }
+
+                // default select 1 minute
+                const first = document.querySelector('.chart-time-btn[data-min="1"]');
+                if (first) first.classList.add('active');
+            } catch (e) { console.warn('Chart controls wiring failed', e); }
+
+        });
+
+        // Expose simple helper that can be called from Go/Wails to push speed samples (bytes per second)
+        window.pushFtpSpeed = function (bytesPerSecond) {
+            if (window.__ftpSpeedManager && typeof window.__ftpSpeedManager.pushSpeed === 'function') {
+                window.__ftpSpeedManager.pushSpeed(bytesPerSecond);
+                // store last for lazy-init
+                window.__ftpSpeedManager._last = Number(bytesPerSecond) || 0;
+            }
+        };
+    </script>
+
+    <script src="create.js"></script>
+
+    <!-- Virtual CSV renderer: автоматически переключается при большом количестве строк -->
+    <script>
+        /*
+          Usage: call window.renderCsvEditor(rowsArray, headersArray, filePath)
+          - rowsArray: Array of row arrays (rows[i][colIndex])
+          - headersArray: Array of header names
+          The script will try to find elements: .csv-table-container, #csv-table, #csv-table-body, #csv-header-row,
+          #csv-file-path, #csv-rows-count, #csv-loading, #csv-empty. If some are missing, it will create a minimal table skeleton.
+        */
+        (function () {
+            const VIRTUAL_THRESHOLD = 1000; // switch to virtual mode when rows > threshold
+            const ROW_HEIGHT = 28; // px per row (adjust if needed)
+
+            function ensureCsvElements() {
+                const container = document.querySelector('.csv-table-container');
+                if (!container) return null;
+
+                // try to find an existing table skeleton
+                let table = container.querySelector('#csv-table');
+                let thead = container.querySelector('#csv-header-row');
+                let tbody = container.querySelector('#csv-table-body');
+
+                if (!table) {
+                    table = document.createElement('table');
+                    table.id = 'csv-table';
+                    table.className = 'csv-table';
+                    table.style.width = '100%';
+                    table.style.borderCollapse = 'collapse';
+
+                    const tHeadEl = document.createElement('thead');
+                    thead = document.createElement('tr');
+                    thead.id = 'csv-header-row';
+                    tHeadEl.appendChild(thead);
+                    table.appendChild(tHeadEl);
+
+                    const tBodyEl = document.createElement('tbody');
+                    tbody = document.createElement('tbody');
+                    tbody.id = 'csv-table-body';
+                    tBodyEl.appendChild(tbody);
+                    table.appendChild(tBodyEl);
+
+                    container.appendChild(table);
+                }
+
+                // helpful UI elements
+                let pathEl = document.getElementById('csv-file-path');
+                if (!pathEl) {
+                    pathEl = document.createElement('div');
+                    pathEl.id = 'csv-file-path';
+                    pathEl.className = 'csv-file-path';
+                    // try to insert before the table
+                    container.insertBefore(pathEl, table);
+                }
+
+                let rowsCountEl = document.getElementById('csv-rows-count');
+                if (!rowsCountEl) {
+                    rowsCountEl = document.createElement('div');
+                    rowsCountEl.id = 'csv-rows-count';
+                    rowsCountEl.className = 'csv-rows-count';
+                    container.insertBefore(rowsCountEl, table);
+                }
+
+                let loadingEl = document.getElementById('csv-loading');
+                if (!loadingEl) {
+                    loadingEl = document.createElement('div');
+                    loadingEl.id = 'csv-loading';
+                    loadingEl.className = 'csv-loading';
+                    loadingEl.style.display = 'none';
+                    loadingEl.innerHTML = '<i class="fa fa-spinner fa-pulse"></i> Загрузка...';
+                    container.insertBefore(loadingEl, table);
+                }
+
+                let emptyEl = document.getElementById('csv-empty');
+                if (!emptyEl) {
+                    emptyEl = document.createElement('div');
+                    emptyEl.id = 'csv-empty';
+                    emptyEl.className = 'csv-empty';
+                    emptyEl.style.display = 'none';
+                    emptyEl.innerHTML = '<i class="fa fa-table"></i><div>Пустой CSV</div>';
+                    container.insertBefore(emptyEl, table);
+                }
+
+                return { container, table, thead, tbody, pathEl, rowsCountEl, loadingEl, emptyEl };
+            }
+
+            window.renderCsvEditor = function (rows = [], headers = [], path = '') {
+                const nodes = ensureCsvElements();
+                if (!nodes) {
+                    console.warn('CSV container (.csv-table-container) not found. Aborting render.');
+                    return;
+                }
+                const { container, table, thead, tbody, pathEl, rowsCountEl, loadingEl, emptyEl } = nodes;
+
+                pathEl.textContent = path || '';
+                rowsCountEl.textContent = (rows.length || 0) + ' строк';
+                loadingEl.style.display = 'none';
+                emptyEl.style.display = rows.length === 0 ? 'flex' : 'none';
+
+                // small helper to build header row
+                function buildHeaders() {
+                    thead.innerHTML = '';
+                    const frag = document.createDocumentFragment();
+                    headers.forEach(h => {
+                        const th = document.createElement('th');
+                        th.textContent = h;
+                        frag.appendChild(th);
+                    });
+                    thead.appendChild(frag);
+                }
+
+                // pagination config
+                const PAGE_SIZE = 1000; // rows per page when paginating
+                const totalPages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+
+                // detect boolean-like columns (used for checkbox rendering)
+                function detectBooleanColumns(rows, headers) {
+                    const sample = Math.min(rows.length, 500);
+                    const boolCols = new Array(headers.length).fill(false);
+                    for (let c = 0; c < headers.length; c++) {
+                        let matches = 0;
+                        for (let r = 0; r < sample; r++) {
+                            const v = (rows[r] && rows[r][c]) ? String(rows[r][c]).trim().toLowerCase() : '';
+                            if (v === '0' || v === '1' || v === 'true' || v === 'false' || v === 'yes' || v === 'no') matches++;
+                        }
+                        if (sample > 0 && matches / sample > 0.8) boolCols[c] = true;
+                    }
+                    return boolCols;
+                }
+
+                const boolCols = detectBooleanColumns(rows, headers);
+
+                // Pager UI (shown when CSV larger than PAGE_SIZE)
+                let pager = container.querySelector('#csv-pager');
+                if (!pager && totalPages > 1) {
+                    pager = document.createElement('div');
+                    pager.id = 'csv-pager';
+                    pager.style.display = 'flex';
+                    pager.style.gap = '8px';
+                    pager.style.alignItems = 'center';
+                    pager.style.padding = '8px 12px';
+                    pager.style.justifyContent = 'space-between';
+
+                    const left = document.createElement('div');
+                    left.style.display = 'flex';
+                    left.style.gap = '8px';
+
+                    const prev = document.createElement('button');
+                    prev.className = 'btn';
+                    prev.textContent = '◀';
+                    prev.id = 'csv-pager-prev';
+                    left.appendChild(prev);
+
+                    const next = document.createElement('button');
+                    next.className = 'btn';
+                    next.textContent = '▶';
+                    next.id = 'csv-pager-next';
+                    left.appendChild(next);
+
+                    const info = document.createElement('div');
+                    info.id = 'csv-pager-info';
+                    info.style.color = 'var(--text-secondary)';
+                    left.appendChild(info);
+
+                    const right = document.createElement('div');
+                    right.style.display = 'flex';
+                    right.style.gap = '8px';
+
+                    const pageSelect = document.createElement('select');
+                    pageSelect.id = 'csv-pager-select';
+                    for (let p = 1; p <= totalPages; p++) {
+                        const opt = document.createElement('option');
+                        opt.value = p;
+                        opt.textContent = 'Страница ' + p;
+                        pageSelect.appendChild(opt);
+                    }
+                    right.appendChild(pageSelect);
+
+                    pager.appendChild(left);
+                    pager.appendChild(right);
+                    container.insertBefore(pager, container.firstChild);
+                }
+
+                // current page stored on container to survive re-renders
+                let currentPage = 1;
+                if (container.dataset.csvCurrentPage) currentPage = parseInt(container.dataset.csvCurrentPage, 10) || 1;
+                if (currentPage < 1) currentPage = 1;
+                if (currentPage > totalPages) currentPage = totalPages;
+                container.dataset.csvCurrentPage = String(currentPage);
+
+                // render a single page (ordinary table) — optimized for up to PAGE_SIZE rows
+                function renderPage(page) {
+                    const startIdx = (page - 1) * PAGE_SIZE;
+                    const endIdx = Math.min(rows.length, startIdx + PAGE_SIZE);
+
+                    table.style.display = '';
+                    const existingVirtual = container.querySelector('.virtual-csv-body');
+                    if (existingVirtual) existingVirtual.remove();
+
+                    if (headers && headers.length) buildHeaders();
+
+                    tbody.innerHTML = '';
+                    const frag = document.createDocumentFragment();
+
+                    for (let r = startIdx; r < endIdx; r++) {
+                        const tr = document.createElement('tr');
+                        tr.dataset.globalIndex = r;
+                        const maxCols = Math.max(headers.length, (rows[r] || []).length);
+                        for (let c = 0; c < maxCols; c++) {
+                            const td = document.createElement('td');
+                            if (boolCols[c]) {
+                                const cb = document.createElement('input');
+                                cb.type = 'checkbox';
+                                const v = (rows[r] && rows[r][c]) ? String(rows[r][c]).toLowerCase() : '';
+                                cb.checked = (v === '1' || v === 'true' || v === 'yes');
+                                cb.addEventListener('click', function (ev) {
+                                    ev.stopPropagation();
+                                    const gi = parseInt(tr.dataset.globalIndex, 10);
+                                    rows[gi] = rows[gi] || [];
+                                    rows[gi][c] = this.checked ? '1' : '0';
+                                    csvModified = true;
+                                });
+                                td.appendChild(cb);
+                                const span = document.createElement('span');
+                                span.style.marginLeft = '6px';
+                                span.textContent = rows[r] && rows[r][c] != null ? String(rows[r][c]) : '';
+                                td.appendChild(span);
+                            } else {
+                                td.textContent = rows[r] && rows[r][c] != null ? rows[r][c] : '';
+                                td.className = 'csv-cell-editable';
+                                // editing behavior left as-is (could be enhanced)
+                            }
+                            tr.appendChild(td);
+                        }
+                        frag.appendChild(tr);
+                    }
+                    tbody.appendChild(frag);
+
+                    // update pager UI
+                    if (pager) {
+                        const info = pager.querySelector('#csv-pager-info');
+                        const pageSelect = pager.querySelector('#csv-pager-select');
+                        if (info) info.textContent = `Показаны строки ${startIdx + 1}-${endIdx} из ${rows.length}`;
+                        if (pageSelect) pageSelect.value = String(page);
+                        container.dataset.csvCurrentPage = String(page);
+                    }
+                }
+
+                // If CSV large, use pagination render
+                if (rows.length > PAGE_SIZE) {
+                    renderPage(currentPage);
+
+                    if (pager) {
+                        const prev = pager.querySelector('#csv-pager-prev');
+                        const next = pager.querySelector('#csv-pager-next');
+                        const pageSelect = pager.querySelector('#csv-pager-select');
+                        prev.addEventListener('click', () => {
+                            let p = parseInt(container.dataset.csvCurrentPage || '1', 10);
+                            if (p > 1) p--;
+                            renderPage(p);
+                        });
+                        next.addEventListener('click', () => {
+                            let p = parseInt(container.dataset.csvCurrentPage || '1', 10);
+                            if (p < totalPages) p++;
+                            renderPage(p);
+                        });
+                        pageSelect.addEventListener('change', () => {
+                            const p = parseInt(pageSelect.value, 10);
+                            renderPage(p);
+                        });
+                    }
+                    return;
+                }
+
+                // Virtual mode with recycled-row pool (better for interactions like checkboxes)
+                table.style.display = 'none';
+                let virtual = container.querySelector('.virtual-csv-body');
+                if (virtual) virtual.remove();
+
+                virtual = document.createElement('div');
+                virtual.className = 'virtual-csv-body';
+                virtual.style.position = 'relative';
+                virtual.style.height = '400px';
+                virtual.style.overflow = 'auto';
+                virtual.style.background = 'transparent';
+                virtual.style.padding = '0';
+
+                const spacer = document.createElement('div');
+                spacer.style.height = (rows.length * ROW_HEIGHT) + 'px';
+                spacer.style.position = 'relative';
+
+                const poolContainer = document.createElement('div');
+                poolContainer.style.position = 'absolute';
+                poolContainer.style.top = '0';
+                poolContainer.style.left = '0';
+                poolContainer.style.right = '0';
+
+                spacer.appendChild(poolContainer);
+                virtual.appendChild(spacer);
+                container.appendChild(virtual);
+
+                // boolCols already computed above for pagination/regular path; recycled-row uses same array
+
+                const buffer = 6;
+
+                // number of rows to allocate in pool
+                const viewportRows = Math.ceil((virtual.clientHeight || 400) / ROW_HEIGHT);
+                const poolSize = Math.min(rows.length, viewportRows + buffer * 2 + 4);
+
+                // create pool
+                const rowPool = [];
+                for (let i = 0; i < poolSize; i++) {
+                    const rowEl = document.createElement('div');
+                    rowEl.className = 'virtual-row';
+                    rowEl.style.position = 'absolute';
+                    rowEl.style.left = '0';
+                    rowEl.style.right = '0';
+                    rowEl.style.height = ROW_HEIGHT + 'px';
+                    rowEl.style.display = 'flex';
+                    rowEl.style.alignItems = 'center';
+                    rowEl.style.gap = '8px';
+                    rowEl.style.padding = '2px 6px';
+                    rowEl.style.boxSizing = 'border-box';
+                    rowEl.style.borderBottom = '1px solid rgba(255,255,255,0.02)';
+                    rowEl.dataset.poolIndex = i;
+
+                    // create cells inside row
+                    for (let c = 0; c < headers.length; c++) {
+                        const cellWrapper = document.createElement('div');
+                        cellWrapper.className = 'virtual-cell';
+                        cellWrapper.style.flex = '1';
+                        cellWrapper.style.minWidth = '40px';
+                        cellWrapper.style.overflow = 'hidden';
+                        cellWrapper.style.textOverflow = 'ellipsis';
+                        cellWrapper.style.whiteSpace = 'nowrap';
+                        cellWrapper.style.display = 'flex';
+                        cellWrapper.style.alignItems = 'center';
+                        cellWrapper.style.gap = '6px';
+
+                        if (boolCols[c]) {
+                            const cb = document.createElement('input');
+                            cb.type = 'checkbox';
+                            cb.dataset.col = c;
+                            cb.addEventListener('click', function (ev) {
+                                // find row index from ancestor
+                                const row = this.closest('.virtual-row');
+                                if (!row) return;
+                                const idx = parseInt(row.dataset.rowIndex, 10);
+                                if (isNaN(idx)) return;
+                                const colIndex = parseInt(this.dataset.col, 10);
+                                const val = this.checked ? '1' : '0';
+                                rows[idx][colIndex] = val;
+                                csvModified = true;
+                            });
+                            cellWrapper.appendChild(cb);
+                            // label span for text when checkbox not visible
+                            const text = document.createElement('span');
+                            text.className = 'virtual-cell-text';
+                            text.style.flex = '1';
+                            text.style.overflow = 'hidden';
+                            text.style.textOverflow = 'ellipsis';
+                            text.style.whiteSpace = 'nowrap';
+                            cellWrapper.appendChild(text);
+                        } else {
+                            const text = document.createElement('div');
+                            text.className = 'virtual-cell-text';
+                            text.style.flex = '1';
+                            text.style.overflow = 'hidden';
+                            text.style.textOverflow = 'ellipsis';
+                            text.style.whiteSpace = 'nowrap';
+                            cellWrapper.appendChild(text);
+                        }
+
+                        rowEl.appendChild(cellWrapper);
+                    }
+
+                    poolContainer.appendChild(rowEl);
+                    rowPool.push(rowEl);
+                }
+
+                // render given row into pool element
+                function populateRow(rowEl, dataIndex) {
+                    rowEl.dataset.rowIndex = dataIndex;
+                    rowEl.style.top = (dataIndex * ROW_HEIGHT) + 'px';
+                    const cells = rowEl.children;
+                    const rowData = rows[dataIndex] || [];
+                    for (let c = 0; c < headers.length; c++) {
+                        const wrapper = cells[c];
+                        if (!wrapper) continue;
+                        const textEl = wrapper.querySelector('.virtual-cell-text');
+                        if (boolCols[c]) {
+                            const cb = wrapper.querySelector('input[type=checkbox]');
+                            const v = (rowData[c] != null) ? String(rowData[c]).toLowerCase() : '';
+                            const checked = (v === '1' || v === 'true' || v === 'yes');
+                            cb.checked = checked;
+                            textEl.textContent = checked ? '1' : '0';
+                        } else {
+                            textEl.textContent = rowData[c] != null ? String(rowData[c]) : '';
+                        }
+                    }
+                }
+
+                // initial visible start
+                let firstVisible = 0;
+
+                function refreshPool() {
+                    const scrollTop = virtual.scrollTop;
+                    const viewHeight = virtual.clientHeight || 400;
+                    const start = Math.max(0, Math.floor(scrollTop / ROW_HEIGHT) - buffer);
+                    // clamp
+                    const maxStart = Math.max(0, rows.length - poolSize);
+                    const newStart = Math.min(start, maxStart);
+                    if (newStart === firstVisible) return;
+                    firstVisible = newStart;
+                    for (let i = 0; i < rowPool.length; i++) {
+                        const idx = newStart + i;
+                        if (idx < rows.length) {
+                            rowPool[i].style.display = '';
+                            populateRow(rowPool[i], idx);
+                        } else {
+                            rowPool[i].style.display = 'none';
+                        }
+                    }
+                }
+
+                // initial fill
+                for (let i = 0; i < rowPool.length; i++) {
+                    const idx = i;
+                    if (idx < rows.length) populateRow(rowPool[i], idx);
+                    else rowPool[i].style.display = 'none';
+                }
+
+                // optimized scroll handling using requestAnimationFrame
+                let ticking = false;
+                virtual.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        ticking = true;
+                        requestAnimationFrame(() => {
+                            refreshPool();
+                            ticking = false;
+                        });
+                    }
+                }, { passive: true });
+
+                // handle resize to recompute pool if needed
+                window.addEventListener('resize', () => {
+                    // no-op here: a future improvement could recreate pool on big size changes
+                });
+            };
+
+            // Inject minimal styles for virtual renderer
+            const sheet = document.createElement('style');
+            sheet.textContent = '\n.virtual-csv-body .virtual-row:hover { background: rgba(0,255,255,0.03); }\n' +
+                '.virtual-csv-body .virtual-cell { padding: 2px 6px; font-family: \"Orbitron\", monospace; font-size: 13px; }\n';
+            document.head.appendChild(sheet);
+        })();
+    </script>
+
+    <!-- === НОВЫЙ СКРИПТ ДЛЯ СПОЙЛЕРОВ === -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibleTriggers = document.querySelectorAll('.collapsible-trigger');
+            collapsibleTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function () {
+                    const collapsibleSection = this.closest('.collapsible');
+                    if (collapsibleSection) collapsibleSection.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

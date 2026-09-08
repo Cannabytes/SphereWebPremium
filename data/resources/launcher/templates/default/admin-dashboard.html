@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора лаунчера</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="/wails/ipc.js" defer></script>
+    <script src="/wails/runtime.js" defer></script>
+    <script src="./wailsjs/go/main/App.js" defer></script>
+    <script src="admin-dashboard.js" defer></script>
+    <style>
+        :root {
+            --bg-base: radial-gradient(circle at top left, #12143a 0%, #05060e 45%, #050407 100%);
+            --bg-panel: rgba(12, 14, 34, 0.85);
+            --bg-card: rgba(15, 18, 50, 0.9);
+            --accent: #00ffff;
+            --accent-2: #8643ff;
+            --accent-3: #ff4ecd;
+            --text-main: #eef5ff;
+            --text-soft: #9fb4d0;
+            --text-muted: #6c7e99;
+            --border-soft: rgba(255, 255, 255, 0.08);
+            --shadow-strong: 0 25px 45px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-main);
+            background: var(--bg-base);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(0, 255, 255, 0.12), transparent 40%, rgba(134, 67, 255, 0.18) 70%, transparent 100%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .dashboard-shell {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header.dashboard-header {
+            padding: 32px clamp(24px, 4vw, 60px) 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            background: linear-gradient(180deg, rgba(10, 13, 33, 0.6) 0%, rgba(10, 12, 24, 0) 100%);
+        }
+
+        .title-wrap {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .logo-mark {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(140deg, var(--accent), var(--accent-2));
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            color: #070b1d;
+            font-weight: 700;
+            box-shadow: 0 15px 35px rgba(0, 255, 255, 0.35);
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: clamp(1.6rem, 1.4rem + 1.2vw, 2.4rem);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .header-text p {
+            margin: 6px 0 0;
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .hotkeys {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 14px 18px;
+            background: rgba(18, 20, 45, 0.85);
+            border: 1px solid rgba(0, 255, 255, 0.18);
+            border-radius: 16px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+        }
+
+        .hotkeys span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.92rem;
+            color: var(--text-soft);
+        }
+
+        .kbd {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 6px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        main.dashboard-content {
+            flex: 1;
+            padding: 0 clamp(24px, 4vw, 60px) 48px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 32px;
+        }
+
+        .panel {
+            padding: clamp(20px, 2vw, 28px);
+            background: var(--bg-panel);
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: var(--shadow-strong);
+            backdrop-filter: blur(18px);
+        }
+
+        .panel h2 {
+            margin: 0 0 16px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .action-card {
+            position: relative;
+            padding: 22px 22px 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: var(--bg-card);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .action-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 42px rgba(0, 0, 0, 0.45);
+            border-color: rgba(0, 255, 255, 0.35);
+        }
+
+        .action-card h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            letter-spacing: 0.04em;
+        }
+
+        .action-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            flex: 1;
+        }
+
+        .action-card button {
+            align-self: flex-start;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: none;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            background: linear-gradient(130deg, var(--accent), var(--accent-3));
+            color: #05060e;
+            box-shadow: 0 12px 26px rgba(0, 255, 255, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .action-card button.secondary {
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: none;
+        }
+
+        .action-card button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 34px rgba(0, 255, 255, 0.45);
+        }
+
+        .status-strip {
+            margin-top: 18px;
+            padding: 14px 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(9, 11, 28, 0.85);
+            color: var(--text-soft);
+            font-size: 0.92rem;
+        }
+
+        .status-strip.success {
+            border-color: rgba(0, 255, 195, 0.35);
+            color: #79f5d8;
+        }
+
+        .status-strip.error {
+            border-color: rgba(255, 85, 136, 0.38);
+            color: #ff99bb;
+        }
+
+        .status-strip.info {
+            border-color: rgba(0, 255, 255, 0.25);
+            color: var(--text-soft);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .summary-card {
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(12, 14, 36, 0.95);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .summary-card span.label {
+            text-transform: uppercase;
+            font-size: 0.74rem;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+        }
+
+        .summary-card span.value {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+        }
+
+        .summary-card span.note {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            line-height: 1.4;
+        }
+
+        .faq-section {
+            display: grid;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        details {
+            background: rgba(10, 12, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 16px 20px;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--text-main);
+        }
+
+        details p {
+            margin: 12px 0 0;
+            color: var(--text-soft);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 18px clamp(24px, 4vw, 60px) 32px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+        }
+
+        @media (max-width: 768px) {
+            header.dashboard-header {
+                padding: 28px 20px 18px;
+            }
+
+            main.dashboard-content {
+                padding: 0 20px 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-shell">
+        <header class="dashboard-header">
+            <div class="title-wrap">
+                <div class="logo-mark">ADM</div>
+                <div class="header-text">
+                    <h1>Панель администратора лаунчера</h1>
+                    <p>Здесь собраны инструменты для разработчика: загрузка шаблонов, управление конфигурацией и отладка
+                        обновлений.</p>
+                </div>
+            </div>
+            <div class="hotkeys">
+                <span><span class="kbd">ESC</span> — Вернуться назад</span>
+                <span><span class="kbd">F1</span> — текущая страница</span>
+                <span><span class="kbd">F2</span> — Редактор JSON</span>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <section class="panel">
+                <h2>Быстрые действия</h2>
+                <div class="card-grid">
+                    <article class="action-card">
+                        <h3>Редактор launcher.json</h3>
+                        <p>Визуальный конструктор конфигурации лаунчера.
+                            Поддерживает загрузку готового файла, редактирование
+                            триггеров, переводов, новостей и мгновенный экспорт.
+                            Включает функцию предпросмотра для проверки внешнего вида.</p>
+                        <button id="open-launcher-editor">Открыть Редактор JSON</button>
+                    </article>
+                    <article class="action-card">
+                        <h3>Конструктор патчей</h3>
+                        <p>Страница создания архивов и CSV. Полезно для подготовки обновлений клиента и ручной проверки
+                            контрольных сумм.</p>
+                        <button id="open-create-page" class="secondary">Перейти к упаковщику</button>
+                    </article>
+                    <article class="action-card">
+                        <h3>Главный интерфейс</h3>
+                        <p>Возврат к пользовательскому интерфейсу лаунчера. Удобно после завершения админских задач.</p>
+                        <button id="return-to-launcher" class="secondary">Открыть Лаунчер</button>
+                    </article>
+                </div>
+                <div id="license-status" class="status-strip info" role="status">Лицензия: проверяю статус...</div>
+                <div id="dashboard-status" class="status-strip" role="status">Статус: получаю сведения о текущей
+                    конфигурации...</div>
+            </section>
+
+            <section class="panel">
+                <h2>Сводка загруженной конфигурации</h2>
+                <div id="remote-summary" class="summary-grid"></div>
+                <div class="faq-section">
+                    <details open>
+                        <summary>Как обновить конфигурацию на сервере?</summary>
+                        <p>1. Откройте редактор launcher.json (кнопка или F2).<br>
+                            2. Загрузите текущую конфигурацию из лаунчера или импортируйте файл.<br>
+                            3. Внесите изменения, убедитесь в корректности триггеров и путей.<br>
+                            4. Экспортируйте JSON и загрузите его на сервер.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Как работает визуальный предпросмотр?</summary>
+                        <p>В редакторе launcher.json нажмите кнопку "Открыть полный предпросмотр". Откроется главная страница лаунчера 
+                            с текущими настройками из редактора. Вы увидите все кнопки запуска, переводы и новости в реальном интерфейсе. 
+                            Для возврата к редактору нажмите кнопку в верхнем баннере предпросмотра.</p>
+                    </details>
+                    <details>
+                        <summary>Что проверяет редактор launcher.json?</summary>
+                        <p>Редактор подсвечивает незаполненные поля, следит за корректностью путей, помогает добавлять языки и
+                            триггеры в стандартизированном формате, чтобы backend на Go мог без проблем распарсить итоговый
+                            файл.</p>
+                    </details>
+                    <details>
+                        <summary>Где находятся файлы шаблонов?</summary>
+                        <p>При активированном режиме администратора лаунчер автоматически следит за папкой <code>frontend</code>
+                            рядом с исполняемым файлом. Обновите HTML/CSS/JS и перезагрузите окно — изменения применятся без
+                            пересборки.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Панель администратора Sphere Launcher · Помните, что изменения конфигурации немедленно влияют на боевой клиент.
+            Работайте аккуратно и проверяйте каждое поле.
+        </footer>
+    </div>
+</body>
+
+</html>
