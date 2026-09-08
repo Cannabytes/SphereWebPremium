@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-OQpaS_Dv.js";import{t}from"./TodoApp-Ckv09yfO.js";var n=e(),r=()=>(0,n.jsx)(`div`,{className:`page`,children:(0,n.jsx)(t,{})});export{r as default};
