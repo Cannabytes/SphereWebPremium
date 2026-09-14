@@ -1,0 +1,1 @@
+var e=e=>{if(!e)return 0;let t=document.createElement(`template`);return t.innerHTML=e,t.content.querySelectorAll(`img,video,audio,iframe,svg,table,source,object,embed`).forEach(e=>e.remove()),Array.from(t.content.textContent??``).length};export{e as t};
