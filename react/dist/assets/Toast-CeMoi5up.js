@@ -1,0 +1,1 @@
+import{_ as e}from"./index-hw1itmJp.js";var t=t=>e.success(t),n=t=>e.error(t);export{t as n,n as t};
