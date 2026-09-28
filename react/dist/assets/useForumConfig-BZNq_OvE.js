@@ -1,1 +1,0 @@
-import{h as e,k as t}from"./index-BkINCu-Z.js";import{t as n}from"./forum.api-DCO3eOy8.js";var r=3e5,i=(i=!0)=>t({queryKey:e.forum.config,queryFn:n.getConfig,staleTime:r,refetchOnWindowFocus:!1,enabled:i});export{i as t};
