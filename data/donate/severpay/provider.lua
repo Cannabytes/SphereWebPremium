@@ -9,6 +9,7 @@ function meta()
     icon = "Receipt",
     currencies = { "RUB", "EUR", "BYN" },
     settings = {
+      { key = "require_character_above_level_3", label = "Выводить если есть персонаж больше 3 уровня", type = "checkbox", default = false },
       {
         key = "merchants",
         label = "MID/Token/Currency записи",
