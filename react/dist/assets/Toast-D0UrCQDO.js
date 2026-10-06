@@ -1,0 +1,1 @@
+import{_ as e}from"./index-C3Aq-7R0.js";var t=t=>e.success(t),n=t=>e.error(t);export{t as n,n as t};
