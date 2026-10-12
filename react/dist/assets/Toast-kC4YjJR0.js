@@ -1,1 +1,0 @@
-import{_ as e}from"./index-DYbD_HS8.js";var t=t=>e.success(t),n=t=>e.error(t);export{t as n,n as t};
