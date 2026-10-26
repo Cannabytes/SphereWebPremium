@@ -9,7 +9,6 @@ function meta()
     icon = "Receipt",
     currencies = { "RUB", "EUR", "BYN" },
     settings = {
-      { key = "require_character_above_level_3", label = "Выводить если есть персонаж больше 3 уровня", type = "checkbox", default = false },
       {
         key = "merchants",
         label = "MID/Token/Currency записи",
@@ -26,6 +25,8 @@ function meta()
           }},
           { key = "min_amount", label = "Мин. сумма", type = "number", default = 0 },
           { key = "max_amount", label = "Макс. сумма", type = "number", default = 0 },
+          { key = "min_character_level", label = "Выводить если есть персонаж от N уровня (0 — всем)", type = "number", default = 3, footer = true },
+          { key = "allow_if_donated", label = "Показывать, если пользователь пополнял баланс", type = "checkbox", default = false, footer = true },
         },
       },
     },
@@ -43,6 +44,8 @@ function public(ctx)
       icon = "Receipt",
       minAmount = tonumber(merchant.min_amount or 0),
       maxAmount = tonumber(merchant.max_amount or 0),
+      min_character_level = tonumber(merchant.min_character_level or 3),
+      allow_if_donated = merchant.allow_if_donated == true,
       payload = { index = i },
     }
   end
