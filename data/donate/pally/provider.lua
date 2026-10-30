@@ -24,6 +24,18 @@ function meta()
           { key = "currency", label = "Валюта", type = "select", default = "RUB", options = currency_options() },
         },
       },
+      {
+        key = "credit_amount_source",
+        label = "Как рассчитывать начисление пользователю",
+        type = "select",
+        required = true,
+        default = "order",
+        hint = "Комиссию Pally платит пользователь сверху суммы заказа. Если начислять по сумме заказа, пользователь получит ровно выбранное количество, а комиссия не превратится в баланс.",
+        options = {
+          { value = "order", label = "По сумме заказа (без комиссии)" },
+          { value = "payer_paid", label = "По всей сумме, заплаченной пользователем (с комиссией)" },
+        },
+      },
     },
     links = {
       { label = "Документация API", url = "https://pally.info/ru/reference/api" },
@@ -120,11 +132,16 @@ function webhook(ctx)
     return { status = "rejected", response_status = 400, response_body = "checksum error" }
   end
 
+  -- Без amount Go начисляет баланс заказа из БД: BalanceAmount/Commission не входят в подпись.
+  local credit_amount = nil
+  if value(ctx.settings.credit_amount_source, "order") == "payer_paid" then
+    credit_amount = tonumber(amount)
+  end
   return {
     status = "paid",
     order_id = inv_id,
     external_id = inv_id,
-    amount = tonumber(amount),
+    amount = credit_amount,
     currency = currency,
     response_body = "YES",
     payload = flatten_form(form),
