@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-OQpaS_Dv.js";import{r as t}from"./CasesGallery-BdK0VLZo.js";var n=e();function r(){return(0,n.jsx)(t,{})}export{r as default};
