@@ -1,0 +1,1 @@
+import{i as e}from"./localeStore-CAv8nI9O.js";var t=(t,n=`ru`)=>new Intl.NumberFormat(e(n)).format(t);export{t};

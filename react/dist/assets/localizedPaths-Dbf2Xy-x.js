@@ -1,0 +1,1 @@
+import{r as e}from"./localeStore-CAv8nI9O.js";var t=(t,n)=>{let r=n.trim().startsWith(`/`)?n.trim():`/${n.trim()}`;return`/${e(t)}${r}`};export{t};
