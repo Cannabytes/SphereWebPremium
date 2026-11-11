@@ -1,0 +1,1 @@
+var e=[`change_name`,`move_account`,`delete_character`,`change_name_color`],t=t=>t?.available?e.filter(e=>t.services?.[e]?.enabled):[];export{e as n,t};

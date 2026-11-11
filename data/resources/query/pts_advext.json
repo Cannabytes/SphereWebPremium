@@ -1,0 +1,203 @@
+{
+  "build": "PTS AdvExt",
+  "block": true,
+  "aliases": [
+    "AdvExt"
+  ],
+  "passwordHashAlgorithm": "pts",
+  "queries": {
+    "pvp": {
+      "title": "PvP",
+      "sortOrder": 10,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT TOP (10) ud.char_id AS player_id, ud.char_name AS player_name, ud.Duel AS pvp, ud.PK AS pk, ud.gender AS sex, CASE WHEN ud.login > ISNULL(ud.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, ud.use_time AS time_in_game, PL.name AS clan_name, PL.skill_level AS clan_level, ud.class AS class_id, ud.Lev AS [level], ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.user_data AS ud LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = ud.pledge_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "WHERE ud.account_id > 0 ORDER BY ud.Duel DESC"
+      ]
+    },
+    "pk": {
+      "title": "PK",
+      "sortOrder": 20,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT TOP (10) ud.char_id AS player_id, ud.char_name AS player_name, ud.Duel AS pvp, ud.PK AS pk, ud.gender AS sex, CASE WHEN ud.login > ISNULL(ud.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, ud.use_time AS time_in_game, PL.name AS clan_name, PL.skill_level AS clan_level, ud.class AS class_id, ud.Lev AS [level], ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.user_data AS ud LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = ud.pledge_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "WHERE ud.account_id > 0 ORDER BY ud.PK DESC"
+      ]
+    },
+    "online": {
+      "title": "Online",
+      "sortOrder": 30,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT TOP (10) ud.char_id AS player_id, ud.char_name AS player_name, ud.Duel AS pvp, ud.PK AS pk, ud.gender AS sex, CASE WHEN ud.login > ISNULL(ud.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, ud.use_time AS time_in_game, PL.name AS clan_name, PL.skill_level AS clan_level, ud.class AS class_id, ud.Lev AS [level], ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.user_data AS ud LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = ud.pledge_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "WHERE ud.account_id > 0 ORDER BY ud.use_time DESC"
+      ]
+    },
+    "exp": {
+      "title": "EXP",
+      "sortOrder": 40,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT TOP (10) ud.char_id AS player_id, ud.char_name AS player_name, ud.Duel AS pvp, ud.PK AS pk, ud.gender AS sex, CASE WHEN ud.login > ISNULL(ud.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, ud.use_time AS time_in_game, PL.name AS clan_name, PL.skill_level AS clan_level, ud.class AS class_id, ud.Lev AS [level], ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.user_data AS ud LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = ud.pledge_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "WHERE ud.account_id > 0 ORDER BY ud.Exp DESC"
+      ]
+    },
+    "clan": {
+      "title": "Clans",
+      "sortOrder": 50,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT TOP (10) PL.castle_id, PL.root_name_value AS reputation_score, PL.ruler_id AS leader_id, R.char_name AS player_name, R.Duel AS pvp, R.PK AS pk, CASE WHEN R.login > ISNULL(R.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, R.use_time AS time_in_game, R.gender AS sex, PL.name AS clan_name, PL.skill_level AS clan_level, ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest,",
+        "(SELECT COUNT(*) FROM dbo.user_data AS m WHERE m.pledge_id = PL.pledge_id AND m.account_id > 0) AS clan_count_members",
+        "FROM dbo.Pledge AS PL LEFT JOIN dbo.user_data AS R ON R.char_id = PL.ruler_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "ORDER BY PL.root_name_value DESC"
+      ]
+    },
+    "castle": {
+      "title": "Castle",
+      "sortOrder": 60,
+      "targetDb": "game",
+      "isPublic": true,
+      "query": [
+        "SELECT c.id AS castle_id, c.tax_rate AS tax, PL.name AS clan_name, PL.skill_level AS clan_level, R.char_name AS player_name, ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.castle AS c LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = c.pledge_id LEFT JOIN dbo.user_data AS R ON R.char_id = PL.ruler_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "ORDER BY c.id"
+      ]
+    },
+    "online_count": {
+      "title": "Online Count",
+      "sortOrder": 70,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT COUNT(*) AS online FROM dbo.user_data WHERE login IS NOT NULL AND (logout IS NULL OR login > logout)"
+      ]
+    },
+    "character_online": {
+      "title": "Character Online",
+      "sortOrder": 80,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT CASE WHEN login > ISNULL(logout, '1900-01-01') THEN 1 ELSE 0 END AS online FROM dbo.user_data WHERE char_name = ?"
+      ]
+    },
+    "account_characters": {
+      "title": "Account Characters",
+      "sortOrder": 90,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT TOP (30) ud.char_id AS player_id, ud.char_name AS player_name, ud.Duel AS pvp, ud.PK AS pk, ud.gender AS sex, CASE WHEN ud.login > ISNULL(ud.logout, '1900-01-01') THEN 1 ELSE 0 END AS online, ud.use_time AS time_in_game, ud.class AS class_id, ud.Lev AS [level], PL.name AS clan_name, PL.skill_level AS clan_level, ClanCrest.bitmap AS clan_crest, AllianceCrest.bitmap AS alliance_crest",
+        "FROM dbo.user_data AS ud LEFT JOIN dbo.Pledge AS PL ON PL.pledge_id = ud.pledge_id LEFT JOIN dbo.Pledge_Crest AS ClanCrest ON ClanCrest.crest_id = PL.pledge_id LEFT JOIN dbo.Alliance AS A ON A.id = PL.alliance_id LEFT JOIN dbo.Pledge_Crest AS AllianceCrest ON AllianceCrest.crest_id = A.crest_id",
+        "WHERE ud.account_name = ? AND ud.account_id > 0 ORDER BY ud.use_time DESC"
+      ]
+    },
+    "add_item": {
+      "title": "Add Item",
+      "sortOrder": 110,
+      "targetDb": "game",
+      "isPublic": false,
+      "description": "Выдача через dbo.user_delivery: сервер сам выдаёт предметы онлайн-персонажу (lin_LoadUserDelivery берёт строки со status = 0), кик не нужен. Аргументы: char_id, item_id, count, enchant. Пустой запрос = выдача через CacheD с киком.",
+      "query": [
+        "DECLARE @char_id int = ?, @item_id int = ?, @quantity bigint = ?, @enchant int = ?;",
+        "INSERT INTO dbo.user_delivery (account_id, char_id, account_name, char_name, item_id, quantity, enchant, status)",
+        "SELECT account_id, char_id, account_name, char_name, @item_id, @quantity, @enchant, 0 FROM dbo.user_data WHERE char_id = @char_id;",
+        "IF @@ROWCOUNT = 0 RAISERROR('user_delivery: character not found', 16, 1);"
+      ]
+    },
+    "account_password": {
+      "title": "Account Password",
+      "sortOrder": 120,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "UPDATE au SET password = CONVERT(binary(16), ?, 1) FROM dbo.user_auth AS au JOIN dbo.sphere_account_email AS e ON e.account = au.account WHERE au.account = ? AND e.email = ?"
+      ]
+    },
+    "account_change_email": {
+      "title": "Change Account Email",
+      "sortOrder": 125,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "DECLARE @new nvarchar(255) = ?, @login nvarchar(50) = ?, @old nvarchar(255) = ?;",
+        "MERGE dbo.sphere_account_email WITH (HOLDLOCK) AS t",
+        "USING (SELECT account FROM dbo.user_account WHERE account = @login) AS s ON t.account = s.account",
+        "WHEN MATCHED AND ISNULL(t.email, '') = @old AND @new <> '' THEN UPDATE SET email = @new",
+        "WHEN MATCHED AND ISNULL(t.email, '') = @old AND @new = '' THEN DELETE",
+        "WHEN NOT MATCHED BY TARGET AND @old = '' AND @new <> '' THEN INSERT (account, email) VALUES (s.account, @new);"
+      ],
+      "description": "В PTS у аккаунта нет e-mail: привязка хранится в таблице sphere_account_email (создается автоматически в login БД)."
+    },
+    "account_list_by_email": {
+      "title": "Accounts by Email",
+      "sortOrder": 130,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT ua.account AS login, CONVERT(varchar(34), au.password, 1) AS password FROM dbo.sphere_account_email AS e JOIN dbo.user_account AS ua ON ua.account = e.account LEFT JOIN dbo.user_auth AS au ON au.account = ua.account WHERE e.email = ?"
+      ]
+    },
+    "admin_account_list": {
+      "title": "Admin Account List",
+      "sortOrder": 132,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT e.email AS email, ua.account AS login FROM dbo.user_account AS ua LEFT JOIN dbo.sphere_account_email AS e ON e.account = ua.account ORDER BY ua.account"
+      ]
+    },
+    "admin_character_list": {
+      "title": "Admin Character List",
+      "sortOrder": 134,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT account_name, char_name FROM dbo.user_data WHERE account_id > 0"
+      ]
+    },
+    "character_items": {
+      "title": "Character Items",
+      "sortOrder": 136,
+      "targetDb": "game",
+      "isPublic": false,
+      "query": [
+        "SELECT item_id AS object_id, item_type AS item_id, amount AS count, enchant AS enchant_level, CASE warehouse WHEN 0 THEN 'INVENTORY' WHEN 1 THEN 'WAREHOUSE' ELSE CAST(warehouse AS varchar(10)) END AS location FROM dbo.user_item WHERE char_id = ? ORDER BY warehouse, item_type"
+      ]
+    },
+    "account_create": {
+      "title": "Create Account",
+      "sortOrder": 140,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SET XACT_ABORT ON;",
+        "DECLARE @login nvarchar(50) = ?, @password varchar(34) = ?, @email nvarchar(255) = ?;",
+        "BEGIN TRANSACTION;",
+        "INSERT INTO dbo.user_account (account, pay_stat) VALUES (@login, 1);",
+        "INSERT INTO dbo.user_auth (account, password, quiz1, quiz2, answer1, answer2) VALUES (@login, CONVERT(binary(16), @password, 1), 'Question1', 'Question2', CONVERT(binary(16), '0x35D21C03BA011FFACF567070BD270101', 1), CONVERT(binary(16), '0x35D21C03BA011D3B0E97B1B17CE6C0C0', 1));",
+        "INSERT INTO dbo.sphere_account_email (account, email) VALUES (@login, @email);",
+        "COMMIT TRANSACTION;"
+      ]
+    },
+    "account_check_free": {
+      "title": "Check Account Availability",
+      "sortOrder": 150,
+      "targetDb": "login",
+      "isPublic": false,
+      "query": [
+        "SELECT ua.account AS login, CONVERT(varchar(34), au.password, 1) AS password, e.email AS email FROM dbo.user_account AS ua LEFT JOIN dbo.user_auth AS au ON au.account = ua.account LEFT JOIN dbo.sphere_account_email AS e ON e.account = ua.account WHERE ua.account = ?"
+      ]
+    }
+  }
+}
